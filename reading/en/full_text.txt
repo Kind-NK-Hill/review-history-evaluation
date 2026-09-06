@@ -1,0 +1,2359 @@
+===== PDF PAGE 1 =====
+
+           Review Histories in Textbook Formalization
+              Measurements, Comparisons, and Statistical Analysis
+
+
+
+
+                            English edition – Version 0.5.0
+                                  6 September 2026
+
+
+                                          Abstract
+
+    A textbook formalization project repeatedly turns mathematical tasks into candidate
+Lean ﬁles, checks and reviews those submissions, and revises them in response to ﬁndings.
+Saved candidates, review inputs, judgments, and issue records make these decisions traceable
+and provide the material for this retrospective evaluation. The report explains how retained
+evidence becomes directed connections, how selected candidate revisions form continuous
+segments, and how failure-origin paths are observed until ﬁrst recorded pass or exit. It
+then distinguishes the properties checked by an evaluator from conformity to the intended
+task, develops a four-cell candidate–criterion comparison, and derives limits from coarse mea-
+surements, missing information, and stopping rules. A historical deﬁnition witness and an
+exhaustive Boolean challenge demonstrate speciﬁc gaps between formal acceptance and task
+conformity. In the selected history, paired recorded acceptance increases on average across
+revisions, while later steps of the ﬁxed failure-origin paths have a lower pass proportion than
+ﬁrst steps. Task-weighted comparisons, paired t calculations, task-cluster resampling, an
+exact McNemar calculation, and a two-group process model retain their distinct outcomes
+and denominators. The report assumes calculus, probability, linear algebra, and basic sta-
+tistical inference. Its conclusions describe the retained evidence under explicit assumptions;
+recorded acceptance is not an independent measure of mathematical correctness.
+
+
+
+
+                                              1
+
+===== PDF PAGE 2 =====
+
+Contents
+1 The work that produced the review history                                                                 4
+  1.1 From a textbook task to a reviewed Lean ﬁle . . . . . . . . . . . . . . . . . . . . . . . . .         4
+  1.2 Why a change from fail to pass needs interpretation . . . . . . . . . . . . . . . . . . . . .         5
+  1.3 A second workﬂow: turning records into analysis data . . . . . . . . . . . . . . . . . . . .          5
+  1.4 How to read the report and ﬁnd a deﬁnition . . . . . . . . . . . . . . . . . . . . . . . . . .        6
+
+2 From retained records to analysis units                                                                   6
+  2.1 Task, candidate, review record, and evidence signature . . . . . . . . . . . . . . . . . . . .        6
+  2.2 One task, three submissions, two connections, one segment . . . . . . . . . . . . . . . . .           6
+  2.3 From evidence to 2,645 directed adjacent connections . . . . . . . . . . . . . . . . . . . . .        7
+  2.4 Which connections count as candidate revisions: 465 and 367 . . . . . . . . . . . . . . . .           7
+  2.5 Joining 367 edges into 262 full continuous segments . . . . . . . . . . . . . . . . . . . . . .       8
+  2.6 Selecting 230 failure origins, then observing 329 steps . . . . . . . . . . . . . . . . . . . . .     9
+  2.7 Why the selected execution sample has 14 pairs . . . . . . . . . . . . . . . . . . . . . . . .        9
+  2.8 Constructed comparisons, a deﬁnition witness, and a Boolean task . . . . . . . . . . . . .           10
+
+3 Evaluation quantities and the four-cell comparison                                                       11
+  3.1 Candidate, criterion, environment, and score . . . . . . . . . . . . . . . . . . . . . . . . .       11
+  3.2 Axiom-policy measurement and missing or invalid scores . . . . . . . . . . . . . . . . . . .         11
+  3.3 Four cells, conditional diﬀerences, and interaction . . . . . . . . . . . . . . . . . . . . . . .    12
+  3.4 The two-factor Shapley allocation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+  3.5 Historical review: observed labels and partly observed conditions . . . . . . . . . . . . . .        14
+
+4 Mathematical analysis: what the evidence determines                                                      14
+  4.1 Measurement classes and the ﬁnite error bound . . . . . . . . . . . . . . . . . . . . . . . .        15
+  4.2 Why acceptance records alone do not identify accuracy . . . . . . . . . . . . . . . . . . . .        16
+  4.3 Stopping, observation eligibility, and path exit . . . . . . . . . . . . . . . . . . . . . . . .     16
+      4.3.1 From a reconstructed segment to an observed path . . . . . . . . . . . . . . . . . .           16
+      4.3.2 Constant conditional pass probability and predictable observation . . . . . . . . .            17
+      4.3.3 Martingale formulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       18
+      4.3.4 Averages with a random denominator . . . . . . . . . . . . . . . . . . . . . . . . .           19
+      4.3.5 Exit and selection of successful paths . . . . . . . . . . . . . . . . . . . . . . . . . .     19
+  4.4 Partial tables and logical constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   20
+  4.5 Identiﬁcation of a linear comparison . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     21
+
+5 What the executable checks establish                                                                     22
+  5.1 Compilation, target extraction, axioms, and task meaning . . . . . . . . . . . . . . . . . .         23
+  5.2 A narrow check for assuming the conclusion . . . . . . . . . . . . . . . . . . . . . . . . . .       23
+  5.3 Four assessment methods and diagnostic availability . . . . . . . . . . . . . . . . . . . . .        24
+  5.4 Why the empty set distinguishes two deﬁnitions . . . . . . . . . . . . . . . . . . . . . . . .       25
+  5.5 Exhaustive behavior checks on one Boolean task . . . . . . . . . . . . . . . . . . . . . . .         26
+  5.6 Reconstruction and rejection of contradictory inputs . . . . . . . . . . . . . . . . . . . . .       27
+
+6 Paired statistics of recorded decisions                                                                  27
+  6.1 Outcome deﬁnition: recorded pass . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       27
+  6.2 Task-equal and edge-equal mean changes . . . . . . . . . . . . . . . . . . . . . . . . . . . .       28
+  6.3 Why 465 edges are not 465 independent observations . . . . . . . . . . . . . . . . . . . . .         28
+  6.4 Paired t calculation and its reference assumptions . . . . . . . . . . . . . . . . . . . . . . .     29
+      6.4.1 Mean diﬀerence and standard error . . . . . . . . . . . . . . . . . . . . . . . . . . .        29
+      6.4.2 Null hypothesis and observed statistic . . . . . . . . . . . . . . . . . . . . . . . . .       29
+      6.4.3 Reference distribution and scope . . . . . . . . . . . . . . . . . . . . . . . . . . . .       30
+  6.5 Task-cluster resampling and reference intervals . . . . . . . . . . . . . . . . . . . . . . . .      30
+  6.6 Results under three selection rules . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    31
+  6.7 Why zero diagnostic diﬀerences give an undeﬁned t statistic . . . . . . . . . . . . . . . . .        32
+  6.8 The eight-pair compilation comparison: exact McNemar test . . . . . . . . . . . . . . . .            33
+
+7 Following the ﬁxed failure-origin paths                                                                  34
+
+
+                                                      2
+
+===== PDF PAGE 3 =====
+
+   7.1   The ﬁxed cohort, ﬁrst-pass stopping, and exit . . . . . . . . . . . . . . . . . . . . . . . . .    34
+   7.2   Step counts, risk sets, and cumulative proportions . . . . . . . . . . . . . . . . . . . . . .     34
+   7.3   First-step and later-step proportions have diﬀerent composition . . . . . . . . . . . . . . .      35
+   7.4   The two-group logit model and its coeﬃcients . . . . . . . . . . . . . . . . . . . . . . . . .     36
+   7.5   Task-cluster covariance and the reference test . . . . . . . . . . . . . . . . . . . . . . . . .   37
+   7.6   Why selecting tasks with later observations changes the ﬁrst-step group . . . . . . . . . .        38
+
+8 Putting the results together                                                                              39
+  8.1 Implications of the mathematical results . . . . . . . . . . . . . . . . . . . . . . . . . . . .      39
+  8.2 Why the two historical trends can coexist . . . . . . . . . . . . . . . . . . . . . . . . . . .       39
+  8.3 Logical, statistical, and semantic uncertainty . . . . . . . . . . . . . . . . . . . . . . . . .      40
+  8.4 Requirements for a future comparison . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        40
+
+9 Limits and reproducibility                                                                                41
+  9.1 What the results do not establish . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     41
+  9.2 Scope of this edition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   41
+  9.3 Source ﬁles and reproduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      42
+  9.4 AI assistance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   42
+
+A Index of deﬁnitions and methods                                                                           43
+
+B Sources and relative directory map                                                                        43
+
+
+
+
+                                                      3
+
+===== PDF PAGE 4 =====
+
+1     The work that produced the review history
+
+1.1    From a textbook task to a reviewed Lean ﬁle
+
+The project turns deﬁnitions, theorems, examples, and problems from a probability textbook
+into Lean ﬁles. Lean is a programming language with a system for checking formal proofs. For
+a particular textbook task, a writing agent works from the task text and relevant mathematical
+material, writes a candidate ﬁle, and checks whether it builds. A reviewing agent then exam-
+ines the submitted version against the task and the supplied review instructions. It records a
+judgment and, where applicable, ﬁndings that the writer can use in a revision. The writer may
+submit another version, which can be checked and reviewed again.
+The review asks more than whether the compiler accepted the ﬁle. It examines whether the
+formal deﬁnition or statement expresses the requested mathematics, whether the proof addresses
+the required argument, and whether the dependencies and assumptions meet the applicable
+rules. A failure can therefore lead to changes in the statement, proof, or supporting deﬁnitions.
+A later review can also revisit an already accepted ﬁle. These activities leave several kinds
+of evidence: task text, saved candidate versions, build results, review inputs and instructions,
+recorded judgments, and descriptions of issues.
+Those records served the work before they served this study. A writer needs to know what
+to revise; a reviewer needs to know which version and which task are being checked; a later
+maintainer needs to understand why a result was accepted or reconsidered. Keeping earlier
+evidence makes it possible to connect a decision to the material available at the time. Retaining
+a rejected candidate or an old review does not imply that it remains the current result. The
+records also do not constitute a complete log of every edit or every model call.
+This is the shared pattern supported by the retained workﬂow documents and historical artifacts.
+The archive also includes reviews of oﬃcial outputs, external contributions, and multiple ﬁle
+representations of a review. Instructions, tools, and recording practices changed. We therefore
+do not assume that every historical record was produced by one uniform implementation of
+today’s formalization system. Appendix B identiﬁes the source material supporting this account.
+
+      Textbook task and context. Select the mathematical statement, deﬁnition, or problem to
+      formalize.
+                                              ↓
+      Candidate and build. The writer submits a saved Lean version; the build checks its technical
+      acceptance in an environment.
+                                                   ↓
+      Review and next action. The reviewer checks the submitted mathematics and records a
+      judgment and ﬁndings. Revision returns to the candidate step; acceptance may be followed by
+      landing or later review.
+
+Figure 1: The recurring work pattern. Evidence is retained along the way. The diagram does not assert
+that every archived record traversed every box.
+
+
+
+
+                                                   4
+
+===== PDF PAGE 5 =====
+
+1.2   Why a change from fail to pass needs interpretation
+
+A submission raises distinct questions. Can the software process it? Does its proof obey the
+speciﬁed dependency rules? Does its formal statement express the intended mathematics? Their
+answers can diﬀer. For example, a proof of “if the conclusion holds, then the conclusion holds”
+can be formally valid while leaving the original problem unsolved. Lean’s documentation makes
+the same distinction between validating a proof and checking what its statement means[2].
+Now suppose that an earlier review rejects a candidate and a later one accepts it. The writer
+may have corrected a mathematical problem. But the requirement or the evidence available to
+the reviewer may also have changed, or an earlier issue may not have been noticed again. The
+two judgment labels alone do not distinguish these explanations. The history is worth studying
+precisely because it retains more than the ﬁnal pass: it oﬀers some evidence about the objects,
+checks, and intermediate outcomes behind that change.
+
+
+1.3   A second workﬂow: turning records into analysis data
+
+The study begins after the writing and reviewing have taken place. It ﬁrst organizes the retained
+evidence, associates it with task and candidate identiﬁers, and records which review materials
+and context are available. It then takes the archive’s speciﬁed within-task adjacent pairs, asks
+which pairs can be ordered in time, and classiﬁes what activity each connection represents. A
+changed candidate, a rereview of an oﬃcial ﬁle, and a second representation of the same review
+are kept distinct. Only after this classiﬁcation can selected revision connections be joined into
+continuous histories.
+Two historical questions follow. Pairing the endpoints of a selected revision lets us ask how the
+recorded judgment changed. Following a continuous history from an explicit failure lets us ask
+at which step a ﬁrst pass was recorded, or where observation ended without one. These are
+diﬀerent constructions from the same archive. Section 2 explains their units, selection rules, and
+counts before any statistical result is used.
+The study also examines selected saved candidates with explicitly speciﬁed checks, alongside
+deliberately constructed comparisons and a small task whose inputs can all be tested. Those
+materials address a diﬀerent question: what information can an evaluator supply about a can-
+didate? Together the report studies:
+
+1. Measurement: What does a named check establish, and what does it leave unresolved?
+
+2. Comparison: What changes when we compare two candidates under each of two stated
+   criteria?
+
+3. Recorded process: How do judgments change across selected revisions and along retained
+   failure-origin histories?
+
+Statistics can describe the recorded decisions even when independent judgments of mathematical
+correctness are unavailable. Their interpretation must then remain about those decisions.
+
+
+
+
+                                                5
+
+===== PDF PAGE 6 =====
+
+1.4   How to read the report and ﬁnd a deﬁnition
+
+The chapters retain a practical order: the objects and how they were selected; the evaluation
+quantities; the mathematical arguments; the executable evidence; the paired statistics; and the
+observed process. Deﬁnitions ﬁx the objects and quantities used in each analysis; propositions
+state consequences of explicit assumptions. Illustrative examples explain a calculation and are
+not additional experiments.
+Section 2 deﬁnes task, candidate, record, connection, and continuous segment. Section 3 in-
+troduces the score and the comparison of two candidates under two criteria, called a four-cell
+comparison. Section 4 gives the measurement, stopping, and identiﬁcation arguments. Section 5
+explains the saved executable checks. Sections 6 and 7 develop the paired and process statis-
+tics. Appendix A provides a topic index with page references; Appendix B maps the analysis to
+supplied ﬁles.
+The report assumes basic calculus, probability, linear algebra, and statistical inference, includ-
+ing their standard notation. Project-speciﬁc terms and statistical constructions are introduced
+where needed. Each average identiﬁes what receives weight, and each proportion identiﬁes its
+denominator.
+
+
+2     From retained records to analysis units
+
+2.1   Task, candidate, review record, and evidence signature
+
+A task is one mathematical assignment, such as formalizing a speciﬁed deﬁnition or proving a
+speciﬁed theorem. A candidate is a saved version submitted for that assignment. A task can have
+several candidates, and a candidate can be reviewed more than once. A review record preserves
+a judgment about an object together with the available supporting evidence and context. The
+object may be a candidate or an oﬃcial output.
+The analysis identiﬁes retained reviewer-produced evidence using an evidence signature. Its
+curated main collection contains 3,231 such signatures. This is a count of evidence items under
+the archive’s identiﬁcation rules. It is neither a count of tasks nor a guarantee of 3,231 separate
+review executions. In particular, the raw and normalized result ﬁles from one review can survive
+as separate evidence items. A later classiﬁcation recognizes some such relationships rather than
+interpreting them as repeated independent reviews.
+
+
+2.2   One task, three submissions, two connections, one segment
+
+Consider an illustrative theorem task with three submitted versions A, B, and C. Let their
+corresponding review records be rA , rB , rC , with judgments fail, fail, pass. Suppose A-to-B and
+B-to-C both satisfy the candidate-revision rule deﬁned below, and suppose the middle endpoint
+is exactly the same review record rB in the two connections. The task then supplies:
+• one task and three submitted candidate versions;
+• three review records in this illustration;
+• two directed connections, also called edges: rA → rB and rB → rC ;
+• one continuous segment, formed by joining those two edges at rB .
+
+
+                                                6
+
+===== PDF PAGE 7 =====
+
+Thus two edges contain four endpoint occurrences, but only three distinct endpoint records.
+The repeated middle record matters both for reconstruction and for statistical dependence. A
+connection describes the relation between two retained observations; it does not count the edits
+or model calls between them.
+Continuity requires the shared record, not merely the same task identiﬁer or the same candidate
+text. Suppose a later version D appears after an oﬃcial-output review, a connection that fails
+the chosen rule, or a gap with unresolved time order. We cannot extend this segment to D just
+because the task is unchanged. If D and a still later version E begin another eligible sequence,
+the same task contributes a second segment. Nothing in this construction asserts that the
+underlying work stopped during the gap.
+The full segment and its observation for a particular question are also distinct. In the fail, fail,
+pass example, following the segment until its ﬁrst pass uses both edges. In an illustrative fail,
+pass, fail segment, the full reconstruction can still contain two eligible edges, but a ﬁrst-pass
+analysis uses only the ﬁrst. It does not reinterpret the last failure as if it preceded that pass.
+These examples explain rules; they are not added observations.
+
+
+2.3   From evidence to 2,645 directed adjacent connections
+
+To study what changed between reviews, the analysis starts with the archive’s frozen within-task
+adjacency. It retains an original adjacent pair only when both endpoint signatures belong to the
+curated main collection. It does not discard intermediate records and then connect whichever
+remaining records become neighbors. This preserves gaps in the retained history.
+That membership rule yields 2,738 pairs. Of these, 93 have ambiguous time order under the
+declared timestamp rules, including tied times or insuﬃcient precision. They remain undirected
+evidence and do not enter a before–after analysis. The other 2, 738 − 93 = 2, 645 pairs supply
+directed connections. Their order is a documented proxy based on recorded time and identiﬁers,
+not evidence that one review caused the next event. The count cannot be obtained simply by
+subtracting a task count from 3,231, because the rule preserves original adjacency instead of
+rebuilding a gap-free chain after selection.
+Even a directed connection need not describe revision. One endpoint may review a candidate
+and the next an oﬃcial ﬁle with unchanged text. Both endpoints may review oﬃcial outputs.
+A raw result ﬁle may be followed by the normalized representation of that same review. The
+next step therefore classiﬁes the activity, using the reviewed object, primary Lean text, source,
+registered context, and prior structured ﬁndings. The pass/fail judgment itself is not used to
+assign the activity category.
+
+
+2.4   Which connections count as candidate revisions: 465 and 367
+
+The classiﬁer applies rules in order. It ﬁrst recognizes the two representations of the same
+review, then explicitly marked external reviews, then checks for distinct executions under the
+same registered conditions. Matching conditions without evidence of distinct executions remain
+unresolved. It next recognizes candidate landing into an oﬃcial output with unchanged primary
+text. Only after those earlier cases have been handled does it assign candidate revision: the
+later reviewed object must be a candidate, and the primary Lean text must diﬀer between
+
+
+                                                 7
+
+===== PDF PAGE 8 =====
+
+endpoints. Remaining oﬃcial-to-oﬃcial pairs become oﬃcial rereviews; other unresolved pairs
+retain a mixed or unknown category.
+Within candidate revision, high conﬁdence means the earlier review contains structured ﬁnd-
+ings; without such ﬁndings, the connection has medium conﬁdence. These are reproducible
+rule labels, not numerical conﬁdence levels or certiﬁcations that a mathematical problem was
+repaired. The rule detects a changed candidate following recorded issues; it does not indepen-
+dently establish that the change resolved those issues. The implementation calls this category
+candidate_repair; this report uses “candidate revision” to keep that distinction explicit.
+The resulting categories partition all directed connections:
+
+Table 1: Activity categories for the 2,645 directed connections. Counts are connections, not executions
+or tasks.
+
+ Category                                       Count    Interpretation
+ Candidate revision                                465   Changed primary text; later object is a
+                                                         candidate
+ Candidate landing                                 241   Candidate followed by oﬃcial output with
+                                                         the same text
+ Oﬃcial rereview                                 1,176   Both objects are oﬃcial outputs
+ External review                                   207   Explicitly marked external-review source at
+                                                         an endpoint
+ Same review, two representations                  166   Recognized raw and normalized result pair
+ Distinct, same-condition review                     0   Requires explicit evidence of separate
+                                                         executions
+ Mixed or unknown                                  390   Available ﬁelds do not resolve the activity
+ Total                                           2,645   Each connection is assigned once
+
+
+The 465 candidate-revision edges concern 250 distinct tasks and divide into 367 high-conﬁdence
+and 98 medium-conﬁdence edges. The full 465-edge set supplies the paired revision analysis in
+Section 6. Its high-conﬁdence sensitivity analysis uses the 367-edge subset, which represents 207
+tasks. Task counts describe the distinct identiﬁers represented after a selection; unlike disjoint
+edge counts, they need not add across subsets because a task can contribute to both.
+
+
+2.5      Joining 367 edges into 262 full continuous segments
+
+For the process question, the reconstruction uses only the 367 high-conﬁdence candidate-revision
+edges. Starting from an edge without an eligible predecessor, it appends an eligible next edge
+only when the earlier edge’s later review identiﬁer equals the next edge’s earlier review identiﬁer.
+It continues until there is no such edge. The result is a maximal continuous segment: a chain
+that cannot be extended within this chosen edge set. The archived term is episode; later chapters
+also call it a path or process.
+This grouping assigns every selected edge once and produces 262 segments. It ends at an
+ineligible connection, an unresolved time-order boundary, or the end of observed connections.
+A recorded pass does not itself terminate this reconstruction: pass labels are used in the next
+analytical operation. Table 2 makes the edge-to-segment conversion checkable.
+
+
+
+                                                  8
+
+===== PDF PAGE 9 =====
+
+Table 2: Lengths of the complete reconstructed segments, before selecting failure origins or stopping at
+ﬁrst pass.
+
+                          Edges per segment    Segments      Edges contributed
+                                           1           212                212
+                                           2            38                 76
+                                           3             1                  3
+                                           4             5                 20
+                                           5             3                 15
+                                          12             2                 24
+                                          17             1                 17
+                                       Total           262                367
+
+
+The second column counts segments; the third counts their edges. The 262 segments retain the
+same 207 represented tasks as the 367 edges, because grouping alone removes no edge. Multiple
+segments from one task remain connected by their task identiﬁer for statistical grouping, even
+though they remain separate paths in the reconstruction.
+
+
+2.6    Selecting 230 failure origins, then observing 329 steps
+
+The process analysis asks what happens after an explicit recorded failure. It therefore selects
+the 230 segments whose ﬁrst review says fail, excluding the other 32 from this question. These
+selected segments belong to 182 distinct tasks. Here 230 counts starting segments, while 182
+counts the task identiﬁers represented by them. Neither is a number of independent review
+executions.
+Within each selected segment, observation now stops at the ﬁrst later review that records pass,
+or at the segment boundary if no pass appears. This second operation changes the observed
+length, not the already ﬁxed segment membership. Applied to the selected segments, it yields
+329 observed steps. Each step is one eligible edge and takes its outcome from that edge’s later
+review. Across the 230 paths, 206 terminate at a ﬁrst recorded pass and 24 reach the segment
+boundary without one. The original failure record is the starting condition, not an additional
+observed step.
+Thus 329 is not the sum of all 367 reconstructed edges under another name: failure-origin
+selection and ﬁrst-pass stopping intervene. Nor is 206/230 a success fraction among 182 tasks,
+since one task can supply several paths. Section 7 follows the changing step denominators and
+distinguishes path exit from permanent task failure.
+
+
+2.7    Why the selected execution sample has 14 pairs
+
+The larger history describes recorded judgments. To examine what explicitly deﬁned evaluators
+can establish about saved code, a separate, smaller selection takes candidate pairs from the
+revision material. It contains six development pairs and eight holdout pairs separated by task,
+for a total of 14 pairs and 28 candidate endpoints. The same task is not split across development
+and holdout. These are selection partitions in a retrospective study: prior exposure to parts of
+the archive prevents interpreting them as a fully blind, independently sampled experiment.
+
+
+                                                   9
+
+===== PDF PAGE 10 =====
+
+Table 3: The two historical analysis routes after activity classiﬁcation. Each row states the operation
+and its unit.
+
+ Operation                                             Result and use
+ Keep all candidate-revision connections               465 edges, 250 tasks: paired recorded-label
+                                                       changes
+ Restrict those edges to high conﬁdence                367 edges, 207 tasks: paired sensitivity route and
+                                                       input to path construction
+ Join high-conﬁdence edges at shared review            262 full segments: continuity deﬁned before
+ endpoints                                             outcome-based selection
+ Keep segments starting at explicit failure            230 segments, 182 tasks: the ﬁxed process cohort
+ Follow each selected segment to ﬁrst pass or          329 steps; 206 pass endpoints and 24 exits
+ boundary
+
+
+Each pair receives two assessments. One checks permitted axiom dependencies; the other checks
+the narrow requirement that a theorem must not directly assume its complete conclusion. Each
+assessment considers the two candidates under two stated criteria. Its four candidate–criterion
+combinations form a four-cell table, deﬁned and worked through in Section 3.3. There are
+therefore 14 × 2 = 28 historical tables, reusing the same 14 pairs. Their measurement outcomes
+are reported in Section 5; no new executions were added in this edition.
+
+
+2.8    Constructed comparisons, a deﬁnition witness, and a Boolean task
+
+The study also asks whether a comparison method behaves as intended under deliberately chosen
+patterns of observed and missing scores. Seven constructed tables serve this purpose. Together
+with the 28 historical tables, they give 35 tables for evaluating the comparison procedures. This
+total counts tables, not 35 independently sampled tasks. Section 5 explains the six diagnostic
+questions asked of each table.
+A separate historical deﬁnition witness examines one task whose two candidates use diﬀerent
+conventions for countability. Six proved propositions establish relations among those candidates,
+an explicit reference, and the empty set. They describe one case rather than six independent
+successes.
+Finally, a ﬁnite Boolean task asks for the output to be true exactly when its two inputs dif-
+fer. There are four possible input pairs, so a complete behavioral reference is available. Nine
+implementations were deliberately designed: three matching implementations, ﬁve mismatching
+implementations, and one compilation-failure control. Section 4.1 uses the eight executable im-
+plementations to derive a measurement limitation; Section 5.5 gives the complete results. Nine
+implementations of this single task do not supply nine independently sampled mathematical
+tasks.
+These materials have connected purposes but diﬀerent denominators. The historical revision
+and path analyses describe selected records. The selected executions and constructed cases test
+particular checks or exhibit counterexamples. Their counts cannot be added into a common
+sample size or treated as independent replications of one statistical claim.
+
+
+
+
+                                                  10
+
+===== PDF PAGE 11 =====
+
+3     Evaluation quantities and the four-cell comparison
+
+3.1   Candidate, criterion, environment, and score
+
+Consider a program that should return true exactly when its two Boolean inputs diﬀer. One
+candidate always returns false; another computes the required exclusive-or operation. Both may
+compile as Lean programs, but only the second gives the required answer on every input. A
+score is useful only after we specify which of these properties it measures.
+Let C denote the candidate: its saved code and the declaration selected for checking. A declara-
+tion is a named deﬁnition or theorem in that code; selecting it in advance ﬁxes the object being
+assessed. Let R denote the criterion, specifying the check and its acceptance rule, and let E
+denote the environment, including the compiler, libraries, search paths, and execution settings.
+The evaluation procedure g applies R to C in E.
+When a valid numerical measurement is available, we write its value as
+
+                                        q = g(C, R; E).
+
+Thus q is the score returned by the speciﬁed procedure. We hold the environment ﬁxed in
+a comparison. The acceptance scores used here are dimensionless: 1 means that the named
+check passed and 0 that it failed. They are decisions of that check, not probabilities that the
+mathematics is correct.
+To use g, we must supply the actual procedure, target, criterion, and evidence. The notation
+does not itself deﬁne a general measure of semantic correctness. We next describe the procedure
+implemented in the audit.
+
+
+3.2   Axiom-policy measurement and missing or invalid scores
+
+The released evaluate_sources.py implements a narrow axiom-policy check. It captures the
+source, appends commands for the already selected declaration, runs the recorded Lean 4.31.0
+compiler, and extracts two things: the printed declaration type and its reported axiom depen-
+dencies. The type describes the declaration’s interface or proposition. The axiom list records
+assumptions on which that declaration depends. These are useful observations, but neither
+automatically states the intended task’s meaning.
+For this procedure, R supplies a list of allowed axioms. The score is 1 exactly when every
+extracted axiom is on that list, and 0 when at least one extracted axiom is forbidden. For
+example, a successfully extracted occurrence of sorryAx receives 0 under a policy that forbids
+it. An empty list of dependencies passes such a policy; missing compiler output is not an empty
+dependency list. Lean documents the distinction between proof validity and the meaning of the
+statement proved. [2]
+Before comparing scores, the implementation checks that the selected declarations have identical
+printed types under ﬁxed printer settings. This establishes a conservative interface match. It
+leaves behavior open: both Boolean programs above can have type Bool -> Bool -> Bool. If
+the printed types diﬀer, this implementation does not establish a numerical comparison, although
+another meaningful comparison may still be possible.
+
+
+
+                                              11
+
+===== PDF PAGE 12 =====
+
+To check behavior, we could run both programs on all four input pairs and compare their
+outputs with the required truth table. The ﬁnite challenge reported below includes exactly this
+additional test. It supplies evidence that the axiom-policy check alone does not collect.
+A check can also fail to produce a usable score. We therefore retain its measurement status:
+
+Measured.
+ A value was obtained for the named check. A measured zero is an actual rejection by that
+ check.
+
+Not run, missing, or uncertain.
+ The intended question is meaningful, but its answer was not obtained. Examples include an
+  unavailable compiler, missing source, a timeout, or failure to extract the selected declaration.
+ The narrow axiom check does not turn a compilation failure into an axiom-policy rejection:
+  it did not obtain the axiom measurement.
+
+Invalid or not applicable.
+  The proposed comparison lacks the required meaning, or the criterion does not apply to
+  the selected object. Treating such a cell as an unknown number would already assume a
+  comparison that has not been justiﬁed.
+
+Coding depends on the question. A study of compilation success could assign zero to a compila-
+tion failure; the axiom-policy check cannot do so when it has obtained no axiom measurement.
+
+
+3.3    Four cells, conditional diﬀerences, and interaction
+
+We now hold one evaluator and environment ﬁxed and compare two candidates under two criteria.
+Let C0 and C1 are the two candidates, and R0 and R1 the two criteria. Write
+
+                                qij = g(Ci , Rj ; E),    i, j ∈ {0, 1}.
+
+The example below gives all four candidate–criterion scores.
+The following is an illustrative calculation, not another experiment. Use the two Boolean pro-
+grams described above: C0 always returns false, while C1 returns true exactly when its inputs
+diﬀer. Let R0 test only the input pair (false, false), whose required output is false. Let R1 test
+all four input pairs, whose required outputs in the order (false, false), (false, true), (true, false),
+(true, true) are false, true, true, false. In this example g means “run the inputs speciﬁed by
+the criterion and award 1 if all required outputs match, otherwise 0.” It is a behavioral test
+procedure for this example, not the released axiom-only procedure.
+
+
+                      Candidate           R0 : one input    R1 : all four inputs
+                      C0 : always false       q00 = 1             q01 = 0
+                      C1 : exclusive-or       q10 = 1             q11 = 1
+
+
+
+
+                                                  12
+
+===== PDF PAGE 13 =====
+
+First compare the candidates while keeping the criterion unchanged. Let DC|R0 denote the
+second candidate’s score minus the ﬁrst candidate’s score under R0 . Deﬁne DC|R1 in the same
+way under R1 . Reading down the two columns gives
+
+                                DC|R0 = q10 − q00 = 1 − 1 = 0,
+                                DC|R1 = q11 − q01 = 1 − 0 = 1.
+
+The one-input test cannot distinguish the programs. The four-input test can. Thus a reported
+candidate diﬀerence depends on which test is held ﬁxed.
+Next compare the criteria while keeping the candidate unchanged. Reading across each row
+gives
+
+                                DR|C0 = q01 − q00 = 0 − 1 = −1,
+                                DR|C1 = q11 − q10 = 1 − 1 = 0.
+
+The expanded test rejects the defective program but leaves the correct program accepted. The
+negative ﬁrst diﬀerence describes a lower test score; it does not mean that improving a criterion
+made the program itself worse. All four diﬀerences have units of score points. They are not
+percentages of program quality.
+A diagonal comparison instead changes both ingredients at once. Write ∆ for that change:
+
+                                   ∆ = q11 − q00 = 1 − 1 = 0.
+
+Looking only at these two acceptance labels would hide both the improved program and the
+more demanding test. The interaction, denoted I, records how much the candidate contrast
+changes when the criterion changes:
+
+                                I = DC|R1 − DC|R0 = 1 − 0 = 1
+                                  = q11 − q10 − q01 + q00 .
+
+Regrouping the same four terms also gives I = DR|C1 − DR|C0 . Interaction here is an arithmetic
+description of the table, not evidence about psychological cooperation or a causal mechanism.
+These four conditional diﬀerences, the diagonal diﬀerence, and the interaction are the audit’s
+six diagnostic questions.
+
+
+3.4   The two-factor Shapley allocation
+
+There are two paths from the top-left cell to the bottom-right cell. We can change the candidate
+ﬁrst and then the criterion, or change the criterion ﬁrst and then the candidate. Either path’s
+two diﬀerences add to ∆. If we choose to weight the two orders equally, the candidate receives
+the average of its two conditional diﬀerences, and the criterion receives the average of its two
+conditional diﬀerences. Denote these allocations by ϕC and ϕR :
+
+                               ϕC = 12 [(q10 − q00 ) + (q11 − q01 )],
+                               ϕR = 21 [(q01 − q00 ) + (q11 − q10 )].
+
+They are the standard two-factor Shapley allocation. [8] In the example, ϕC = (0 + 1)/2 = 1/2
+and ϕR = (−1 + 0)/2 = −1/2. Their sum is zero, as the diagonal comparison requires. In
+general, cancellation of the middle terms gives ϕC + ϕR = q11 − q00 = ∆.
+
+                                                13
+
+===== PDF PAGE 14 =====
+
+The allocation is in score points and depends on giving the two orders equal weight. It is a
+summary of the table, rather than a recovered causal contribution from history. The interaction
+is already included in the averages; adding it once more would break their sum identity.
+
+
+3.5    Historical review: observed labels and partly observed conditions
+
+In the four-cell comparison, the procedure and criteria are speciﬁed. A historical review is less
+controlled: the archive may record a decision while preserving only part of the process that
+produced it. For a review event e, distinguish the following roles:
+
+    • Ye is the recorded outcome label, such as pass or fail. It is a category until a particular
+      numerical coding is stated.
+
+    • Oe is the object actually reviewed, including the candidate code and relevant context.
+
+    • Ke is the eﬀective criterion actually applied in that review.
+
+    • Me is the review apparatus: for example, the reviewer or model, prompt, tools, and
+      operating settings.
+
+    • Ue collects remaining inﬂuences that this description does not separately record. No prob-
+      ability distribution or independence assumption is being assigned to it.
+
+The conceptual expression
+                                     Ye = ψ(Oe , Ke , Me , Ue )
+then says only that the outcome arises from those ingredients through some review procedure,
+named ψ. Unlike a ﬁtted regression equation, it supplies no coeﬃcients to estimate and no
+known rule for predicting Ye . The earlier notation used Ce∗ for the eﬀective criterion and εe for
+remaining inﬂuences; Ke and Ue avoid confusing that criterion with candidate C in our four-cell
+table.
+For example, a stored contract’s hash identiﬁes the saved text, but cannot establish how closely
+the reviewer followed it. The eﬀective criterion may remain partly unknown. A changed label
+can likewise accompany changes to the candidate, expectations, or review procedure. The later
+process analysis studies the recorded sequence under explicit path rules; it does not identify
+those separate inﬂuences.
+We can nevertheless ask what a speciﬁed measurement distinguishes, what follows from an
+explicit observation model, and which comparisons the available evidence determines.
+
+
+4     Mathematical analysis: what the evidence determines
+
+A measurement can answer some questions while leaving others open. We begin with a ﬁnite
+example in which two checks give identical results for programs with diﬀerent behavior. This
+leads to a bound on the mistakes that any decision rule using those checks must make.
+
+
+
+
+                                                14
+
+===== PDF PAGE 15 =====
+
+4.1   Measurement classes and the ﬁnite error bound
+
+Begin with the retained ﬁnite Boolean challenge. It contained nine ﬁxtures, of which eight were
+executable and one did not compile. Among the eight executable ﬁxtures, three matched the
+speciﬁed output on every one of the four input pairs and ﬁve did not. Yet all eight passed both
+the axiom-policy gate and the printed-type gate. A gate is simply a check returning pass or fail.
+Imagine now giving another decision rule only those two gate outputs, with no code, candidate
+name, or behavior results. It sees exactly the same input—two passes—for every ﬁxture. A
+deterministic rule, meaning one that always gives the same answer to the same input, must give
+all eight the same decision.
+If the rule calls all eight task-conforming, it makes ﬁve mistakes. If it calls all eight noncon-
+forming, it makes three. The better of these two choices still makes three mistakes. No more
+elaborate arithmetic on the same two bits can tell it which three programs were correct. The
+behavior check succeeds in distinguishing them because it supplies another observation.
+We can state this argument for any ﬁnite set. Let X be the set of objects being checked and
+n its number of objects, with n > 0. A particular object is called x. Let Z(x) be the retained
+measurement for that object, which may be a pair of gate outputs rather than a number. Let T (x)
+be its reference answer: 1 for conformity to a speciﬁed task reference and 0 for nonconformity.
+The letter T here denotes a binary task answer, not a waiting time. In this example the reference
+is the exhaustive four-input check; this notation does not assert that an equally usable reference
+exists for every historical task.
+Group together objects with the same measurement value z. Within such a group, write nz0 for
+the number with reference answer 0, and nz1 for the number with reference answer 1. These are
+counts of objects. Let δ return either 0 or 1 using only Z(x). It must answer for every object.
+Deﬁne its ﬁnite-set error fraction as
+                                 number of objects for which δ(Z(x)) ̸= T (x)
+                    ErrX (δ) =                                                .
+                                                      n
+This is a dimensionless fraction of mistakes in this set, not yet a population probability.
+
+Proposition 1 (Unavoidable mistakes when measurements merge diﬀerent answers). Under the
+preceding assumptions, every deterministic decision rule using only Z satisﬁes
+                                               1X
+                                  ErrX (δ) ≥       min(nz0 , nz1 ).
+                                               n z
+
+The sum runs over the distinct measurement values. Some such rule attains equality. Con-
+sequently, zero mistakes are possible exactly when every measurement group contains only one
+reference answer.
+
+Proof. Fix one measurement group. Since the decision rule receives the same input throughout
+that group, it must choose one answer for the whole group. Choosing 0 misclassiﬁes its nz1 con-
+forming objects; choosing 1 misclassiﬁes its nz0 nonconforming objects. Therefore the smallest
+possible number of mistakes in this group is the smaller count. Add those minimum counts over
+the groups and divide by the total number of objects. Choosing the majority answer separately
+in every group achieves the bound. A group’s minimum is zero precisely when one of its two
+counts is zero.
+
+
+                                                 15
+
+===== PDF PAGE 16 =====
+
+For the eight executable ﬁxtures there is just one group, with nz0 = 5 and nz1 = 3. Substitution
+gives
+                                                           min(5, 3)   3
+                        smallest possible error fraction =           = .
+                                                               8       8
+The interpretation “both gates passed, therefore the task was met” instead has error fraction 5/8.
+Thus 5/8 describes that particular accept-all interpretation, while 3/8 is a limitation of every
+forced deterministic binary rule restricted to the same two gate outputs. Neither is a historical
+error-rate estimate, and neither has the denominator needed for defect-detection sensitivity. The
+noncompiling ninth ﬁxture is not silently added to this eight-object calculation.
+Allowing the rule to abstain changes the question: it could avoid all mistakes by refusing every
+decision, so we must also report the fraction it answers. Randomization cannot lower the
+minimum expected error here. If it chooses 1 with probability r, where 0 ≤ r ≤ 1, its expected
+number of mistakes in the single group is 5r + 3(1 − r) = 3 + 2r, whose minimum is 3. Individual
+randomized runs need not equal their expectation. These remarks explain why the assumptions
+“deterministic” and “answers every object” appear explicitly in the proposition.
+
+
+4.2     Why acceptance records alone do not identify accuracy
+
+The previous result assumed that reference answers were available and showed what a coarse
+measurement loses. A diﬀerent diﬃculty arises when reference answers are absent. Suppose,
+for illustration, that the only retained outcomes for four records are accept, reject, accept,
+reject. If all four reference answers agreed with those outcomes, the recorded decisions would
+be fully accurate. If every reference answer disagreed, they would be entirely inaccurate. Both
+hypothetical lists are compatible with the four observed decisions when no additional evidence
+constrains the reference answers. We have not changed mathematical truth; we have exhibited
+what the supplied records alone fail to settle.
+In symbols, let A denote a recorded binary acceptance decision and T a reference answer. Ob-
+serving A without information that constrains T cannot choose between the possibilities T = A
+and T = 1 − A. Their fractions of correct decisions diﬀer. This is called nonidentiﬁcation: diﬀer-
+ent answers to the research question remain consistent with what was observed. In a four-record
+example the possible accuracy fractions are multiples of 1/4, not every real number between zero
+and one. Source analysis, an explicit task reference, or independent adjudication may eliminate
+these possibilities; the limitation concerns the stated observation scheme.
+Historical labels also need a clear coding rule. Coding only “pass” as 1 and all other labels
+as 0 measures recorded acceptance versus nonacceptance. If the other labels include partial or
+inconclusive decisions, this coding does not automatically measure reviewer error. An accuracy
+calculation among decisive pass/fail reviews would use a diﬀerent denominator and report the
+omitted fraction separately.
+
+
+4.3     Stopping, observation eligibility, and path exit
+
+4.3.1    From a reconstructed segment to an observed path
+
+A full segment connects records through the high-conﬁdence candidate-revision edges of Sec-
+tion 2.5. The observed path is the portion followed under the stopping rule of Section 2.6. One
+
+
+                                               16
+
+===== PDF PAGE 17 =====
+
+step is a transition between submitted versions, rather than an internal edit, a model call, or
+a ﬁxed amount of time. The path is reconstructed from saved records, and one task can have
+several separate paths.
+Suppose the recorded sequence is fail, fail, pass. Starting at the ﬁrst failure, there are two steps,
+and observation stops at the pass. Three candidate records have thus supplied two transitions.
+The chain might instead end while its latest review is still nonpassing; we call this a path exit.
+The task could continue elsewhere, so exit does not imply permanent failure. Section 7 applies
+this observation rule to the history. We ﬁrst examine its consequences in a simple probability
+model.
+Throughout the model, success means a recorded pass. A nonpass includes every other label,
+including partial or inconclusive judgments, whereas a failure-origin path must begin with an
+explicit failure label. These conventions concern the review record, rather than independently
+certiﬁed task conformity.
+
+
+4.3.2   Constant conditional pass probability and predictable observation
+
+Consider repeated tosses of a coin with head probability p, where 0 < p < 1, stopping at the
+ﬁrst head. If heads represents a recorded pass, this gives a model of successive submissions with
+a constant pass probability. Real submissions may improve and their review conditions may
+change; those possibilities are set aside in this illustrative model.
+To express exactly what the calculation needs, let j = 1, 2, . . . denote a possible step. Write
+Hj−1 for all information available before the result of step j: earlier candidates, earlier review
+outcomes, and any observation decision already made. Deﬁne the observation and acceptance
+indicators, and their cumulative counts:
+
+ Symbol               Meaning for a single path
+ Bj                   1 if no previous step has passed and step j is to be observed; 0 otherwise.
+ Aj                   1 if the review at that step records a pass; 0 if it does not. Set it to 0
+                      when Bj = 0, merely to complete the notation.
+        P
+ Nk = kj=1 Bj         Number of eligible steps actually observed through step k.
+     P
+ Dk = kj=1 Bj Aj      Number of recorded passes among those steps. With ﬁrst-pass stopping
+                      this is at most 1.
+
+Saying that Bj is known from Hj−1 means that we decide whether this observation belongs in the
+analysis without ﬁrst seeing its outcome. This property is often called predictable observation.
+It is not a prediction that the next candidate will pass. For example, “continue after a failure
+and stop after a pass” uses information already available. “Retain this row only if the next
+review looks promising” can use information that was not yet available and need not satisfy this
+condition.
+For an eligible step, the constant-probability assumption is
+
+                           P (Aj = 1 | Hj−1 ) = p     whenever Bj = 1.                           (1)
+
+This requires the same conditional pass probability after every eligible past history; equality of
+pooled pass proportions is weaker. Equivalently, E(Aj | Hj−1 ) = p on eligible histories.
+
+                                                 17
+
+===== PDF PAGE 18 =====
+
+Proposition 2 (A constant conditional probability under an explicit observation rule). Suppose
+observation eligibility Bj is known before the step-j outcome, and suppose equation (1) holds for
+every eligible history. For each ﬁxed ﬁnite number k,
+
+                    E(Dk − pNk ) = 0,         and hence            E(Dk ) = pE(Nk ).              (2)
+
+If, in addition, the ﬁrst step is observed and every nonpassing step is followed by another observed
+step until the ﬁrst pass, the ﬁrst-pass step T satisﬁes
+
+                            P (T = j) = (1 − p)j−1 p,             j = 1, 2, . . . .               (3)
+
+Proof. At an eligible step the expected value of Aj − p, given the past, is p − p = 0. At an
+ineligible step Bj (Aj − p) = 0. Since eligibility is already known, both cases give
+
+                                    E{Bj (Aj − p) | Hj−1 } = 0.
+
+Averaging over the possible past histories still gives zero. Add this identity for the ﬁxed set of
+steps 1, . . . , k. The sum inside the expectation is precisely Dk − pNk , proving equation (2).
+With observation continuing after every nonpass, a ﬁrst pass at step j requires j − 1 consecutive
+nonpasses followed by a pass. Multiplying the successive conditional probabilities gives
+
+                                        (1 − p) · · · (1 − p) p.
+                                        |        {z           }
+                                            j−1 nonpasses
+
+This is equation (3). It tends to put more weight on early steps because a later ﬁrst pass requires
+surviving all the earlier nonpasses. The calculation uses the stated conditional probabilities; a
+separate independence assumption is not needed in addition to that full-history condition.
+
+Equation (3) gives a geometric ﬁrst-pass step T , distinct from the task-conformity reference
+T (x). For p = 0.2, the probabilities of ﬁrst passing at steps 1, 2, and 3 are 0.2, 0.8(0.2) = 0.16,
+and 0.82 (0.2) = 0.128. Even though fewer paths remain eligible at each step, the chance of
+passing among paths still eligible remains 0.2 in this example. Thus a shrinking set of eligible
+paths does not, by itself, refute a constant-probability model. It also does not establish that
+such a model ﬁts the historical archive.
+
+
+4.3.3   Martingale formulation
+
+Some earlier analyses used the word martingale. Here it describes the running discrepancy
+
+                                                       X
+                                                       k
+                                Mk = Dk − pNk =              Bj (Aj − p).
+                                                       j=1
+
+Given the available past, its next change has mean zero: E(Mk | Hk−1 ) = Mk−1 . That is
+the relevant mathematical property, already proved above. A ﬁltration is simply the increasing
+family of information sets represented here by the histories H0 , H1 , . . .. The martingale property
+is therefore another way to state the zero-mean increment calculation.
+
+
+
+
+                                                  18
+
+===== PDF PAGE 19 =====
+
+4.3.4   Averages with a random denominator
+
+Equation (2) concerns expected counts. It does not say that E(Dk /Nk ) = p, because the
+number of observed steps can itself depend on earlier outcomes. A short coin example makes
+the distinction visible. Take p = 1/2, stop at the ﬁrst pass, and observe at most two steps:
+
+                     Observed sequence     Probability    D2    N2      D2 /N2
+                     Pass                           1/2     1    1          1
+                     Nonpass, pass                  1/4     1    2        1/2
+                     Nonpass, nonpass               1/4     0    2          0
+
+Here E(D2 ) = 3/4 and E(N2 ) = 3/2, so E(D2 )/E(N2 ) = 1/2. But the average of the ﬁnal path
+proportions is E(D2 /N2 ) = 1/2 + 1/8 = 5/8. Fast successes contribute a ratio of 1 after only
+one observation. Exchanging “take a ratio” and “take an expectation” therefore changes the
+answer.
+If observation instead continues without a step limit, use D and N for the total pass count and
+observed-step count at the eventual stopping point; these diﬀer from Dk , Nk , which count only
+through a ﬁxed ﬁnite step k. Since P (T > k) = (1 − p)k tends to zero, a ﬁrst pass occurs
+with probability 1. Consequently, D = 1 and N = T with probability 1, and that probability-
+zero exception does not aﬀect the following expectation. The same distinction has the exact
+expression
+                                      X∞
+                                          p(1 − p)j−1    −p log p
+                          E(D/N ) =                    =          > p.
+                                      j=1
+                                               j           1−p
+                               P                                           P
+Integrating the geometric series ∞     r
+                                  r=0 x = 1/(1−x) from 0 to 1−p gives  j≥1 (1−p) /j = − log p.
+                                                                                 j
+                R1
+Also − log p = p (1/u) du > 1 − p for 0 < p < 1. This is a property of the illustrative model,
+not a correction formula applied to the historical data.
+
+
+4.3.5   Exit and selection of successful paths
+
+The no-exit coin model assumes that every nonpass is followed by another observation. Now
+suppose that after each nonpass a second independent coin determines whether the path con-
+tinues. Let a be its continuation probability, with 0 ≤ a ≤ 1. All these continuation coins and
+acceptance coins are independent in this illustrative construction. The events after an eligible
+step are then:
+
+ What happens                                                                    Probability
+ Record a pass and stop                                                          p
+ Record a nonpass and exit the path                                              (1 − p)(1 − a)
+ Record a nonpass and observe another step                                       (1 − p)a
+
+These probabilities add to 1. Give the third one the short name b = (1 − p)a: it is the chance
+of both not passing now and reaching the next observation. It is not the probability of a pass.
+For a pass to be observed at step j, the ﬁrst j − 1 steps must each produce the third event, and
+step j must pass. Hence
+
+                             P (pass at step j before exit) = bj−1 p.
+
+                                               19
+
+===== PDF PAGE 20 =====
+
+The events for diﬀerent j cannot both occur. Summing their probabilities and using 1 + b + b2 +
+· · · = 1/(1 − b) gives
+                                                             p
+                               s := P (pass before exit) =       .                           (4)
+                                                            1−b
+Here s is a whole-path probability; p is a probability for one eligible step. They have diﬀerent
+denominators and answer diﬀerent questions.
+Finally, suppose we discard all paths that exit without a pass and report only successful paths.
+If J is the step of their recorded pass, ordinary conditional probability gives
+
+                                                           pbj−1
+                       P (J = j | pass before exit) =            = (1 − b)bj−1 .                 (5)
+                                                             s
+This is another geometric distribution, but its parameter is 1 − b = p + (1 − p)(1 − a), which
+exceeds p if a < 1. Successful-path selection favors shorter histories: to be a long successful path,
+a record must survive additional opportunities to exit. The faster-looking distribution does not
+demonstrate a higher per-step pass probability.
+For a concrete identiﬁcation problem, consider two possible mechanisms:
+
+                      Mechanism          p      a    b = (1 − p)a   s = p/(1 − b)
+                      I                 0.2    0.5            0.4              1/3
+                      II                0.5    0.8            0.4              5/6
+
+Both give exactly the same successful-path step probabilities: 0.6, 0.24, 0.096, and so on. Yet
+their eligible-step pass probabilities are 0.2 and 0.5. Looking only at successful-path lengths
+cannot distinguish these mechanisms. The overall pass fraction would distinguish them: if both
+s and b were known, equation (4) would give p = s(1 − b). The ambiguity comes from what was
+retained, not from a failure of probability arithmetic.
+The three quantities now have distinct meanings: the pass rate at an eligible step, the out-
+come of a ﬁxed path, and the length of a path selected because it passed. Applying the model
+to historical records would require checking its observation assumptions. A retrospective edge
+classiﬁcation can use the next candidate or review, so reproducing that classiﬁcation does not
+establish the before-outcome condition in Proposition 2. The empirical analysis below is conse-
+quently restricted to the retained paths and their observed associations.
+
+
+4.4   Partial tables and logical constraints
+
+Return to the four-cell table in Section 3. Sometimes we have measured only the second crite-
+rion’s column. We may nevertheless know something about the ﬁrst column. For example, if
+one axiom policy allows a subset of the axioms allowed by the other, passing the more restrictive
+policy logically implies passing the more permissive one for the same extracted declaration. The
+direction of this implication must be veriﬁed; calling a policy “new” does not establish that it
+is stricter.
+Assume for the following illustrative cases that both scores are binary and that acceptance under
+R1 implies acceptance under R0 . In symbols,
+
+                            qi1 ≤ qi0         for each candidate i ∈ {0, 1}.
+
+
+                                                     20
+
+===== PDF PAGE 21 =====
+
+For zero-one scores this inequality means simply that a right-column 1 requires a left-column 1.
+It does not impose the reverse implication.
+If the measured right column is (1, 1), the left column must be (1, 1) too. The only permitted
+full table consists of four ones, so all six diﬀerences are already zero. Actually running the two
+left-column checks could verify the assumption or reveal a contradiction, but cannot give these
+diﬀerences another value while the assumption and observations remain valid.
+If instead the measured right column is (0, 0), each left-column value may still be either zero or
+one. The four permitted completions are listed below. Write d = q10 − q00 for the candidate
+diﬀerence under R0 . Since the right-column diﬀerence is zero, the deﬁnitions give I = −d and
+ϕC = d/2.
+
+
+                               q00   q10   q01   q11     d     I      ϕC
+                                0     0     0     0      0    0       0
+                                0     1     0     0      1   −1     1/2
+                                1     0     0     0     −1    1    −1/2
+                                1     1     0     0      0    0       0
+
+
+Thus d can take exactly the values −1, 0, 1. Its lower and upper bounds are −1 and 1, but 0.3 is
+not possible in this binary example. Likewise, ϕC can be −1/2, 0, 1/2. The output choices are
+linked: we cannot take d = 1 from one row and I = 1 from another and claim they describe one
+table. They must come from the same completion.
+
+
+4.5    Identiﬁcation of a linear comparison
+
+Call F the collection of all full tables that agree with the observed cells, the score’s permitted
+values, and the veriﬁed logical rules. Represent a table by the vector q = (q00 , q10 , q01 , q11 )⊤ .
+Here F names a collection of possible tables, not a probability distribution over them. Assume
+for now that at least one table is possible.
+Let L(q) be a comparison calculated from a full table. For the comparisons used here it is a
+weighted sum
+                         L(q) = a00 q00 + a10 q10 + a01 q01 + a11 q11 ,
+where a = (a00 , a10 , a01 , a11 )⊤ is a ﬁxed weight vector, so L(q) = a⊤ q. For example, the candidate
+diﬀerence under R0 uses weights (−1, 1, 0, 0). The output remains in score points. Saying L
+is uniquely determined, or point-identiﬁed, means that every permitted table gives the same
+answer.
+
+Proposition 3 (When the available information determines a comparison). The comparison L
+is uniquely determined exactly when L(q) = L(q ′ ) for every two permitted tables q and q ′ in F.
+For a weighted sum, this condition can be checked by verifying
+                           ′                  ′                  ′                  ′
+               a00 (q00 − q00 ) + a10 (q10 − q10 ) + a01 (q01 − q01 ) + a11 (q11 − q11 )=0
+
+for every such pair. Further valid evidence can only remove permitted tables. If it leaves at least
+one table, the greatest lower bound of the answers cannot decrease and their least upper bound
+cannot increase. For a ﬁnite list these bounds are simply its smallest and largest values.
+
+                                                   21
+
+===== PDF PAGE 22 =====
+
+Proof. If two permitted tables give diﬀerent answers, the observations and rules allow both
+answers, so there is no unique answer. If every permitted table gives the same answer, that
+answer is forced. For a weighted sum, subtracting L(q ′ ) from L(q) gives the displayed expression.
+Finally, removing choices from a list cannot produce a new value below its previous minimum or
+above its previous maximum. The same statement uses greatest lower and least upper bounds
+when the permitted scores form an inﬁnite set.
+
+In the four-row example, observing q00 = 0 removes the last two rows. The possible values
+of d shrink from {−1, 0, 1} to {0, 1}. Also observing q10 = 1 leaves only the second row and
+determines d = 1. This is additional information. By contrast, computing ϕC = d/2 from each
+of the original four rows removes none of them. A useful summary need not be a new observation.
+The two-factor allocation can aid explanation without supplying a missing cell or a missing task
+reference.
+If a measurement contradicts a claimed rule, there may be no permitted table at all. For
+example, an assertion that the two criteria always give the same score for a candidate conﬂicts
+with measured scores 0 and 1 for that candidate. This calls for an inconsistency report, not
+an invented completion. The release’s consistency guard rejects this speciﬁc conﬂict. Invalid or
+inapplicable comparisons likewise need their meaning repaired before we enumerate numerical
+possibilities.
+For meaningful but unknown cells, the released numerical core allows values between 0 and
+1 and calculates bounds over separate per-cell intervals. Each cell receives its own permitted
+range, and the calculation allows any combination of values from those ranges without expressing
+constraints between cells. This does not assume that random variables are independent in the
+probabilistic sense. These are bounds on missing information, not statistical conﬁdence intervals.
+If the score is actually binary, the exact attainable values may be discrete as above. If additional
+relations connect the cells, separate per-cell intervals may also allow impossible combinations
+and yield wider bounds than necessary. The baseline code makes speciﬁc equality and binary-
+implication deductions; it does not implement a general solver for every collection F. The
+proposition explains the reasoning principle rather than claiming an unimplemented capability.
+This distinction also clariﬁes the historical comparison: veriﬁed policy implications already
+determine the accepted cases’ missing policy cells, while other conﬁgurations can beneﬁt from
+measuring those cells. Equal availability of the six speciﬁed diagnostics with and without an
+allocation does not establish that allocation is universally useless. It reﬂects what information
+those particular questions require.
+
+
+5    What the executable checks establish
+
+We now apply these distinctions to the 14 selected candidate pairs and the separately introduced
+constructed materials (Sections 2.7 and 2.8). Compilation and axiom checks establish properties
+of a formal ﬁle; the deﬁnition counterexample and Boolean challenge examine whether those
+properties suﬃce for the intended task.
+
+
+
+
+                                                22
+
+===== PDF PAGE 23 =====
+
+5.1   Compilation, target extraction, axioms, and task meaning
+
+A Lean ﬁle can contain many named deﬁnitions and theorems. The selected target is the dec-
+laration chosen before evaluation. A successful proof of another theorem in that ﬁle cannot
+substitute for checking this target.
+It is useful to distinguish four questions. First, does the ﬁle compile in the recorded software
+environment? This checks that its syntax, names, types, and supplied proofs are accepted
+there. Second, is the selected target present and extractable? Third, on which axioms does that
+declaration depend? An axiom is a proposition admitted as a starting assumption. Lean can
+report dependencies reached through other deﬁnitions and theorems, as well as direct depen-
+dencies. Fourth, does the accepted declaration express and satisfy the intended task? The ﬁrst
+three checks provide evidence for the fourth, but do not settle it by themselves. In particular,
+the kernel checks a proof of the formal statement actually written, relative to its deﬁnitions
+and assumptions; interpreting that statement against the requested mathematics is a further
+step[1, 2].
+The historical execution used Lean 4.31.0, a 240-second limit per candidate, and two concurrent
+processes. It applied two experimental axiom policies. The ﬁrst excludes sorryAx, the depen-
+dency associated with a placeholder that lets an unﬁnished proof remain in a Lean ﬁle. The
+second permits only propext, Classical.choice, and Quot.sound, three named foundational
+axioms on its allowed list. Passing either policy means passing that dependency rule. It does
+not mean that the theorem has the intended hypotheses or that a deﬁnition uses the intended
+convention. These two policies are experimental checks, not reconstructions of the complete old
+and new historical review instructions.
+All 28 historical candidate versions were attempted: 17 compiled, 11 failed, and none timed
+out. Of the 17 successful ﬁles, 16 exposed their preselected targets; all 16 passed both policies.
+The remaining successful ﬁle, ex_3_1_2/from, lacked the selected declaration, which was not
+replaced after seeing the result. Six candidate pairs consequently had complete four-cell axiom
+tables, each containing four ones. These results concern the recorded current environment.
+The complete original dependency environment was not reconstructed, so a present compilation
+failure is not proof of an original historical failure.
+
+
+5.2   A narrow check for assuming the conclusion
+
+An accepted proof can establish a statement weaker than the task intended. For an elementary
+illustration, suppose the task is to prove that x2 ≥ 0 for every real number x. A replacement
+statement saying “if x2 ≥ 0, then x2 ≥ 0” is easy to prove: its assumption already supplies its
+conclusion. The conditional statement is logically valid, but it does not establish the requested
+unconditional result. This is an explanatory example, not an additional historical observation.
+The separate requirement subcheck asks whether the principal theorem directly assumes its
+complete conclusion as a public hypothesis. A single AI assessor performed this narrow check.
+It does not detect every possible weakening of a statement or every indirect way of moving
+work into assumptions, and no independent expert reference was available. The 14 pairs supply
+14 × 4 = 56 cells for this requirement assessment. Among them, 27 were measured, 23 were
+not applicable, four were uncertain, and two were invalid. Only six tables were complete and
+comparable. “Not applicable” means that this particular check does not apply; “uncertain”
+
+
+                                               23
+
+===== PDF PAGE 24 =====
+
+means that the evidence does not settle it; “invalid” means that the proposed assessment cannot
+be used as speciﬁed. None is silently turned into a measured failure. These counts describe
+where measurement was possible, not how often historical mathematics was correct.
+
+
+5.3   Four assessment methods and diagnostic availability
+
+For each candidate pair and pair of requirements, there are six diagnostic questions: how the
+candidate change looks under each of the two requirements; how the requirement change looks on
+each of the two candidates; the total change when both are changed; and whether the candidate
+contrast itself changes when the requirement changes. The ﬁnal question is the interaction
+introduced in the mathematical framework.
+The four methods diﬀer in the information they may use. Historical labels use the saved judg-
+ments, with abstention when their evaluator cannot be identiﬁed with the current one. Fixed
+R1 checks both candidates under the second requirement, denoted R1 . Four cells uses all four
+candidate–requirement combinations. Four cells plus Shapley uses the same observations and
+additionally allocates the diagonal change by averaging the two change orders explained earlier.
+The ﬁxed-requirement method also receives veriﬁed equality of eﬀective rules and valid logical
+implications. For example, if passing a stricter allowed-axiom list necessarily passes a looser
+one, an observed strict-policy pass implies a loose-policy pass without another execution. Such
+an entry is recorded as a deduction. Withholding it would unfairly make the four-cell method
+appear more informative.
+
+Table 4: Number of the six diagnostic questions with a justiﬁed single-number answer. The “Slots”
+column is the denominator for every method in that row.
+
+ Evidence group                                  Slots    Labels   Fixed R1   Four cells   + Shapley
+ Constructed examples (7)                            42       4          17          26           26
+ Axiom: development (6)                              36       0          13          13           13
+ Axiom: holdout (8)                                  48       0          27          27           27
+ Requirement: development (6)                        36       0          12          12           12
+ Requirement: holdout (8)                            48       0          25          25           25
+
+
+For example, the ﬁrst row contains seven constructed tables, with six questions each: 7 ×
+6 = 42 possible answers. Its four-cell method supplies 26, not 26 correct judgments about 42
+independently sampled tasks. The development rows use six historical pairs, giving 6 × 6 = 36
+slots; the holdout rows use eight, giving 8 × 6 = 48. The axiom and requirement rows reuse
+those same historical pairs. Their slots must not be counted as independent samples. The zeros
+in the historical-label column mean that saved labels from a diﬀerent evaluator cannot supply
+the stipulated current measurements; they do not mean that every saved label was wrong.
+Four-cell access adds nine answers over ﬁxed-R1 access in the constructed examples and none
+in the historical groups. Shapley allocation adds no answerable question because it adds no
+observation. The constructed tables also have 26 assessable, previously handwritten reference
+answers, with no detected implementation discrepancy. Those references check arithmetic in
+designed cases; they are not independently adjudicated judgments of historical semantic correct-
+ness. The statistical interpretation of the historical zero diﬀerences is treated separately in this
+report.
+
+
+                                                24
+
+===== PDF PAGE 25 =====
+
+5.4   Why the empty set distinguishes two deﬁnitions
+
+Consider the historical task def_2_1. A bijection between two sets pairs every member of either
+set with exactly one member of the other: no member is missed or duplicated. The natural
+numbers N = {0, 1, 2, . . .} form an inﬁnite set. A ﬁnite set cannot be paired bijectively with all
+of them. In particular, the empty set ∅, which has no members, cannot supply a partner for
+the natural number 0.
+Two conventions for “countable” are common. One includes ﬁnite sets together with sets that ad-
+mit a bijection with N; the other means speciﬁcally that a bijection with N exists. Both retained
+task texts use the second convention. The earlier candidate instead uses Lean’s A.Countable,
+which includes ﬁnite sets. The later candidate uses the requested bijection convention and sep-
+arately names the broader “at most countable” notion. The issue is ﬁdelity to this task’s stated
+convention, not a claim that the broader convention is generally wrong.
+The audit’s reference predicate is the assertion “there exists a bijection from A to the whole
+set of natural numbers.” Here A is the set supplied to the deﬁnition. For readers checking the
+implementation, the reference is written in Lean as
+                                                                  
+                              Nonempty A ≃ (Set.univ : Set N) .
+
+The symbol ≃ requests a bijection; Set.univ denotes the whole set of elements of the indicated
+type, here the natural numbers; and Nonempty asserts that at least one such bijection exists. It
+does not assert merely that A has an element. Translating the task wording into this reference
+remains an inspectable AI interpretation made for the audit, without an independent expert
+reference; compilation alone does not certify that step.
+The empty set now provides a complete argument that the older deﬁnition disagrees with the
+reference. The older predicate accepts it because it includes ﬁnite sets. The reference rejects
+it because a bijection would have to give 0 a preimage in a set with no members. The newer
+deﬁnition rejects it for the same reason as the reference. A single counterexample suﬃces to
+refute a claim that two predicates agree for every set.
+The witness ﬁle retains both candidate bodies in separate namespaces, shares their common
+Mathlib import, and appends six proved propositions: the old predicate accepts the empty set;
+the reference rejects it; the new predicate rejects it; the new predicate agrees with the reference
+for every set; the old predicate does not agree universally with the reference; and the old and
+new predicates diﬀer. Agreement of the new predicate with the reference follows by expanding
+their deﬁnitions. Six propositions describe one investigated case, not six independent successes.
+The successful compilation exited with code zero in 217.685 seconds. Both candidate deﬁnitions
+had empty printed axiom sets; four witness propositions depended only on Quot.sound, and two
+had empty axiom sets. The source and message veriﬁer passed 23 checks. An earlier Windows
+launcher failure caused by a long path occurred before compilation and remains archived; the
+successful run used a shorter directory. The result establishes this speciﬁc mathematical distinc-
+tion relative to the chosen reference. It does not certify the entire revised ﬁle or all downstream
+theorems.
+
+
+
+
+                                                25
+
+===== PDF PAGE 26 =====
+
+5.5     Exhaustive behavior checks on one Boolean task
+
+The ﬁnite challenge removes the need to interpret advanced mathematics. Its task is a function
+of two Boolean inputs, each either false or true. The output must be true when exactly one
+input is true. Because there are 2 × 2 = 4 possible input pairs, the whole required behavior ﬁts
+in Table 5. This reference was ﬁxed before execution.
+                            Table 5: The complete reference for the two-input task.
+
+ First input    Second input      Required output    Reason
+      False         False               False        Neither input is true.
+      False         True                True         Exactly the second input is true.
+      True          False               True         Exactly the ﬁrst input is true.
+      True          True                False        Two true inputs are not exactly one.
+
+
+Nine implementations were deliberately designed: three correct versions, ﬁve incorrect versions
+with the same function type, and one compilation-failure control. A function type specifying
+two Boolean inputs and one Boolean output tells us what kinds of values may be supplied and
+returned. It does not tell us which output is returned on a given input. Thus an “always false”
+function can have the same type as a correct exclusive-or function.
+
+Table 6: Saved observations on the ﬁnite task. All eight executable implementations passed both the
+axiom and printed-type checks. A dash means execution evidence was unavailable.
+
+ ID     Implementation                                                    Mismatched inputs   Behavior
+ 01     Exclusive-or                                                              0/4          Match
+ 02     Boolean inequality                                                        0/4          Match
+ 03     Conditional exclusive-or                                                  0/4          Match
+ 04     Conjunction: both inputs true                                             3/4         Mismatch
+ 05     Disjunction: at least one input true                                      1/4         Mismatch
+ 06     Equality behind a helper                                                  4/4         Mismatch
+ 07     Constant false                                                            2/4         Mismatch
+ 08     First argument only                                                       2/4         Mismatch
+ 09     Undeﬁned function                                                          –          Uncertain
+
+
+Table 6 compares each executable version with all four reference rows. For example, disjunction
+fails only when both inputs are true: it returns true while the task requires false. Exhaustive
+execution therefore identiﬁes three matches and ﬁve mismatches; the unexecutable version re-
+mains uncertain. Passing the two preliminary checks is insuﬃcient to establish the required
+behavior. Since these are nine designed implementations of one task, the fraction ﬁve out of
+eight is not a population false-acceptance estimate or evidence from eight independently sampled
+tasks. Capability-oriented behavioral testing provides a methodological precedent[5]; no NLP
+performance result from that work is transferred here. Finite execution also diﬀers from the
+kernel-checked propositions in the deﬁnition example.
+The original evaluator compiled a ﬁxed correct baseline alongside each implementation, making
+18 candidate compilations. Nine behavior-probe compilations brought the total to 27 attempts.
+The repeated baseline is instrumentation, not extra independent evidence. A separate veriﬁer
+reconstructed the observations from saved standard output without calling the original scoring
+computation. It passed 166 checks after correcting a newline-normalization defect: its ﬁrst
+
+                                                      26
+
+===== PDF PAGE 27 =====
+
+nine ﬁxture-hash failures reﬂected LF versus CRLF line endings. Both veriﬁer versions and the
+failure report are preserved. Only ﬁxture newlines are normalized; hashes of executed sources
+and probes remain exact. No experiment was rerun to replace the failed veriﬁcation record.
+
+
+5.6   Reconstruction and rejection of contradictory inputs
+
+All 35 saved comparison tables were reconstructed exactly after timing was excluded. The
+earlier reconstruction suite passed 52 tests, while its provenance/accounting validator passed
+6,093 checks over 227 read source snapshots. These results check reproducibility under the
+implemented rules, not independent semantic correctness.
+The audit also found an input-consistency problem. Suppose the new candidate is said to face
+identical eﬀective requirements in both columns, but its measured entries are q10 = 0 and q11 = 1.
+Here the ﬁrst entry is that candidate’s result under the ﬁrst requirement, and the second is its
+result under the second requirement. Identical deterministic checks on the same candidate
+should not produce both rejection and acceptance. The old baseline could infer a requirement
+contrast of zero from the identity declaration while direct subtraction gave 1 − 0 = 1. The
+portable implementation now rejects the contradictory input before writing a result, rather
+than presenting both answers as valid.
+Its 50 unit and regression tests are a separate suite from the earlier 52 reconstruction tests. The
+report retains that implementation and its 35 compatibility cases. This writing revision changes
+the explanation, not the recorded experiments, their outcomes, or the production formalization
+corpus.
+
+
+6     Paired statistics of recorded decisions
+
+6.1   Outcome deﬁnition: recorded pass
+
+Across the selected candidate revisions, how much more often was a pass recorded at the later
+endpoint? The larger archive allows us to answer this question by pairing each earlier record
+with its corresponding later record.
+We use all 465 candidate-revision edges across 250 tasks, selected by the activity rule in Sec-
+tion 2.4; the ﬁrst-pass stopping rule is not applied to this paired analysis. Each edge compares
+two versions of the same assignment; a task can contribute several such comparisons. Thus
+the earlier and later records are paired observations, while the task is the unit used to group
+repeated observations.
+We ﬁrst translate the recorded labels into a numerical outcome. Write A = 1 if a record
+says pass. Write A = 0 for the explicitly recorded labels fail, inconclusive, and partial.
+Thus A answers only “Was a pass recorded?” A zero is not a claim that the mathematics is
+wrong. In particular, an inconclusive review has not established mathematical failure. Missing
+or unrecognized labels are rejected by the analysis script rather than silently changed to zero.
+The original four categories are also retained in Table 10.
+For one edge, subtract its earlier value from its later value. A change 0 → 1 contributes +1,
+a change 1 → 0 contributes −1, and an unchanged binary value contributes 0. None of these
+quantities measures semantic correctness: the outcome remains the recorded decision.
+
+                                                27
+
+===== PDF PAGE 28 =====
+
+6.2     Task-equal and edge-equal mean changes
+
+Consider the illustrative tasks in Table 7. Task A passes after one selected change. Task B has
+three selected changes and passes only at the third. Both eventually pass, but the numbers of
+recorded edges diﬀer.
+
+Table 7: Illustrative example only: one task can contribute more edges than another. The entries are
+binary recorded-pass values, not mathematical-quality scores.
+
+ Task    Edges   Earlier → later values                                            Mean edge diﬀerence
+ A         1     0→1                                                                       1
+ B         3     0 → 0, 0 → 0, 0 → 1                                                      1/3
+
+
+Giving each task one vote yields (1 + 1/3)/2 = 2/3. Giving each edge one vote yields (1 + 0 +
+0 + 1)/4 = 1/2. The answers diﬀer because the second calculation gives Task B three times the
+weight of Task A. Neither arithmetic operation is wrong. They answer, respectively, “What is
+the mean of the tasks’ own mean changes?” and “What is the mean change across the recorded
+edges?” Neither is the fraction of tasks that eventually pass; that fraction is 2/2 in this example.
+We now name the same ingredients for the real data. Let S be the number of represented tasks
+(S = 250 in the main route). The index k names a task, from 1 to S, and nk is its number of
+selected edges. Within task k, the index e runs from 1 to nk . Write Ake,0 and Ake,1 for the
+earlier and later binary values. Deﬁne
+
+                                       1 X
+                                           nk
+                               dk =           (Ake,1 − Ake,0 ),
+                                       nk e=1
+                                                                  PS                                (6)
+                                    1 XS
+                                                                  k=1 nk dk
+                            btask =
+                            µ             dk ,        bedge =
+                                                      µ           PS        .
+                                    S k=1                          k=1 nk
+
+                                         btask is the task-equal mean, and µ
+Here dk is a task’s mean edge diﬀerence, µ                                 bedge is the edge-equal
+mean. All three quantities are dimensionless diﬀerences on the zero–one scale. Multiply by 100
+to report percentage points. A task’s dk also equals its mean later-endpoint value minus its
+mean earlier-endpoint value. This is the pair of task-level means used below.
+For the complete retained set, there are 118 earlier pass occurrences and 328 later pass occur-
+rences. Therefore
+                                     328 − 118     210
+                             bedge =
+                             µ                 =       ≈ 0.451613,
+                                        465        465
+                                                                            btask = 0.570909, or
+or 45.16 percentage points. Averaging the 250 task diﬀerences instead gives µ
+57.09 percentage points. These describe the speciﬁed archive and inclusion rules exactly, before
+any probability model is imposed; displayed decimals are rounded.
+
+
+6.3     Why 465 edges are not 465 independent observations
+
+Consider a chain with recorded values 0 → 0 → 1. Its two diﬀerences share the middle record:
+it is the later endpoint of one edge and the earlier endpoint of the next. More generally, if a
+chain has m edges and successive values a0 , a1 , . . . , am , then
+
+                      (a1 − a0 ) + (a2 − a1 ) + · · · + (am − am−1 ) = am − a0 .
+
+
+                                                   28
+
+===== PDF PAGE 29 =====
+
+Every interior value cancels. A long chain can therefore supply many rows without supplying
+equally many independent observations of net change.
+The retained graph has 930 endpoint occurrences but only 783 distinct endpoint records; 147
+records appear in two edges. Its 318 maximal chains, formed from all 465 selected edges rather
+than the 367 high-conﬁdence edges used for the 262 process segments, satisfy the cancellation
+identity, with total net diﬀerence 210. Further dependence can arise from common task diﬃculty,
+feedback, and review conditions. There are 103 tasks with multiple edges, a maximum of 26
+edges in one task, and 14.41% of all edges come from the ﬁve largest task groups. These graph
+chains are a diagnostic of this edge set, not a replacement deﬁnition of the failure-origin processes
+studied later.
+We therefore summarize each task by its paired diﬀerence dk before calculating the t statistic,
+and resample entire tasks when constructing the reference intervals. This preserves dependence
+within each task. It does not prove that diﬀerent tasks are independent: tasks can still share
+reviewers, batches, mathematical dependencies, or changing rules.
+
+
+6.4     Paired t calculation and its reference assumptions
+
+6.4.1    Mean diﬀerence and standard error
+
+The conditional calculation uses the 250 task-level paired diﬀerences and an independent-task
+reference model for the same record-selection mechanism.
+Let D be a task diﬀerence in that reference population, with mean µD = E(D) and standard
+deviation σd . For the observed d1 , . . . , dS ,
+                                       v
+                                       u
+                                       u     1 X  S
+                                  sd = t            (dk − µ
+                                                          btask )2 .
+                                           S − 1 k=1
+
+The observed sample standard deviation is sd = 0.430341, or 43.03 percentage points.
+Under independent task diﬀerences with common variance σd2 ,
+                                               !
+                                   1 XS
+                                                        1 X  S
+                                                                  2   σd2
+                               Var       Dk        =            σ d =     .
+                                   S k=1                S 2 k=1       S
+
+The estimated standard error is
+                                    sd
+                                c = √    0.430341
+                                SE      ≈ √       ≈ 0.027217.
+                                      S      250
+This is 2.72 percentage points under the task model. Cross-task dependence would add covari-
+                                        √
+ance terms, so the displayed division by 250 need not describe the mean’s uncertainty in the
+actual archive.
+
+
+6.4.2    Null hypothesis and observed statistic
+
+The paired null is H0 : µD = 0 for the speciﬁed task population. The saved two-sided calculation
+is[4, 7]
+                                 µbtask − 0   0.5709091575
+                          tobs =       √ ≈                  ≈ 20.9761.                        (7)
+                                   sd / S     0.0272171622
+
+                                                   29
+
+===== PDF PAGE 30 =====
+
+The pair consists of each task’s later-endpoint mean and that same task’s earlier-endpoint mean.
+Treating the earlier and later collections as independent samples would discard this pairing; the
+model is imposed on their diﬀerences.
+
+
+6.4.3    Reference distribution and scope
+
+For independent, identically distributed normal task diﬀerences with positive variance, the null
+reference is Student t with S − 1 = 249 degrees of freedom.
+The present task diﬀerences are bounded and take discrete values, so the exact normal-diﬀerence
+model does not literally hold. With 250 tasks, the reported Student calculation is used only as an
+exploratory large-sample reference under the additional independent-task model. In particular,
+a large number of tasks does not certify independence or validate the accuracy of an extremely
+small tail probability.
+With Z ∼ t249 , the nominal two-sided p-value is
+
+                            pref = Pr{|Z| ≥ |20.9761|} ≈ 5.87 × 10−57 .
+
+This is a nominal tail probability under the reference model, whose relevance to this selected
+archive is unveriﬁed. Its small numerical value does not establish mathematical improvement.
+
+
+6.5     Task-cluster resampling and reference intervals
+
+To assess variation in the mix of represented tasks, the saved analysis uses a bootstrap with
+the entire task as the sampling cluster[6]. Each draw retains that task’s selected paired edges
+together.
+Each repetition draws S task identiﬁers, uniformly and independently from the observed S
+identiﬁers. Every selected task carries all its edges and both endpoints with it. We recompute
+the task-equal mean from the selected task diﬀerences. For the edge-equal mean we instead divide
+the selected tasks’ combined net change by their combined number of edges; that denominator
+may change across repetitions.
+The saved analysis uses 20,000 repetitions. Sorting the resulting values and taking the 2.5th
+and 97.5th percentiles gives the reported central 95% percentile interval. For the full data,
+the task-equal interval is [0.518357, 0.624482], or [51.84, 62.45] percentage points. The edge-
+equal interval is [38.63, 52.12] percentage points. Reproducibility uses NumPy PCG64 with seed
+sequences [20260906, r], where r = 0, 1, 2 identiﬁes the three analysis routes, and linear percentile
+interpolation.
+These are reference intervals because their usual 95% coverage interpretation requires indepen-
+dent, suﬃciently comparable tasks produced by the same history and inclusion mechanism.
+Those assumptions have not been established for this retrospective archive. The mean 0.570909
+is ﬁxed once the 250 observed diﬀerences are given; the intervals describe hypothetical varia-
+tion in which tasks are represented. Whole-task resampling retains within-task dependence but
+cannot repair selection bias, cross-task dependence, or the absence of a semantic outcome.
+This diﬀers from a logical completion bound. Suppose, for illustration, that an earlier score is
+zero and a later score is unmeasured but must be zero or one. The diﬀerence can be zero or one,
+with sharp bounds [0, 1]. These possibilities carry no assigned probabilities and no 95% coverage
+
+                                                 30
+
+===== PDF PAGE 31 =====
+
+claim. Measuring the missing score can resolve the ambiguity. The task bootstrap instead varies
+the hypothetical sample while using scores that are already known.
+
+
+6.6    Results under three selection rules
+
+The main analysis and two sensitivity routes are shown in Tables 8 and 9. A sensitivity route
+changes an inclusion rule to show what answer that altered question produces. The three routes
+were declared before numerical estimation in the previous revision session, but the archive was
+already familiar. This is retrospective exploration, not prospective preregistration. All three
+unadjusted two-sided reference tests are reported; no route is selected because its p-value is
+smaller, and the pointwise intervals do not provide a simultaneous conﬁdence guarantee for all
+routes.
+Table 8: Recorded-pass changes, in percentage points. Brackets contain 95% task-cluster percentile
+reference intervals conditional on the task model. Changing the route changes the included edges and
+tasks.
+
+ Route                                        Edges / tasks     Task-equal change      Edge-equal change
+ All candidate-change edges                        465 / 250   57.09 [51.84, 62.45]    45.16 [38.63, 52.12]
+ Both endpoints pass/fail                          440 / 236   55.73 [50.15, 61.21]    44.09 [37.36, 51.18]
+ High-conﬁdence edges                              367 / 207   76.93 [71.89, 81.73]    59.95 [50.44, 70.10]
+
+
+Table 9: Paired calculations on task-level means. Before and after percentages are task-equal. Nominal
+p-values use an unveriﬁed Student-reference model and do not test semantic improvement.
+
+ Route                                                Before → after          t (df)        Two-sided pref
+ All candidate-change edges                         29.16% → 86.25%      20.9761 (249)      5.87 × 10−57
+ Both endpoints pass/fail                           31.59% → 87.32%      19.7176 (235)      1.00 × 10−51
+ High-conﬁdence edges                                6.92% → 83.85%      30.5239 (206)      2.21 × 10−78
+
+
+In the full set, 182 task diﬀerences are positive, 67 are zero, and one is negative. There is actual
+variation, which makes the standard deviation nonzero and the t statistic calculable. The gap
+between task-equal and edge-equal means is also substantive: tasks with longer selected histories
+receive more weight in the second average and collectively have smaller net change per edge.
+
+Table 10: Original recorded verdicts for all 465 edges. Rows describe the earlier endpoint and columns
+the later endpoint. “Inconclusive” and “partial” remain visible even though neither is coded as a recorded
+pass.
+
+                          Earlier / later   Pass   Fail   Inconclusive   Partial
+                          Pass              105     12              1         0
+                          Fail              206    117              5         1
+                          Inconclusive       16      0              1         0
+                          Partial             1      0              0         0
+
+
+The four-category table explains why coding matters. Twenty-ﬁve edges have an inconclusive or
+partial endpoint. Seventeen move from such a result to pass, and one moves from pass to such
+a result. The main average therefore includes changes in whether a decisive pass was recorded.
+
+
+                                                    31
+
+===== PDF PAGE 32 =====
+
+Restricting both endpoints to pass/fail removes these edges but also changes the represented
+tasks. It is a diﬀerent selected target, not the same sample with a better name.
+The high-conﬁdence route uses the inherited conﬁdence classiﬁcation of candidate-change edges;
+“high conﬁdence” is not an independent certiﬁcation of mathematical repair. The rule uses
+prior structured ﬁndings. A descriptive check added after the main estimates shows markedly
+diﬀerent starting compositions: the high-conﬁdence subset starts with 21 passes among 367
+edges, while the 98-edge medium-conﬁdence complement starts with 97 passes and ends with
+87. The complement spans 81 tasks, with task-equal change −11.73 percentage points and edge-
+equal change −10.20. No new test or interval is attached to that post-estimation check. A group
+beginning almost entirely at pass has little room to increase, whereas a group beginning mostly
+without pass has much more room. Thus the larger high-conﬁdence change does not establish
+that its revisions are more eﬀective.
+Other explanations remain unresolved. The source-review contract ﬁelds diﬀer on 45 edges and
+task-content ﬁelds on two; matching ﬁelds do not prove identical eﬀective review conditions. Of
+783 unique endpoint records, 781 have unknown check extent, one explicitly reports no review,
+and one a reviewability block. Independent execution was not checked by this projection. There
+are 451 edges outside the separate case assessment, so the larger statistical set lacks a corre-
+sponding semantic assessment for those edges. Candidate improvement, changed assessment
+conditions, and selective continuation can all produce recorded-label movement. Regression to
+the mean may also contribute. Without an appropriate comparison design and independent
+semantic outcome, these explanations cannot be separated by a small p-value.
+
+
+6.7   Why zero diagnostic diﬀerences give an undeﬁned t statistic
+
+The smaller evaluator comparison measures a diﬀerent outcome: the number of prespeciﬁed
+diagnostic questions with a deﬁnite answer. The four-cell method is compared with a baseline
+that checks both candidates under R1 and also uses veriﬁed relationships between the criteria.
+Those deductions are part of the baseline’s information.
+For task k, let Ck,4 be the number of deﬁnite answers supplied by the four-cell method and Ck,F
+the corresponding number supplied by this ﬁxed-requirement baseline. Each count lies from zero
+to six. Deﬁne Dk = Ck,4 − Ck,F , measured in diagnostic questions, not percentage points. In
+each of the two historical assessments, all 14 values of Dk are zero; the individual answers also
+agree. Applying the same recipe gives
+                                v
+                                u
+                                u1 X
+                                   14
+                                                                          0   0
+               D = 0,      sD = t     (Dk − D)2 = 0,           tobs =     √ = .
+                                   13 k=1                               0/ 14 0
+
+The statistic is undeﬁned, not a t-test result of t = 0, p = 1. The 250-task calculation above had
+nonzero variation and hence a deﬁned denominator; this comparison has none.
+The exact descriptive ﬁnding remains useful: these methods gave the same answers on these
+selected historical cases. But a task bootstrap would only redraw zeros, and a sign compari-
+son would have no positive or negative diﬀerences to compare. Such calculations cannot reveal
+whether unobserved tasks would diﬀer. Repeating the same 14 tasks in two assessments, or count-
+ing their six questions and four cells separately, does not create independent task information.
+Claiming population equivalence would require a deﬁned population, a defensible uncertainty
+model, and a substantively acceptable diﬀerence speciﬁed for an equivalence question.
+
+                                               32
+
+===== PDF PAGE 33 =====
+
+The seven constructed examples have ﬁxed-baseline gains [5, 0, 4, 0, 0, 0, 0]. They demonstrate
+that additional information can help; their deliberately chosen mixture does not estimate how
+often that happens in ordinary tasks. Shapley scoring adds no diagnostic availability beyond
+direct four-cell access in all 35 tables, consistent with its use of the same observations. These are
+diﬀerent comparisons and should not be combined into a single claim of zero gains everywhere.
+
+
+6.8   The eight-pair compilation comparison: exact McNemar test
+
+There is a separate calculable comparison for the eight task-isolated holdout pairs: did the earlier
+and later candidates compile in the current test environment? Table 11 shows the complete
+paired observations. This outcome concerns compilation, not whether the intended mathematical
+statement was correctly represented.
+
+Table 11: Actual compilation outcomes for the eight holdout task pairs. The two oﬀ-diagonal cells, not
+the 16 endpoints treated separately, supply the directional information.
+
+                              Earlier / later   Fails   Compiles   Total
+                              Fails                1           1      2
+                              Compiles             1           5      6
+                              Total                2           6      8
+
+
+Five pairs compile on both sides and one on neither. One changes from failure to success and
+one from success to failure. Each side therefore has six compiling candidates out of eight, giving
+the paired net diﬀerence (1 − 1)/8 = 0. The improving task is def_13_2; the declining task is
+prob_10_1.
+The exact McNemar calculation asks whether discordant directions are balanced[3]. Let b = 1
+count failure-to-success changes, c = 1 the reverse changes, and m = b + c = 2 the number of
+discordant pairs. Under a conditional null that the independent discordant directions are equally
+likely, the number B of improving directions in a hypothetical repetition has a binomial distri-
+bution with m = 2 trials and success probability 1/2. Using twice the smaller tail probability,
+capped at one, gives
+
+                      p = min{1, 2 Pr(B ≤ 1)} = min{1, 2(1/4 + 1/2)} = 1.
+
+This p-value is a deﬁned result with only two informative directions. It provides no directional
+evidence against that null; it does not prove equivalent compilation probabilities, absence of a
+revision eﬀect, or semantic correctness. The holdout selection was stratiﬁed and retrospective,
+and task isolation does not itself prove statistical independence or erase prior exposure. The test
+is a limited illustration of a suitable paired-binary calculation, not a substitute for the larger
+task-level analysis.
+Paired diﬀerences summarize selected revisions. To study their order, we next follow the steps
+of a path until its ﬁrst recorded pass or its exit.
+
+
+
+
+                                                  33
+
+===== PDF PAGE 34 =====
+
+7     Following the ﬁxed failure-origin paths
+
+7.1   The ﬁxed cohort, ﬁrst-pass stopping, and exit
+
+We return to the high-conﬁdence reconstruction deﬁned in Sections 2.5 and 2.6. Its 367 edges
+form 262 full continuous segments. Selecting the 230 segments with an explicit failure at their
+origin gives the ﬁxed cohort of 182 tasks. Selecting origins and stopping observation at ﬁrst
+pass are separate operations; later records are never appended solely because they belong to the
+same task.
+As deﬁned in Section 4.3, step 1 is the ﬁrst eligible transition from the failing origin to another
+submitted candidate. Its outcome is the later candidate’s recorded review decision. Each sub-
+sequent step is another such submitted-version transition. A path stops at its ﬁrst recorded
+pass or at the end of the permitted chain, whichever comes ﬁrst. The 230 paths contribute 329
+observed steps in total. A row containing one such step and its outcome is called an eligible-step
+row, traditionally a risk row. “At risk” here means still eligible to record a ﬁrst pass.
+There are two terminal outcomes. A total of 206 paths record a pass before the chain ends.
+The other 24 reach the chain boundary without such a pass. For this question, exit is an
+observed endpoint, not an unknown outcome silently assigned a failure label. It describes where
+this analytical path ends. It does not establish that the task was abandoned, that all future
+submissions would fail, or that an eventual pass elsewhere should be added to this path.
+Changing the question changes the treatment of exits. If we asked how long the task would
+take to pass if the same mechanism continued indeﬁnitely, the post-exit outcomes would be un-
+observed. Calling those observations censored would not make the missing continuation known:
+additional assumptions would be needed to relate it to the observed paths. We do not estimate
+that hypothetical waiting time.
+
+
+7.2   Step counts, risk sets, and cumulative proportions
+
+At step 1 all 230 failure-origin paths are eligible. Of them, 167 pass, 18 end without a pass, and
+45 continue to step 2:
+                                       230 = 167 + 18 + 45.
+At step 2 only those 45 continuing paths remain. There are 29 passes, 4 exits, and 12 further
+continuations:
+                                      45 = 29 + 4 + 12.
+The second denominator is 45 because we are asking about paths that reach step 2. It is not
+another sample of 230 paths, and it is not a comparison of all tasks before and after one extra
+revision. Table 12 shows the same accounting through the ﬁnal observed step.
+To write this bookkeeping once for all steps, let nj be the eligible count at step j, dj the passes
+at that step, and cj the exits after a nonpassing step. Then
+
+                                       nj = dj + cj + nj+1 .                                    (8)
+
+This is a counting identity, not a ﬁtted model. The set of nj paths is the step-j risk set. Its
+decline is explained by the recorded pass and exit counts, without assuming a constant pass
+probability.
+
+                                                34
+
+===== PDF PAGE 35 =====
+
+Table 12: The ﬁxed 230-path cohort. Each row partitions the paths observed at that step into pass, exit,
+or continuation.
+
+                                        Step       Eligible   Pass    Exit   Continue
+                                           1           230    167      18            45
+                                           2            45     29       4            12
+                                           3            12      1       0            11
+                                           4            11      5       0             6
+                                           5             6      2       1             3
+                                           6             3      0       0             3
+                                           7             3      0       0             3
+                                           8             3      0       0             3
+                                           9             3      0       0             3
+                                          10             3      0       0             3
+                                          11             3      1       0             2
+                                          12             2      1       0             1
+                                          13             1      0       0             1
+                                          14             1      0       0             1
+                                          15             1      0       0             1
+                                          16             1      0       0             1
+                                          17             1      0       1             0
+                         Sum across steps              329    206      24            —
+
+
+Two useful cumulative quantities keep the original denominator 230:
+                             d1 + · · · + dj                                    c1 + · · · + cj
+                  FP (j) =                   ,                       FX (j) =                   .   (9)
+                                 230                                                230
+FP (j) is the fraction of original paths that have passed by step j; FX (j) is the fraction that have
+exited without a pass by that step. The letters P and X stand for pass and exit. These are
+cumulative proportions, also called cumulative incidences. The remaining fraction is nj+1 /230,
+so the three fractions add to 1. At the last observed step,
+
+                  FP (17) = 206/230 = 89.57%,                 FX (17) = 24/230 = 10.43%.
+
+Because exit is one of the two recorded terminal outcomes, calculating these ﬁnite-path propor-
+tions requires no assumption that exits are independent of future success.
+Let a path’s observed length be its number of eligible transitions up to pass or exit. Adding
+those lengths gives 329. Their mean is therefore 329/230 = 1.4304 transitions per path. A short
+path can end either in a pass or in an exit, so this is not the mean number of edits required for
+eventual success.
+
+
+7.3    First-step and later-step proportions have diﬀerent composition
+
+All ﬁrst steps together give 167/230 = 72.61% recorded passes. All steps with index 2 or greater
+together give 39/99 = 39.39%. The denominator 99 is the sum of the later eligible counts in
+Table 12, not 99 distinct paths or 99 independent tasks. A long path contributes several later
+rows. The diﬀerence “later minus ﬁrst” is
+                                              
+                                    39 167
+                          100         −            = −33.21     percentage points.
+                                    99 230
+
+                                                         35
+
+===== PDF PAGE 36 =====
+
+      This is a description of two groups of observed rows. It is not the change that would occur if
+      each of the same tasks were forced to receive exactly one more revision.
+      To show how these summaries vary under a reference sampling model, we resampled 182 entire
+      tasks, with replacement, 20,000 times using the ﬁxed seed 20260906. Whenever a task was se-
+      lected, all its original paths and eligible rows were retained together. Each replicate recomputed
+      the relevant ratio from pooled counts. The 2.5th and 97.5th percentiles of those results form the
+      95% task-cluster reference intervals in Table 13. This preserves dependence within a task during
+      resampling. It does not establish independence between tasks or adjust the observed history for
+      selection. The interpretation of these reference intervals is explained in Section 6.5.
+
+      Table 13: Observed summaries and 95% whole-task percentile reference intervals. Percentage-point
+      diﬀerences use subtraction of proportions; observed length is measured in submitted-version transitions.
+
+                     Quantity                                                                                                                               Estimate       Reference interval
+                     First-step pass proportion                                                                                                               72.61%            [66.40, 78.60]%
+                     Later-step pass proportion                                                                                                               39.39%            [24.84, 65.71]%
+                     Later minus ﬁrst, percentage points                                                                                                      −33.21           [−48.39, −7.49]
+                     Pass before ﬁxed-path exit                                                                                                               89.57%            [85.40, 93.53]%
+                     Mean observed length to pass or exit                                                                                                      1.4304          [1.2271, 1.6955]
+
+
+      These are ratios of pooled task totals, not means that give every task equal weight irrespective
+      of its number of paths or rows. They therefore diﬀer in weighting from the task-equal edge
+      analysis in Section 6. The later-step interval is wide because the later rows are limited and un-
+      evenly distributed across tasks. For the already enumerated archive, the displayed proportions
+      themselves are exact descriptions up to rounding; the intervals concern a hypothetical repeti-
+      tion under independent, exchangeable tasks with the same record-selection mechanism. Those
+      assumptions have not been established by this archive.
+                                                                                                                                                    Task-cluster reference intervals
+                                  1.0                                                                                             1.0
+                                                                                             Recorded pass / observed risk rows
+Fraction of 230 original chains
+
+
+
+
+                                  0.8                                                                                             0.8
+
+                                  0.6                                                                                             0.6
+                                                                Within-chain recorded pass
+                                                                Chain exit before pass
+                                  0.4                                                                                             0.4
+
+                                  0.2                                                                                             0.2
+
+                                  0.0                                                                                             0.0
+                                        0.0   2.5     5.0 7.5 10.0 12.5 15.0 17.5                                                 First (167/230)                                      Later (39/99)
+                                                    Submitted-version transition
+       Figure 2: The same process information in graphical form. Left: cumulative pass and exit proportions
+       among the original 230 paths. Right: ﬁrst and later observed-step proportions with whole-task percentile
+       reference intervals. The ﬁgure describes recorded paths and does not estimate the eﬀect of another edit.
+
+
+
+       7.4                              The two-group logit model and its coeﬃcients
+
+      The process model compares recorded-pass means in the ﬁrst-step and later-step row groups.
+      On the logit scale,
+
+
+                                                                                                  36
+
+===== PDF PAGE 37 =====
+
+                                      
+                                     r               exp(u)
+               logit(r) = log           ,     r=                  when u = logit(r).
+                                    1−r            1 + exp(u)
+The outcome concerns observed eligible rows, and the two groups can contain diﬀerent mixtures
+of tasks.
+Index a task by s, a path within that task by e, and a step within that path by j. For an
+observed eligible row, deﬁne Ysej = 1 for a recorded pass and Ysej = 0 otherwise. Let Lj be the
+later-step indicator: it is 0 when j = 1 and 1 when j ≥ 2. Finally, let µsej denote the mean of
+this binary outcome within the indicated observed-row group. The ﬁtted equation is
+
+                                       logit(µsej ) = α + βLj .                            (10)
+
+α is the ﬁrst-step log-odds. The coeﬃcient β is the amount added to those log-odds for a later
+step. Thus exp(β) is the later-to-ﬁrst odds ratio. There are only two ﬁtted group means; the
+equation does not give each task its own baseline or control for task diﬃculty.
+The analysis ﬁts this equation using generalized estimating equations, or GEE, for binary out-
+comes, with a working-independence calculation and a robust task-cluster covariance.[9] In this
+simple two-group case the ﬁtted means are exactly the two empirical proportions. The coeﬃ-
+cients can therefore be checked directly from the group counts:
+
+                         b = log(167/63) = 0.974859,
+                         α
+                          βb = log(39/60) − log(167/63) = −1.405642.
+
+There are 63 nonpassing ﬁrst rows and 60 nonpassing later rows. Substituting Lj = 0 into the
+inverse-logit formula recovers 0.726087; substituting Lj = 1 recovers 0.393939. Exponentiating
+the diﬀerence gives
+                                       b = 39/60 = 0.2452.
+                                   exp(β)
+                                            167/63
+This is the odds ratio for the two observed-row groups, not an estimate of a revision’s causal
+eﬀect.
+
+
+7.5   Task-cluster covariance and the reference test
+
+Several rows from the same task can share candidate history, requirements, and review circum-
+stances. Treating all 329 rows as unrelated observations would disregard that structure. The
+covariance is clustered by task to account for within-task dependence; the two ﬁtted proportions
+remain unchanged.
+“Working independence” names a computational choice for the ﬁt, not a ﬁnding that successive
+submissions are actually independent. The correction also does not make diﬀerent tasks inde-
+pendent: shared dependencies, models, rules, or collection batches can connect them. Nor does
+clustering remove task diﬃculty or the selection that lets a path reach later steps.
+The robust standard error for βb is 0.413295. The approximate 95% Wald interval uses a normal
+reference and the task-cluster covariance. On the log-odds scale,
+
+                   −1.405642 ± 1.96(0.413295) ≈ [−2.215685, −0.595599].
+
+Exponentiating its endpoints gives the odds-ratio interval [0.1091, 0.5512]. Dividing the coeﬃ-
+cient by its standard error gives approximately −3.4011; comparison with a standard normal
+
+                                                 37
+
+===== PDF PAGE 38 =====
+
+reference distribution yields the nominal two-sided value p = 0.0006712. Here the null hypothe-
+sis is β = 0, equivalently equal ﬁtted ﬁrst and later means or odds ratio 1. As with the tests in
+Section 6, this is a conditional reference calculation, with no test of semantic correctness.
+The covariance was independently reconstructed from the task contributions. Its maximum
+absolute diﬀerence from the software calculation was 2.5×10−16 , and an independent veriﬁcation
+also reproduced the task-level resampling results. This checks the computation against the
+stated inputs and formula. It does not validate the row-selection mechanism or establish a
+causal explanation for the association.
+For comparison, forcing one common mean gives the pooled rate 206/329 = 0.626140. The
+independent-Bernoulli working model for d passes in n rows has likelihood
+
+                              L(r) = rd (1 − r)n−d ,      0 < r < 1.
+
+For the working log-likelihood ℓ(r) = log L(r),
+                                                                       d n−d
+                   ℓ(r) = d log r + (n − d) log(1 − r),     ℓ′ (r) =     −     .
+                                                                       r   1−r
+Setting this derivative to zero gives d(1 − r) = (n − d)r, hence r = d/n. When both outcomes
+occur, the second derivative is negative, so this is the maximum. Substituting the observed
+d = 206, n = 329 yields the pooled rate above.
+This is an independent-Bernoulli working likelihood, not a full joint likelihood for an unspeciﬁed
+dependent task process. Maximizing this convenient function does not establish the indepen-
+dence it assumes. Moreover, the restriction β = 0 compares only two observed-row group means.
+The constant conditional probability in Proposition 2 demands equality after every eligible past
+history, a substantially stronger statement. This two-group test neither veriﬁes nor exhaustively
+tests that stronger model. In particular, it does not show that making another revision causes
+a lower chance of success.
+
+
+7.6   Why selecting tasks with later observations changes the ﬁrst-step group
+
+Only 39 of the 182 tasks contribute later-step rows. If we select those tasks after examining the
+whole history, their ﬁrst-step rows contain 12 passes among 61 rows, or 19.67%. The later-row
+rate of 39.39% now looks higher than the selected ﬁrst-row rate, whereas it was lower than the
+full ﬁrst-row rate of 72.61%. The arithmetic is correct, but the populations changed.
+The reason becomes clear when the 61 ﬁrst rows are separated. Forty-ﬁve belong to paths
+that actually continued. Every one of those ﬁrst steps must be nonpassing under our ﬁrst-pass
+stopping rule, so their count is necessarily 0/45. The remaining 16 are ﬁrst rows of other paths
+belonging to those same 39 tasks; 12 of these pass. Therefore 61 = 45 + 16 and 12 = 0 + 12.
+Selecting tasks because they have later observations deliberately retains many ﬁrst steps that
+had to fail in order to continue.
+This selection uses future information relative to step 1. It is not a balanced comparison of the
+same tasks under two assigned numbers of revisions. The reversal does not by itself identify an
+improvement mechanism, a diﬃculty mechanism, or a causal eﬀect. Naming it after a statistical
+paradox would not replace the needed explanation of the denominators.
+As a limited inﬂuence check, removing one task at a time gives later-minus-ﬁrst diﬀerences
+between −36.07 and −23.57 percentage points, and odds ratios between 0.2156 and 0.3593. No
+
+                                                  38
+
+===== PDF PAGE 39 =====
+
+single-task removal reverses this pooled association, but that does not settle dependence across
+tasks or selection of the archive. Adding medium-conﬁdence edges can reconnect paths and
+change the failure-origin cohort itself. Such a change answers a diﬀerent-cohort question; we
+retain the original high-conﬁdence paths here.
+The process results thus make a bounded claim: they describe when recorded passes and exits
+occur within a speciﬁed historical reconstruction, and quantify the association of recorded out-
+comes with observed process position. They do not estimate the causal value of another edit, the
+probability of mathematical truth, or the waiting time under an unobserved continuation policy.
+The accompanying frozen inputs and scripts make those particular calculations reproducible
+without adding new review experiments.
+
+
+8     Putting the results together
+
+8.1   Implications of the mathematical results
+
+The measurement result places a limit on what can be recovered from a check. When a correct
+and an incorrect program receive the same recorded description, every rule restricted to that
+description must treat them alike. In the eight executable Boolean ﬁxtures, accepting both
+passing gates makes ﬁve mistakes; the best forced binary rule using only those gates still makes
+three. Additional observations, rather than further arithmetic on the same outputs, are needed
+to distinguish the programs.
+The process result shows why observation rules belong in a probability model. A constant
+conditional pass probability is compatible with fewer paths remaining at later steps. Stopping
+at the ﬁrst pass and leaving a path for another reason have diﬀerent eﬀects; selecting only
+successful paths changes the distribution again. These conclusions hold for the stated model,
+whose assumptions are not established merely by reconstructing a historical path.
+The identiﬁcation result gives a criterion for deciding whether more evidence is needed. If every
+feasible completion gives the same contrast, the existing information determines it. Otherwise
+another observation may narrow the possibilities. A Shapley allocation summarizes the com-
+pleted comparison but supplies no new observation.
+
+
+8.2   Why the two historical trends can coexist
+
+Across the selected candidate-change edges, the task-equal average change in recorded pass is
+positive. Along the ﬁxed failure-origin paths, the pass proportion among later observed steps is
+lower than that among ﬁrst steps. These statements use diﬀerent objects and selections. There
+is no algebraic requirement that their directions agree.
+For illustration, suppose eight of ten unresolved tasks pass at the ﬁrst step. One of the two
+remaining tasks passes at the second step. The pass proportion falls from 8/10 = 80% to
+1/2 = 50%, yet the number of tasks with a pass rises from eight to nine. The second group
+contains exactly the tasks that did not pass earlier, so its lower rate does not show that a second
+revision harmed them.
+The observed project has further complications: one task can have several paths, the candidate
+and review conditions can change, and a path can exit the permitted graph. The actual task-
+
+                                                39
+
+===== PDF PAGE 40 =====
+
+level paired analysis and process analysis preserve their own deﬁnitions rather than treating the
+toy example as a ﬁtted model. Their positive and negative contrasts concern recorded outcomes,
+not independently established mathematical quality.
+
+
+8.3   Logical, statistical, and semantic uncertainty
+
+The report uses three diﬀerent forms of uncertainty. Keeping them apart makes the equations
+easier to interpret.
+
+• An unobserved comparison: A score is missing, so several tables may be compatible with
+  what we know. Completing the table under valid constraints gives a logical range of answers.
+
+• A statistical reference calculation: The retained tasks are treated as if they came from a
+  speciﬁed repeatable sampling mechanism. A standard error or resampling interval describes
+  variation under that mechanism. Its relevance beyond the observed tasks depends on the
+  assumptions.
+
+• An unresolved task interpretation: We lack an independent reference for whether a
+  candidate expresses the intended mathematics. A narrow sampling interval about acceptance
+  labels does not supply that reference.
+
+The Boolean challenge has uncertainty about neither its enumerated inputs nor their observed
+outputs. What remains limited is how far a conclusion about that task extends to other math-
+ematics. This is why its ﬁnite error bound, a missing-cell bound, and a sampling interval have
+diﬀerent interpretations.
+
+
+8.4   Requirements for a future comparison
+
+For a future semantic comparison, ﬁrst choose the tasks and the outcome to be measured.
+For example, the outcome could be whether an independently adjudicated reference judges
+a candidate to satisfy one speciﬁed requirement. Give each competing evaluator the same
+candidate, requirement, and permitted evidence. Compare their answers within each task, retain
+uncertain judgments, and keep repeated observations from the same task together. A constructed
+counterexample set remains useful, but it answers a diﬀerent question from an independently
+sampled evaluation set.
+There is a simple planning relation connecting precision to the number of independent tasks.
+Let h > 0 be the desired half-width of an approximate 95% interval for a mean paired task
+diﬀerence. Let σD be the standard deviation of those task diﬀerences in the proposed sampling
+population, estimated from an appropriate pilot or bounded conservatively. Let Splan denote
+the planned number of tasks, not the number of runs or edges. Under independent task sam-
+                                               p
+pling, the standard error is approximately σD / Splan . A normal-reference 95% interval has an
+approximate half-width of 1.96 times that standard error.
+Requiring that half-width to be no larger than h gives the successive steps
+
+                      σD              q             1.96 σD               1.962 σD
+                                                                                 2
+                1.96 p       ≤ h,         Splan ≥           ,   Splan ≥            .
+                       Splan                           h                     h2
+
+
+
+                                               40
+
+===== PDF PAGE 41 =====
+
+For an illustrative standard deviation of 0.20 and desired half-width of 0.05, the right-hand
+side is about 61.47, suggesting at least 62 tasks under this approximation. These are planning
+inputs, not estimates supplied by the present study, and 62 is not a recommendation justiﬁed for
+this project. Small-sample adjustments, dependence, reference quality, and the actual sampling
+design can change the calculation. Halving the target half-width requires roughly four times as
+many independent tasks in this simple relation; repeating the same candidate does not create
+those tasks.
+A future process study should also decide in advance when a path begins, which next steps
+are eligible, when observation stops, and how exits are recorded. Those decisions should use
+information available before the next outcome. Comparing predictions on held-out task groups
+or later time periods would then test a stated deployment question. The present report provides
+reproducible historical descriptions and concrete measurement checks to guide such a design; it
+does not claim that the future study has already taken place.
+
+
+9     Limits and reproducibility
+
+9.1   What the results do not establish
+
+The history is observational, retrospective, and selected. Task grouping preserves repeated
+observations together, but does not remove selection bias or establish independence between
+tasks. Shared mathematical dependencies, reviewers, and execution conditions remain possible
+sources of dependence. The statistical intervals have the reference interpretation stated in
+Sections 6 and 7.
+The requirement subcheck and the interpretation of the historical deﬁnition were made with
+AI assistance, without an independently adjudicated expert reference. The deﬁnition witness
+establishes relations between speciﬁed formal predicates, and the Boolean challenge exhausts
+one four-input task. Neither supplies a semantic accuracy rate for the full history.
+The executable checks used the recorded Lean and Mathlib environment, not a complete recon-
+struction of every original environment. A current compilation failure need not be an original
+defect. The witness was checked by the recorded Lean installation, without a second external
+kernel implementation. Some reconstruction steps reuse original code. Independent statisti-
+cal recalculation checks the frozen inputs and formulas, while hashes check consistency with a
+supplied manifest; neither establishes external authenticity or random selection.
+
+
+9.2   Scope of this edition
+
+Version 0.5.0 reorganizes the report around the work that produced the records and the later
+operations that produced each analysis set. It restores the explicit deﬁnition entries of the
+longer version 0.3.0 while retaining the direct prose of version 0.4.0. Standard mathematical
+notation and basic statistical knowledge are assumed. The mathematical arguments, worked
+comparisons, empirical tables, and inferential boundaries are retained; the revision adds no
+experiment or ﬁtted model. All preceding releases remain unchanged.
+
+
+
+
+                                              41
+
+===== PDF PAGE 42 =====
+
+9.3   Source ﬁles and reproduction
+
+The two reports are compiled from LaTeX and saved together under output/pdf/. The English
+and Chinese source chapters are in latex/en/ and latex/zh/, with ﬁgures in latex/figures/.
+Running python -B build_reports.py invokes Tectonic and records the build results. The
+supplied bibliography and the font requirements are documented in README.md. The build was
+checked in the recorded Windows environment, rather than on a newly installed machine.
+The supplied analysis/ directory carries the frozen edge and process inputs, scripts, saved
+results, and requirements from version 0.2.0. The report builds from supplied ﬁgures and does
+not rerun those analyses. Appendix B maps each main analysis to its relative path and the
+public repository. Original full-history collectors require the original archive; the portable inputs
+reproduce the speciﬁed projections rather than reconstructing every historical ﬁle. Retained
+source excerpts and summary tables document the classiﬁcation and continuity rules. This
+edition’s delivery record binds the revised sources and PDFs to their content and layout checks.
+
+
+9.4   AI assistance
+
+AI tools assisted the implementation, selected semantic interpretations, mathematical and sta-
+tistical checks, and writing. The earlier reader edition used several drafting roles; this prose
+revision was carried out in the main task. The reported checks are not independent human
+peer review. The report and its source package are prepared for distribution through the linked
+evaluation repository.
+
+
+
+
+                                                 42
+
+===== PDF PAGE 43 =====
+
+A     Index of deﬁnitions and methods
+
+This index points to the passage deﬁning each object or analytical construction. It does not
+redeﬁne standard mathematical or statistical notation.
+
+      Object or method                                                        Section   Page
+      Task, candidate, review record, evidence signature                          2.1      6
+      Connection, endpoint occurrence, continuous segment                         2.2      6
+      Original adjacency and time ambiguity                                       2.3      7
+      Candidate revision; high and medium conﬁdence                               2.4      7
+      Maximal segment and segment length                                          2.5      8
+      Failure origin, observed step, ﬁrst-pass stopping                           2.6      9
+      Candidate pair and four-cell table                                          2.7      9
+      Score, candidate, criterion, environment, evaluator                         3.1     11
+      Measured, missing, uncertain, invalid, inapplicable                         3.2     11
+      Conditional diﬀerences, diagonal change, interaction                        3.3     12
+      Two-factor Shapley allocation                                               3.4     13
+      Eﬀective historical criterion and review apparatus                          3.5     14
+      Measurement class and ﬁnite error fraction                                  4.1     15
+      Accuracy nonidentiﬁcation                                                   4.2     16
+      Observation eligibility, stopping, and exit model                           4.3     16
+      Martingale and available information                                      4.3.3     18
+      Feasible completion and logical bound                                       4.4     20
+      Point identiﬁcation of a linear comparison                                  4.5     21
+      Diagnostic availability and four assessment methods                         5.3     24
+      Reference predicate in the deﬁnition witness                                5.4     25
+      Recorded-pass outcome coding                                                6.1     27
+      Task-equal and edge-equal changes                                           6.2     28
+      Task-level paired t calculation                                             6.4     29
+      Task-cluster reference intervals                                            6.5     30
+      Zero diagnostic diﬀerences and undeﬁned t                                   6.7     32
+      Discordant compilation pairs and exact McNemar test                         6.8     33
+      Risk row, risk set, cumulative pass and exit                                7.2     34
+      Observed ﬁrst-step and later-step groups                                    7.3     35
+      Two-group model, odds ratio, and task covariance                            7.4     36
+      Working likelihood and its limits                                           7.5     37
+      Selection using later observations                                          7.6     38
+
+
+
+B     Sources and relative directory map
+
+The report and principal frozen analyses follow the layout of the evaluation repository. Paths
+below are relative to the supplied source package or repository root. evidence/SOURCE_MAP.
+json binds copies to their relative origins and hashes. This is a provenance check, not a scientiﬁc-
+validity certiﬁcate.
+
+Work and retained evidence.
+ evidence/workflow/workflow.md and evidence/workflow/artifacts.md retain workﬂow
+ and artifact descriptions. They support the account of writing, building, reviewing, revising,
+ and keeping records; they do not establish uniform rules across every historical record.
+
+                                                43
+
+===== PDF PAGE 44 =====
+
+Original adjacency.
+  evidence/history/main_adjacency_partition.csv and
+  evidence/history/EDA1_FINDINGS.md document original pair membership and time
+  ambiguity. evidence/history/retain_original_adjacency.py.txt retains the relevant
+  collector excerpt.
+
+Connection classiﬁcation and segment reconstruction.
+  evidence/history/REPAIR_TRAJECTORY_ARCHITECTURE_v3.md describes the rules.
+  evidence/history/classify_role.py.txt and
+  evidence/history/join_segments.py.txt retain classiﬁcation and joining excerpts. The
+  corresponding counts are in evidence/history/transition_role_summary.csv and
+  evidence/history/episode_attempt_distribution.csv. The excerpts are inspection
+  evidence, not standalone full-history collectors.
+
+Paired analysis of 465 edges.
+  analysis/inputs/edge/edge_view.jsonl,
+  analysis/inputs/edge/review_events.jsonl, and their companion manifest.json are
+  frozen inputs. analysis/edge_statistics.py supplies the computation;
+  analysis/edge_statistics.json retains its results.
+
+Process analysis of 230 failure origins.
+  analysis/inputs/process/episodes.json retains all 262 complete segments, bound by
+  its companion manifest. The derive function in analysis/process_analysis.py selects
+  failure origins before truncating at ﬁrst pass or segment end. Outputs are
+  analysis/process_cohort.csv, analysis/process_risk_rows.csv,
+  analysis/process_curve.csv, and analysis/process_statistics.json.
+
+Build and statistical requirements.
+  The report entries are latex/en/main.tex and latex/zh/main.tex, with supplied ﬁgures
+  in latex/figures/. build_reports.py and README.md specify Tectonic and font
+  requirements. Statistical library versions are in analysis/requirements.txt; report
+  compilation does not require rerunning statistics or Lean experiments.
+
+This source package supports report reconstruction and recomputation of the speciﬁed statisti-
+cal projections; it is not a copy of the entire historical archive. Counts from the selected Lean
+executions, deﬁnition witness, and Boolean challenge come from retained earlier checks, without
+re-execution in this edition. Their complete historical execution evidence belongs to the preced-
+ing evidence archive and is not replaced by the present LaTeX build records. Reproducing a
+statistical projection likewise does not revalidate each historical review.
+
+
+
+
+                                               44
+
+===== PDF PAGE 45 =====
+
+References
+[1] Lean. The lean language reference: Axioms. https://lean-lang.org/doc/reference/latest/
+    Axioms/. Accessed 6 September 2026.
+[2] Lean. The lean language reference: Validating a lean proof. https://lean-lang.org/doc/
+    reference/latest/ValidatingProofs/. Accessed 6 September 2026. Live background documen-
+    tation, not the experimental toolchain lock.
+[3] NIST. Dataplot reference: Mcnemar test. https://itl.nist.gov/div898/software/dataplot/
+    refman1/auxillar/mcnemar.htm. Accessed 6 September 2026.
+[4] NIST/SEMATECH. e-handbook of statistical methods: Analysis of paired observations. https:
+    //www.itl.nist.gov/div898/handbook/prc/section3/prc311.htm. Accessed 6 September 2026.
+[5] Marco Tulio Ribeiro, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. Beyond accuracy: Behav-
+    ioral testing of NLP models with CheckList. In Proceedings of the 58th Annual Meeting of the Asso-
+    ciation for Computational Linguistics, pages 4902–4912. Association for Computational Linguistics,
+    2020. https://aclanthology.org/2020.acl-main.442/. doi:10.18653/v1/2020.acl-main.442.
+[6] SciPy Developers. Scipy reference: bootstrap. https://docs.scipy.org/doc/scipy/reference/
+    generated/scipy.stats.bootstrap.html. Accessed 6 September 2026.
+[7] SciPy Developers. Scipy reference: ttest_rel. https://docs.scipy.org/doc/scipy/reference/
+    generated/scipy.stats.ttest_rel.html. Accessed 6 September 2026. Calculation used SciPy
+    1.13.1.
+[8] Lloyd S. Shapley. A value for n-person games. Technical Report P-295, RAND Corporation, 1952.
+    https://www.rand.org/pubs/papers/P295.html. doi:10.7249/P0295.
+[9] statsmodels Developers. Generalized estimating equations. https://www.statsmodels.org/stable/
+    gee.html. Accessed 6 September 2026.
+
+
+
+
+                                                 45
