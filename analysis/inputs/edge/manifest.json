@@ -1,0 +1,63 @@
+{
+  "schema": "edge-statistics-frozen-fields-v1",
+  "frozen_on": "2026-09-06",
+  "original_source_sha256": {
+    "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/continuation/round3/edge_view.jsonl": "da6d6266baea7e7e1968a057c242483edfb9a4b1f63bc8830b39f6cae8282d43",
+    "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/continuation/round3/review_events.jsonl": "e1cf5de3c62ae0ea21a6dc159a55cf5e76311df8570620633c1285b877c2a2ef",
+    "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/continuation/round3/FIELD_CONTRACT.md": "e517834fdf98c3c868ea2739013b9a6af49b78396bb2150f63eb5e84af4631e3",
+    "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/continuation/round3/README.md": "500280916c991c719f17be74c0a102609c969fb25d2562aacc381d7c2ef6ebc0",
+    "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/attachments/math_stats_notes.md": "59e428dbbefb891f7c74cb0b32acd3b1d20cc4ee7510fb0e1e90051e1391ebe7",
+    "review_history_retro_20260901/research_framework/stage6_repair_trajectory/execution_v3/run_stage6_transition_roles_v3.py": "2856c96ebf8b55d0c62c549845c08426f546b52617bd2119721166918eb78e4a"
+  },
+  "frozen_input_sha256": {
+    "edge_view.jsonl": "a6ae73a11f40e62935f96e6057aa8b0e1bea131ddd425c360f08caff38dca72b",
+    "review_events.jsonl": "9078eed24baf71b17ba6d0c943cbdd90c1165fa99a06bb0ecd27589fdf0f217e"
+  },
+  "row_counts": {
+    "edge_view.jsonl": 465,
+    "review_events.jsonl": 783
+  },
+  "extraction": {
+    "edge_view.jsonl": {
+      "retained_top_level_fields": [
+        "raw_pair_id",
+        "adjacent_transition_id",
+        "task_id",
+        "from_review_event_id",
+        "to_review_event_id",
+        "original_role",
+        "original_confidence",
+        "original_verdict_transition",
+        "from_code_sha256",
+        "to_code_sha256",
+        "spine_contract_comparison",
+        "task_content_comparison",
+        "semantic_annotation_status"
+      ]
+    },
+    "review_events.jsonl": {
+      "retained_top_level_fields": [
+        "review_event_id",
+        "task_id",
+        "recorded_verdict",
+        "candidate_identity_id",
+        "candidate_sha256",
+        "candidate_binding_state",
+        "input_document_state",
+        "input_expected_sha256",
+        "input_actual_sha256",
+        "result_document_state",
+        "result_expected_sha256",
+        "result_actual_sha256",
+        "semantic_check_self_report",
+        "independent_execution_evidence"
+      ],
+      "retained_nested_fields": [
+        "result_fields./verdict"
+      ]
+    }
+  },
+  "extraction_semantics": "Exact field whitelist only, preserving row order, JSON values, IDs, label categories, missingness status and hash metadata; no row exclusion, inferred labels, full texts, or absolute snapshot paths.",
+  "source_files_unchanged_during_freeze": true,
+  "independent_execution_verified": false
+}

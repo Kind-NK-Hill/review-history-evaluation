@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "source_root_label": "research_framework",
+  "source_sha256": {
+    "stage6_repair_trajectory/execution_v3/review_repair_analysis_v3.sqlite3": "cd1fb9ac2e4ea980ee57757b3aa0f1d757e5b261d8278c50fe90d4b578e50db6",
+    "stage7_repair_process_analysis/execution_v1/results/high_confidence_episode_summary.csv": "1da40d6495563e4da5a709bc23814028a25702d2f509ef83e9c632cb015a4fcf",
+    "stage7_repair_process_analysis/execution_v1/results/fail_origin_discrete_time_risk_set.csv": "a6cc762408351a87bc7cb3102089afe9eee5eb5745a087d8bd3f0ca90de3c8d5"
+  },
+  "frozen_files": {
+    "episodes.json": "a2c9ddb379a27d074724e823bcf3627ddd512de99ae45acc9c8b305973050775"
+  },
+  "extraction": "262 high-confidence chains; task/episode/edge identifiers and recorded verdict path only",
+  "validation": {
+    "sqlite_chain_edges_checked": true,
+    "stage7_summary_matches": true,
+    "stage7_high_confidence_risk_rows_match": true,
+    "source_hashes_unchanged": true
+  },
+  "limitation": "Path consistency is checked; repair-role classification and semantic correctness are not certified."
+}

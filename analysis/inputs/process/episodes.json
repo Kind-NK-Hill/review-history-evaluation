@@ -1,0 +1,3094 @@
+[
+  {
+    "episode_id": "repair_episode_v3_0151000a29816dd47077fa0188b62fdf04689addc84c1f749fc42ee2c7d890e8",
+    "task_id": "ex_3_1_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_d3f2798349a376aee8bd97de4baff140ebf9e3564d750f2f749607a5c595d1c7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_023e433094f5972ac40d3af7e3450716e1636ae7fdded3e9699aff82201b1ad8",
+    "task_id": "thm_9_5",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6f4b2856fdbd9b307a2973ccfc31a3d37729769ac89703212fe8da1432da02ab",
+      "adjacent_transition_v3_1964b410fb93ad6b50205abff9d4046bba774e5ae674e1c2575e5f281c214f44",
+      "adjacent_transition_v3_72fc5e486ec1ceead434203128f8399c9f611c3067361ec3bf488bf8bee9b10b",
+      "adjacent_transition_v3_2341e55aa87225aac6053a6759ad2d062aeb9db27cacd0a706cdc37ce2398724",
+      "adjacent_transition_v3_d66c42afd72d7debe627de8e549316dab9251b3587d491b92335d6a82c93bd8a"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_02658c84c0b03fe0f17aa26757ad6a4e5b3e8e9db3c59ac22991a170a3d27966",
+    "task_id": "prob_4_10",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_50b3d2f34f3e35617b58d38ed55dee4ba22e3ad4dcef1e838fee3de7f78d2d09"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_03f41314766415ed36225ee25eabe01d3ec53ccb91030a4845798bfcb3c8bfda",
+    "task_id": "ex_14_4_2",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_303d67e954897cddeaccb9e4422cd0e7b0e72a12bc54cac8b6a3d36bf5dc7276",
+      "adjacent_transition_v3_e89394e9887f86cac07dc6b4e00393399477bdf970efe8b29b58fd6d11574dcd",
+      "adjacent_transition_v3_27386b202a705b69348aa3e1b9999b5fedeb82134d2785af25848fa849265f54",
+      "adjacent_transition_v3_be7b67a6201d778208dd7db74176ee81c38fe5d904a540cca425589d2fd09088"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_04e3604f0f8afc07946498f87d2b48066c034cf8d10328eb0a8b57efc216b22e",
+    "task_id": "prob_2_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_03665d1291dc13cbeacdbf499ce2ae3959eb31c3eb476a9a8d6c1d28c66fcd84"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0525cc6a0d850779aca890cae88b95d4409add104b9fdbbd845c471f8adb6af5",
+    "task_id": "prob_9_5",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_47f2da88295d150139b7aedc5329dfcc57d4bd3fcaeb7d088d31bd1584cc29a8",
+      "adjacent_transition_v3_17454d18dcbe22b53434f6377c8fa71d603542fcb3707f0d2ca0084c14470f5b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0589eac1bc490c79aba4738dc588ea6b8d3d186e81c2bf4c514c25eed0429ba2",
+    "task_id": "thm_9_7",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ee6aeaac390e886ab712a8bc084bc3fb6e6731c42a11be0f178da047efb9eb62"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0734009c19aa48293977c4dcd959fc754726921a9251f5f27b40f7f5ed91b526",
+    "task_id": "thm_9_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_551dd3e882282cbd51c73fae24423f80969d6defb0c1ce6ffb0666e68be9431e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_075a1a416ae99af0a6617f26bff99adbeb0b1a825499d058fd52b5b387446ece",
+    "task_id": "prob_4_11",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_113b4e15643a92c40b9f9ea05ff90df6cb594852f8180d18756739241e52e7d9"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0846f6a0f5f2181a5b1e7e1ce8f2e5a8ce2cf5ea164f036633d304a2e0a26f2c",
+    "task_id": "def_10_5",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8a5d0d86f414633cd4d507e7e5090e0293d96c2402ecb43033bfc43e7cf786be"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_090dc813b3c3272bc92d84c9f1ee5889dd8c6e8611789a68a202e3e90b2abbe8",
+    "task_id": "prob_1_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_55a29f42cc042bf43a1367a37ae45fdc26a0e701f3bed493a4b6d3ee07bb0a6e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_09d29ccfac6f8fd3d4c6d0c161fb09dbc645a6efa44403c037831a56674bcaca",
+    "task_id": "prob_13_2",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f41abc250506063b82fd216b71851e4e2da22edea18e334288d88b13df18884a"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0cd1fbb5fe01d39bcabed76445239212ca969ef52fe2f137d2eeb6f067eaa0d1",
+    "task_id": "prob_2_3",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6806102fb1997e4e7ac9e9d73aa0dd40e90899529db91250f948cb433f9fc7f0"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0d6bf2e82eeed8a27bd13b7539b42e27f86406006b194b274cb1a1eb19ddbe05",
+    "task_id": "prob_14_10",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_2bde8422a5a600661845758dc99b75e5d564f1673d721a2aaadaacf89613edd7",
+      "adjacent_transition_v3_1742b57e4c136e2a5d5823fbdc8f831d1e4df2f5c242080584293238e6be5209"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0da3eeac315006081dcc5c9b2cbaf3b38e9386edbdb2c217d9acf1acaac40895",
+    "task_id": "def_3_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_58134b1b664ddd2fe4979d7ad834b4b84dc746d56fd025b435eee5b39be03dca"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0e1ef1573ac221bf704fcee0bd99ad25f2dfc26e472999ba198ad0a0d2738e26",
+    "task_id": "ex_1_3_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_feed0486d88ea140369847104d91edfa7982c6d4237ecf11d087980e86e0aa94"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0e518da08d2b7340fc8dfbc5096749e28cf5e3f32b301e603eed895e00b028d0",
+    "task_id": "ex_1_2_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_0c090918e13fabc360670414467d17bb7dba4c3f6dc1e4e23008ee370bce6c20"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_0f7ce7e82f5aefb71a90222b116c5384a8cf9110234f87f43fd664688d327c7e",
+    "task_id": "thm_4_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ce6287ee57af6700485850dde06ba6d563a0f5fca76ee04e2b32325879ef7e93"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_120ed29a3170b6465edd8fe0f2eec7d500fadf552a47d8dac21d28350c2c69e7",
+    "task_id": "thm_6_1",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_900a5d8512206eb87326dd4dd201d4704a107b358371632d1223f134bf1978c1",
+      "adjacent_transition_v3_fdb9a93143b27c3250b1596c81408745eb7340b53499c2383b4bed4f70d289d9"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_13049f50fc7922db48f778bb7f873e34f848fff132c773fd0bb6e246f1e41224",
+    "task_id": "prob_4_1",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b39e27a2bc48f373399f05b456ad93c9af2c4bef3f39458bbc4426c80d7bd492"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_13c5bcca78445432355f1c8c2424669448606b33919a7d67ef9957728a29b752",
+    "task_id": "ex_4_4_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_bf08c14a8c495a471c24a7f0f8c3132a808f5d0a1d1f7302f2237d9c00ec9b47"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_150cbd16843ec05f7f72ddf6fd7252d36cbd792ec1cbefd7bb733447bfcd6108",
+    "task_id": "thm_13_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_d73286dc4dd47823d5076c9caafa32d262f9f5ef598817098f600c97744270e3"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_154f6301ae4873ded189c3d02b800f21723ac7871da6f51c3e420285728e607f",
+    "task_id": "thm_6_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_90b9bb90d7f89e583252570417a75f68b7ab8f32e61964de30dd09fd5d6d1cfb"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_16a1f180e75bfdc8c411ab980c97546386ae9d81cfeafd43b0a6c68a94fe569a",
+    "task_id": "thm_13_13",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_82f0f6d3bb865c47241d1e6a2110ec550eabc9c27dd6cf6a91db235ebcc4efce"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_1780597a6f42c06f1c7e6b6503a49249f06fde76e34594755db39fd39cfb2616",
+    "task_id": "thm_14_5",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c6d39d73857ee4d712bf73221b16ef9349a433ce64c1951e15728262b1532cfc",
+      "adjacent_transition_v3_12c06484d0196e0b9da9110c19a4da8ef102c43e92ff0cf9ca916bc332c5fd20",
+      "adjacent_transition_v3_72de665d7d19fd56f1f97c878a4236a060dab72b6f50e37fcc420fb1a4daeb21",
+      "adjacent_transition_v3_c929eab6898a58046735a45f231e70b02d5f9e4dfdf23cf894bdd893b6830947",
+      "adjacent_transition_v3_951879dbad2b47a12707c276d69303928d780edbe1346973ceac2178885010d7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_17c6b079344efa0b18c41980e8c99787af0defdfb576adf4cd537107a9fb3d15",
+    "task_id": "thm_1_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_80a06650928a39e28defd8c092996d8b764bba6f51dea87ad12b94fb73ba28a0"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_1a12e44934d04b27c72bd246bb573a86224188e75d414e7e41474eda275ec5cd",
+    "task_id": "ex_6_3_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c86d02f2a128c9a950937f38d96f37133461320f12b1e8c7a903551f03e6972e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_1d0a1b9e293fc56a4685be8f50c3c3e9977a27378bcffeed040e16023bdb2aad",
+    "task_id": "prob_4_12",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_1c5cf101ebfd45a7a0cec4402a5c2fb56c409fa705e5c033afd35b9a855a6eb9"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_1daeaa8c28e5dce9aba51221d34e999ca0450d2ae4b05d85a7c4be285b0f70a0",
+    "task_id": "prob_7_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_de1b12a77e9b195b536197b9a46b37e205fb1c33771a298c67ecf2f4cf5de9e8"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_1fd7ebcf217d800393f0cfd1f2cbb02ef10b6ba49806ef08e530880113e7ab5b",
+    "task_id": "prob_3_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_db2d3d388098103a7444395897c3c8940c62674baf6d7273a1eca34e8045c6e4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_203617b66377704e7e9f4cce206132d19c3ff2f621bd79d7826f8e7eae3ec2eb",
+    "task_id": "thm_3_3",
+    "verdict_path": [
+      "fail",
+      "inconclusive"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f42336ea0d88ed8b176ce0dae92f4679a9648c431b294d27925299592bc7a96c"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_206af17da169f96ca836514ee8bdeeb6a3b2e2fc645200f5b9f0b5bce7110717",
+    "task_id": "thm_14_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_838651b8b7fa7591e4d8572051ea1ffb30d14cb0d2c922dfcd73270500e3fd7d"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_20a23c26b4827f0fea9be99ec33571db9294c58f0095231ce0b60a22b56b7fad",
+    "task_id": "thm_6_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3fc720cb61d7645731dcd57eb981e5da3d21185f4a10ec2e4d7bddf9e72c3860"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_20c245fc4c8559eb829d8d4ddf103c02b88746dd2a495cee863a5c93eeccccf4",
+    "task_id": "def_6_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e3e806371f544d84d0339d49accc3585869e6cc27a5c81791490fc00ca4da724"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_213a7010411ea577960c22a5c200448d495bc6dee91978e49102fd1d5c2fddd2",
+    "task_id": "ex_2_1_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ae1a9d6a22ae084ba11fb9a45c7520dc36fe5c14ff130344318c236faad06372"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_213bed74e4492e38fd95b63b19fcdef873b1053417e0cb722b0960c0d8615379",
+    "task_id": "prob_5_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_0c06426adca9c284aabef65f9abd6d916fb7ee52cfeb58a425c45b73b5e41bf5"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_217060b29c9e114f18c7cd702017613f4f3889de5290c0e79e92f9c051b6ac05",
+    "task_id": "prob_10_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e61dfc856c1a09fa61db462843b300d33d2c5c3f37d87f4473868cab836a0211"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_2229f5e7312eb54fbf107c5466faec96946f3af1cf69d2921f668c7ea23ff0c6",
+    "task_id": "prob_6_9",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_93208509f0ceba8f6f5cabfb38ace5f9523a1dcfca43416f6a2a5099a334962c"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_229a047f0f44e301e6d18894722bab6273c3caabc497f0881960a3764559be52",
+    "task_id": "ex_7_3_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_fb24e445e98851d7ead2422f50becd41103950d2c6e3ad548cc5854b0ce171f5"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_239ff1ce73ab6129bf73abb6c0fcf2721e8f8bcb6277a1e08e9d2c678f812a09",
+    "task_id": "prob_11_10",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b8c1fca0fabe08bc3acdb283625fad2c8d73ef07faf93b31161551aaa5929edf"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_23bd1a9a3969e6ab6312c3ba40b244844fc1c5b300c67af877a953940b24608f",
+    "task_id": "ex_7_2_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b55c4795fdc4e409c59b0c113120809aca9b2fbc12c74968ef4a1b6d315948e4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_25e5081c9966f450be04848d1f167752f7efe1285ab5417c46218733bf48f604",
+    "task_id": "ex_14_2_1",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c0aa85c6f3bc458f31b7dba3652ca475e8fcd25de23b4f665d75c2e72ca1a427",
+      "adjacent_transition_v3_7769d92cdf6e1ba9d01a4081a0bcd3498697c34041e8badf08ac9b23fd617041"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_2700b352929d2103102aa7c700b1ebea0da793ad42736fa89d43ce8d1dbfb69c",
+    "task_id": "ex_12_4_2",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b68cf2f6e318113b648bf7f834d8d3a3b8e4213d7f620ffc305a65b1db3026dc",
+      "adjacent_transition_v3_84c5159273b2395a1a0c5d6c7d445377df2f9dccfab21103f6e84497297c1655"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_292a85e62c11e460700b2a675f616253d4a6143dea03f25bb906c7caba2aba2e",
+    "task_id": "thm_7_9",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_1156ee8d6ad109515fe86e63dadd52614eb00ed9f18aadaa177e148d003a161f"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_2ad47e352c7780e71f5542ccdcc5f435d90a06bd07bcd14b76fe0fa1f1344aa8",
+    "task_id": "ex_4_4_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_22fac670b25f6cbb4938bbf2cb76ff9846022156e48760a7f81b46d7d30f67da"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_2be49a06545d502a24fd9cdb181fda6265ace67a6ecaa73fd467722b4ecd6844",
+    "task_id": "def_2_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6d3eef2e14c801943384f1200d1d0d8a566d2c569e3870adead6f6621fc225b4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_2f6ba68bcd5353f3ee326f12ccb3c14206bfdb924ed7ce4a730844ec6ae80f0a",
+    "task_id": "ex_10_3_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_5806a6d74e58037c2f3d5fcf442a01b57a4abc384dd6c746b33dfb834d658aaa"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_2fc9aec11ca68a444eebd2ec0b4831dd54a2584b2a7d8203595f330e5df7f185",
+    "task_id": "ex_7_4_1_variance_of_a_random_variable",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_18231977cb36a4e3d3d3d015d9b463094a53e1627d62f5213c6c832563778c0a"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_30eae406905afecbcdf4af6eb0ec5c6ffc90d71da298043bff7232f046b2a2e8",
+    "task_id": "thm_7_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8905f1debd7c2dac1b082ab57e1a9f10650269d47e71b346f2748ad9b9ba81ac"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_3427586c6564d01a1f747c282b227eeddcc93aa4231f0bc942955a85d3bff92d",
+    "task_id": "ex_13_6_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ebe504f738e79e76f8a2241fc2ee6460a13fca648415ef8db45c136478a22617"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_3526f5252bdbee8d3446e091ad4b7b92e0677e1afb85e95cf886226dc17d9584",
+    "task_id": "prob_3_9",
+    "verdict_path": [
+      "fail",
+      "inconclusive"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_99e52f997c084f0951a42bf48ea23c3a2a2f62b658bb37dae32159616091e2eb"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_35e72d0218814f22c254a41bf00ee4b56cf336fecb77b9889b2ddeced096fd28",
+    "task_id": "prob_3_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_afde71172255009f6e50687596bd75b3aa591edfe1e87559f091173651dde5b3"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_360e8b51d0d7b9e69f9df6333fed4bf05728b28782a8fa1d164469e2458df8da",
+    "task_id": "ex_8_1_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3f25df22dc211df700f5be999514b3c1a6bbc863854103e820961ea209b022df"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_37eef5e3934ff4d512d168864295fc8fdaabfd06d78ef670ae9e2aa797a919e0",
+    "task_id": "ex_13_5_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_40cde07877faac115949a68215cc99a265029d3ec6ac95a9296e74247f579174"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_37f0610806a0e30f031d4d33e5b38f32f7fd23ccc90bc777be8a0136a400eb2a",
+    "task_id": "thm_13_12",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f3407bccb7ffe9c01e4ff3f4cdbc444c8250f32cbbac4ee3f84e8069fe92c656",
+      "adjacent_transition_v3_6b8c4fd9452b63854a6edebf5cdabcb014748b8c0731b7c3e6351fcc6f7fe1ee"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_38f0d8471bb46a4c953180d67648185669bd856f61f7116a2262cc5afec22a3c",
+    "task_id": "ex_1_3_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c1d9f6bffd70273565c2577fa048e55845aa658fad4663bfd078e8dbe3a75238"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_3ae761e326e43669cda5ac80d46bcb025eb48c67f29f462cff48131eeef40d85",
+    "task_id": "def_12_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c17ead9f3083b8e3b4cd311ccf08a6bf6155bcf1e377b721d6561f5402dd90b4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_3d36f437e141070ca5fe1eb9ca3f1d934dedc1db175194e7d040eea8fcfa25a6",
+    "task_id": "ex_7_2_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_91597f8e8da287d98179e2d2d2925efefd07f267a7708788fe5ece4ac52cd1fb"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_3dd78df0162485a1af4e485d615c402ddf646e559d37258991745970541361c0",
+    "task_id": "ex_4_4_3",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f3ea79827fe966344559032deaba1b16ca0f37ac784ea7b39e3163fe4437543f",
+      "adjacent_transition_v3_f30adc802761beb6d044e2be4f14c0194338f8131c0b54ac1aaf422ee047b2ea"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_410008ea1a0f584b7b51ec1f54ef4f698bed1a03695614bb48fe05b9925fefee",
+    "task_id": "thm_1_4",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e9cc00789fdb6eac2f747f5f5f276906029059454d9ce989646c7bd620160227"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_4180606ae38f93e100cf0cee3e03ca837b254685008c1db39a6a4e2a119745f5",
+    "task_id": "ex_6_5_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6fdafe744fcaed8e2010f5bceb7525747afbe5cdc9458c8f4d20bc9ef4baf962"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_4507cc8074bea76d29e52f9c8188c91eafb65776c345d36e933d5210071458df",
+    "task_id": "ex_6_4_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_d5f46d849577b21a087f6fb93d3988d1d5af3e701043b366fec25c049bb93f65"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_474edc32ee323b6f55df8326da037dcc22d5ad9b82b17a4852c73de99a210ea2",
+    "task_id": "def_2_5",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e5195da4918e017eee405ba3e8e974299ad9e9036b3e3f62dc539f652a7f1768"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_4800e1559e366465b42e97be3185e21d238f60c0dcb6f962f87e8a624df7067f",
+    "task_id": "thm_13_3",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_5947fe243d5374a78a7652bea71877a74907558e4f2a69ece0a8afff767178d7",
+      "adjacent_transition_v3_c91130ed7b4e18920a4c88333895955314cd63d10a525467117abf268e6fb314"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_494b43bf3344135509f210f8c094203d288eee7f190c0ac54d08a6e9e0e22a35",
+    "task_id": "prob_14_12",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_85292729e4f995d8f336064ec0bb77b5699fc85d5fa31949d41e1f91d45ec97a",
+      "adjacent_transition_v3_968f2dfd1dadd545c827932e90f5e10746264390f71fdc32c06263baefe5c145"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_49940a984003c1580116c84d9a7a7325bfd9522a4309ddbb09234f0ef79c8a9e",
+    "task_id": "prob_7_3",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_dc795d4d65224f51add11aa7db95dc18e111b35062e9ea7e1d3a6fce0ee67ae4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_49bc90e851f3477e20286c45949de682a69a9085e54889d3723eed964b78c60c",
+    "task_id": "ex_6_4_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_88e5faf84c370dbb87a6cccb2a6d84a958195253bba5ead2f353e59a9c2fafb5"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_49c2f3d882e0e72068b6b590bc6d57e36dd98ed9694503d892fac475ed319bdb",
+    "task_id": "ex_13_6_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_eb9b55d3fa2ce9aa60e13c61551fdd33cd06320bb0f7b86263e2e45e36aabba6"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_4b44917133c12670698c4ad47c1a9d16f6b4fde118172fd85373b2476a7c400e",
+    "task_id": "prob_3_7",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_059771aa4fe8888fde7eac1646c8a22ae4a811a6b32331300c93aff82d0d730d"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_4d3271f7cd409cfa862ee314c72233abd316b08c68213691413a7ddfe0a079af",
+    "task_id": "thm_2_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_cda5eada382e445003ba073484403e76447507b9058f59f000f7f59aa13116b5"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_4ed17cab7d565d3dbc445d43d940f4d6f66ba3f50aa1eb05d4f165828445e5f1",
+    "task_id": "thm_1_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b360ffd5f10af3a5de363b00eed67493ef73a33c752a549ee949c32e68b59ed8"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_50d0a10365ee5632762c249d877a40b619e2b100a0224e07530144811c55ede9",
+    "task_id": "thm_5_11",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_294a405483276c9e89df0efbeb7ffebefdfc2e44c88dbb27f080f6d40f5c9f93"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_5177aa84cecb6ed0b995ae4b94854764af9731db3e2341109f2152159f677365",
+    "task_id": "prob_14_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8fad2c0a515a0793d62334ae4d3a60d3ee9ad47fc5afbfe83ed1c98df7fe282d"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_520410652474ce027a5c0b79da8e9ed467d2ab2fd39ccd5f2db7f2bb034caed7",
+    "task_id": "thm_13_16",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_9807a41b7b05a6e8f84df5b0778c970a18237e8aa1f2e09034d97ceff833bc2a"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_524aa0b80a22c9052fcf0bb5a0245626310469f19dd976d98c7359d7064082ed",
+    "task_id": "prob_11_9",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_653f430ea1cbf63d17a43a7d0efde757ed7480d5baf04e2475485bee2b36805d",
+      "adjacent_transition_v3_4b0ffa516e823d4878f2f317177b714e918b86f614a53d1b690a19836a43e745"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_527469a29017852b5da61fff54882d7f0bf7ed7cc533c3e7887ca76310df9fc0",
+    "task_id": "ex_14_4_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_fae7ff6e28d72d3d9df398530961591f5ceb949b6fcd26763ce850f9097ba725"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_528023d18435ab10c0e15bf14f838baeb9b44ff6f7e285d08142bd27c6d2cbb3",
+    "task_id": "ex_7_3_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_cb431d83ed864dbd52572558b88c2e73fae4581de4099d680702de1865361142"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_52a30f42307f43bd3c72f26b1dca4efb5ec61f4bc1df9cfeeafac5c279125379",
+    "task_id": "def_3_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e155d87ad79c926dd74c111707882e7eb4293a9119b68d4649f87985fa386983"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_53a76c76baede84421ca8e223ef23f61adc1b610d3a3b57cee7d5f344f41693f",
+    "task_id": "thm_14_3",
+    "verdict_path": [
+      "fail",
+      "inconclusive"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_a9e07e4860f1d16f7c830ae34db6827c5210faaa15ff1f2b5af4f71f64fdcf3a"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_542c39f528776eba6581f9cd49f213966e83b36bd4d27da3b3e2d7adac0789bb",
+    "task_id": "prob_1_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3ba697044378de5f7bb9986beb99e33171283df5de3535f818f7500035dced2d"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_563dbcbc5190a0bf6be9ed4d4b8ded14f9186bf8cf8b929dc582d620a6c26966",
+    "task_id": "ex_13_6_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_eb5d2471d2ba2e8e198f378aeee4d0e3bf681fd1500fd8f6853d57103a30bc1e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_56fbb4ca9421031212185b8d448686ec0f737499bc4fca9d0176692d91891bd7",
+    "task_id": "prob_3_9",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_d7261877558a59b83de68ed59fea8d136649c88e5b1bb12c694452554c0d70cd"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_57ef8726937a1101a9135d3ccb55de460739a5040310371264758bcff3ec370f",
+    "task_id": "ex_4_4_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ae0ddf736c5c9e7312a55fd7744d1efbce8b1fc22eb9376c661ba7399cdb2a50"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_581443cb3e6074b6251e0864b06845eea3157f8599e01fb0631a16aee025510c",
+    "task_id": "ex_13_3_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e110ca7d1968393e0479b6db5e899f3f2a8ad25cb2d50d4b2c789cf3775506f1"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_583c633ccae0a8d7aaf7802e0cd3537de97d6e960b10380e8de5b3b366557d3a",
+    "task_id": "prob_4_13",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_971c6f5c7dcfe195b981a6dae83c8e4002bee860be99ac57688943d9eb5b3e70"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_58d28bd6b132bef29eed3f4edca5114978a1170d5e9c215800b7eb6026d3256c",
+    "task_id": "thm_7_13",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8c35e87855b1600a4add99f96702ed5de4d7c3ec5a910848af6449d7654a170e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_58e5e538ce6bbf0005b2742370d3bd4ace22c8791b38ad0536d0d34d88a3f7ae",
+    "task_id": "prob_14_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_65721b55cb44e1e431f8b13f659e2aa42f69dd93cbb205990f8cca1091aaf2aa"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_58f6b3950a7843f3fab84e9aecc630557341b7c150106184a0d12ca29f2880f6",
+    "task_id": "thm_12_3",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_bc35bf3aee21b0afb1e9781498408a07db6c4d1110351523bda0754a90d3091d",
+      "adjacent_transition_v3_1b811b50c91c68c321cf79972896ea9739f29603c9879f0f56b867210d4b5e47",
+      "adjacent_transition_v3_498172238783446376639f27e905afda997946587b1c15e442fd4220988a2e89",
+      "adjacent_transition_v3_6c3b23cdb674ae3778026aae1059f29de38849e330b7035a418189420de72999",
+      "adjacent_transition_v3_d9c160f845ae9108ce799e6de85ab755b0115825e2b5a1d8838a91f16b920cbf",
+      "adjacent_transition_v3_fe292ed58ab12283c3537ad06bf15b88cac19d07d0792f53cf2832a8f082c813",
+      "adjacent_transition_v3_4ae7bc296d4d3332582b706e2347d2dc891a402ff16808bcaad3a04dcc615fb7",
+      "adjacent_transition_v3_cc3bd07fb96de37a899e68edf3236690623ae3c4452bc0bc4ed73f57f155af07",
+      "adjacent_transition_v3_7be2065d229e388d7ca22b49146073f7a24461a869ea5c1f387c82edfe451d10",
+      "adjacent_transition_v3_b4b5aa17a5644db653f30a6acfa671b23c079ecd0805e7b347b4e234535ead9a",
+      "adjacent_transition_v3_aec9a14ae4d74e3dcc67887592172c4e0986566f8dc93e7030a97deffd4aa670",
+      "adjacent_transition_v3_3cdfc8443743e7f690b1a2447236b7881ef3ef04fee035889f95a851fed9933b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_59101da928ff3f329563a0a3965eaec61aaf3163094d09474b3a967d83730c2b",
+    "task_id": "ex_3_3_6",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_9b0eeab4b91d001dc36496170504c076dcb48261c637d9e0d60403a5aa1154e2"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_5c3bec8c8344190d196242b9f2782a828c8b6a274423e396aedb46c0d73a5812",
+    "task_id": "thm_14_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e2c7cbf10336c848d5c5ea944ada6f0f426c1c9edd0acab35b01b262773627f7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_5d6a93f062ebd672bc1cb130d6f639df7c0ec9351681171139d3936def1fe478",
+    "task_id": "prob_8_6",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_116e7fc7dff40ab720fdc489f10acad033fad5e76dbc6ae3b91381bf1a880494",
+      "adjacent_transition_v3_48087a9a6c8dbba28e67c811ac5d824f780dba9249de2bc32947f0d20a9e0d4c",
+      "adjacent_transition_v3_b351b303df1a01ced75918a5d56e706dfd3cf7458e4095a4f903273c35950f79",
+      "adjacent_transition_v3_cc17b2a3bbe3385bc8580c4af132cb7c5706b4df8add1f5ff1c19fd8380ea954"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_5da8b1bdf3bfae4d50f7379b574f825614d7a1c3f334cb5f38425828b2637e4e",
+    "task_id": "prob_11_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8a790bedfb9187b3db4ff890c90f68dafaf79874be4fe93cd915223d9b3fe6d8"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_5df147ce3512c52e23b8299f9c236eafb088bd8d031347ea14ce732ec1940dfa",
+    "task_id": "prob_10_7",
+    "verdict_path": [
+      "fail",
+      "inconclusive"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6cbb71adfbbf16829b0d48b097e1cee16588c45e5208ef460e5d83ed2a3aadc4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_5e54427f373fd316805a18ab3fb0e25f928e96abfed08d2ddb5ed9e0e188f315",
+    "task_id": "def_4_4_polar_form",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_29cc2873d2619cf2ce055b43f74af2a93b804c2eb4b2257a9bb402e72b372800"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_5e97581b5f292dda18c9e488f151025b4efc1a4137304040fb6ebf85c62c8ffd",
+    "task_id": "def_9_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_245d5a86cb84b8589ff144facdc6fd581a1089679e778ee1a680a7f5a43e5ea0"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_5ed93a37c8f57d2975b35a40a9ad8133ad008b69e2158aca3d30cd3084e8d9d3",
+    "task_id": "ex_4_2_lebesgue_borel",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_0be13198ca0fd60a3ab40c2a2c701755607e04a03619b5b691d10b5b711cdfd6"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_600b16868ee838a0220da496d75c86a258c9c8bbec36d670b43e29b5e5849f00",
+    "task_id": "ex_10_1_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_fb68bbcd05f0048f833d08fb181b39df9159627aca49d14033ffaca737e07854"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_601f8ba6e81a4b44ddacc7f2e9afbc9864f2e7ab1420af705fe6b96c5874a9a1",
+    "task_id": "prob_4_9",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ef02cc4935fd84b041604e0ef33941b0325abc65ffc4c589ccea10c32c031c94"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_607fbd9ba7ba6aa28a4fa1b40714e08871850499c336a255e1dd9f3c3539c908",
+    "task_id": "prob_2_10",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6e98b9b0d88104cfb071452f3689450602d52c6b4fc2f047691fff5133df88e0"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_61346acf41e003abbac6eb9c7f0425ff5b4c4213891d2bae35e0d12ae6f7aed9",
+    "task_id": "def_13_3",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_930e2930df9356be8703b19df7be1cc3ef9f3150381441c5fb9652325fd928f4",
+      "adjacent_transition_v3_400d2555cb9fdecf33c783b477dd612f0da5a8db49570545859b1882cb9c0d23"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_6261869d66f07255e299561a93ef52c0a7fe9cfc41cd1d344e9d8ef5d91884d7",
+    "task_id": "thm_4_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_279ea28e777b45b991aff9cd333c397df3c6cae7dcc94d96f3d3c8a2b17d1e6b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_6271e0a83585957511d1a1b083a5d902c12377a456634ac1af515381399e25c8",
+    "task_id": "prob_1_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f7907151c10ccd7235b18501c403f5a14d8a91bcfeb3111b9928b6746fd7227a"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_6326c5ce71e59f91a904659b48626562b7c0836de204959f2da470ce5390b6ba",
+    "task_id": "ex_5_3_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_a6c000f2fc7ff8d669680fe5b4572ce04e9772a94a67f6951c3d4814f2fbaeed"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_673c97beeb235a1f53279b437bf9f79454f99857963559ce328e5b35a0560bb5",
+    "task_id": "thm_9_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_335f6d8cdde7c790086b5d62f5b3c46d3d1e9c1cfba2fb70c36493320502db59"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_674050b0337b17bb816a2075dbca8b471b455c53a0eec613698b1aa0491a6779",
+    "task_id": "thm_4_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b99082f66930fb2088cda5296b7f1336356909c65bc31a0198281f49e99542a1"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_67f14f4808bbd782fed19bef8a9d1ed5d3d9b9ce192b7ca749b0789fc101e933",
+    "task_id": "prob_3_8",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4394976c428136437124b5282f44a359768f1824d005caca22bc40d5c5c6c102"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_680918e9ead9ad48c3210a717bdd5fbe0bcfc2fb1448434a8de4b9f7aaca20c6",
+    "task_id": "prob_10_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_06fb82603b435b0cf7898b30812303d2d1286dda38395256d8b986ade94f1e34"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_69249b9f7779415a9d777eddd7ab6f388e7a2b4358134026b46b862ec28499de",
+    "task_id": "thm_13_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_7b53880fe151348f1981bd7ad26f5245170398202c8dcc6cffe794995c713aa3"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_693e73ac9cfda67219f003686f3dc9452db77016d53109476b5b9d1e297f9708",
+    "task_id": "prob_7_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6f1745035ca175175ea85d58dfb72d8161283e1c3a814f36523f661c86372ea8"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_6a947bf61926d07c1a59d4a046af53ea8b7cbafa5e077e33b6cebfd4f8457649",
+    "task_id": "prob_14_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c4431351e21f4ba77e5ab03b4184eaec316645c7b8ef94fffc48d07a25e18071"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_6b38cb9190ca2c731c32c07e3fb3b955ae8173243b761adcaf4886e8f32d0ece",
+    "task_id": "ex_7_3_2",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_96fb05f004df9df9d6e9a06f959f9239cfe44dc88888cef6a4a2703abc27b5f0"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_6dd81b8bead7ef2e313206400d4e1bcfb1161e74da13e3ec32f82a22b4e21538",
+    "task_id": "prob_7_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_20cbd959f817756477dc02e89d2aa7dd7845c7856066c199d63d03da14aa475a"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_6e59e7390e639a1d914ee746810fef7ac4a9d6271ba8e8765c70cdd7f05632c1",
+    "task_id": "ex_2_1_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_bbfd8a6db2c01f99f0d4edece9c69bacb9a6f8af43409fc214a201f49b885ed1"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_6f802d0774f085d24a1852a44fa56ec8ce29638a9df39a100b1aa626c8ce3f10",
+    "task_id": "thm_4_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_facc64e0ebc7a9149da91db8fb5d1d253e2c53f8551c4c9bdd8f21c34437e9cb"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_7063a960257740dab74de125096a98f885eb588ae781b261feeccb404ce4f484",
+    "task_id": "thm_13_10",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3888ae59bb842529e9582adf03069e129324274116b1d4e54e65b6f638d16ebe"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_7226077d76d1dda835e7701a92afe5ff20f4396b90732207b423da5f959fa863",
+    "task_id": "prob_9_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_fb784df0a8692de1de0358a74033836f520e6caacdf8a6d0ce1e2ec6f281a041"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_72f6f92bbeb12cad84f04747827385b34eb8300a6fd8847f87b77a2f40de8523",
+    "task_id": "ex_10_2_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_937caa09d18152ccfd8b802591f43f2804891f3b002913249bbf1d97f11cc8e8"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_73e74f258e3aca723d2f4377ffbab88053ed4ecb013392e7901d536e8baa8f7e",
+    "task_id": "prob_8_7",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_1ee3625b9d7a833ffe58f023e855b8dcd90bf79da71c18eb868c947c7ea19601",
+      "adjacent_transition_v3_a528108ef688671bb5ea73acc91050ab60ff8d8861acf159ea327789233a3bda"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_75d51abfc90614c82126e776136d3e1f879e9293003067f063bab50713be02c7",
+    "task_id": "prob_11_8",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_06fd7b6b673e948f781844244ba455be837c8f73e5ebee50d779a77fbe3a150d",
+      "adjacent_transition_v3_a60aa2d62ee999ba7dae93e060b60875dc8761a11771e6438601a0346445b9df"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_75ed461c0b804a2116940a7f091d5895634d6faa421b96d412fc31024d80d412",
+    "task_id": "prob_13_11",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_a0058fd97e7712e7f0f675d00ba678e5858cd0b354900740291f805f91110b46",
+      "adjacent_transition_v3_8ccf4380496a19c0f2c0e49dffbd06f15613209c6469114da7659897c6cb6bc4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_777e1e5108eebaa1e8aaa688ce4c3a1b73e5f2c62c1bd723d8cf9ff026f02571",
+    "task_id": "prob_10_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f97c132e0793232a8672dd3e20373b6ceb3dbfee5277c3e9338b5f4356a12bb7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_78a4913f6126ad2fba4cdb3c7eb55c08363defaa140d56ded89d50932d77ecb4",
+    "task_id": "prob_10_5",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_d5f6a50c063e1056a6fcaaedbc4ae00d76fa63529fea9e360ca280f3e421b63d"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_79265ec18529df603b9ef864f166d48311ca42e2ff4cb417f47274b83608e1a7",
+    "task_id": "ex_5_2_2",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e051d466e1cd0a12167dd7b3efee20d8f6a858e60d8854c29209fdeacd92ec82",
+      "adjacent_transition_v3_43eb5f590fa1024f33ccad8c9478ca07edd6b6447f44b0ab5f3656aab8da2961",
+      "adjacent_transition_v3_aed49f05702cd8ae442d2a35652401a48f08fe9faf95eb80163e3bd41013f713",
+      "adjacent_transition_v3_6142588528682a7cbaf7b3e90a9cfdd3e8c17542dd4da4ea07e700d238e41821"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_79b38ddbc2b9ad679933118dd42d06e5fdb5f4ccdb6fa5d4cae538cea256aa6c",
+    "task_id": "prob_11_9",
+    "verdict_path": [
+      "fail",
+      "partial",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e29ea8acfac73adbd2a3f292008d757bca9f2c73895f00b4b3f1b3f07cbabf24",
+      "adjacent_transition_v3_1427c2c6525210f2d5c93206b9f791b635afa77b8f0f5b0d3b42afef5012a139"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_7a42a3a9d9150877d8e1fc18ba35365cef51884364847d34b661364df7d18dee",
+    "task_id": "thm_2_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_7abec665ae3b5a0a0cbb30110508c8ec78e5305e4e5b3e5d8ada181998500b1b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_7a581b61d0dd41498f96f7dee9971aef210dd579ce2abf2b1172233567246fd8",
+    "task_id": "thm_7_10",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_1a11eae9ebdbcfd874f9c203e0ce6f4e3c69ee845b2a32db281bb65557d047c6"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_7af749e7db929435b267167baa20c9c1ec8572d66a07ef20eca61e7f3eba1461",
+    "task_id": "prob_4_13",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_de0683f11254a205b0d170584f6ae7bb5b61b5f48924679b39aa73db4e88bd90"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_7c25b0182a5baaf95da04e99cf48342cd0ea78c16d9213670146f315e198c706",
+    "task_id": "ex_14_4_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_d82fcfd12856da23f8dc43965d09565b92819dc968eb9bf9db9c7bdd80e105f6"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_7d13101112024ced5550be93cfcdedab67f2202d4979f9e82abe80d3d52f3b0e",
+    "task_id": "prob_7_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f7f032a5c5aed3fce7cb3ec5a9893f8af1c94be444b44e5fa52ea56dc8112fcc"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_7ecf50f43b5381efa4e409dfc6153f94d0022657e8eca5b6db096af98b125064",
+    "task_id": "ex_8_1_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_44f30dd037f277728705fae4dc4e7019e47ecdf5f7651d78e0535bc62ad67705"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_800d38e9d12a0a3e548a78fd88e841b2068910ef9811a157eb992afdaa0470de",
+    "task_id": "ex_3_1_4",
+    "verdict_path": [
+      "fail",
+      "inconclusive"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ffc9e9e0ab415c4de2ad14f9a879dfe6bb8d1cb63376ae4aec89cd3f0acb8685"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_80a67d6395b3c4b6379ec6ae9330b11e74112c9b7f57f5ecaf3659ce444d93db",
+    "task_id": "prob_12_1",
+    "verdict_path": [
+      "fail",
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3a335d7f22ba626f500692c50592f3a54d848827005a86cae44669c7c0f4a212",
+      "adjacent_transition_v3_89099d6d00ade373246495c6cdb9bb95969cdb5a65bd1b2ce65ad9b0776ee971"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_810fc554355ed8208fa012f11150102dedbdd0d69b99d79dc0c45fc7ca6a5eaa",
+    "task_id": "thm_9_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c80676ddaefc8835e4aa5bf61c2443a35141f5cbb4c49343f8dd68666ec887f0"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_81a7419e0aea22a555d5a4c553aa158f69711a7e9986a7296d33b9d93235fa13",
+    "task_id": "def_12_3",
+    "verdict_path": [
+      "fail",
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_315445337982cbfc972409b5abdfc45aada78aa951b0382f26cac1a0849c39bc",
+      "adjacent_transition_v3_e3bb1ad1dcba23da73024be4f3113ac4dfe123a643c62bd6ada95f9b30a2a612"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8202638edaefa3594e29f9f687aa1ceb05c750859ae7c513a0604828ee4786d8",
+    "task_id": "def_3_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_cf19fa8a19a12c509cd245f7742511e27d0b4daf639f7eaf35ab0b96d15fc3b9"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8239e8229099f2b04004d32cf3166cf04f170258a4beb1ef984af962be53a5db",
+    "task_id": "ex_6_1_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4f5746e86a4efd22950f18505a294dc692bd15db181f4685e605e6c4e0192251"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8288aaf0ebf26766d9b47fd0058b3490c27b731616866c7a7a707827aee9d1a3",
+    "task_id": "thm_9_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f2ad04b59bb6d2f6339b12e8ecd640fc4689560f89d57c11ea75088a9dd68eb2"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_837060cb604dde679ff29f692d5aa57b24f6fb9a6f58df4fe3620fa2ea23b310",
+    "task_id": "def_7_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_bf0b65c50fbbbf2d1ed4f034104aee075f29cfce10af39faf1121e6e57b1c89d"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_83784576ce16dadb8f28567f043426591b3d4c9560636e364873a0c261b9bc4a",
+    "task_id": "thm_7_12",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c6c4603f4eb92886e1a6280c48afaba701c3330e34cf4c99e39362fce60c1111",
+      "adjacent_transition_v3_c914fbe2a76bbab558674cc77d24a48390eeef0d0aa18c5b273eee63f2378ea4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_85f17c493c7ebcd9fa6a867444e58d64151891b01a1512f4e515544447021794",
+    "task_id": "prob_4_4",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_7a1df756b303234ed88df775f0817d62f5488a3326bc85ec7f1f0925b60920f2"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8689dbb6108799bfa1c7ae93a9873b473d38d149d066eeaaf16f330bb8cc728b",
+    "task_id": "thm_4_5",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ff011ebc737e3d1b7dc61527edcc83fb511678cbb4615c86c0faf6bb4591b675"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8789c2836275158eebb0cef1943a7c78c0de21e72bdcee12ae31b6dd03a6f453",
+    "task_id": "def_3_6",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3a3bd900f5afe68740521a0d18080188e76a9d617bb9a6c4bfeeace693c0541c",
+      "adjacent_transition_v3_03f1004c63ba7cb51fc60c2522cffdb2465a288e97010719003d646401f70192"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8909b88879e67f80013216c21ef9c920b3e81498c34618056543e0e514b29e75",
+    "task_id": "prob_9_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8e3e214e71b5ca2f1365b833af13c16531b3756a3d9e6d0520bf40bf851bfd83"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_89519d88e492edadffce0665fae39b11c3484d4d3a08eb6490a3672a2458b48b",
+    "task_id": "ex_2_2_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4bd67d087be141fe53673872d9032f70e5c578faf1d8a0daab1d5b8fe18013e3"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_89b81ec4a04334695622643a3cefdb67d32e754d8c2a4c4b70c6c5f5bd7cf7cc",
+    "task_id": "thm_3_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3554b797d7395265f1075ae0c638b98600a7119dcfa414f5ae0c0ac3b083bbf9"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8b7d041118fe14529d3d80e518d0a88441bf5f487b4ed91e555c2d8ff3bff4ce",
+    "task_id": "thm_6_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4b198d58a9e97aced87703333a88e2569dc863b6ab8fe65afc987a1f2a5163bc"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8c9d36bb48e69794c4306757c8647a9700f7f72e065d25f27b40a90013bcb38b",
+    "task_id": "prob_10_9",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_48823fff58a2c28b4a6edffb2f7f69df954b24ac08565a063fe1830dd4eff518"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8d03a73e2119eb36920efed9e41c7199a9e248c95313d29d954c81a88401b082",
+    "task_id": "thm_13_2",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3d913a928a828c95df313fb55fa2e68b60d6b1a8893c687cac9e39d0130420b7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8e1b881958924188b52d18946c92b603b8f186a52728fee8fd2c642c3d4eb146",
+    "task_id": "def_8_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_a478af7f67ff1aaf10367125fbfa191ce59066b28c29d85f109bb78c9b18aa2b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8ea16b847fc500cf8869e8be6d62a72eb05344f91e7d9a20420ba138cc5e66a6",
+    "task_id": "prob_14_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ea5d6f3942318f880c826d1d48b65be3f82d6bc98ac7463d154b8c57c2929570"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8f0f5bfa0bd68b3e128363b1eae2ea4882bb933117b52d772fd2600b92e6314b",
+    "task_id": "thm_6_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f6c34376847bba8bd868a041f0c0dd832d8405217faf8dff8f0ca173c66a9f40"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8f250b15576ca93ae2c019d86ab5458ec832ff2ddba7721ec13ad8d07d2ba400",
+    "task_id": "ex_4_1_indicator_examples",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_9e8f4c5fae32cb4ba1619c256ae02f23539f934c75f0455e3b618732f034e331"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_8f6fccb33bfbbfb558ecf2b14fb4fa162274d243734b9d32fc472e0da0428f64",
+    "task_id": "ex_1_2_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_dd4e6c82054f892129615a25004c0895b362a3ff20bce6af93537fce57a81a41"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_9204617b537759e38948e5eba543625b9cd3cdbdd4d10c8ea55aaa8890eb1ecf",
+    "task_id": "ex_5_2_1",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c0791a52fc8d2f53121556935e190e4d0338115fe0df4558880eb2f7dc416a70",
+      "adjacent_transition_v3_94bc3ffe162c88dc4882aa3ca670dc89fb93682a671160e3c045132772f84075",
+      "adjacent_transition_v3_58b83729baf384d6cb5818e2de58ff43dea03cf0ba21dab9c68820262c088a7c",
+      "adjacent_transition_v3_40fdb539b15d866c0b076c43ed8817dc1cdbf7ff313b537fae1507dc530cbeff"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_941afcb1377c58506acc6c9eefa20068127d40a57db2aaa35cc091e4e6a2991d",
+    "task_id": "prob_3_9",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_efaa14f69e901a73320918feb2bfc8d2f2012c29d42aa040dda5a3afbd08f664"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_96640cf7f2d38d44d33941d5e904503362ccf2cd2ddf879ae522808f6ca6ad0c",
+    "task_id": "ex_1_2_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4a063d30eadc524deff11998277195b7193062909bc99c7568b27a2671e96be0"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_968a6019e4396b8ca9622eb6e589a6f0fba4086e1bc17937a9aeb8aafaec08ce",
+    "task_id": "thm_3_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_bb04de7352929de2527b6e519aea938b6d6e79c4d619cbe56e450905aa40c6b1"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_96b233e35f77240f92a6177aa395921fcec1d34cc393aeb986cf1bc43d0fde15",
+    "task_id": "thm_2_2",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ef87c45826420441bd161157aff63c2a82211d5782d651e9c4da589248d18c92"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_97ccec9a1035fda4c8b9a4147d258fb78b07d83a95522235f149cc983494e53d",
+    "task_id": "thm_2_8",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_77b89ebab05cad9ee8a5876c6df7c69d12eb089946baf11f9fad310773fd38e1"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_98f26d18e0b8fdfeb0f4cad81b76674c9a29f8ac198c879b5ff83945d8fc11a8",
+    "task_id": "prob_1_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_45fc68569df9d947f9893a74ea40f07a2da0e3df2eecae151b6fae9934d109a7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_9924ec55f43e1e7ab91e87b80a0671631f58f83a35cb330bc11acaaf57ba738c",
+    "task_id": "ex_8_1_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4c110d877b696c772360b5374620d6d5b33862920c189bb602af63025be6c3cf"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_99a595a1ef786dfa98bc91949cf3f7c132490070e89720e06665dd089d5e66fe",
+    "task_id": "thm_6_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_883ac66558a2e3202cbbfc0ef9ff45a30a3357f1cdca5809322f217c01a2512b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_99d93e677df648103fb9ff755a7f927c47f1084e3645215c677f14c0d63b4a35",
+    "task_id": "ex_12_2_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e62f1cf916c0d7971755955b996d059f31a28d02c1ab3799f28e54aa033f59b7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_9b06648f6825d0eb146e517edf437b26a9ba3737c8845f6b5edc872f5317051f",
+    "task_id": "ex_12_4_1",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_a58c31a29218ee03890baade23f496647443eb6651d934c0c089b3cab98b4de0"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_9dffaac5570f9ec0772c83c18fcf90829aaceee966af10498255770b8b084603",
+    "task_id": "ex_10_3_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_24a12abd859108064cfa5685fb4dddde9fb61b460de003faadd70ce64c346f72"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_9e30a313ee7b4626e65b1ec402f60d7b56bd2ca8a7f9c424e15c62d163ead815",
+    "task_id": "thm_7_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4c597939c6220bbfaadb39c57879df63b8fe5766797591f83edf3af8c9830a52"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_9ec7e356da667691bae4900eb2bb17cd5576912a4626636e41f3ecb403120567",
+    "task_id": "ex_12_2_3",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f0832a42e9871a91efc7be530778263b8d907fde67a29087b3deadb5db4b2b49"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_9f0e7c8e715e7da56e742bf1e43b9fdb8336b341185ff8da8cda9a51bd1f0b7a",
+    "task_id": "thm_7_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4690cc8eb4c5ca24c54a2887119badd5bc8457a0740bb6ba9ca684b7d3ed9460"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_a218fa919defb3bf5a7deee93c47634c1257e039665ebeb6c4c748f341a2031c",
+    "task_id": "ex_14_4_1",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_2a38e0e08919b7af8f14bf9f2978f48e9e98ccc9390649747123154bfb07d55e",
+      "adjacent_transition_v3_3c7acafcc492dcb7b40c660744030442f7f3f66528f7a167b08a8e417e0d6b90"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_a22f013594b7958765773ab90cd5def9d9db4edfd32024e150b64e6f686f6d93",
+    "task_id": "ex_14_4_1",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_413419faf4f0a34efb18a0f6c8de65cea61f96b8de035fe6fb4173c949e27e38"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_a53928bdafa91eec442ff5047c043f0f174b1d3de9afbb48050ec62a0262b141",
+    "task_id": "prob_14_11",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_03c7da9b5fae6e9da3dee9aec94112e30dd3b6d2d9757f82ba0029d0f33f5ba5",
+      "adjacent_transition_v3_fa00af817c26df615f8051882742ec996b0d45cf06ec12a99c267f4bf5c9b2b1"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_a5c41fea72d1c22b7d28744f58139d50f18d8162fd23919c9c3d7a225c4f5ca7",
+    "task_id": "def_4_4_polar_form",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e5ca32769797a03979431ebafc84a7b5796c1df33e13117234e8595d362d4eda"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_a7e04739132d8846295d6628efde483c0555b6ad0b2d2fbc0f9469c2a8f5ad9b",
+    "task_id": "thm_13_18",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_c9897d264ee15fc6bb79e175438b1f0dfffc5ac278840e7f675c0d92e0c9bbca"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_a815df64cfe02256ec6d6f02cda14d242620080b29ec40ced7a4f6b76b2ac403",
+    "task_id": "prob_9_3",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_630e307ae9aa0f74bf6af6c76c7fe7662394def5442a2c7dd48d9e484bc79334"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_a92e49d87f1b6acdb73e12609dab3d2f21bbbdb4760923dba11870c845800294",
+    "task_id": "ex_13_6_5",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f89096aebd32c2443cb896d0945519a4b3978b92c9336f785a075d517d88fd96",
+      "adjacent_transition_v3_fc2464e34922cd8eeb8ce80350ac6d4e637e8153ebe7cb4170bdde51ab37f53b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_a9d7f0a7ac23f448014d27b6340b3f22f2daf9d4ea1ac75abe9146d955a398c1",
+    "task_id": "thm_1_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_2d18acbeb76d886b527cb56467f528a5510768a99ac1c6bf281126e8ecd67aba"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_ac080b19a5e1f989459bc21b5d694bfdc26eb21dffc91f4c003baaaba49b32f8",
+    "task_id": "ex_4_4_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6ccb438dbe24100555f7580f9543c179f44cfebc9129ad48464d31417e5ca516"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_ac380b7aeaa2b23abb057be599b0f8eee62fb00c4763cebb10a12d76f4808991",
+    "task_id": "prob_11_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_1ada7f88f51fd25774b98cf8046193f41d41e0097210bc785d25d26cd28bf0ae"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_acc09c87e8dae3b63c629941c03e1a28b06bb293b3b43c6869b3478bf7d6acfb",
+    "task_id": "prob_14_2",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_130ffa1e61833e11860b222e79c14f7834a97e8e64e3c9ae2d663b7d3ec7ecd4",
+      "adjacent_transition_v3_f2acfc5b259df2950f145359efd9558cdda343cef781cef5308a3fe98b910380",
+      "adjacent_transition_v3_88f57ca16aa19c568cd4b6f13f8097dbbccedca16342bdaefd624d28b622b1a7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_af349ca3a83ad176e9bde19cda4ce7280539ba57d5c9242590349837054f4eef",
+    "task_id": "thm_2_3",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b1a6de6e2412de6eaa51bbad0c26aad5b96967328ba5a85e146b770e5e335787"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b0d83b7f7e409d2f68a3529eb152609048e43132dbf477e22a65919422b86fd5",
+    "task_id": "def_13_2",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4951d50c3b92da102475276c1b41d6db15b760f23889df376331deb881c4ad46",
+      "adjacent_transition_v3_b0625065cf8a551803dd67e31bdd699727f7cff89aa0c9a704c8b04a95a5c12c"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b28de47a54c03b61bbf9122c57b2205ca64c39bb04351840edba26f2244b57f2",
+    "task_id": "ex_10_3_2",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_9bd7d4b0655ed50e02857addab637e0a2ec8896f057098bebd1f822db4e5d966"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b3502e279ec8625801157d87c4f2a98919c560ad9ab08c9bca7918c37cbb5114",
+    "task_id": "prob_3_8",
+    "verdict_path": [
+      "inconclusive",
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_802457130f5fe23c7f745b7fe12451d3dd6966d6c5d93ca9ee3e58535cbc9743",
+      "adjacent_transition_v3_26db937d4cc14a6c776dfaf5c27a91b1b545f29ebffb7fbf855e36dda4927ea4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b358984b23dd547cbe846fac24c6270de9bd98031dcffff37a154e8806630d66",
+    "task_id": "prob_8_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_edb37f3412263d18d2efc2be48c6ecf220f1793bf545fe18a22cd299f8e64825"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b38bed75c551c562847aa37accd5e5d2fe40a5ceedbcb3808abc5fb158a87292",
+    "task_id": "thm_8_5",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_0ef5f517e3b39fc3ee70df3eb90ac801d26025f6cca42cc4dd14fe00444135eb"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b3ec910df1f8dc466ab8c7b882bddcc9cbb07a79b00876524482481fd1701334",
+    "task_id": "prob_6_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_bfcf32b6cb6e3afc7af9d288b0dbfe690511b3e3618cd8f09583b9e36bc925e9"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b47f301d9f76c629f12de8843017273fa5961e6b77cad2fe8bac00aa91f04f45",
+    "task_id": "thm_2_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3820dfe03b73c7f674326474c2df7e03cd75c8b87fe79734e6ebfcda5cb0e53c"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b68f4f534873c38ad83482b495687dbd8cfd73104e57f37b08f320f295ba4460",
+    "task_id": "def_12_1",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_49d4f300ccc3497dab5861c3b7e2228f0598c878a502e5bdefa4b67bdf9025e4",
+      "adjacent_transition_v3_b7b31b93432b172b9c89cb18807551016c619d4f1e8d26256ffa3b54ae89a416"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b68fe00153f5c9d198ebbe218e691c413baa1015216cd0e41b9c0ff57bff8273",
+    "task_id": "thm_1_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_75989a926f0549a7f75de05097739b66887effbb080039eca0a48aab585a30cf"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b887d6c4832a30e9acde6c23aa533eda15a8d15afe601ce25ac439e86c683718",
+    "task_id": "thm_2_4",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4044b5d335f1357d9d7fdf7a2936d4d5d985fbaef13afda52e528c0c6da3ac6e",
+      "adjacent_transition_v3_b9ad83c20ca03f6325366394605249fb395f99b13f7b3f0d942e14002e92c6df"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b8ded7bfb2f97d5538d6775a48ecb9d52eb93566f43de1ac20724138ae5cd78c",
+    "task_id": "ex_14_4_3",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_0ab8ff541e4df6776166e93faef3fb3010700486a3e5a58be019e109f12ba002"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_b9e79a8155229f67c57eb39fea8cc13090c3240cf8f559b835e7e6b24d27fbb3",
+    "task_id": "prob_14_8",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_2361137e550b007d8be0e0562087f01599634d97ba92cb9c417b0b77f71ec443",
+      "adjacent_transition_v3_9de90440fffb87a922656916a4f8c21f9c3658f21f7cfc4c3ab481b469925167"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_bad36ff37986760c604a55e50dbc19027f3fd9cd1230bbcaf729e742740af943",
+    "task_id": "prob_3_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e6dc6d52c55cc48ca3ea171e677f62ff6e0eee7a1c420cce84a45b404d953475"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_bba87ada0badd110bad2b6c28e819fe8a8697c92f13520ab6a9e9835cfdb1a15",
+    "task_id": "prob_4_8",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_1e40dce25bcf93fea162b1ac65fd0addf87de8a6af2edd06fa62fa2a51ab2c35"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_bc0101e374e3eb7a06cc548a02c8160359e5966413ececf6e44ba99ddf5c31c8",
+    "task_id": "thm_9_7",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_5e60ac57249aeca299adeae1a831f761433aa1a32cdc8e76d2b6c2ab90b4334b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_bc5f6158178eab4c1c8500d3309ae1b3e93ed4d1e4ed003a5d223bc646d9744e",
+    "task_id": "thm_9_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_7b829a4f2d6b350b6497e46a3baf4f757f618559810154ae024ac55a7e23c69b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_bc68cc6d5e086407bb680fd907de89f96b15bff0af02438e13a15a54789743db",
+    "task_id": "thm_3_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_99e6030148f7ba09a3e7116f151f5ed75491857b29d4c63ab89c1e06325be5b8"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_bdb9ffcbbc9667acdbd7d3c354bbc7b6eaacf124aa5438595cabc6dae710d778",
+    "task_id": "thm_12_4",
+    "verdict_path": [
+      "fail",
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_7fdd3f6d3cacfc88376cbd8abecaac7f21d081cfeafa2bdbf353972ffc0ed2d3",
+      "adjacent_transition_v3_378f0c8423053b8de411403ec39c27086c0060700ad453874bae1a8726c508ec"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_bdfa2a08d30f76654a0bbd156a92edea1c2703e54c66a204626cbd95cad853bf",
+    "task_id": "thm_6_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4e4c90360d4a487745fcd14576049c1df087b20af8e67d389512c8333ab9f430"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_be61537b08fe2a7334b6ae4c5b873434d227fa3366825eab10cdcbebbe22cc06",
+    "task_id": "prob_13_7",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_910879645adcc08752a7c578808957ca6cf7d189d2e4f85aea6dfcfd19b1c391"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_beb16a37220385ae5c5ed446a7ed9aa52f357238026e46e39f3a89f83835fbf5",
+    "task_id": "thm_7_11",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6cf731f62a6dd653c218bcad340989e6ca26dfd27c51febd3e85469ba440b1ce"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_bef22de9cc9c30e77a550b493599126e8705da7731c31101f82db3a69eabfacd",
+    "task_id": "ex_5_1_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_a49af18482e2c4db712ec45b7a9c530d400077e7064b29c1ff8d3dd1e4cf1a35"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_c06b383155195fd63b106a2feb9d69bd9a4f353b13e0afcca3b50facb339f67d",
+    "task_id": "thm_7_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_1d95c51c5bc80781557284545ba3dcea582a31a78afbff83ef7a0b6c361a756e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_c0c9b0ccf8a94cdd2da8914eb423cb5972feb9d90553e072dbe395dea1b5d39b",
+    "task_id": "thm_3_9",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_cf5846e519058d8b4e77b0bd857aa0b9c74f54350dca221427ed829ba853dc17"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_c178785b52eb3bd8c63b31fc5f7dea48d5e21d09bb2b5c084f5bfa7403886532",
+    "task_id": "ex_7_2_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e603d66b6dbaf2ba3558a1666ed56c831dcc5ca4ed03d0f79cc230dd03565af6"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_c64e18b37eb7e4745153ade6b76aa2c7adf84c2e82b499eb518fe89dfa4ad9b1",
+    "task_id": "thm_14_8",
+    "verdict_path": [
+      "pass",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_d470047768c0b3d72371357b0591aa950a5b6f26014b1c2411c80e0e178c7d52",
+      "adjacent_transition_v3_1519105fe5d216376ffafb91ee01979522051b59a7132236335a9f0eb6a7b211"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_c71e0711dcb3d6ed47050a3866792054ba3f5d4b25927e86522399ab0c9f7684",
+    "task_id": "prob_2_9",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_69eca84b87f459d38951ef464e9c59f4b25576c0a76e85cca2440f876487d243"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_c80259345be80374c091963fb11f40e6e04050e892e3fc7973a9937b939e1b0e",
+    "task_id": "prob_13_4",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6dd5577271b4e0ed3457fb0edec60c1848ff2f5b572dc3cad61a852ce36afdfc"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_c80761ec76fe8a40f686369351e03739dfd3ad87d93d1b91bc93c70829bc97eb",
+    "task_id": "ex_4_4_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_0685f2153a9d9464dd8f2ac4ae8cdd901fd5ae0b3b71135460bab06556ecbdf7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_c90502cf1904dc6b95102bc752d799deb93b199c7c35e830c0c1098d99e98306",
+    "task_id": "thm_14_7",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_9bc9943568995c4f4674bb86fbca490e3f368b913a399f601608ebf1a6bc9f2e",
+      "adjacent_transition_v3_6195901e8cea54b72b0422837d5b9c5658792f7fbba78d00446008371aa25630"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_c987abebcc9dbfc38632431aabcc0c8377ea4391877d3c0fe2574ddc9d9df400",
+    "task_id": "thm_9_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_4c5ea770f1f1ebcde62b2bb77213c121b52dd117828e4c8eda6e860206f9e2dd"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_cca49ad4dfc964cb7715476790e9558086ab36e628b08b776467af2c7019ddb7",
+    "task_id": "ex_2_1_2",
+    "verdict_path": [
+      "pass",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_78fd494c2c096fd976d931148a772ca1c023dc9ebc10cfef5ef7932f5f1f966e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_cd38d6518688cd1c6a25a80f031526519e53e6c0c52f8c6ad018bbaa799cbd1b",
+    "task_id": "thm_6_2",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_a294d7a834ca244a4f1bd26d676205a39084c9dc753a14400b4f5f3e1c2187c4",
+      "adjacent_transition_v3_5436ca318ed43a45afcda77982c28e807ec33f7c71de9f01b71322ed9c40eadd"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_cdba65de08ce4122000dd4c288f74eea7d09e42985e16cb0a640d33216b7afc2",
+    "task_id": "prob_4_5",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_5a4496b4748df6574fddfd00539edea7daab833312e3f5fd189c3a7fa5034d14"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_ce1e60f958062c868052de25e6b5ec9b88b1616b6bbe656523a06689222b6967",
+    "task_id": "thm_4_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_97ac3eb8b308d0355577fbbca67869a35e2ceb3d23ae8ba5f10a1fc314fcda0f"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_cebd9d0fff33dae9767fe5c8b8e46aa960f721e6795485780180378825248b9a",
+    "task_id": "thm_6_7__lemma_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_10c18dea1bc6f9499c0bf951f798360a47e252eb2c2a3201ff964ad66eb746f3"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_cf12dfc8716bc10d37f7e52ad3c0dba510cf597e6d8b5e89fb72a03b78b54af0",
+    "task_id": "prob_14_1",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_9f85357389556acbc1660f8de08b7791bf11a9ec9bd22bbd8d0454e9ebded5df",
+      "adjacent_transition_v3_efd63587b490e48548d20b3bce87d36fd3a7713e79b11df5ced4bf087af2273e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_cf18eb56feec78b8594ccf841fe1e0104563a9d1aa90e26e254be133eeb27089",
+    "task_id": "def_6_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_48f249eb3d75767459581d695a6d4244e92f03b0dde247df98883aaa95ec7e45"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_cf75a25481137dd50e3bc9d3bf669861c7a4d219129e4137ccb2038bf2c1c2d9",
+    "task_id": "ex_14_4_3",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_3919b459586284d36bd45c572e2c1feb90c77e7093c1e5a29199c494d5b129a0",
+      "adjacent_transition_v3_77803b80b49f98ff9305b3041da9757e7ac83d51a3708497dcb3a1958038c6ac"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_d1e6841a7c5482c6d20edfa7e7e65ffe2ca2c794006b1df9efd7fdee993c9ab8",
+    "task_id": "thm_3_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f56459376ffb93d940eb41b6abb0a94b10771fc8a02bdc75c2eda0805577934c"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_d2d370cd4544124343411ea2f73cc87bf25233f0b211d540d9ba0a57e83d85e9",
+    "task_id": "prob_4_2",
+    "verdict_path": [
+      "inconclusive",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_adda125bb606cf05a49bf0991c0f782454779f8b66fa6a81010950a39aed8df8"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_d2ee47e044a37af53b3f446067512f1dae62cfa64edcbfc69f8a716f29f79148",
+    "task_id": "prob_2_5",
+    "verdict_path": [
+      "inconclusive",
+      "inconclusive"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8487d42186c9ec7b753a5b70426796ef24256230cc737fa615e431b562d5085e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_d37009f5fcd5653f888a05157c6b479582f4c9c3d8151da45aee6869ff515004",
+    "task_id": "def_8_5",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e22c115a0e4a6d9840df5d3630fa6fe74ead6e1c8817798910f70d24da818506"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_d3a687769b183689927e0632c4468ead553050886b2377a4f790f62af29df69e",
+    "task_id": "ex_7_4_1_rayleigh_distribution",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b63165a48818da47f65df98a911fc90d56318c9df078a986f4bb71bf2a715adc"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_d4e9a8549cde6ed255b38c27eb00a3a1541e10d8f0bd986a56921c632ec0c0e7",
+    "task_id": "prob_13_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_9256b1aacf056078c4d8f1f942dfeeed99e03cb91f1ab133365503426942ed54"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_d501681753b162b923a7c9608f643998db46d552ad362576811f491c29728408",
+    "task_id": "ex_12_4_1",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_668070b7d45a74123bd66e45f3e0ff1278549964122013ce0abe82f537b08c7f",
+      "adjacent_transition_v3_657d3e49d08e2f27dad5b584b386ebbf60d861567714e6480fc80c4a52061054"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_d51b23b613157bf62afd2819a0a13afdef0be187ea9bcdb5fa3b3853d79b1cc8",
+    "task_id": "prob_1_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_379295f83ced9e938dc258f9fc0c60403e6774fdb8dfa0267e1182e38373b7c6"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_d9d386d30ff66b6e28a3ff028907bdaaa09c51bd0f9040b34e91dbdaf62e76d4",
+    "task_id": "prob_1_5",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_35f3cd5d8e7720e979d8f725c52e5ebce2e958d702d2c73819b3cc0ee6a80700"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_daf5cafd3a6e41d6981eb0fb39f0d758279e78a92ad9f058096eed7c8f2bf911",
+    "task_id": "thm_6_5",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_90972ff9445ed794e90dbcd6ea83f5f0d962d74ec6a663f871c9a25583bc1eef"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_db5aab1868372dc8180caf278ef7b5168876fface66274797b6b70bbfa184ca3",
+    "task_id": "ex_13_6_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_9c3fadf1241691c11ebe11c440182004663b971776e7f4a7b110862efe96b785"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_dc7079df06028d848fdd8b80beed9d787f23efbc8b66105f74b1751325657c6a",
+    "task_id": "thm_10_6",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_717bb731299778b42485edc890c0361d919a4afb9deb1d33568bf6be2b304d58"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_de55f8b60e1ef5d02107fe0c6d6240e509a0649b6a3e24fff12dba55cfa77b95",
+    "task_id": "thm_14_7",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_235803d49a38a4e3de75fcff96970dcef78efbb4104b5874bcf33c60f64776d7",
+      "adjacent_transition_v3_566f22d80b438361ca894f8430734594512391a5bd6c937a153dabd24c82b6b5",
+      "adjacent_transition_v3_962a7a624d025ec88bbf401dcdc215ecc73f61a43c2e42ea94c60f8fa09b2b53",
+      "adjacent_transition_v3_0c7f0919ac2939cabceea2a3a41141bbb7ae8833a7444b6118ab322d1a98b780",
+      "adjacent_transition_v3_329578b2ef47c583c37699598a95aebf992e68af540beda1ca1fcc33c2e06f39",
+      "adjacent_transition_v3_1baca2fbcb41f05b31c968f0488bdff4ee917ce2c911fbdc6a24f825d6438ff6",
+      "adjacent_transition_v3_5343109734336fb1d2f43b6d01590a5da21da05f27b9a1eefd0c8d639780a506",
+      "adjacent_transition_v3_8462787e9d4b176d7cbb1f96f48cc357ac3ed22bef37c07124ac13665cab7ab4",
+      "adjacent_transition_v3_350eaf7e3f3accd0af1a6724689049fd03e826fb998f1eac883f108c03f6d5f0",
+      "adjacent_transition_v3_c9826f23bed4958735b9ccefd98da2d34477429247a31572bf43e0512554cdc4",
+      "adjacent_transition_v3_791cfeab4480ef48dd38a8ba1c2e23e1d401ee1a8a4515bf40c8ee7af553f749",
+      "adjacent_transition_v3_b58a68d026340bc7f682c63438be9ddfdf92f84653227fa79a78fec53102dad3"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_df7a1d35f1aa322e31de3f8940cf0708214bcf4f417f5591626bab86e089c812",
+    "task_id": "prob_14_2",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ac0fd47915e80c4df41e0af6c30d5182330329f837fda8ae4a7718a7583d15c9",
+      "adjacent_transition_v3_5d11fa75f1a84b0eb2b93ba05b8a9a4c90f3ddf0fe77ddf2c69205995fbb39ef"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_dfb7afa6a997924f8a2f0035d065c635f63c2d848910b7d8f09fdeeb6fd84cb1",
+    "task_id": "prob_3_9",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_dcaef180dbd1708b76a12e8d35e32b55d2012b46b6f38b5835dae06f3887a3fe"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_dfd7b2ec5522126af72f5d47463b3685c0d39118b57e23548c7a560d68a7f7f3",
+    "task_id": "prob_13_11",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_481f96ddb7901e0596f772749548c90be0a7071618e5ef2077baf975c9088c16"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_e2898caee78afed61bf55b7a432f0d56a66864791c4ad665abbbf8e223117107",
+    "task_id": "prob_2_5",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_ba1c71b4ddf84f91f19ee4620de5bd37c90dfe2f1ba6ddc23b2291d927987330"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_e36da1d2f56925c813b654cf3cd52e8446d294d2f57b3c432548bd811edade35",
+    "task_id": "prob_14_1",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f8c6b659dcc760407dba5e27dd7188833abfc27e48d7a392050d27c257960485"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_e48fef665611ca5af6f8bb56ef4cd445a5f995c2e309d896f57551b7911dae3f",
+    "task_id": "thm_9_5",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6cbb90014bbbf0f863b810907be6935af587415e0dc81b77835913c5f53683ac",
+      "adjacent_transition_v3_a5e62ecda0993fb96c4e7b6a9ada58596275b26dd298f12c0a5c519d907bcbea",
+      "adjacent_transition_v3_b9efee3b15c5b19bbb93c1ec3b2c08188650c9a9d663c0b0cc226a92f0baf1e7",
+      "adjacent_transition_v3_e1c6cfbc1baa5046465d06de154bd282921d5c4f376d99d3f5aaecf8e902e44c"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_e88a722ece0fbfbbe966f222a875aa0f3920c3a56dc3187a6b2914ae56d9628f",
+    "task_id": "thm_7_9",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b03c4d0244c73994f38569b447d3192453ed75ae9d4b3d7553739554edc1189e",
+      "adjacent_transition_v3_27f582a9c30b937df736da50029aff444b886a54cdb2ba1e340cb44ddc935be1"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_e8a0df65b8fd181a2dfd52c4714049812847a697009753335cf2f40300bbd4ef",
+    "task_id": "prob_7_1",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_81cdc187253df12f9cdb0065a02ddfa31d63fa3605467b0f22c5ec97e98a7cb6"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_e90d3867208756b2267085aa1619311653faaf1f00d437ba05fd158f1ccf143d",
+    "task_id": "thm_13_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_f575d976578ddc224dcd9a8d46e2bf19fde8db203f0c35c8a00f7c88c0d54864"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_e923269e32d330841f8246c9f62845916a78182fce80482a1128047a40370397",
+    "task_id": "ex_9_1_1",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_80281ea728ed5d0daeebcc37e0e5d20adcd5b60b9ed4aea10c381030d79b0adc",
+      "adjacent_transition_v3_146b809fbf3465054ef80739bc89a31987fffddb0f2dae857f8b92fb36026830"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_e9cb8ad65225b0bfd51f9024e62e0ac0bb20fa2ac01cc17d4367a671a5fef50c",
+    "task_id": "ex_10_3_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8331f0311cab701c016cefc5247c043cd476d2470b6b2b592138c38770a631e7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_eb4cd35a99db604ceea8889cf4d8f482a4d29cd45e60f39a958c71b8a928efa6",
+    "task_id": "thm_11_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_d3e75cea433e9237edf52c8e15a677b2cc1fac22a2b577812edcc7e129ec0f74"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_ef205de80038781014ec1d61620e93c0dd0b56a61a2da1587e7852640d8b2d54",
+    "task_id": "thm_7_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8f2647544a0e3061b90890d224e10deae4084e4362bfd6bc74fa78125a0d6267"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_ef37397e1723256012633c478dc3947069eaf6ad3d79e4d87e11f2546521effe",
+    "task_id": "ex_1_2_3",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_eaaf467d5743f9de0feede6240f1a4372cca7e21416fabb8282b9a953c434ca6"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_efaa6ffef96e159b9ec87613acfbd09114f9a76cc0aaeaad118331a9a3ba78c6",
+    "task_id": "ex_10_3_1",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_33b6076ffaa67d5f81625db569ec5359e9e55178b77a058735c37e8b459213d8"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_efbd59fdc0815c75a6412f67f6d79db5343631c4b84c665869657c6d7191ae53",
+    "task_id": "prob_13_10",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8c1fae6a381f1124ca7135e0a1f52a98ac3a87d3160552f4a48a39de808b3df6",
+      "adjacent_transition_v3_935b30ab5afed6ff039b32abe8ae0464d05625412af28e1fb5d786e2441a2dfc",
+      "adjacent_transition_v3_7b820f2c7a0fd65e2692b426cc6c8a67d38a93c36ad00a6b729b93ecd2bcdb2b",
+      "adjacent_transition_v3_61a6211ddcf43925f0f3a8a533826f03ebe74ef6cde5da0a2cfe210f73715b4d",
+      "adjacent_transition_v3_65a6fee311c9c9ba308fceb33fa21d9734ff9fb9b685af0cb9df5cae09530a39"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_f3a5e2665942b9d0bad588fbc882b2a4732812ba1cf14ada523523f73975fb29",
+    "task_id": "thm_12_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6c961656648535289b7a0db7be2c966e2c0fe42d68cd53d2ef31378fb0e119ff"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_f57305548f09a3a7d339dc02b16aafc1d971e3695e5f88c0e8619d5b6dc98d19",
+    "task_id": "thm_9_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_42b559adc2e337431557baf7a8de431c44d8cf6c90c7339ea6576ecf52285c34"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_f688c5c4be9f98ebd0bbb600d71be74dd5ab5cb45d387f52e360473302419298",
+    "task_id": "thm_4_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_d3d2c0227b97eb1f850a86a99b709cac378ef8438695f4cbee16affba991e5ca"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_f6a692e5d22e07f3a27b364887afbfca0d3054a446328fde04f6c6fe35b52700",
+    "task_id": "thm_12_3",
+    "verdict_path": [
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6260ce8ad3f5b5cb56f8a08afa3e68d876b8dabcb98a9440b70f33bfabaca413"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_fa0295ae98dfe240a93448b4c6e8b6857320c0bb85149eae82f0c578fa44ffc2",
+    "task_id": "thm_4_8",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_265a78a084a856fbfd3e85fbed0373eb4b459c43d7c3e8c66571d7992304b6fa"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_fa1f927eda2dac527013ef8a3dba95381af0ba9568e5e28ff3482f5e393a6898",
+    "task_id": "def_4_3_limsup_liminf",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e7cc279f7934abe6f067d2c0b92fd58fb2e56eedbeef8aafd2452ffd2a8624db"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_fae12052da52b70855338ffe692285b4e347ab5ba2b56c3d0b624c136178c743",
+    "task_id": "prob_3_4",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_0137dfc28436c3a4a9063f33763ff4865dd97186e05b6c4b5097e14304d529cc"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_fba349f2a2e54d7433970ae09874bc5e936587c64b8bb7f12ce7a657a7e42ee3",
+    "task_id": "prob_5_6",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_6310155fa867c53e9a6f5a26fb63c136d16e1b3e45db863e9f0fde68a87e0bfd"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_fc081e0b6ab118ca25ffb538c1bf144abb57b4d73f02f1cc48243499dfcb39bc",
+    "task_id": "thm_9_5",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail",
+      "fail"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_b06a382f74cc19ea00d0c7670fe7c590f3ad935c87dd3f1710623a2382375490",
+      "adjacent_transition_v3_72169829f80a6b1776b0d96c881d294d11e653e2a9d46771b560676aff7bb0e6",
+      "adjacent_transition_v3_36ca1f1c50cf01345283dd3bc550899d626f9a44b2f072379f6474ca874d5a11",
+      "adjacent_transition_v3_e6ab449ea74a22fa85e1373378458068da4c30f3d77a6e5dfc11abdf74367705",
+      "adjacent_transition_v3_10d3db46485104f3c43446fc5e0bf2c91662f8c8802d4938ed883f88b5d341e6",
+      "adjacent_transition_v3_90e4d7123b6b1e4faa69c2e0d68a5e0cff11b4722c317fdafc62e86dc0a15906",
+      "adjacent_transition_v3_6e0d4745d33c61ffaf3fcdba1aa1ea1135665c237558356b0843a01c9a869081",
+      "adjacent_transition_v3_8f1d584c278d7f00612cb8390274a8b4e9923f3e2fed756d29af4a49c855d3fd",
+      "adjacent_transition_v3_141bec10b348bd8721417dc86510f68aad225438812ed8a8d7f29ae01795aa4f",
+      "adjacent_transition_v3_d80ce3b8d08051d3f02cbe648a9bcdc442449c46519baa3e7a1e048b3e6cc5a5",
+      "adjacent_transition_v3_42272e202836cda5681923e9f0535559babb6959061aba64d2135e1e0168b4f5",
+      "adjacent_transition_v3_5c2dc313ece21c9895d0033042f015f851a3ec9a2227cb6f64625152fe7d085c",
+      "adjacent_transition_v3_0603d61f3db9648be53be5a71643251b50662781d4449e52efb8703926907e96",
+      "adjacent_transition_v3_7e50c18cca6fdca800b04a10f7d9e01694c5ae2d507e7ece6c12dba653999358",
+      "adjacent_transition_v3_b27a7d6a6325634f46334758c1742e87df3cb9254505e1a91154a575b1c1c502",
+      "adjacent_transition_v3_8c30857196beecd981b5b02eb0ead2f7668b33fc1cca7b27edc8f6a8036b2d9d",
+      "adjacent_transition_v3_9a7cf2d6908ca3c324515d32d337fbca884fe59046819a58fa1920f065cf399b"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_fcb83e73c1972c8621819487b390ec0551934b96ea17e19363d9f87e4f89b64d",
+    "task_id": "prob_11_9",
+    "verdict_path": [
+      "fail",
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_fef51fcf193fdb9c38ff3d6ce2e39d65dbfb8af4fc6638e695525e34b7a48b75",
+      "adjacent_transition_v3_cffc7dae8d5b2012d50af4b800408f0f60b599645b489db93d8a220923ab3dda"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_fcd31dd7c3f647a995cd4d48c3aac4909c55ea48d30294cd47f5f548e67c8228",
+    "task_id": "ex_4_3_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_e5eb94a509bdfabee20ed8943021ec0a1de13e0ffe137bb45cb68c4319d85d5e"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_fda88da348df98f9cb06823563a3b4ab3a43a6896a3f15cf0348f5f637e4f6b5",
+    "task_id": "thm_8_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_8dfdb787702ea4225b09607f0719ba742a5e6b26435da1f48a3e051fa0f2fec4"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_fec06868a2a5fe5e2e79f1d283c991930af6e0122c1430d835cd71bcdba5b1e2",
+    "task_id": "thm_12_5",
+    "verdict_path": [
+      "pass",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_436df8e3f741b06105f59c43414563148823f8eb3232d52d93b72facab9a34d7"
+    ]
+  },
+  {
+    "episode_id": "repair_episode_v3_ff6257e77cb1bf4beaf2c806273d8d527998caad3dba81c6af1d8f164f2f6d28",
+    "task_id": "ex_6_5_2",
+    "verdict_path": [
+      "fail",
+      "pass"
+    ],
+    "edge_ids": [
+      "adjacent_transition_v3_84ef676fa4780e0fa2bc08cb16a753babcaf79e285eab4415c3606e8f20963bc"
+    ]
+  }
+]

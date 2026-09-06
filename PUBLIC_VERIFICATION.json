@@ -1,0 +1,13 @@
+{
+  "input_and_script_hashes_match": true,
+  "results": {
+    "edge": {
+      "exact_json_equal": true,
+      "differences": []
+    },
+    "process": {
+      "exact_json_equal": true,
+      "differences": []
+    }
+  }
+}

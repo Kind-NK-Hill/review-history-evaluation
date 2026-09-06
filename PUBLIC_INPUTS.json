@@ -1,0 +1,23 @@
+{
+  "description": "Selected frozen inputs, unchanged analysis scripts, and saved results for recorded review decisions.",
+  "copied_file_sha256": {
+    "analysis/edge_statistics.py": "01770b87157fe48b1bbb45cac3d0ec601ce35a7214ef4f13a7461b73c10d58b6",
+    "analysis/process_analysis.py": "e597012a70be440153909ab895b3704473ca46ce4f9dcf7da26a0cae5f403a73",
+    "analysis/requirements.txt": "bf1790e80621f5a7a4d589c32154ee3f09b0d9d3b0c08fcf7b00b330a13a72d4",
+    "analysis/inputs/edge/manifest.json": "b55fc34962cc4f6424a15c48b4b455f6f097445a1f20606b5dd3ae348d004b1a",
+    "analysis/inputs/edge/edge_view.jsonl": "a6ae73a11f40e62935f96e6057aa8b0e1bea131ddd425c360f08caff38dca72b",
+    "analysis/inputs/edge/review_events.jsonl": "9078eed24baf71b17ba6d0c943cbdd90c1165fa99a06bb0ecd27589fdf0f217e",
+    "analysis/inputs/process/manifest.json": "094c2f7ccf50ecc442f5a09a51cfbf231a53798caf5902e3bb3bb796dff05654",
+    "analysis/inputs/process/episodes.json": "a2c9ddb379a27d074724e823bcf3627ddd512de99ae45acc9c8b305973050775",
+    "analysis/edge_statistics.json": "fe3f757f479a1004044116a41c9e80f4a573fa1c2fe7980a39b89f67a2232961",
+    "analysis/edge_statistics_en.md": "1921d4e661ec293c6b46a662edf6bb4225258f288dc312068fcdbfb7636b60a4",
+    "analysis/process_statistics.json": "2ec1b4b407f841fdd6b5a073df5cd5be4fd03cd169e7e29da7c448e810eec7b3",
+    "analysis/process_statistics_en.md": "77708b1062b674a5509b1cc6050d5653f9d20984f5b896ae5fea88d1893d25b1",
+    "analysis/process_cohort.csv": "d06d8cc41b919d280ebc489cf56d6ade20cdc22e6083960556893cf8a3aa9b59",
+    "analysis/process_curve.csv": "b0acdbb21570aedd5b41dbe53c3f514d11cc35bf8fcec4ba224a91cac2ad9196",
+    "analysis/process_risk_rows.csv": "90ea364530acf095b6c9b85565072999abfcc93b92ba428b6daaef5463002fef",
+    "analysis/process_profile.pdf": "20ac514f85b4482c6fb79349eea8a881e1a4d025d1c671c89c09310ab1e77a27",
+    "analysis/process_profile.png": "3e0fac06cbed08f92a9a391a8c6578fc2ef7d16770436b70aabf05d106a53d68"
+  },
+  "scope": "The underlying full review archive and local source-location manifests are not part of this public selection."
+}
