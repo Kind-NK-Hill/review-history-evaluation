@@ -1,0 +1,22 @@
+{
+  "en": {
+    "pdf": "output/pdf/review_evaluation_en.pdf",
+    "pages": 45,
+    "sha256": "abaf5b84c8bec8ae7426918741ce142c5c789c9f167c80dd0a6a3966f793d8d2",
+    "nonempty_pages": true,
+    "replacement_character": false,
+    "trim_outliers": [],
+    "rendered_pages": 45,
+    "render_directory": "qa/render/en/abaf5b84c8be"
+  },
+  "zh": {
+    "pdf": "output/pdf/review_evaluation_zh.pdf",
+    "pages": 37,
+    "sha256": "4a07e54444a16245766f832040309c80ebd4041a66015e038c0d4b2d7d133174",
+    "nonempty_pages": true,
+    "replacement_character": false,
+    "trim_outliers": [],
+    "rendered_pages": 37,
+    "render_directory": "qa/render/zh/4a07e54444a1"
+  }
+}

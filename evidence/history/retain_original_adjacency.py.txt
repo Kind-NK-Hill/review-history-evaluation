@@ -1,0 +1,16 @@
+        raw_main = [
+            row
+            for row in raw_pairs
+            if row["from_direct_review_evidence_signature_id"] in main_signature_ids
+            and row["to_direct_review_evidence_signature_id"] in main_signature_ids
+        ]
+        rebuilt_main = [
+            row
+            for row in rebuilt_pairs
+            if row["from_reviewer_produced_judgment_signature_id"]
+            in main_signature_ids
+            and row["to_reviewer_produced_judgment_signature_id"]
+            in main_signature_ids
+        ]
+
+        c06 = [

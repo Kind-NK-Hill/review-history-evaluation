@@ -1,0 +1,165 @@
+[
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/edge_statistics.py",
+    "file": "analysis/edge_statistics.py",
+    "sha256": "01770b87157fe48b1bbb45cac3d0ec601ce35a7214ef4f13a7461b73c10d58b6"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/process_analysis.py",
+    "file": "analysis/process_analysis.py",
+    "sha256": "e597012a70be440153909ab895b3704473ca46ce4f9dcf7da26a0cae5f403a73"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/requirements.txt",
+    "file": "analysis/requirements.txt",
+    "sha256": "bf1790e80621f5a7a4d589c32154ee3f09b0d9d3b0c08fcf7b00b330a13a72d4"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/edge_statistics.json",
+    "file": "analysis/edge_statistics.json",
+    "sha256": "fe3f757f479a1004044116a41c9e80f4a573fa1c2fe7980a39b89f67a2232961"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/process_statistics.json",
+    "file": "analysis/process_statistics.json",
+    "sha256": "2ec1b4b407f841fdd6b5a073df5cd5be4fd03cd169e7e29da7c448e810eec7b3"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/edge_statistics_en.md",
+    "file": "analysis/edge_statistics_en.md",
+    "sha256": "1921d4e661ec293c6b46a662edf6bb4225258f288dc312068fcdbfb7636b60a4"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/process_statistics_en.md",
+    "file": "analysis/process_statistics_en.md",
+    "sha256": "77708b1062b674a5509b1cc6050d5653f9d20984f5b896ae5fea88d1893d25b1"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/process_cohort.csv",
+    "file": "analysis/process_cohort.csv",
+    "sha256": "d06d8cc41b919d280ebc489cf56d6ade20cdc22e6083960556893cf8a3aa9b59"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/process_risk_rows.csv",
+    "file": "analysis/process_risk_rows.csv",
+    "sha256": "90ea364530acf095b6c9b85565072999abfcc93b92ba428b6daaef5463002fef"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/process_curve.csv",
+    "file": "analysis/process_curve.csv",
+    "sha256": "b0acdbb21570aedd5b41dbe53c3f514d11cc35bf8fcec4ba224a91cac2ad9196"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/process_profile.pdf",
+    "file": "analysis/process_profile.pdf",
+    "sha256": "20ac514f85b4482c6fb79349eea8a881e1a4d025d1c671c89c09310ab1e77a27"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/process_profile.png",
+    "file": "analysis/process_profile.png",
+    "sha256": "3e0fac06cbed08f92a9a391a8c6578fc2ef7d16770436b70aabf05d106a53d68"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/inputs/edge/edge_view.jsonl",
+    "file": "analysis/inputs/edge/edge_view.jsonl",
+    "sha256": "a6ae73a11f40e62935f96e6057aa8b0e1bea131ddd425c360f08caff38dca72b"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/inputs/edge/manifest.json",
+    "file": "analysis/inputs/edge/manifest.json",
+    "sha256": "b55fc34962cc4f6424a15c48b4b455f6f097445a1f20606b5dd3ae348d004b1a"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/inputs/edge/README.md",
+    "file": "analysis/inputs/edge/README.md",
+    "sha256": "6880d7d157cb6c80ef25abd9044d928b70b7416016ba54168eb6eed6372f461c"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/inputs/edge/review_events.jsonl",
+    "file": "analysis/inputs/edge/review_events.jsonl",
+    "sha256": "9078eed24baf71b17ba6d0c943cbdd90c1165fa99a06bb0ecd27589fdf0f217e"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/inputs/process/episodes.json",
+    "file": "analysis/inputs/process/episodes.json",
+    "sha256": "a2c9ddb379a27d074724e823bcf3627ddd512de99ae45acc9c8b305973050775"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/audits/astra_career_audit_20260905/publication_v0_2_0_20260906/analysis/inputs/process/manifest.json",
+    "file": "analysis/inputs/process/manifest.json",
+    "sha256": "094c2f7ccf50ecc442f5a09a51cfbf231a53798caf5902e3bb3bb796dff05654"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/stage6_repair_trajectory/execution_v3/results/transition_role_summary.csv",
+    "file": "evidence/history/transition_role_summary.csv",
+    "sha256": "44dd202dab06b37145f2e24664926712c78a4ebdac2793526f2e22c831b38832"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/stage6_repair_trajectory/execution_v3/results/episode_attempt_distribution.csv",
+    "file": "evidence/history/episode_attempt_distribution.csv",
+    "sha256": "82989903d926d5658444efa0a90e2979ac1ec8257fc568c3fd1159bdb6423dda"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/stage6_repair_trajectory/execution_v3/results/STAGE6_TRANSITION_ROLE_FINDINGS.md",
+    "file": "evidence/history/STAGE6_TRANSITION_ROLE_FINDINGS.md",
+    "sha256": "aa73f8c6b692d0dc99fac395f742c49f4492a63017cd7dffc543edff71edc257"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/stage4_eda1/execution_v1/results/EDA1_FINDINGS.md",
+    "file": "evidence/history/EDA1_FINDINGS.md",
+    "sha256": "69696794f6e556ad096ae495b503a310516ea36534c84e1776fcf12797bc7b08"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/stage3_eda0/execution_v4_1/results/main_adjacency_partition.csv",
+    "file": "evidence/history/main_adjacency_partition.csv",
+    "sha256": "667431d5977da21f7f5f5ba766185efa7ad87018b72edd0e7b4c6fb53b2f2800"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/stage6_repair_trajectory/REPAIR_TRAJECTORY_ARCHITECTURE_v3.md",
+    "file": "evidence/history/REPAIR_TRAJECTORY_ARCHITECTURE_v3.md",
+    "sha256": "07b1bf29748728dbb492816f65213911cada398605d061ca4d4abbc352225a15"
+  },
+  {
+    "origin": "toy-apollo/docs/phase2/workflow.md",
+    "file": "evidence/workflow/workflow.md",
+    "sha256": "9d42f817c1cee0f4ce8e05029a00b53c6e3747cf1e0eaaa2dcc5fc5236642634"
+  },
+  {
+    "origin": "toy-apollo/docs/phase2/artifacts.md",
+    "file": "evidence/workflow/artifacts.md",
+    "sha256": "a3d6eb49b1ba5476ed003b31224da1a3425c3df9e1b84f0f834056bccd39546e"
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/stage6_repair_trajectory/execution_v3/run_stage6_transition_roles_v3.py",
+    "source_sha256": "2856c96ebf8b55d0c62c549845c08426f546b52617bd2119721166918eb78e4a",
+    "lines": [
+      295,
+      367
+    ],
+    "file": "evidence/history/classify_role.py.txt",
+    "sha256": "feb847b362dfdbe8ee3cae8437a6920e5caabfb68f55e771de2870285e1ff212",
+    "scope": "Exact excerpt; inspection only, not a standalone collector."
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/stage6_repair_trajectory/execution_v3/run_stage6_transition_roles_v3.py",
+    "source_sha256": "2856c96ebf8b55d0c62c549845c08426f546b52617bd2119721166918eb78e4a",
+    "lines": [
+      682,
+      756
+    ],
+    "file": "evidence/history/join_segments.py.txt",
+    "sha256": "de2fc835795584dae6d49b2a792e59ecb665600c9ebe2a4f1424c542ecca9426",
+    "scope": "Exact excerpt; inspection only, not a standalone collector."
+  },
+  {
+    "origin": "review_history_retro_20260901/research_framework/stage3_eda0/execution_v4_1/run_eda0_v4.py",
+    "source_sha256": "d110209740d249bbbd457f7cb9f4e46c0e5183ad9d27618eea12243fdccba700",
+    "lines": [
+      1306,
+      1321
+    ],
+    "file": "evidence/history/retain_original_adjacency.py.txt",
+    "sha256": "fce11c10e166a8b2de074f383606843c01742570478373366f64e76ca1ce1417",
+    "scope": "Exact excerpt; inspection only, not a standalone collector."
+  }
+]

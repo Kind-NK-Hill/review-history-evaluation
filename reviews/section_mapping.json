@@ -1,0 +1,480 @@
+[
+  {
+    "language": "en",
+    "file": "framework.tex",
+    "v03_headings": [
+      "\\section{From a review question to a numerical comparison}",
+      "\\subsection{What is being evaluated?}",
+      "\\subsection{What the implemented procedure actually does}",
+      "\\subsection{Why use four evaluations? A complete hand calculation}",
+      "\\subsection{Sharing a diagonal change between two ingredients}",
+      "\\subsection{How this differs from the earlier historical model}"
+    ],
+    "v04_headings": [
+      "\\section{Evaluation and comparison}",
+      "\\subsection{The evaluation procedure}",
+      "\\subsection{Axiom checks and measurement status}",
+      "\\subsection{A four-cell comparison}",
+      "\\subsection{Allocating the diagonal change}",
+      "\\subsection{A model of historical review}"
+    ],
+    "v05_headings": [
+      "\\section{Evaluation quantities and the four-cell comparison}",
+      "\\subsection{Candidate, criterion, environment, and score}",
+      "\\subsection{Axiom-policy measurement and missing or invalid scores}",
+      "\\subsection{Four cells, conditional differences, and interaction}",
+      "\\subsection{The two-factor Shapley allocation}",
+      "\\subsection{Historical review: observed labels and partly observed conditions}"
+    ]
+  },
+  {
+    "language": "en",
+    "file": "mathematics.tex",
+    "v03_headings": [
+      "\\section{Mathematical analysis: reasoning from the evidence}",
+      "\\subsection{When different programs look identical to a measurement}",
+      "\\subsection{Why acceptance records alone do not reveal accuracy}",
+      "\\subsection{What can be known before all four cells are measured?}",
+      "\\subsection{A general rule, stated without linear algebra}"
+    ],
+    "v04_headings": [
+      "\\section{Mathematical analysis}",
+      "\\subsection{Indistinguishable measurements}",
+      "\\subsection{Acceptance and accuracy}",
+      "\\subsection{Partially observed comparisons}",
+      "\\subsection{Identification from feasible completions}"
+    ],
+    "v05_headings": [
+      "\\section{Mathematical analysis: what the evidence determines}",
+      "\\subsection{Measurement classes and the finite error bound}",
+      "\\subsection{Why acceptance records alone do not identify accuracy}",
+      "\\subsection{Partial tables and logical constraints}",
+      "\\subsection{Identification of a linear comparison}"
+    ]
+  },
+  {
+    "language": "en",
+    "file": "audit.tex",
+    "v03_headings": [
+      "\\section{What the executable checks establish: a guided audit}",
+      "\\subsection{Four different questions about a Lean file}",
+      "\\subsection{A narrow check for assuming the answer}",
+      "\\subsection{Reading the comparison of four assessment methods}",
+      "\\subsection{Why the empty set distinguishes two definitions}",
+      "\\subsection{A whole input space small enough to check directly}",
+      "\\subsection{Reconstruction and rejection of contradictory inputs}"
+    ],
+    "v04_headings": [
+      "\\section{Executable checks and counterexamples}",
+      "\\subsection{Compilation, targets, axioms, and task meaning}",
+      "\\subsection{Assuming the conclusion}",
+      "\\subsection{Comparison of four assessment methods}",
+      "\\subsection{The empty-set counterexample}",
+      "\\subsection{An exhaustive Boolean test}",
+      "\\subsection{Reconstruction and input consistency}"
+    ],
+    "v05_headings": [
+      "\\section{What the executable checks establish}",
+      "\\subsection{Compilation, target extraction, axioms, and task meaning}",
+      "\\subsection{A narrow check for assuming the conclusion}",
+      "\\subsection{Four assessment methods and diagnostic availability}",
+      "\\subsection{Why the empty set distinguishes two definitions}",
+      "\\subsection{Exhaustive behavior checks on one Boolean task}",
+      "\\subsection{Reconstruction and rejection of contradictory inputs}"
+    ]
+  },
+  {
+    "language": "en",
+    "file": "statistics.tex",
+    "v03_headings": [
+      "\\section{Learning to read the paired statistics of recorded decisions}",
+      "\\subsection{Start with the question: what changed in the records?}",
+      "\\subsection{Two reasonable averages answer two different questions}",
+      "\\subsection{Why 465 edges do not mean 465 independent observations}",
+      "\\subsection{From observed differences to a conditional t calculation}",
+      "\\paragraph{First separate three kinds of number.}",
+      "\\paragraph{Then state the question tested.}",
+      "\\paragraph{Finally explain the reference distribution and p-value.}",
+      "\\subsection{Task-cluster resampling: an interval with explicit assumptions}",
+      "\\subsection{The actual results, and why subset changes matter}",
+      "\\subsection{Why the 14-pair diagnostic comparison gives an undefined t statistic}",
+      "\\subsection{A small binary paired test that can be computed: compilation}"
+    ],
+    "v04_headings": [
+      "\\section{Paired analysis of recorded decisions}",
+      "\\subsection{The recorded-pass outcome}",
+      "\\subsection{Task weighting and edge weighting}",
+      "\\subsection{Dependence among revision edges}",
+      "\\subsection{The paired t calculation}",
+      "\\paragraph{Mean, standard deviation, and standard error.}",
+      "\\paragraph{The null hypothesis and test statistic.}",
+      "\\paragraph{The reference distribution and p-value.}",
+      "\\subsection{Task-cluster resampling}",
+      "\\subsection{Results and sensitivity to selection}",
+      "\\subsection{The zero-difference diagnostic comparison}",
+      "\\subsection{A paired test of compilation outcomes}"
+    ],
+    "v05_headings": [
+      "\\section{Paired statistics of recorded decisions}",
+      "\\subsection{Outcome definition: recorded pass}",
+      "\\subsection{Task-equal and edge-equal mean changes}",
+      "\\subsection{Why 465 edges are not 465 independent observations}",
+      "\\subsection{Paired t calculation and its reference assumptions}",
+      "\\subsubsection{Mean difference and standard error}",
+      "\\subsubsection{Null hypothesis and observed statistic}",
+      "\\subsubsection{Reference distribution and scope}",
+      "\\subsection{Task-cluster resampling and reference intervals}",
+      "\\subsection{Results under three selection rules}",
+      "\\subsection{Why zero diagnostic differences give an undefined t statistic}",
+      "\\subsection{The eight-pair compilation comparison: exact McNemar test}"
+    ]
+  },
+  {
+    "language": "en",
+    "file": "process.tex",
+    "v03_headings": [
+      "\\section{Following recorded reviews through fixed historical paths}",
+      "\\subsection{What is followed, and when does observation stop?}",
+      "\\subsection{Read the counts before reading the formulas}",
+      "\\subsection{First-step and later-step proportions have different composition}",
+      "\\subsection{From probabilities to an interpretable two-group model}",
+      "\\subsection{What the covariance correction and test do}",
+      "\\subsection{Why selecting tasks with later observations changes the first-step group}"
+    ],
+    "v04_headings": [
+      "\\section{The recorded revision process}",
+      "\\subsection{Fixed paths and terminal outcomes}",
+      "\\subsection{Counts at successive steps}",
+      "\\subsection{First-step and later-step proportions}",
+      "\\subsection{A two-group model}",
+      "\\subsection{Covariance and the reference test}",
+      "\\subsection{Selection of tasks with later observations}"
+    ],
+    "v05_headings": [
+      "\\section{Following the fixed failure-origin paths}",
+      "\\subsection{The fixed cohort, first-pass stopping, and exit}",
+      "\\subsection{Step counts, risk sets, and cumulative proportions}",
+      "\\subsection{First-step and later-step proportions have different composition}",
+      "\\subsection{The two-group logit model and its coefficients}",
+      "\\subsection{Task-cluster covariance and the reference test}",
+      "\\subsection{Why selecting tasks with later observations changes the first-step group}"
+    ]
+  },
+  {
+    "language": "en",
+    "file": "discussion.tex",
+    "v03_headings": [
+      "\\section{Putting the results together}",
+      "\\subsection{Three mathematical arguments, in ordinary language}",
+      "\\subsection{Why the two historical trends can coexist}",
+      "\\subsection{Which kind of uncertainty is being discussed}",
+      "\\subsection{What a future study would need}"
+    ],
+    "v04_headings": [
+      "\\section{Discussion}",
+      "\\subsection{Implications of the mathematical results}",
+      "\\subsection{The two historical trends}",
+      "\\subsection{Three sources of uncertainty}",
+      "\\subsection{Design of a future study}"
+    ],
+    "v05_headings": [
+      "\\section{Putting the results together}",
+      "\\subsection{Implications of the mathematical results}",
+      "\\subsection{Why the two historical trends can coexist}",
+      "\\subsection{Logical, statistical, and semantic uncertainty}",
+      "\\subsection{Requirements for a future comparison}"
+    ]
+  },
+  {
+    "language": "en",
+    "file": "transparency.tex",
+    "v03_headings": [
+      "\\section{Limits, evidence, and the two language editions}",
+      "\\subsection{What the results do not establish}",
+      "\\subsection{What changed in this edition}",
+      "\\subsection{Files and reproduction}",
+      "\\subsection{Assistance and authorship}"
+    ],
+    "v04_headings": [
+      "\\section{Limitations and reproducibility}",
+      "\\subsection{Scope of the evidence}",
+      "\\subsection{The present edition}",
+      "\\subsection{Source files and reproduction}",
+      "\\subsection{AI assistance}"
+    ],
+    "v05_headings": [
+      "\\section{Limits and reproducibility}",
+      "\\subsection{What the results do not establish}",
+      "\\subsection{Scope of this edition}",
+      "\\subsection{Source files and reproduction}",
+      "\\subsection{AI assistance}"
+    ]
+  },
+  {
+    "language": "en",
+    "file": "process_theory.tex",
+    "v03_headings": [
+      "\\subsection{Why stopping and exit change the question}",
+      "\\subsubsection{Start with a sequence of submitted candidates}",
+      "\\subsubsection{One probability per eligible step: an explicit assumption}",
+      "\\paragraph{Optional connection to the earlier notation.}",
+      "\\subsubsection{Why an average of ratios needs a separate argument}",
+      "\\subsubsection{Add a chance that the permitted path ends}"
+    ],
+    "v04_headings": [
+      "\\subsection{Stopping and exit}",
+      "\\subsubsection{Paths of submitted candidates}",
+      "\\subsubsection{Constant conditional pass probability}",
+      "\\paragraph{The martingale formulation.}",
+      "\\subsubsection{Averages with a random denominator}",
+      "\\subsubsection{A model with path exit}"
+    ],
+    "v05_headings": [
+      "\\subsection{Stopping, observation eligibility, and path exit}",
+      "\\subsubsection{From a reconstructed segment to an observed path}",
+      "\\subsubsection{Constant conditional pass probability and predictable observation}",
+      "\\subsubsection{Martingale formulation}",
+      "\\subsubsection{Averages with a random denominator}",
+      "\\subsubsection{Exit and selection of successful paths}"
+    ]
+  },
+  {
+    "language": "zh",
+    "file": "framework.tex",
+    "v03_headings": [
+      "\\section{从一次审查的问题出发，建立数值比较}",
+      "\\subsection{我们究竟在评价什么？}",
+      "\\subsection{现有程序具体检查了什么？}",
+      "\\subsection{为什么需要四次评价？从一个可以手算的例子开始}",
+      "\\subsection{怎样把对角线总变化分给两项要素？}",
+      "\\subsection{这与早期历史模型有什么不同？}"
+    ],
+    "v04_headings": [
+      "\\section{评价与比较}",
+      "\\subsection{评价程序}",
+      "\\subsection{公理检查与测量状态}",
+      "\\subsection{四格比较}",
+      "\\subsection{对角线变化的分摊}",
+      "\\subsection{历史审核模型}"
+    ],
+    "v05_headings": [
+      "\\section{评价量与四格比较}",
+      "\\subsection{候选、标准、环境与分数}",
+      "\\subsection{公理政策测量及缺失、无效分数}",
+      "\\subsection{四格、条件差与交互量}",
+      "\\subsection{两要素夏普利分摊}",
+      "\\subsection{历史审核：记录标签与部分可观察的条件}"
+    ]
+  },
+  {
+    "language": "zh",
+    "file": "mathematics.tex",
+    "v03_headings": [
+      "\\section{数学分析：一步步推出证据能够告诉我们的内容}",
+      "\\subsection{为什么不同程序在某种测量下会看起来完全一样？}",
+      "\\subsection{为什么仅有接受记录，不能算出准确率？}",
+      "\\subsection{四个格子还没有全部测量时，我们已经知道什么？}",
+      "\\subsection{不用线性代数，也可以说清楚的一般规则}"
+    ],
+    "v04_headings": [
+      "\\section{数学分析}",
+      "\\subsection{无法区分的测量结果}",
+      "\\subsection{接受记录与准确率}",
+      "\\subsection{部分观察到的比较}",
+      "\\subsection{从允许的补全中确定答案}"
+    ],
+    "v05_headings": [
+      "\\section{数学分析：证据能够确定什么}",
+      "\\subsection{测量分组与有限错误下界}",
+      "\\subsection{为什么接受记录本身不能识别准确率}",
+      "\\subsection{部分表格与逻辑约束}",
+      "\\subsection{线性比较量的识别}"
+    ]
+  },
+  {
+    "language": "zh",
+    "file": "audit.tex",
+    "v03_headings": [
+      "\\section{可执行检查究竟说明了什么：循序讲解实际核查}",
+      "\\subsection{关于一个 Lean 文件，需要区分的四个问题}",
+      "\\subsection{一个很窄的检查：是否把答案当成了假设}",
+      "\\subsection{怎样阅读四种评价方法的比较表}",
+      "\\subsection{为什么空集足以区分两种定义}",
+      "\\subsection{把全部输入都列出来的小任务}",
+      "\\subsection{结果重建，以及为什么要拒绝自相矛盾的输入}"
+    ],
+    "v04_headings": [
+      "\\section{可执行检查与反例}",
+      "\\subsection{编译、目标、公理与题意}",
+      "\\subsection{把结论放进假设}",
+      "\\subsection{四种评价方法的比较}",
+      "\\subsection{空集反例}",
+      "\\subsection{穷尽输入的布尔测试}",
+      "\\subsection{结果重建与输入一致性}"
+    ],
+    "v05_headings": [
+      "\\section{可执行检查究竟确认了什么}",
+      "\\subsection{编译、目标提取、公理与题意}",
+      "\\subsection{针对直接假设结论的狭窄检查}",
+      "\\subsection{四种评价方法与诊断可答性}",
+      "\\subsection{为什么空集能区分两个定义}",
+      "\\subsection{对一个布尔任务穷尽行为检查}",
+      "\\subsection{结果重建与矛盾输入的拒绝}"
+    ]
+  },
+  {
+    "language": "zh",
+    "file": "statistics.tex",
+    "v03_headings": [
+      "\\section{怎样读懂审查记录的配对统计}",
+      "\\subsection{先问清楚：记录中的什么发生了变化？}",
+      "\\subsection{两种合理的平均数，回答的是两个不同问题}",
+      "\\subsection{为什么 465 条边不等于 465 个独立观测？}",
+      "\\subsection{从观察差值，一步步走到有条件的 t 计算}",
+      "\\paragraph{先区分三种数。}",
+      "\\paragraph{然后说明检验在问什么。}",
+      "\\paragraph{最后解释参照分布与 p 值。}",
+      "\\subsection{任务整群重抽样：带有明确前提的区间}",
+      "\\subsection{实际结果，以及为什么改变子集会改变问题}",
+      "\\subsection{为什么 14 对历史诊断比较的 t 统计量没有定义？}",
+      "\\subsection{可以实际计算的小型二元配对检验：编译结果}"
+    ],
+    "v04_headings": [
+      "\\section{记录判断的配对分析}",
+      "\\subsection{记录通过这一结果变量}",
+      "\\subsection{任务权重与边权重}",
+      "\\subsection{修改边之间的依赖}",
+      "\\subsection{配对 t 计算}",
+      "\\paragraph{均值、标准差与标准误。}",
+      "\\paragraph{零假设与检验统计量。}",
+      "\\paragraph{参照分布与 p 值。}",
+      "\\subsection{任务整群重抽样}",
+      "\\subsection{结果与选取规则的影响}",
+      "\\subsection{差值全为零的诊断比较}",
+      "\\subsection{编译结果的配对检验}"
+    ],
+    "v05_headings": [
+      "\\section{记录判断的配对统计}",
+      "\\subsection{结果定义：记录通过}",
+      "\\subsection{任务等权与边等权平均变化}",
+      "\\subsection{为什么 465 条边不是 465 个独立观察}",
+      "\\subsection{配对 t 计算及其参照假设}",
+      "\\subsubsection{平均差与标准误}",
+      "\\subsubsection{零假设与观察统计量}",
+      "\\subsubsection{参照分布与适用范围}",
+      "\\subsection{任务整群重抽样与参考区间}",
+      "\\subsection{三种选取规则下的结果}",
+      "\\subsection{为什么零诊断差值给出未定义的 t 统计量}",
+      "\\subsection{八对编译结果：精确 McNemar 检验}"
+    ]
+  },
+  {
+    "language": "zh",
+    "file": "process.tex",
+    "v03_headings": [
+      "\\section{沿固定历史路径跟踪审核记录}",
+      "\\subsection{跟踪什么，什么时候停止观察}",
+      "\\subsection{先读懂人数，再读公式}",
+      "\\subsection{首次与后续步骤的比例，来自不同的构成}",
+      "\\subsection{从概率走到可以读懂的两组模型}",
+      "\\subsection{协方差修正和检验究竟做了什么}",
+      "\\subsection{为什么挑出有后续记录的任务，会改变首次组}"
+    ],
+    "v04_headings": [
+      "\\section{记录中的修改过程}",
+      "\\subsection{固定路径与终态}",
+      "\\subsection{各步计数}",
+      "\\subsection{首次与后续步骤的比例}",
+      "\\subsection{两组模型}",
+      "\\subsection{协方差与参考检验}",
+      "\\subsection{有后续观察的任务选择}"
+    ],
+    "v05_headings": [
+      "\\section{沿固定失败起点路径观察}",
+      "\\subsection{固定分析集合、首次通过停止与退出}",
+      "\\subsection{逐步计数、风险集与累计比例}",
+      "\\subsection{首步和后续步骤的比例具有不同构成}",
+      "\\subsection{两组对数赔率模型及其系数}",
+      "\\subsection{任务聚类协方差与参考检验}",
+      "\\subsection{为什么选取有后续观察的任务会改变首步组}"
+    ]
+  },
+  {
+    "language": "zh",
+    "file": "discussion.tex",
+    "v03_headings": [
+      "\\section{把各项结果放在一起理解}",
+      "\\subsection{用普通语言回看三个数学论证}",
+      "\\subsection{为什么两种历史趋势可以同时出现}",
+      "\\subsection{这里究竟在讨论哪一种不确定性}",
+      "\\subsection{后续研究需要准备什么}"
+    ],
+    "v04_headings": [
+      "\\section{讨论}",
+      "\\subsection{数学结果的含义}",
+      "\\subsection{两种历史趋势}",
+      "\\subsection{三种不确定性来源}",
+      "\\subsection{后续研究的设计}"
+    ],
+    "v05_headings": [
+      "\\section{把结果联系起来}",
+      "\\subsection{数学结果的含义}",
+      "\\subsection{为什么两种历史趋势可以同时成立}",
+      "\\subsection{逻辑、统计与题意上的不确定性}",
+      "\\subsection{后续比较研究的条件}"
+    ]
+  },
+  {
+    "language": "zh",
+    "file": "transparency.tex",
+    "v03_headings": [
+      "\\section{局限、证据与两种语言版本}",
+      "\\subsection{这些结果没有证明什么}",
+      "\\subsection{本版具体改了什么}",
+      "\\subsection{文件与复现}",
+      "\\subsection{辅助工作与署名}"
+    ],
+    "v04_headings": [
+      "\\section{局限与复现}",
+      "\\subsection{证据的适用范围}",
+      "\\subsection{本版修订}",
+      "\\subsection{源文件与复现}",
+      "\\subsection{智能体辅助}"
+    ],
+    "v05_headings": [
+      "\\section{局限与复现}",
+      "\\subsection{结果没有建立什么}",
+      "\\subsection{本版范围}",
+      "\\subsection{源文件与复现}",
+      "\\subsection{智能体辅助}"
+    ]
+  },
+  {
+    "language": "zh",
+    "file": "process_theory.tex",
+    "v03_headings": [
+      "\\subsection{为什么停止与退出会改变所问的问题}",
+      "\\subsubsection{从一串送审的候选版本说起}",
+      "\\subsubsection{每个合格步骤有同一个概率：先把假设讲清楚}",
+      "\\paragraph{选读：这与早期记号有什么关系。}",
+      "\\subsubsection{为什么比例的平均值需要另行推导}",
+      "\\subsubsection{再加入路径可能结束的机制}"
+    ],
+    "v04_headings": [
+      "\\subsection{停止与退出}",
+      "\\subsubsection{候选版本构成的路径}",
+      "\\subsubsection{恒定条件通过概率}",
+      "\\paragraph{鞅的表述。}",
+      "\\subsubsection{随机分母下的平均}",
+      "\\subsubsection{带有退出的模型}"
+    ],
+    "v05_headings": [
+      "\\subsection{停止、观察资格与路径退出}",
+      "\\subsubsection{从重建片段到实际观察路径}",
+      "\\subsubsection{恒定条件通过概率与可预测观察}",
+      "\\subsubsection{鞅表述}",
+      "\\subsubsection{随机分母下的平均}",
+      "\\subsubsection{退出与成功路径筛选}"
+    ]
+  }
+]

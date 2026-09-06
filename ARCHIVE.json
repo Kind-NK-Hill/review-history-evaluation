@@ -1,0 +1,15 @@
+{
+  "archive": "output/source/review_evaluation_v0_5_0_sources.zip",
+  "sha256": "9f0d356af9f3d79f95b0994ae740652f5d76f9572c5cb505640e1444aef7ef7f",
+  "bytes": 1429209,
+  "entries": 77,
+  "manifest_files": 76,
+  "zip_crc_passed": true,
+  "archive_member_sha256_passed": true,
+  "extracted_manifest_verification": {
+    "files": 76,
+    "passed": true,
+    "errors": []
+  },
+  "at_utc": "2026-09-06T07:50:25.946281+00:00"
+}

@@ -1,0 +1,144 @@
+\subsection{Stopping, observation eligibility, and path exit}
+\label{sec:process-theory}
+
+\subsubsection{From a reconstructed segment to an observed path}
+A full segment connects records through the high-confidence candidate-revision edges of Section~\ref{subsec:segment-rule}. The observed path is the portion followed under the stopping rule of Section~\ref{subsec:failure-cohort}. One step is a transition between submitted versions, rather than an internal edit, a model call, or a fixed amount of time. The path is reconstructed from saved records, and one task can have several separate paths.
+
+Suppose the recorded sequence is fail, fail, pass. Starting at the first failure, there are two steps, and observation stops at the pass. Three candidate records have thus supplied two transitions. The chain might instead end while its latest review is still nonpassing; we call this a \emph{path exit}. The task could continue elsewhere, so exit does not imply permanent failure. Section~\ref{sec:process} applies this observation rule to the history. We first examine its consequences in a simple probability model.
+
+Throughout the model, success means a recorded pass. A \emph{nonpass} includes every other label, including partial or inconclusive judgments, whereas a failure-origin path must begin with an explicit failure label. These conventions concern the review record, rather than independently certified task conformity.
+
+\subsubsection{Constant conditional pass probability and predictable observation}
+Consider repeated tosses of a coin with head probability $p$, where $0<p<1$, stopping at the first head. If heads represents a recorded pass, this gives a model of successive submissions with a constant pass probability. Real submissions may improve and their review conditions may change; those possibilities are set aside in this illustrative model.
+
+To express exactly what the calculation needs, let $j=1,2,\ldots$ denote a possible step. Write $H_{j-1}$ for all information available \emph{before the result of step $j$}: earlier candidates, earlier review outcomes, and any observation decision already made. Define the observation and acceptance indicators, and their cumulative counts:
+\begin{center}
+\begin{tabularx}{\linewidth}{lY}
+\toprule
+Symbol & Meaning for a single path \\
+\midrule
+$B_j$ & 1 if no previous step has passed and step $j$ is to be observed; 0 otherwise. \\
+$A_j$ & 1 if the review at that step records a pass; 0 if it does not. Set it to 0 when $B_j=0$, merely to complete the notation. \\
+$N_k=\sum_{j=1}^k B_j$ & Number of eligible steps actually observed through step $k$. \\
+$D_k=\sum_{j=1}^k B_jA_j$ & Number of recorded passes among those steps. With first-pass stopping this is at most 1. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Saying that $B_j$ is known from $H_{j-1}$ means that we decide whether this observation belongs in the analysis without first seeing its outcome. This property is often called \emph{predictable observation}. It is not a prediction that the next candidate will pass. For example, ``continue after a failure and stop after a pass'' uses information already available. ``Retain this row only if the next review looks promising'' can use information that was not yet available and need not satisfy this condition.
+
+For an eligible step, the constant-probability assumption is
+\begin{equation}
+ P(A_j=1\mid H_{j-1})=p\qquad\text{whenever }B_j=1.
+ \label{eq:constant-conditional-pass}
+\end{equation}
+This requires the same conditional pass probability after every eligible past history; equality of pooled pass proportions is weaker. Equivalently, $E(A_j\mid H_{j-1})=p$ on eligible histories.
+
+\begin{proposition}[A constant conditional probability under an explicit observation rule]
+\label{prop:stopping}
+Suppose observation eligibility $B_j$ is known before the step-$j$ outcome, and suppose equation~\eqref{eq:constant-conditional-pass} holds for every eligible history. For each fixed finite number $k$,
+\begin{equation}
+ E(D_k-pN_k)=0,\qquad\text{and hence}\qquad E(D_k)=pE(N_k).
+ \label{eq:stopped-count-identity}
+\end{equation}
+If, in addition, the first step is observed and every nonpassing step is followed by another observed step until the first pass, the first-pass step $T$ satisfies
+\begin{equation}
+ P(T=j)=(1-p)^{j-1}p,\qquad j=1,2,\ldots.
+ \label{eq:geometric-pass}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+At an eligible step the expected value of $A_j-p$, given the past, is $p-p=0$. At an ineligible step $B_j(A_j-p)=0$. Since eligibility is already known, both cases give
+\[
+ E\{B_j(A_j-p)\mid H_{j-1}\}=0.
+\]
+Averaging over the possible past histories still gives zero. Add this identity for the fixed set of steps $1,\ldots,k$. The sum inside the expectation is precisely $D_k-pN_k$, proving equation~\eqref{eq:stopped-count-identity}.
+
+With observation continuing after every nonpass, a first pass at step $j$ requires $j-1$ consecutive nonpasses followed by a pass. Multiplying the successive conditional probabilities gives
+\[
+ \underbrace{(1-p)\cdots(1-p)}_{j-1\text{ nonpasses}}p.
+\]
+This is equation~\eqref{eq:geometric-pass}. It tends to put more weight on early steps because a later first pass requires surviving all the earlier nonpasses. The calculation uses the stated conditional probabilities; a separate independence assumption is not needed in addition to that full-history condition.
+\end{proof}
+
+Equation~\eqref{eq:geometric-pass} gives a geometric first-pass step $T$, distinct from the task-conformity reference $T(x)$. For $p=0.2$, the probabilities of first passing at steps 1, 2, and 3 are $0.2$, $0.8(0.2)=0.16$, and $0.8^2(0.2)=0.128$. Even though fewer paths remain eligible at each step, the chance of passing \emph{among paths still eligible} remains $0.2$ in this example. Thus a shrinking set of eligible paths does not, by itself, refute a constant-probability model. It also does not establish that such a model fits the historical archive.
+
+\subsubsection{Martingale formulation}
+\label{subsec:martingale}
+Some earlier analyses used the word \emph{martingale}. Here it describes the running discrepancy
+\[
+ M_k=D_k-pN_k=\sum_{j=1}^k B_j(A_j-p).
+\]
+Given the available past, its next change has mean zero: $E(M_k\mid H_{k-1})=M_{k-1}$. That is the relevant mathematical property, already proved above. A filtration is simply the increasing family of information sets represented here by the histories $H_0,H_1,\ldots$. The martingale property is therefore another way to state the zero-mean increment calculation.
+
+\subsubsection{Averages with a random denominator}
+Equation~\eqref{eq:stopped-count-identity} concerns expected \emph{counts}. It does not say that $E(D_k/N_k)=p$, because the number of observed steps can itself depend on earlier outcomes. A short coin example makes the distinction visible. Take $p=1/2$, stop at the first pass, and observe at most two steps:
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+Observed sequence & Probability & $D_2$ & $N_2$ & $D_2/N_2$ \\
+\midrule
+Pass & $1/2$ & 1 & 1 & 1 \\
+Nonpass, pass & $1/4$ & 1 & 2 & $1/2$ \\
+Nonpass, nonpass & $1/4$ & 0 & 2 & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Here $E(D_2)=3/4$ and $E(N_2)=3/2$, so $E(D_2)/E(N_2)=1/2$. But the average of the final path proportions is $E(D_2/N_2)=1/2+1/8=5/8$. Fast successes contribute a ratio of 1 after only one observation. Exchanging ``take a ratio'' and ``take an expectation'' therefore changes the answer.
+
+If observation instead continues without a step limit, use $D$ and $N$ for the \emph{total} pass count and observed-step count at the eventual stopping point; these differ from $D_k,N_k$, which count only through a fixed finite step $k$. Since $P(T>k)=(1-p)^k$ tends to zero, a first pass occurs with probability 1. Consequently, $D=1$ and $N=T$ with probability 1, and that probability-zero exception does not affect the following expectation. The same distinction has the exact expression
+\[
+ E(D/N)=\sum_{j=1}^{\infty}\frac{p(1-p)^{j-1}}{j}
+ =\frac{-p\log p}{1-p}>p.
+\]
+Integrating the geometric series $\sum_{r=0}^{\infty}x^r=1/(1-x)$ from 0 to $1-p$ gives $\sum_{j\ge1}(1-p)^j/j=-\log p$. Also $-\log p=\int_p^1(1/u)\,du>1-p$ for $0<p<1$. This is a property of the illustrative model, not a correction formula applied to the historical data.
+
+\subsubsection{Exit and selection of successful paths}
+The no-exit coin model assumes that every nonpass is followed by another observation. Now suppose that after each nonpass a second independent coin determines whether the path continues. Let $a$ be its continuation probability, with $0\le a\le1$. All these continuation coins and acceptance coins are independent in this illustrative construction. The events after an eligible step are then:
+\begin{center}
+\begin{tabularx}{\linewidth}{Yl}
+\toprule
+What happens & Probability \\
+\midrule
+Record a pass and stop & $p$ \\
+Record a nonpass and exit the path & $(1-p)(1-a)$ \\
+Record a nonpass and observe another step & $(1-p)a$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+These probabilities add to 1. Give the third one the short name $b=(1-p)a$: it is the chance of both not passing now \emph{and} reaching the next observation. It is not the probability of a pass.
+
+For a pass to be observed at step $j$, the first $j-1$ steps must each produce the third event, and step $j$ must pass. Hence
+\[
+ P(\text{pass at step }j\text{ before exit})=b^{j-1}p.
+\]
+The events for different $j$ cannot both occur. Summing their probabilities and using $1+b+b^2+\cdots=1/(1-b)$ gives
+\begin{equation}
+ s:=P(\text{pass before exit})=\frac{p}{1-b}.
+ \label{eq:pass-before-exit}
+\end{equation}
+Here $s$ is a \emph{whole-path} probability; $p$ is a probability for one eligible step. They have different denominators and answer different questions.
+
+Finally, suppose we discard all paths that exit without a pass and report only successful paths. If $J$ is the step of their recorded pass, ordinary conditional probability gives
+\begin{equation}
+ P(J=j\mid\text{pass before exit})
+ =\frac{p b^{j-1}}{s}=(1-b)b^{j-1}.
+ \label{eq:selected-success-time}
+\end{equation}
+This is another geometric distribution, but its parameter is $1-b=p+(1-p)(1-a)$, which exceeds $p$ if $a<1$. Successful-path selection favors shorter histories: to be a long successful path, a record must survive additional opportunities to exit. The faster-looking distribution does not demonstrate a higher per-step pass probability.
+
+For a concrete identification problem, consider two possible mechanisms:
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+Mechanism & $p$ & $a$ & $b=(1-p)a$ & $s=p/(1-b)$ \\
+\midrule
+I & 0.2 & 0.5 & 0.4 & $1/3$ \\
+II & 0.5 & 0.8 & 0.4 & $5/6$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Both give exactly the same successful-path step probabilities: $0.6$, $0.24$, $0.096$, and so on. Yet their eligible-step pass probabilities are $0.2$ and $0.5$. Looking only at successful-path lengths cannot distinguish these mechanisms. The overall pass fraction would distinguish them: if both $s$ and $b$ were known, equation~\eqref{eq:pass-before-exit} would give $p=s(1-b)$. The ambiguity comes from what was retained, not from a failure of probability arithmetic.
+
+The three quantities now have distinct meanings: the pass rate at an eligible step, the outcome of a fixed path, and the length of a path selected because it passed. Applying the model to historical records would require checking its observation assumptions. A retrospective edge classification can use the next candidate or review, so reproducing that classification does not establish the before-outcome condition in Proposition~\ref{prop:stopping}. The empirical analysis below is consequently restricted to the retained paths and their observed associations.

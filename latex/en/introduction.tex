@@ -1,0 +1,48 @@
+\section{The work that produced the review history}
+\label{sec:introduction}
+\subsection{From a textbook task to a reviewed Lean file}
+\label{subsec:workflow}
+The project turns definitions, theorems, examples, and problems from a probability textbook into Lean files. Lean is a programming language with a system for checking formal proofs. For a particular textbook task, a writing agent works from the task text and relevant mathematical material, writes a candidate file, and checks whether it builds. A reviewing agent then examines the submitted version against the task and the supplied review instructions. It records a judgment and, where applicable, findings that the writer can use in a revision. The writer may submit another version, which can be checked and reviewed again.
+
+The review asks more than whether the compiler accepted the file. It examines whether the formal definition or statement expresses the requested mathematics, whether the proof addresses the required argument, and whether the dependencies and assumptions meet the applicable rules. A failure can therefore lead to changes in the statement, proof, or supporting definitions. A later review can also revisit an already accepted file. These activities leave several kinds of evidence: task text, saved candidate versions, build results, review inputs and instructions, recorded judgments, and descriptions of issues.
+
+Those records served the work before they served this study. A writer needs to know what to revise; a reviewer needs to know which version and which task are being checked; a later maintainer needs to understand why a result was accepted or reconsidered. Keeping earlier evidence makes it possible to connect a decision to the material available at the time. Retaining a rejected candidate or an old review does not imply that it remains the current result. The records also do not constitute a complete log of every edit or every model call.
+
+This is the shared pattern supported by the retained workflow documents and historical artifacts. The archive also includes reviews of official outputs, external contributions, and multiple file representations of a review. Instructions, tools, and recording practices changed. We therefore do not assume that every historical record was produced by one uniform implementation of today's formalization system. Appendix~\ref{sec:sources} identifies the source material supporting this account.
+
+\begin{figure}[htbp]
+\centering\small
+\fbox{\parbox{0.90\linewidth}{\textbf{Textbook task and context.} Select the mathematical statement, definition, or problem to formalize.}}
+\par\smallskip $\downarrow$ \par\smallskip
+\fbox{\parbox{0.90\linewidth}{\textbf{Candidate and build.} The writer submits a saved Lean version; the build checks its technical acceptance in an environment.}}
+\par\smallskip $\downarrow$ \par\smallskip
+\fbox{\parbox{0.90\linewidth}{\textbf{Review and next action.} The reviewer checks the submitted mathematics and records a judgment and findings. Revision returns to the candidate step; acceptance may be followed by landing or later review.}}
+\caption{The recurring work pattern. Evidence is retained along the way. The diagram does not assert that every archived record traversed every box.}
+\label{fig:work-pattern}
+\end{figure}
+
+\subsection{Why a change from fail to pass needs interpretation}
+A submission raises distinct questions. Can the software process it? Does its proof obey the specified dependency rules? Does its formal statement express the intended mathematics? Their answers can differ. For example, a proof of ``if the conclusion holds, then the conclusion holds'' can be formally valid while leaving the original problem unsolved. Lean's documentation makes the same distinction between validating a proof and checking what its statement means\cite{leanvalidation}.
+
+Now suppose that an earlier review rejects a candidate and a later one accepts it. The writer may have corrected a mathematical problem. But the requirement or the evidence available to the reviewer may also have changed, or an earlier issue may not have been noticed again. The two judgment labels alone do not distinguish these explanations. The history is worth studying precisely because it retains more than the final pass: it offers some evidence about the objects, checks, and intermediate outcomes behind that change.
+
+\subsection{A second workflow: turning records into analysis data}
+\label{subsec:analysis-workflow}
+The study begins after the writing and reviewing have taken place. It first organizes the retained evidence, associates it with task and candidate identifiers, and records which review materials and context are available. It then takes the archive's specified within-task adjacent pairs, asks which pairs can be ordered in time, and classifies what activity each connection represents. A changed candidate, a rereview of an official file, and a second representation of the same review are kept distinct. Only after this classification can selected revision connections be joined into continuous histories.
+
+Two historical questions follow. Pairing the endpoints of a selected revision lets us ask how the recorded judgment changed. Following a continuous history from an explicit failure lets us ask at which step a first pass was recorded, or where observation ended without one. These are different constructions from the same archive. Section~\ref{sec:materials} explains their units, selection rules, and counts before any statistical result is used.
+
+The study also examines selected saved candidates with explicitly specified checks, alongside deliberately constructed comparisons and a small task whose inputs can all be tested. Those materials address a different question: what information can an evaluator supply about a candidate? Together the report studies:
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Measurement:} What does a named check establish, and what does it leave unresolved?
+\item \textbf{Comparison:} What changes when we compare two candidates under each of two stated criteria?
+\item \textbf{Recorded process:} How do judgments change across selected revisions and along retained failure-origin histories?
+\end{enumerate}
+Statistics can describe the recorded decisions even when independent judgments of mathematical correctness are unavailable. Their interpretation must then remain about those decisions.
+
+\subsection{How to read the report and find a definition}
+The chapters retain a practical order: the objects and how they were selected; the evaluation quantities; the mathematical arguments; the executable evidence; the paired statistics; and the observed process. Definitions fix the objects and quantities used in each analysis; propositions state consequences of explicit assumptions. Illustrative examples explain a calculation and are not additional experiments.
+
+Section~\ref{sec:materials} defines task, candidate, record, connection, and continuous segment. Section~\ref{sec:framework} introduces the score and the comparison of two candidates under two criteria, called a four-cell comparison. Section~\ref{sec:mathematics} gives the measurement, stopping, and identification arguments. Section~\ref{sec:audit} explains the saved executable checks. Sections~\ref{sec:statistics} and~\ref{sec:process} develop the paired and process statistics. Appendix~\ref{sec:definition-index} provides a topic index with page references; Appendix~\ref{sec:sources} maps the analysis to supplied files.
+
+The report assumes basic calculus, probability, linear algebra, and statistical inference, including their standard notation. Project-specific terms and statistical constructions are introduced where needed. Each average identifies what receives weight, and each proportion identifies its denominator.

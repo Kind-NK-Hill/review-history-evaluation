@@ -1,0 +1,257 @@
+\section{Mathematical analysis: what the evidence determines}
+\label{sec:mathematics}
+
+A measurement can answer some questions while leaving others open. We begin with a finite example in which two checks give identical results for programs with different behavior. This leads to a bound on the mistakes that any decision rule using those checks must make.
+
+\subsection{Measurement classes and the finite error bound}
+\label{sec:measurement-classes}
+
+Begin with the retained finite Boolean challenge. It contained nine fixtures,
+of which eight were executable and one did not compile. Among the eight
+executable fixtures, three matched the specified output on every one of the
+four input pairs and five did not. Yet all eight passed both the axiom-policy
+gate and the printed-type gate. A gate is simply a check returning pass or
+fail. Imagine now giving another decision rule only those two gate outputs,
+with no code, candidate name, or behavior results. It sees exactly the same
+input---two passes---for every fixture. A deterministic rule, meaning one
+that always gives the same answer to the same input, must give all eight the
+same decision.
+
+If the rule calls all eight task-conforming, it makes five mistakes. If it
+calls all eight nonconforming, it makes three. The better of these two choices
+still makes three mistakes. No more elaborate arithmetic on the same two bits
+can tell it which three programs were correct. The behavior check succeeds
+in distinguishing them because it supplies another observation.
+
+We can state this argument for any finite set. Let $\mathcal X$ be the set of
+objects being checked and $n$ its number of objects, with $n>0$. A particular
+object is called $x$. Let $Z(x)$ be the retained measurement for that object,
+which may be a pair of gate outputs rather than a number. Let $T(x)$ be its
+reference answer: $1$ for conformity to a specified task reference and $0$
+for nonconformity. The letter $T$ here denotes a binary task answer, not a
+waiting time. In this example the reference is the exhaustive four-input
+check; this notation does not assert that an equally usable reference exists
+for every historical task.
+
+Group together objects with the same measurement value $z$. Within such a
+group, write $n_{z0}$ for the number with reference answer $0$, and $n_{z1}$
+for the number with reference answer $1$. These are counts of objects. Let
+$\delta$ return either $0$ or $1$ using only $Z(x)$. It must answer
+for every object. Define its finite-set error fraction as
+\[
+\operatorname{Err}_{\mathcal X}(\delta)
+=\frac{\text{number of objects for which }\delta(Z(x))\ne T(x)}{n}.
+\]
+This is a dimensionless fraction of mistakes in this set, not yet a
+population probability.
+
+\begin{proposition}[Unavoidable mistakes when measurements merge different answers]
+\label{prop:measurement}
+Under the preceding assumptions, every deterministic decision rule using
+only $Z$ satisfies
+\[
+\operatorname{Err}_{\mathcal X}(\delta)
+\ \ge\ \frac{1}{n}\sum_z\min(n_{z0},n_{z1}).
+\]
+The sum runs over the distinct measurement values. Some such rule attains equality.
+Consequently, zero mistakes are possible exactly when every measurement group
+contains only one reference answer.
+\end{proposition}
+
+\begin{proof}
+Fix one measurement group. Since the decision rule receives the same input
+throughout that group, it must choose one answer for the whole group. Choosing
+$0$ misclassifies its $n_{z1}$ conforming objects; choosing $1$ misclassifies
+its $n_{z0}$ nonconforming objects. Therefore the smallest possible number of
+mistakes in this group is the smaller count. Add those minimum counts over
+the groups and divide by the total number of objects. Choosing the majority
+answer separately in every group achieves the bound. A group's minimum is
+zero precisely when one of its two counts is zero.
+\end{proof}
+
+For the eight executable fixtures there is just one group, with $n_{z0}=5$
+and $n_{z1}=3$. Substitution gives
+\[
+\text{smallest possible error fraction}=\frac{\min(5,3)}8=\frac38.
+\]
+The interpretation ``both gates passed, therefore the task was met''
+instead has error fraction $5/8$. Thus $5/8$ describes that particular
+accept-all interpretation, while $3/8$ is a limitation of \emph{every forced
+deterministic binary rule restricted to the same two gate outputs}. Neither
+is a historical error-rate estimate, and neither has the denominator needed
+for defect-detection sensitivity. The noncompiling ninth fixture is not
+silently added to this eight-object calculation.
+
+Allowing the rule to abstain changes the question: it could avoid all mistakes
+by refusing every decision, so we must also report the fraction it answers.
+Randomization cannot lower the minimum \emph{expected} error here. If it
+chooses $1$ with probability $r$, where $0\le r\le1$, its expected number of
+mistakes in the single group is $5r+3(1-r)=3+2r$, whose minimum is $3$.
+Individual randomized runs need not equal their expectation. These remarks
+explain why the assumptions ``deterministic'' and ``answers every object''
+appear explicitly in the proposition.
+
+\subsection{Why acceptance records alone do not identify accuracy}
+\label{subsec:accuracy}
+
+The previous result assumed that reference answers were available and showed
+what a coarse measurement loses. A different difficulty arises when reference
+answers are absent. Suppose, for illustration, that the only retained outcomes
+for four records are accept, reject, accept, reject. If all four reference
+answers agreed with those outcomes, the recorded decisions would be fully
+accurate. If every reference answer disagreed, they would be entirely
+inaccurate. Both hypothetical lists are compatible with the four observed
+decisions \emph{when no additional evidence constrains the reference answers}.
+We have not changed mathematical truth; we have exhibited what the supplied
+records alone fail to settle.
+
+In symbols, let $A$ denote a recorded binary acceptance decision and $T$ a
+reference answer. Observing $A$ without information that constrains $T$ cannot
+choose between the possibilities $T=A$ and $T=1-A$. Their fractions of correct
+decisions differ. This is called \emph{nonidentification}: different answers
+to the research question remain consistent with what was observed. In a
+four-record example the possible accuracy fractions are multiples of $1/4$,
+not every real number between zero and one. Source analysis, an explicit
+task reference, or independent adjudication may eliminate these possibilities;
+the limitation concerns the stated observation scheme.
+
+Historical labels also need a clear coding rule. Coding only ``pass'' as $1$
+and all other labels as $0$ measures recorded acceptance versus nonacceptance.
+If the other labels include partial or inconclusive decisions, this coding
+does not automatically measure reviewer error. An accuracy calculation among
+decisive pass/fail reviews would use a different denominator and report the
+omitted fraction separately.
+
+\input{process_theory}
+
+\subsection{Partial tables and logical constraints}
+\label{sec:feasible-tables}
+
+Return to the four-cell table in Section~\ref{sec:framework}. Sometimes we
+have measured only the second criterion's column. We may nevertheless know
+something about the first column. For example, if one axiom policy allows a
+subset of the axioms allowed by the other, passing the more restrictive policy
+logically implies passing the more permissive one for the same extracted
+declaration. The direction of this implication must be verified; calling a
+policy ``new'' does not establish that it is stricter.
+
+Assume for the following \emph{illustrative cases} that both scores are binary
+and that acceptance under $R_1$ implies acceptance under $R_0$. In symbols,
+\[
+q_{i1}\le q_{i0}\qquad\text{for each candidate }i\in\{0,1\}.
+\]
+For zero-one scores this inequality means simply that a right-column $1$
+requires a left-column $1$. It does not impose the reverse implication.
+
+If the measured right column is $(1,1)$, the left column must be $(1,1)$ too.
+The only permitted full table consists of four ones, so all six differences
+are already zero. Actually running the two left-column checks could verify
+the assumption or reveal a contradiction, but cannot give these differences
+another value while the assumption and observations remain valid.
+
+If instead the measured right column is $(0,0)$, each left-column value may
+still be either zero or one. The four permitted completions are listed below.
+Write $d=q_{10}-q_{00}$ for the candidate difference under $R_0$. Since the
+right-column difference is zero, the definitions give $I=-d$ and
+$\phi_C=d/2$.
+
+\begin{center}
+\begin{tabular}{ccccrrr}
+\toprule
+$q_{00}$ & $q_{10}$ & $q_{01}$ & $q_{11}$ & $d$ & $I$ & $\phi_C$\\
+\midrule
+0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 1 & $-1$ & $1/2$\\
+1 & 0 & 0 & 0 & $-1$ & 1 & $-1/2$\\
+1 & 1 & 0 & 0 & 0 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Thus $d$ can take exactly the values $-1,0,1$. Its lower and upper bounds are
+$-1$ and $1$, but $0.3$ is not possible in this binary example. Likewise,
+$\phi_C$ can be $-1/2,0,1/2$. The output choices are linked: we cannot take
+$d=1$ from one row and $I=1$ from another and claim they describe one table.
+They must come from the same completion.
+
+\subsection{Identification of a linear comparison}
+\label{subsec:linear-identification}
+
+Call $\mathcal F$ the collection of all full tables that agree with the
+observed cells, the score's permitted values, and the verified logical rules.
+Represent a table by the vector $q=(q_{00},q_{10},q_{01},q_{11})^{\top}$. Here $\mathcal F$ names a collection of
+possible tables, not a probability distribution over them. Assume for now
+that at least one table is possible.
+
+Let $L(q)$ be a comparison calculated from a full table. For the comparisons
+used here it is a weighted sum
+\[
+L(q)=a_{00}q_{00}+a_{10}q_{10}+a_{01}q_{01}+a_{11}q_{11},
+\]
+where $a=(a_{00},a_{10},a_{01},a_{11})^{\top}$ is a fixed weight vector, so $L(q)=a^{\top}q$. For example, the
+candidate difference under $R_0$ uses weights $(-1,1,0,0)$. The output remains
+in score points. Saying $L$ is \emph{uniquely determined}, or
+\emph{point-identified}, means that every permitted table gives the same
+answer.
+
+\begin{proposition}[When the available information determines a comparison]
+\label{prop:completion}
+The comparison $L$ is uniquely determined exactly when $L(q)=L(q')$ for
+every two permitted tables $q$ and $q'$ in $\mathcal F$. For a weighted sum,
+this condition can be checked by verifying
+\[
+a_{00}(q_{00}-q'_{00})+a_{10}(q_{10}-q'_{10})
++a_{01}(q_{01}-q'_{01})+a_{11}(q_{11}-q'_{11})=0
+\]
+for every such pair. Further valid evidence can only remove permitted tables.
+If it leaves at least one table, the greatest lower bound of the answers
+cannot decrease and their least upper bound cannot increase. For a finite
+list these bounds are simply its smallest and largest values.
+\end{proposition}
+
+\begin{proof}
+If two permitted tables give different answers, the observations and rules
+allow both answers, so there is no unique answer. If every permitted table
+gives the same answer, that answer is forced. For a weighted sum, subtracting
+$L(q')$ from $L(q)$ gives the displayed expression. Finally, removing choices
+from a list cannot produce a new value below its previous minimum or above
+its previous maximum. The same statement uses greatest lower and least upper
+bounds when the permitted scores form an infinite set.
+\end{proof}
+
+In the four-row example, observing $q_{00}=0$ removes the last two rows. The
+possible values of $d$ shrink from $\{-1,0,1\}$ to $\{0,1\}$. Also observing
+$q_{10}=1$ leaves only the second row and determines $d=1$. This is additional
+information. By contrast, computing $\phi_C=d/2$ from each of the original
+four rows removes none of them. A useful summary need not be a new
+observation. The two-factor allocation can aid explanation without supplying
+a missing cell or a missing task reference.
+
+If a measurement contradicts a claimed rule, there may be no permitted table
+at all. For example, an assertion that the two criteria always give the same
+score for a candidate conflicts with measured scores $0$ and $1$ for that
+candidate. This calls for an inconsistency report, not an invented completion.
+The release's consistency guard rejects this specific conflict. Invalid or
+inapplicable comparisons likewise need their meaning repaired before we
+enumerate numerical possibilities.
+
+For meaningful but unknown cells, the released numerical core allows values
+between $0$ and $1$ and calculates bounds over separate per-cell intervals.
+Each cell receives its own permitted range, and the calculation allows any
+combination of values from those ranges without expressing constraints
+between cells. This does not assume that random variables are independent
+in the probabilistic sense. These are bounds on missing information, not statistical confidence
+intervals. If the score is actually binary, the exact attainable values may
+be discrete as above. If additional relations connect the cells, separate
+per-cell intervals may also allow impossible combinations and yield wider bounds than
+necessary. The baseline code makes specific equality and binary-implication
+deductions; it does not implement a general solver for every collection
+$\mathcal F$. The proposition explains the reasoning principle rather than
+claiming an unimplemented capability.
+
+This distinction also clarifies the historical comparison: verified policy
+implications already determine the accepted cases' missing policy cells,
+while other configurations can benefit from measuring those cells. Equal
+availability of the six specified diagnostics with and without an allocation
+does not establish that allocation is universally useless. It reflects what
+information those particular questions require.

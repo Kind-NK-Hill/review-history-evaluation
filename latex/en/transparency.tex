@@ -1,0 +1,19 @@
+\section{Limits and reproducibility}
+\label{sec:limitations}
+\subsection{What the results do not establish}
+The history is observational, retrospective, and selected. Task grouping preserves repeated observations together, but does not remove selection bias or establish independence between tasks. Shared mathematical dependencies, reviewers, and execution conditions remain possible sources of dependence. The statistical intervals have the reference interpretation stated in Sections~\ref{sec:statistics} and~\ref{sec:process}.
+
+The requirement subcheck and the interpretation of the historical definition were made with AI assistance, without an independently adjudicated expert reference. The definition witness establishes relations between specified formal predicates, and the Boolean challenge exhausts one four-input task. Neither supplies a semantic accuracy rate for the full history.
+
+The executable checks used the recorded Lean and Mathlib environment, not a complete reconstruction of every original environment. A current compilation failure need not be an original defect. The witness was checked by the recorded Lean installation, without a second external kernel implementation. Some reconstruction steps reuse original code. Independent statistical recalculation checks the frozen inputs and formulas, while hashes check consistency with a supplied manifest; neither establishes external authenticity or random selection.
+
+\subsection{Scope of this edition}
+Version 0.5.0 reorganizes the report around the work that produced the records and the later operations that produced each analysis set. It restores the explicit definition entries of the longer version 0.3.0 while retaining the direct prose of version 0.4.0. Standard mathematical notation and basic statistical knowledge are assumed. The mathematical arguments, worked comparisons, empirical tables, and inferential boundaries are retained; the revision adds no experiment or fitted model. All preceding releases remain unchanged.
+
+\subsection{Source files and reproduction}
+The two reports are compiled from LaTeX and saved together under \artifactpath{output/pdf/}. The English and Chinese source chapters are in \artifactpath{latex/en/} and \artifactpath{latex/zh/}, with figures in \artifactpath{latex/figures/}. Running \code{python -B build\_reports.py} invokes Tectonic and records the build results. The supplied bibliography and the font requirements are documented in \artifactpath{README.md}. The build was checked in the recorded Windows environment, rather than on a newly installed machine.
+
+The supplied \artifactpath{analysis/} directory carries the frozen edge and process inputs, scripts, saved results, and requirements from version 0.2.0. The report builds from supplied figures and does not rerun those analyses. Appendix~\ref{sec:sources} maps each main analysis to its relative path and the public repository. Original full-history collectors require the original archive; the portable inputs reproduce the specified projections rather than reconstructing every historical file. Retained source excerpts and summary tables document the classification and continuity rules. This edition's delivery record binds the revised sources and PDFs to their content and layout checks.
+
+\subsection{AI assistance}
+AI tools assisted the implementation, selected semantic interpretations, mathematical and statistical checks, and writing. The earlier reader edition used several drafting roles; this prose revision was carried out in the main task. The reported checks are not independent human peer review. The report and its source package are prepared for distribution through the linked evaluation repository.

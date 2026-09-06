@@ -1,0 +1,75 @@
+        phase = "rebuild_high_confidence_candidate_repair_episodes"
+        high_repair_edges = [row for row in transitions if row["high_confidence_candidate_repair"] == 1]
+        edge_by_from = {row["from_database_review_id"]: row for row in high_repair_edges}
+        edge_by_to = {row["to_database_review_id"]: row for row in high_repair_edges}
+        require(len(edge_by_from) == len(high_repair_edges), "repair edge has duplicate outgoing endpoint")
+        require(len(edge_by_to) == len(high_repair_edges), "repair edge has duplicate incoming endpoint")
+        roots = [
+            row for row in high_repair_edges if row["from_database_review_id"] not in edge_by_to
+        ]
+        pair_by_from = {row["from_database_review_id"]: row for row in pair_rows}
+        transition_by_from = {row["from_database_review_id"]: row for row in transitions}
+        episodes: list[dict[str, Any]] = []
+        seen_edges: set[str] = set()
+        for root in sorted(roots, key=lambda row: row["adjacent_transition_id"]):
+            chain: list[dict[str, Any]] = []
+            current = root
+            while current["adjacent_transition_id"] not in seen_edges:
+                chain.append(current)
+                seen_edges.add(current["adjacent_transition_id"])
+                next_edge = edge_by_from.get(current["to_database_review_id"])
+                if next_edge is None:
+                    break
+                current = next_edge
+            final = chain[-1]
+            final_review = final["to_database_review_id"]
+            next_directional = transition_by_from.get(final_review)
+            raw_successor = pair_by_from.get(final_review)
+            if next_directional is not None:
+                termination = f"next_directional_role:{next_directional['transition_role']}"
+            elif raw_successor is not None and raw_successor["direction_interpretable"] != "1":
+                termination = "time_ambiguous_adjacent_successor"
+            else:
+                termination = "no_observed_directional_successor"
+            review_ids = [chain[0]["from_database_review_id"]] + [
+                row["to_database_review_id"] for row in chain
+            ]
+            candidate_ids = [chain[0]["from_candidate_identity_id"]] + [
+                row["to_candidate_identity_id"] for row in chain
+            ]
+            verdicts = [chain[0]["from_recorded_verdict"]] + [
+                row["to_recorded_verdict"] for row in chain
+            ]
+            episodes.append(
+                {
+                    "repair_episode_v3_id": stable_id(
+                        "repair_episode_v3", chain[0]["adjacent_transition_id"]
+                    ),
+                    "task_id": chain[0]["task_id"],
+                    "start_database_review_id": review_ids[0],
+                    "end_database_review_id": review_ids[-1],
+                    "start_recorded_verdict": verdicts[0],
+                    "final_recorded_verdict": verdicts[-1],
+                    "recorded_outcome": f"ended_at_recorded_{verdicts[-1]}",
+                    "attempt_n": len(chain),
+                    "review_event_n": len(review_ids),
+                    "candidate_identity_n": len(dict.fromkeys(candidate_ids)),
+                    "edge_ids_json": json_text([row["adjacent_transition_id"] for row in chain]),
+                    "review_ids_json": json_text(review_ids),
+                    "candidate_identity_ids_json": json_text(candidate_ids),
+                    "recorded_verdict_path_json": json_text(verdicts),
+                    "termination_observation": termination,
+                    "all_edges_high_confidence_candidate_repair": 1,
+                    "interpretation_boundary": "episode contains only high-confidence candidate-repair edges; final verdict is recorded outcome, not correctness",
+                }
+            )
+        require(len(seen_edges) == len(high_repair_edges), "one or more high-confidence repair edges were not assigned")
+        require(
+            sum(row["attempt_n"] for row in episodes) == len(high_repair_edges),
+            "episode attempt counts do not close to high-confidence repair edges",
+        )
+
+        attempt_distribution_rows = []
+        for attempt_n, count in sorted(Counter(row["attempt_n"] for row in episodes).items()):
+            attempt_distribution_rows.append(
+                {

@@ -1,0 +1,225 @@
+\section{Paired statistics of recorded decisions}
+\label{sec:statistics}
+
+\subsection{Outcome definition: recorded pass}
+\label{subsec:pass-coding}
+Across the selected candidate revisions, how much more often was a pass recorded at the later endpoint? The larger archive allows us to answer this question by pairing each earlier record with its corresponding later record.
+
+We use all 465 candidate-revision edges across 250 tasks, selected by the activity rule in Section~\ref{subsec:revision-rule}; the first-pass stopping rule is not applied to this paired analysis. Each edge compares two versions of the same assignment; a task can contribute several such comparisons. Thus the earlier and later records are paired observations, while the task is the unit used to group repeated observations.
+
+We first translate the recorded labels into a numerical outcome. Write $A=1$ if a record says \code{pass}. Write $A=0$ for the explicitly recorded labels \code{fail}, \code{inconclusive}, and \code{partial}. Thus $A$ answers only ``Was a pass recorded?'' A zero is not a claim that the mathematics is wrong. In particular, an inconclusive review has not established mathematical failure. Missing or unrecognized labels are rejected by the analysis script rather than silently changed to zero. The original four categories are also retained in Table~\ref{tab:labels}.
+
+For one edge, subtract its earlier value from its later value. A change $0\to1$ contributes $+1$, a change $1\to0$ contributes $-1$, and an unchanged binary value contributes $0$. None of these quantities measures semantic correctness: the outcome remains the recorded decision.
+
+\subsection{Task-equal and edge-equal mean changes}
+\label{subsec:task-weighting}
+Consider the illustrative tasks in Table~\ref{tab:task-weights}. Task A passes after one selected change. Task B has three selected changes and passes only at the third. Both eventually pass, but the numbers of recorded edges differ.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Illustrative example only: one task can contribute more edges than another. The entries are binary recorded-pass values, not mathematical-quality scores.}
+\label{tab:task-weights}
+\begin{tabularx}{\linewidth}{l c Y c}
+\toprule
+Task & Edges & Earlier $\to$ later values & Mean edge difference \\
+\midrule
+A & 1 & $0\to1$ & $1$ \\
+B & 3 & $0\to0$, $0\to0$, $0\to1$ & $1/3$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Giving each task one vote yields $(1+1/3)/2=2/3$. Giving each edge one vote yields $(1+0+0+1)/4=1/2$. The answers differ because the second calculation gives Task B three times the weight of Task A. Neither arithmetic operation is wrong. They answer, respectively, ``What is the mean of the tasks' own mean changes?'' and ``What is the mean change across the recorded edges?'' Neither is the fraction of tasks that eventually pass; that fraction is $2/2$ in this example.
+
+We now name the same ingredients for the real data. Let $S$ be the number of represented tasks ($S=250$ in the main route). The index $k$ names a task, from $1$ to $S$, and $n_k$ is its number of selected edges. Within task $k$, the index $e$ runs from $1$ to $n_k$. Write $A_{ke,0}$ and $A_{ke,1}$ for the earlier and later binary values. Define
+\begin{equation}
+\begin{split}
+d_k&=\frac{1}{n_k}\sum_{e=1}^{n_k}(A_{ke,1}-A_{ke,0}),\\
+\widehat\mu_{\mathrm{task}}&=\frac{1}{S}\sum_{k=1}^{S}d_k,
+\qquad
+\widehat\mu_{\mathrm{edge}}=\frac{\sum_{k=1}^{S}n_kd_k}{\sum_{k=1}^{S}n_k}.
+\end{split}
+\label{eq:paired-estimands}
+\end{equation}
+Here $d_k$ is a task's mean edge difference, $\widehat\mu_{\mathrm{task}}$ is the task-equal mean, and $\widehat\mu_{\mathrm{edge}}$ is the edge-equal mean. All three quantities are dimensionless differences on the zero--one scale. Multiply by 100 to report percentage points. A task's $d_k$ also equals its mean later-endpoint value minus its mean earlier-endpoint value. This is the pair of task-level means used below.
+
+For the complete retained set, there are 118 earlier pass occurrences and 328 later pass occurrences. Therefore
+\[
+\widehat\mu_{\mathrm{edge}}=\frac{328-118}{465}
+=\frac{210}{465}\approx0.451613,
+\]
+or 45.16 percentage points. Averaging the 250 task differences instead gives $\widehat\mu_{\mathrm{task}}=0.570909$, or 57.09 percentage points. These describe the specified archive and inclusion rules exactly, before any probability model is imposed; displayed decimals are rounded.
+
+\subsection{Why 465 edges are not 465 independent observations}
+\label{subsec:edge-dependence}
+Consider a chain with recorded values $0\to0\to1$. Its two differences share the middle record: it is the later endpoint of one edge and the earlier endpoint of the next. More generally, if a chain has $m$ edges and successive values $a_0,a_1,\ldots,a_m$, then
+\[
+(a_1-a_0)+(a_2-a_1)+\cdots+(a_m-a_{m-1})=a_m-a_0.
+\]
+Every interior value cancels. A long chain can therefore supply many rows without supplying equally many independent observations of net change.
+
+The retained graph has 930 endpoint occurrences but only 783 distinct endpoint records; 147 records appear in two edges. Its 318 maximal chains, formed from all 465 selected edges rather than the 367 high-confidence edges used for the 262 process segments, satisfy the cancellation identity, with total net difference 210. Further dependence can arise from common task difficulty, feedback, and review conditions. There are 103 tasks with multiple edges, a maximum of 26 edges in one task, and 14.41\% of all edges come from the five largest task groups. These graph chains are a diagnostic of this edge set, not a replacement definition of the failure-origin processes studied later.
+
+We therefore summarize each task by its paired difference $d_k$ before calculating the t statistic, and resample entire tasks when constructing the reference intervals. This preserves dependence \emph{within} each task. It does not prove that different tasks are independent: tasks can still share reviewers, batches, mathematical dependencies, or changing rules.
+
+\subsection{Paired t calculation and its reference assumptions}
+\label{subsec:paired-t-explanation}
+\subsubsection{Mean difference and standard error}
+The conditional calculation uses the 250 task-level paired differences and an independent-task reference model for the same record-selection mechanism.
+
+Let $D$ be a task difference in that reference population, with mean $\mu_D=E(D)$ and standard deviation $\sigma_d$. For the observed $d_1,\ldots,d_S$,
+\[
+s_d=\sqrt{\frac{1}{S-1}\sum_{k=1}^{S}(d_k-\widehat\mu_{\mathrm{task}})^2}.
+\]
+The observed sample standard deviation is $s_d=0.430341$, or 43.03 percentage points.
+
+Under independent task differences with common variance $\sigma_d^2$,
+\[
+\operatorname{Var}\!\left(\frac{1}{S}\sum_{k=1}^{S}D_k\right)
+=\frac{1}{S^2}\sum_{k=1}^{S}\sigma_d^2
+=\frac{\sigma_d^2}{S}.
+\]
+The estimated standard error is
+\[
+\widehat{\mathrm{SE}}=\frac{s_d}{\sqrt S}
+\approx\frac{0.430341}{\sqrt{250}}\approx0.027217.
+\]
+This is 2.72 percentage points under the task model. Cross-task dependence would add covariance terms, so the displayed division by $\sqrt{250}$ need not describe the mean's uncertainty in the actual archive.
+
+\subsubsection{Null hypothesis and observed statistic}
+The paired null is $H_0:\mu_D=0$ for the specified task population. The saved two-sided calculation is\cite{nistpaired,scipyttest}
+\begin{equation}
+t_{\mathrm{obs}}=\frac{\widehat\mu_{\mathrm{task}}-0}{s_d/\sqrt S}
+\approx\frac{0.5709091575}{0.0272171622}\approx20.9761.
+\label{eq:paired-t-worked}
+\end{equation}
+The pair consists of each task's later-endpoint mean and that same task's earlier-endpoint mean. Treating the earlier and later collections as independent samples would discard this pairing; the model is imposed on their differences.
+
+\subsubsection{Reference distribution and scope}
+For independent, identically distributed normal task differences with positive variance, the null reference is Student t with $S-1=249$ degrees of freedom.
+
+The present task differences are bounded and take discrete values, so the exact normal-difference model does not literally hold. With 250 tasks, the reported Student calculation is used only as an exploratory large-sample reference under the additional independent-task model. In particular, a large number of tasks does not certify independence or validate the accuracy of an extremely small tail probability.
+
+With $Z\sim t_{249}$, the nominal two-sided p-value is
+\[
+p_{\mathrm{ref}}=\Pr\{|Z|\geq |20.9761|\}
+\approx5.87\times10^{-57}.
+\]
+This is a nominal tail probability under the reference model, whose relevance to this selected archive is unverified. Its small numerical value does not establish mathematical improvement.
+
+\subsection{Task-cluster resampling and reference intervals}
+\label{subsec:cluster-resampling}
+To assess variation in the mix of represented tasks, the saved analysis uses a bootstrap with the \emph{entire task} as the sampling cluster\cite{scipybootstrap}. Each draw retains that task's selected paired edges together.
+
+Each repetition draws $S$ task identifiers, uniformly and independently from the observed $S$ identifiers. Every selected task carries all its edges and both endpoints with it. We recompute the task-equal mean from the selected task differences. For the edge-equal mean we instead divide the selected tasks' combined net change by their combined number of edges; that denominator may change across repetitions.
+
+The saved analysis uses 20,000 repetitions. Sorting the resulting values and taking the 2.5th and 97.5th percentiles gives the reported central 95\% percentile interval. For the full data, the task-equal interval is $[0.518357,0.624482]$, or $[51.84,62.45]$ percentage points. The edge-equal interval is $[38.63,52.12]$ percentage points. Reproducibility uses NumPy PCG64 with seed sequences $[20260906,r]$, where $r=0,1,2$ identifies the three analysis routes, and linear percentile interpolation.
+
+These are \emph{reference} intervals because their usual 95\% coverage interpretation requires independent, sufficiently comparable tasks produced by the same history and inclusion mechanism. Those assumptions have not been established for this retrospective archive. The mean $0.570909$ is fixed once the 250 observed differences are given; the intervals describe hypothetical variation in which tasks are represented. Whole-task resampling retains within-task dependence but cannot repair selection bias, cross-task dependence, or the absence of a semantic outcome.
+
+This differs from a \emph{logical completion bound}. Suppose, for illustration, that an earlier score is zero and a later score is unmeasured but must be zero or one. The difference can be zero or one, with sharp bounds $[0,1]$. These possibilities carry no assigned probabilities and no 95\% coverage claim. Measuring the missing score can resolve the ambiguity. The task bootstrap instead varies the hypothetical sample while using scores that are already known.
+
+\subsection{Results under three selection rules}
+\label{subsec:paired-results}
+The main analysis and two sensitivity routes are shown in Tables~\ref{tab:paired-effects} and \ref{tab:paired-tests}. A sensitivity route changes an inclusion rule to show what answer that altered question produces. The three routes were declared before numerical estimation in the previous revision session, but the archive was already familiar. This is retrospective exploration, not prospective preregistration. All three unadjusted two-sided reference tests are reported; no route is selected because its p-value is smaller, and the pointwise intervals do not provide a simultaneous confidence guarantee for all routes.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Recorded-pass changes, in percentage points. Brackets contain 95\% task-cluster percentile reference intervals conditional on the task model. Changing the route changes the included edges and tasks.}
+\label{tab:paired-effects}
+\begin{tabularx}{\linewidth}{Y r r r}
+\toprule
+Route & Edges / tasks & Task-equal change & Edge-equal change \\
+\midrule
+All candidate-change edges & 465 / 250 & 57.09 [51.84, 62.45] & 45.16 [38.63, 52.12] \\
+Both endpoints pass/fail & 440 / 236 & 55.73 [50.15, 61.21] & 44.09 [37.36, 51.18] \\
+High-confidence edges & 367 / 207 & 76.93 [71.89, 81.73] & 59.95 [50.44, 70.10] \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\caption{Paired calculations on task-level means. Before and after percentages are task-equal. Nominal p-values use an unverified Student-reference model and do not test semantic improvement.}
+\label{tab:paired-tests}
+\begin{tabularx}{\linewidth}{Y c c c}
+\toprule
+Route & Before $\to$ after & $t$ (df) & Two-sided $p_{\mathrm{ref}}$ \\
+\midrule
+All candidate-change edges & 29.16\% $\to$ 86.25\% & 20.9761 (249) & $5.87\times10^{-57}$ \\
+Both endpoints pass/fail & 31.59\% $\to$ 87.32\% & 19.7176 (235) & $1.00\times10^{-51}$ \\
+High-confidence edges & 6.92\% $\to$ 83.85\% & 30.5239 (206) & $2.21\times10^{-78}$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+In the full set, 182 task differences are positive, 67 are zero, and one is negative. There is actual variation, which makes the standard deviation nonzero and the t statistic calculable. The gap between task-equal and edge-equal means is also substantive: tasks with longer selected histories receive more weight in the second average and collectively have smaller net change per edge.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Original recorded verdicts for all 465 edges. Rows describe the earlier endpoint and columns the later endpoint. ``Inconclusive'' and ``partial'' remain visible even though neither is coded as a recorded pass.}
+\label{tab:labels}
+\begin{tabular}{lrrrr}
+\toprule
+Earlier / later & Pass & Fail & Inconclusive & Partial \\
+\midrule
+Pass & 105 & 12 & 1 & 0 \\
+Fail & 206 & 117 & 5 & 1 \\
+Inconclusive & 16 & 0 & 1 & 0 \\
+Partial & 1 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The four-category table explains why coding matters. Twenty-five edges have an inconclusive or partial endpoint. Seventeen move from such a result to pass, and one moves from pass to such a result. The main average therefore includes changes in whether a decisive pass was recorded. Restricting both endpoints to pass/fail removes these edges but also changes the represented tasks. It is a different selected target, not the same sample with a better name.
+
+The high-confidence route uses the inherited confidence classification of candidate-change edges; ``high confidence'' is not an independent certification of mathematical repair. The rule uses prior structured findings. A descriptive check added after the main estimates shows markedly different starting compositions: the high-confidence subset starts with 21 passes among 367 edges, while the 98-edge medium-confidence complement starts with 97 passes and ends with 87. The complement spans 81 tasks, with task-equal change $-11.73$ percentage points and edge-equal change $-10.20$. No new test or interval is attached to that post-estimation check. A group beginning almost entirely at pass has little room to increase, whereas a group beginning mostly without pass has much more room. Thus the larger high-confidence change does not establish that its revisions are more effective.
+
+Other explanations remain unresolved. The source-review contract fields differ on 45 edges and task-content fields on two; matching fields do not prove identical effective review conditions. Of 783 unique endpoint records, 781 have unknown check extent, one explicitly reports no review, and one a reviewability block. Independent execution was not checked by this projection. There are 451 edges outside the separate case assessment, so the larger statistical set lacks a corresponding semantic assessment for those edges. Candidate improvement, changed assessment conditions, and selective continuation can all produce recorded-label movement. Regression to the mean may also contribute. Without an appropriate comparison design and independent semantic outcome, these explanations cannot be separated by a small p-value.
+
+\subsection{Why zero diagnostic differences give an undefined t statistic}
+\label{subsec:zero-differences}
+The smaller evaluator comparison measures a different outcome: the \emph{number of prespecified diagnostic questions with a definite answer}. The four-cell method is compared with a baseline that checks both candidates under $R_1$ and also uses verified relationships between the criteria. Those deductions are part of the baseline's information.
+
+For task $k$, let $C_{k,4}$ be the number of definite answers supplied by the four-cell method and $C_{k,F}$ the corresponding number supplied by this fixed-requirement baseline. Each count lies from zero to six. Define $D_k=C_{k,4}-C_{k,F}$, measured in \emph{diagnostic questions}, not percentage points. In each of the two historical assessments, all 14 values of $D_k$ are zero; the individual answers also agree. Applying the same recipe gives
+\[
+\overline D=0,\qquad
+s_D=\sqrt{\frac{1}{13}\sum_{k=1}^{14}(D_k-\overline D)^2}=0,
+\qquad t_{\mathrm{obs}}=\frac{0}{0/\sqrt{14}}=\frac{0}{0}.
+\]
+The statistic is undefined, not a t-test result of $t=0,p=1$. The 250-task calculation above had nonzero variation and hence a defined denominator; this comparison has none.
+
+The exact descriptive finding remains useful: these methods gave the same answers on these selected historical cases. But a task bootstrap would only redraw zeros, and a sign comparison would have no positive or negative differences to compare. Such calculations cannot reveal whether unobserved tasks would differ. Repeating the same 14 tasks in two assessments, or counting their six questions and four cells separately, does not create independent task information. Claiming population equivalence would require a defined population, a defensible uncertainty model, and a substantively acceptable difference specified for an equivalence question.
+
+The seven constructed examples have fixed-baseline gains $[5,0,4,0,0,0,0]$. They demonstrate that additional information \emph{can} help; their deliberately chosen mixture does not estimate how often that happens in ordinary tasks. Shapley scoring adds no diagnostic availability beyond direct four-cell access in all 35 tables, consistent with its use of the same observations. These are different comparisons and should not be combined into a single claim of zero gains everywhere.
+
+\subsection{The eight-pair compilation comparison: exact McNemar test}
+\label{subsec:mcnemar}
+There is a separate calculable comparison for the eight task-isolated holdout pairs: did the earlier and later candidates compile in the current test environment? Table~\ref{tab:compile-pairs} shows the complete paired observations. This outcome concerns compilation, not whether the intended mathematical statement was correctly represented.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Actual compilation outcomes for the eight holdout task pairs. The two off-diagonal cells, not the 16 endpoints treated separately, supply the directional information.}
+\label{tab:compile-pairs}
+\begin{tabular}{lrrr}
+\toprule
+Earlier / later & Fails & Compiles & Total \\
+\midrule
+Fails & 1 & 1 & 2 \\
+Compiles & 1 & 5 & 6 \\
+\midrule
+Total & 2 & 6 & 8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Five pairs compile on both sides and one on neither. One changes from failure to success and one from success to failure. Each side therefore has six compiling candidates out of eight, giving the paired net difference $(1-1)/8=0$. The improving task is \code{def\_13\_2}; the declining task is \code{prob\_10\_1}.
+
+The exact McNemar calculation asks whether discordant directions are balanced\cite{nistmcnemar}. Let $b=1$ count failure-to-success changes, $c=1$ the reverse changes, and $m=b+c=2$ the number of discordant pairs. Under a conditional null that the independent discordant directions are equally likely, the number $B$ of improving directions in a hypothetical repetition has a binomial distribution with $m=2$ trials and success probability $1/2$. Using twice the smaller tail probability, capped at one, gives
+\[
+p=\min\{1,\,2\Pr(B\leq1)\}
+=\min\{1,\,2(1/4+1/2)\}=1.
+\]
+This p-value is a defined result with only two informative directions. It provides no directional evidence against that null; it does not prove equivalent compilation probabilities, absence of a revision effect, or semantic correctness. The holdout selection was stratified and retrospective, and task isolation does not itself prove statistical independence or erase prior exposure. The test is a limited illustration of a suitable paired-binary calculation, not a substitute for the larger task-level analysis.
+
+Paired differences summarize selected revisions. To study their order, we next follow the steps of a path until its first recorded pass or its exit.

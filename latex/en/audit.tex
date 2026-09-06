@@ -1,0 +1,121 @@
+\section{What the executable checks establish}
+\label{sec:audit}
+We now apply these distinctions to the 14 selected candidate pairs and the separately introduced constructed materials (Sections~\ref{subsec:execution-sample} and~\ref{subsec:constructed-materials}). Compilation and axiom checks establish properties of a formal file; the definition counterexample and Boolean challenge examine whether those properties suffice for the intended task.
+
+\subsection{Compilation, target extraction, axioms, and task meaning}
+\label{subsec:lean-checks}
+A Lean file can contain many named definitions and theorems. The \emph{selected target} is the declaration chosen before evaluation. A successful proof of another theorem in that file cannot substitute for checking this target.
+
+It is useful to distinguish four questions. First, does the file \emph{compile} in the recorded software environment? This checks that its syntax, names, types, and supplied proofs are accepted there. Second, is the selected target present and extractable? Third, on which \emph{axioms} does that declaration depend? An axiom is a proposition admitted as a starting assumption. Lean can report dependencies reached through other definitions and theorems, as well as direct dependencies. Fourth, does the accepted declaration express and satisfy the intended task? The first three checks provide evidence for the fourth, but do not settle it by themselves. In particular, the kernel checks a proof of the formal statement actually written, relative to its definitions and assumptions; interpreting that statement against the requested mathematics is a further step\cite{leanaxioms,leanvalidation}.
+
+The historical execution used Lean 4.31.0, a 240-second limit per candidate, and two concurrent processes. It applied two experimental axiom policies. The first excludes \code{sorryAx}, the dependency associated with a placeholder that lets an unfinished proof remain in a Lean file. The second permits only \code{propext}, \code{Classical.choice}, and \code{Quot.sound}, three named foundational axioms on its allowed list. Passing either policy means passing that dependency rule. It does not mean that the theorem has the intended hypotheses or that a definition uses the intended convention. These two policies are experimental checks, not reconstructions of the complete old and new historical review instructions.
+
+All 28 historical candidate versions were attempted: 17 compiled, 11 failed, and none timed out. Of the 17 successful files, 16 exposed their preselected targets; all 16 passed both policies. The remaining successful file, \code{ex\_3\_1\_2/from}, lacked the selected declaration, which was not replaced after seeing the result. Six candidate pairs consequently had complete four-cell axiom tables, each containing four ones. These results concern the recorded current environment. The complete original dependency environment was not reconstructed, so a present compilation failure is not proof of an original historical failure.
+
+\subsection{A narrow check for assuming the conclusion}
+\label{subsec:assumed-conclusion}
+An accepted proof can establish a statement weaker than the task intended. For an elementary illustration, suppose the task is to prove that $x^2\geq 0$ for every real number $x$. A replacement statement saying ``if $x^2\geq 0$, then $x^2\geq 0$'' is easy to prove: its assumption already supplies its conclusion. The conditional statement is logically valid, but it does not establish the requested unconditional result. This is an explanatory example, not an additional historical observation.
+
+The separate requirement subcheck asks whether the principal theorem directly assumes its \emph{complete conclusion} as a public hypothesis. A single AI assessor performed this narrow check. It does not detect every possible weakening of a statement or every indirect way of moving work into assumptions, and no independent expert reference was available. The 14 pairs supply $14\times4=56$ cells for this requirement assessment. Among them, 27 were measured, 23 were not applicable, four were uncertain, and two were invalid. Only six tables were complete and comparable. ``Not applicable'' means that this particular check does not apply; ``uncertain'' means that the evidence does not settle it; ``invalid'' means that the proposed assessment cannot be used as specified. None is silently turned into a measured failure. These counts describe where measurement was possible, not how often historical mathematics was correct.
+
+\subsection{Four assessment methods and diagnostic availability}
+\label{subsec:diagnostics}
+For each candidate pair and pair of requirements, there are six diagnostic questions: how the candidate change looks under each of the two requirements; how the requirement change looks on each of the two candidates; the total change when both are changed; and whether the candidate contrast itself changes when the requirement changes. The final question is the interaction introduced in the mathematical framework.
+
+The four methods differ in the information they may use. \emph{Historical labels} use the saved judgments, with abstention when their evaluator cannot be identified with the current one. \emph{Fixed $R_1$} checks both candidates under the second requirement, denoted $R_1$. \emph{Four cells} uses all four candidate--requirement combinations. \emph{Four cells plus Shapley} uses the same observations and additionally allocates the diagonal change by averaging the two change orders explained earlier.
+
+The fixed-requirement method also receives verified equality of effective rules and valid logical implications. For example, if passing a stricter allowed-axiom list necessarily passes a looser one, an observed strict-policy pass implies a loose-policy pass without another execution. Such an entry is recorded as a deduction. Withholding it would unfairly make the four-cell method appear more informative.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Number of the six diagnostic questions with a justified single-number answer. The ``Slots'' column is the denominator for every method in that row.}
+\label{tab:availability}
+\begin{tabularx}{\linewidth}{Y r r r r r}
+\toprule
+Evidence group & Slots & Labels & Fixed $R_1$ & Four cells & + Shapley \\
+\midrule
+Constructed examples (7) & 42 & 4 & 17 & 26 & 26 \\
+Axiom: development (6) & 36 & 0 & 13 & 13 & 13 \\
+Axiom: holdout (8) & 48 & 0 & 27 & 27 & 27 \\
+Requirement: development (6) & 36 & 0 & 12 & 12 & 12 \\
+Requirement: holdout (8) & 48 & 0 & 25 & 25 & 25 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+For example, the first row contains seven constructed tables, with six questions each: $7\times6=42$ possible answers. Its four-cell method supplies 26, not 26 correct judgments about 42 independently sampled tasks. The development rows use six historical pairs, giving $6\times6=36$ slots; the holdout rows use eight, giving $8\times6=48$. The axiom and requirement rows reuse those same historical pairs. Their slots must not be counted as independent samples. The zeros in the historical-label column mean that saved labels from a different evaluator cannot supply the stipulated current measurements; they do not mean that every saved label was wrong.
+
+Four-cell access adds nine answers over fixed-$R_1$ access in the constructed examples and none in the historical groups. Shapley allocation adds no answerable question because it adds no observation. The constructed tables also have 26 assessable, previously handwritten reference answers, with no detected implementation discrepancy. Those references check arithmetic in designed cases; they are not independently adjudicated judgments of historical semantic correctness. The statistical interpretation of the historical zero differences is treated separately in this report.
+
+\subsection{Why the empty set distinguishes two definitions}
+\label{subsec:definition-witness}
+Consider the historical task \code{def\_2\_1}. A \emph{bijection} between two sets pairs every member of either set with exactly one member of the other: no member is missed or duplicated. The natural numbers $\mathbb N=\{0,1,2,\ldots\}$ form an infinite set. A finite set cannot be paired bijectively with all of them. In particular, the empty set $\varnothing$, which has no members, cannot supply a partner for the natural number $0$.
+
+Two conventions for ``countable'' are common. One includes finite sets together with sets that admit a bijection with $\mathbb N$; the other means specifically that a bijection with $\mathbb N$ exists. Both retained task texts use the second convention. The earlier candidate instead uses Lean's \code{A.Countable}, which includes finite sets. The later candidate uses the requested bijection convention and separately names the broader ``at most countable'' notion. The issue is fidelity to this task's stated convention, not a claim that the broader convention is generally wrong.
+
+The audit's \emph{reference predicate} is the assertion ``there exists a bijection from $A$ to the whole set of natural numbers.'' Here $A$ is the set supplied to the definition. For readers checking the implementation, the reference is written in Lean as
+\[
+\code{Nonempty}\bigl(A\simeq(\code{Set.univ}:\code{Set}\ \mathbb N)\bigr).
+\]
+The symbol $\simeq$ requests a bijection; \code{Set.univ} denotes the whole set of elements of the indicated type, here the natural numbers; and \code{Nonempty} asserts that at least one such bijection exists. It does \emph{not} assert merely that $A$ has an element. Translating the task wording into this reference remains an inspectable AI interpretation made for the audit, without an independent expert reference; compilation alone does not certify that step.
+
+The empty set now provides a complete argument that the older definition disagrees with the reference. The older predicate accepts it because it includes finite sets. The reference rejects it because a bijection would have to give $0$ a preimage in a set with no members. The newer definition rejects it for the same reason as the reference. A single counterexample suffices to refute a claim that two predicates agree for \emph{every} set.
+
+The witness file retains both candidate bodies in separate namespaces, shares their common Mathlib import, and appends six proved propositions: the old predicate accepts the empty set; the reference rejects it; the new predicate rejects it; the new predicate agrees with the reference for every set; the old predicate does not agree universally with the reference; and the old and new predicates differ. Agreement of the new predicate with the reference follows by expanding their definitions. Six propositions describe one investigated case, not six independent successes.
+
+The successful compilation exited with code zero in 217.685 seconds. Both candidate definitions had empty printed axiom sets; four witness propositions depended only on \code{Quot.sound}, and two had empty axiom sets. The source and message verifier passed 23 checks. An earlier Windows launcher failure caused by a long path occurred before compilation and remains archived; the successful run used a shorter directory. The result establishes this specific mathematical distinction relative to the chosen reference. It does not certify the entire revised file or all downstream theorems.
+
+\subsection{Exhaustive behavior checks on one Boolean task}
+\label{subsec:boolean-audit}
+The finite challenge removes the need to interpret advanced mathematics. Its task is a function of two Boolean inputs, each either false or true. The output must be true when \emph{exactly one} input is true. Because there are $2\times2=4$ possible input pairs, the whole required behavior fits in Table~\ref{tab:truth-reference}. This reference was fixed before execution.
+
+\begin{table}[htbp]
+\centering\small
+\caption{The complete reference for the two-input task.}
+\label{tab:truth-reference}
+\begin{tabularx}{\linewidth}{c c c Y}
+\toprule
+First input & Second input & Required output & Reason \\
+\midrule
+False & False & False & Neither input is true. \\
+False & True  & True  & Exactly the second input is true. \\
+True  & False & True  & Exactly the first input is true. \\
+True  & True  & False & Two true inputs are not exactly one. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Nine implementations were deliberately designed: three correct versions, five incorrect versions with the same function type, and one compilation-failure control. A function type specifying two Boolean inputs and one Boolean output tells us what kinds of values may be supplied and returned. It does not tell us \emph{which} output is returned on a given input. Thus an ``always false'' function can have the same type as a correct exclusive-or function.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Saved observations on the finite task. All eight executable implementations passed both the axiom and printed-type checks. A dash means execution evidence was unavailable.}
+\label{tab:finite}
+\begin{tabularx}{\linewidth}{l Y c c}
+\toprule
+ID & Implementation & Mismatched inputs & Behavior \\
+\midrule
+01 & Exclusive-or & 0/4 & Match \\
+02 & Boolean inequality & 0/4 & Match \\
+03 & Conditional exclusive-or & 0/4 & Match \\
+04 & Conjunction: both inputs true & 3/4 & Mismatch \\
+05 & Disjunction: at least one input true & 1/4 & Mismatch \\
+06 & Equality behind a helper & 4/4 & Mismatch \\
+07 & Constant false & 2/4 & Mismatch \\
+08 & First argument only & 2/4 & Mismatch \\
+09 & Undefined function & -- & Uncertain \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Table~\ref{tab:finite} compares each executable version with all four reference rows. For example, disjunction fails only when both inputs are true: it returns true while the task requires false. Exhaustive execution therefore identifies three matches and five mismatches; the unexecutable version remains uncertain. Passing the two preliminary checks is insufficient to establish the required behavior. Since these are nine designed implementations of \emph{one} task, the fraction five out of eight is not a population false-acceptance estimate or evidence from eight independently sampled tasks. Capability-oriented behavioral testing provides a methodological precedent\cite{checklist}; no NLP performance result from that work is transferred here. Finite execution also differs from the kernel-checked propositions in the definition example.
+
+The original evaluator compiled a fixed correct baseline alongside each implementation, making 18 candidate compilations. Nine behavior-probe compilations brought the total to 27 attempts. The repeated baseline is instrumentation, not extra independent evidence. A separate verifier reconstructed the observations from saved standard output without calling the original scoring computation. It passed 166 checks after correcting a newline-normalization defect: its first nine fixture-hash failures reflected LF versus CRLF line endings. Both verifier versions and the failure report are preserved. Only fixture newlines are normalized; hashes of executed sources and probes remain exact. No experiment was rerun to replace the failed verification record.
+
+\subsection{Reconstruction and rejection of contradictory inputs}
+\label{subsec:reconstruction}
+All 35 saved comparison tables were reconstructed exactly after timing was excluded. The earlier reconstruction suite passed 52 tests, while its provenance/accounting validator passed 6,093 checks over 227 read source snapshots. These results check reproducibility under the implemented rules, not independent semantic correctness.
+
+The audit also found an input-consistency problem. Suppose the new candidate is said to face \emph{identical effective requirements} in both columns, but its measured entries are $q_{10}=0$ and $q_{11}=1$. Here the first entry is that candidate's result under the first requirement, and the second is its result under the second requirement. Identical deterministic checks on the same candidate should not produce both rejection and acceptance. The old baseline could infer a requirement contrast of zero from the identity declaration while direct subtraction gave $1-0=1$. The portable implementation now rejects the contradictory input before writing a result, rather than presenting both answers as valid.
+
+Its 50 unit and regression tests are a separate suite from the earlier 52 reconstruction tests. The report retains that implementation and its 35 compatibility cases. This writing revision changes the explanation, not the recorded experiments, their outcomes, or the production formalization corpus.

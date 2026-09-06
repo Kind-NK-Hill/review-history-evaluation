@@ -1,0 +1,65 @@
+\section{Index of definitions and methods}
+\label{sec:definition-index}
+This index points to the passage defining each object or analytical construction. It does not redefine standard mathematical or statistical notation.
+\small
+\begin{longtable}{p{0.70\linewidth}rr}
+\toprule
+Object or method & Section & Page\\
+\midrule
+\endfirsthead
+\toprule
+Object or method & Section & Page\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Task, candidate, review record, evidence signature & \ref{subsec:record-units} & \pageref{subsec:record-units} \\
+Connection, endpoint occurrence, continuous segment & \ref{subsec:running-example} & \pageref{subsec:running-example} \\
+Original adjacency and time ambiguity & \ref{subsec:adjacency} & \pageref{subsec:adjacency} \\
+Candidate revision; high and medium confidence & \ref{subsec:revision-rule} & \pageref{subsec:revision-rule} \\
+Maximal segment and segment length & \ref{subsec:segment-rule} & \pageref{subsec:segment-rule} \\
+Failure origin, observed step, first-pass stopping & \ref{subsec:failure-cohort} & \pageref{subsec:failure-cohort} \\
+Candidate pair and four-cell table & \ref{subsec:execution-sample} & \pageref{subsec:execution-sample} \\
+Score, candidate, criterion, environment, evaluator & \ref{subsec:score} & \pageref{subsec:score} \\
+Measured, missing, uncertain, invalid, inapplicable & \ref{subsec:measurement-status} & \pageref{subsec:measurement-status} \\
+Conditional differences, diagonal change, interaction & \ref{subsec:four-cells} & \pageref{subsec:four-cells} \\
+Two-factor Shapley allocation & \ref{subsec:allocation} & \pageref{subsec:allocation} \\
+Effective historical criterion and review apparatus & \ref{subsec:historical-model} & \pageref{subsec:historical-model} \\
+Measurement class and finite error fraction & \ref{sec:measurement-classes} & \pageref{sec:measurement-classes} \\
+Accuracy nonidentification & \ref{subsec:accuracy} & \pageref{subsec:accuracy} \\
+Observation eligibility, stopping, and exit model & \ref{sec:process-theory} & \pageref{sec:process-theory} \\
+Martingale and available information & \ref{subsec:martingale} & \pageref{subsec:martingale} \\
+Feasible completion and logical bound & \ref{sec:feasible-tables} & \pageref{sec:feasible-tables} \\
+Point identification of a linear comparison & \ref{subsec:linear-identification} & \pageref{subsec:linear-identification} \\
+Diagnostic availability and four assessment methods & \ref{subsec:diagnostics} & \pageref{subsec:diagnostics} \\
+Reference predicate in the definition witness & \ref{subsec:definition-witness} & \pageref{subsec:definition-witness} \\
+Recorded-pass outcome coding & \ref{subsec:pass-coding} & \pageref{subsec:pass-coding} \\
+Task-equal and edge-equal changes & \ref{subsec:task-weighting} & \pageref{subsec:task-weighting} \\
+Task-level paired t calculation & \ref{subsec:paired-t-explanation} & \pageref{subsec:paired-t-explanation} \\
+Task-cluster reference intervals & \ref{subsec:cluster-resampling} & \pageref{subsec:cluster-resampling} \\
+Zero diagnostic differences and undefined t & \ref{subsec:zero-differences} & \pageref{subsec:zero-differences} \\
+Discordant compilation pairs and exact McNemar test & \ref{subsec:mcnemar} & \pageref{subsec:mcnemar} \\
+Risk row, risk set, cumulative pass and exit & \ref{subsec:risk-counts} & \pageref{subsec:risk-counts} \\
+Observed first-step and later-step groups & \ref{subsec:first-later} & \pageref{subsec:first-later} \\
+Two-group model, odds ratio, and task covariance & \ref{subsec:two-group} & \pageref{subsec:two-group} \\
+Working likelihood and its limits & \ref{subsec:robust-covariance} & \pageref{subsec:robust-covariance} \\
+Selection using later observations & \ref{subsec:later-selection} & \pageref{subsec:later-selection} \\
+\end{longtable}
+\normalsize
+\section{Sources and relative directory map}
+\label{sec:sources}
+The report and principal frozen analyses follow the layout of the \href{https://github.com/Kind-NK-Hill/review-history-evaluation}{evaluation repository}. Paths below are relative to the supplied source package or repository root. \artifactpath{evidence/SOURCE_MAP.json} binds copies to their relative origins and hashes. This is a provenance check, not a scientific-validity certificate.
+
+\begingroup
+\raggedright
+\begin{description}[leftmargin=1.2em,style=nextline]
+\item[Work and retained evidence.] \artifactpath{evidence/workflow/workflow.md} and \artifactpath{evidence/workflow/artifacts.md} retain workflow and artifact descriptions. They support the account of writing, building, reviewing, revising, and keeping records; they do not establish uniform rules across every historical record.
+\item[Original adjacency.] \artifactpath{evidence/history/main_adjacency_partition.csv} and \artifactpath{evidence/history/EDA1_FINDINGS.md} document original pair membership and time ambiguity. \artifactpath{evidence/history/retain_original_adjacency.py.txt} retains the relevant collector excerpt.
+\item[Connection classification and segment reconstruction.] \artifactpath{evidence/history/REPAIR_TRAJECTORY_ARCHITECTURE_v3.md} describes the rules. \artifactpath{evidence/history/classify_role.py.txt} and \artifactpath{evidence/history/join_segments.py.txt} retain classification and joining excerpts. The corresponding counts are in \artifactpath{evidence/history/transition_role_summary.csv} and \artifactpath{evidence/history/episode_attempt_distribution.csv}. The excerpts are inspection evidence, not standalone full-history collectors.
+\item[Paired analysis of 465 edges.] \artifactpath{analysis/inputs/edge/edge_view.jsonl}, \artifactpath{analysis/inputs/edge/review_events.jsonl}, and their companion \artifactpath{manifest.json} are frozen inputs. \artifactpath{analysis/edge_statistics.py} supplies the computation; \artifactpath{analysis/edge_statistics.json} retains its results.
+\item[Process analysis of 230 failure origins.] \artifactpath{analysis/inputs/process/episodes.json} retains all 262 complete segments, bound by its companion manifest. The \code{derive} function in \artifactpath{analysis/process_analysis.py} selects failure origins before truncating at first pass or segment end. Outputs are \artifactpath{analysis/process_cohort.csv}, \artifactpath{analysis/process_risk_rows.csv}, \artifactpath{analysis/process_curve.csv}, and \artifactpath{analysis/process_statistics.json}.
+\item[Build and statistical requirements.] The report entries are \artifactpath{latex/en/main.tex} and \artifactpath{latex/zh/main.tex}, with supplied figures in \artifactpath{latex/figures/}. \artifactpath{build_reports.py} and \artifactpath{README.md} specify Tectonic and font requirements. Statistical library versions are in \artifactpath{analysis/requirements.txt}; report compilation does not require rerunning statistics or Lean experiments.
+\end{description}
+\endgroup
+
+This source package supports report reconstruction and recomputation of the specified statistical projections; it is not a copy of the entire historical archive. Counts from the selected Lean executions, definition witness, and Boolean challenge come from retained earlier checks, without re-execution in this edition. Their complete historical execution evidence belongs to the preceding evidence archive and is not replaced by the present LaTeX build records. Reproducing a statistical projection likewise does not revalidate each historical review.

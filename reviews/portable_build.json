@@ -1,0 +1,59 @@
+{
+  "at_utc": "2026-09-06T07:48:02.430236+00:00",
+  "method": "Copy only latex/ and build_reports.py into a fresh directory; run the real LaTeX wrapper from there.",
+  "same_documented_font_environment": true,
+  "engine": "Tectonic 0.16.9",
+  "exit_code": 0,
+  "reports": [
+    {
+      "language": "en",
+      "delivered_pdf_sha256": "abaf5b84c8bec8ae7426918741ce142c5c789c9f167c80dd0a6a3966f793d8d2",
+      "rebuilt_pdf_sha256": "515f8723f9b212396f4cc7046e7cd9ac4a4788a8eaa1dc1c2254165aa9f147d7",
+      "delivered_pages": 45,
+      "rebuilt_pages": 45,
+      "page_texts_equal": true
+    },
+    {
+      "language": "zh",
+      "delivered_pdf_sha256": "4a07e54444a16245766f832040309c80ebd4041a66015e038c0d4b2d7d133174",
+      "rebuilt_pdf_sha256": "c60e566257d723617c0804dd601e49361d296ec6f2f8b0bf3dd8f219984e7ef9",
+      "delivered_pages": 37,
+      "rebuilt_pages": 37,
+      "page_texts_equal": true
+    }
+  ],
+  "source_sha256": {
+    "latex/en/audit.tex": "7b42738f8b7fa10bc266b44c1b708ad7baf31651c6442dcb874eb62d79e3b554",
+    "latex/en/discussion.tex": "7301cca7bc17f9d3cac805387aabf7d7903b9a12575fb88eb7f51dcbec438316",
+    "latex/en/framework.tex": "dadc5f99dfa64a0708b78c5d0755276a30db747ba025b84eb98fee2a5f44b83b",
+    "latex/en/introduction.tex": "636984d9075cb5d74bb5f2c53da47935c612eff6510d5e7d0e3368735a26cd80",
+    "latex/en/main.tex": "f30a026a907a0e33bd3d3279bdc5e38262f990eb4f18e0ac2a4d3ae63190debb",
+    "latex/en/materials.tex": "d1990f2a97fbee036e10c7bbde17094943131234d61ad2fadb135fa9ecc582da",
+    "latex/en/mathematics.tex": "540f3aaaf23ef20b158a096bb5f687bb999d9325195205027759289b213eb27e",
+    "latex/en/preamble.tex": "2b5c71f02b89edd06b981c5c705a586a6b9bec42ef66e061b50b40099e0a971f",
+    "latex/en/process.tex": "7ae7d8de1502ffea00f4b45932822d7a3a7fe39b2ebd449a99178875b0288553",
+    "latex/en/process_theory.tex": "e821dcc1b1d64ff6cb7f8cb7cd2372e30c9c74b133855ffcee2ba6f873d08428",
+    "latex/en/reference_guide.tex": "88b91361c6065547ba4efc299db28060025c3e4f6fcdbaa03eb411e11cd0f11c",
+    "latex/en/references.bib": "82217372d3c82c3de502520f358d17120918f51ed214f2488c2d483431132a1d",
+    "latex/en/statistics.tex": "c36f7916bd63a636e2e69e15c6868ff86aa25edd490c73b76fa2c4de86e05383",
+    "latex/en/transparency.tex": "0acde8f37fcbc77895ecda0cd7442d838249df3ca0e12e6456d0e5bc2271d720",
+    "latex/figures/process_profile.pdf": "20ac514f85b4482c6fb79349eea8a881e1a4d025d1c671c89c09310ab1e77a27",
+    "latex/figures/process_profile_zh.pdf": "cf8426e61dec856223aec7fa57c503f7a15d27712a7ef041b5ae6b392e0e8871",
+    "latex/zh/audit.tex": "882d6fdaa29d1de665aa044bebd042cae7cae4847f86d93d9374f04ba7460881",
+    "latex/zh/discussion.tex": "d76ca5b5cccb13f1322a78a9b9ae47f17fe8c2f22a4f05ad0849be285ad701c5",
+    "latex/zh/framework.tex": "88196729777c13ac01058e477c921845a07872fd34209b7937fd8bd34a2c5d6a",
+    "latex/zh/introduction.tex": "47f1649ceab4d4122e30373a15701dddae33934a29c3c9f4232b014c3655ae7d",
+    "latex/zh/main.tex": "2725d9706544be173daecf74d14b6f4acce6c044bee3131eee6249ec829199b1",
+    "latex/zh/materials.tex": "4b3d5386ae2a5dbb9a367a70058f75fc9125752cf07f47f81b5e427cfcdd2edf",
+    "latex/zh/mathematics.tex": "7c1f08fa9795ab39704085fbc7841ee6e0cc2fd6d92a06a3075991d89117b20f",
+    "latex/zh/preamble.tex": "1e2be052b024eee08627f90698e59df26c3b617d848ad34506e3571ff1f214bd",
+    "latex/zh/process.tex": "3d98c6b681975a152ef3c1b363764470297a80e6b3c2e83ad03285d052a44a1a",
+    "latex/zh/process_theory.tex": "4ec579ce784b9b5b16ab1898abd54aa589c4fd69aeb435d813fd7b40b31676a9",
+    "latex/zh/reference_guide.tex": "193ce8c6fd8b5d53c97aadb449752a6ea2f1dab905c6199d49c3606ab85ea5e4",
+    "latex/zh/references.bib": "82217372d3c82c3de502520f358d17120918f51ed214f2488c2d483431132a1d",
+    "latex/zh/statistics.tex": "74a3376f513f085340e9ec423fdfed10fa44cf0ca3a2a5a1ccd32c45534279cb",
+    "latex/zh/transparency.tex": "def79356b7ec47f9fa7409c9119491f6da9485f48be10c0254103c6c44c77b51"
+  },
+  "passed": true,
+  "scope": "Source-relative build verified on the documented Windows font configuration; no claim of byte-identical PDFs or cross-font pagination."
+}

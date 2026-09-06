@@ -1,0 +1,45 @@
+\section{Putting the results together}
+\label{sec:discussion}
+\subsection{Implications of the mathematical results}
+\label{subsec:implications}
+The measurement result places a limit on what can be recovered from a check. When a correct and an incorrect program receive the same recorded description, every rule restricted to that description must treat them alike. In the eight executable Boolean fixtures, accepting both passing gates makes five mistakes; the best forced binary rule using only those gates still makes three. Additional observations, rather than further arithmetic on the same outputs, are needed to distinguish the programs.
+
+The process result shows why observation rules belong in a probability model. A constant conditional pass probability is compatible with fewer paths remaining at later steps. Stopping at the first pass and leaving a path for another reason have different effects; selecting only successful paths changes the distribution again. These conclusions hold for the stated model, whose assumptions are not established merely by reconstructing a historical path.
+
+The identification result gives a criterion for deciding whether more evidence is needed. If every feasible completion gives the same contrast, the existing information determines it. Otherwise another observation may narrow the possibilities. A Shapley allocation summarizes the completed comparison but supplies no new observation.
+
+\subsection{Why the two historical trends can coexist}
+\label{subsec:two-trends}
+Across the selected candidate-change edges, the task-equal average change in recorded pass is positive. Along the fixed failure-origin paths, the pass proportion among later observed steps is lower than that among first steps. These statements use different objects and selections. There is no algebraic requirement that their directions agree.
+
+For illustration, suppose eight of ten unresolved tasks pass at the first step. One of the two remaining tasks passes at the second step. The pass proportion falls from $8/10=80\%$ to $1/2=50\%$, yet the number of tasks with a pass rises from eight to nine. The second group contains exactly the tasks that did not pass earlier, so its lower rate does not show that a second revision harmed them.
+
+The observed project has further complications: one task can have several paths, the candidate and review conditions can change, and a path can exit the permitted graph. The actual task-level paired analysis and process analysis preserve their own definitions rather than treating the toy example as a fitted model. Their positive and negative contrasts concern recorded outcomes, not independently established mathematical quality.
+
+\subsection{Logical, statistical, and semantic uncertainty}
+\label{subsec:uncertainty}
+The report uses three different forms of uncertainty. Keeping them apart makes the equations easier to interpret.
+\begin{itemize}[leftmargin=*]
+\item \textbf{An unobserved comparison:} A score is missing, so several tables may be compatible with what we know. Completing the table under valid constraints gives a logical range of answers.
+\item \textbf{A statistical reference calculation:} The retained tasks are treated as if they came from a specified repeatable sampling mechanism. A standard error or resampling interval describes variation under that mechanism. Its relevance beyond the observed tasks depends on the assumptions.
+\item \textbf{An unresolved task interpretation:} We lack an independent reference for whether a candidate expresses the intended mathematics. A narrow sampling interval about acceptance labels does not supply that reference.
+\end{itemize}
+The Boolean challenge has uncertainty about neither its enumerated inputs nor their observed outputs. What remains limited is how far a conclusion about that task extends to other mathematics. This is why its finite error bound, a missing-cell bound, and a sampling interval have different interpretations.
+
+\subsection{Requirements for a future comparison}
+\label{subsec:future-design}
+For a future semantic comparison, first choose the tasks and the outcome to be measured. For example, the outcome could be whether an independently adjudicated reference judges a candidate to satisfy one specified requirement. Give each competing evaluator the same candidate, requirement, and permitted evidence. Compare their answers within each task, retain uncertain judgments, and keep repeated observations from the same task together. A constructed counterexample set remains useful, but it answers a different question from an independently sampled evaluation set.
+
+There is a simple planning relation connecting precision to the number of independent tasks. Let $h>0$ be the desired half-width of an approximate 95\% interval for a mean paired task difference. Let $\sigma_D$ be the standard deviation of those task differences in the proposed sampling population, estimated from an appropriate pilot or bounded conservatively. Let $S_{\rm plan}$ denote the planned number of tasks, not the number of runs or edges. Under independent task sampling, the standard error is approximately $\sigma_D/\sqrt{S_{\rm plan}}$. A normal-reference 95\% interval has an approximate half-width of 1.96 times that standard error.
+
+Requiring that half-width to be no larger than $h$ gives the successive steps
+\[
+1.96\,\frac{\sigma_D}{\sqrt{S_{\rm plan}}}\le h,
+\qquad
+\sqrt{S_{\rm plan}}\ge\frac{1.96\,\sigma_D}{h},
+\qquad
+S_{\rm plan}\ge\frac{1.96^2\sigma_D^2}{h^2}.
+\]
+For an illustrative standard deviation of 0.20 and desired half-width of 0.05, the right-hand side is about 61.47, suggesting at least 62 tasks under this approximation. These are planning inputs, not estimates supplied by the present study, and 62 is not a recommendation justified for this project. Small-sample adjustments, dependence, reference quality, and the actual sampling design can change the calculation. Halving the target half-width requires roughly four times as many independent tasks in this simple relation; repeating the same candidate does not create those tasks.
+
+A future process study should also decide in advance when a path begins, which next steps are eligible, when observation stops, and how exits are recorded. Those decisions should use information available before the next outcome. Comparing predictions on held-out task groups or later time periods would then test a stated deployment question. The present report provides reproducible historical descriptions and concrete measurement checks to guide such a design; it does not claim that the future study has already taken place.

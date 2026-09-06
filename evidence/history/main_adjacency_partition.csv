@@ -1,0 +1,3 @@
+adjacency_definition,membership_rule,total_pair_n,exact_timestamp_tie_n,incomplete_precision_window_n,time_ambiguous_n,ordering_surrogate_eligible_n
+raw_main_endpoints,both endpoints in P-SIG-MAIN within the frozen raw distinct-signature adjacency,2738,92,1,93,2645
+rebuilt_main_endpoints,both endpoints in P-SIG-MAIN within the reviewer-produced rebuilt adjacency,2769,92,1,93,2676

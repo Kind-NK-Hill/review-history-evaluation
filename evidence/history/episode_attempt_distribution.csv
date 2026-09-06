@@ -1,0 +1,8 @@
+episode_attempt_distribution_id,attempt_n,episode_n,fraction_of_episodes,interpretation_boundary
+episode_attempt_distribution_v3_4523540f1504cd17100c4835e85b7eefd49911580f8efff0599a8f283be6b9e3,17,1,0.003817,"attempt is one high-confidence candidate-repair transition, not elapsed labor"
+episode_attempt_distribution_v3_4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a,4,5,0.019084,"attempt is one high-confidence candidate-repair transition, not elapsed labor"
+episode_attempt_distribution_v3_4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce,3,1,0.003817,"attempt is one high-confidence candidate-repair transition, not elapsed labor"
+episode_attempt_distribution_v3_6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918,12,2,0.007634,"attempt is one high-confidence candidate-repair transition, not elapsed labor"
+episode_attempt_distribution_v3_6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b,1,212,0.80916,"attempt is one high-confidence candidate-repair transition, not elapsed labor"
+episode_attempt_distribution_v3_d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35,2,38,0.145038,"attempt is one high-confidence candidate-repair transition, not elapsed labor"
+episode_attempt_distribution_v3_ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d,5,3,0.01145,"attempt is one high-confidence candidate-repair transition, not elapsed labor"

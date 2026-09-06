@@ -1,0 +1,130 @@
+\section{From retained records to analysis units}
+\label{sec:materials}
+\subsection{Task, candidate, review record, and evidence signature}
+\label{subsec:record-units}
+A \emph{task} is one mathematical assignment, such as formalizing a specified definition or proving a specified theorem. A \emph{candidate} is a saved version submitted for that assignment. A task can have several candidates, and a candidate can be reviewed more than once. A \emph{review record} preserves a judgment about an object together with the available supporting evidence and context. The object may be a candidate or an official output.
+
+The analysis identifies retained reviewer-produced evidence using an \emph{evidence signature}. Its curated main collection contains 3,231 such signatures. This is a count of evidence items under the archive's identification rules. It is neither a count of tasks nor a guarantee of 3,231 separate review executions. In particular, the raw and normalized result files from one review can survive as separate evidence items. A later classification recognizes some such relationships rather than interpreting them as repeated independent reviews.
+
+\subsection{One task, three submissions, two connections, one segment}
+\label{subsec:running-example}
+Consider an illustrative theorem task with three submitted versions A, B, and C. Let their corresponding review records be $r_A,r_B,r_C$, with judgments fail, fail, pass. Suppose A-to-B and B-to-C both satisfy the candidate-revision rule defined below, and suppose the middle endpoint is exactly the same review record $r_B$ in the two connections. The task then supplies:
+\begin{itemize}[leftmargin=*,nosep]
+\item one task and three submitted candidate versions;
+\item three review records in this illustration;
+\item two directed \emph{connections}, also called \emph{edges}: $r_A\to r_B$ and $r_B\to r_C$;
+\item one \emph{continuous segment}, formed by joining those two edges at $r_B$.
+\end{itemize}
+Thus two edges contain four endpoint occurrences, but only three distinct endpoint records. The repeated middle record matters both for reconstruction and for statistical dependence. A connection describes the relation between two retained observations; it does not count the edits or model calls between them.
+
+Continuity requires the shared record, not merely the same task identifier or the same candidate text. Suppose a later version D appears after an official-output review, a connection that fails the chosen rule, or a gap with unresolved time order. We cannot extend this segment to D just because the task is unchanged. If D and a still later version E begin another eligible sequence, the same task contributes a second segment. Nothing in this construction asserts that the underlying work stopped during the gap.
+
+The full segment and its observation for a particular question are also distinct. In the fail, fail, pass example, following the segment until its first pass uses both edges. In an illustrative fail, pass, fail segment, the full reconstruction can still contain two eligible edges, but a first-pass analysis uses only the first. It does not reinterpret the last failure as if it preceded that pass. These examples explain rules; they are not added observations.
+
+\subsection{From evidence to 2,645 directed adjacent connections}
+\label{subsec:adjacency}
+To study what changed between reviews, the analysis starts with the archive's frozen within-task adjacency. It retains an original adjacent pair only when both endpoint signatures belong to the curated main collection. It does \emph{not} discard intermediate records and then connect whichever remaining records become neighbors. This preserves gaps in the retained history.
+
+That membership rule yields 2,738 pairs. Of these, 93 have ambiguous time order under the declared timestamp rules, including tied times or insufficient precision. They remain undirected evidence and do not enter a before--after analysis. The other $2,738-93=2,645$ pairs supply directed connections. Their order is a documented proxy based on recorded time and identifiers, not evidence that one review caused the next event. The count cannot be obtained simply by subtracting a task count from 3,231, because the rule preserves original adjacency instead of rebuilding a gap-free chain after selection.
+
+Even a directed connection need not describe revision. One endpoint may review a candidate and the next an official file with unchanged text. Both endpoints may review official outputs. A raw result file may be followed by the normalized representation of that same review. The next step therefore classifies the activity, using the reviewed object, primary Lean text, source, registered context, and prior structured findings. The pass/fail judgment itself is not used to assign the activity category.
+
+\subsection{Which connections count as candidate revisions: 465 and 367}
+\label{subsec:revision-rule}
+The classifier applies rules in order. It first recognizes the two representations of the same review, then explicitly marked external reviews, then checks for distinct executions under the same registered conditions. Matching conditions without evidence of distinct executions remain unresolved. It next recognizes candidate landing into an official output with unchanged primary text. Only after those earlier cases have been handled does it assign \emph{candidate revision}: the later reviewed object must be a candidate, and the primary Lean text must differ between endpoints. Remaining official-to-official pairs become official rereviews; other unresolved pairs retain a mixed or unknown category.
+
+Within candidate revision, \emph{high confidence} means the earlier review contains structured findings; without such findings, the connection has \emph{medium confidence}. These are reproducible rule labels, not numerical confidence levels or certifications that a mathematical problem was repaired. The rule detects a changed candidate following recorded issues; it does not independently establish that the change resolved those issues. The implementation calls this category \code{candidate\_repair}; this report uses ``candidate revision'' to keep that distinction explicit.
+
+The resulting categories partition all directed connections:
+\begin{table}[htbp]
+\centering\small
+\caption{Activity categories for the 2,645 directed connections. Counts are connections, not executions or tasks.}
+\label{tab:roles}
+\begin{tabularx}{\linewidth}{Y r Y}
+\toprule
+Category & Count & Interpretation \\
+\midrule
+Candidate revision & 465 & Changed primary text; later object is a candidate \\
+Candidate landing & 241 & Candidate followed by official output with the same text \\
+Official rereview & 1,176 & Both objects are official outputs \\
+External review & 207 & Explicitly marked external-review source at an endpoint \\
+Same review, two representations & 166 & Recognized raw and normalized result pair \\
+Distinct, same-condition review & 0 & Requires explicit evidence of separate executions \\
+Mixed or unknown & 390 & Available fields do not resolve the activity \\
+\midrule
+Total & 2,645 & Each connection is assigned once \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The 465 candidate-revision edges concern 250 distinct tasks and divide into 367 high-confidence and 98 medium-confidence edges. The full 465-edge set supplies the paired revision analysis in Section~\ref{sec:statistics}. Its high-confidence sensitivity analysis uses the 367-edge subset, which represents 207 tasks. Task counts describe the distinct identifiers represented after a selection; unlike disjoint edge counts, they need not add across subsets because a task can contribute to both.
+
+\subsection{Joining 367 edges into 262 full continuous segments}
+\label{subsec:segment-rule}
+For the process question, the reconstruction uses only the 367 high-confidence candidate-revision edges. Starting from an edge without an eligible predecessor, it appends an eligible next edge only when the earlier edge's later review identifier equals the next edge's earlier review identifier. It continues until there is no such edge. The result is a \emph{maximal continuous segment}: a chain that cannot be extended within this chosen edge set. The archived term is \emph{episode}; later chapters also call it a \emph{path} or \emph{process}.
+
+This grouping assigns every selected edge once and produces 262 segments. It ends at an ineligible connection, an unresolved time-order boundary, or the end of observed connections. A recorded pass does not itself terminate this reconstruction: pass labels are used in the next analytical operation. Table~\ref{tab:segment-lengths} makes the edge-to-segment conversion checkable.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Lengths of the complete reconstructed segments, before selecting failure origins or stopping at first pass.}
+\label{tab:segment-lengths}
+\begin{tabular}{rrr}
+\toprule
+Edges per segment & Segments & Edges contributed \\
+\midrule
+1 & 212 & 212 \\
+2 & 38 & 76 \\
+3 & 1 & 3 \\
+4 & 5 & 20 \\
+5 & 3 & 15 \\
+12 & 2 & 24 \\
+17 & 1 & 17 \\
+\midrule
+Total & 262 & 367 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The second column counts segments; the third counts their edges. The 262 segments retain the same 207 represented tasks as the 367 edges, because grouping alone removes no edge. Multiple segments from one task remain connected by their task identifier for statistical grouping, even though they remain separate paths in the reconstruction.
+
+\subsection{Selecting 230 failure origins, then observing 329 steps}
+\label{subsec:failure-cohort}
+The process analysis asks what happens after an explicit recorded failure. It therefore selects the 230 segments whose first review says fail, excluding the other 32 from this question. These selected segments belong to 182 distinct tasks. Here 230 counts starting segments, while 182 counts the task identifiers represented by them. Neither is a number of independent review executions.
+
+Within each selected segment, observation now stops at the first later review that records pass, or at the segment boundary if no pass appears. This second operation changes the observed length, not the already fixed segment membership. Applied to the selected segments, it yields 329 observed steps. Each step is one eligible edge and takes its outcome from that edge's later review. Across the 230 paths, 206 terminate at a first recorded pass and 24 reach the segment boundary without one. The original failure record is the starting condition, not an additional observed step.
+
+Thus 329 is not the sum of all 367 reconstructed edges under another name: failure-origin selection and first-pass stopping intervene. Nor is $206/230$ a success fraction among 182 tasks, since one task can supply several paths. Section~\ref{sec:process} follows the changing step denominators and distinguishes path exit from permanent task failure.
+
+\begin{table}[htbp]
+\centering\small
+\caption{The two historical analysis routes after activity classification. Each row states the operation and its unit.}
+\label{tab:units}
+\begin{tabularx}{\linewidth}{Y Y}
+\toprule
+Operation & Result and use \\
+\midrule
+Keep all candidate-revision connections & 465 edges, 250 tasks: paired recorded-label changes \\
+Restrict those edges to high confidence & 367 edges, 207 tasks: paired sensitivity route and input to path construction \\
+Join high-confidence edges at shared review endpoints & 262 full segments: continuity defined before outcome-based selection \\
+Keep segments starting at explicit failure & 230 segments, 182 tasks: the fixed process cohort \\
+Follow each selected segment to first pass or boundary & 329 steps; 206 pass endpoints and 24 exits \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Why the selected execution sample has 14 pairs}
+\label{subsec:execution-sample}
+The larger history describes recorded judgments. To examine what explicitly defined evaluators can establish about saved code, a separate, smaller selection takes candidate pairs from the revision material. It contains six development pairs and eight holdout pairs separated by task, for a total of 14 pairs and 28 candidate endpoints. The same task is not split across development and holdout. These are selection partitions in a retrospective study: prior exposure to parts of the archive prevents interpreting them as a fully blind, independently sampled experiment.
+
+Each pair receives two assessments. One checks permitted axiom dependencies; the other checks the narrow requirement that a theorem must not directly assume its complete conclusion. Each assessment considers the two candidates under two stated criteria. Its four candidate--criterion combinations form a \emph{four-cell table}, defined and worked through in Section~\ref{subsec:four-cells}. There are therefore $14\times2=28$ historical tables, reusing the same 14 pairs. Their measurement outcomes are reported in Section~\ref{sec:audit}; no new executions were added in this edition.
+
+\subsection{Constructed comparisons, a definition witness, and a Boolean task}
+\label{subsec:constructed-materials}
+The study also asks whether a comparison method behaves as intended under deliberately chosen patterns of observed and missing scores. Seven constructed tables serve this purpose. Together with the 28 historical tables, they give 35 tables for evaluating the comparison procedures. This total counts tables, not 35 independently sampled tasks. Section~\ref{sec:audit} explains the six diagnostic questions asked of each table.
+
+A separate historical definition witness examines one task whose two candidates use different conventions for countability. Six proved propositions establish relations among those candidates, an explicit reference, and the empty set. They describe one case rather than six independent successes.
+
+Finally, a finite Boolean task asks for the output to be true exactly when its two inputs differ. There are four possible input pairs, so a complete behavioral reference is available. Nine implementations were deliberately designed: three matching implementations, five mismatching implementations, and one compilation-failure control. Section~\ref{sec:measurement-classes} uses the eight executable implementations to derive a measurement limitation; Section~\ref{subsec:boolean-audit} gives the complete results. Nine implementations of this single task do not supply nine independently sampled mathematical tasks.
+
+These materials have connected purposes but different denominators. The historical revision and path analyses describe selected records. The selected executions and constructed cases test particular checks or exhibit counterexamples. Their counts cannot be added into a common sample size or treated as independent replications of one statistical claim.

@@ -1,0 +1,183 @@
+\section{Evaluation quantities and the four-cell comparison}
+\label{sec:framework}
+
+\subsection{Candidate, criterion, environment, and score}
+\label{subsec:score}
+
+Consider a program that should return true exactly when its two Boolean inputs differ. One candidate always returns false; another computes the required exclusive-or operation. Both may compile as Lean programs, but only the second gives the required answer on every input. A score is useful only after we specify which of these properties it measures.
+
+Let $C$ denote the candidate: its saved code and the declaration selected for checking. A declaration is a named definition or theorem in that code; selecting it in advance fixes the object being assessed. Let $R$ denote the criterion, specifying the check and its acceptance rule, and let $E$ denote the environment, including the compiler, libraries, search paths, and execution settings. The \emph{evaluation procedure} $g$ applies $R$ to $C$ in $E$.
+
+When a valid numerical measurement is available, we write its value as
+\[
+q=g(C,R;E).
+\]
+Thus $q$ is the score returned by the specified procedure. We hold the environment fixed in a comparison. The acceptance scores used here are dimensionless: $1$ means that the named check passed and $0$ that it failed. They are decisions of that check, not probabilities that the mathematics is correct.
+
+To use $g$, we must supply the actual procedure, target, criterion, and evidence. The notation does not itself define a general measure of semantic correctness. We next describe the procedure implemented in the audit.
+
+\subsection{Axiom-policy measurement and missing or invalid scores}
+\label{subsec:measurement-status}
+
+The released \code{evaluate\_sources.py} implements a narrow axiom-policy
+check. It captures the source, appends commands for the already selected
+declaration, runs the recorded Lean 4.31.0 compiler, and extracts two things:
+the printed declaration type and its reported axiom dependencies. The type
+describes the declaration's interface or proposition. The axiom list records
+assumptions on which that declaration depends. These are useful observations,
+but neither automatically states the intended task's meaning.
+
+For this procedure, $R$ supplies a list of allowed axioms. The score is $1$
+exactly when every extracted axiom is on that list, and $0$ when at least one
+extracted axiom is forbidden. For example, a successfully extracted occurrence
+of \code{sorryAx} receives $0$ under a policy that forbids it. An empty list of
+dependencies passes such a policy; missing compiler output is not an empty
+dependency list. Lean documents the distinction between proof validity and
+the meaning of the statement proved. \cite{leanvalidation}
+
+Before comparing scores, the implementation checks that the selected declarations have identical printed types under fixed printer settings. This establishes a conservative interface match. It leaves behavior open: both Boolean programs above can have type \code{Bool -> Bool -> Bool}. If the printed types differ, this implementation does not establish a numerical comparison, although another meaningful comparison may still be possible.
+
+To check behavior, we could run both programs on all four input pairs and compare their outputs with the required truth table. The finite challenge reported below includes exactly this additional test. It supplies evidence that the axiom-policy check alone does not collect.
+
+A check can also fail to produce a usable score. We therefore retain its measurement status:
+
+\begin{description}[leftmargin=1.2em,style=nextline]
+\item[Measured.] A value was obtained for the named check. A measured zero is
+an actual rejection by that check.
+\item[Not run, missing, or uncertain.] The intended question is meaningful,
+but its answer was not obtained. Examples include an unavailable compiler,
+missing source, a timeout, or failure to extract the selected declaration.
+The narrow axiom check does not turn a compilation failure into an axiom-policy
+rejection: it did not obtain the axiom measurement.
+\item[Invalid or not applicable.] The proposed comparison lacks the required
+meaning, or the criterion does not apply to the selected object. Treating such
+a cell as an unknown number would already assume a comparison that has not
+been justified.
+\end{description}
+
+Coding depends on the question. A study of compilation success could assign zero to a compilation failure; the axiom-policy check cannot do so when it has obtained no axiom measurement.
+
+\subsection{Four cells, conditional differences, and interaction}
+\label{subsec:four-cells}
+
+We now hold one evaluator and environment fixed and compare two candidates
+under two criteria. Let $C_0$ and $C_1$ are the two
+candidates, and $R_0$ and $R_1$ the two criteria. Write
+\[
+q_{ij}=g(C_i,R_j;E),\qquad i,j\in\{0,1\}.
+\]
+The example below gives all four candidate--criterion scores.
+
+The following is an \emph{illustrative calculation}, not another experiment.
+Use the two Boolean programs described above: $C_0$ always returns false,
+while $C_1$ returns true exactly when its inputs differ. Let $R_0$ test only
+the input pair (false, false), whose required output is false. Let $R_1$ test
+all four input pairs, whose required outputs in the order (false, false),
+(false, true), (true, false), (true, true) are false, true, true, false.
+In this example $g$ means ``run the inputs specified by the criterion and
+award $1$ if all required outputs match, otherwise $0$.'' It is a behavioral
+test procedure for this example, not the released axiom-only procedure.
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Candidate & $R_0$: one input & $R_1$: all four inputs\\
+\midrule
+$C_0$: always false & $q_{00}=1$ & $q_{01}=0$\\
+$C_1$: exclusive-or & $q_{10}=1$ & $q_{11}=1$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+First compare the candidates while keeping the criterion unchanged. Let
+$D_{C\mid R_0}$ denote the second candidate's score minus the first
+candidate's score under $R_0$. Define $D_{C\mid R_1}$ in
+the same way under $R_1$. Reading down the two columns gives
+\begin{align*}
+D_{C\mid R_0}&=q_{10}-q_{00}=1-1=0,\\
+D_{C\mid R_1}&=q_{11}-q_{01}=1-0=1.
+\end{align*}
+The one-input test cannot distinguish the programs. The four-input test can.
+Thus a reported candidate difference depends on which test is held fixed.
+
+Next compare the criteria while keeping the candidate unchanged. Reading
+across each row gives
+\begin{align*}
+D_{R\mid C_0}&=q_{01}-q_{00}=0-1=-1,\\
+D_{R\mid C_1}&=q_{11}-q_{10}=1-1=0.
+\end{align*}
+The expanded test rejects the defective program but leaves the correct program
+accepted. The negative first difference describes a lower test score; it does
+not mean that improving a criterion made the program itself worse. All four
+differences have units of \emph{score points}. They are not percentages of
+program quality.
+
+A diagonal comparison instead changes both ingredients at once. Write
+$\Delta$ for that change:
+\[
+\Delta=q_{11}-q_{00}=1-1=0.
+\]
+Looking only at these two acceptance labels would hide both the improved
+program and the more demanding test. The \emph{interaction}, denoted $I$,
+records how much the candidate contrast changes when the criterion changes:
+\begin{align*}
+I&=D_{C\mid R_1}-D_{C\mid R_0}=1-0=1\\
+ &=q_{11}-q_{10}-q_{01}+q_{00}.
+\end{align*}
+Regrouping the same four terms also gives
+$I=D_{R\mid C_1}-D_{R\mid C_0}$. Interaction here is an arithmetic
+description of the table, not evidence about psychological cooperation or
+a causal mechanism. These four conditional differences, the diagonal
+difference, and the interaction are the audit's six diagnostic questions.
+
+\subsection{The two-factor Shapley allocation}
+\label{subsec:allocation}
+
+There are two paths from the top-left cell to the bottom-right cell. We can
+change the candidate first and then the criterion, or change the criterion
+first and then the candidate. Either path's two differences add to $\Delta$.
+If we choose to weight the two orders equally, the candidate receives the
+average of its two conditional differences, and the criterion receives the
+average of its two conditional differences. Denote these allocations by
+$\phi_C$ and $\phi_R$:
+\begin{align*}
+\phi_C&=\tfrac12[(q_{10}-q_{00})+(q_{11}-q_{01})],\\
+\phi_R&=\tfrac12[(q_{01}-q_{00})+(q_{11}-q_{10})].
+\end{align*}
+They are the standard two-factor Shapley allocation. \cite{shapley} In the
+example, $\phi_C=(0+1)/2=1/2$ and $\phi_R=(-1+0)/2=-1/2$. Their sum is zero,
+as the diagonal comparison requires. In general, cancellation of the middle
+terms gives $\phi_C+\phi_R=q_{11}-q_{00}=\Delta$.
+
+The allocation is in score points and depends on giving the two orders equal weight. It is a summary of the table, rather than a recovered causal contribution from history. The interaction is already included in the averages; adding it once more would break their sum identity.
+
+\subsection{Historical review: observed labels and partly observed conditions}
+\label{subsec:historical-model}
+
+In the four-cell comparison, the procedure and criteria are specified. A historical review is less controlled: the archive may record a decision while preserving only part of the process that produced it. For a review event $e$, distinguish the following roles:
+\begin{itemize}
+\item $Y_e$ is the recorded outcome label, such as pass or fail. It is a
+category until a particular numerical coding is stated.
+\item $O_e$ is the object actually reviewed, including the candidate code
+and relevant context.
+\item $K_e$ is the effective criterion actually applied in that review.
+\item $M_e$ is the review apparatus: for example, the reviewer or model,
+prompt, tools, and operating settings.
+\item $U_e$ collects remaining influences that this description does not
+separately record. No probability distribution or independence assumption
+is being assigned to it.
+\end{itemize}
+The conceptual expression
+\[
+Y_e=\psi(O_e,K_e,M_e,U_e)
+\]
+then says only that the outcome arises from those ingredients through some
+review procedure, named $\psi$. Unlike a fitted regression equation,
+it supplies no coefficients to estimate and no known rule for predicting
+$Y_e$. The earlier notation used $C_e^*$ for the effective criterion and
+$\varepsilon_e$ for remaining influences; $K_e$ and $U_e$ avoid confusing
+that criterion with candidate $C$ in our four-cell table.
+
+For example, a stored contract's hash identifies the saved text, but cannot establish how closely the reviewer followed it. The effective criterion may remain partly unknown. A changed label can likewise accompany changes to the candidate, expectations, or review procedure. The later process analysis studies the recorded sequence under explicit path rules; it does not identify those separate influences.
+
+We can nevertheless ask what a specified measurement distinguishes, what follows from an explicit observation model, and which comparisons the available evidence determines.

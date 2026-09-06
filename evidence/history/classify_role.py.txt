@@ -1,0 +1,73 @@
+def classify_role(row: dict[str, Any]) -> tuple[str, str, str]:
+    """Return role, confidence, and evidence reason without reading verdict fields."""
+    if row["review_execution_relation"] == "same_review_raw_to_normalized_representation":
+        return (
+            "same_review_representation",
+            "high",
+            "same directory and result version; raw filename is followed by its normalized filename under identical registered conditions",
+        )
+
+    from_external = row["from_review_purpose"] == "external_artifact_review"
+    to_external = row["to_review_purpose"] == "external_artifact_review"
+    if from_external or to_external:
+        confidence = "high" if from_external and to_external else "medium"
+        return (
+            "external_review",
+            confidence,
+            "review source explicitly identifies an external Kenneth campaign",
+        )
+
+    if same_condition_signature(row) and row["review_execution_relation"] == "distinct_execution_explicit":
+        return (
+            "same_condition_stability",
+            "high",
+            "two explicitly distinct executions share the registered candidate, input, subject, object type, rule, context, source, and purpose",
+        )
+
+    if same_condition_signature(row):
+        return (
+            "unknown_mixed",
+            "low",
+            "registered conditions match but available evidence does not establish two distinct review executions",
+        )
+
+    if (
+        row["from_review_object_type"] == "candidate"
+        and row["to_review_object_type"] == "official"
+        and row["candidate_content_comparison"] == "same"
+    ):
+        return (
+            "candidate_landing",
+            "high",
+            "candidate review is followed by an official review with identical primary Lean text",
+        )
+
+    if row["to_review_object_type"] == "candidate" and row["candidate_content_comparison"] == "different":
+        if row["from_finding_n"] > 0:
+            return (
+                "candidate_repair",
+                "high",
+                "next reviewed object is a changed candidate and the prior review recorded actionable findings",
+            )
+        return (
+            "candidate_repair",
+            "medium",
+            "next reviewed object is a changed candidate but the prior review has no structured finding",
+        )
+
+    if row["from_review_object_type"] == "official" and row["to_review_object_type"] == "official":
+        confidence = "high" if row["candidate_content_comparison"] == "same" else "medium"
+        return (
+            "official_rereview",
+            confidence,
+            "both adjacent reviews target official artifacts; intervening work is not inferred",
+        )
+
+    return (
+        "unknown_mixed",
+        "low",
+        "available object, content, source, and context signals do not identify one process role",
+    )
+
+
+def observed_change_categories(row: dict[str, Any]) -> list[str]:

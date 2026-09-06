@@ -1,0 +1,65 @@
+\section{定义与方法索引}
+\label{sec:definition-index}
+本索引指向正文中解释对象或分析构造的位置。它不重新定义常用数学和统计记号。
+\small
+\begin{longtable}{p{0.70\linewidth}rr}
+\toprule
+对象或方法 & 节 & 页\\
+\midrule
+\endfirsthead
+\toprule
+对象或方法 & 节 & 页\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+任务、候选、审核记录、证据签名 & \ref{subsec:record-units} & \pageref{subsec:record-units} \\
+连接、端点出现、连续片段 & \ref{subsec:running-example} & \pageref{subsec:running-example} \\
+原始相邻关系与时间歧义 & \ref{subsec:adjacency} & \pageref{subsec:adjacency} \\
+候选修改；高置信与中置信 & \ref{subsec:revision-rule} & \pageref{subsec:revision-rule} \\
+极大连续片段与片段长度 & \ref{subsec:segment-rule} & \pageref{subsec:segment-rule} \\
+失败起点、观察步骤、首次通过停止 & \ref{subsec:failure-cohort} & \pageref{subsec:failure-cohort} \\
+候选配对与四格表 & \ref{subsec:execution-sample} & \pageref{subsec:execution-sample} \\
+分数、候选、标准、环境、评价器 & \ref{subsec:score} & \pageref{subsec:score} \\
+已测量、缺失、不确定、无效、不适用 & \ref{subsec:measurement-status} & \pageref{subsec:measurement-status} \\
+条件差、对角变化、交互量 & \ref{subsec:four-cells} & \pageref{subsec:four-cells} \\
+两要素夏普利分摊 & \ref{subsec:allocation} & \pageref{subsec:allocation} \\
+实际历史标准与审核设置 & \ref{subsec:historical-model} & \pageref{subsec:historical-model} \\
+测量分组与有限错误比例 & \ref{sec:measurement-classes} & \pageref{sec:measurement-classes} \\
+准确率的不可识别 & \ref{subsec:accuracy} & \pageref{subsec:accuracy} \\
+观察资格、停止与退出模型 & \ref{sec:process-theory} & \pageref{sec:process-theory} \\
+鞅与可用信息 & \ref{subsec:martingale} & \pageref{subsec:martingale} \\
+允许的补全与逻辑界限 & \ref{sec:feasible-tables} & \pageref{sec:feasible-tables} \\
+线性比较量的点识别 & \ref{subsec:linear-identification} & \pageref{subsec:linear-identification} \\
+诊断可答性与四种评价方法 & \ref{subsec:diagnostics} & \pageref{subsec:diagnostics} \\
+定义见证中的参考谓词 & \ref{subsec:definition-witness} & \pageref{subsec:definition-witness} \\
+记录通过的结果编码 & \ref{subsec:pass-coding} & \pageref{subsec:pass-coding} \\
+任务等权与边等权变化 & \ref{subsec:task-weighting} & \pageref{subsec:task-weighting} \\
+任务层面的配对 t 计算 & \ref{subsec:paired-t-explanation} & \pageref{subsec:paired-t-explanation} \\
+任务整群参考区间 & \ref{subsec:cluster-resampling} & \pageref{subsec:cluster-resampling} \\
+零诊断差值与未定义的 t & \ref{subsec:zero-differences} & \pageref{subsec:zero-differences} \\
+不一致编译配对与精确 McNemar 检验 & \ref{subsec:mcnemar} & \pageref{subsec:mcnemar} \\
+风险行、风险集、累计通过与退出 & \ref{subsec:risk-counts} & \pageref{subsec:risk-counts} \\
+已观察首步组与后续步骤组 & \ref{subsec:first-later} & \pageref{subsec:first-later} \\
+两组模型、赔率比与任务协方差 & \ref{subsec:two-group} & \pageref{subsec:two-group} \\
+工作似然及其限制 & \ref{subsec:robust-covariance} & \pageref{subsec:robust-covariance} \\
+使用后续观察进行筛选 & \ref{subsec:later-selection} & \pageref{subsec:later-selection} \\
+\end{longtable}
+\normalsize
+\section{来源与相对目录}
+\label{sec:sources}
+报告及主要冻结分析材料按\href{https://github.com/Kind-NK-Hill/review-history-evaluation}{评估仓库}的目录组织。以下路径相对于随附源稿包或仓库根目录；\artifactpath{evidence/SOURCE_MAP.json} 将副本与原材料的相对来源和哈希对应起来。该映射用于核对来源，不把文件一致性当成科学有效性。
+
+\begingroup
+\raggedright
+\begin{description}[leftmargin=1.2em,style=nextline]
+\item[实际工作与留档。] \artifactpath{evidence/workflow/workflow.md} 与 \artifactpath{evidence/workflow/artifacts.md} 保留流程和材料说明。它们支持编写、构建、审核、修改及留档的背景，不意味着每条历史记录都遵循同一时期的规则。
+\item[原始相邻关系。] \artifactpath{evidence/history/main_adjacency_partition.csv} 和 \artifactpath{evidence/history/EDA1_FINDINGS.md} 记录原相邻关系成员与时间歧义口径。\artifactpath{evidence/history/retain_original_adjacency.py.txt} 是原始程序的相关节选。
+\item[连接分类与片段重建。] \artifactpath{evidence/history/REPAIR_TRAJECTORY_ARCHITECTURE_v3.md} 说明规则；\artifactpath{evidence/history/classify_role.py.txt} 与 \artifactpath{evidence/history/join_segments.py.txt} 保留分类和拼接代码节选。\artifactpath{evidence/history/transition_role_summary.csv} 与 \artifactpath{evidence/history/episode_attempt_distribution.csv} 提供相应汇总计数。源码节选供查阅，不是可单独运行的全历史收集器。
+\item[465 条边的配对分析。] \artifactpath{analysis/inputs/edge/edge_view.jsonl}、\artifactpath{analysis/inputs/edge/review_events.jsonl} 及同目录的 \artifactpath{manifest.json} 是冻结输入。\artifactpath{analysis/edge_statistics.py} 对应计算，\artifactpath{analysis/edge_statistics.json} 保存结果。
+\item[230 个失败起点的过程分析。] \artifactpath{analysis/inputs/process/episodes.json} 保存全部 262 个完整片段，配套清单绑定输入。\artifactpath{analysis/process_analysis.py} 中的 \code{derive} 先选失败起点，再截取到首次通过或片段末端。结果分别位于 \artifactpath{analysis/process_cohort.csv}、\artifactpath{analysis/process_risk_rows.csv}、\artifactpath{analysis/process_curve.csv} 与 \artifactpath{analysis/process_statistics.json}。
+\item[编译与统计依赖。] 报告入口为 \artifactpath{latex/en/main.tex} 和 \artifactpath{latex/zh/main.tex}；图位于 \artifactpath{latex/figures/}。\artifactpath{build_reports.py} 与 \artifactpath{README.md} 说明 Tectonic 和字体要求。统计复算的库版本位于 \artifactpath{analysis/requirements.txt}；编译报告本身不需要运行统计或 Lean 实验。
+\end{description}
+\endgroup
+
+本源稿包提供重建报告和复算上述统计投影所需的材料，并非全部历史档案的副本。选定 Lean 执行、定义见证和布尔对照的计数来自此前保留的核查；本版没有重新执行。其完整历史执行证据仍归属于前版证据归档，不能由这里的 LaTeX 构建记录替代。复现统计投影也不等于重新验证每一次历史审核。
