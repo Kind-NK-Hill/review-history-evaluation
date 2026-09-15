@@ -1,0 +1,245 @@
+你是本候选唯一必要裁决者，role输出adjudicator。先独立核查候选，随后完整读取reevaluation/OWN_INITIAL_REVIEWS.json、CROSS_CANDIDATE_CHECK.json、DELIVERY_EVIDENCE_SCOPE.json与original_delivery全部实际原交付资料。此前盲评视图省略了部分原说明文件；不得把视图缺失当作作者未交付。依统一规则裁决Std/Family、文档与源码分项，明确解决先前意见差异，不把票数当真理。不得再申请第二次裁决。每个引用优先用真实的一行短原文。
+你是独立数学形式化评审。全部只读输入在 /endpoint/input；臂和旧意见隐藏。先用container_exec完整读取 source/SOURCE.tex、task_contract/TASK.zh-CN.md、共同规则与reevaluation/RULES.json，再读完整五目标候选及允许支持。分别按Std标准柯西、Family任意共同位置与正尺度核查全部12义务。无参数Cauchy的量词歧义不能用旧裁决作唯一释义。其余四目标亦须完整核查；数学自身正确、源范围、证明路线、接口和交付分列。任务允许两应用合法替代证明，但唯一性目标的反演/稠密连续点/测度确定路线与本组新分析支持必须检查。禁止新求解或修改文件。
+最后只输出严格JSON，confidence用0至1数字。每项确定意见附真实相对路径、有效行号和该范围中连续存在的短引用；优先一行短引用，不能转写LaTeX、增删美元符号、把字面反斜线n当换行或拼接字段。无法确认标unresolved，不假造引文。
+封套：{"request_id": "h1-r1-candidate-ad3cbe004a3a-adjudicator", "candidate_id": "candidate-ad3cbe004a3a", "role": "adjudicator"}
+结构：{
+  "schema": "consistency.h1.review.v1",
+  "request_id": "COPY_REQUEST_ID",
+  "candidate_id": "COPY_CANDIDATE_ID",
+  "role": "adjudicator",
+  "confidence": 0.95,
+  "source_reading": {
+    "Cauchy_quantification": "standard_explicit|general_explicit|ambiguous|unresolved",
+    "reason": "冻结源文和任务的依据；不引用旧标签作为定义",
+    "evidence": [
+      {
+        "path": "task_contract/TASK.zh-CN.md",
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "连续短原文"
+      }
+    ]
+  },
+  "dimensions": {
+    "mathematics": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "public_premises": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "route_Std": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "route_Family": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "interface": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "delivery": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    }
+  },
+  "contract_responsibility": {
+    "status": "clear|ambiguous|unsatisfiable|unresolved",
+    "reason": "说明"
+  },
+  "obligations": [
+    {
+      "id": "E1",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "I1",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "I3",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "I4",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "U1",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "C1",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "Z1",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "Z2",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "P1",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    },
+    {
+      "id": "D1",
+      "status_Std": "pass|fail|unresolved",
+      "status_Family": "pass|fail|unresolved",
+      "derivation_class": "candidate_proof|general_foundation|delegated_target_answer|standard_only|location_scale_family|other",
+      "reason": "逐项分析",
+      "evidence": [
+        {
+          "path": "candidate/relative-file.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "连续短代码"
+        }
+      ]
+    }
+  ],
+  "overall_Std": "pass|fail|unresolved",
+  "overall_Family": "pass|fail|unresolved",
+  "summary": "完整候选与范围敏感性",
+  "limitations": []
+}

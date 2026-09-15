@@ -1,4 +1,1 @@
-# Preserve the bytes of frozen inputs and the scripts bound by PUBLIC_INPUTS.json.
 * -text
-*.pdf binary
-*.png binary

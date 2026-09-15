@@ -1,0 +1,1259 @@
+[
+  {
+    "run_id": "r2-h1-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_vN6AVqlDlRLEMSfulVKe2zBx",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 24,
+    "need_zh": "用已有三角函数界证明单位圆上复指数到 1 的距离不超过实参数绝对值。",
+    "linked_need": "r2-h1-c-exp-bound",
+    "context_kind": "implementation",
+    "feedback_zh": "已写入 thm_9_4，但 Complex.norm_exp_I_mul_ofReal_sub_one_le 不存在。",
+    "actions": [
+      {
+        "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_l0pzywKquES9lgCItAgu7FoR",
+        "action": "read_or_search",
+        "explanation_zh": "阅读界估计与复三角函数的相应源码，确定该界位于 Real 命名空间。"
+      },
+      {
+        "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_QFwb7YatsZb2S7MPARkdSC7V",
+        "action": "changed_namespace",
+        "explanation_zh": "把 Complex 前缀改为 Real；同次直接 Lean 检查和目标构建均通过。"
+      },
+      {
+        "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_jUyo6NeCDp9ynrHobxJ89hZ4",
+        "action": "rechecked",
+        "explanation_zh": "再次执行目标及工程构建，返回明确完成。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_QFwb7YatsZb2S7MPARkdSC7V",
+    "resolution_zh": "同一条界估计在改正命名空间后通过检查。该次后续 git diff 报错不否定此前明确完成的 Lean 检查。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-h1-c/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean",
+        "line": 14,
+        "detail_zh": "最终证明直接把 Real.norm_exp_I_mul_ofReal_sub_one_le 作为 using 的证明项。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_vN6AVqlDlRLEMSfulVKe2zBx",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_l0pzywKquES9lgCItAgu7FoR",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_QFwb7YatsZb2S7MPARkdSC7V",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_jUyo6NeCDp9ynrHobxJ89hZ4"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "只涉及 thm_9_4 的局部义务，不能把另一作者后续完成的反演证明归因给这次修正。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_e3nOfZdQu3tIVIHVaYcyvAcl"
+    ]
+  },
+  {
+    "run_id": "r2-h1-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_SISmrWeLrPxy3VR50yTeNI6P",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 17,
+    "need_zh": "寻找复指数与 1 的差的范数界，完成 thm_9_4。",
+    "linked_need": "r2-h1-c-exp-bound",
+    "context_kind": "retrieval",
+    "feedback_zh": "按 norm/exp/sub-one 组合关键词检索，返回复三角函数恒等式和相关界估计源码位置。",
+    "actions": [
+      {
+        "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_l0pzywKquES9lgCItAgu7FoR",
+        "action": "read_or_search",
+        "explanation_zh": "精读相关界估计源码，辨认真实命名空间。"
+      },
+      {
+        "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_QFwb7YatsZb2S7MPARkdSC7V",
+        "action": "changed_namespace",
+        "explanation_zh": "修正 Real 前缀并直接检查界估计证明，通过。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_QFwb7YatsZb2S7MPARkdSC7V",
+    "resolution_zh": "关键词检索、精读与实际引用形成同一条界估计的可观察过程。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-h1-c/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean",
+        "line": 14,
+        "detail_zh": "最终直接引用检索后确认的 Real.norm_exp_I_mul_ofReal_sub_one_le。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_SISmrWeLrPxy3VR50yTeNI6P",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_l0pzywKquES9lgCItAgu7FoR",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_QFwb7YatsZb2S7MPARkdSC7V"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "与首次诊断共享同一需求，不能当成两次独立恢复。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_e3nOfZdQu3tIVIHVaYcyvAcl"
+    ]
+  },
+  {
+    "run_id": "r2-l1-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_SvrBiEHgQWF6PLwnfsrU6itX",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 33,
+    "need_zh": "构造创新项部分和的鞅证明，连接自然滤过、可积性、适应性与一步条件期望等式。",
+    "linked_need": "r2-l1-c-innovation-martingale",
+    "context_kind": "implementation",
+    "feedback_zh": "初稿在部分和递推、零函数/坐标可测性、有限和可积性及条件期望等式处报告未解目标或类型不匹配。",
+    "actions": [
+      {
+        "event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_w8gGdFOX5YbdIKUXi2iqOZYc",
+        "action": "read_or_search",
+        "explanation_zh": "对照当前文件与条件期望 Basic 源码。"
+      },
+      {
+        "event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_KooTC7AFKvQyZItb6Lm6YCz6",
+        "action": "changed_query",
+        "explanation_zh": "进一步查可测空间单调性与有限和可积性接口。"
+      },
+      {
+        "event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_8VgOccvUXMgI30zWrbddNi8t",
+        "action": "changed_proof",
+        "explanation_zh": "实际替换证明，修正多个递推和可测性目标；仍有实例问题。"
+      },
+      {
+        "event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_w5nIbAKOFmnserAsKAxn1STC",
+        "action": "changed_proof",
+        "explanation_zh": "继续处理可测空间实例，剩余普通等式与几乎处处等式组合问题。"
+      },
+      {
+        "event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_0jwy02Hvp0ZVBST77Rzmf5lJ",
+        "action": "rechecked",
+        "explanation_zh": "用 EventuallyEq.of_eq 包装普通等式后直接检查同一目标文件，退出 0 且无诊断。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_0jwy02Hvp0ZVBST77Rzmf5lJ",
+    "resolution_zh": "同一鞅构造文件通过直接 Lean 检查。",
+    "final_adoption": "final_source_present",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+        "line": 147,
+        "detail_zh": "最终一步条件期望证明保留 Filter.EventuallyEq.of_eq，连接前述等式种类修正。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+        "line": 152,
+        "detail_zh": "最终保留公开 prob_13_9 鞅结论。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_SvrBiEHgQWF6PLwnfsrU6itX",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_w8gGdFOX5YbdIKUXi2iqOZYc",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_KooTC7AFKvQyZItb6Lm6YCz6",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_8VgOccvUXMgI30zWrbddNi8t",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_w5nIbAKOFmnserAsKAxn1STC",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_0jwy02Hvp0ZVBST77Rzmf5lJ"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "中间多次补丁命令未成功写入，不能按一次命令就记一次有效证明修改。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_UpVwVcp1L3A4wlOP3QyfyM8C",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_P6WuP27zyU0oBPRlhWGJi1k1",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_07SEv4wiiqu2vQXdWQm6VGv7",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_tU5GzdMgpiwD68kegI6CExrq"
+    ]
+  },
+  {
+    "run_id": "r2-l1-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_B1H4uQVPfyYjqkktXGJP3qdd",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 15,
+    "need_zh": "寻找创新项条件期望为零、部分和可积与适应所需条件期望性质。",
+    "linked_need": "r2-l1-c-innovation-martingale",
+    "context_kind": "retrieval",
+    "feedback_zh": "主动按 condExp、可积性、强可测性和加减法搜索数学库与项目代码。",
+    "actions": [
+      {
+        "event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_IfnKBkLqK3dKB9aE47wwo51C",
+        "action": "changed_query",
+        "explanation_zh": "收窄到特定条件期望声明，取得可积性、加减法及迭代条件期望的源码位置和使用示例。"
+      },
+      {
+        "event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_0jwy02Hvp0ZVBST77Rzmf5lJ",
+        "action": "rechecked",
+        "explanation_zh": "相关接口已用于目标鞅构造，该文件随后直接检查通过。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_IfnKBkLqK3dKB9aE47wwo51C",
+    "resolution_zh": "找到了可用的条件期望接口，后续可观察到实际引用。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+        "line": 118,
+        "detail_zh": "最终直接调用 condExp_sub。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+        "line": 122,
+        "detail_zh": "最终直接调用 condExp_condExp_of_le。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_B1H4uQVPfyYjqkktXGJP3qdd",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_IfnKBkLqK3dKB9aE47wwo51C",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_0jwy02Hvp0ZVBST77Rzmf5lJ"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "首次宽查询包含大量非目标结果；只为此处可核对的声明报告采用，不把全部匹配行计作有效材料。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_UpVwVcp1L3A4wlOP3QyfyM8C",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_P6WuP27zyU0oBPRlhWGJi1k1",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_07SEv4wiiqu2vQXdWQm6VGv7",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_tU5GzdMgpiwD68kegI6CExrq"
+    ]
+  },
+  {
+    "run_id": "r2-l2-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_4VnSLembATwYP3Vp4GMGEPzu",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 24,
+    "need_zh": "确认平方可积条件下协方差积分表达与方差相加所需接口。",
+    "linked_need": "r2-l2-c-variance-interfaces",
+    "context_kind": "probe",
+    "feedback_zh": "Check.lean 一次检查多个名称，多数返回类型； covariance_eq_integral 不存在。",
+    "actions": [
+      {
+        "event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_avBPlVmIyM9hwKpj2oeKCDCJ",
+        "action": "read_or_search",
+        "explanation_zh": "阅读 Covariance 与 Variance 源码，得到 covariance_eq_sub 的真实类型。"
+      },
+      {
+        "event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_ZQjG89CI4t5NIsWU2CJln3o5",
+        "action": "rechecked",
+        "explanation_zh": "随后方差目标文件使用已有协方差接口及中心矩转换，通过直接检查。"
+      },
+      {
+        "event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_WWZZmoexOyXFHbAL8repzGH7",
+        "action": "rechecked",
+        "explanation_zh": "旧 Check.lean 再查时仍含 covariance_eq_integral 负诊断；它并未被改成全通过的探针。"
+      }
+    ],
+    "progress": "substituted",
+    "end_event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_ZQjG89CI4t5NIsWU2CJln3o5",
+    "resolution_zh": "证明需要由 covariance_eq_sub 等现有接口满足；原猜测名称没有变成有效名称，旧探针也没有全部通过。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "line": 21,
+        "detail_zh": "最终 centered_cross_integral_eq_zero 明确重写 covariance_eq_sub。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_4VnSLembATwYP3Vp4GMGEPzu",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_avBPlVmIyM9hwKpj2oeKCDCJ",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_ZQjG89CI4t5NIsWU2CJln3o5",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_WWZZmoexOyXFHbAL8repzGH7"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "substituted 指接口选择被替代，不表示原始 #check 被修复。目标通过只能连接已展示的协方差义务。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_YZlij5ychoBJUw82cShL2xO9",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_9HnOvTgTc4o5Q1gYqOfZTuf8"
+    ]
+  },
+  {
+    "run_id": "r2-l2-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_OhGC09c8RtDWdj7m1RtRPD0J",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 15,
+    "need_zh": "寻找不相关变量和的方差公式及依概率收敛估计所需积分接口。",
+    "linked_need": "r2-l2-c-variance-interfaces",
+    "context_kind": "retrieval",
+    "feedback_zh": "在读取相关协方差/方差定义后，主动搜索 variance-add、有限和积分与偏差概率收敛接口。",
+    "actions": [
+      {
+        "event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_4VnSLembATwYP3Vp4GMGEPzu",
+        "action": "read_or_search",
+        "explanation_zh": "用 #check 确认若干类型；同时发现 covariance_eq_integral 是错误名称。"
+      },
+      {
+        "event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_avBPlVmIyM9hwKpj2oeKCDCJ",
+        "action": "read_or_search",
+        "explanation_zh": "精读协方差源码，取得 covariance_eq_sub 的假设和结论。"
+      },
+      {
+        "event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_ZQjG89CI4t5NIsWU2CJln3o5",
+        "action": "rechecked",
+        "explanation_zh": "使用真实接口完成方差目标的局部复验。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_avBPlVmIyM9hwKpj2oeKCDCJ",
+    "resolution_zh": "从多接口检索推进到可用协方差表达，并在最终证明中直接使用。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "line": 21,
+        "detail_zh": "最终直接重写 covariance_eq_sub。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_OhGC09c8RtDWdj7m1RtRPD0J",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_4VnSLembATwYP3Vp4GMGEPzu",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_avBPlVmIyM9hwKpj2oeKCDCJ",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_ZQjG89CI4t5NIsWU2CJln3o5"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "同一需求内旧探针仍失败，不能用目标通过倒推每个查询名称正确。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_YZlij5ychoBJUw82cShL2xO9",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_9HnOvTgTc4o5Q1gYqOfZTuf8"
+    ]
+  },
+  {
+    "run_id": "r2-l3-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_AsVUfMdvDMG7MkfO8z4Qo6di",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 46,
+    "need_zh": "以负部函数和受控收敛证明 Scheffé 型积分绝对差收敛。",
+    "linked_need": "r2-l3-c-scheffe-proof",
+    "context_kind": "implementation",
+    "feedback_zh": "prob_7_6 初稿在几乎处处极限的表达、max 的可测性、代数分解和积分重写处出现类型或目标错误。",
+    "actions": [
+      {
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_DfpXb0g2jQXpFI4uFFkKbVlc",
+        "action": "changed_proof",
+        "explanation_zh": "修改极限、可测性及积分表达，错误缩小到局部代数/重写目标。"
+      },
+      {
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_ONZWWvdpWgZdkgjjsRf6HjQ7",
+        "action": "changed_proof",
+        "explanation_zh": "补充代数等式处理；积分重写仍失败。"
+      },
+      {
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_d3vOG0pzI69Wc7mAUAnVo3UZ",
+        "action": "changed_proof",
+        "explanation_zh": "先建立 integral_add 等式，再在等式中尝试拆分积分；函数减法表达仍不匹配。"
+      },
+      {
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_Vjx4JuSsuepdjVFT7h0rh9AO",
+        "action": "rechecked",
+        "explanation_zh": "先化简 Pi.sub_apply 后重写；直接检查同一文件仅余无关未用变量警告。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_Vjx4JuSsuepdjVFT7h0rh9AO",
+    "resolution_zh": "Scheffé 辅助结论文件通过检查，之后的高斯分布结论是另一阶段。",
+    "final_adoption": "final_source_present",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+        "line": 73,
+        "detail_zh": "最终在 hadd 中先化简 Pi.sub_apply，随后执行 integral_sub/常数倍积分重写。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_AsVUfMdvDMG7MkfO8z4Qo6di",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_DfpXb0g2jQXpFI4uFFkKbVlc",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_ONZWWvdpWgZdkgjjsRf6HjQ7",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_d3vOG0pzI69Wc7mAUAnVo3UZ",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_Vjx4JuSsuepdjVFT7h0rh9AO"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "不把后续高斯收敛目标的最终成功算作首段每次数学检索的成功。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_F5Jcd0pAcuY8hTAqdM29AHj7",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_jnXHUcRFqbTtJvzH3Rs8y5we",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_HHiqY7WBPNgpicTNiCtFHMaF",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_mXHHElfjOuTMQxzalnSVRaM9",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_9yv562gPQwRTZLLO2KSBy9WU",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_FQjvSlaoS5IvyKbk9plX2cBY",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_muzajkKFLnAKuToC6SawSguD",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_1GQLii6dJ9VoNHH6dWezoYVb"
+    ]
+  },
+  {
+    "run_id": "r2-l3-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_a3ktlD6yIkm0fLWRMV1tUPIO",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 17,
+    "need_zh": "为密度与分布收敛例题查找 Scheffé、高斯分布和退化极限接口。",
+    "linked_need": "r2-l3-c-density-gaussian-retrieval",
+    "context_kind": "retrieval",
+    "feedback_zh": "首次主动查询包含 Scheffé、Gaussian、pdf、Dirac 和总变差关键词，返回多条不同方向的结果。",
+    "actions": [
+      {
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_VpCtijHzFRi1Pf1Cx9vFcPPI",
+        "action": "changed_query",
+        "explanation_zh": "收窄到高斯分布，阅读零方差与密度等声明。"
+      },
+      {
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_vM13tTF3mGxDqBtiaClXxiLv",
+        "action": "changed_query",
+        "explanation_zh": "继续查特征函数收敛判据。"
+      },
+      {
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_kEKJy0G2C42zFj0y1fH5b0d0",
+        "action": "read_or_search",
+        "explanation_zh": "精读 charFun_gaussianReal 的完整类型与证明。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_kEKJy0G2C42zFj0y1fH5b0d0",
+    "resolution_zh": "高斯分布子需求找到可用的特征函数公式，最终实现可见直接引用。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+        "line": 165,
+        "detail_zh": "最终高斯分布收敛证明直接以 simp_rw 改写 charFun_gaussianReal。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+        "line": 161,
+        "detail_zh": "最终明确应用特征函数收敛判据。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_a3ktlD6yIkm0fLWRMV1tUPIO",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_VpCtijHzFRi1Pf1Cx9vFcPPI",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_vM13tTF3mGxDqBtiaClXxiLv",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_kEKJy0G2C42zFj0y1fH5b0d0"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "起点是一项多方向检索；采用主张只覆盖后来确认的高斯特征函数分支，不包括首轮每个关键词，也不说明整个题组由该检索导致成功。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_F5Jcd0pAcuY8hTAqdM29AHj7",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_jnXHUcRFqbTtJvzH3Rs8y5we",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_HHiqY7WBPNgpicTNiCtFHMaF",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_mXHHElfjOuTMQxzalnSVRaM9",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_9yv562gPQwRTZLLO2KSBy9WU",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_FQjvSlaoS5IvyKbk9plX2cBY",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_muzajkKFLnAKuToC6SawSguD",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_1GQLii6dJ9VoNHH6dWezoYVb"
+    ]
+  },
+  {
+    "run_id": "r2-l4-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_o5VN11l0Isgwlqj56TgAABYi",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 20,
+    "need_zh": "查清总变差积分表达与泊松例题需要的积分、级数和分布接口。",
+    "linked_need": "r2-l4-c-tv-integral-interfaces",
+    "context_kind": "probe",
+    "feedback_zh": "目标路径暂时装入一批 #check；integral_abs、integrableOn_iff_integrable_indicator、tsum_sub、tsum_abs 及若干泊松/指数级数名称不存在，同时许多其它名称已返回类型。",
+    "actions": [
+      {
+        "event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_t9cTx4RochC6eDxbKetxXcey",
+        "action": "changed_query",
+        "explanation_zh": "改查正负部分积分、绝对值积分及指数级数相关源码。"
+      },
+      {
+        "event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_q6C3aK2nPZEpBZRvq32hZmle",
+        "action": "read_or_search",
+        "explanation_zh": "找到并检查 integral_add_compl 等真实接口；同次其它猜测名称仍失败。"
+      },
+      {
+        "event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_nVjQ8Oc9JfnX4aUlUTLjoRrO",
+        "action": "rechecked",
+        "explanation_zh": "后续实数总变差积分证明经过指标函数条件修正，通过直接 Lean 检查。"
+      }
+    ],
+    "progress": "implementation_advanced",
+    "end_event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_nVjQ8Oc9JfnX4aUlUTLjoRrO",
+    "resolution_zh": "批量查询中的积分子需求发展为通过检查的总变差证明；这不是原批量查询全部名称得到修复。",
+    "final_adoption": "unknown",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l4-c/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+        "line": 20,
+        "detail_zh": "最终证明确实用 integral_add_compl，但不能由此确认整批检索结果逐条采用。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_o5VN11l0Isgwlqj56TgAABYi",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_t9cTx4RochC6eDxbKetxXcey",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_q6C3aK2nPZEpBZRvq32hZmle",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_nVjQ8Oc9JfnX4aUlUTLjoRrO"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "该路径先放探针、后放证明；不能把同路径后来的退出 0 当成原 #check 清单全通过。检索起点与本条是同一事件，两个样本不得相加。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_8lS3jo1FCe8EgCcnFKdLajG8"
+    ]
+  },
+  {
+    "run_id": "r2-l4-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_o5VN11l0Isgwlqj56TgAABYi",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 20,
+    "need_zh": "查清总变差积分表达与泊松例题需要的积分、级数和分布接口。",
+    "linked_need": "r2-l4-c-tv-integral-interfaces",
+    "context_kind": "probe",
+    "feedback_zh": "实际运行批量 #check，同时返回真实声明类型和不存在的名称。此前失败的补丁没有执行这些数学查询。",
+    "actions": [
+      {
+        "event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_t9cTx4RochC6eDxbKetxXcey",
+        "action": "changed_query",
+        "explanation_zh": "根据接口缺失改查正负部分积分与级数源码。"
+      },
+      {
+        "event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_q6C3aK2nPZEpBZRvq32hZmle",
+        "action": "read_or_search",
+        "explanation_zh": "精确检查 integral_add_compl，得到其可测集合和可积函数假设。"
+      },
+      {
+        "event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_nVjQ8Oc9JfnX4aUlUTLjoRrO",
+        "action": "rechecked",
+        "explanation_zh": "相关总变差积分证明后来直接检查通过。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_q6C3aK2nPZEpBZRvq32hZmle",
+    "resolution_zh": "可确认积分子需求找到并采用了 integral_add_compl。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l4-c/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+        "line": 20,
+        "detail_zh": "最终直接调用 integral_add_compl 拆分集合及其补集的积分。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_o5VN11l0Isgwlqj56TgAABYi",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_t9cTx4RochC6eDxbKetxXcey",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_q6C3aK2nPZEpBZRvq32hZmle",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_nVjQ8Oc9JfnX4aUlUTLjoRrO"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "与首次诊断为同一事件。一次批量查询存在多个成败不同的接口，不能给整批统一判数学成功。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_8lS3jo1FCe8EgCcnFKdLajG8"
+    ]
+  },
+  {
+    "run_id": "r2-l5-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09c55-3ef3-7bc1-816f-0a278c421933:call_VRjKNcd2ptqpS8tPevDJiTuO",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 30,
+    "need_zh": "证明任意耦合的不一致概率控制事件概率差，进而控制总变差。",
+    "linked_need": "r2-l5-c-coupling-tv-lower-bound",
+    "context_kind": "implementation",
+    "feedback_zh": "coupling_core 在 ENNReal.toReal_mono 的有限性实参以及上确界集合的空集见证处类型不匹配或化简无进展。",
+    "actions": [
+      {
+        "event_id": "01a09c55-3ef3-7bc1-816f-0a278c421933:call_V8oPRzG6Gk1TGR2BQ4lqgF6M",
+        "action": "read_or_search",
+        "explanation_zh": "探查相关 ENNReal 与测度实数值接口，部分猜测名称仍不存在。"
+      },
+      {
+        "event_id": "01a09c55-3ef3-7bc1-816f-0a278c421933:call_eIb96oO0TXlcuujf9R6FEogq",
+        "action": "changed_proof",
+        "explanation_zh": "改用测度值之和不为无穷的证明，并明确写出可测空集见证；同次直接检查通过。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09c55-3ef3-7bc1-816f-0a278c421933:call_eIb96oO0TXlcuujf9R6FEogq",
+    "resolution_zh": "耦合事件差与总变差上界文件通过直接检查。",
+    "final_adoption": "final_source_present",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/coupling_core.lean",
+        "line": 37,
+        "detail_zh": "最终保留 coupling_event_difference_le_mismatch。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/coupling_core.lean",
+        "line": 76,
+        "detail_zh": "最终保留总变差不超过耦合不一致概率的公开结论。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_VRjKNcd2ptqpS8tPevDJiTuO",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_V8oPRzG6Gk1TGR2BQ4lqgF6M",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_eIb96oO0TXlcuujf9R6FEogq"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "首次数学检索偏向构造最大耦合的乘积/归一化接口，和此处误差上界是不同义务，使用不同 linked_need。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_4hEjLmRiGghFXQweRKtaTOAU",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_nt1lOLkF132tL4goU7r6opP7"
+    ]
+  },
+  {
+    "run_id": "r2-l5-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09c55-3ef3-7bc1-816f-0a278c421933:call_qlr3ZPZulHvBD7vMlmU9KxTh",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 15,
+    "need_zh": "寻找归一化测度、乘积测度边缘与对角推前接口，以构造最大耦合。",
+    "linked_need": "r2-l5-c-residual-product-coupling",
+    "context_kind": "retrieval",
+    "feedback_zh": "主动搜索 normalizeMeasure、prod/map 应用和对角相关名称；初轮宽查询中有大量非目标匹配。",
+    "actions": [
+      {
+        "event_id": "01a09c55-3ef3-7bc1-816f-0a278c421933:call_fQeZbx8SreIGGOfOuuZS7e63",
+        "action": "changed_query",
+        "explanation_zh": "收窄乘积与对角线，并阅读 FiniteMeasureProd 中的乘积边缘定理。"
+      },
+      {
+        "event_id": "01a09c55-3ef3-7bc1-816f-0a278c421933:call_i6JpQXA9B7dt4QH1qwpB9NBn",
+        "action": "read_or_search",
+        "explanation_zh": "实际 #check Measure.map_fst_prod、map_snd_prod 等声明，确认普通测度的可用类型；其它 withDensity 名称失败。"
+      },
+      {
+        "event_id": "01a09c55-3ef3-7bc1-816f-0a278c421933:call_43w8G2o7HZiSsfjXSNVvVUNR",
+        "action": "rechecked",
+        "explanation_zh": "相应最大耦合构造文件经过改写后直接检查通过。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09c55-3ef3-7bc1-816f-0a278c421933:call_i6JpQXA9B7dt4QH1qwpB9NBn",
+    "resolution_zh": "可确认乘积测度边缘接口存在，后续构造直接使用。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/max_coupling_core.lean",
+        "line": 106,
+        "detail_zh": "最终边缘证明直接调用 Measure.map_fst_prod。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/max_coupling_core.lean",
+        "line": 109,
+        "detail_zh": "另一边缘证明直接调用 Measure.map_snd_prod。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_qlr3ZPZulHvBD7vMlmU9KxTh",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_fQeZbx8SreIGGOfOuuZS7e63",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_i6JpQXA9B7dt4QH1qwpB9NBn",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_43w8G2o7HZiSsfjXSNVvVUNR"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "不把 FiniteMeasure 的同名定理与 Measure 的声明混为一条；实际 #check 确认普通 Measure 类型后最终使用。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_4hEjLmRiGghFXQweRKtaTOAU",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_nt1lOLkF132tL4goU7r6opP7"
+    ]
+  },
+  {
+    "run_id": "r2-l6-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09c71-3b50-7c61-8569-cd8e3899f997:call_5Wj4zpzS0HFb9Nk3fBpN8LqA",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 39,
+    "need_zh": "在独立噪声模型中展开一、二传感器均方误差并建立二次式。",
+    "linked_need": "r2-l6-c-sensor-mse-implementation",
+    "context_kind": "implementation",
+    "feedback_zh": "初稿在中心化独立变量的复合参数、可测性证明与积分多项式展开处报类型/目标错误。",
+    "actions": [
+      {
+        "event_id": "01a09c71-3b50-7c61-8569-cd8e3899f997:call_fCjwa7vtNbnQ178Sz2yoqqEZ",
+        "action": "changed_proof",
+        "explanation_zh": "修正独立性复合和部分积分表达，仍有后续展开目标。"
+      },
+      {
+        "event_id": "01a09c71-3b50-7c61-8569-cd8e3899f997:call_zWHSBHbsdZoiyJr8Sdrg6Z8f",
+        "action": "rechecked",
+        "explanation_zh": "单独代数试验通过，只覆盖该小等式，尚非目标文件通过。"
+      },
+      {
+        "event_id": "01a09c71-3b50-7c61-8569-cd8e3899f997:call_lNWQb13K6hnSoqaoA0aPIrR6",
+        "action": "changed_proof",
+        "explanation_zh": "把长积分拆分为明确的中间等式后，目标文件直接检查通过，仅余未用变量警告。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09c71-3b50-7c61-8569-cd8e3899f997:call_lNWQb13K6hnSoqaoA0aPIrR6",
+    "resolution_zh": "均方误差展开文件的当时版本通过检查。",
+    "final_adoption": "final_source_present",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+        "line": 159,
+        "detail_zh": "最终保留逐层 integral_sub 的 eS 中间等式。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+        "line": 107,
+        "detail_zh": "最终保留二传感器均方误差二次式结论。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_5Wj4zpzS0HFb9Nk3fBpN8LqA",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_fCjwa7vtNbnQ178Sz2yoqqEZ",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_zWHSBHbsdZoiyJr8Sdrg6Z8f",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_lNWQb13K6hnSoqaoA0aPIrR6"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "不把代数临时试验通过提前当成整份目标证明通过。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_wyB8smxicQNxW9lzMQjfXiE4",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_zlMGAGfuRLfd4htwWSlaxVht"
+    ]
+  },
+  {
+    "run_id": "r2-l6-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09c71-3b50-7c61-8569-cd8e3899f997:call_zkXoSZbabQlVoogXVfiRcVyW",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 15,
+    "need_zh": "寻找独立高斯噪声的分布、二阶矩与混合矩接口。",
+    "linked_need": "r2-l6-c-gaussian-moment-interfaces",
+    "context_kind": "retrieval",
+    "feedback_zh": "同次查询含白名单词，但也主动按 HasLaw、gaussianReal、IndepFun、variance 和混合矩公式查源码，返回实际独立性与协方差用法。",
+    "actions": [
+      {
+        "event_id": "01a09c71-3b50-7c61-8569-cd8e3899f997:call_oINTw75PKx21fM1gcq23B6mg",
+        "action": "changed_query",
+        "explanation_zh": "进一步检索高斯分布的均值、方差和 MemLp 接口。"
+      },
+      {
+        "event_id": "01a09c71-3b50-7c61-8569-cd8e3899f997:call_Do1aURSG3lPT9iGxVE7u8031",
+        "action": "read_or_search",
+        "explanation_zh": "阅读分布相同及映射下 MemLp 的源码，取得 HasLaw.identDistrib。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09c71-3b50-7c61-8569-cd8e3899f997:call_Do1aURSG3lPT9iGxVE7u8031",
+    "resolution_zh": "找到了把高斯标准分布的二阶可积性转移到随机变量的声明。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+        "line": 365,
+        "detail_zh": "最终用 hN.identDistrib hid 建立同分布关系。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+        "line": 366,
+        "detail_zh": "最终直接使用 memLp_id_gaussianReal' 和同分布的 memLp_iff。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_zkXoSZbabQlVoogXVfiRcVyW",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_oINTw75PKx21fM1gcq23B6mg",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_Do1aURSG3lPT9iGxVE7u8031"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "medium",
+    "review_notes_zh": "选择边界需主代理复核：此调用同时检索元数据和具体数学代码。选入依据是主动数学名称与真实源码结果，不是白名单匹配。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_wyB8smxicQNxW9lzMQjfXiE4",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_zlMGAGfuRLfd4htwWSlaxVht"
+    ]
+  },
+  {
+    "run_id": "r2-l7-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09caa-43e5-7151-9324-35a356bfdbc1:call_I5mHcZVXaoMRY0rRS6V6EC4V",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 31,
+    "need_zh": "证明有限维向量几乎处处/依概率收敛等价于各坐标收敛，包括零维情况。",
+    "linked_need": "r2-l7-c-coordinate-equivalence",
+    "context_kind": "implementation",
+    "feedback_zh": "初稿在零维范数界、坐标可测性接口以及零维偏差事件和不等式处理上报告错误。",
+    "actions": [
+      {
+        "event_id": "01a09caa-43e5-7151-9324-35a356bfdbc1:call_StMuN9Dom4mhNCCgMZoXH9M5",
+        "action": "changed_proof",
+        "explanation_zh": "显式使用阈值为正、measurable_pi_iff 和空偏差事件证明；同次直接检查通过。"
+      },
+      {
+        "event_id": "01a09caa-43e5-7151-9324-35a356bfdbc1:call_8Vll7nVXG7LcmOJ4xES6yj6M",
+        "action": "other",
+        "explanation_zh": "后续按协调者的结构要求把原目标证明移动到 coordinate_convergence_support，目标入口改为导入共同支持链。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09caa-43e5-7151-9324-35a356bfdbc1:call_StMuN9Dom4mhNCCgMZoXH9M5",
+    "resolution_zh": "同一组坐标等价证明完成局部复验；后续可追踪的文件移动连接到最终源码。",
+    "final_adoption": "final_source_present",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/coordinate_convergence_support.lean",
+        "line": 26,
+        "detail_zh": "移动后的证明保留零维分支中利用 hε 的修正。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/coordinate_convergence_support.lean",
+        "line": 61,
+        "detail_zh": "移动后的证明保留 measurable_pi_iff 的坐标可测性修正。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_I5mHcZVXaoMRY0rRS6V6EC4V",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_StMuN9Dom4mhNCCgMZoXH9M5",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_8Vll7nVXG7LcmOJ4xES6yj6M",
+      "01a09ca9-7b1a-7471-9bdf-b4f5f7ece5c9:call_PMduvHuEBhgdyavQZRDs6nSk"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "采用判断来自明确移动事件及声明/证明体对应，不来自入口文件导入本身。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_9wWKhgoDBJdrzXhM6JNEniUL"
+    ]
+  },
+  {
+    "run_id": "r2-l7-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09caa-43e5-7151-9324-35a356bfdbc1:call_COS2SSTz7Xb8P4SL3XbI0Yh0",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 17,
+    "need_zh": "寻找教材依概率收敛与数学库依测度收敛的转换和连续映射工具。",
+    "linked_need": "r2-l7-c-in-measure-bridge",
+    "context_kind": "retrieval",
+    "feedback_zh": "主动按 TendstoInMeasure 和相关极限/复合关键词搜索数学库。",
+    "actions": [
+      {
+        "event_id": "01a09caa-43e5-7151-9324-35a356bfdbc1:call_3nNZ9JIW1UlCt7sB0IQcYi0W",
+        "action": "read_or_search",
+        "explanation_zh": "精读 ConvergenceInMeasure 的距离表述和相关定理，取得真实等价命题。"
+      },
+      {
+        "event_id": "01a09caa-43e5-7151-9324-35a356bfdbc1:call_m6EnSDi28L0UJeGIcuZaA1f7",
+        "action": "changed_query",
+        "explanation_zh": "继续查连续映射保持依测度收敛的接口。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09caa-43e5-7151-9324-35a356bfdbc1:call_3nNZ9JIW1UlCt7sB0IQcYi0W",
+    "resolution_zh": "找到了用距离偏差事件表述依测度收敛的接口，后续桥接证明直接引用。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/convergence_support.lean",
+        "line": 16,
+        "detail_zh": "最终桥接证明直接重写 tendstoInMeasure_iff_dist。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/convergence_support.lean",
+        "line": 28,
+        "detail_zh": "反向证明直接使用同一等价命题。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_COS2SSTz7Xb8P4SL3XbI0Yh0",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_3nNZ9JIW1UlCt7sB0IQcYi0W",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_m6EnSDi28L0UJeGIcuZaA1f7"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "与首个坐标证明诊断不是完全相同义务，不仅凭相同目标组绑定。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_9wWKhgoDBJdrzXhM6JNEniUL"
+    ]
+  },
+  {
+    "run_id": "r2-m1-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_PABt3TSItIhTJxJPeq0m9k62",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 38,
+    "need_zh": "将项目停过程定义和鞅定义连接到数学库，再证明停后仍为鞅及期望保持。",
+    "linked_need": "r2-m1-c-stopped-martingale",
+    "context_kind": "implementation",
+    "feedback_zh": "停过程对应的 WithTop 展开、负过程对应及初始时刻的简化未闭合。",
+    "actions": [
+      {
+        "event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_2VrvgIOl8jxCkSzJI6mkUT17",
+        "action": "changed_query",
+        "explanation_zh": "查 WithTop 去顶值与停过程负号对应接口。"
+      },
+      {
+        "event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_GETZW5L71btuZ2chVpucyU5X",
+        "action": "changed_proof",
+        "explanation_zh": "分情形改写去顶值并补负过程等式，减少错误。"
+      },
+      {
+        "event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_UvLUejqlNDGBpumOy95vUST7",
+        "action": "read_or_search",
+        "explanation_zh": "通过标准输入试验查询 WithTop 名称；保留负诊断。"
+      },
+      {
+        "event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_nwwIp7dsoNwT1UD0RUq9cSZQ",
+        "action": "changed_proof",
+        "explanation_zh": "继续修正，仍有不存在的 WithTop.coe_le_top。"
+      },
+      {
+        "event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_ryGHjuooiPVT3fkd81TkMsbE",
+        "action": "rechecked",
+        "explanation_zh": "改用通用 le_top 后同一目标直接检查通过。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_ryGHjuooiPVT3fkd81TkMsbE",
+    "resolution_zh": "停过程与鞅的转换及 thm_13_17 当时版本通过检查。",
+    "final_adoption": "final_source_present",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+        "line": 14,
+        "detail_zh": "最终保留项目与数学库停过程的相等引理。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+        "line": 77,
+        "detail_zh": "最终保留负停过程与停过程负值的显式对应。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_PABt3TSItIhTJxJPeq0m9k62",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_2VrvgIOl8jxCkSzJI6mkUT17",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_GETZW5L71btuZ2chVpucyU5X",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_UvLUejqlNDGBpumOy95vUST7",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_nwwIp7dsoNwT1UD0RUq9cSZQ",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_ryGHjuooiPVT3fkd81TkMsbE"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "后续 thm_13_18 可选停时的证明错误不并入这一义务。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_OmSSTKLtHfqFgz9Qm2TK3xCK",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_QrZT7idYlzgguqDyfrCDBXpl"
+    ]
+  },
+  {
+    "run_id": "r2-m1-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_VK0U99iG8jcMQ7iCG78rs03r",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 17,
+    "need_zh": "寻找停过程保持鞅性质与可选停时证明可用的数学库定理。",
+    "linked_need": "r2-m1-c-stopped-martingale",
+    "context_kind": "retrieval",
+    "feedback_zh": "在重读给定停时上游后，主动搜索 stopped/martingale/integral-tendsto 等性质。",
+    "actions": [
+      {
+        "event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_8fJdlFECCKQwurHjs78xKVNH",
+        "action": "changed_query",
+        "explanation_zh": "收窄到停过程的鞅/次鞅性质与可积性。"
+      },
+      {
+        "event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_xORhgk9PlRAPU2eJocoFjMEI",
+        "action": "read_or_search",
+        "explanation_zh": "阅读 OptionalStopping 中 Submartingale.stoppedProcess 的完整假设和证明。"
+      },
+      {
+        "event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_ryGHjuooiPVT3fkd81TkMsbE",
+        "action": "rechecked",
+        "explanation_zh": "相关目标在完成定义转换后直接检查通过。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09cbe-f828-7222-bed9-abfb1996c179:call_xORhgk9PlRAPU2eJocoFjMEI",
+    "resolution_zh": "找到停过程保持次鞅性质的可用定理，再由过程及负过程两侧构造鞅结论。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+        "line": 73,
+        "detail_zh": "最终直接调用 hXM.submartingale.stoppedProcess。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+        "line": 76,
+        "detail_zh": "最终对负过程再次调用该停过程接口。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_VK0U99iG8jcMQ7iCG78rs03r",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_8fJdlFECCKQwurHjs78xKVNH",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_xORhgk9PlRAPU2eJocoFjMEI",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_ryGHjuooiPVT3fkd81TkMsbE"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "不是简单找到一个名称就完成目标；项目与数学库定义转换是同需求内的实质后续工作。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_OmSSTKLtHfqFgz9Qm2TK3xCK",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_QrZT7idYlzgguqDyfrCDBXpl"
+    ]
+  },
+  {
+    "run_id": "r2-m2-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09cd5-3dba-7762-89e8-882aae0643d3:call_5by62U90GSPc0TjITnnToMBn",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 38,
+    "need_zh": "建立强大数律所需的中心化独立性及中心化四阶矩界辅助引理。",
+    "linked_need": "r2-m2-c-centered-fourth-moments",
+    "context_kind": "implementation",
+    "feedback_zh": "初稿在独立变量复合函数的参数类型、MemLp 的点值/函数表达以及绝对值四次方和积分界转换处失败。",
+    "actions": [
+      {
+        "event_id": "01a09cd5-3dba-7762-89e8-882aae0643d3:call_ExVWGcVCpc4YCVVnz3F8Tnz3",
+        "action": "changed_proof",
+        "explanation_zh": "显式给出自然数索引与实数函数参数；复验仍报 MemLp 表达不匹配，管道退出 0 不代表 Lean 通过。"
+      },
+      {
+        "event_id": "01a09cd5-3dba-7762-89e8-882aae0643d3:call_eTmgQJ2RuiGGaj6ZsUY8d9ix",
+        "action": "rechecked",
+        "explanation_zh": "经历类型和函数表达修正后，直接检查仅含当时辅助引理的目标文件通过。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09cd5-3dba-7762-89e8-882aae0643d3:call_eTmgQJ2RuiGGaj6ZsUY8d9ix",
+    "resolution_zh": "中心化独立性与四阶矩界的当时文件版本通过；主强大数律在后面继续增加。",
+    "final_adoption": "final_source_present",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+        "line": 30,
+        "detail_zh": "最终保留中心化保持独立的同名引理。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+        "line": 40,
+        "detail_zh": "最终保留中心化四阶矩上界引理。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_5by62U90GSPc0TjITnnToMBn",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_ExVWGcVCpc4YCVVnz3F8Tnz3",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_eTmgQJ2RuiGGaj6ZsUY8d9ix"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "文件路径虽已为 thm_11_7，第一次通过时尚未完成最后的强大数律声明，必须只报告辅助引理进展。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_cYqGxIdYkkP0MpWepZeK1S4Q",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_Lfqc04gs2gUO8pHCxYyvRMAQ",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_bKRV7czs8QT14JwVEjQn83BV"
+    ]
+  },
+  {
+    "run_id": "r2-m2-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09cd5-3dba-7762-89e8-882aae0643d3:call_296AmXaBQbq5QcUrQfhfLd81",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 17,
+    "need_zh": "寻找中心化独立性、四阶矩和 Borel–Cantelli 路线所需数学库接口。",
+    "linked_need": "r2-m2-c-centered-fourth-moments",
+    "context_kind": "retrieval",
+    "feedback_zh": "读取相关 Borel–Cantelli/独立性上游并主动检索独立函数、积分乘积、四阶可积性和可和概率。",
+    "actions": [
+      {
+        "event_id": "01a09cd5-3dba-7762-89e8-882aae0643d3:call_NGnx9AwW7UNDHCJ3ZIiOgzZY",
+        "action": "changed_query",
+        "explanation_zh": "收窄到 iIndepFun.comp、有限和独立性与幂函数可积性声明。"
+      },
+      {
+        "event_id": "01a09cd5-3dba-7762-89e8-882aae0643d3:call_LfCwgTWaKih5fhSQ40rt8gQ3",
+        "action": "read_or_search",
+        "explanation_zh": "精读 iIndepFun.comp 的显式函数族及可测性参数。"
+      },
+      {
+        "event_id": "01a09cd5-3dba-7762-89e8-882aae0643d3:call_eTmgQJ2RuiGGaj6ZsUY8d9ix",
+        "action": "rechecked",
+        "explanation_zh": "中心化辅助引理在类型修正后直接检查通过。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09cd5-3dba-7762-89e8-882aae0643d3:call_LfCwgTWaKih5fhSQ40rt8gQ3",
+    "resolution_zh": "找到并实际使用中心化保持独立的复合接口。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+        "line": 34,
+        "detail_zh": "最终直接调用 h_indep.comp，显式给出 x ↦ x - m 函数族。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_296AmXaBQbq5QcUrQfhfLd81",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_NGnx9AwW7UNDHCJ3ZIiOgzZY",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_LfCwgTWaKih5fhSQ40rt8gQ3",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_eTmgQJ2RuiGGaj6ZsUY8d9ix"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "采用判断仅针对可见的独立性接口，不把强大数律最终完成归因于首轮整批搜索。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_cYqGxIdYkkP0MpWepZeK1S4Q",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_Lfqc04gs2gUO8pHCxYyvRMAQ",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_bKRV7czs8QT14JwVEjQn83BV"
+    ]
+  },
+  {
+    "run_id": "r2-m3-c",
+    "sample_kind": "first_lean_feedback",
+    "selection_status": "selected",
+    "start_event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_2n3gp2kbiFinBkvzEz2s9yJw",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 38,
+    "need_zh": "在单位区间概率空间上构造分布函数广义逆，并证明其界限和可测性。",
+    "linked_need": "r2-m3-c-quantile-construction",
+    "context_kind": "implementation",
+    "feedback_zh": "初稿的 restrict/comap 结合方式、comap_apply 参数、分布函数阈值集合非空有界及单调性目标报错。",
+    "actions": [
+      {
+        "event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_4aXQa62R6ckNAX7KDW5GDtLA",
+        "action": "changed_proof",
+        "explanation_zh": "实际修正测度定义、映射参数和上确界证明；仍有剩余阈值目标。"
+      },
+      {
+        "event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_2xl7ioOWCX8A5HjGm04czH0c",
+        "action": "rechecked",
+        "explanation_zh": "继续修正阈值与集合论证后，直接检查当时分位数构造文件通过。"
+      }
+    ],
+    "progress": "local_check_passed",
+    "end_event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_2xl7ioOWCX8A5HjGm04czH0c",
+    "resolution_zh": "分位数构造的当时版本通过检查；后续还加入分布匹配与几乎处处收敛证明。",
+    "final_adoption": "final_source_present",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+        "line": 22,
+        "detail_zh": "最终保留 lawQuantile 的广义逆定义。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+        "line": 93,
+        "detail_zh": "最终保留由单调性给出的分位数可测性。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_2n3gp2kbiFinBkvzEz2s9yJw",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_4aXQa62R6ckNAX7KDW5GDtLA",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_2xl7ioOWCX8A5HjGm04czH0c"
+    ],
+    "selection_reason_zh": "按全部主求解角色工具返回时间选择首次已读取源文件后的证明或接口诊断。更早的工具不可用、补丁损坏及源文件未生成另列环境证据，按 v1.1 不作为此起点。",
+    "confidence": "high",
+    "review_notes_zh": "不把局部构造通过写成完整 Skorokhod 表示定理已在此时完成。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_jaH5Go0AKxEWGZLRzCrD89bB",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_4NNP847tisLB0P29trQD0ipr",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_tiZ0PMfvsL9PUSH1wd75dr3n",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_vDvtQTz9FA8T3QBHfXBTAH0L"
+    ]
+  },
+  {
+    "run_id": "r2-m3-c",
+    "sample_kind": "first_math_retrieval",
+    "selection_status": "selected",
+    "start_event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_cDOBx12EuZZkZVEalYcS7BYN",
+    "start_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\writer-001\\full-public-trace.jsonl",
+    "start_source_line": 17,
+    "need_zh": "寻找分布函数广义逆、分位数及其测度映射接口，以构造共同概率空间表示。",
+    "linked_need": "r2-m3-c-quantile-construction",
+    "context_kind": "retrieval",
+    "feedback_zh": "首次主动搜索 quantile、generalizedInverse 和 cdf-map 组合，未取得可直接套用的广义逆定理。",
+    "actions": [
+      {
+        "event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_YIx46vKLH37PUNNaPw7MhouD",
+        "action": "changed_query",
+        "explanation_zh": "改查上下确界、伪逆与单调函数可测性。"
+      },
+      {
+        "event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_ywHTOj8DcdfcRH9hRIIpIUZ0",
+        "action": "changed_query",
+        "explanation_zh": "尝试搜索 Skorokhod 表示及几乎处处极限接口。"
+      },
+      {
+        "event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_9IBumwZzhKOIyA7L3tzED2F4",
+        "action": "read_or_search",
+        "explanation_zh": "转向 CDF 基础源码，取得两端极限和测度区间表达。"
+      }
+    ],
+    "progress": "usable_declaration_found",
+    "end_event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_9IBumwZzhKOIyA7L3tzED2F4",
+    "resolution_zh": "未找到可直接复用的整体构造，转而使用分布函数基础性质自行构造分位数。",
+    "final_adoption": "explicit_final_source_use",
+    "final_evidence": [
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+        "line": 33,
+        "detail_zh": "最终直接使用 tendsto_cdf_atBot 证明阈值集合相关性质。"
+      },
+      {
+        "path": "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+        "line": 41,
+        "detail_zh": "最终直接使用 tendsto_cdf_atTop。"
+      }
+    ],
+    "evidence_event_ids": [
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_cDOBx12EuZZkZVEalYcS7BYN",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_YIx46vKLH37PUNNaPw7MhouD",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_ywHTOj8DcdfcRH9hRIIpIUZ0",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_9IBumwZzhKOIyA7L3tzED2F4"
+    ],
+    "selection_reason_zh": "按运行顺序选择首次具有具体数学关键词、声明类型或源码目标的主动检索；此前任务、规则、输入源文及给定上游的初始读取不作为主动检索。选择不取决于后续是否成功。",
+    "confidence": "high",
+    "review_notes_zh": "“未取得可直接套用定理”只描述本次可见检索结果，不声称整个数学库不存在该定理；最终采用为基础引理而非首轮未找到的广义逆成品。",
+    "protocol_version": "1.1",
+    "early_environment_event_ids": [
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_jaH5Go0AKxEWGZLRzCrD89bB",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_4NNP847tisLB0P29trQD0ipr",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_tiZ0PMfvsL9PUSH1wd75dr3n",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_vDvtQTz9FA8T3QBHfXBTAH0L"
+    ]
+  }
+]

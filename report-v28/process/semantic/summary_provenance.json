@@ -1,0 +1,15 @@
+{
+  "review_scope": "44 A/C records checked by another agent; 22 B records checked by the lead investigator; all nonblind; no population accuracy estimate",
+  "second_agent_records": 44,
+  "lead_investigator_records": 22,
+  "inputs": {
+    "annotations_A.json": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "annotations_B.json": "d3c17e5965308a4cbd53430fb1161cf79d0fd6a6365137beb2cbbb4449f780b3",
+    "annotations_C.json": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958",
+    "review_A.json": "33adef04018739ed3700f4e4cc9860f92c0242cb080d1fa525428601e44dc417",
+    "review_C.json": "6de8c658095880b93b10fc47e407106cc179b2f6e4395f68e3e554327759edff",
+    "review_B.zh-CN.md": "6a590b91cc85956078eb4d83b037427b4613d1b8a13047126451d2962b14cd0f",
+    "review_B_addendum.json": "ea0ef7f1b80cd4274afe4511b4bd80dba033c56bb09d9b976c67e80e91239059",
+    "summarize.py": "69fcaa7c238e798119caefb637bbfe78a709c9eb9942cca5b6da7893107836e1"
+  }
+}

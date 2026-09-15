@@ -1,0 +1,36 @@
+{
+  "epoch": 1789148840.4816048,
+  "rule": {
+    "scope_registration": {
+      "epoch": 1789130628.6146948,
+      "status": "scope_sensitivity_registered_before_B_C_H1_dispatch",
+      "Std": "Unparameterized Cauchy read as the standard cauchyMeasure 0 1 convention.",
+      "Family": "Cauchy read as all location/positive-scale laws; requires same-law sample-average conclusion for arbitrary common location and positive scale.",
+      "evidence": "Frozen H1 TASK item 4 and SOURCE prob_9_6 do not spell out location/scale or standard; old A adjudicator chose Std and the opposing reviewer chose Family.",
+      "rule": "Preserve original A complete/partial and continuation identities. Apply both ranges to every eventual original A/B/C full candidate; do not retroactively treat old adjudicator choice as a unique frozen definition. Inspect all other inversion-chain obligations.",
+      "inflight_inputs_changed": false,
+      "new_solver_trials": 0
+    },
+    "scope_registration_sha256": "fd39abddd2b522d5106e5e34bab34b242409c4b5809cad13041a91b2e829e00b",
+    "obligations": {
+      "E1": "所有实数的复指数差界，正负与零值及真实证明。",
+      "I1": "反演公式一般概率分布公开端点，无额外无原子/密度假设；端点半质量。",
+      "I2": "有限截断的被积函数可积性、Fubini交换及界；不是把目标积分交换直接作为假设。",
+      "I3": "振荡核化简与Dirichlet积分极限的本组新证明；允许通用基础但无目标专有预给答案。",
+      "I4": "开区间内部、端点、外部各极限值；统一支配与积分极限实际闭合。",
+      "U1": "由反演公式证明特征函数唯一性；实际落实连续点稠密选择与测度确定。",
+      "C1": "独立同分布柯西样本平均同分布；Std标准与Family任意共同位置正尺度分别核查，不由未量化参数推一般结论。",
+      "C2": "教材密度语义与特征函数表征真实连接；两种范围各自可用，允许不调用唯一性定理的合法替代。",
+      "Z1": "特征函数在2π等于1推出几乎处处整数值，单位模等号及复指数周期刻画真实闭合。",
+      "Z2": "几乎处处整数值推出特征函数在2π等于1；可测与分布接口。",
+      "P1": "除柯西量词歧义以外，全部公开前提、边界与目标数学陈述正确且获任务许可。",
+      "D1": "五目标全部交付；目标专有分析支持在本组新做，依赖闭合，无循环或证明逃逸。"
+    },
+    "timing": "Std/Family registered before B/C first H1 dispatch. Detailed common rubric frozen after original candidates return, before new independent reviews; not original experiment preregistration.",
+    "composition": "For each reading combine mathematics, public_premises, route_<reading>, interface, delivery and all obligation statuses. Any fail => fail; else any unresolved => unresolved; else pass.",
+    "separation": "Mathematical validity under stated premises is separate from missing source domain, required proof route, interface and delivery. Cauchy range affects C1/C2 and corresponding route, not automatically all other obligations.",
+    "nonranking": "If scope changes labels preserve criterion_dispute; do not choose Std or Family from winner. Original A partial and same-root full continuation remain separate evidence, with no new A solver.",
+    "limits": "The unparameterized frozen Cauchy wording is not made uniquely standard by the old adjudicator. Read all five target proofs and permitted support; no majority-vote truth."
+  },
+  "new_solver_trials": 0
+}

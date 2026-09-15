@@ -1,0 +1,16 @@
+{
+  "schema_version": "pilot.reviewer_result_recovery.v1",
+  "recorded_at": "2026-09-10T16:08:03.2141265Z",
+  "run_id": "pilot-prob_13_9-A-r1",
+  "dispatch_id": "a8eee636-20ec-4f4a-abd8-21254581e629",
+  "reviewer_session_id": "01a08bf3-acd6-7623-b4a3-23311bf5a423",
+  "reason": "The fresh independent reviewer completed successfully, but the helper dispatcher rejected the return during its post-run immutability check because the trusted restore changed only public-build-cache.tar ownership. Runtime development_checks/reviewer_manifest_projection_v1 proves the 789-entry content projection is identical. This receipt records exact-byte recovery of the already-produced raw reviewer result; no verdict field was edited.",
+  "source": "help/a8eee636-20ec-4f4a-abd8-21254581e629/recovered-raw-review.json",
+  "source_sha256": "2731c4841276dd72e6148bfb65d8cd56c9a6027623e5ae66c3b62bafd48bac8e",
+  "destination_container": "pilot-prob_13_9-A-r1-author-002",
+  "destination": "/work/artifacts/phase2_prompt_packs/prob_13_9/semantic_review_result_v1.json",
+  "destination_sha256": "2731c4841276dd72e6148bfb65d8cd56c9a6027623e5ae66c3b62bafd48bac8e",
+  "byte_identical": true,
+  "runtime_fix_evidence": "pilot_20260910/runtime/development_checks/reviewer_manifest_projection_v1/result.json",
+  "root_deadline_reset": false
+}

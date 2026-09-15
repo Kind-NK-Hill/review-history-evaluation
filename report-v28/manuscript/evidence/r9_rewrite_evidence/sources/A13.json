@@ -1,0 +1,102 @@
+{
+  "epoch": 1789149912.3025463,
+  "candidates": [
+    {
+      "candidate_id": "candidate-ad3cbe004a3a",
+      "arm": "B",
+      "original_delivery_sources": [
+        {
+          "original_raw": "ROOT/bcap-r4-runs\\coverage-H1-B-r4-001\\author-call-01\\raw-public-events.bin",
+          "raw_sha256": "153fb283e39c78b5467f6cefbf02eb1af428b6655aacddada2618f1d9cd85725",
+          "final_message_line": 1064,
+          "original_message_sha256": "7dbd92c42f33e68d90f7a05e0f502222fe854236464730adaf17d422dd85407d",
+          "neutral_file": "original_delivery/FINAL_MESSAGE.txt",
+          "neutral_sha256": "6a855d486cc2a480adba66710ceae10f1d7cad263c72dd11b3e6531857544b6a",
+          "transformation": "Deterministic removal of internal review status/clock lines; original retained in raw. Not a mathematical rewrite."
+        },
+        {
+          "original_path": "ROOT/bcap-r4-runs\\coverage-H1-B-r4-001\\submission.json",
+          "sha256": "6653796a4ff85c0296a90d1f35e188e2a70a6e5da051215bf2f5c9096dd538f5",
+          "copied_as": "original_delivery/NEUTRAL_SUBMISSION.json",
+          "native_archive_binding": {
+            "path": "ROOT/bcap-r4-runs\\coverage-H1-B-r4-001\\final-snapshot\\work.tar",
+            "sha256": "72fb77c03863a22a815b0e87ba2b8f6e8d4086cdb29e537b2e409a3043012192",
+            "entry": "./submission.json",
+            "entry_sha256": "6653796a4ff85c0296a90d1f35e188e2a70a6e5da051215bf2f5c9096dd538f5",
+            "json_semantically_identical": true
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-c47950c412e8",
+      "arm": "C",
+      "original_delivery_sources": [
+        {
+          "original_raw": "ROOT/c-r3-runs\\c-r3-h1-001\\run\\actors\\coordinator-001\\raw-public-events.bin",
+          "raw_sha256": "24d6cdbeea799387410a1e4d24e3720e5bceb770391692c7f6fd58e149470b52",
+          "final_message_line": 287,
+          "original_message_sha256": "db6ce132e6b173ba4baf4eb061868ad8a024537e7ad1b8eb87e6429025357178",
+          "neutral_file": "original_delivery/FINAL_MESSAGE.txt",
+          "neutral_sha256": "9d6b7a532c011b0a0047f26e18f140730a08c702bb476fb56b82cb2bf8cfd1ef",
+          "transformation": "Deterministic removal of internal review status/clock lines; original retained in raw. Not a mathematical rewrite."
+        },
+        {
+          "original_path": "ROOT/c-r3-runs\\c-r3-h1-001\\run\\candidates\\c6\\visible-files\\DELIVERY.zh-CN.md",
+          "sha256": "06c053469b31ad8fd4bcbb1dc3eb22158d6b429ae39a648dff415fb4040a0eda",
+          "copied_as": "original_delivery/DELIVERY.zh-CN.md"
+        },
+        {
+          "original_path": "ROOT/c-r3-runs\\c-r3-h1-001\\run\\candidates\\c6\\visible-files\\DECLARATIONS.zh-CN.md",
+          "sha256": "6ec213dee7c24e4b093357bfd8f04af40de235fe249106957b2c7c7083aacc92",
+          "copied_as": "original_delivery/DECLARATIONS.zh-CN.md"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dfce8b6cb8f4",
+      "arm": "A",
+      "original_delivery_sources": [
+        {
+          "original_raw": "ROOT/a-h1-cont-r4\\author-call-03\\raw-public-events.bin",
+          "raw_sha256": "b7ee62a16bbb0be90f4473f7e083bfcd09a3cd01ed7987ce6f4ad4d69a470801",
+          "final_message_line": 116,
+          "original_message_sha256": "664549f43f4b205546711a9e46c01494c1e872a2422b8dc657e3d70dd9677a0c",
+          "neutral_file": "original_delivery/FINAL_MESSAGE.txt",
+          "neutral_sha256": "b6e8930fe3bda46697022808b46c4e8c7dd2c32ff73064644006d2a1f6719eb3",
+          "transformation": "Deterministic removal of internal review status/clock lines; original retained in raw. Not a mathematical rewrite."
+        },
+        {
+          "archive": "ROOT/a-h1-cont-r4\\final-snapshot\\work.tar",
+          "archive_sha256": "462505fef05125b08f33094a316e9489f7a857f1db629514951f9150eebaec64",
+          "report_like_names": [
+            "./artifacts/phase2_prompt_packs/prob_9_6/failure_summary.md",
+            "./artifacts/phase2_prompt_packs/prob_9_6/semantic_review_report.md",
+            "./artifacts/phase2_prompt_packs/prob_9_6/semantic_review_report_v1.md",
+            "./artifacts/phase2_prompt_packs/prob_9_6/verification_report.md",
+            "./artifacts/phase2_prompt_packs/prob_9_8/failure_summary.md",
+            "./artifacts/phase2_prompt_packs/prob_9_8/semantic_review_report.md",
+            "./artifacts/phase2_prompt_packs/prob_9_8/semantic_review_report_v1.md",
+            "./artifacts/phase2_prompt_packs/prob_9_8/verification_report.md",
+            "./artifacts/phase2_prompt_packs/thm_9_4/failure_summary.md",
+            "./artifacts/phase2_prompt_packs/thm_9_4/semantic_review_report.md",
+            "./artifacts/phase2_prompt_packs/thm_9_4/semantic_review_report_v1.md",
+            "./artifacts/phase2_prompt_packs/thm_9_4/verification_report.md",
+            "./artifacts/phase2_prompt_packs/thm_9_5/failure_summary.md",
+            "./artifacts/phase2_prompt_packs/thm_9_5/semantic_review_report.md",
+            "./artifacts/phase2_prompt_packs/thm_9_5/semantic_review_report_v1.md",
+            "./artifacts/phase2_prompt_packs/thm_9_5/verification_report.md",
+            "./artifacts/phase2_prompt_packs/thm_9_6/failure_summary.md",
+            "./artifacts/phase2_prompt_packs/thm_9_6/semantic_review_report.md",
+            "./artifacts/phase2_prompt_packs/thm_9_6/semantic_review_report_v1.md",
+            "./artifacts/phase2_prompt_packs/thm_9_6/verification_report.md",
+            "./artifacts/phase2_softdep_packs/ch9_batch_0236031/apply_report.md",
+            "./artifacts/phase2_softdep_packs/ch9_batch_1540889/apply_report.md"
+          ],
+          "limit": "Names found here are historical engine review/verification reports, not treated as an author-created final explanatory report. Source docstrings and final message remain available; no claim of exhaustive semantic absence from every file."
+        }
+      ]
+    }
+  ],
+  "new_solver_trials": 0
+}

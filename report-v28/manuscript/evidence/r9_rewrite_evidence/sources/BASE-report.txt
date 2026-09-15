@@ -1,0 +1,25 @@
+[original lines 1-24]
+# How probability proofs are completed: workflow history and three organizational trajectories
+
+<!-- English substantive revision 9. Editorial revision only. Experimental acceptance remains frozen at 09:22 Beijing time, 12 September 2026. -->
+
+## Abstract
+
+ProbabilityTheoryFormalization uses AI agents to turn textbook statements and arguments into Lean proofs, with separate controls for building, source-faithfulness review and acceptance of the reviewed artifact. This report evaluates both mathematical delivery and the processes behind it. It combines eleven probability-proof task groups attempted by three deployed configurations with historical proof histories, reconstruction of review records and checks of saved code. These sources answer different questions: what the selected configurations delivered, how particular repairs and failures occurred, and which apparent improvements in the archive survive closer examination.
+
+Under the corrected acceptance criteria, 30 of 33 main-panel submissions pass: A, the existing controlled workflow, passes 9/11; B, organized by a lead author, passes 10/11; and C, with a separate coordinator, passes 11/11. A/B omit the task-permitted eventual-integrability formulation of Scheffé's lemma, and original A-L7 omits continuous mapping. B/C deliver complete, disclosed repairs to insufficient continuous-mapping assumptions. Across nine groups with comparable time records, median solver spans are 58.9, 33.2 and 28.7 minutes. These are observations of actual configurations, including their model, version and host-intervention differences, rather than isolated effects of coordination. [12-14,22,23]
+
+The trajectories explain distinctions that these totals conceal. A-L1 produces acceptable mathematics and several passing opinions, but review delivery blocks acceptance until host recovery; initial C-L1 submits while explicitly lacking its checking opinions. M2 closes a source obligation by deriving a centered-moment bound internally rather than requesting it from the caller. H1 incorporates support into inversion, uniqueness and a Cauchy application, whereas L5 produces substantial support without an established adoption chain. Evaluation correction changes both erroneous rejections and overly broad acceptances, including withdrawing A-L3's original pass. [17-19,22,23,25,27]
+
+Historical analysis adds more than caution about labels. It reconstructs judgment identities, identifies changes outside identical main files, and retains 128 comparisons with affirmative target and object qualification. A first-versus-later-revision contrast is examined against the tasks entering later follow-up, exposing selection that prevents a diminishing-returns interpretation. Saved-code checks and a formal definition witness distinguish compilation, removal of a direct defect and source meaning. The resulting assessment is that the system can complete substantial proof work, but whole-task closure, information delivery, control decisions and evaluation validity must be examined separately. Detailed cases establish specific mechanisms; an overall valid-feedback adoption or mathematical-repair rate remains unavailable. [8-11,16]
+
+## Main text
+
+## 1 How the tested system organizes proofs
+
+### 1.1 The object of evaluation is a mathematical delivery, not just a compiling file
+
+ProbabilityTheoryFormalization, formerly ToyApollo, develops AI-assisted formalization of a probability textbook. In the task groups studied here, the agent receives the textbook claim and proof, a fixed general mathematical library and designated upstream material. It must deliver public declarations, their proof bodies and the dependencies needed to use them. A conclusion assigned to the task cannot simply be renamed as a public assumption and returned to the caller. The experiment therefore concerns implementation and delivery of supplied mathematics, not proof discovery without a textbook argument. [12,26]
+
+The historical inversion task `thm_9_5` shows why this distinction matters. Its early candidate already contained substitution, pointwise cases, dominated convergence and rescaling. An assumption called `h_spine` still supplied integrability, justification for exchanging integrals and the Dirichlet-integral limit. Successive candidates moved those duties into the proof. [1]
+

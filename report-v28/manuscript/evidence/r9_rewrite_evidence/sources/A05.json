@@ -1,0 +1,14 @@
+{
+  "completed_at": "2026-09-12T09:22:31.625939+08:00",
+  "current_main_rows": 33,
+  "pass": 30,
+  "incomplete": 3,
+  "format_unresolved": 0,
+  "pending_model_followups": 0,
+  "new_model_calls": 0,
+  "new_solver_calls": 0,
+  "new_builds": 0,
+  "new_containers": 0,
+  "production_state_touched": false,
+  "original_evidence_unchanged_by_this_stage": true
+}

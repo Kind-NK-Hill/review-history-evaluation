@@ -1,0 +1,54 @@
+{
+  "runs": 33,
+  "annotation_records": 66,
+  "selection": "two fixed retrospective starts per run; not a census or random sample",
+  "overlapping_need_runs": 25,
+  "cohorts": {
+    "first_lean_feedback": {
+      "records": 33,
+      "context_kind": {
+        "implementation": 19,
+        "probe": 14
+      },
+      "progress": {
+        "local_check_passed": 23,
+        "usable_declaration_found": 3,
+        "implementation_advanced": 5,
+        "no_resolution_observed": 1,
+        "substituted": 1
+      },
+      "final_adoption": {
+        "explicit_final_source_use": 19,
+        "final_source_present": 9,
+        "replaced": 2,
+        "unknown": 3
+      },
+      "confidence": {
+        "high": 33
+      }
+    },
+    "first_math_retrieval": {
+      "records": 33,
+      "context_kind": {
+        "retrieval": 31,
+        "probe": 2
+      },
+      "progress": {
+        "local_check_passed": 20,
+        "usable_declaration_found": 12,
+        "implementation_advanced": 1
+      },
+      "final_adoption": {
+        "explicit_final_source_use": 29,
+        "final_source_present": 2,
+        "replaced": 1,
+        "unknown": 1
+      },
+      "confidence": {
+        "high": 25,
+        "medium": 8
+      }
+    }
+  },
+  "interpretation": "Recorded progress endpoints have different stopping levels and are not comparable recovery rates. Adoption concerns the followed process, not every first-returned declaration."
+}

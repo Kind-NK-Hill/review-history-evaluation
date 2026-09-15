@@ -1,0 +1,103 @@
+{
+  "scope": "second-batch 33 original runs; retrospective descriptive process measurement",
+  "events": 4233,
+  "runs": 33,
+  "configs": {
+    "A": {
+      "runs": 11,
+      "median_minutes": 41.02550613482793,
+      "public_tool_events": 1652,
+      "service_tool_calls": 1585,
+      "discovery_calls": 67,
+      "actions": {
+        "tool_discovery": 67,
+        "read_or_search": 1097,
+        "search_command": 531,
+        "workflow_operation": 206,
+        "check_invocation": 492,
+        "write_or_script": 480,
+        "delegate_or_review": 43,
+        "version_control": 63,
+        "other_command_or_service": 19
+      },
+      "check_observations": {
+        "negative_feedback": 271,
+        "check_passed": 138,
+        "unresolved": 100
+      },
+      "same_file_sequences": 49,
+      "same_file_later_pass": 32
+    },
+    "B": {
+      "runs": 11,
+      "median_minutes": 20.2089257756869,
+      "public_tool_events": 1451,
+      "service_tool_calls": 1401,
+      "discovery_calls": 50,
+      "actions": {
+        "tool_discovery": 50,
+        "read_or_search": 919,
+        "search_command": 474,
+        "check_invocation": 627,
+        "write_or_script": 336,
+        "version_control": 248,
+        "delegate_or_review": 37,
+        "other_command_or_service": 10
+      },
+      "check_observations": {
+        "unresolved": 171,
+        "check_passed": 172,
+        "negative_feedback": 348
+      },
+      "same_file_sequences": 91,
+      "same_file_later_pass": 60
+    },
+    "C": {
+      "runs": 11,
+      "median_minutes": 22.005229608217874,
+      "public_tool_events": 1130,
+      "service_tool_calls": 1068,
+      "discovery_calls": 62,
+      "actions": {
+        "tool_discovery": 62,
+        "read_collaboration": 106,
+        "delegate_or_review": 41,
+        "read_or_search": 554,
+        "search_command": 280,
+        "check_invocation": 511,
+        "write_or_script": 316,
+        "version_control": 137,
+        "workflow_operation": 14,
+        "submit": 11,
+        "other_command_or_service": 4
+      },
+      "check_observations": {
+        "unresolved": 135,
+        "negative_feedback": 293,
+        "check_passed": 149
+      },
+      "same_file_sequences": 80,
+      "same_file_later_pass": 61
+    }
+  },
+  "check_kinds": {
+    "lake_build": 229,
+    "formalize_build": 102,
+    "lean_stdin": 152,
+    "lean_file": 1280,
+    "service_build_check": 13,
+    "service_math_check": 1
+  },
+  "check_states": {
+    "check_passed": 459,
+    "negative_feedback": 912,
+    "unresolved": 406
+  },
+  "shell_parse_problem": 7,
+  "same_file_sequences": 220,
+  "same_file_sequence_ends": {
+    "no_later_same_file_pass_observed": 67,
+    "later_same_file_check_passed": 153
+  },
+  "interpretation": "Same-file recheck sequences are candidate recovery evidence, not validated goal-level recovery rates. Composite action labels can overlap."
+}

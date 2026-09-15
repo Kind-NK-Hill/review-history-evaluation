@@ -1,0 +1,192 @@
+{
+  "anonymous_candidate_id": "cand-47e738ffc037453d4d24",
+  "assessment_origin": "model_output",
+  "confidence": 0.97,
+  "execution_receipt": {
+    "actor_receipt_sha256": "497cabf8eaafa2be416e4bfb7c3786fc2d5cf0367d45108718d04906c2f91475",
+    "completed_at_utc": "2026-09-11T17:46:50.521272+00:00",
+    "container_inspect_sha256": "83de502282311bec22efb57952d2431951987c41a208d00737639030c627af32",
+    "dispatch_id": "b7223470-99d4-4162-80c4-de30d6e30e13",
+    "elapsed_seconds": 123.0,
+    "fresh_session": true,
+    "input_binding_sha256": "47e738ffc037453d4d24ee76143fbc98dfd6102041a2fa1daaa60e3c28726722",
+    "model": "gpt-5.6-sol",
+    "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+    "prompt_sha256": "9c8983b87d2268e2a4050db60aeeab462815d83e54b0cfe0973cadc869e8fdbc",
+    "raw_events_sha256": "00a8e6199709e1eee6ab72c0f84e1487d0440e9c6ce541e0e3c078f852925d2a",
+    "reasoning_effort": "medium",
+    "session_id": "01a09192-70bb-7fc2-b536-b1b970938bd6",
+    "started_at_utc": "2026-09-11T17:44:47.516115+00:00",
+    "subject_manifest_after_sha256": "503ca202f85ec2500f690e823e8bc1574e0c58e74a115c1543f936934d05e90a",
+    "subject_manifest_before_sha256": "503ca202f85ec2500f690e823e8bc1574e0c58e74a115c1543f936934d05e90a",
+    "subject_read_only": true,
+    "usage": [
+      {
+        "cached_input_tokens": 464768,
+        "input_tokens": 527718,
+        "output_tokens": 4532
+      }
+    ]
+  },
+  "findings": [
+    {
+      "category": "数学与教材语义",
+      "finding": "公开定理 prob_9_6 要求 hLaw : P.map (X 0) = cauchyMeasure 0 γ，将位置参数固定为0；源码只推导并使用中心柯西分布的特征函数。",
+      "id": "F-1",
+      "impact": "该定理不能直接用于 cauchyMeasure x₀ γ 且 x₀≠0 的同分布柯西变量，也没有证明将一般情形平移归约到中心情形，因而实质缩窄了问题9.6。",
+      "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_09/prob_9_6.lean:218",
+      "severity": "错误"
+    },
+    {
+      "category": "数学与教材语义",
+      "finding": "反演定理的极限包含开区间质量和两个端点各一半质量；有限截断积分交换、振荡核化简、狄利克雷积分、各位置极限及统一支配均有正文证明。",
+      "id": "F-2",
+      "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_09/thm_9_5.lean:514",
+      "severity": "通过项"
+    },
+    {
+      "category": "数学与教材语义",
+      "finding": "唯一性定理从共同无原子平移有理端点族上的开区间测度相等推出有限测度相等，没有把待证分布相等作为前提。",
+      "id": "F-3",
+      "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_09/thm_9_6.lean:60",
+      "severity": "通过项"
+    },
+    {
+      "category": "证明逃逸",
+      "finding": "结合完整源码和中性审计，未发现 sorry、admit、新增公理、将目标结论改名置入额外前提或不透明的目标专有支持。",
+      "id": "F-4",
+      "location": "全部候选文件",
+      "severity": "未发现"
+    }
+  ],
+  "obligation_closure": {
+    "items": [
+      {
+        "evidence": "thm_9_4 对任意实数 x 精确证明 ‖exp(xI)-1‖≤|x|。",
+        "obligation": "对所有实数证明单位圆弦长估计",
+        "status": "闭合"
+      },
+      {
+        "evidence": "thm_9_5 与 thm_9_5_dirichlet 完成有限截断的可积性和积分交换、核化简、狄利克雷极限、内点/端点/外点极限、常数16统一支配以及端点半质量。",
+        "obligation": "反演公式及全部分析环节",
+        "status": "闭合"
+      },
+      {
+        "evidence": "thm_9_6 构造共同无原子端点的平移有理稠密族，经反演得到开区间测度相等，再由有理开区间测度确定有限测度；随机变量版本比较推前分布。",
+        "obligation": "特征函数唯一决定分布",
+        "status": "闭合"
+      },
+      {
+        "evidence": "候选从柯西密度经傅里叶路线证明中心柯西测度的特征函数，并完成独立和计算；但最终公开定理只接受 cauchyMeasure 0 γ，未涵盖一般位置参数。",
+        "obligation": "独立同分布柯西变量的样本平均保持原分布，并连接密度与特征函数",
+        "status": "未闭合"
+      },
+      {
+        "evidence": "prob_9_8 给出测度版本和随机变量版本，并证明复指数取1与整数点集合之间的等价。",
+        "obligation": "φ_X(2π)=1 当且仅当 X 几乎处处为整数",
+        "status": "闭合"
+      }
+    ],
+    "status": "未完全闭合"
+  },
+  "proof_route_assessment": {
+    "details": [
+      "反演证明先在有限截断区间建立乘积可积性并交换积分；t=0处的商定义差异仅位于零测单点，后续以几乎处处等式处理。",
+      "狄利克雷积分极限通过分部积分尾估计、指数阻尼、积分交换、反正切极限和极限唯一性推出，不是新增未经证明的前提。",
+      "唯一性证明采用平移后的有理开区间测度确定路线，虽不同于教材直接引用累积分布函数路线，但属于合同允许的数学等价替代。",
+      "问题9.6从 Mathlib 的柯西密度测度推出中心柯西特征函数，再结合独立性和唯一性；证明路线本身有效，但没有扩展到非零位置参数。",
+      "问题9.8通过余弦积分达到上界推出余弦几乎处处等于1，再转换为整数取值，没有预设结论。"
+    ],
+    "status": "除问题9.6的陈述范围外合法"
+  },
+  "public_premise_check": {
+    "details": [
+      "thm_9_5 的 a<b 与有限测度条件符合反演公式语义。",
+      "thm_9_6 对有限测度证明唯一性，比概率测度版本更强，不构成目标迁移。",
+      "prob_9_8 的概率测度及随机变量可测性条件属于正常形式化前提。",
+      "prob_9_6 的独立性、同分布、正尺度和样本数非零均合理，但 hLaw 将柯西律额外固定为 cauchyMeasure 0 γ；这一中心化限制不是题目条件的推论，也未在正文中消去。"
+    ],
+    "status": "发现一项实质性额外限制"
+  },
+  "request_id": "adj-47e738ffc037453d4d24ee76-1",
+  "role": "adjudicator",
+  "schema": "formal_endpoint.evaluation.v1",
+  "statement_fidelity": {
+    "details": "定理9.4、反演公式、唯一性定理和问题9.8忠实保持教材结论，其中部分结论推广到有限测度。问题9.6则只陈述中心柯西情形。教材原文称 X₁,…,Xₙ 为同分布柯西变量并要求平均值与 X₁ 同分布，没有限定位置参数为0；共同任务合同同样没有该限制。对于一般 cauchyMeasure x₀ γ，现有公开定理不能实例化，正文也没有平移归约，因此声明忠实性不通过。",
+    "status": "不通过"
+  },
+  "summary": "候选通过全部中性技术验证，且定理9.4、反演公式、唯一性定理和问题9.8均已实质完成；但问题9.6的公开定理额外假设首项分布为中心柯西测度 cauchyMeasure 0 γ，只证明位置参数为0的情形。教材及共同任务合同要求任意同分布柯西变量的样本平均与单项同分布，候选未提供一般位置参数版本或平移归约。因此五项目标未共同完成，裁决为 fail。",
+  "support_files_checked": [
+    {
+      "path": "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+      "result": "完整读取；核对共同资产、依赖、公开前提和证明逃逸规则。"
+    },
+    {
+      "path": "/endpoint/input/task_contract/TASK.zh-CN.md",
+      "result": "完整读取；核对五个公开目标及反演专有分析义务。"
+    },
+    {
+      "path": "/endpoint/input/source/SOURCE.tex",
+      "result": "完整读取；问题9.6要求未限定中心位置的同分布柯西变量。"
+    },
+    {
+      "path": "/endpoint/input/candidate/ProbabilityTheory/chapter_09/thm_9_4.lean",
+      "result": "完整读取；目标闭合。"
+    },
+    {
+      "path": "/endpoint/input/candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+      "result": "完整读取；反演公式及端点半质量闭合。"
+    },
+    {
+      "path": "/endpoint/input/candidate/ProbabilityTheory/chapter_09/thm_9_5_dirichlet.lean",
+      "result": "完整读取；狄利克雷支持由正文证明。"
+    },
+    {
+      "path": "/endpoint/input/candidate/ProbabilityTheory/chapter_09/thm_9_6.lean",
+      "result": "完整读取；唯一性目标闭合。"
+    },
+    {
+      "path": "/endpoint/input/candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+      "result": "完整读取；发现位置参数固定为0的范围缺口。"
+    },
+    {
+      "path": "/endpoint/input/candidate/ProbabilityTheory/chapter_09/prob_9_8.lean",
+      "result": "完整读取；测度和随机变量版本均闭合。"
+    },
+    {
+      "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_03/thm_3_9.lean",
+      "result": "完整读取；候选可用但最终采用等价的有理开区间测度确定路线。"
+    },
+    {
+      "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_07/thm_7_7.lean",
+      "result": "完整读取；支配收敛能力与候选用法相容。"
+    },
+    {
+      "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_08/thm_8_5.lean",
+      "result": "完整读取；候选的有限截断积分交换有合法基础。"
+    },
+    {
+      "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_09/def_9_3.lean",
+      "result": "完整读取；特征函数及密度桥接语义一致。"
+    },
+    {
+      "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_09/thm_9_3.lean",
+      "result": "完整读取；独立和与特征函数基础路线相容。"
+    },
+    {
+      "path": "/endpoint/input/tool_fact/technical-validation.json",
+      "result": "完整读取；构建、公理审计、逃逸扫描及冻结源码哈希检查均通过。"
+    }
+  ],
+  "technical_evidence_scope": {
+    "axiom_audit_exit_code": 0,
+    "build_exit_code": 0,
+    "candidate_hashes_match_frozen_files": true,
+    "escape_scan_exit_code": 0,
+    "interpretation": "中性事实确认冻结候选源码通过构建、公理审计和逃逸扫描，但技术通过不能补足问题9.6相对教材与合同的语义缩窄。",
+    "source": "/endpoint/input/tool_fact/technical-validation.json",
+    "technical_status": "pass"
+  },
+  "unresolved": [],
+  "verdict": "fail"
+}

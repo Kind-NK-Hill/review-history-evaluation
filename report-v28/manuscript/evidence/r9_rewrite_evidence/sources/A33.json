@@ -1,0 +1,46 @@
+{
+  "epoch": 1789161182.16633,
+  "successful_samples": 62,
+  "monitor_errors": [],
+  "max_active_observed": 2,
+  "max_sample_gap_seconds": 5.520411491394043,
+  "atomic_event_counts": {
+    "overlay_installed": 6,
+    "transition_queued": 4,
+    "mutation_returned": 4
+  },
+  "over_limit_events": [],
+  "guard_errors": [],
+  "containers_stopped": true,
+  "all_global_active_containers_at_cutoff": [],
+  "containers": [
+    {
+      "slot": "reviewer-1",
+      "container_id": "40d0ed8737137f160eb3b6184975f20f5dc35a348214bd436a50d7ca385e15bb",
+      "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+      "readonly_input": true,
+      "image_library_unoverridden": true,
+      "source": "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-1\\attempt-01\\container-inspect.json",
+      "sha256": "7b1912a50d73b7a1f300a0209705f8fc91d321f32690e1675afa1544991c83b7"
+    },
+    {
+      "slot": "reviewer-2",
+      "container_id": "56e0c539cd997adabba5bcf3683d55de8d8c124e1e1d4af11f1f8c851cfa4280",
+      "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+      "readonly_input": true,
+      "image_library_unoverridden": true,
+      "source": "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-2\\attempt-01\\container-inspect.json",
+      "sha256": "d63952d013996242928589ac8692ccdcfccc2234fe5c0221978b65c01160e224"
+    }
+  ],
+  "original_technical_image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+  "subject_unchanged": true,
+  "original_L7_case_all_files_unchanged": true,
+  "previous_17_files_unchanged": true,
+  "r1_final_bound_files_unchanged": 43,
+  "reused_technical_output_hashes_verified": true,
+  "limitations": [
+    "Periodic samples are observations; atomic guarded transitions are separate evidence.",
+    "Only this r2 evaluation is costed here; no old solver/evaluation costs are recounted."
+  ]
+}

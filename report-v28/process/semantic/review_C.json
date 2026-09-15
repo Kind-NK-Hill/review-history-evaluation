@@ -1,0 +1,668 @@
+[
+  {
+    "annotation_index": 0,
+    "run_id": "r2-h1-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件14为真实未知声明诊断；15显示界估计源码，16用Real前缀后直接Lean检查及目标构建明确完成。末尾git错误不影响此前&&连接的成功步骤。最终第14行正是该调用。",
+    "checked_event_ids": [
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_vN6AVqlDlRLEMSfulVKe2zBx",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_l0pzywKquES9lgCItAgu7FoR",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_QFwb7YatsZb2S7MPARkdSC7V",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_jUyo6NeCDp9ynrHobxJ89hZ4"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-h1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_09\\thm_9_4.lean",
+        "line": 14,
+        "actual_source_line": "    (Real.norm_exp_I_mul_ofReal_sub_one_le (x := x))",
+        "judgment_zh": "最终证明直接把 Real.norm_exp_I_mul_ofReal_sub_one_le 作为 using 的证明项。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 1,
+    "run_id": "r2-h1-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件11按复指数范数界检索，15读取实际声明，16修正命名空间后通过；最终第14行与该声明一致。只认可thm_9_4这一需要。",
+    "checked_event_ids": [
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_SISmrWeLrPxy3VR50yTeNI6P",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_l0pzywKquES9lgCItAgu7FoR",
+      "01a09d4a-834c-7da0-aedd-f64ba089e625:call_QFwb7YatsZb2S7MPARkdSC7V"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-h1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_09\\thm_9_4.lean",
+        "line": 14,
+        "actual_source_line": "    (Real.norm_exp_I_mul_ofReal_sub_one_le (x := x))",
+        "judgment_zh": "最终直接引用检索后确认的 Real.norm_exp_I_mul_ofReal_sub_one_le。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 2,
+    "run_id": "r2-l1-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件18的完整候选产生对应递推/可测/积分问题，31只剩普通等式被当作几乎处处等式组合的错误，32包成EventuallyEq.of_eq后直接检查退出0且无诊断。最终第147行保留该修正。",
+    "checked_event_ids": [
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_SvrBiEHgQWF6PLwnfsrU6itX",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_w8gGdFOX5YbdIKUXi2iqOZYc",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_KooTC7AFKvQyZItb6Lm6YCz6",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_8VgOccvUXMgI30zWrbddNi8t",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_w5nIbAKOFmnserAsKAxn1STC",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_0jwy02Hvp0ZVBST77Rzmf5lJ"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 147,
+        "actual_source_line": "        (Filter.EventuallyEq.of_eq (condExp_of_stronglyMeasurable hsub",
+        "judgment_zh": "最终一步条件期望证明保留 Filter.EventuallyEq.of_eq，连接前述等式种类修正。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 152,
+        "actual_source_line": "theorem prob_13_9 {Ω : Type*} [𝓕 : MeasurableSpace Ω]",
+        "judgment_zh": "最终保留公开 prob_13_9 鞅结论。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 3,
+    "run_id": "r2-l1-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件12返回condExp_sub及condExp_condExp_of_le的真实源码位置，后续候选在32通过；最终第118、122行分别直接调用。宽查询的其他匹配不被算作采用。",
+    "checked_event_ids": [
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_B1H4uQVPfyYjqkktXGJP3qdd",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_IfnKBkLqK3dKB9aE47wwo51C",
+      "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_0jwy02Hvp0ZVBST77Rzmf5lJ"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 118,
+        "actual_source_line": "          condExp_sub hint integrable_condExp _",
+        "judgment_zh": "最终直接调用 condExp_sub。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 122,
+        "actual_source_line": "            (condExp_condExp_of_le le_rfl hsub)",
+        "judgment_zh": "最终直接调用 condExp_condExp_of_le。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 4,
+    "run_id": "r2-l2-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件12旧探针中的covariance_eq_integral确实不存在；13给出covariance_eq_sub的真实签名；20直接检查方差文件通过，最终第21行使用替代接口；23旧探针仍报错。substituted的解释准确。",
+    "checked_event_ids": [
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_4VnSLembATwYP3Vp4GMGEPzu",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_avBPlVmIyM9hwKpj2oeKCDCJ",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_ZQjG89CI4t5NIsWU2CJln3o5",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_WWZZmoexOyXFHbAL8repzGH7"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l2-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+        "line": 21,
+        "actual_source_line": "  rw [ProbabilityTheory.covariance_eq_sub hX hY, sub_eq_zero]",
+        "judgment_zh": "最终 centered_cross_integral_eq_zero 明确重写 covariance_eq_sub。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 5,
+    "run_id": "r2-l2-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件9有明确方差/有限和/收敛关键词，13读到有效协方差公式；最终第21行直接使用。只确认协方差分支，并不要求批量探针全部成功。",
+    "checked_event_ids": [
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_OhGC09c8RtDWdj7m1RtRPD0J",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_4VnSLembATwYP3Vp4GMGEPzu",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_avBPlVmIyM9hwKpj2oeKCDCJ",
+      "01a09bff-4cf7-73d3-a1ac-0c323ea75a97:call_ZQjG89CI4t5NIsWU2CJln3o5"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l2-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+        "line": 21,
+        "actual_source_line": "  rw [ProbabilityTheory.covariance_eq_sub hX hY, sub_eq_zero]",
+        "judgment_zh": "最终直接重写 covariance_eq_sub。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 6,
+    "run_id": "r2-l3-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件22的负部及积分候选失败；26、27、29仍保留同一积分表达的错误；30加入Pi.sub_apply后直接检查仅有未用变量警告。最终第73行保留这一处理。",
+    "checked_event_ids": [
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_AsVUfMdvDMG7MkfO8z4Qo6di",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_DfpXb0g2jQXpFI4uFFkKbVlc",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_ONZWWvdpWgZdkgjjsRf6HjQ7",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_d3vOG0pzI69Wc7mAUAnVo3UZ",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_Vjx4JuSsuepdjVFT7h0rh9AO"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l3-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+        "line": 73,
+        "actual_source_line": "      simp only [Pi.sub_apply] at hadd",
+        "judgment_zh": "最终在 hadd 中先化简 Pi.sub_apply，随后执行 integral_sub/常数倍积分重写。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 7,
+    "run_id": "r2-l3-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件9确为多方向数学查询，10继续高斯性质、11查询特征函数收敛、32读取charFun_gaussianReal完整公式。最终ex_10_3_2第161、165行直接使用该分支。原文已限定分支，未声称整批查询成功。",
+    "checked_event_ids": [
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_a3ktlD6yIkm0fLWRMV1tUPIO",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_VpCtijHzFRi1Pf1Cx9vFcPPI",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_vM13tTF3mGxDqBtiaClXxiLv",
+      "01a09c10-667d-7a60-b341-b3e85b43c151:call_kEKJy0G2C42zFj0y1fH5b0d0"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l3-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+        "line": 165,
+        "actual_source_line": "  simp_rw [charFun_gaussianReal]",
+        "judgment_zh": "最终高斯分布收敛证明直接以 simp_rw 改写 charFun_gaussianReal。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l3-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+        "line": 161,
+        "actual_source_line": "  apply ProbabilityMeasure.tendsto_iff_tendsto_charFun.2",
+        "judgment_zh": "最终明确应用特征函数收敛判据。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 8,
+    "run_id": "r2-l4-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件12是在目标路径运行的多接口探针；16确认积分拆分接口；29通过的是后来写入的总变差证明。implementation_advanced及最终unknown保留了整批探针尚未逐条解决的边界。",
+    "checked_event_ids": [
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_o5VN11l0Isgwlqj56TgAABYi",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_t9cTx4RochC6eDxbKetxXcey",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_q6C3aK2nPZEpBZRvq32hZmle",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_nVjQ8Oc9JfnX4aUlUTLjoRrO"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l4-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\thm_8_6.lean",
+        "line": 20,
+        "actual_source_line": "    simpa [hzero] using integral_add_compl hA hhi",
+        "judgment_zh": "最终证明确实用 integral_add_compl，但不能由此确认整批检索结果逐条采用。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 9,
+    "run_id": "r2-l4-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件12实际执行数学#check，16返回integral_add_compl签名，最终第20行直接调用。只认可积分子需要的采用，不把Poisson等其他猜测统一判为成功。",
+    "checked_event_ids": [
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_o5VN11l0Isgwlqj56TgAABYi",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_t9cTx4RochC6eDxbKetxXcey",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_q6C3aK2nPZEpBZRvq32hZmle",
+      "01a09c44-79cf-7bd2-ba68-06e04298d27b:call_nVjQ8Oc9JfnX4aUlUTLjoRrO"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l4-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\thm_8_6.lean",
+        "line": 20,
+        "actual_source_line": "    simpa [hzero] using integral_add_compl hA hhi",
+        "judgment_zh": "最终直接调用 integral_add_compl 拆分集合及其补集的积分。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 10,
+    "run_id": "r2-l5-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件16在coupling_core报告有限性参数和空集见证问题；19修改相应证明后直接检查退出0且无诊断。最终第37、76行保留两项引理，所跟踪的是耦合上界，不是最大耦合构造。",
+    "checked_event_ids": [
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_VRjKNcd2ptqpS8tPevDJiTuO",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_V8oPRzG6Gk1TGR2BQ4lqgF6M",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_eIb96oO0TXlcuujf9R6FEogq"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l5-c\\technical\\saved-sources\\ProbabilityTheory\\common_support\\coupling_core.lean",
+        "line": 37,
+        "actual_source_line": "lemma coupling_event_difference_le_mismatch [MeasurableEq α]",
+        "judgment_zh": "最终保留 coupling_event_difference_le_mismatch。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l5-c\\technical\\saved-sources\\ProbabilityTheory\\common_support\\coupling_core.lean",
+        "line": 76,
+        "actual_source_line": "theorem totalVariationDistance_le_coupling_mismatch [MeasurableEq α]",
+        "judgment_zh": "最终保留总变差不超过耦合不一致概率的公开结论。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 11,
+    "run_id": "r2-l5-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件12读取的FiniteMeasure结果不能单独支持普通Measure调用；事件20实际#check补足普通Measure的两个乘积边缘类型。26同一构造文件直接通过，最终第106、109行明确调用。",
+    "checked_event_ids": [
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_qlr3ZPZulHvBD7vMlmU9KxTh",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_fQeZbx8SreIGGOfOuuZS7e63",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_i6JpQXA9B7dt4QH1qwpB9NBn",
+      "01a09c55-3ef3-7bc1-816f-0a278c421933:call_43w8G2o7HZiSsfjXSNVvVUNR"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l5-c\\technical\\saved-sources\\ProbabilityTheory\\common_support\\max_coupling_core.lean",
+        "line": 106,
+        "actual_source_line": "        map_fst_diagonalMeasure, Measure.map_smul, Measure.map_fst_prod, hmass]",
+        "judgment_zh": "最终边缘证明直接调用 Measure.map_fst_prod。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l5-c\\technical\\saved-sources\\ProbabilityTheory\\common_support\\max_coupling_core.lean",
+        "line": 109,
+        "actual_source_line": "        map_snd_diagonalMeasure, Measure.map_smul, Measure.map_snd_prod]",
+        "judgment_zh": "另一边缘证明直接调用 Measure.map_snd_prod。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 12,
+    "run_id": "r2-l6-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件20报告中心化独立及积分展开问题；31只是临时代数文件通过，33才是目标文件直接通过。最终第159行保留逐层integral_sub，且第107行是所跟踪二传感器二次式结论。",
+    "checked_event_ids": [
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_5Wj4zpzS0HFb9Nk3fBpN8LqA",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_fCjwa7vtNbnQ178Sz2yoqqEZ",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_zWHSBHbsdZoiyJr8Sdrg6Z8f",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_lNWQb13K6hnSoqaoA0aPIrR6"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+        "line": 159,
+        "actual_source_line": "        exact integral_sub ((hA.add hB).add hC |>.sub hR) hS",
+        "judgment_zh": "最终保留逐层 integral_sub 的 eS 中间等式。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+        "line": 107,
+        "actual_source_line": "theorem sensorMSE2_eq_quadratic {Ω : Type*} [MeasurableSpace Ω]",
+        "judgment_zh": "最终保留二传感器均方误差二次式结论。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 13,
+    "run_id": "r2-l6-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件9虽含whitelist，也实际按HasLaw、gaussianReal、IndepFun、variance和integral_mul搜索项目源码；16读到HasLaw.identDistrib真实签名，最终第365、366行用于高斯矩转移。按数学动作部分纳入起点有据。",
+    "checked_event_ids": [
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_zkXoSZbabQlVoogXVfiRcVyW",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_oINTw75PKx21fM1gcq23B6mg",
+      "01a09c71-3b50-7c61-8569-cd8e3899f997:call_Do1aURSG3lPT9iGxVE7u8031"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+        "line": 365,
+        "actual_source_line": "  have hident := hN.identDistrib hid",
+        "judgment_zh": "最终用 hN.identDistrib hid 建立同分布关系。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+        "line": 366,
+        "actual_source_line": "  refine ⟨hident.memLp_iff.mpr (memLp_id_gaussianReal' 2 (by norm_num)), ?_, ?_⟩",
+        "judgment_zh": "最终直接使用 memLp_id_gaussianReal' 和同分布的 memLp_iff。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 14,
+    "run_id": "r2-l7-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件14为坐标证明失败，15实际修复后直接检查通过；协调事件41要求组织调整，45实际移动原文件并改导入。最终支持文件第26、61行与修复内容对应，跨文件采用证据充分。",
+    "checked_event_ids": [
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_I5mHcZVXaoMRY0rRS6V6EC4V",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_StMuN9Dom4mhNCCgMZoXH9M5",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_8Vll7nVXG7LcmOJ4xES6yj6M",
+      "01a09ca9-7b1a-7471-9bdf-b4f5f7ece5c9:call_PMduvHuEBhgdyavQZRDs6nSk"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\coordinate_convergence_support.lean",
+        "line": 26,
+        "actual_source_line": "    simpa [vectorEuclideanNorm] using hε",
+        "judgment_zh": "移动后的证明保留零维分支中利用 hε 的修正。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\coordinate_convergence_support.lean",
+        "line": 61,
+        "actual_source_line": "    refine ⟨fun n ↦ ((measurable_pi_iff.mp (hVn n)) i).aestronglyMeasurable,",
+        "judgment_zh": "移动后的证明保留 measurable_pi_iff 的坐标可测性修正。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 15,
+    "run_id": "r2-l7-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件9主动查依测度收敛，10展示tendstoInMeasure_iff_dist完整定义和等价命题。最终convergence_support第16、28行直接使用。与首坐标负反馈区别处理合理。",
+    "checked_event_ids": [
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_COS2SSTz7Xb8P4SL3XbI0Yh0",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_3nNZ9JIW1UlCt7sB0IQcYi0W",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_m6EnSDi28L0UJeGIcuZaA1f7",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_Bh92Nq00DxzrP9fbo7grXchF",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_ecbkGTCLYtDD2lWtoTSzWaI9",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_LbFRP0Xcsj5S2UdXOxIZkpXh",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_miYCNuK7fY5lYpFwO8IwWYUi"
+    ],
+    "additional_event_ids": [
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_Bh92Nq00DxzrP9fbo7grXchF",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_ecbkGTCLYtDD2lWtoTSzWaI9",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_LbFRP0Xcsj5S2UdXOxIZkpXh",
+      "01a09caa-43e5-7151-9324-35a356bfdbc1:call_miYCNuK7fY5lYpFwO8IwWYUi"
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\convergence_support.lean",
+        "line": 16,
+        "actual_source_line": "    rw [tendstoInMeasure_iff_dist]",
+        "judgment_zh": "最终桥接证明直接重写 tendstoInMeasure_iff_dist。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\convergence_support.lean",
+        "line": 28,
+        "actual_source_line": "    have ht := (tendstoInMeasure_iff_dist.mp h) ε hε",
+        "judgment_zh": "反向证明直接使用同一等价命题。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 16,
+    "run_id": "r2-m1-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件22的停止过程桥接、负过程及零时刻错误有实际输出；31只剩不存在的WithTop.coe_le_top，32改用le_top后直接检查通过。最终保留桥接及hneg证明，范围没有混入13.18。",
+    "checked_event_ids": [
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_PABt3TSItIhTJxJPeq0m9k62",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_2VrvgIOl8jxCkSzJI6mkUT17",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_GETZW5L71btuZ2chVpucyU5X",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_UvLUejqlNDGBpumOy95vUST7",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_nwwIp7dsoNwT1UD0RUq9cSZQ",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_ryGHjuooiPVT3fkd81TkMsbE"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 14,
+        "actual_source_line": "theorem thm_13_17_stoppedProcess_eq_mathlib {Ω S : Type*}",
+        "judgment_zh": "最终保留项目与数学库停过程的相等引理。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 77,
+        "actual_source_line": "    have hneg : stoppedProcess (-X) T = -(stoppedProcess X T) := by",
+        "judgment_zh": "最终保留负停过程与停过程负值的显式对应。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 17,
+    "run_id": "r2-m1-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件14提供Submartingale.stoppedProcess的完整假设与结论；最终第73、76行分别用于原过程和负过程。已识别需要项目定义转换，未把检索命中等同于完成。",
+    "checked_event_ids": [
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_VK0U99iG8jcMQ7iCG78rs03r",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_8fJdlFECCKQwurHjs78xKVNH",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_xORhgk9PlRAPU2eJocoFjMEI",
+      "01a09cbe-f828-7222-bed9-abfb1996c179:call_ryGHjuooiPVT3fkd81TkMsbE"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 73,
+        "actual_source_line": "    hXM.submartingale.stoppedProcess hT'",
+        "judgment_zh": "最终直接调用 hXM.submartingale.stoppedProcess。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 76,
+        "actual_source_line": "      hXM.neg.submartingale.stoppedProcess hT'",
+        "judgment_zh": "最终对负过程再次调用该停过程接口。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 18,
+    "run_id": "r2-m2-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件18的中心化辅助文件失败；23虽然管道退出0，实际仍有错误，原标注未误判；31直接Lean退出0且无诊断。最终第30、40行保留中心化独立及四阶矩引理，未声称当时已完成强大数律。",
+    "checked_event_ids": [
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_5by62U90GSPc0TjITnnToMBn",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_ExVWGcVCpc4YCVVnz3F8Tnz3",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_eTmgQJ2RuiGGaj6ZsUY8d9ix"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m2-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_7.lean",
+        "line": 30,
+        "actual_source_line": "theorem thm_11_7_centered_iIndepFun {Ω : Type*} [MeasurableSpace Ω]",
+        "judgment_zh": "最终保留中心化保持独立的同名引理。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m2-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_7.lean",
+        "line": 40,
+        "actual_source_line": "theorem thm_11_7_centered_fourth_moment {Ω : Type*} [MeasurableSpace Ω]",
+        "judgment_zh": "最终保留中心化四阶矩上界引理。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 19,
+    "run_id": "r2-m2-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件11读到iIndepFun.comp显式函数族与可测性参数；最终第34行正按自然数索引提供x减m的函数族。原采用主张仅限该接口。",
+    "checked_event_ids": [
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_296AmXaBQbq5QcUrQfhfLd81",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_NGnx9AwW7UNDHCJ3ZIiOgzZY",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_LfCwgTWaKih5fhSQ40rt8gQ3",
+      "01a09cd5-3dba-7762-89e8-882aae0643d3:call_eTmgQJ2RuiGGaj6ZsUY8d9ix"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m2-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_7.lean",
+        "line": 34,
+        "actual_source_line": "  have h := h_indep.comp (fun _ : ℕ => fun x : ℝ => x - m)",
+        "judgment_zh": "最终直接调用 h_indep.comp，显式给出 x ↦ x - m 函数族。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 20,
+    "run_id": "r2-m3-c",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件24初稿确有测度/阈值/单调性问题，且含两个临时sorry。补查35已成功填入这两个分位数序性质证明，只剩单调性类型错误；36修正后直接检查无诊断。最终第22、93行保留定义与可测性，局部通过结论成立。",
+    "checked_event_ids": [
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_2n3gp2kbiFinBkvzEz2s9yJw",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_4aXQa62R6ckNAX7KDW5GDtLA",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_2xl7ioOWCX8A5HjGm04czH0c",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_gNoYnbOrSlCPIskhddi8FBHW"
+    ],
+    "additional_event_ids": [
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_gNoYnbOrSlCPIskhddi8FBHW"
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 22,
+        "actual_source_line": "def lawQuantile (μ : ProbabilityMeasure ℝ) (u : QuantileSample) : ℝ :=",
+        "judgment_zh": "最终保留 lawQuantile 的广义逆定义。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 93,
+        "actual_source_line": "lemma measurable_lawQuantile (μ : ProbabilityMeasure ℝ) : Measurable (lawQuantile μ) :=",
+        "judgment_zh": "最终保留由单调性给出的分位数可测性。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  },
+  {
+    "annotation_index": 21,
+    "run_id": "r2-m3-c",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "corrections": {},
+    "reason_zh": "事件15搜索未取得可直接套用的广义逆成品；19实际读取CDF两端极限。最终第33、41行分别调用tendsto_cdf_atBot和tendsto_cdf_atTop。原文恰当限定为可见检索，没有作数学库不存在性断言。",
+    "checked_event_ids": [
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_cDOBx12EuZZkZVEalYcS7BYN",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_YIx46vKLH37PUNNaPw7MhouD",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_ywHTOj8DcdfcRH9hRIIpIUZ0",
+      "01a09d39-80f0-7b80-a4a8-c21460c06495:call_9IBumwZzhKOIyA7L3tzED2F4"
+    ],
+    "additional_event_ids": [],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 33,
+        "actual_source_line": "  have h := (tendsto_cdf_atBot (μ : Measure ℝ)).eventually",
+        "judgment_zh": "最终直接使用 tendsto_cdf_atBot 证明阈值集合相关性质。"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 41,
+        "actual_source_line": "  have h := (tendsto_cdf_atTop (μ : Measure ℝ)).eventually",
+        "judgment_zh": "最终直接使用 tendsto_cdf_atTop。"
+      }
+    ],
+    "confidence": "high",
+    "reviewer_role": "independent_agent_nonblind",
+    "original_annotation_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958"
+  }
+]

@@ -1,0 +1,1420 @@
+{
+  "source_edition": 28,
+  "source_date": "2026-09-15",
+  "engine_commit": "d07f272850899b58612adf1c7dc202538503252f",
+  "prior_study_commit": "84248648b66a4df16889c82e01b94a098d060bf4",
+  "copied_inputs": [
+    {
+      "source": "frozen-report-v28/zh.pdf",
+      "file": "zh.pdf",
+      "sha256": "f2c1191c8aad1958e933f97286d348670c015cd50c312cbc157c2a6b3835b862",
+      "published_sha256": "f2c1191c8aad1958e933f97286d348670c015cd50c312cbc157c2a6b3835b862",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/en.pdf",
+      "file": "en.pdf",
+      "sha256": "451968ca0e267cd185a9ada472877787d7d5de06e44d056662e663998a6a40a2",
+      "published_sha256": "451968ca0e267cd185a9ada472877787d7d5de06e44d056662e663998a6a40a2",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/zh-appendix.pdf",
+      "file": "zh-appendix.pdf",
+      "sha256": "5a978737f7dbfbdac0e3e79d0522c2a7eca6c5bf24e46148c56df6a072e90ebe",
+      "published_sha256": "5a978737f7dbfbdac0e3e79d0522c2a7eca6c5bf24e46148c56df6a072e90ebe",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/en-appendix.pdf",
+      "file": "en-appendix.pdf",
+      "sha256": "ca8d75bc1862b74b6a3456b38424a0834455b0ececcb8de1e41f008471b4e4ac",
+      "published_sha256": "ca8d75bc1862b74b6a3456b38424a0834455b0ececcb8de1e41f008471b4e4ac",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/report.zh-CN.md",
+      "file": "manuscript/report.zh-CN.md",
+      "sha256": "ad9b3f2295e8239427b737b05482c6c6bafe2a4326c13c9b3555e96a768e7160",
+      "published_sha256": "ad9b3f2295e8239427b737b05482c6c6bafe2a4326c13c9b3555e96a768e7160",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/appendix.zh-CN.md",
+      "file": "manuscript/appendix.zh-CN.md",
+      "sha256": "5f663c488b4395b7e474afd2437d42d2f607588462f040a4fe410297f881e92c",
+      "published_sha256": "5f663c488b4395b7e474afd2437d42d2f607588462f040a4fe410297f881e92c",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/report.en.md",
+      "file": "manuscript/report.en.md",
+      "sha256": "bcf50b263eb1c8461deb83f4e00c7f2c4e71a212368fb8d7b293df79a39f2b33",
+      "published_sha256": "bcf50b263eb1c8461deb83f4e00c7f2c4e71a212368fb8d7b293df79a39f2b33",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/appendix.en.md",
+      "file": "manuscript/appendix.en.md",
+      "sha256": "f4f40b241c6aa70d12cf2af922508b2f452d980544ca8ab23155aaaae4e987c3",
+      "published_sha256": "f4f40b241c6aa70d12cf2af922508b2f452d980544ca8ab23155aaaae4e987c3",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/README.md",
+      "file": "manuscript/evidence/README.md",
+      "sha256": "9b7b9120e46281ac7cfc836fbdc2f898a532ccc7ea98106969489e03e3c49930",
+      "published_sha256": "9b7b9120e46281ac7cfc836fbdc2f898a532ccc7ea98106969489e03e3c49930",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/project_docs/architecture.excerpt.md",
+      "file": "manuscript/evidence/project_docs/architecture.excerpt.md",
+      "sha256": "7529f36f16d65740f5f083cd30b3edefb848d88a317b25d0d9da0f11e1853df3",
+      "published_sha256": "7529f36f16d65740f5f083cd30b3edefb848d88a317b25d0d9da0f11e1853df3",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/project_docs/dependency_trail.excerpt.md",
+      "file": "manuscript/evidence/project_docs/dependency_trail.excerpt.md",
+      "sha256": "3e048c1900b1a8bf60a4de4f01cd39d88275c9c1a1c5b34e8a2678e989962fea",
+      "published_sha256": "3e048c1900b1a8bf60a4de4f01cd39d88275c9c1a1c5b34e8a2678e989962fea",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/project_docs/interface_policy.excerpt.md",
+      "file": "manuscript/evidence/project_docs/interface_policy.excerpt.md",
+      "sha256": "719755c4f67f4daa8e0ef7594dcd5040faf285370755a3dba6432a8435a7ccb9",
+      "published_sha256": "719755c4f67f4daa8e0ef7594dcd5040faf285370755a3dba6432a8435a7ccb9",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/project_docs/manifest.json",
+      "file": "manuscript/evidence/project_docs/manifest.json",
+      "sha256": "bc23933ddf0f5c7f945d26a8ed31fa43012379e9b6a6157941d75c0e7edb5672",
+      "published_sha256": "bc23933ddf0f5c7f945d26a8ed31fa43012379e9b6a6157941d75c0e7edb5672",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/project_docs/README.md",
+      "file": "manuscript/evidence/project_docs/README.md",
+      "sha256": "2f2e0de073b0cd82b4be725d888c6a0004f36d722bebe81af3cf0f7642981723",
+      "published_sha256": "2f2e0de073b0cd82b4be725d888c6a0004f36d722bebe81af3cf0f7642981723",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/project_docs/review_criteria.excerpt.md",
+      "file": "manuscript/evidence/project_docs/review_criteria.excerpt.md",
+      "sha256": "1c7692b804e0608ca3a771de590e9dec706f758132affe56015f1d6a2c738295",
+      "published_sha256": "1c7692b804e0608ca3a771de590e9dec706f758132affe56015f1d6a2c738295",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/project_docs/workflow.excerpt.md",
+      "file": "manuscript/evidence/project_docs/workflow.excerpt.md",
+      "sha256": "aa0dc2c57b10fe3e6dce3341168b32c515f7021754aa069624641f533dc12bcb",
+      "published_sha256": "aa0dc2c57b10fe3e6dce3341168b32c515f7021754aa069624641f533dc12bcb",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/project_docs/workflow_demo.excerpt.md",
+      "file": "manuscript/evidence/project_docs/workflow_demo.excerpt.md",
+      "sha256": "f1d3abba84692ad7f6ed9b6972aab35655a43c0b16224c9b9b5dfcf6ee85c335",
+      "published_sha256": "f1d3abba84692ad7f6ed9b6972aab35655a43c0b16224c9b9b5dfcf6ee85c335",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/project_docs/workspace_state.excerpt.md",
+      "file": "manuscript/evidence/project_docs/workspace_state.excerpt.md",
+      "sha256": "c4354ad64093575fd23fbb54b1266778ca5de1ab5d46b97eb3a782ef6a65d68f",
+      "published_sha256": "c4354ad64093575fd23fbb54b1266778ca5de1ab5d46b97eb3a782ef6a65d68f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/EVALUATION_INDEX.csv",
+      "file": "manuscript/evidence/r9_rewrite_evidence/EVALUATION_INDEX.csv",
+      "sha256": "f7c388dbc4bbfdfcc29edb09242ef82e70092da43d7ae1b9ef1efa2d1de065e5",
+      "published_sha256": "f7c388dbc4bbfdfcc29edb09242ef82e70092da43d7ae1b9ef1efa2d1de065e5",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/EVIDENCE.md",
+      "file": "manuscript/evidence/r9_rewrite_evidence/EVIDENCE.md",
+      "sha256": "fb26201082867af16aa988608346b9d2c3c225a61afbc01169647e6dc0237570",
+      "published_sha256": "fb26201082867af16aa988608346b9d2c3c225a61afbc01169647e6dc0237570",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/finalize.py",
+      "file": "manuscript/evidence/r9_rewrite_evidence/finalize.py",
+      "sha256": "8e9364f38e5f870e74d547b77a4cb2c675695900000255be9ee64e1d7976d19b",
+      "published_sha256": "8e9364f38e5f870e74d547b77a4cb2c675695900000255be9ee64e1d7976d19b",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/package.py",
+      "file": "manuscript/evidence/r9_rewrite_evidence/package.py",
+      "sha256": "0b4a326efc7e6be8b618bb2e7ff6913162ae498b77ce3991ce9090e74f8d7fad",
+      "published_sha256": "0b4a326efc7e6be8b618bb2e7ff6913162ae498b77ce3991ce9090e74f8d7fad",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/README.md",
+      "file": "manuscript/evidence/r9_rewrite_evidence/README.md",
+      "sha256": "e1c45f3b0273f1ca578d38d4a407d74044d72c6180da1a2382c39b13a764610d",
+      "published_sha256": "e1c45f3b0273f1ca578d38d4a407d74044d72c6180da1a2382c39b13a764610d",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/RUN_INDEX.csv",
+      "file": "manuscript/evidence/r9_rewrite_evidence/RUN_INDEX.csv",
+      "sha256": "621a6b21ba8103cdfd1129ee836853e4106b77b6f760076ccb3d8e937d405726",
+      "published_sha256": "621a6b21ba8103cdfd1129ee836853e4106b77b6f760076ccb3d8e937d405726",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/SHA256SUMS.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/SHA256SUMS.txt",
+      "sha256": "eaeb53425e94250d2de9392cafbd7a43e190e86cde84518f494fce9d93d7edfc",
+      "published_sha256": "eaeb53425e94250d2de9392cafbd7a43e190e86cde84518f494fce9d93d7edfc",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A01.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A01.txt",
+      "sha256": "4ac4909d9e990902e45ba8bef513f15b93ee45b6f074117df055a21350ddf4ae",
+      "published_sha256": "4ac4909d9e990902e45ba8bef513f15b93ee45b6f074117df055a21350ddf4ae",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A02.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A02.json",
+      "sha256": "97bb70058d2a66627825c3fc94fc84bfa2c78cc0075fe94aec7d8d200ba35dff",
+      "published_sha256": "97bb70058d2a66627825c3fc94fc84bfa2c78cc0075fe94aec7d8d200ba35dff",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A03.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A03.json",
+      "sha256": "a6eb551624f93dbdf8ff529786a125bff24aa13faca5674b25144c5d75dd9107",
+      "published_sha256": "a6eb551624f93dbdf8ff529786a125bff24aa13faca5674b25144c5d75dd9107",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A04.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A04.json",
+      "sha256": "fb7263a57c909212235dffe327e834a5678a624982e7c82d60bbe1b7f643e72b",
+      "published_sha256": "fb7263a57c909212235dffe327e834a5678a624982e7c82d60bbe1b7f643e72b",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A05.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A05.json",
+      "sha256": "3a4becc47c75289ee1c87469ecba8c6223eabd7877083b330f953cb8c6f87bb9",
+      "published_sha256": "3a4becc47c75289ee1c87469ecba8c6223eabd7877083b330f953cb8c6f87bb9",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A06.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A06.txt",
+      "sha256": "777d18304c1d0705f3939393d9dfbd2cfe3cdb514c03d72d12a2c1ab70055f5e",
+      "published_sha256": "777d18304c1d0705f3939393d9dfbd2cfe3cdb514c03d72d12a2c1ab70055f5e",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A10.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A10.json",
+      "sha256": "10820df4771c1ae8af8a0a765017ebf396a6b5657bf36236df2e943d9981f5e9",
+      "published_sha256": "10820df4771c1ae8af8a0a765017ebf396a6b5657bf36236df2e943d9981f5e9",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A11.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A11.json",
+      "sha256": "6b0a310419950faa0b079be16c96a5d732c96b44d086de6c8701042c23884b85",
+      "published_sha256": "6b0a310419950faa0b079be16c96a5d732c96b44d086de6c8701042c23884b85",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A12.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A12.json",
+      "sha256": "8ab8bbb8bab12bffba1ec6b988fd5d766662927418c4759443a01956ec5786bd",
+      "published_sha256": "8ab8bbb8bab12bffba1ec6b988fd5d766662927418c4759443a01956ec5786bd",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A13.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A13.json",
+      "sha256": "321e6c472f5d3a8f9ddd52373e98cceefc52815f3668a96b4d688ca1806f4832",
+      "published_sha256": "321e6c472f5d3a8f9ddd52373e98cceefc52815f3668a96b4d688ca1806f4832",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A14.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A14.json",
+      "sha256": "3188d4131ac1a184288a53293ae8348f77e4ce6e8e1b88b7adace012a8172148",
+      "published_sha256": "3188d4131ac1a184288a53293ae8348f77e4ce6e8e1b88b7adace012a8172148",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A15.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A15.json",
+      "sha256": "b542efd6fe127d730faffee9ef558b5e0d175456a132836439c9f74ccb8eb7fd",
+      "published_sha256": "b542efd6fe127d730faffee9ef558b5e0d175456a132836439c9f74ccb8eb7fd",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A16.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A16.json",
+      "sha256": "50d83c4e4fd6d75919cb4534fe8877dda89dd90915d23b7ed07ffcd37c273ee1",
+      "published_sha256": "50d83c4e4fd6d75919cb4534fe8877dda89dd90915d23b7ed07ffcd37c273ee1",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A17.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A17.json",
+      "sha256": "f1c3c567fabaa71831fc034073644a17f4a0587edc851c8a65f5f168963fd0f4",
+      "published_sha256": "f1c3c567fabaa71831fc034073644a17f4a0587edc851c8a65f5f168963fd0f4",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A18.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A18.json",
+      "sha256": "77ebe6c76f26c2e151aaa6b38f4229fd52a911155575599e99eb37440531cdef",
+      "published_sha256": "77ebe6c76f26c2e151aaa6b38f4229fd52a911155575599e99eb37440531cdef",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A19.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A19.json",
+      "sha256": "80e511c6496008e77d1bcc185cc86070caebf384f97f2a3b676607fa499e55e0",
+      "published_sha256": "80e511c6496008e77d1bcc185cc86070caebf384f97f2a3b676607fa499e55e0",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A20.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A20.json",
+      "sha256": "ab891a9c46df13828f65b2378ecd85be4a4f7a9644c541cf094afbd974c96762",
+      "published_sha256": "ab891a9c46df13828f65b2378ecd85be4a4f7a9644c541cf094afbd974c96762",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A21.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A21.json",
+      "sha256": "d1a9fca2f20cc9fdbce7305097e4c800456533297197298444f407656ba53a12",
+      "published_sha256": "d1a9fca2f20cc9fdbce7305097e4c800456533297197298444f407656ba53a12",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A30.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A30.json",
+      "sha256": "626393b360e74a242195aace323b4c4d03b659b07f87fe2bf2b47ad2124bc062",
+      "published_sha256": "626393b360e74a242195aace323b4c4d03b659b07f87fe2bf2b47ad2124bc062",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A31.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A31.json",
+      "sha256": "c75390420457c47a40c9c6d87f61d49147751255a5d765d17c4d08cb6ff89816",
+      "published_sha256": "c75390420457c47a40c9c6d87f61d49147751255a5d765d17c4d08cb6ff89816",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A32.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A32.json",
+      "sha256": "3e14d1568b801d1438798f152c87b052bb3da4e90cd6c1182de2efd79c179798",
+      "published_sha256": "3e14d1568b801d1438798f152c87b052bb3da4e90cd6c1182de2efd79c179798",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A33.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A33.json",
+      "sha256": "f494135105906c59ca704f6754600d2c510bce1b497a75364c2393c5732fe110",
+      "published_sha256": "f494135105906c59ca704f6754600d2c510bce1b497a75364c2393c5732fe110",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A34.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A34.json",
+      "sha256": "d9f11410aa816d7d68ac7c77223fd59e788dd1abee9cc0bf075558828c44b77e",
+      "published_sha256": "d9f11410aa816d7d68ac7c77223fd59e788dd1abee9cc0bf075558828c44b77e",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A35.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A35.json",
+      "sha256": "1d862ca045effe44b2d07a591b5e24f52f9856577829e0cf1e4610873d18bf36",
+      "published_sha256": "1d862ca045effe44b2d07a591b5e24f52f9856577829e0cf1e4610873d18bf36",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/A40-call-evidence.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/A40-call-evidence.json",
+      "sha256": "3311baa997110f67d8eeac16fe932a7e4e4340afaec5df4f5c361bac30e3d1eb",
+      "published_sha256": "3311baa997110f67d8eeac16fe932a7e4e4340afaec5df4f5c361bac30e3d1eb",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP01.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP01.txt",
+      "sha256": "210657f4723e2fff6d848ea12fbe4cdf1c606b2be61df312dab70126273ba427",
+      "published_sha256": "210657f4723e2fff6d848ea12fbe4cdf1c606b2be61df312dab70126273ba427",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP02.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP02.txt",
+      "sha256": "10152f9c2df5a783c618e42c00413e06907f4476d7ac4274e6ab991b3606dbc4",
+      "published_sha256": "10152f9c2df5a783c618e42c00413e06907f4476d7ac4274e6ab991b3606dbc4",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP03.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP03.txt",
+      "sha256": "73851be125f51ece07e9762b111e3b266e6323479a0b9a3f0c5eb7eaaeb4e5da",
+      "published_sha256": "73851be125f51ece07e9762b111e3b266e6323479a0b9a3f0c5eb7eaaeb4e5da",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP04.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP04.txt",
+      "sha256": "cd19479c259261c6e2f412cf797480ebd1c484fdc3a7ecb9cadfe89eaf6972b2",
+      "published_sha256": "cd19479c259261c6e2f412cf797480ebd1c484fdc3a7ecb9cadfe89eaf6972b2",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP05.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP05.txt",
+      "sha256": "ffb089104e7584f62f2e6bd5ca628f5c6d4582321a260dcf33f513447e7c705f",
+      "published_sha256": "ffb089104e7584f62f2e6bd5ca628f5c6d4582321a260dcf33f513447e7c705f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP06.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP06.txt",
+      "sha256": "7c7df7ed97025c72ad6d225b5da91f66e3378f1748e964bc908759a09c3872c2",
+      "published_sha256": "7c7df7ed97025c72ad6d225b5da91f66e3378f1748e964bc908759a09c3872c2",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP07.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP07.txt",
+      "sha256": "4759afed6b568314e7808ee8fe27a0f34e54832fbfd3d781370cd51d24d0a6e4",
+      "published_sha256": "4759afed6b568314e7808ee8fe27a0f34e54832fbfd3d781370cd51d24d0a6e4",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP08.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP08.txt",
+      "sha256": "d1684cacb301b84336dadc68b384e3a86048d689f7e2b2e6e67bca482f522db8",
+      "published_sha256": "d1684cacb301b84336dadc68b384e3a86048d689f7e2b2e6e67bca482f522db8",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP09.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP09.txt",
+      "sha256": "b6a38f7bbd327ac1cc21f5adbc128cf2d6717f2ad02e4af3b0d6faa971e32dc9",
+      "published_sha256": "b6a38f7bbd327ac1cc21f5adbc128cf2d6717f2ad02e4af3b0d6faa971e32dc9",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP10.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP10.txt",
+      "sha256": "3bc4a9467eb5e442d6a9a6504264a2a0bf36083949cff31cb072c273858e4318",
+      "published_sha256": "3bc4a9467eb5e442d6a9a6504264a2a0bf36083949cff31cb072c273858e4318",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AP11.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AP11.txt",
+      "sha256": "bb4191ff269fd724878fb5d71905caa94cb32af90b61674b05f1244f2015cdf5",
+      "published_sha256": "bb4191ff269fd724878fb5d71905caa94cb32af90b61674b05f1244f2015cdf5",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX01.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX01.json",
+      "sha256": "72134fc9b142834d1d91b390aaa3ec8b3d0f2f0159905d69e14b3631597823aa",
+      "published_sha256": "72134fc9b142834d1d91b390aaa3ec8b3d0f2f0159905d69e14b3631597823aa",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX02.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX02.json",
+      "sha256": "7faa54c845db4cff58bc15a4ea4b66ce4cc08ace994ceb8903f1946a90e018a9",
+      "published_sha256": "7faa54c845db4cff58bc15a4ea4b66ce4cc08ace994ceb8903f1946a90e018a9",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX03.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX03.json",
+      "sha256": "5662617bbffb8f6d1488107ccbe8c0990438f00b9c9e01ba40ca645b20708de8",
+      "published_sha256": "5662617bbffb8f6d1488107ccbe8c0990438f00b9c9e01ba40ca645b20708de8",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX04.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX04.json",
+      "sha256": "64c9e83ef4de726b2d7e3fe06faa425710001d36d9d6634aa0fdb448e85deee2",
+      "published_sha256": "64c9e83ef4de726b2d7e3fe06faa425710001d36d9d6634aa0fdb448e85deee2",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX05.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX05.json",
+      "sha256": "ec744bba3445327c19a68e24c32b70fe590d84e9b2eb39413f437f51d42a7219",
+      "published_sha256": "ec744bba3445327c19a68e24c32b70fe590d84e9b2eb39413f437f51d42a7219",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX06.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX06.json",
+      "sha256": "44b98376c5a1cd54294fff7cf1b398ed656edf381530f31ce2fd2aaf535aec7f",
+      "published_sha256": "44b98376c5a1cd54294fff7cf1b398ed656edf381530f31ce2fd2aaf535aec7f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX07.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX07.json",
+      "sha256": "262133a7f2308f895b7b4845916d5e29cc7c184a34818dad759a19d945cc4e96",
+      "published_sha256": "262133a7f2308f895b7b4845916d5e29cc7c184a34818dad759a19d945cc4e96",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX08.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX08.json",
+      "sha256": "56512327d5c322df9d77da6c5d6f071591ef771d99ed7230c463b5f3be4444f7",
+      "published_sha256": "56512327d5c322df9d77da6c5d6f071591ef771d99ed7230c463b5f3be4444f7",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX09.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX09.json",
+      "sha256": "bb028ff9296cf7c0ab867281822f07c5c704cb4fe99ec00ec7609a97cc5c9962",
+      "published_sha256": "bb028ff9296cf7c0ab867281822f07c5c704cb4fe99ec00ec7609a97cc5c9962",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX10.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX10.json",
+      "sha256": "5b01d6bdf1f6d5925f33883f2c6038c930edc69f49b4673b7fda04b92fc3de32",
+      "published_sha256": "5b01d6bdf1f6d5925f33883f2c6038c930edc69f49b4673b7fda04b92fc3de32",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX11.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX11.json",
+      "sha256": "7938c0ab6c960f3b375ce617b47251e3651aadd747220f9aca623d997361cfa8",
+      "published_sha256": "7938c0ab6c960f3b375ce617b47251e3651aadd747220f9aca623d997361cfa8",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX12.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX12.json",
+      "sha256": "ca9e6107dc0fbc2d932a8aa10d538fb9d23ebeab7adc9d749dac569cf6c7bb7d",
+      "published_sha256": "ca9e6107dc0fbc2d932a8aa10d538fb9d23ebeab7adc9d749dac569cf6c7bb7d",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/AX13.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/AX13.json",
+      "sha256": "0bbaa4f0f082b4d641ac12b973b13e134fd96fb121c8925ad8da2f3254b3e076",
+      "published_sha256": "0bbaa4f0f082b4d641ac12b973b13e134fd96fb121c8925ad8da2f3254b3e076",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B01.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B01.json",
+      "sha256": "f6e9e7029149c6356546996aa998d45cc842d36085aaf13afdaec1e4583d2f38",
+      "published_sha256": "f6e9e7029149c6356546996aa998d45cc842d36085aaf13afdaec1e4583d2f38",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B02.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B02.json",
+      "sha256": "00c8db95f4e7f2e7dd68f7a46b468b1b5f6499a6e1d59bda03e094183bd7600f",
+      "published_sha256": "00c8db95f4e7f2e7dd68f7a46b468b1b5f6499a6e1d59bda03e094183bd7600f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B03.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B03.txt",
+      "sha256": "646ec6c84dfefbabb4c49e485713f3a1f0058a0c0e791ee9dd4a1367745ae3ee",
+      "published_sha256": "646ec6c84dfefbabb4c49e485713f3a1f0058a0c0e791ee9dd4a1367745ae3ee",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B04.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B04.json",
+      "sha256": "df4827aaec2cd8859716b3dbcc46edc24e355b60a8067357de297b05a77c2dde",
+      "published_sha256": "df4827aaec2cd8859716b3dbcc46edc24e355b60a8067357de297b05a77c2dde",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B05.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B05.json",
+      "sha256": "d528707390f21acf79c9ec5d374d83e27a5289279ba20fe92053a6ed51d70006",
+      "published_sha256": "d528707390f21acf79c9ec5d374d83e27a5289279ba20fe92053a6ed51d70006",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B06.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B06.json",
+      "sha256": "c5f4661927d14cc0b3ce286411fc3f188e60b29b549918caff3432e6cfceeb3e",
+      "published_sha256": "c5f4661927d14cc0b3ce286411fc3f188e60b29b549918caff3432e6cfceeb3e",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B07-root-bindings.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B07-root-bindings.json",
+      "sha256": "481514acd418527543a4b172e3d72688da51166a8b4583ed67a2c53d85f48836",
+      "published_sha256": "481514acd418527543a4b172e3d72688da51166a8b4583ed67a2c53d85f48836",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B08-missing-usage.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B08-missing-usage.json",
+      "sha256": "9181de43f62752bbdea9f2fdd7511fa8a7a7de5cecd0cf3eb38bba5a31137458",
+      "published_sha256": "9181de43f62752bbdea9f2fdd7511fa8a7a7de5cecd0cf3eb38bba5a31137458",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B09.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B09.txt",
+      "sha256": "8ec56879d812501720f9c4b48db54aabcc0c860b988750ba5dcc60c62a3703cd",
+      "published_sha256": "8ec56879d812501720f9c4b48db54aabcc0c860b988750ba5dcc60c62a3703cd",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B10.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B10.txt",
+      "sha256": "5e7765873fc9234d66b25e5a890bc52dbe798a52bd4da37bb300190832340dfb",
+      "published_sha256": "5e7765873fc9234d66b25e5a890bc52dbe798a52bd4da37bb300190832340dfb",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B11-input-comparison.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B11-input-comparison.json",
+      "sha256": "cb9028119904adbf13842cf4163ee171207f9d0371d4c8e1ed281f51e642ce39",
+      "published_sha256": "cb9028119904adbf13842cf4163ee171207f9d0371d4c8e1ed281f51e642ce39",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/B12.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/B12.txt",
+      "sha256": "a81e6c1b50afa699ccc704607f45ce85657c0c2809d83189df0745f1bf10d627",
+      "published_sha256": "a81e6c1b50afa699ccc704607f45ce85657c0c2809d83189df0745f1bf10d627",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/BASE-appendix.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/BASE-appendix.txt",
+      "sha256": "77eb96c1c013789a01f2e305474c60c94131e679100ea53d31891724e84344f4",
+      "published_sha256": "77eb96c1c013789a01f2e305474c60c94131e679100ea53d31891724e84344f4",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/BASE-report.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/BASE-report.txt",
+      "sha256": "a910ab56c9089975930204183c9886da401fa1c2f174bbb70894f7ffd245bad7",
+      "published_sha256": "a910ab56c9089975930204183c9886da401fa1c2f174bbb70894f7ffd245bad7",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/C01.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/C01.json",
+      "sha256": "e42492e193a41fe25aaf742b426c38045c4509c47bdf24cd12a78a847cbeb8a4",
+      "published_sha256": "e42492e193a41fe25aaf742b426c38045c4509c47bdf24cd12a78a847cbeb8a4",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/C02-decision.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/C02-decision.txt",
+      "sha256": "5897fb4a4e4f2b7437ed0e3370d925020862741e5cdb63e8d97fd051c205bf31",
+      "published_sha256": "5897fb4a4e4f2b7437ed0e3370d925020862741e5cdb63e8d97fd051c205bf31",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/C02-map.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/C02-map.txt",
+      "sha256": "2ce88108578e70588a53471f615494f9c3ffb8f755b04cc340547d88e1dca924",
+      "published_sha256": "2ce88108578e70588a53471f615494f9c3ffb8f755b04cc340547d88e1dca924",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/C03-decision.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/C03-decision.txt",
+      "sha256": "8d219c210c8fac8b8f5b0a84bd1508020e0290d5d29ade7c3704e24df30856ae",
+      "published_sha256": "8d219c210c8fac8b8f5b0a84bd1508020e0290d5d29ade7c3704e24df30856ae",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/C03-map.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/C03-map.txt",
+      "sha256": "b5a41ef90f71b218ecb506481e9561a9777bca5de635dc9536b2bb5dbfcedd2e",
+      "published_sha256": "b5a41ef90f71b218ecb506481e9561a9777bca5de635dc9536b2bb5dbfcedd2e",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/C04-map.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/C04-map.txt",
+      "sha256": "a04b5fd1abf00c500db778a82eb1e6bc8d454641d05c5d8bf6418ca5e3c793cb",
+      "published_sha256": "a04b5fd1abf00c500db778a82eb1e6bc8d454641d05c5d8bf6418ca5e3c793cb",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/C05.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/C05.txt",
+      "sha256": "fb7d68ee7a61c21ab5674e41bea332122ddd098cc1f1cdb1f84098622e38c97e",
+      "published_sha256": "fb7d68ee7a61c21ab5674e41bea332122ddd098cc1f1cdb1f84098622e38c97e",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/C06.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/C06.json",
+      "sha256": "babeb97f2441cb848b4139313083478d4f03bd9d10eaad97920271b56f4349c3",
+      "published_sha256": "babeb97f2441cb848b4139313083478d4f03bd9d10eaad97920271b56f4349c3",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/C07.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/C07.json",
+      "sha256": "3c715e2bd72e0490064c41639bf72309d4374c85094db96d0498aa77ff11cd76",
+      "published_sha256": "3c715e2bd72e0490064c41639bf72309d4374c85094db96d0498aa77ff11cd76",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/D01.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/D01.json",
+      "sha256": "2d1b6ff4de8b3a1e52f98436eee6b74f3f4d4fe6aeaccb3a7e7dbce14f80c8d3",
+      "published_sha256": "2d1b6ff4de8b3a1e52f98436eee6b74f3f4d4fe6aeaccb3a7e7dbce14f80c8d3",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/D02.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/D02.json",
+      "sha256": "cfe39c217c876a08efef5e00a112da4e61e3b9e0b1a35b0a540ec99fa4530c1e",
+      "published_sha256": "cfe39c217c876a08efef5e00a112da4e61e3b9e0b1a35b0a540ec99fa4530c1e",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/D03.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/D03.json",
+      "sha256": "f694b93f7d0a7ea0004e7f69f25765aaf5668f20a5ee9d46627308f0b8adc3d4",
+      "published_sha256": "f694b93f7d0a7ea0004e7f69f25765aaf5668f20a5ee9d46627308f0b8adc3d4",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/D04.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/D04.json",
+      "sha256": "a9fa870bca9a8e8f3b251928e0b7454868302c5447cc2cee17de1bc72ca546e6",
+      "published_sha256": "a9fa870bca9a8e8f3b251928e0b7454868302c5447cc2cee17de1bc72ca546e6",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/D05.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/D05.txt",
+      "sha256": "bfb4c372e9ad4f56393f1a3111b2611add4b1063317a35c0cb830c91a2ffc2aa",
+      "published_sha256": "bfb4c372e9ad4f56393f1a3111b2611add4b1063317a35c0cb830c91a2ffc2aa",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/E01.txt",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/E01.txt",
+      "sha256": "93ac1a709c1f797f9391cb550b5ffc17e820d55507ebc1ec381b6d0811936e8f",
+      "published_sha256": "93ac1a709c1f797f9391cb550b5ffc17e820d55507ebc1ec381b6d0811936e8f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/E02.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/E02.json",
+      "sha256": "b1ead6c506364c6136ced4768ca8acaa120e680ff5afc59710dfcae88dcb6a09",
+      "published_sha256": "b1ead6c506364c6136ced4768ca8acaa120e680ff5afc59710dfcae88dcb6a09",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/PACKAGING_CHECKS.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/PACKAGING_CHECKS.json",
+      "sha256": "0ec62bdc184030187031bb7dfa0a58c1b83ef6e627ac35e74dd7241a7ca53cda",
+      "published_sha256": "0ec62bdc184030187031bb7dfa0a58c1b83ef6e627ac35e74dd7241a7ca53cda",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/READ_SOURCE_HASHES.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/READ_SOURCE_HASHES.json",
+      "sha256": "7715eea2d6c71f79e76783fac9939b582709c09ad04d84505ff918585eca23db",
+      "published_sha256": "7715eea2d6c71f79e76783fac9939b582709c09ad04d84505ff918585eca23db",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/manuscript/evidence/r9_rewrite_evidence/sources/SOURCE_INDEX.json",
+      "file": "manuscript/evidence/r9_rewrite_evidence/sources/SOURCE_INDEX.json",
+      "sha256": "fc7b49e7e59e12dfb1e2a04589f27c50a032a910e6b2ce3d6c0177fb8e10d85f",
+      "published_sha256": "fc7b49e7e59e12dfb1e2a04589f27c50a032a910e6b2ce3d6c0177fb8e10d85f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/qa/build/zh/main.tex",
+      "file": "latex/zh/main.tex",
+      "sha256": "984b71b3f2b12d080f607f8fc7696e9d665972090683b09f158acbbeabe12dad",
+      "published_sha256": "984b71b3f2b12d080f607f8fc7696e9d665972090683b09f158acbbeabe12dad",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/qa/build/zh/preamble.tex",
+      "file": "latex/zh/preamble.tex",
+      "sha256": "84339881e96ff6286fee7a9b543e775407590408e65cdb18d2b6d9b3254f2d97",
+      "published_sha256": "84339881e96ff6286fee7a9b543e775407590408e65cdb18d2b6d9b3254f2d97",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/qa/build/en/main.tex",
+      "file": "latex/en/main.tex",
+      "sha256": "df8354586bd3aa2fb8e7837009c2166899ed4bce80c1823a2f018c0b704360f0",
+      "published_sha256": "df8354586bd3aa2fb8e7837009c2166899ed4bce80c1823a2f018c0b704360f0",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/qa/build/en/preamble.tex",
+      "file": "latex/en/preamble.tex",
+      "sha256": "dcad41500a5b5bc05cf672f92c170ac2c8bd5dfe56542fbe1ebb631c1ab08bf1",
+      "published_sha256": "dcad41500a5b5bc05cf672f92c170ac2c8bd5dfe56542fbe1ebb631c1ab08bf1",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/qa/build/zh-appendix/main.tex",
+      "file": "latex/zh-appendix/main.tex",
+      "sha256": "49cfc3beff25c2e589126e0342fc504409a49ccddff282268fc551115157815f",
+      "published_sha256": "49cfc3beff25c2e589126e0342fc504409a49ccddff282268fc551115157815f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/qa/build/zh-appendix/preamble.tex",
+      "file": "latex/zh-appendix/preamble.tex",
+      "sha256": "84339881e96ff6286fee7a9b543e775407590408e65cdb18d2b6d9b3254f2d97",
+      "published_sha256": "84339881e96ff6286fee7a9b543e775407590408e65cdb18d2b6d9b3254f2d97",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/qa/build/en-appendix/main.tex",
+      "file": "latex/en-appendix/main.tex",
+      "sha256": "a68716fbf1174995976efad37e897fc70ebcb525ec2c0822304f52f3b4050328",
+      "published_sha256": "a68716fbf1174995976efad37e897fc70ebcb525ec2c0822304f52f3b4050328",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/qa/build/en-appendix/preamble.tex",
+      "file": "latex/en-appendix/preamble.tex",
+      "sha256": "dcad41500a5b5bc05cf672f92c170ac2c8bd5dfe56542fbe1ebb631c1ab08bf1",
+      "published_sha256": "dcad41500a5b5bc05cf672f92c170ac2c8bd5dfe56542fbe1ebb631c1ab08bf1",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/evaluation/assessment.json",
+      "file": "evaluation/assessment.json",
+      "sha256": "7b3ce4f748815bfab4eddf8cbe1ac8dcbed13b069c56adfe70f15c2fe04ae32c",
+      "published_sha256": "7b3ce4f748815bfab4eddf8cbe1ac8dcbed13b069c56adfe70f15c2fe04ae32c",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/evaluation/policy.json",
+      "file": "evaluation/policy.json",
+      "sha256": "2f070a8281e90f73c0634315228a27a36245c57b960793b46960d129301f96dd",
+      "published_sha256": "2f070a8281e90f73c0634315228a27a36245c57b960793b46960d129301f96dd",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/evaluation/caller_checks.json",
+      "file": "evaluation/caller_checks.json",
+      "sha256": "a02914eb080c4886fb13dc7c7f2d368dcb6d933d366839cae2967ea63da6a298",
+      "published_sha256": "a02914eb080c4886fb13dc7c7f2d368dcb6d933d366839cae2967ea63da6a298",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/evaluation/compiled_source_binding.json",
+      "file": "evaluation/compiled_source_binding.json",
+      "sha256": "3a4938e534485354dc69ea79a31eba2f569830065743e622a5f5842ad7bf147f",
+      "published_sha256": "3a4938e534485354dc69ea79a31eba2f569830065743e622a5f5842ad7bf147f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/evaluation/L3.lean",
+      "file": "evaluation/L3.lean",
+      "sha256": "6d937919f832601860eae7ff7164eb7b687c572f47f39ce0bae37546c053870c",
+      "published_sha256": "6d937919f832601860eae7ff7164eb7b687c572f47f39ce0bae37546c053870c",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/evaluation/L3.log",
+      "file": "evaluation/L3.log",
+      "sha256": "9ac5cbde575fabbb74b639af733490c8c99fbfaf12ba5a2e8d13ae52824a423c",
+      "published_sha256": "9ac5cbde575fabbb74b639af733490c8c99fbfaf12ba5a2e8d13ae52824a423c",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/evaluation/M1.lean",
+      "file": "evaluation/M1.lean",
+      "sha256": "275f1e5a5538c9d1e9fd123d9de3c0a8db63899f8cd56f5202301566d2d85adb",
+      "published_sha256": "275f1e5a5538c9d1e9fd123d9de3c0a8db63899f8cd56f5202301566d2d85adb",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/evaluation/M1.log",
+      "file": "evaluation/M1.log",
+      "sha256": "8ee11edb8f329b0f203bddeea60c9c00b9267c62662edebc687141e133385c52",
+      "published_sha256": "8ee11edb8f329b0f203bddeea60c9c00b9267c62662edebc687141e133385c52",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/stage2_uniform_timing_20260914.json",
+      "file": "evaluation/second_batch_timing.json",
+      "sha256": "4e925c096d5f8e795370613734a0498fe99ccb96342734d2be261ffe43852eec",
+      "published_sha256": "4e925c096d5f8e795370613734a0498fe99ccb96342734d2be261ffe43852eec",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/verification/revision23/RUN_INDEX.csv",
+      "file": "evaluation/RUN_INDEX.csv",
+      "sha256": "34a323036321d9436744c8a80f6c03ddf8622769a651f96e129a3f1b151a6eb7",
+      "published_sha256": "34a323036321d9436744c8a80f6c03ddf8622769a651f96e129a3f1b151a6eb7",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/adjudicated_annotations.json",
+      "file": "process/semantic/adjudicated_annotations.json",
+      "sha256": "3c1051aaf08e138b4010759bbb851ba5842136b800594b5fe48d0ad859c4c7c3",
+      "published_sha256": "3c1051aaf08e138b4010759bbb851ba5842136b800594b5fe48d0ad859c4c7c3",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/adjudication_changes.json",
+      "file": "process/semantic/adjudication_changes.json",
+      "sha256": "827d9d5e372e3217f41c7f86fe891502773115faf564144bd86550566c593864",
+      "published_sha256": "827d9d5e372e3217f41c7f86fe891502773115faf564144bd86550566c593864",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/annotations_A.json",
+      "file": "process/semantic/annotations_A.json",
+      "sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+      "published_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/annotations_B.json",
+      "file": "process/semantic/annotations_B.json",
+      "sha256": "d3c17e5965308a4cbd53430fb1161cf79d0fd6a6365137beb2cbbb4449f780b3",
+      "published_sha256": "d3c17e5965308a4cbd53430fb1161cf79d0fd6a6365137beb2cbbb4449f780b3",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/annotations_C.json",
+      "file": "process/semantic/annotations_C.json",
+      "sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958",
+      "published_sha256": "41d609a847cab002a0eb8f6e291246cb6528a05efc42c10ee2a87f3830332958",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/notes_A.zh-CN.md",
+      "file": "process/semantic/notes_A.zh-CN.md",
+      "sha256": "81b3368af093452bca8a846d3b0b9c2e46a7db7bf4d534fc8268c5f97298a4a5",
+      "published_sha256": "81b3368af093452bca8a846d3b0b9c2e46a7db7bf4d534fc8268c5f97298a4a5",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/notes_B.zh-CN.md",
+      "file": "process/semantic/notes_B.zh-CN.md",
+      "sha256": "584d053f23438fd7a4d63d4830c0f664d04f53249512362f4bcdb2f9907c8995",
+      "published_sha256": "584d053f23438fd7a4d63d4830c0f664d04f53249512362f4bcdb2f9907c8995",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/notes_C.zh-CN.md",
+      "file": "process/semantic/notes_C.zh-CN.md",
+      "sha256": "8d984e8bf867a09c4e4442538ad32f4038fddd8b2e693dc2ad5811719f54eb4d",
+      "published_sha256": "8d984e8bf867a09c4e4442538ad32f4038fddd8b2e693dc2ad5811719f54eb4d",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/PROTOCOL.v1.zh-CN.md",
+      "file": "process/semantic/PROTOCOL.v1.zh-CN.md",
+      "sha256": "f4104848059ac5ddcca89f8d95092d2c1e62b1c6180776dcff4c9c9d5785a1d6",
+      "published_sha256": "f4104848059ac5ddcca89f8d95092d2c1e62b1c6180776dcff4c9c9d5785a1d6",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/PROTOCOL.zh-CN.md",
+      "file": "process/semantic/PROTOCOL.zh-CN.md",
+      "sha256": "c98e5d3826428b5977d41de746298dba7797da553029ba5740f7eaa99eac3b84",
+      "published_sha256": "c98e5d3826428b5977d41de746298dba7797da553029ba5740f7eaa99eac3b84",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/review_A.json",
+      "file": "process/semantic/review_A.json",
+      "sha256": "33adef04018739ed3700f4e4cc9860f92c0242cb080d1fa525428601e44dc417",
+      "published_sha256": "33adef04018739ed3700f4e4cc9860f92c0242cb080d1fa525428601e44dc417",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/review_A.zh-CN.md",
+      "file": "process/semantic/review_A.zh-CN.md",
+      "sha256": "8770a3799db3817e3c11cc5d18d63dc3b268f1f5caa6929de157a3f86bd52250",
+      "published_sha256": "8770a3799db3817e3c11cc5d18d63dc3b268f1f5caa6929de157a3f86bd52250",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/review_B.zh-CN.md",
+      "file": "process/semantic/review_B.zh-CN.md",
+      "sha256": "6a590b91cc85956078eb4d83b037427b4613d1b8a13047126451d2962b14cd0f",
+      "published_sha256": "6a590b91cc85956078eb4d83b037427b4613d1b8a13047126451d2962b14cd0f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/review_B_addendum.json",
+      "file": "process/semantic/review_B_addendum.json",
+      "sha256": "ea0ef7f1b80cd4274afe4511b4bd80dba033c56bb09d9b976c67e80e91239059",
+      "published_sha256": "ea0ef7f1b80cd4274afe4511b4bd80dba033c56bb09d9b976c67e80e91239059",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/review_B_addendum.md",
+      "file": "process/semantic/review_B_addendum.md",
+      "sha256": "f38d075e0c80a12db2f55e4a235f08c08aed3400e1f5392a307254f9d1c3ceaf",
+      "published_sha256": "f38d075e0c80a12db2f55e4a235f08c08aed3400e1f5392a307254f9d1c3ceaf",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/review_C.json",
+      "file": "process/semantic/review_C.json",
+      "sha256": "6de8c658095880b93b10fc47e407106cc179b2f6e4395f68e3e554327759edff",
+      "published_sha256": "6de8c658095880b93b10fc47e407106cc179b2f6e4395f68e3e554327759edff",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/review_C.zh-CN.md",
+      "file": "process/semantic/review_C.zh-CN.md",
+      "sha256": "848aeabe489850e359f1fb09cb9ce07024d57be1451acdf85f364e2258a335d4",
+      "published_sha256": "848aeabe489850e359f1fb09cb9ce07024d57be1451acdf85f364e2258a335d4",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/run_matrix.zh-CN.md",
+      "file": "process/semantic/run_matrix.zh-CN.md",
+      "sha256": "86b2367a64f6d0e209a11bb336b3bbcefee337f3075d58ac1e5274ccc412ebf6",
+      "published_sha256": "86b2367a64f6d0e209a11bb336b3bbcefee337f3075d58ac1e5274ccc412ebf6",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/summarize.py",
+      "file": "process/semantic/summarize.py",
+      "sha256": "00f5e1217f5b9123bf35a7111f0f5c51eecaf517af3a2e9fa180524523b56d93",
+      "published_sha256": "69fcaa7c238e798119caefb637bbfe78a709c9eb9942cca5b6da7893107836e1",
+      "publication_modified": true
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/summary.json",
+      "file": "process/semantic/summary.json",
+      "sha256": "705222c27804c37d0e115a3e9d96a5e2714dc9e76f66f21e5264e9a21ba2c4d8",
+      "published_sha256": "705222c27804c37d0e115a3e9d96a5e2714dc9e76f66f21e5264e9a21ba2c4d8",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/summary_provenance.json",
+      "file": "process/semantic/summary_provenance.json",
+      "sha256": "5e2fe335a3447d554912c136d64d0b5b4bf75d2e6dd2edf572c114d68294cd31",
+      "published_sha256": "096628d9fc77a89f8ecd724be158bec56b20107d246e236314f84e7fac80d8d6",
+      "publication_modified": true
+    },
+    {
+      "source": "frozen-report-v28/research/semantic/validate_annotations.py",
+      "file": "process/semantic/validate_annotations.py",
+      "sha256": "b8219a71bc1412dd24f854b7abdffa4d7365a2d341b9f595dbc72121091754eb",
+      "published_sha256": "ecb0d42cefde90a3b983264d0f77484845c053e2708cd990d4d81fb0050e6338",
+      "publication_modified": true
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-h1-a/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean",
+      "file": "process/final_sources/acceptance/r2-h1-a/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean",
+      "sha256": "8ee5672a96131dc215d51ac52cbbaad181e4620bd8f176f0d51abaaed48dbc24",
+      "published_sha256": "8ee5672a96131dc215d51ac52cbbaad181e4620bd8f176f0d51abaaed48dbc24",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-h1-b/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_6.lean",
+      "file": "process/final_sources/acceptance/r2-h1-b/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_6.lean",
+      "sha256": "17ca0f644d5f72b83c016c51c32883e715795a0407560267658070018a77cd1f",
+      "published_sha256": "17ca0f644d5f72b83c016c51c32883e715795a0407560267658070018a77cd1f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-h1-c/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean",
+      "file": "process/final_sources/acceptance/r2-h1-c/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean",
+      "sha256": "20953d24387b8397fd3445ed1552d4140ea9f2c85f7e80e7bfcd82bb220abbfe",
+      "published_sha256": "20953d24387b8397fd3445ed1552d4140ea9f2c85f7e80e7bfcd82bb220abbfe",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l1-a/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+      "file": "process/final_sources/acceptance/r2-l1-a/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+      "sha256": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585",
+      "published_sha256": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l1-b/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+      "file": "process/final_sources/acceptance/r2-l1-b/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+      "sha256": "829a38754dd24f57c2baa8f68cdf976d94db7ffa3dbf07e299b40bfdb8d2c9cf",
+      "published_sha256": "829a38754dd24f57c2baa8f68cdf976d94db7ffa3dbf07e299b40bfdb8d2c9cf",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+      "file": "process/final_sources/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+      "sha256": "77a4ef2c28d48b7e0b64a2b0de4ef98c899785aedd04cd3e793f78680a73d902",
+      "published_sha256": "77a4ef2c28d48b7e0b64a2b0de4ef98c899785aedd04cd3e793f78680a73d902",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "file": "process/final_sources/acceptance/r2-l2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "sha256": "55815cf0347fd5a6a45413d135e78dde801fda29f542997870b5da9374dc2d8c",
+      "published_sha256": "55815cf0347fd5a6a45413d135e78dde801fda29f542997870b5da9374dc2d8c",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_5.lean",
+      "file": "process/final_sources/acceptance/r2-l2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_5.lean",
+      "sha256": "2a735d9eb050e5dd1ee26affb292ea3c629c1ef5c012183ccf35e799968bf28d",
+      "published_sha256": "2a735d9eb050e5dd1ee26affb292ea3c629c1ef5c012183ccf35e799968bf28d",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l2-b/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "file": "process/final_sources/acceptance/r2-l2-b/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "sha256": "43935188aef77259238402913ab8d47c36c03dd8225dc40fa6687e50b3268e62",
+      "published_sha256": "43935188aef77259238402913ab8d47c36c03dd8225dc40fa6687e50b3268e62",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "file": "process/final_sources/acceptance/r2-l2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "sha256": "a900d189dd3e3b2310467f459ae2b3e0adf513584b1e8292ba6e391384416067",
+      "published_sha256": "a900d189dd3e3b2310467f459ae2b3e0adf513584b1e8292ba6e391384416067",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l3-a/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "file": "process/final_sources/acceptance/r2-l3-a/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf",
+      "published_sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l3-b/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "file": "process/final_sources/acceptance/r2-l3-b/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "sha256": "bc1e576d1935368b688c1bbd87fe16dc39dba4c935029082e14bb01a97e93d39",
+      "published_sha256": "bc1e576d1935368b688c1bbd87fe16dc39dba4c935029082e14bb01a97e93d39",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l3-b/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "file": "process/final_sources/acceptance/r2-l3-b/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "sha256": "9f892ee2c9000f143a683c87ec0578988727a4477d7c81402f16fa456ffa7be5",
+      "published_sha256": "9f892ee2c9000f143a683c87ec0578988727a4477d7c81402f16fa456ffa7be5",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "file": "process/final_sources/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "sha256": "cdef1040d6b4cd19df030f8406dc158944830cce2a1f0fe3624239315ce982f6",
+      "published_sha256": "cdef1040d6b4cd19df030f8406dc158944830cce2a1f0fe3624239315ce982f6",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "file": "process/final_sources/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "sha256": "82bbbc0c33430266abe139fad7632a4d3b7124c33589c015d6e63344b85effc2",
+      "published_sha256": "82bbbc0c33430266abe139fad7632a4d3b7124c33589c015d6e63344b85effc2",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l4-a/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "file": "process/final_sources/acceptance/r2-l4-a/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "sha256": "a43f158f9c4492cec84bc77b569bb369e51e533ac6123e27d7f1eda648ef4958",
+      "published_sha256": "a43f158f9c4492cec84bc77b569bb369e51e533ac6123e27d7f1eda648ef4958",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l4-b/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "file": "process/final_sources/acceptance/r2-l4-b/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "sha256": "f7cbec62f8dd891f924fb1bea03b3e36916745a2d069e51de3ffb8c09996a805",
+      "published_sha256": "f7cbec62f8dd891f924fb1bea03b3e36916745a2d069e51de3ffb8c09996a805",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l4-c/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "file": "process/final_sources/acceptance/r2-l4-c/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "sha256": "8f1813c952b8747cd079feafffc4d3ecd00296a5cbc8b2ae6e738b8b58e16a40",
+      "published_sha256": "8f1813c952b8747cd079feafffc4d3ecd00296a5cbc8b2ae6e738b8b58e16a40",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l5-a/technical/saved-sources/ProbabilityTheory/chapter_08/prob_8_7.lean",
+      "file": "process/final_sources/acceptance/r2-l5-a/technical/saved-sources/ProbabilityTheory/chapter_08/prob_8_7.lean",
+      "sha256": "75a68c69686d1c2d01a9c5d7b7b45a63a8a73fc77409cd37b095bdf467d8bd67",
+      "published_sha256": "75a68c69686d1c2d01a9c5d7b7b45a63a8a73fc77409cd37b095bdf467d8bd67",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l5-b/technical/saved-sources/ProbabilityTheory/chapter_08/prob_8_7.lean",
+      "file": "process/final_sources/acceptance/r2-l5-b/technical/saved-sources/ProbabilityTheory/chapter_08/prob_8_7.lean",
+      "sha256": "1b34b99cf462226744871023cecb09c9c12496239dcf5d9c6c5af3d4acb06050",
+      "published_sha256": "1b34b99cf462226744871023cecb09c9c12496239dcf5d9c6c5af3d4acb06050",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/coupling_core.lean",
+      "file": "process/final_sources/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/coupling_core.lean",
+      "sha256": "feb0c9414f7a20fb388f60c35ac7a6a49465f933e7284b927d5023d491a99270",
+      "published_sha256": "feb0c9414f7a20fb388f60c35ac7a6a49465f933e7284b927d5023d491a99270",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/max_coupling_core.lean",
+      "file": "process/final_sources/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/max_coupling_core.lean",
+      "sha256": "9b9ff43149bdf258b3b0c8203f623ffc2fdb8a5def313eab4c98feea37e52bf5",
+      "published_sha256": "9b9ff43149bdf258b3b0c8203f623ffc2fdb8a5def313eab4c98feea37e52bf5",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l6-a/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+      "file": "process/final_sources/acceptance/r2-l6-a/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+      "sha256": "daaaad2b28db1b8e794960e63139cf3daf6884819fd7b6246cb0faf90d5158af",
+      "published_sha256": "daaaad2b28db1b8e794960e63139cf3daf6884819fd7b6246cb0faf90d5158af",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l6-b/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+      "file": "process/final_sources/acceptance/r2-l6-b/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+      "sha256": "3814cb3c45720606e0ba90e6467e66cd9196a67693965caef2f5007ef0ceff9a",
+      "published_sha256": "3814cb3c45720606e0ba90e6467e66cd9196a67693965caef2f5007ef0ceff9a",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+      "file": "process/final_sources/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+      "sha256": "4765c7affa5264dec9fd9813f956daa5766a4600d6200b82f90db3b797d0914d",
+      "published_sha256": "4765c7affa5264dec9fd9813f956daa5766a4600d6200b82f90db3b797d0914d",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l7-a/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "file": "process/final_sources/acceptance/r2-l7-a/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "sha256": "0d28a5c4704aafd34e8475fdb52ec8376b5144e0477cbcba1c5c5cecb6c7d216",
+      "published_sha256": "0d28a5c4704aafd34e8475fdb52ec8376b5144e0477cbcba1c5c5cecb6c7d216",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l7-b/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "file": "process/final_sources/acceptance/r2-l7-b/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "sha256": "01055015a15447155b772486f72e652987377708782a100487420d73c621700f",
+      "published_sha256": "01055015a15447155b772486f72e652987377708782a100487420d73c621700f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/convergence_support.lean",
+      "file": "process/final_sources/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/convergence_support.lean",
+      "sha256": "212bc06c07333c99bc46986bc2f4c8434e85ca405738dfc2ef439144c2413ccb",
+      "published_sha256": "212bc06c07333c99bc46986bc2f4c8434e85ca405738dfc2ef439144c2413ccb",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-m1-a/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+      "file": "process/final_sources/acceptance/r2-m1-a/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+      "sha256": "60ea3415c72aa452f1626e29704245d4b701c356472eb45b2deece01daaa8d97",
+      "published_sha256": "60ea3415c72aa452f1626e29704245d4b701c356472eb45b2deece01daaa8d97",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-m1-b/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+      "file": "process/final_sources/acceptance/r2-m1-b/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+      "sha256": "c48bee10190bab3905f10bd222d63c33608ec74a45374c05b6b6509410c052a5",
+      "published_sha256": "c48bee10190bab3905f10bd222d63c33608ec74a45374c05b6b6509410c052a5",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+      "file": "process/final_sources/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+      "sha256": "ce6c14a5f54d6cd0f723942f3e2fdd2bf8e1e4432e3e993ee1ac9f17e95f26a2",
+      "published_sha256": "ce6c14a5f54d6cd0f723942f3e2fdd2bf8e1e4432e3e993ee1ac9f17e95f26a2",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-m2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+      "file": "process/final_sources/acceptance/r2-m2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+      "sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f",
+      "published_sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-m2-b/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7_support.lean",
+      "file": "process/final_sources/acceptance/r2-m2-b/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7_support.lean",
+      "sha256": "0d7bbd161ac5e601b9127ca0738752ecb8eace4b2f262126a386e1545dec58bd",
+      "published_sha256": "0d7bbd161ac5e601b9127ca0738752ecb8eace4b2f262126a386e1545dec58bd",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-m2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+      "file": "process/final_sources/acceptance/r2-m2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+      "sha256": "f502d1e308dd6c312006714c67351638eb72e81f175914ed44588d51629d3817",
+      "published_sha256": "f502d1e308dd6c312006714c67351638eb72e81f175914ed44588d51629d3817",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-m3-a/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+      "file": "process/final_sources/acceptance/r2-m3-a/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+      "sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3",
+      "published_sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-m3-b/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8_support.lean",
+      "file": "process/final_sources/acceptance/r2-m3-b/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8_support.lean",
+      "sha256": "9bb24498fd60d0203d4b811bd326ad0374f588c6b9b8133dbb1632ddefa3941e",
+      "published_sha256": "9bb24498fd60d0203d4b811bd326ad0374f588c6b9b8133dbb1632ddefa3941e",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/final_sources/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+      "file": "process/final_sources/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+      "sha256": "eff38b3259aa6124521b21842b6ca0d362119adc803001ccb5ecd36582ae1718",
+      "published_sha256": "eff38b3259aa6124521b21842b6ca0d362119adc803001ccb5ecd36582ae1718",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/inputs/runtime/runtime_a/container_mcp.py",
+      "file": "process/inputs/runtime/runtime_a/container_mcp.py",
+      "sha256": "243a759caa04ccd823c722ed3ef90d1ffa6413ca48ddb8951cc69c427e4c096c",
+      "published_sha256": "243a759caa04ccd823c722ed3ef90d1ffa6413ca48ddb8951cc69c427e4c096c",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/inputs/runtime/runtime_b/container_mcp.py",
+      "file": "process/inputs/runtime/runtime_b/container_mcp.py",
+      "sha256": "f5816659d41cadb38d1126e0634b423f3cd83c61117c3470cc06a721370519cd",
+      "published_sha256": "f5816659d41cadb38d1126e0634b423f3cd83c61117c3470cc06a721370519cd",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/inputs/runtime/runtime_c/container_mcp.py",
+      "file": "process/inputs/runtime/runtime_c/container_mcp.py",
+      "sha256": "ef2ea2ca9381dc0af15d39fea1954474289d73c67d1554f690700b0f46c172d8",
+      "published_sha256": "ef2ea2ca9381dc0af15d39fea1954474289d73c67d1554f690700b0f46c172d8",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/inputs/runtime/runtime_c/c_mcp.py",
+      "file": "process/inputs/runtime/runtime_c/c_mcp.py",
+      "sha256": "cf0811f472cf05170c1adbbe5132bae23654095ef042726175e3c6f52db08312",
+      "published_sha256": "cf0811f472cf05170c1adbbe5132bae23654095ef042726175e3c6f52db08312",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/protocol.zh-CN.md",
+      "file": "process/protocol.zh-CN.md",
+      "sha256": "4d28b675d929797e6b5a9b57e0e858807a15c8cac28f7c0699e9bcafaba09ea0",
+      "published_sha256": "4d28b675d929797e6b5a9b57e0e858807a15c8cac28f7c0699e9bcafaba09ea0",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/source_bundle_manifest.json",
+      "file": "process/source_bundle_manifest.json",
+      "sha256": "39e2b8d6c3fa3fd7740bbaca31769442043c666756245fb9f3e05a29cc7441d1",
+      "published_sha256": "0573c907bc9d85a671c5fd1b1c4039837760dddf844f25f06fa150da4ef4a39b",
+      "publication_modified": true
+    },
+    {
+      "source": "frozen-report-v28/REPORT_DATA.json",
+      "file": "process/inputs/REPORT_DATA.json",
+      "sha256": "7b3ce4f748815bfab4eddf8cbe1ac8dcbed13b069c56adfe70f15c2fe04ae32c",
+      "published_sha256": "7b3ce4f748815bfab4eddf8cbe1ac8dcbed13b069c56adfe70f15c2fe04ae32c",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/analysis/analyze.py",
+      "file": "process/analysis/analyze.py",
+      "sha256": "25ccf8802400e48631be6793ed191e25112116945534c81a375223b7a369c622",
+      "published_sha256": "adb5e48808b977a4d52b2e366a5ce575dfb629f715043e5bcfb15cf21bb3a2cb",
+      "publication_modified": true
+    },
+    {
+      "source": "frozen-report-v28/research/analysis/environment_analysis.py",
+      "file": "process/analysis/environment_analysis.py",
+      "sha256": "48b25957be3c0e049b1b6102c7dd7c9372efbbcc5affee801e04982a230054b5",
+      "published_sha256": "48b25957be3c0e049b1b6102c7dd7c9372efbbcc5affee801e04982a230054b5",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/analysis/summary.json",
+      "file": "process/analysis/summary.json",
+      "sha256": "c6b3aa73f1cab48da7d5ef7ae2737ee307a4daf3dc61df0de812f4a76a7ca656",
+      "published_sha256": "c6b3aa73f1cab48da7d5ef7ae2737ee307a4daf3dc61df0de812f4a76a7ca656",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/analysis/run_summary.json",
+      "file": "process/analysis/run_summary.json",
+      "sha256": "9011650ee396d22113ff535c67cf6312de0069f14800e48039354531b6044fdc",
+      "published_sha256": "9011650ee396d22113ff535c67cf6312de0069f14800e48039354531b6044fdc",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/analysis/environment_summary.json",
+      "file": "process/analysis/environment_summary.json",
+      "sha256": "41a5821029e646003aa8f0a5015b7e778d75b84a7079d6aa291cd07eed61e994",
+      "published_sha256": "41a5821029e646003aa8f0a5015b7e778d75b84a7079d6aa291cd07eed61e994",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/interventions/parameter_preflight.py",
+      "file": "process/interventions/parameter_preflight.py",
+      "sha256": "2221d7f00d46eb2c6578686ed78524435be20e2e28a6ad151ac293bafdc43176",
+      "published_sha256": "2221d7f00d46eb2c6578686ed78524435be20e2e28a6ad151ac293bafdc43176",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/interventions/test_parameter_boundaries.py",
+      "file": "process/interventions/test_parameter_boundaries.py",
+      "sha256": "d2221dada2c1ff233d905013c33660d2f9c996eedb4ddb211f11e7152c777587",
+      "published_sha256": "d2221dada2c1ff233d905013c33660d2f9c996eedb4ddb211f11e7152c777587",
+      "publication_modified": false
+    },
+    {
+      "source": "frozen-report-v28/research/interventions/validate_replay.py",
+      "file": "process/interventions/validate_replay.py",
+      "sha256": "719b6be802142bdbacbba1aa4803fb83eb7a1e5a521b1a9bdc971ebb27f9ca44",
+      "published_sha256": "963fa02f556a0bf32a212ac78a4dd73856137357a7e57e6a66fb78e18284640d",
+      "publication_modified": true
+    },
+    {
+      "source": "frozen-report-v28/research/interventions/startup_tool_card.zh-CN.md",
+      "file": "process/interventions/startup_tool_card.zh-CN.md",
+      "sha256": "b65219880ce7edcc0e02edab0aeaa0fc43201c84c681a81acc1a7b208321bd93",
+      "published_sha256": "b65219880ce7edcc0e02edab0aeaa0fc43201c84c681a81acc1a7b208321bd93",
+      "publication_modified": false
+    }
+  ],
+  "compressed_event_input": {
+    "file": "process/extraction/events.jsonl.gz",
+    "uncompressed_sha256": "4d8370825a882088c362be37868ff6fe9be66c7d85704939ea3d4193cb1a8e27",
+    "compressed_sha256": "0db06e0cbf379571879433962a20ff0b2787e43f1b1c87e9b215d509ac2f95b6",
+    "uncompressed_bytes": 182976600
+  },
+  "publication_changes": [
+    "Correct review provenance to 44 second-agent and 22 lead-investigator records, all nonblind.",
+    "Force semantic source checks to use included files.",
+    "Resolve analysis and replay inputs within the public package.",
+    "Recompute corrected provenance and supply publication notes; the four revision-28 PDFs remain unchanged."
+  ]
+}

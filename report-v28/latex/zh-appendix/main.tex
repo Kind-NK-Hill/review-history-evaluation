@@ -1,0 +1,2697 @@
+\input{preamble}
+\title{技术附录：概率证明的工作流程与执行轨迹}
+\author{Shuo Deng \and Kenneth W. Shum\thanks{通讯作者: \href{mailto:wkshum@cuhk.edu.cn}{wkshum@cuhk.edu.cn}.}}\date{第 28 版\\2026 年 9 月 15 日\\结果更新至 2026 年 9 月 14 日}
+\hypersetup{pdfauthor={Shuo Deng; Kenneth W. Shum}}\begin{document}\maketitle
+\textbf{第 28 版 · 2026 年 9 月 15 日 · 结果更新至：2026 年 9 月 14 日；早期记录保留各自日期}
+
+《概率证明如何完成》的配套附录。
+
+\textbf{第23版评价更新。}第23版纳入第二批已完成运行、旧L3诊断与修复，并统一两批数学成果评价。第一批、早期开发与历史分析保留原时点；本版方法、逐项复核、计时和新证据集中见\hyperlink{appendix-q}{附录Q}。本次未增加主求解运行，独立调用检查用于验证已有交付的等价接口。
+
+\section*{\texorpdfstring{\protect\hypertarget{abstract}{}摘要}{摘要}}
+本附录记录用于评价 ProbabilityTheoryFormalization 数学完成、审核与维护的两类证据。历史审核及对应代码修订支持独立判断重建、数学目标比较资格确认、失败后追踪、保存代码检查，以及证明组合和调用者迁移的详细分析。十一个任务组的配置比较提供实验交付、执行轨迹和资源观察。实验方法明确候选选择、提交后评审者看到的材料、意见分歧与异常格式的处理，以及 9 月 12 日原主表采用的修正标准。9 月 13 日续作与责任审计保留独立身份和投入。
+
+两类材料中的详细分析都区分数学工作、记录意见、可观察回应与获接纳产物。逐次运行测量、任务层面缺失项、历史结果表、数学论证和尚未解决的来源问题均予保留，供核查报告推理。原始档案位置仍然提供，但取得这些稿件不等于取得所有底层记录。\hyperlink{f2}{F.2}说明本轮编辑范围。
+
+\textbf{导航。}\hyperlink{appendix-a}{来源与历史：A–B} · \hyperlink{appendix-c}{历史方法：C} · \hyperlink{appendix-d}{保存代码检查：D} · \hyperlink{appendix-e}{术语与来源：E} · \hyperlink{appendix-f}{贡献：F} · \hyperlink{appendix-g}{详细轨迹：G} · \hyperlink{appendix-h}{观察时段：H} · \hyperlink{appendix-i}{来源索引：I–K} · \hyperlink{appendix-l}{历史数学：L} · \hyperlink{appendix-m}{测量：M} · \hyperlink{appendix-n}{实验方法：N} · \hyperlink{appendix-o}{9 月 13 日证据：O} · \hyperlink{appendix-p}{计时重建：P} · \hyperlink{appendix-q}{两批共同评价：Q} · \hyperlink{appendix-r}{正文移入的详细案例：R} · \hyperlink{appendix-s}{第二批工具反馈与过程研究：S} · \hyperlink{appendix-t}{展开过程的证据位置：T} · \href{zh.pdf}{正文}
+
+阅读历史数学工作与维护，可先看 B、L；C、D 给出记录重建、统计和保存代码的方法与结果。阅读原实验，可先看 \hyperlink{n1}{N.1}、\hyperlink{n6}{N.6}，再看 G 的相关案例及 M 的测量。\hyperlink{appendix-o}{O}给出后续续作与审计。\hyperlink{e2}{E.2}区分此前打包的补充证据、后续记录位置与更广历史档案。两条阅读路线均服务于\href{zh.pdf\#evaluation-questions}{正文第 1 节}的项目评价问题。
+
+\textbf{第24版结构调整。}正文原第4—6章的完整论证移至\hyperlink{appendix-r}{附录R}，当时正文第4章改为问题类型导读，并沿用第23版实验数据与评价结果。
+
+\textbf{第25版新增过程研究。}第二批33项运行的全量工具分析、固定起点过程表及功能原型见\hyperlink{appendix-s}{附录S}。第24版移入的详细案例继续保留，共同成果和时间数据未变。
+
+\hypertarget{appendix-a}{}
+
+\appendix\renewcommand{\baselinestretch}{1.04}\small\setlength{\parskip}{0.35em}\section{来源与时间线}
+本附录区分项目设计的证据与实际证明、判断和维护的证据，说明各来源能确认什么、事件日期怎样定位，使历史机制和实验实现都在各自版本及观察时段内接受评价。
+
+\subsection[各来源能确认什么]{\texorpdfstring{\protect\hypertarget{a1}{}各来源能确认什么}{各来源能确认什么}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{材料} & \textbf{支持的观测} & \textbf{解释限制}\\\midrule
+
+{提交中的代码与文档} & {某版本已有的接口、规则与执行路径} & {提交日期未必是首次实现或使用日期；一次提交可能汇总多项变化}\\
+{候选、支持文件与差异} & {命题、前提、证明体、导入与调用的变化} & {文件较短未必证明较少；主文件相同也可依赖不同}\\
+{评审、构建与应用回执} & {检查对象、记录判断与程序结果} & {模型评审不是人类真值；评审接受不同于状态应用成功}\\
+{操作指令与交接} & {要求人或代理采取的动作} & {请求不证明已执行；事后摘要可能遗漏原始动机}\\
+{冻结分析与案例调查} & {指定纳入规则下的计数、代码身份与数学解释} & {目的性案例不是随机样本；重检兼容性不是新数学评审}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+证据包保留来源副本、内容哈希与原始路径。若能定位代码及实际使用，却找不到引入规则的讨论，报告只描述代码和使用，不虚构动机。[E01-E21]
+
+\subsection[日期、版本与哈希]{\texorpdfstring{\protect\hypertarget{a2}{}日期、版本与哈希}{日期、版本与哈希}}
+日期来自 Git 元数据、评审包内时间戳或台账事件。恢复目录名中的日期和复制后修改时间，不作为证明或评审时间。请求创建与结果写入标记不同阶段，混用可能颠倒表面顺序。
+
+候选版本、语义评审版本和数学检查版本分别编号。例如，\nolinkurl{thm_9_5} 的评审 29 至 32 绑定候选 38 至 41；\nolinkurl{prob_14_8} 的数学检查 v10 与语义评审 v10 是不同对象。版本号不等于独立模型运行次数，反复失败也不估计数学难度。
+
+哈希比较保留原调查对原始字节与规范化换行的区分。若历史评审称联合构建通过，却无单独命令输出留存，仍记为有归属的历史陈述。C、D 的历史核查数字来自冻结的 \nolinkurl{qualified-v0.7.1} 分析及 v0.7.5 使用的生成绑定，从保存报告恢复；本版未重新抽样或自助重抽样。对报告数值的算术核对不构成重跑原分析。[E18, E19]
+
+\subsection[为什么这些案例解释机制而非发生频率]{\texorpdfstring{\protect\hypertarget{a3}{}为什么这些案例解释机制而非发生频率}{为什么这些案例解释机制而非发生频率}}
+案例覆盖不同设计问题：反演中的证明积累、矩母函数论证闭合、两个使用者共享 Gamma/Dirichlet 支持、中心极限定理至集券链、全变差修复后的调用者迁移、目标修订，以及主文件不变背后的上游变化。早期调查有意选择这些案例，有时已知后期候选通过。它们解释改变了什么，不估计现象在全部任务中的频率，也不是未来实验的留出任务。
+
+\subsection[已定位日期的变化及其证据状态]{\texorpdfstring{\protect\hypertarget{a4}{}已定位日期的变化及其证据状态}{已定位日期的变化及其证据状态}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{定位日期} & \textbf{材料中已有或记录的变化} & \textbf{日期含义}\\\midrule\endfirsthead
+\toprule
+\textbf{定位日期} & \textbf{材料中已有或记录的变化} & \textbf{日期含义}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{3 月 30 日} & {已有调度、分解、库检索、错误反馈与经验注入} & {检查的早期基线提交，不是发明日期}\\
+{4 月 8 日} & {旧调度器分解与任务包验证并存} & {两条路线尚未完成过渡}\\
+{4 月 10 日} & {用户要求重设计对原文忠实度的语义评审} & {设计请求，不是实现完成}\\
+{5 月 14 日} & {活跃入口移除旧的直接生成路线} & {汇总提交确认的状态，不是受控实验}\\
+{5 月 17 日} & {桥接分类区分表示转换与待完成证明} & {代码与文档同步变化}\\
+{5 月 22 日} & {代码包含义务更新及向父台账传播} & {可用程序分支，不证明每个案例均使用}\\
+{6 月 15 日} & {义务吸收后要求重检父任务与支持文件} & {带时间戳的台账事件}\\
+{6 月 19 日} & {检查点明确路线关卡、父任务完成与支持的边界} & {保存的政策里程碑，部分执行早于此}\\
+{6 月 21 日} & {共享 Dirichlet 密度代码分层，保留兼容导出} & {组织提交，不是首次数学完成}\\
+{7 月 8 日} & {单任务模块及其任务状态边界获明确族分类} & {分类里程碑，不是 family 一词首次使用}\\
+{7 月 19 日} & {概率条件修复与使用者迁移进入连续评审} & {带对象绑定的实际案例}\\
+{9 月 10 日读取} & {统一项目约定继续区分构建、语义评审与应用} & {当前参照点，不是新迁移事件}\\
+\end{longtable}\endgroup
+日期均为 2026 年。这条时间线定位证据，不是性能曲线。[E01-E04, E08, E15]
+
+\subsection[系统描述的版本依据]{\texorpdfstring{\protect\hypertarget{a5}{}系统描述的版本依据}{系统描述的版本依据}}
+沿用的架构说明以保存的本地仓库 README、架构、流程、评审标准、状态约定和工作区状态文档快照为依据，索引为 V01–V06。准备记录注明 README 有未提交修改，因此本地来源依据是这些快照，而非仅凭提交版本。\href{zh.pdf\#ref-26}{\mbox{[26]}}
+
+第 11 版以 2026 年 9 月 12 日读取的同一固定仓库版本中七份公开文档补充说明，涉及来源单元规划、修复与调度决策、正式状态维护、教材与 Mathlib 接口，以及隔离演示。\hyperlink{e3}{E.3}将文档映射到相应章节；随附来源指南保留公开版本、原文件身份与选定摘录。\href{zh.pdf\#ref-34}{\mbox{[34–36]}}
+
+文档描述运行设计。实际实验配置仍以 \hyperlink{n1}{N.1}、\hyperlink{n6}{N.6} 的冻结指令、调用与回执为准，历史机制以各自注明日期的记录为准。公开文档不替代执行来源。\href{zh.pdf\#ref-30}{\mbox{[30,31]}}
+
+\section[其他证明与记录历史]{\texorpdfstring{\protect\hypertarget{appendix-b}{}其他证明与记录历史}{其他证明与记录历史}}
+这些案例保留支撑正文第 1、5、6 节的数学范围、归属变化和事件区别。
+
+\subsection[义务子任务完成了真实数学工作]{\texorpdfstring{\protect\hypertarget{b1}{}义务子任务完成了真实数学工作}{义务子任务完成了真实数学工作}}
+OBL 是项目对证明义务子任务的标签。诊断把父任务缺口拆为具体职责，每个子任务可有候选、导入和评审记录；历史也包含嵌套义务。\nolinkurl{thm_7_8} 中，可积性、Riemann-Stieltjes 积分存在、夹逼、共同极限和下游适配的部分结果回到父文件。紧集上的连续性提供可积性；函数延拓与既有定理提供积分存在；父任务组装再使用这些结果。[E04]
+
+\nolinkurl{prob_14_8} 更深层义务证明了实轴上复矩母函数收敛、趋于零的聚点序列，以及特征函数收敛蕴含依分布收敛等局部步骤。父任务仍缺从原假设推出特征函数收敛的完整推导。因此，子任务可以通过，父任务仍不完整。
+
+\subsection[吸收子任务并终止完成状态传播]{\texorpdfstring{\protect\hypertarget{b2}{}吸收子任务并终止完成状态传播}{吸收子任务并终止完成状态传播}}
+保存台账将 \nolinkurl{thm_7_9}、\nolinkurl{ex_14_4_2} 和 \nolinkurl{prob_14_8} 的义务吸收记于 2026 年 6 月 15 日 02:10:44 UTC，要求父任务和支持文件重新构建、独立评审并应用。5 月 22 日保存代码显示，此前义务更新与待证工作清除可以传播到父台账，而不一定产生新的父任务语义评审。[E02, E04]
+
+吸收后，有用数学保留在普通支持或父文件中，但旧义务通过不再自动支持父任务完成。\nolinkurl{thm_7_9} 的有限绝对截断证明作为章节支持保留，明确不覆盖反向界、控制收敛、滤子处理和整个父定理。分解仍可使用，最终责任在教材任务及其实际导入的证明集合。旧义务包仍是历史证据。[E11]
+
+\subsection[数学内容、维护归属与任务身份]{\texorpdfstring{\protect\hypertarget{b3}{}数学内容、维护归属与任务身份}{数学内容、维护归属与任务身份}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{问题} & \textbf{相关区别} & \textbf{分类不能确认什么}\\\midrule
+
+{声明提供什么数学？} & {表示转换、已证辅助结果或待完成证明} & {支持标签不表示命题已证}\\
+{谁维护和解释？} & {单一父任务材料或有多个实际使用者的支持} & {共享目录不证明复用更高效}\\
+{是否计为教材任务？} & {教材父任务或辅助实现模块} & {拆分文件不等于多完成一道题}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+六月维护指令倾向于保留父任务最终入口，将大证明拆为该任务拥有的层。出现第二个实际使用者后，才考虑共享支持，避免过早泛化任务特定参数、临时义务封装或某条证明路线。历史未比较早提取、晚提取或不提取。[E03]
+
+\nolinkurl{family} 在不同材料中含义也变化。早期维护队列可能用它指相关任务；后期 \nolinkurl{family_member} 标签指由一个教材任务拆出的非任务模块；当前目录还使用教材编号族。因此，关键词首次出现不能给所有机制定年。
+
+\subsection[Gamma/Dirichlet 支持的两个使用者]{\texorpdfstring{\protect\hypertarget{b4}{}Gamma/Dirichlet 支持的两个使用者}{Gamma/Dirichlet 支持的两个使用者}}
+\nolinkurl{prob_1_4} 与 \nolinkurl{ex_1_2_2} 都使用 Gamma/Dirichlet 工作。前者发展一般归一化分布及投影密度；后者处理坐标图、Beta 特例及其自身原文步骤的连接。6 月 21 日提交将密度实现分为乘积密度、单纯形坐标图和投影密度层，在旧 Density 文件保留兼容重导出。\nolinkurl{ex_1_2_2} 调用共享分布识别，同时保留 Beta 分支与任务命题。[E03]
+
+这证明实际复用存在，且任务特定证明仍保留，但不量化节省时间。后期评审要求具名 \nolinkurl{prob_1_4} 定理本身包含已证密度结论，后续父定理将其加为第四个合取项。改变的是公开定理陈述承诺的位置，不能由此证明此前每次验收均错。
+
+\subsection[单任务模块与已经完成的证明]{\texorpdfstring{\protect\hypertarget{b5}{}单任务模块与已经完成的证明}{单任务模块与已经完成的证明}}
+\nolinkurl{thm_1_1} 的 Riemann-Stieltjes 证明从混合桥接转为 Darboux 上下和、坏区间、共同加细和极限论证。实现模块后来成为同一父任务下的 \nolinkurl{family_member} 文件，父任务仍是评审根。\nolinkurl{thm_9_5} 候选 43 在主文件保留核论证；正式文件 74 导入 \nolinkurl{thm_9_5_kernel}，并保留公开反演定理。两个端点评审均认为核心证明无需作为公开前提提供。该变化迁移了既有证明。[E03, E18]
+
+文件拆分可以保存已完成大证明、提取可复用材料或维护接口。这些不同于改变证明路线的数学路线关卡干预。若全部算作通过重新规划解决难题，就抹去了区别。
+
+\subsection[ex\_3\_1\_4 与 thm\_14\_7 的完成阶段]{\texorpdfstring{\protect\hypertarget{b6}{}ex\_3\_1\_4 与 thm\_14\_7 的完成阶段}{ex\_3\_1\_4 与 thm\_14\_7 的完成阶段}}
+\nolinkurl{ex_3_1_4} 从失败转为无法判断时，后期候选已新增区间可测性与典范延拓唯一性。但请求将义务绑定到占位节点，标签仍无法判断。下一条通过记录的主文件字节相同，却将绑定替换为具体义务 O1-O9。代码进展、评审标签与注册条件在不同时点变化。
+
+\nolinkurl{thm_14_7} 的 \nolinkurl{candidate_v8} 于 5 月 27 日在 \nolinkurl{open_math_debt} 下通过；字节相同的 \nolinkurl{official_snapshot_v5} 次日因缺教材证明而失败。书面规则一致，但绑定上下文、候选评审与正式快照评审阶段不同。早先接受 \nolinkurl{source_step/open} 节点作为待证工作，也与原提示限制冲突。\nolinkurl{COMPLETED_WITH_PROOF_DEBT} 表示尚有证明待完成的完成状态；应用回执的 \nolinkurl{state_transition=completed} 标识采用路径。两者都不表示教材证明已无欠缺。[E18]
+
+\subsection[thm\_9\_7：注册候选与评审候选不同]{\texorpdfstring{\protect\hypertarget{b7}{}thm\_9\_7：注册候选与评审候选不同}{thm\_9\_7：注册候选与评审候选不同}}
+早期请求注册候选 v3，结果却记录覆盖，实际判 v4 失败。后期请求和结果均指 v5 并通过。实际 v4 到 v5 差异恢复了 57 行分布层兼容导出，同时保留任意阶核心证明。每项判断都有实质内容，但注册的 v3 到 v5 关系会将 v4 的失败归给 v3，因此排除于直接比较。没有悄然替换端点来另造代码对。[E18, E19]
+
+\subsection[prob\_1\_9 与 thm\_13\_1 的程序事件]{\texorpdfstring{\protect\hypertarget{b8}{}prob\_1\_9 与 thm\_13\_1 的程序事件}{prob\_1\_9 与 thm\_13\_1 的程序事件}}
+\nolinkurl{prob_1_9} 最小检查拒绝哈希，因为请求嵌入 LF 换行，磁盘文件使用 CRLF。字节级换行转换确认数学源码相同，两份请求也嵌入相同主代码。这是绑定失败，既未反驳分部积分证明，也未新增证明。
+
+\nolinkurl{thm_13_1} 的五项异常显示，混用请求和结果写入时间会颠倒执行顺序。早期结果未到预期位置，调用者在收到实质批评前重派未变候选，第二次评审不使用第一份意见。因此未观察到由首次失败促成的修复。同主文件比较的一端还是原作者在同一流程中写的接受意见，另一端则为独立派发的只读评审；其角色不支持将二者解释为固定条件下的两个独立判断。[E18]
+
+\subsection[thm\_14\_8 的报告修正序列]{\texorpdfstring{\protect\hypertarget{b9}{}thm\_14\_8 的报告修正序列}{thm\_14\_8 的报告修正序列}}
+6 月 22 日原始评审已写出，但缺必需状态字段，无法应用。调用者随后明确提供通过与例外类别，同一评审者修正字段；应用又因评审依据变化而拒绝。新请求下，同一评审者重新评估字节相同候选。最终回执允许例外，并明确不将其采用为完成结果。这是一项判断、报告修正与相关重评的序列，不包含候选证明的连续改进。[E18, E20]
+
+\subsection[prob\_14\_10：局部准备早于上游完成]{\texorpdfstring{\protect\hypertarget{b10}{}prob\_14\_10：局部准备早于上游完成}{prob\_14\_10：局部准备早于上游完成}}
+上游定理完成前，\nolinkurl{prob_14_10} 已证明多项式积分收敛、统一指数逼近与误差控制，并构造上游输入。后来由未通过转通过时，主候选仅改一次调用，选择完整 \nolinkurl{prob_14_8} 结果的第二个合取项。但端点上游版本不同：一端含私有公理，另一端是完成父定理的单文件版本。[E07]
+
+局部准备、上游依据完成和最终交付发生于三个时点。实际调用证明使用了引理，但不测量节省工作量。使用者只改一行，也不意味着评审者仅仅改变意见。
+
+\subsection[def\_3\_6 未找回的原文决定]{\texorpdfstring{\protect\hypertarget{b11}{}def\_3\_6 未找回的原文决定}{def\_3\_6 未找回的原文决定}}
+\nolinkurl{def_3_6} 原文句子讨论实数中的闭有界区间，后续 Heine-Borel 上下文对实数子集使用紧性。后期评审接受以实数子集的闭性和有界性作为本章表示，将闭区间保留为单向实例。材料支持这一有限的历史接受，不证明任意拓扑或度量空间中闭有界集均紧，也未找回缺失的第二版原文批准。目标可比性仍未知。[E18]
+
+\section[评审历史重建、合格比较与跟踪]{\texorpdfstring{\protect\hypertarget{appendix-c}{}评审历史重建、合格比较与跟踪}{评审历史重建、合格比较与跟踪}}
+历史分析考察项目审核档案能对判断身份、数学可比性和记录进展说明什么，使用冻结的 \nolinkurl{qualified-v0.7.1} 分析及保存的数值绑定。其单位不同于含 33 项交付的配置主表：重建辨认判断，资格确认辨认可比变化，后续追踪辨认固定失败起点与允许纳入的步骤。下文分别说明这些操作及结果。[E18, E19]
+
+\subsection[重建判断，不把表示副本算作新评审]{\texorpdfstring{\protect\hypertarget{c1}{}重建判断，不把表示副本算作新评审}{重建判断，不把表示副本算作新评审}}
+2026 年 9 月 1 日快照包含涉及 453 个任务对象的 3,820 条数据库行。这是该快照归档边界，不是全部项目运行，也不是当前目录完成情况的分母。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{原始记录类别} & \textbf{数量} & \textbf{解释}\\\midrule\endfirsthead
+\toprule
+\textbf{原始记录类别} & \textbf{数量} & \textbf{解释}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{不同的直接证据签名} & {3,275} & {以结果证据和评审输入摘要标识身份}\\
+{重复引用} & {60} & {重复引用，不是额外独立意见}\\
+{对象绑定引用} & {404} & {通向被评审对象的链接}\\
+{收集器声明} & {80} & {收集程序作出的陈述}\\
+{应用回执引用} & {1} & {对应用事件的引用}\\
+{数据库行} & {3,820} & {指定快照总量}\\
+\end{longtable}\endgroup
+直接证据签名恰以结果证据摘要和评审输入摘要为键；任务、适配器、候选、标签与上下文用于组内一致性检查。规范化器将返回评审记录转换为存储格式。移除 33 个由规范化器生成、缺原请求绑定的无法判断签名后，剩 3,242 个评审者生成签名。另将十一项 Kenneth 自定义语义评审按来源分层，得到 3,231 个普通任务签名。[E18, E19]
+
+资格确认与表示合并随后走不同分支：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{分支} & \textbf{计算} & \textbf{单位与操作}\\\midrule
+
+{签名资格确认} & {3,231 − 30 = 3,201；3,201 − 2 = 3,199} & {移除程序／测试记录及两个不合格端点，单位仍为签名}\\
+{普通表示组} & {3,231 − 251 = 2,980} & {按明确生产关系合并表示}\\
+{合格判断组} & {3,201 − 251 = 2,950；2,950 − 2 − 1 = 2,947} & {合并表示、排除端点，再合并一条报告修正序列}\\
+{输入已验证子集} & {2,947 中的 2,914} & {输入已验证的合格判断组}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+三十项程序／测试排除包含：十二次未配置评审者运行、十七次应用或规范化失败、一次注入测试。251 项表示合并含 223 对原始／规范化输出、二十二项应用指针和六项同交付指针。因此，3,199 并非 2,980 的前一阶段；二者对同一边界采用不同操作。
+
+文本相似不足以合并。三个无生产指针的文本相同副本保持分离，三十四个候选身份对仍未决。一项判断可以有多个保存表示，一个候选也可以获得多项判断。重建避免把规范化失败当作数学拒绝，或将原始／规范化输出对算作两次独立评审。本阶段核查的结果是原始计数及单位定义，而非一个表面的评审尝试总数。
+
+\subsection[主文件之外绑定了什么]{\texorpdfstring{\protect\hypertarget{c2}{}主文件之外绑定了什么}{主文件之外绑定了什么}}
+3,189 个可恢复输入中，721 个含提交文件包，1,547 个含非主对象哈希，2,442 个至少标识一个非主对象，共提供 15,788 项带来源字段位置的对象观测。这些类别可重叠。原始 2,645 条有向关系中，九十八条主文件不变，但两端共同绑定的非主对象改变，其中十三条由失败转通过。该调查中没有关系保留了确立整个被评审状态相同所需的全部对象。[E18, E19]
+
+归档还记录 574 条任务依赖链接，最大连通分量包含 318 个任务。该图不定义独立统计簇。全部三十九个子任务都有父输入绑定。定位到的 125 个输入中，117 个直接嵌入模板评审历史；重复这些文本不证明对子任务原文、代码和义务进行了新的独立评审。
+
+表示合并后有 2,571 条关系，其中十四条仍无方向。研究边界内的 2,475 条有向关系结构分类如下：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{关系类别} & \textbf{数量}\\\midrule\endfirsthead
+\toprule
+\textbf{关系类别} & \textbf{数量}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{候选到正式文件的主文件匹配} & {241}\\
+{候选主文件改变} & {465}\\
+{后期候选主文件相同} & {100}\\
+{教材原文相关关系} & {207}\\
+{正式对象后续跟踪} & {1,172}\\
+{活动模式未决} & {290}\\
+{此边界内有向关系总数} & {2,475}\\
+\end{longtable}\endgroup
+这些是结构关系，不是独立改进或因果联系。同主文件比较尤其不能自动视为评审一致性观测。下文的目标合格分析允许实际代码修订，询问预期数学任务与候选绑定是否可比，并不声称整个评审输入字节不变。
+
+\subsection[构造 461 次比较集并测量标签变化]{\texorpdfstring{\protect\hypertarget{c3}{}构造 461 次比较集并测量标签变化}{构造 461 次比较集并测量标签变化}}
+选择从 465 条候选主文件变化关系开始。排除一次应用失败剩 464；分离两条支持组装关系剩 462 条受管理任务版本关系；再排除 \nolinkurl{thm_9_7} 注册／评审对象不匹配，得到 248 个任务的 461 次直接绑定比较。\hyperlink{b7}{附录 B.7}解释为何不能悄然把不匹配的早期版本替换成实际被评判版本。[E18, E19]
+
+转移表以关系计数，行是早期标签，列是后期标签：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}}
+\toprule
+\textbf{早期／后期} & \textbf{通过} & \textbf{失败} & \textbf{无法判断} & \textbf{部分完成}\\\midrule
+
+{通过} & {103} & {12} & {1} & {0}\\
+{失败} & {205} & {117} & {5} & {1}\\
+{无法判断} & {15} & {0} & {1} & {0}\\
+{部分完成} & {1} & {0} & {0} & {0}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+早期 116 个、后期 324 个通过标签，净增 208。二元通过指标在本计算中区分接受与其他已识别状态，不使失败、无法判断和部分完成在语义上等同。未识别标签不会暗中赋分。
+
+保存分析使用三种选择和两种加权约定：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{选择范围} & \textbf{比较数／任务数} & \textbf{任务等权变化［参考区间］} & \textbf{比较等权变化［参考区间］}\\\midrule
+
+{全部直接绑定的主文件比较} & {461 / 248} & {57.42 [51.96, 62.79]} & {45.12 [38.52, 52.16]}\\
+{两端均标为通过或失败} & {437 / 234} & {56.06 [50.43, 61.61]} & {44.16 [37.38, 51.51]}\\
+{早期发现列表非空} & {363 / 205} & {77.52 [72.49, 82.32]} & {60.06 [50.23, 70.39]}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+表内全部变化与区间边界单位均为\textbf{百分点}。参考区间来自 \hyperlink{c9}{C.9} 所述保存的整任务重抽样摘要，不纠正事后选择、跨任务依赖或语义证据缺失。
+
+二十四次比较含无法判断或部分完成端点；十六次由其转通过，一次反向。四十五条关系的记录评审约定字段不同，两条原文命题字段不同；字段一致不证明实际要求相同。775 个不同端点出现 922 次，147 个端点重复使用，形成 314 条最大链，净变化仍为 208。共享端点与逐项相消的变化，使每条关系不能视为全新独立改进。
+
+对任务 $k$ 和比较 $e$，以 $A_{ke,0}$、$A_{ke,1}$ 表示早晚端点是否记录通过。任务 $k$ 有 $n_k$ 次比较，则
+
+\[
+d_k=\frac{1}{n_k}\sum_e(A_{ke,1}-A_{ke,0}),\qquad
+\widehat\mu_{\mathrm{task}}=\frac1{S}\sum_k d_k,\qquad
+\widehat\mu_{\mathrm{comparison}}=\frac{\sum_k n_kd_k}{\sum_k n_k},
+\]
+其中 $S$ 为任务数。第一个总体均值先在任务内平均、再让任务等权；第二个使每次比较等权。二者都描述所选归档中的标签变化，不是教材任务完成比例或评审效果。
+
+\subsection[资格确认与详细阅读覆盖改变了趋势的解释范围]{\texorpdfstring{\protect\hypertarget{c4}{}资格确认与详细阅读覆盖改变了趋势的解释范围}{资格确认与详细阅读覆盖改变了趋势的解释范围}}
+\subsubsection[如何决定目标可比性]{\texorpdfstring{\protect\hypertarget{c4-1}{}如何决定目标可比性}{如何决定目标可比性}}
+问题是两个端点间\textbf{获接受的原文数学目标}是否保持。证明路线、实现、支持组织或评审政策可以改变，目标仍相同。新增形式参数或定理头变化，是检查理由，本身不证明目标改变。相反，若原文决定接受实质不同命题或约定，就形成目标边界。[E18, E19；32]
+
+语义决定来自\textbf{不对早晚裁决设盲的人工智能归档阅读}。记录的阅读依据含原文、两端输入与结果、公开声明、完整嵌入候选代码、差异和评审义务。阅读者记录前后目标，以及保留关系或将其视为边界的理由。这建立的是历史资格决定；程序另行检查关系归属、绑定对象与来源引用。
+
+冻结版本接受有明确来源的先前目标决定，或与该关系绑定的保存实质阅读；不接受仅声称未发现实质变化的筛查。保留的历史修订中，十二项这类弱决定被实质阅读替换，旧决定仍保存。正向决定仍受独立对象绑定排除约束，不认证评审条件不变或代码真实正确。\href{zh.pdf\#ref-32}{\mbox{[32]}}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{462 条关系框架内的处置} & \textbf{数量} & \textbf{操作含义}\\\midrule
+
+{明确目标可比} & {129} & {保存的实质决定确认同一原文数学目标}\\
+{确认目标边界} & {2} & {保存决定确认接受命题或原文约定改变}\\
+{可比性未知} & {331} & {无针对该关系目标的实质决定建立可比性}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+因此，明确决定表有 131 项决定，不是完成了 462 次语义裁决。其余 331 条在全框架中未知，不是 331 项确认变化，也不一定在调查所有其他部分中均未读。本分析没有对这些人工智能阅读进行全面独立专家裁决。
+
+下例重述同一框架中的决定：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{示例} & \textbf{保存决定采用什么依据} & \textbf{后果}\\\midrule
+
+{集券 \nolinkurl{prob_14_11} 的一条失败到失败关系} & {筛查发现目标头改变；阅读原文、完整两端代码及评审义务后，将差异归于路线、支持、待证工作或政策，目标保留} & {明确认定，仍须其他资格检查}\\
+{独立和 \nolinkurl{prob_14_7} 的一条失败到通过关系} & {原文缺展示极限的独立性；通过命题在明确原文修正下公开 \nolinkurl{hLimitIndep}，由 \hyperlink{l4-1}{L.4.1} 反例支持} & {确认目标边界}\\
+{紧性 \nolinkurl{def_3_6} 的一条失败到通过关系} & {缺针对目标的实质决定；仅筛查不足以建立获接受原文目标等价} & {未知；固定目标跟踪不能跨越}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+这些是逐关系决定，不是任务名的永久分类。尤其，另一条 \nolinkurl{prob_14_11} 转移改变中心化目标，见 \hyperlink{l4-2}{L.4.2}。原决定保留在证据补充包内。\href{zh.pdf\#ref-32}{\mbox{[32]}}
+
+\subsubsection[合格标签变化与详细阅读覆盖]{\texorpdfstring{\protect\hypertarget{c4-2}{}合格标签变化与详细阅读覆盖}{合格标签变化与详细阅读覆盖}}
+129 条明确关系排除一条注册／评审对象冲突后，剩七十九个任务的 128 次比较，早期二十八次通过、后期四十五次，净增十七。[E18, E19]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{目标／对象合格子集的加权} & \textbf{记录通过变化} & \textbf{保存参考区间}\\\midrule
+
+{任务等权} & {20.46 个百分点} & {[9.49, 31.65] 个百分点}\\
+{比较等权} & {13.28 个百分点} & {[4.93, 22.86] 个百分点}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+这一正向变化仍是合格子集的结果。子集来自目的性调查，不是宽样本的随机限制，故与宽口径估计的差异不能只归因于目标改变。目标可比性未知表示未建立明确证据，不是证明目标已改变。
+
+详细异常调查提供另一覆盖视角，包含 1,018 条关系：994 项实质数学或关系阅读、二十四项程序或绑定比较。实质关系中六十条缺可恢复端点输入。它与 461 次比较集的交集如下：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}}
+\toprule
+\textbf{宽口径比较的覆盖} & \textbf{比较数} & \textbf{早期通过标签} & \textbf{后期通过标签} & \textbf{净变化}\\\midrule
+
+{位于详细异常队列} & {163} & {32} & {33} & {1}\\
+{队列以外} & {298} & {84} & {291} & {207}\\
+{宽口径比较合计} & {461} & {116} & {324} & {208}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+宽口径净增长几乎全部在详细异常队列之外，案例解释无法以相同语义深度说明该增长。这是覆盖声明，不是其余关系错误的发现。
+
+另一同候选视角含 1,380 次对象已检查比较，其中 270 次标签变化；128 次变化有内容编码，142 次未编码。这里的\textbf{128 次已编码标签变化不是上文 128 次目标／对象合格比较}。主文件或候选不变时，上下文、依赖和评审阶段仍可变化，因此同候选视角不产生单一的固定证据评审一致率。
+
+\subsection[先固定失败起点，再决定可跟踪路径]{\texorpdfstring{\protect\hypertarget{c5}{}先固定失败起点，再决定可跟踪路径}{先固定失败起点，再决定可跟踪路径}}
+462 条关系框架中，364 条早期发现非空。连接相同共享端点，得到 259 个最大片段，即在这些关系内无法进一步延长的片段，并非因特别长而选择的子集。仅首端点明确标为失败的片段被保留，该端点成为唯一固定起点。后续失败不重启跟踪，也不在其他片段内部搜寻方便的额外起点。由此得到 182 个任务的 230 个起点；之后才要求每个观测步骤满足目标可比与有效绑定。[E18, E19]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{构造阶段} & \textbf{单位} & \textbf{操作}\\\midrule
+
+{364 条关系} & {早期有发现的前后对} & {选择起始关系材料}\\
+{259 个最大片段} & {共享相同端点的连通序列} & {组装保留片段}\\
+{182 个任务的 230 个失败起点} & {固定起始位置} & {保留明确失败的片段起点}\\
+{100 个观测跟踪步骤} & {合格转移} & {仅在目标与对象证据允许时跟踪}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+\hyperlink{c3}{C.3} 的 363 次发现非空比较子集，定义于合格的 461 次比较集选择之后；这里的 364 条起始关系框架定义于跟踪资格确认之前。不同计数属于不同操作。
+
+保留的片段长度分布解释了起始连通材料如何形成：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{每片段关系数} & \textbf{片段数} & \textbf{贡献关系数}\\\midrule\endfirsthead
+\toprule
+\textbf{每片段关系数} & \textbf{片段数} & \textbf{贡献关系数}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{1} & {209} & {209}\\
+{2} & {38} & {76}\\
+{3} & {1} & {3}\\
+{4} & {5} & {20}\\
+{5} & {3} & {15}\\
+{12} & {2} & {24}\\
+{17} & {1} & {17}\\
+{合计} & {259} & {364}\\
+\end{longtable}\endgroup
+跟踪在首次接受、保存片段末端，或首个不合格比较之前停止。未走一步合格步骤便退出的起点仍保留在分母。因此程序描述固定失败起点后还剩多少证据，而非删去无法跟踪的路径。
+
+\subsection[退出与变化的风险集]{\texorpdfstring{\protect\hypertarget{c6}{}退出与变化的风险集}{退出与变化的风险集}}
+严格跟踪在退出前观察到二十五次首次验收，另有 205 次在观察到验收前退出。原因如下：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{退出原因} & \textbf{首步之前} & \textbf{已观测步骤之后} & \textbf{合计}\\\midrule
+
+{无明确目标可比决定} & {159} & {27} & {186}\\
+{确认目标或原文约定变化} & {1} & {1} & {2}\\
+{注册与评审对象冲突} & {1} & {0} & {1}\\
+{保存片段结束} & {0} & {16} & {16}\\
+{合计} & {161} & {44} & {205}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+退出标记合格观测结束，不是任务最终数学失败。尤其不能将 186 次可比性缺失退出报告为 186 次确认目标变化。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}}
+\toprule
+\textbf{跟踪步骤} & \textbf{风险中路径} & \textbf{首次验收} & \textbf{退出} & \textbf{继续}\\\midrule\endfirsthead
+\toprule
+\textbf{跟踪步骤} & \textbf{风险中路径} & \textbf{首次验收} & \textbf{退出} & \textbf{继续}\\\midrule\endhead
+\midrule\multicolumn{5}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{1} & {69} & {22} & {32} & {15}\\
+{2} & {15} & {3} & {5} & {7}\\
+{3} & {7} & {0} & {4} & {3}\\
+{4} & {3} & {0} & {2} & {1}\\
+{5} & {1} & {0} & {0} & {1}\\
+{6} & {1} & {0} & {0} & {1}\\
+{7} & {1} & {0} & {0} & {1}\\
+{8} & {1} & {0} & {0} & {1}\\
+{9} & {1} & {0} & {0} & {1}\\
+{10} & {1} & {0} & {1} & {0}\\
+\end{longtable}\endgroup
+每步风险路径数等于验收、退出与继续之和；各风险集大小之和为 100 个观测步骤。161 个首步前退出不在这些步骤内，却仍在 230 个起点中。只有尚未通过、且仍有合格证据的路径才贡献后续步骤。
+
+\subsection[首次与后续验收及选择效应检查]{\texorpdfstring{\protect\hypertarget{c7}{}首次与后续验收及选择效应检查}{首次与后续验收及选择效应检查}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{数量} & \textbf{分子／分母} & \textbf{估计} & \textbf{保存的整任务参考区间}\\\midrule
+
+{合格首步的验收} & {22 / 69 个首步} & {31.88\%} & {[21.43\%, 43.14\%]}\\
+{合格后续步骤的验收} & {3 / 31 个后续步骤} & {9.68\%} & {[0.00\%, 28.00\%]}\\
+{证据退出前观察到验收} & {25 / 230 个固定起点} & {10.87\%} & {[7.02\%, 15.07\%]}\\
+{平均可观测跟踪长度} & {100 步 / 230 个固定起点} & {每起点 0.4348 步} & {每起点 [0.3198, 0.5702] 步}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+保存的后续减首次对比为 −22.21 个百分点，参考区间 [−36.94, −1.90]，并非收益递减估计。只有十五个任务贡献后续步骤；事后限制到这些任务，其十九个首步仅一次验收。因此，后续步骤组不仅修订阶段不同，任务构成与继续可观测条件也不同。[E18, E19]
+
+该检查给出表的实质解释：广泛首步组不是继续运行这一所选组的合适反事实。长路径还可贡献多个后续步骤。负向对比与参考区间都未消除这些区别。观测确立实际看到的验收与跟踪长度，不识别多修订一次的效果。
+
+\subsection[更宽可达性无法修复缺失的固定目标证据]{\texorpdfstring{\protect\hypertarget{c8}{}更宽可达性无法修复缺失的固定目标证据}{更宽可达性无法修复缺失的固定目标证据}}
+保持相同 230 个起点、允许更宽关系，得到：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{跟踪规则} & \textbf{观测步骤} & \textbf{到达记录通过的路径} & \textbf{不同通过端点（有报告时）}\\\midrule
+
+{严格目标／对象合格跟踪} & {100} & {25} & {此处未单独报告}\\
+{早期有发现且应用已知边界的历史主关系} & {326} & {203} & {此处未单独报告}\\
+{全部主关系} & {327} & {204} & {204}\\
+{研究边界内全部合格活动关系} & {391} & {222} & {210}\\
+{归档范围的合格活动关系} & {396} & {224} & {211}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+更宽规则回答更宽的记录可达性问题。到达更多通过记录可被观察，也有助于映射归档，但不能证明新增允许步骤始终保留同一数学目标。不能用这些通过填补严格分析的退出，仿佛仅修复了缺失时间戳。[E18, E19]
+
+\subsection[重抽样规定与保留限制]{\texorpdfstring{\protect\hypertarget{c9}{}重抽样规定与保留限制}{重抽样规定与保留限制}}
+保存比较分析有放回地对整任务作 20,000 次自助重抽样，保留抽中任务的全部比较与两端点。使用 NumPy PCG64、种子序列 \nolinkurl{[20260906, r]}，其中 \nolinkurl{r = 0, 1, 2} 对应三种比较选择；2.5 与 97.5 百分位采用线性插值。过程摘要同样对 182 个整任务重抽样，保留零步退出及合格行。这些说明记录中的计算，本英文修订未重跑。[E18, E19]
+
+区间假设任务簇独立、可交换，且历史选择机制相同，归档并未确立这些假设。共享依赖、目的性调查和语义覆盖不完整仍存在。因此报告称其为参考区间，同时列出点估计、单位和选择规则，不恢复此前撤回的配对 t、GEE、Wald、McNemar 或相关显著性主张。
+
+历史分析产出判断身份重建、所选集合的正向标签变化、更窄的可比性合格结果、详细阅读覆盖分析，以及纵向选择检查。上述方法与表定义各结果。E19 标识原始冻结数值绑定；这些历史观测与 A/B/C 比较表保持分离。
+
+\section[保存代码检查、定义见证与评估方法比较]{\texorpdfstring{\protect\hypertarget{appendix-d}{}保存代码检查、定义见证与评估方法比较}{保存代码检查、定义见证与评估方法比较}}
+保存代码研究超越历史标签，检查冻结候选的编译、具名目标存在、允许的公理依赖、直接把结论作为前提，以及选定定义的行为。下文保留代码对选择、执行程序、已测与不可用状态，以及评估方法比较。[E18, E19]
+
+\subsection[代码对选择与留出集的含义]{\texorpdfstring{\protect\hypertarget{d1}{}代码对选择与留出集的含义}{代码对选择与留出集的含义}}
+选择从 250 个任务的原始 465 条关系框架开始。方法开发期间有意选六对：\nolinkurl{thm_14_3}、\nolinkurl{def_12_1}、\nolinkurl{thm_14_7}、\nolinkurl{thm_14_8}、\nolinkurl{prob_5_6} 和 \nolinkurl{def_10_5}。排除表含 107 个任务标识，其中八十五个位于该 250 任务框架。其余 165 个任务中，程序以带种子关系哈希的最小值选择代表关系，再按任务族与记录要求分四层，每层选两个任务。[E18, E19]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{集合} & \textbf{任务} & \textbf{选择理由或分层}\\\midrule\endfirsthead
+\toprule
+\textbf{集合} & \textbf{任务} & \textbf{选择理由或分层}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{开发} & {\nolinkurl{thm_14_3}} & {回应明确未执行评审}\\
+{开发} & {\nolinkurl{def_12_1}、\nolinkurl{thm_14_7}} & {需超越标签解释的部分进展}\\
+{开发} & {\nolinkurl{thm_14_8}} & {完成目标改变}\\
+{开发} & {\nolinkurl{prob_5_6}} & {要求与接口改变}\\
+{开发} & {\nolinkurl{def_10_5}} & {明确回应先前意见}\\
+{留出层 1} & {\nolinkurl{def_8_4}、\nolinkurl{def_2_1}} & {记录要求改变的定义／例题，八个合格任务}\\
+{留出层 2} & {\nolinkurl{def_13_2}、\nolinkurl{ex_3_1_2}} & {其他定义／例题，五十五个合格任务}\\
+{留出层 3} & {\nolinkurl{prob_8_2}、\nolinkurl{prob_5_2}} & {记录要求改变的定理／习题，二十一个合格任务}\\
+{留出层 4} & {\nolinkurl{prob_10_1}、\nolinkurl{thm_2_6}} & {其他定理／习题，八十一个合格任务}\\
+\end{longtable}\endgroup
+要求层由两项记录比较计算：任务／内容，以及关键原文证明步骤的约定。任一记录值不同，进入要求改变层；否则进入其余层，其中也含不可比较字段。因此，“其他”不表示已确立实际数学要求相同。这一元数据规则控制抽样，不是 \hyperlink{c4}{C.4} 的语义目标资格确认。\href{zh.pdf\#ref-32}{\mbox{[32]}}
+
+留出选择不看标签、原文主体、表面改进或执行成功。代码对身份在后续资格确认前固定。缺失、不适用与失败结果均保留，不换成更容易的代码对。“留出”描述这一选择程序，不建立代表性随机基准，也不保证每个任务此前完全未暴露。
+
+\subsection[编译与提取是不同结果]{\texorpdfstring{\protect\hypertarget{d2}{}编译与提取是不同结果}{编译与提取是不同结果}}
+保存的历史运行器使用 Lean 4.31.0，先编译整文件，再寻找最终名称成分恰好匹配任务标识的唯一非私有声明，打印目标类型及包括传递依赖在内的公理依赖；不会因无关定理容易检查就改选它。[E18, E19]
+
+二十八个文件中十七个可编译，十六个产生具名目标；十六个测量目标均通过两项保存公理规则。额外一个可编译文件没有所需目标声明。此项以目标为基础的检查，代码对可评分情况如下：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}}
+\toprule
+\textbf{代码对状态} & \textbf{开发任务} & \textbf{留出任务} & \textbf{可评分端点}\\\midrule
+
+{两端可评分} & {\nolinkurl{thm_14_3}、\nolinkurl{thm_14_8}} & {\nolinkurl{def_8_4}、\nolinkurl{def_2_1}、\nolinkurl{prob_5_2}、\nolinkurl{thm_2_6}} & {12}\\
+{单端可评分} & {后期 \nolinkurl{prob_5_6}} & {后期 \nolinkurl{def_13_2}、后期 \nolinkurl{ex_3_1_2}、早期 \nolinkurl{prob_10_1}} & {4}\\
+{两端均不可评分} & {\nolinkurl{def_12_1}、\nolinkurl{thm_14_7}、\nolinkurl{def_10_5}} & {\nolinkurl{prob_8_2}} & {0}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+即六对双端可评分、四对单端、四对均不可。构建失败不提供零分公理结果，因为该执行未测得合格目标。
+
+两种公理规则是有意选择的检查。宽松规则拒绝 \nolinkurl{sorryAx}；严格规则仅允许 \nolinkurl{propext}、\nolinkurl{Classical.choice}、\nolinkurl{Quot.sound}，或无公理。它们不是项目早期和后期历史政策。对已提取目标，通过严格规则蕴含通过宽松规则；两者都不建立声明忠实表达教材问题。
+
+八对留出中，五对两端可编译，一对两端均不可。\nolinkurl{def_13_2} 从失败转成功，\nolinkurl{prob_10_1} 从成功转失败。因此两侧虽各有六个可编译文件，个体仍有变化。这说明总体零变化不表示产物质量不变。
+
+\subsection[历史运行器与通用代码对检查器是不同程序]{\texorpdfstring{\protect\hypertarget{d3}{}历史运行器与通用代码对检查器是不同程序}{历史运行器与通用代码对检查器是不同程序}}
+通用代码对检查器接收两份给定源码及预选声明，只有在固定环境中打印的声明类型一致后才比较候选。它不决定该类型是否为正确教材命题，也不比较全部语义行为。
+
+历史运行器则逐一编译二十八个冻结端点，提取精确具名目标，直接由端点结果组装四个规则单元格，没有跨端点类型相等关卡。历史发现使用后者，\hyperlink{d8}{D.8} 构造验证场景使用前者。不能把历史两端成功呈现为已经运行类型等价检查的证据。[E18, E19]
+
+\subsection[直接结论前提：全部代码对状态]{\texorpdfstring{\protect\hypertarget{d4}{}直接结论前提：全部代码对状态}{直接结论前提：全部代码对状态}}
+另一项人工智能辅助阅读检查公开前提是否已经提供全部所需结论。阅读记录位置与身份，但无独立专家核查；它针对特定直接捷径，不覆盖一切命题削弱或证明工作间接转移。因此，即使保存编译环境失败，仍可能获得代码检查结果。[E18, E19]
+
+此检查的两套规则来自早晚端点保存要求，实际禁令可能相同。表中元组顺序为 $q_{00},q_{01},q_{10},q_{11}$：早期代码分别置于两规则，再是后期代码分别置于两规则。有效 1 表示未发现直接结论前提缺陷，有效 0 表示发现该直接缺陷。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{任务} & \textbf{四格状态} & \textbf{原因或解释}\\\midrule\endfirsthead
+\toprule
+\textbf{任务} & \textbf{四格状态} & \textbf{原因或解释}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{\nolinkurl{thm_14_3}} & {全部不确定} & {绑定输入缺少判定前提是否重述结论所需定义体}\\
+{\nolinkurl{def_12_1}、\nolinkurl{def_10_5}、\nolinkurl{def_8_4}、\nolinkurl{def_2_1}、\nolinkurl{def_13_2}} & {全部不适用} & {所选主导出为定义而非定理}\\
+{\nolinkurl{thm_14_7}、\nolinkurl{prob_5_6}、\nolinkurl{prob_8_2}、\nolinkurl{prob_5_2}、\nolinkurl{thm_2_6}} & {(1, 1, 1, 1)} & {两版本主定理均无直接结论前提}\\
+{\nolinkurl{thm_14_8}} & {不适用、无效、无效、1} & {早期待证工作例外无有效跨版本映射}\\
+{\nolinkurl{ex_3_1_2}} & {不适用、不适用、1、1} & {早期导出为定义；后期具名定理无公开前提}\\
+{\nolinkurl{prob_10_1}} & {(0, 0, 1, 1)} & {后期源码移除完整结论前提，但保存环境中编译失败}\\
+\end{longtable}\endgroup
+直接前提矩阵有五十六个可能的候选／规则单元格：二十七个已测、二十三个不适用、四个不确定、两个无效，只有六张完整数值四格表。这些状态不是失败的不同写法，尤其定义不是“未通过前提检查的定理”。
+
+早期 \nolinkurl{prob_10_1} 定理恰将所求等价作为前提并返回。后期源码移除两套规则都禁止的该前提，因此代码阅读支持直接缺陷已移除。保存环境构建失败仍是单独负结果；原依赖环境未完全重建。报告不把可见源码修正转为完整修复产物的认证。
+
+\subsection[“可数”含义的形式化见证]{\texorpdfstring{\protect\hypertarget{d5}{}“可数”含义的形式化见证}{“可数”含义的形式化见证}}
+\nolinkurl{def_2_1} 原文采用与全体自然数存在双射的约定。早期谓词使用包括有限集的较宽库概念 \nolinkurl{Countable}。空集可区分二者：它满足较宽谓词，却不与自然数双射，因为零无原像。后期候选实现所选双射约定，并给较宽概念另取名称。[E18, E19]
+
+保存的 Lean 见证检查六个命题，下面以普通数学语言表述，不呈现为新执行代码：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{见证} & \textbf{检查的命题}\\\midrule\endfirsthead
+\toprule
+\textbf{见证} & \textbf{检查的命题}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{1} & {早期谓词接受空集}\\
+{2} & {书面参照谓词拒绝空集}\\
+{3} & {后期谓词拒绝空集}\\
+{4} & {后期谓词对每个集合均与参照一致}\\
+{5} & {早期谓词并非对每个集合均与参照一致}\\
+{6} & {早晚谓词不同}\\
+\end{longtable}\endgroup
+依赖为空或仅限允许的基础公理。这是关于一个定义的六个命题，不是六个独立任务。见证建立形式谓词之间的精确关系。把任务文本解释为所选形式参照，仍是未经独立专家认证的人工智能辅助原文判断；检查也不认证后期文件的无关内容。
+
+但该结果仍比泛称定义不同更有信息：它给出区分实例，证明后期谓词与明确参照一致，并把这些事实的形式证明同选择参照的解释分开。
+
+\subsection[四格比较询问什么]{\texorpdfstring{\protect\hypertarget{d6}{}四格比较询问什么}{四格比较询问什么}}
+设 $q_{ij}=g(C_i,R_j;E)$ 是候选 $C_i$ 在规则 $R_j$、固定环境 $E$ 下的有效分数，其中 $i,j\in\{0,1\}$。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{候选} & \textbf{规则 $R_0$} & \textbf{规则 $R_1$}\\\midrule
+
+{早期 $C_0$} & {$q_{00}$} & {$q_{01}$}\\
+{后期 $C_1$} & {$q_{10}$} & {$q_{11}$}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+完整表可回答六项相关对比：
+
+\[
+\begin{aligned}
+D_{C\mid R_0}&=q_{10}-q_{00}, & D_{C\mid R_1}&=q_{11}-q_{01},\\
+D_{R\mid C_0}&=q_{01}-q_{00}, & D_{R\mid C_1}&=q_{11}-q_{10},\\
+\Delta&=q_{11}-q_{00}, & I&=q_{11}-q_{10}-q_{01}+q_{00}.
+\end{aligned}
+\]
+两项固定规则改变代码，两项固定代码改变规则，另两项涉及对角总变化和交互。仅当实际测量与已验证逻辑关系能唯一确定对比时，才算可回答。不可用格不填零。六个问题共享输入，不是六个独立任务结果。[E18, E19]
+
+公平的固定标准基线在 $R_1$ 下评估两候选，并在可用时利用已验证规则等价或蕴含。公理检查中，严格通过已确定宽松通过；直接前提检查中，实际禁令可能相同。额外格只有确定了该已利用逻辑的基线尚不能确定的答案，才增加信息。因此比较对象并非刻意忽视信息的基线。
+
+\subsection[历史可回答性结果与有边界的负发现]{\texorpdfstring{\protect\hypertarget{d7}{}历史可回答性结果与有边界的负发现}{历史可回答性结果与有边界的负发现}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{证据集} & \textbf{问题数} & \textbf{历史标签} & \textbf{固定 $R_1$} & \textbf{四格} & \textbf{四格加 Shapley}\\\midrule
+
+{公理：六对开发样本} & {36} & {0} & {13} & {13} & {13}\\
+{公理：八对留出样本} & {48} & {0} & {27} & {27} & {27}\\
+{直接前提：六对开发样本} & {36} & {0} & {12} & {12} & {12}\\
+{直接前提：八对留出样本} & {48} & {0} & {25} & {25} & {25}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+对检查的历史代码对及属性，四格法与公平固定标准基线对相同问题给出相同答案。Shapley 分摊只分配由相同观测算出的差异，不提供新输入信息。这是针对这些检查的方法负结果，不是准确率排名，也不证明四格评估永无帮助。[E18, E19]
+
+历史标签列的零需另作解释：宽泛语义验收不自动是当前公理或直接前提属性的测量。无有效映射时，当前方法无法仅凭标签回答指定数值问题；这不表示每个历史评审者都弃权或错误。
+
+\subsection[构造验证场景不是历史成功]{\texorpdfstring{\protect\hypertarget{d8}{}构造验证场景不是历史成功}{构造验证场景不是历史成功}}
+围绕 $n+0=n$ 刻意构造七个证明场景，检查通用比较程序能否处理已知安排。四十二个相关问题中，历史标签回答四个，固定标准十七个，四格法二十六个，加入 Shapley 仍为二十六。逐场景相对固定基线的增益为 \nolinkurl{[5, 0, 4, 0, 0, 0, 0]}。[E18, E19]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{场景} & \textbf{刻意安排} & \textbf{验证保留的结果}\\\midrule\endfirsthead
+\toprule
+\textbf{场景} & \textbf{刻意安排} & \textbf{验证保留的结果}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{1} & {占位证明变为外部公理证明；早规则宽松、晚规则严格} & {两对角格均失败，但宽松规则下候选增益与严格拒绝仍可见}\\
+{2} & {相同候选变化；两规则均宽松} & {候选增益为一，规则差为零}\\
+{3} & {外部公理证明变为完整证明；早宽松、晚严格} & {宽松分数持平，严格分数改善}\\
+{4} & {占位证明变为外部公理证明；两规则均严格} & {四格均为零}\\
+{5} & {完整证明与不可编译代码比较} & {不可编译端点无公理分数}\\
+{6} & {后期代码证明另一命题} & {目标不匹配使比较无效}\\
+{7} & {完整证明与缺失文件比较} & {保留材料缺失状态}\\
+\end{longtable}\endgroup
+场景可复用源码和输出，说明当预设规则／候选关系需要时，额外评估可以有信息；历史无额外信息结果不变。它们不是七个独立概率任务，也不是七次新形式化成功。此前撤回的显著性主张和布尔教学示例不恢复。
+
+\subsection[这些检查为系统评估增加什么]{\texorpdfstring{\protect\hypertarget{d9}{}这些检查为系统评估增加什么}{这些检查为系统评估增加什么}}
+保存代码研究确认具体而有限的属性：文件是否编译、是否提供预期具名声明、声明依赖哪些公理、是否移除直接结论前提，以及两定义相对书面参照如何表现。不同执行程序与不可用状态均明确保留。规则比较进一步询问，新增评估工作是否真正解决额外问题，而非假定表越复杂越有信息。
+
+完整执行产物在历史评估发布及 E18/E19 冻结来源中索引。解释研究所需的代码对选择、测量、见证命题、公式和负结果表已列于上文。
+
+\section[术语与来源导航]{\texorpdfstring{\protect\hypertarget{appendix-e}{}术语与来源导航}{术语与来源导航}}
+\subsection[术语与符号速查]{\texorpdfstring{\protect\hypertarget{e1}{}术语与符号速查}{术语与符号速查}}
+这里汇集此前已在使用处介绍的术语。项目标签分类角色，不认证数学正确性。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{术语} & \textbf{本报告含义}\\\midrule\endfirsthead
+\toprule
+\textbf{术语} & \textbf{本报告含义}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{Lean / Mathlib} & {证明助手／其数学库}\\
+{来源单元／任务计划} & {有边界的教材小节或习题部分／记录任务及依赖的计划}\\
+{暂存区／正式证明库} & {草稿和临时工作产物／经验收更新的正式 Lean 任务文件}\\
+{依赖／下游调用者} & {证明依赖的结果或接口／使用结果、接口变化时可能需修复的代码}\\
+{SQLite 状态} & {用于调度和维护的可重建任务与保留证据索引}\\
+{任务／父任务} & {教材义务／拥有分解证明的原始任务}\\
+{候选／交付} & {形式代码版本／代码及随附提交材料}\\
+{求解根运行} & {角色调用与延续共享同一执行计时的顶层尝试}\\
+{主比较表} & {选定的 33 项配置与任务交付，区别于全部 41 个开发根运行}\\
+{作者／协调者／宿主} & {人工智能实现角色／人工智能工作组织角色／历史称谓，需依据记录判断指执行者还是基础设施}\\
+{外层实验执行代理} & {在 Codex 中管理实验运行的人工智能会话；区别于 C 内部安排证明工作的协调者}\\
+{宿主机器／运行环境} & {提供支持的软件与基础设施，不是人工智能作者或协调者；干预指令的发出者无法确认时仍保留为未知}\\
+{Sol／Astra／medium} & {记录中的 \nolinkurl{gpt-5.6-sol}／\nolinkurl{gpt-6-astra} 配置；medium 表示推理强度设置，不是能力等级}\\
+{端点} & {指定比较一端的一项评审或候选}\\
+{语义评审} & {模型对原文忠实度与证明义务的评价}\\
+{共同评估／裁决} & {提交后实验评价／解决指定分歧的进一步判断}\\
+{证明主线} & {所供数学论证中需检查实现的关键步骤}\\
+{应用／台账} & {验证绑定评审并把合格工作应用于任务／项目状态记录}\\
+{绑定／哈希} & {指向指定对象的连接／按规定字节规则标识文件内容}\\
+{签名} & {归档重建中使用的结果证据与评审输入摘要对}\\
+{桥接／转换} & {历史上的宽泛辅助连接／表示转换类别}\\
+{待证工作／proof\_debt\_support} & {尚未完成的数学工作／其支持分类}\\
+{OBL} & {拥有独立历史记录的证明义务子任务}\\
+{Math Gate} & {控制下一步允许动作的证明路线检查}\\
+{支持} & {单任务拥有或多个实际使用者使用的辅助代码}\\
+{Family / family\_member} & {依来源指相关任务或教材编号组／一个父任务的实现模块}\\
+{公开前提} & {调用者使用导出定理时必须提供的假设}\\
+{具名目标} & {按精确任务名规则选取的非私有声明}\\
+{sorryAx} & {Lean 的占位证明公理}\\
+{propext, Classical.choice, Quot.sound} & {保存的严格规则允许的基础公理}\\
+{\hyperlink{l3}{附录 L.3} 中的 $C$；$H$；\nolinkurl{sn(0)}} & {六月数学配置（非实验配置 C）；外部上游证明；首行标准化尺度}\\
+{$N,m_N,p_{N,i},G_{N,i}$} & {券种数；目标数量；新券种概率；几何等待阶段}\\
+{$Z_N,a_N,b_N$} & {精确标准化和；相对尺度；缩放后的均值误差}\\
+{$A_{ke,0},A_{ke,1}$} & {任务 k 中比较 e 两端的记录通过指标}\\
+{$q_{ij}$} & {固定环境下候选 i 在规则集 j 中的有效评估分数}\\
+{证据退出} & {指定跟踪此后不再有合格证据的时点}\\
+{参考区间} & {带有规定且未验证假设的描述性整任务重抽样范围}\\
+\end{longtable}\endgroup
+\subsection[来源标识、包内证据与本地归档访问]{\texorpdfstring{\protect\hypertarget{e2}{}来源标识、包内证据与本地归档访问}{来源标识、包内证据与本地归档访问}}
+正文与附录包含本次评价所用的方法、结果、数学论证和选定案例证据。完整 \nolinkurl{report_revision_12.zip} 还包括第 10 版引入的定向证据补充、第 11 版加入的公开文档摘录，以及第 12 版提供的既有候选和服务记录。原始文件保留其字节和标识。\href{EVIDENCE_GUIDE.pdf}{证据指南}与根目录的 \nolinkurl{evidence.html} 提供可随包使用的入口；解压后可用浏览器打开后者。单独的正文稿件或 PDF 不包含这些独立文件。第 20 版完整包包含中英文稿件与 PDF、编辑检查、保留的证据补充和后续核验记录。原有相对证据路径保持有效，仅存于档案的材料仍需访问对应档案。
+
+包内是原始意见和记录，不是对其数学判断的新专家认证；不含完整私人教材库、全部历史候选和日志或生产数据库。实验记录供本次私人评阅，不推定更广发布许可。公开文档另见 \hyperlink{e3}{E.3}。
+
+E01–E21 标识历史来源组，R 为初始轨迹，N 为第二版，U 为 15:49 增量。Q/X/Y/Z/I 保留原包身份；引用定位证据，不是额外实验。较广本地归档通过 \nolinkurl{SOURCE_LINKS.json}、\nolinkurl{ARCHIVE_REFERENCES.json} 和原清单解析标识。这些定位信息需要该归档，不是公开下载地址。补充包自己的 A/B/C/D/E 来源码是文件标签，不是实验配置。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.07\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}>{\raggedright\arraybackslash}p{0.49\linewidth}}
+\toprule
+\textbf{编号} & \textbf{来源} & \textbf{本报告用途}\\\midrule\endfirsthead
+\toprule
+\textbf{编号} & \textbf{来源} & \textbf{本报告用途}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{\hypertarget{src-E01}{E01}} & {早期流程补充调查} & {组件、活跃入口、提交及执行限制}\\
+{\hypertarget{src-E02}{E02}} & {中期义务、支持与路线关卡调查} & {检查点对应、时序及控制边界}\\
+{\hypertarget{src-E03}{E03}} & {桥接、支持与任务族历史} & {类型分离、共享支持和单任务实现族}\\
+{\hypertarget{src-E04}{E04}} & {义务与父任务目标} & {吸收事件、子任务职责与连续数学检查}\\
+{\hypertarget{src-E05}{E05}} & {\nolinkurl{thm_9_5} 连续证明} & {评审 29-32、候选 38-41 及后期文件拆分}\\
+{\hypertarget{src-E06}{E06}} & {\nolinkurl{thm_9_6} 下游时序} & {调用、与最终推导的连接及路线要求}\\
+{\hypertarget{src-E07}{E07}} & {\nolinkurl{prob_14_8} 与 \nolinkurl{prob_14_10} 调查} & {局部结果、全局极限与使用者绑定}\\
+{\hypertarget{src-E08}{E08}} & {\nolinkurl{def_8_5} 与使用者迁移} & {概率条件、见证表示和迁移范围}\\
+{\hypertarget{src-E09}{E09}} & {\nolinkurl{thm_11_8} 的上游混杂} & {主文件相同、上游不同及早期版本缺失}\\
+{\hypertarget{src-E10}{E10}} & {当前流程约定} & {路线关卡、构建、评审和应用职责}\\
+{\hypertarget{src-E11}{E11}} & {当前状态约定} & {父任务完成类型、退役义务与正式边界}\\
+{\hypertarget{src-E12}{E12}} & {共著论文本地镜像} & {流程背景，不认证与公开版本相同}\\
+{\hypertarget{src-E13}{E13}} & {v0.7.5 入口与排版源码} & {排版参照和早期报告身份}\\
+{\hypertarget{src-E14}{E14}} & {原始早期材料与 Git 对象} & {四月请求、基线代码、早期运行和五月入口}\\
+{\hypertarget{src-E15}{E15}} & {当前项目 \nolinkurl{AGENTS.md}} & {当前职责与权威规则}\\
+{\hypertarget{src-E16}{E16}} & {当前数学路线关卡实现} & {程序阻断、风险触发与旧试点标识}\\
+{\hypertarget{src-E17}{E17}} & {候选一设计笔记} & {未执行本地比较的范围}\\
+{\hypertarget{src-E18}{E18}} & {v0.7.5 完整中文 LaTeX、README 与 CHANGELOG} & {早期实质内容和移除决定}\\
+{\hypertarget{src-E19}{E19}} & {生成数值绑定与冻结分析输出} & {早期报告数值及来源字段路径}\\
+{\hypertarget{src-E20}{E20}} & {中心极限、集券与目标边界调查} & {数学链与反例}\\
+{\hypertarget{src-E21}{E21}} & {共享入口与整合笔记} & {整合要求、历史修正和执行范围}\\
+\end{longtable}\endgroup
+原清单文件名和归档位置保留在未改动的历史指南 \nolinkurl{manuscript/evidence/README.md} 中。第 12 版证据指南区分这些位置与当时实际提供的文件。第 10 版引入的引用对应下列包内记录；精确运行标识和文件指纹保留在证据层。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\fontsize{9.4}{11.1}\selectfont\renewcommand{\arraystretch}{1.0}\begin{tabular}{>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.54\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}}
+\toprule
+\textbf{引用} & \textbf{此处使用的证据} & \textbf{本附录重述内容}\\\midrule
+
+{\href{zh.pdf\#ref-30}{\mbox{[30]}}} & {补充 A01–A06、A10–A21、A30–A40、AP01–AP11 及选定原意见} & {\hyperlink{n6}{N.6} 的共同评估规则、输入、会话设置和分阶段修正}\\
+{\href{zh.pdf\#ref-31}{\mbox{[31]}}} & {补充 B01–B12 与运行索引} & {\hyperlink{n1}{N.1}/\hyperlink{n5}{N.5} 的候选选择、版本角色、输入对应、额度和缺失情况}\\
+{\href{zh.pdf\#ref-32}{\mbox{[32]}}} & {补充 C01–C07 与 E01–E02} & {\hyperlink{c4}{C.4} 的目标决定程序及示例；\hyperlink{d1}{D.1} 的元数据抽样规则}\\
+{\href{zh.pdf\#ref-33}{\mbox{[33]}}} & {补充 D01–D05} & {\hyperlink{g6}{G.6} 的评审恢复序列与未决会话归属}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+上述补充文件位于 \nolinkurl{manuscript/evidence/r9_rewrite_evidence/}。第 12 版有限新增中，\nolinkurl{verification/MAINTENANCE_SCOPE.csv} 与 \nolinkurl{CANDIDATE_DELIVERY_INDEX.json} 定位 L3/L7 交付；\nolinkurl{L1_MAP.json}、\nolinkurl{H1_MAP.json} 定位记录中的传输与绑定恢复。\nolinkurl{verification/L2_SERVICE_AUDIT.csv} 将 G.18 六次服务映射到完整标识、原反馈、记录的调用者上下文和候选。复制的 Z015 标注与 Z016 覆盖记录位于 \nolinkurl{verification/supporting_records/archive/}。\href{zh.pdf\#ref-37}{\mbox{[37]}}
+
+这些映射用于编辑导航和身份核对，不是新的数学判定，也不证明成果已进入生产库。部分底层原始记录仍为中文；G.18 在对应的中英文附录中呈现六项服务的发现。印出的包内路径均相对于解压目录；保留记录中的绝对路径是历史位置，不是公开下载地址。打包与验证时间不构成新实验观察。原比较截止点不变，单列的 9 月 13 日证据见 O。
+
+\subsection[公开项目文档]{\texorpdfstring{\protect\hypertarget{e3}{}公开项目文档}{公开项目文档}}
+下列文档提供正文的项目概述与公开软件入口，于 2026 年 9 月 12 日按同一固定公开仓库版本读取。以下链接指向该版本；\href{EVIDENCE_GUIDE.pdf\#public-docs}{证据指南}链接到 \nolinkurl{manuscript/evidence/project_docs/} 中未变的文档来源指南、选定原文段落和文件身份，与实验证据分开。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\fontsize{9.4}{11.1}\selectfont\renewcommand{\arraystretch}{1.0}\begin{longtable}{>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.54\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}}
+\toprule
+\textbf{文档} & \textbf{报告使用内容} & \textbf{引用}\\\midrule\endfirsthead
+\toprule
+\textbf{文档} & \textbf{报告使用内容} & \textbf{引用}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{\href{https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/architecture.md}{架构}} & {原文至任务生命周期；Python、Lean、SQLite 职责；暂存工作与正式证明库} & {\href{zh.pdf\#ref-34}{\mbox{[34]}}, \href{zh.pdf\#ref-36}{\mbox{[36]}}}\\
+{\href{https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/phase2/workflow.md}{第二阶段流程}} & {局部修复与路线诊断；数学路线关卡；批量规划；评审应用} & {\href{zh.pdf\#ref-34}{\mbox{[34]}}}\\
+{\href{https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/workspace_state.md}{工作区状态}} & {可重建证据索引；当前代码覆盖；正式更新与恢复} & {\href{zh.pdf\#ref-34}{\mbox{[34]}}}\\
+{\href{https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/dependency_decision_trail.md}{依赖决策轨迹}} & {来源单元计划、声明依赖、习题支持与导入理由} & {\href{zh.pdf\#ref-34}{\mbox{[34]}}, \href{zh.pdf\#ref-35}{\mbox{[35]}}}\\
+{\href{https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/interface_dependency_policy.md}{接口依赖政策}} & {教材定义、转换定理及后续 Mathlib 使用；符号与代码依赖的区别} & {\href{zh.pdf\#ref-35}{\mbox{[35]}}}\\
+{\href{https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/phase2/review_criteria.md}{语义评审标准}} & {原文至代码映射、所列调用者、基础设施与任务证明的区别} & {\href{zh.pdf\#ref-35}{\mbox{[35]}}}\\
+{\href{https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/workflow_demo.md}{流程演示}} & {隔离演练生产函数、真实编译及记录的教学评审} & {\href{zh.pdf\#ref-36}{\mbox{[36]}}}\\
+\end{longtable}\endgroup
+概述使用这些文档规定的机制；案例历史提供实际数学工作与失败的证据。演示默认回放已有评审，不是新的模型质量测量。所记录的源码阅读阶段未执行演示或生产流程。本报告保留所供稿件的这一源码叙述，本轮没有新增仓库检查。
+
+\section[贡献与编辑范围]{\texorpdfstring{\protect\hypertarget{appendix-f}{}贡献与编辑范围}{贡献与编辑范围}}
+\subsection[人工智能与人类角色]{\texorpdfstring{\protect\hypertarget{f1}{}人工智能与人类角色}{人工智能与人类角色}}
+人工智能协助历史候选生成、修订、评审、归档重建、原文阅读、计算检查和双语写作。Shuo Deng 设计实现任务组织、流程、评审机制、证据维护与研究分析，并协调协助。Kenneth W. Shum 澄清教材数学意图。历史运行时评审与事后阅读是不同事件。
+
+单评估者直接前提检查、目标可比判断和案例解释都有来源轨迹，但归档缺全面独立人类专家裁决。角色分离与哈希绑定使来源可查，不使模型意见成为形式真值。
+
+共著论文 \emph{From Lecture Notes to Lean: Formalizing a Textbook on Probability Theory} 提供项目与数学背景，本地镜像索引为 E12；它不替代冻结配置，也不建立配置比较表现。
+
+\subsection[本版与此前修订]{\texorpdfstring{\protect\hypertarget{f2}{}本版与此前修订}{本版与此前修订}}
+\textbf{第23版。}以第22版为编辑基线，第一章逐字保留，第二章保留项目与角色解释并补充两批设计和共同评价。第三至第五章及讨论纳入新结果、诊断修复和评价纠正；第六章历史分析保留。本版执行66项证据与判据对照、两项原环境调用检查、双语及PDF核验。具体输出见Q.6。下方第22版及更早记录是历史编辑说明，其检查不回溯归入本版。
+
+\textbf{第22版（2026年9月14日）。}本版落实第三章与第四章陪读修订：直接报告完成结果，统一当前通过／未通过标签，补齐十一组时间并区分原轮次与累计投入，重写工具错误统计的解释和L2案例的引入。附录P保存时间重建与可比性核对。中英文正文、附录同步更新；本版使用截至9月13日的既有实验结果，尚未纳入第二批实验。
+
+\textbf{此前版本。}第 19 版增加 Shuo Deng 为第一作者、Kenneth W. Shum 为通讯作者，保留第 18 版的实质文字与结果。第 18 版核对过 A-M1 的完成和计时，以及 B-H1 的分范围判断，并修正 A-L7 已完成续作的呈现；见\hyperlink{o5}{O.5}。第 12 版改善了证据访问并呈现六项 L2 服务检查。各版原始说明与检查记录仍保存在相应版本中。旧版记录的检查描述当时版本，不构成本版重新执行的验证。
+
+配套正文标题为《概率证明如何完成》。两份 PDF 说明方法与发现，另行保留的证据包包含已索引的底层记录。\hyperlink{e2}{E.2}说明这些材料的访问方式。
+
+\section[机制、数学修复与标准证据]{\texorpdfstring{\protect\hypertarget{appendix-g}{}机制、数学修复与标准证据}{机制、数学修复与标准证据}}
+本附录复用已完成案例分析及精确来源，同时区分观察时段。修正后的 9 月 12 日比较以 Y001-Y003 为准；O 中 9 月 13 日的续作和责任审计分别更新相应结论。早期提交时刻、尚无共同评估或原标签只描述当时状态。M2 修复见 \hyperlink{g14-1}{G.14.1}，L7 的两个书面反例见 \hyperlink{g16}{G.16}，统一评价分母见 \hyperlink{n4}{N.4}。
+
+\subsection[L5：实质助手产出，但采用链未建立]{\texorpdfstring{\protect\hypertarget{g1}{}L5：实质助手产出，但采用链未建立}{L5：实质助手产出，但采用链未建立}}
+L5 涉及连续密度的最大耦合。父任务委派公共最小密度、剩余密度、联合测度、边缘分布、不匹配概率等工作。角色虽称支持作者，数学范围远大于一个小引理。[R02, R03；T03]
+
+助手产出 534 行候选及通过构建回执。父任务收到宿主路径与哈希，却在自身容器找不到文本或补丁，继续本地检索和实现。助手与父候选命名、组织不同。相似路线可源于相同教材与父请求，不能识别为采用实现。
+
+因此，调查改变了旧交接标签和框架采用标准，也区分外层传输差异与实际修改目标文件的内层补丁。传输包存在、补丁受检查，均不建立目标候选纳入它。这是依据实际产物关系、而非报告状态，对分析本身的修正。
+
+助手的 554.094 秒过程时间仍为已发生投入；早期核算还记录该助手 2,520,780 输入及 20,310 输出词元。采用链未建立不等于零成本，也不证明无任何间接贡献。测量属于该助手，不能再加到已含它的根运行账户中。[R02]
+
+\subsection[早期 B-L2：短耗时不能解释单评审失败]{\texorpdfstring{\protect\hypertarget{g2}{}早期 B-L2：短耗时不能解释单评审失败}{早期 B-L2：短耗时不能解释单评审失败}}
+早期 B 检索方差、协方差接口，绕过缺失补丁工具，写证明并构建两个目标及整包。约 256.532 秒后自愿报告完成，预算还剩约 6,943 秒，未因超时被终止。[R02, R03；T04]
+
+共同单评审包含关键比较：A 使用 \nolinkurl{variance_sum'}，B 使用 \nolinkurl{variance_fun_sum'}，均用不相关性消去非对角协方差。保存库代码表明后者包装了从前者的转换。A 的评审者明确允许通用展开，B 的评审者却以该层展开为失败理由。
+
+在早期观测时点，分析确认标准不一致，并未完成整个 B 包的修正评估。“运行短、评审失败”不证明提前停止导致遗漏，短耗时也不建立更高效率。当前 L2 验收及后期 r4 候选另见 \hyperlink{g15}{G.15}，不由这里的早期运行与暂定判断替代。
+
+\subsection[B r3：服务完成可能没有数学产物返回]{\texorpdfstring{\protect\hypertarget{g3}{}B r3：服务完成可能没有数学产物返回}{B r3：服务完成可能没有数学产物返回}}
+早期主作者新息运行请求条件期望接口支持。递归搜索超时并停止助手容器；最终回复称无有效补丁或编译，尽管父工具标记传输完成。作者独立继续证明。后续中文检查返回出现编码故障，它将下一请求改为 ASCII 英文。失败的递归求助请求在模型启动前停止，因此不是另一次已执行助手模型调用。\hyperlink{g9-1}{G.9.1}给出完整数学与检查序列。[R02, R03；T05]
+
+初始清单在父任务与最终通用评审者返回前截止。后续记录确认提交、全部四个真实求解角色、技术检查及共同双评审通过。完整记录补充早期窗口，不抹去故障。[R09–R11, R15, R16]
+
+\subsection[初始 C：角色摘要遗漏已执行检查]{\texorpdfstring{\protect\hypertarget{g4}{}初始 C：角色摘要遗漏已执行检查}{初始 C：角色摘要遗漏已执行检查}}
+初始 C 执行协调者、写作者和两个检查角色，状态摘要却只列作者。两次检查产出意见但导出失败；协调者披露未获得独立检查后提交。\hyperlink{g9-2}{G.9.2}保留候选、序列、剩余预算和同产物的后期评估。这一核算差异说明，可见角色摘要不能替代实际派发与返回记录。[R02, R03, R12, R17；T06]
+
+\subsection[L1 起点：为什么新息形成鞅]{\texorpdfstring{\protect\hypertarget{g5}{}L1 起点：为什么新息形成鞅}{L1 起点：为什么新息形成鞅}}
+同题比较使用教材习题 \nolinkurl{prob_13_9}。概率空间上观测过程满足 $X_0=0$，每个正时刻观测可测、可积。令 $\mathcal F_0$ 为平凡滤过，$\mathcal F_n=\sigma(X_1,\ldots,X_n)$ 表示截至 n 的观测。新息是观测减去基于过去信息的条件预测：
+
+\[
+Y_0=0,\qquad Y_{n+1}=X_{n+1}-\mathbb E[X_{n+1}\mid\mathcal F_n],
+\qquad S_0=0,\quad S_n=\sum_{k=1}^{n}Y_k.
+\]
+代理须定义这些对象，证明新息及部分和的可积性、适应性，并由原文前提推出鞅结论。公开数学库与通用支持可用，但不能要求调用者提供这些中间结论。交付须为带依赖的实际 Lean 定义与证明。[N01, N03-N06]
+
+核心数学分两步：线性性与自条件化给出新息条件均值为零；部分和递推与适应性继而给出鞅恒等式：
+
+\[
+\mathbb E[Y_{n+1}\mid\mathcal F_n]=0,
+\qquad \mathbb E[S_{n+1}\mid\mathcal F_n]
+=\mathbb E[S_n+Y_{n+1}\mid\mathcal F_n]=S_n
+\quad\text{almost everywhere}.
+\]
+Lean 实现还须处理可测空间包含、可积性、索引，以及函数相等与几乎处处相等的区别。正文\hyperlink{r2}{附录R.2}与\hyperlink{appendix-g}{附录 G}超越最终通过标签，说明流程如何完成这些工作。
+
+\subsection[A：自然滤过与评审交付恢复]{\texorpdfstring{\protect\hypertarget{g6}{}A：自然滤过与评审交付恢复}{A：自然滤过与评审交付恢复}}
+A 入口要求作者经生成材料、构建、独立评审与应用继续，作者在其中选择检索词、库接口和证明实现。开始时有具体干扰：提示虽指定 \nolinkurl{prob_13_9}，却夹有先完成 \nolinkurl{thm_13_17} 再做 \nolinkurl{thm_13_18} 的中等任务指令。作者查询标识，在私有目录找不到，返回唯一可调度的 \nolinkurl{prob_13_9}。绕路来自提示错误，不证明 A 正常流程必有相同检索。[N01：作者提示第 3 行；首次桥接第 18-32 行]
+
+引擎生成检索返回部分无关材料。作者随后读自然滤过、适应过程与条件期望库源码。支持作者请求在复制父工作区时失败，助手模型尚未执行，主作者独立继续。最初两次写文件分别遇到补丁命令和 Python 别名缺失，因此后续构建没有检查预期新证明。实际写入后，Lean 指出三项接口错误：零函数可积引理需显式参数，自然滤过适应引理多收参数，函数相等定理被误当作几乎处处假设。作者读精确签名并修正，第四候选构建成功。[N01：首次桥接第 38-57 行]
+
+A 使用含时刻零至 n 观测的 Mathlib \nolinkurl{Filtration.natural}，由 $X_0=0$ 证明初始滤过平凡；继而证明新息和部分和可积、强适应，并用相减与自条件化推出零条件新息均值。最终先证 $S_{n+1}-S_n=Y_{n+1}$，再用通用零条件增量鞅准则。公开假设针对正时刻，零时刻可测性内部推出。该路线完成必需数学；使用通用鞅准则而非 B/C 局部接口，不是遗漏证据。[N03：第 33-142 行]
+
+剩余过程主要受独立评审执行和返回处理阻塞。七次通用请求中一次入口拒绝；五个会话有完成回执和实际通过意见；最后一个启动但无完成回执。前述支持请求执行前失败。五份意见均未经正常路径进入作者侧可读文件。工作区导出失败、后续只读检查拒绝返回，甚至一次内嵌原文的成功评审也只返回宿主路径与哈希。作者搜本地未找到回应，于是等待、重试或报告无法应用，尽管事后分析者能读到已完成意见。[N01-N02]
+
+宿主记录将既有评审 JSON 恢复至结果路径，称源和目标哈希相同。控制器随后观察到任务通过，未重置根截止时间。保留 JSON 与所引评审者最终公开输出一致；但恢复回执会话不同于评审目录内角色回执及开场日志会话。证据确认冲突，却未独立重读历史目标位置，也未确定哪个字段造成归属错误。[N02, N11；33]
+
+支持的序列是可用结果恢复后观察到通过，会话归属仍未决。A 记录的 5,151.280 秒根耗时包含宿主干预、等待和工程故障。这些成本和恢复意见都不是额外证明改进。
+
+\subsection[B r4：可读反馈进入接口修订]{\texorpdfstring{\protect\hypertarget{g7}{}B r4：可读反馈进入接口修订}{B r4：可读反馈进入接口修订}}
+B r4 作者实现并检查初始证明后请求通用评审，返回可读中文。评审通过数学，并提出一项非阻断接口问题：最终定理要求每个自然数时刻可测、可积，任务只要求正时刻。由 $X_0=0$ 可立即推出零时刻性质。这是对齐调用接口的机会，不是发现证明假定了额外数学结论。[N08：作者第 40-41 行]
+
+作者随后使最终定理只接受正时刻前提，在内部推导全时刻性质后调用既有辅助引理。局部名称替换引入拼写错误，修正后重建模块、完整入口，并重复公理检查。最终目标不同于受评审版本。具体建议、父任务返回、对应编辑及新版本检查形成可追踪序列，但仍无反事实实验识别建议净因果贡献。[N08：第 42-49 行及第 201 行起最终代码]
+
+B r4 有两个真实角色，根耗时 714.466 秒；其自身共同评估两评审均通过，并非借用 B r3。辅助引理仍保留全时刻前提不抵消最终接口修复，因为最终证明确由原文假设推导其所需输入。[N08-N09, N11]
+
+\subsection[C r3：评审进入提交决定]{\texorpdfstring{\protect\hypertarget{g8}{}C r3：评审进入提交决定}{C r3：评审进入提交决定}}
+此 C r3 提交序列记录于 11:50:33 补充包，来源窗口保留于\hyperlink{appendix-h}{附录 H}。新 C r3 协调者读 c1、构建并请求通用评审。不同于初始 C，协调记录 34 返回完整中文评审 JSON、通过意见及只读工作区未变结果。协调者随后公开消息明确确认构建与评审通过，下一步以无未决事项提交同一 c1。保留最终目标即该候选。[N10：协调第 27-36 行；公开事件第 54-65 行]
+
+序列确认意见产出、纳入返回、可读暴露、明确确认和后续提交。评审后没有新写作者任务或代码版本，因此展示反馈进入提交决定，不是反馈修复代码。实际角色为协调者、写作者、通用评审者，无数学咨询调用。这是一次运行中可选服务使用的证据，不说明省略数学咨询通常更优。[N10-N11]
+
+新 C r3 根耗时 708.714 秒，提交时剩 4,691.286 秒。该求解补充记录覆盖提交和内部评审；共同评估另记于正文\href{zh.pdf\#section-3-1}{第 3.1 节}及\hyperlink{k9}{附录 K.9}。708.714 与 B r4 的 714.466 秒接近，不建立等价，也不能据此决定后续实验重复次数。
+
+\subsection[早期 B/C：后来通过不会消除早先信息缺口]{\texorpdfstring{\protect\hypertarget{g9}{}早期 B/C：后来通过不会消除早先信息缺口}{早期 B/C：后来通过不会消除早先信息缺口}}
+下两次运行属于早期版本，解释当前改进针对什么。后期评估不能追溯赋予模型在提交时尚未返回的意见。
+
+\subsubsection[B r3：作者完成证明；可读评审未要求实质修复]{\texorpdfstring{\protect\hypertarget{g9-1}{}B r3：作者完成证明；可读评审未要求实质修复}{B r3：作者完成证明；可读评审未要求实质修复}}
+B r3 作者先读任务、原文和公开接口，再请求精确条件期望引理与路线帮助。支持作者递归检索超时，容器停止，未交付有效补丁。返回状态称完成且部分文字损坏，两者都不证明数学帮助完成。主作者继续检索相减、可积与适应接口，以小文件测试类型，使用从一编号的观测滤过实现任务。[N04-N05]
+
+数学结构与 A 对应。B 用有限历史映射最后坐标证明 $X_{n+1}$ 可测，再用滤过单调性将条件期望可测性提升至下一时刻；部分和性质递归获得。零条件新息均值使用相减及重复条件化引理 \nolinkurl{condExp_condExp_of_le}；最终构造局部鞅定义 \nolinkurl{def_13_7} 各字段。A 的通用准则与 B 的逐字段构造完成相同最终数学职责。[N04：最终代码第 44-186 行]
+
+主要修复涉及有限历史坐标类型与有限和表示。作者测试 \nolinkurl{Measurable} 参数方向，调整有限索引，获得可构建版本。数学评审请求随后在返回编码时失败，未交付意见文本。作者改用英文请求通用评审，收到可读无缺陷回应，覆盖索引、可积性、适应性、零条件均值及无额外义务。反馈到达已确认，但未指出实质待修缺陷。[N04：第 16-35 行]
+
+作者随后尝试移除无关简化器警告，编辑中引入局部结构错误，再恢复归纳步骤并构建成功。最终候选独立获得共同双评审通过。因此是通过意见后的小清理，不是该意见修复数学缺口。失败数学评审返回不能当作作者已读反馈。B r3 有四个真实角色、940.836 秒根耗时，已含等待协助。[N04-N05, N09, N11]
+
+\subsubsection[初始 C：协调者看到候选，没看到检查意见]{\texorpdfstring{\protect\hypertarget{g9-2}{}初始 C：协调者看到候选，没看到检查意见}{初始 C：协调者看到候选，没看到检查意见}}
+C 协调者先读任务、原文、共同规则和滤过、鞅、历史映射支持代码，随后具体要求写作者复用从一编号的自然滤过与局部鞅接口，证明新息及部分和性质。写作者拥有检索与实现工具；协调者通过已注册候选、构建、评审和提交服务组织工作。因此自主权落实在具体决策点：协调者选择服务和顺序，写作者选择引理与局部实现。[N06：协调第 1-18 行]
+
+写作者遇到补丁命令缺失、格式无效或上下文不匹配。候选写入后，实际 Lean 错误涉及有限和求值、可测性参数和零函数表示。它反复读局部行与引理类型，修复目标，构建模块和汇总入口。最终用历史末坐标证明观测可测，从正时刻前提推导滤过包含于环境可测空间；新息、部分和与零条件均值均有实际引理，随后逐字段证明具体鞅结论。工具失败与 Lean 修复交错，每次不成功返回不等于数学策略失败。[N06：写作者第 12-49 行及最终代码]
+
+收到 c1 后，协调者读完整目标、说明与汇总入口，调用固定构建服务并通过，再请求通用评审与数学检查。两检查模型实际运行，分别产出通过或路线可行意见；但只读文件系统导出失败，协调者收到错误而非意见。它查状态、读构建结果，以自认为完整提交 c1，同时列出失败独立检查。根耗时 941.191 秒，提交剩 4,458.809 秒。[N06：协调第 21-38 行；N07]
+
+这是预算仍有余量、且确认检查交付失败时的明确提交。不能描述为成功独立评审后提交，也不能仅凭剩余预算认定无理放弃。后来共同评估两评审均通过同候选，属于后续评估下的产物证据，不改变协调者提交时所知。[N06-N07, N09]
+
+\subsection[同一数学任务的不同工作路径]{\texorpdfstring{\protect\hypertarget{g10}{}同一数学任务的不同工作路径}{同一数学任务的不同工作路径}}
+下表将可接受最终候选展开为不同具体过程。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{比较点} & \textbf{初始 A} & \textbf{B r3} & \textbf{初始 C}\\\midrule
+
+{核心数学} & {自然滤过、新息与部分和性质、通用鞅准则} & {从一编号的历史滤过、相同性质、局部鞅定义} & {从一编号的历史滤过、相同性质、局部鞅定义}\\
+{主要决策者} & {受评审关卡和控制器状态约束的作者} & {作者安排检索、协助、检查和提交} & {协调者安排写作者、检查和提交；写作者实现}\\
+{反馈到达} & {多份意见产出，作者侧受阻，宿主恢复} & {支持失败，数学评审编码失败，通用文本到达} & {两检查模型完成，协调者收到导出错误}\\
+{提交或结束} & {恢复后控制器观察到通过} & {作者提交，后获双评审通过} & {披露缺评审后提交，后获双评审通过}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+A 展示评审关卡与交付失败如何相互作用；B 展示作者在无有用支持补丁时完成证明并选择另一评审；C 展示协调者跨写作、检查和提交服务决策。三者均依赖实际工具能力和信息交付，角色名称本身不能确认发生了什么。
+
+观测不识别某种组织的净收益。A 受提示与运行时修复干扰；B r3 已含基线修订；C 增加 Astra 协调者；时间与早期端点条件未完全匹配。B r3、初始 C、B r4 的任务、原文和上游端点类别绑定相同，支持比较数学义务，却不能追溯统一求解条件。A 后来双评审另见正文\href{zh.pdf\#section-3-1}{第 3.1 节}与\hyperlink{k9}{附录 K.9}，不抹去初始试验暂定单评审状态。[N01-N11, N13；R06-R08]
+
+\subsection[M1：完整协助采用与交付说明修订]{\texorpdfstring{\protect\hypertarget{g11}{}M1：完整协助采用与交付说明修订}{M1：完整协助采用与交付说明修订}}
+对鞅 $X$ 和停止时刻 $T$，停止过程为 $X^T_n=X_{T\wedge n}$。首目标证明它仍为鞅；第二目标在指定条件下得到
+
+\[
+\mathbb E[X_T]=\mathbb E[X_0].
+\]
+有界停止时刻可在有限时间处理。几乎必然有限停止时刻且过程统一有界，或停止时刻可积且增量有界时，需将有限停止期望恒等式传到极限。下列可积控制允许控制收敛。对可能无穷的停止时刻，代码须定义有效代表，不使用未定义的 $X_\infty$。
+
+M1 要求两个相连结果：先定义停止过程并证其为鞅，再在三种情形证明停止期望结论：停止时刻有界；停止时刻几乎必然有限且过程统一有界；停止时刻可积且增量有界。第三种须构造可积界，不能向调用者索要所需控制。例如，
+
+\[
+|X_{T\wedge n}|\leq |X_0|+cT,
+\]
+将几乎必然收敛与期望连接起来。Lean 实现还须处理无穷停止时刻、可测性和可积性。[U01, U02]
+
+B r4 将完整两任务实现委派助手。助手在隔离副本产出补丁，主作者收到并读取、应用目标变化、构建并请求数学评审。补丁重建的两文件与最终受评估代码逐行一致，建立完整产出、交付、应用、验证序列。主作者仍完成组装、工具恢复与检查，工作不能简化成一次短回答。[U02]
+
+核算细节很关键：主作者首条组合构建命令退出码 0，标准错误却说找不到构建命令。作者随后定位绝对可执行路径并完成真实成功构建。只看外层退出码会把早期工具失败误记为验证成功。[U03]
+
+C r3 也委派整组，读取返回候选、构建并依次检查目标。随后出现第二候选，但比较全部可见文件，仅交付文档改变，数学源码相同。协调者要求补充公开声明与前提说明；内部评审未指出数学缺陷，因此修订是交付文档，不是证明纠错。[U04]
+
+C 的两目标评审复用一个会话，是两次实际调用而非两名独立评审者。后续共同评估另有自己的两次评价。此区别影响角色计数与独立性主张，但不自动否定内部逐目标检查价值。
+
+三种 M1 候选均通过提交后评估，确认三种组织下均观察到本组数学要求完成，但不建立等价。A 初始运行有不同运行器故障与恢复，C 增加不同模型协调者，端点相同不统一成本与停止规则。[U01]
+
+\subsection[M3：在共同空间构造几乎必然收敛]{\texorpdfstring{\protect\hypertarget{g12}{}M3：在共同空间构造几乎必然收敛}{M3：在共同空间构造几乎必然收敛}}
+构造将同一均匀随机数输入不同分位数函数。对分布函数 $F_n,F$ 及 $(0,1)$ 上均匀的 $U$，可写为
+
+\[
+\begin{gathered}
+Z_n=F_n^{-1}(U),\qquad Z=F^{-1}(U),\\
+Z_n\overset{d}=X_n,\quad Z\overset{d}=X,\qquad
+Z_n\longrightarrow Z\quad\text{almost surely}.
+\end{gathered}
+\]
+逆函数为广义逆；证明处理不连续水平、可测性和端点。结论针对新构造变量，不是原空间中原 $X_n$ 的几乎必然收敛。
+
+M3 是教材定理 10.8 的 Skorokhod 表示定理，不是依概率收敛的另一个子列结果。给定实随机变量依分布收敛，须在共同概率空间构造变量，保持序列和极限的分布，并证明几乎必然收敛。最终在单位区间用广义逆分布函数建立边缘分布，移除可数例外水平和端点以获得收敛。整任务助手产出的代码确被主作者采用，依据是助手产物、主作者动作与最终代码的对应。[U05]
+
+案例还区分两种评估失败。第二份共同意见因置信度类型无效记为无法判断，随后裁决通过，并无对应数学反例。格式失败调用仍计入资源。[U05, U06]
+
+具体而言，接口要求数值的置信度字段填入对象。裁决考虑无法判断结果和候选证据，不能改述为发现并修复数学反例。格式问题未在候选中产生新证明修复。[U06]
+
+\subsection[H1：反演进入唯一性与标准 Cauchy 应用]{\texorpdfstring{\protect\hypertarget{g13}{}H1：反演进入唯一性与标准 Cauchy 应用}{H1：反演进入唯一性与标准 Cauchy 应用}}
+五项义务为界 $|e^{ix}-1|\leq |x|$、反演、经反演证明唯一性、Cauchy 均值应用和整数值判据。先重建 A 的数学复用：完整候选通过原裁决，但两原评审对标准 Cauchy 与一般参数族有分歧。后小节报告三候选统一范围重评，不将旧裁决者解读视为唯一确立的任务含义。[Q057-Q060；U13][Z025, Z026]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{完成结论} & \textbf{后续目标的实际使用} & \textbf{当前范围}\\\midrule
+
+{特征函数反演} & {唯一性证明调用反演} & {内部交付，处理区间端点原子质量}\\
+{特征函数唯一性} & {标准 Cauchy 均值应用调用唯一性} & {内部交付，公开参数固定标准 Cauchy}\\
+{整数值判据} & {导入唯一性文件但不调用定理} & {独立终端路线，内部交付}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+因此，复用意味着能在后续推导中定位调用；导入图仅记录可能的代码依赖。
+
+H1 最有信息量的证据说明中间证明如何进入后续工作。作者先请求完整反演，同时将该支持请求限制为只读。回应定位 Dirichlet 积分缺口，无可用补丁；仅此不能建立无力解决整任务。作者将下一请求缩小到积分极限和统一界，获得已构建支持并纳入草稿，再请求完成剩余反演论证。[U07]
+
+第三助手完成剩余证明，但导出失败。宿主恢复原产物后，主作者才可读取、应用、构建并获得独立内部评审。数学工作已存在，交付暂受阻；最终成功含宿主恢复，不能描述为不中断的自主完成。[U08]
+
+最终反演代码含有限积分交换、振荡核不同逐点极限、控制收敛与端点半质量项：
+
+\[
+\lim_{T\to\infty}\frac{1}{2\pi}\int_{-T}^{T}
+\frac{e^{-iat}-e^{-ibt}}{it}\,\phi_\mu(t)\,dt
+=\mu((a,b))+\tfrac12\mu(\{a\})+\tfrac12\mu(\{b\}),\qquad a<b.
+\]
+后续唯一性定理实际调用反演，在无原子质量端点取得区间概率相等，再以稠密端点选择和测度确定论证建立同分布。这强于导入证据：先前定理结论进入后续推导。[U08, U09]
+
+首份唯一性意见通过，但应用关卡因输入哈希不匹配拒绝。同一评审者修正绑定及解释，主作者随后成功应用，候选源码未变。这是绑定验证与恢复，不是数学修复。[U09]
+
+两个新完成终端应用进一步明确证据链：
+
+\begin{itemize}[leftmargin=1.4em,itemsep=0.2em]
+\item \textbf{Cauchy 样本均值。}代码经 Fourier 积分推导标准 Cauchy 特征函数 $e^{-|t|}$，再用独立和乘积公式与缩放，证明均值与单项特征函数相同，明确调用新完成唯一性定理。公开定理当前固定标准 Cauchy。后期裁决在冻结范围下接受该实现，同时保留异议；不能描述为覆盖任意位置、尺度。[U14]
+\item \textbf{整数值判据。}另一应用证明 $\phi_X(2\pi)=1$ 当且仅当 $X$ 几乎必然取整数值。利用模一复指数实部不超过 1，而积分为 1 迫使实部几乎必然为 1，继而复指数几乎必然等于 1。文件虽导入唯一性，证明体未调用该定理。两个应用有不同实际依赖路线。[U15]
+\end{itemize}
+至 15:49，五目标均有内部评审注册回执，候选哈希、应用源码哈希及最终联合构建输出哈希一致。最后两应用分别于 15:20:48、15:31:31 完成。最终联合构建确认五目标在同一源码状态同时可用，固定该时点内部交付代码状态；后续整组评估已在本节开头更新。[U13]
+
+支持的过程发现是：本运行通过调整协助范围、复用已完成分析支持及恢复受阻传输，达到完整内部交付。没有无协助或无恢复的对照，也不能证明较窄请求总更优；B-M1、A-M3 同样采用更广任务范围的委派产出。
+
+\subsubsection[H1 核心完成与扩展范围]{\texorpdfstring{\protect\hypertarget{g13-1}{}H1 核心完成与扩展范围}{H1 核心完成与扩展范围}}
+当前验收要求全部五目标，并按教材支持的标准 Cauchy 核心解释未参数化应用。A 完整同根延续、B、C 均通过。A 早期部分快照仍不完整，不与后期完整候选混同。[Y001-Y003]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{完整候选} & \textbf{当前核心} & \textbf{交付 Cauchy 范围}\\\midrule
+
+{A 同根延续} & {通过} & {标准 Cauchy}\\
+{B r4} & {通过} & {零位置、任意正尺度}\\
+{C r3} & {通过} & {任意位置与正尺度}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+范围差异仍是数学结果，但未规定扩展不再定义核心失败。第 1、6 章提供标准 Cauchy 语义；印刷页 154 的表 9.1 另给 $b/[\pi(1+b^2x^2)]$，支持 B 的中心尺度扩展。页 161 习题 9.6 未明确量化位置，缺任意位置参数本身不能否定 B 完成接受核心。[X003, X012, Y001]
+
+三候选此前获得六份独立初审及三次必要裁决。B 原始裁决已在数学上接受标准范围，但 TeX 引号转义未通过外围验证。修正处理可确定对应，复用意见而无新模型调用。任意位置推广保留为补充覆盖。[Z025, Z026, Y005]
+
+过程还暴露评估输入缺失：仅看匿名源码不能证明作者遗漏交付说明。必要裁决前，已提供各候选实际原始提交材料，没有虚构作者文档。这显示不完整评估视角如何制造表面失败，但不建立对其他候选文档的穷尽核查。历史标签与修复前表保留于\hyperlink{k8}{附录 K.8}。
+
+\subsection[数学修复：在证明内部推导前提]{\texorpdfstring{\protect\hypertarget{g14}{}数学修复：在证明内部推导前提}{数学修复：在证明内部推导前提}}
+协助采用、文档变化和评审注册恢复解释协作；下面两案例则展示公开数学义务如何完成，涉及构建反馈与原文对应，需要比“代码修好了”更具体的说明。
+
+\subsubsection[T01：M2 的检索、接口测试与实质证明修复]{\texorpdfstring{\protect\hypertarget{g14-1}{}T01：M2 的检索、接口测试与实质证明修复}{T01：M2 的检索、接口测试与实质证明修复}}
+M2 对应教材 \nolinkurl{thm_11_7}：独立随机变量有共同均值与统一原始四阶矩界，则样本均值几乎必然收敛至该均值。暂不计代码索引约定，数学要求为：
+
+\[
+\mathbb{E}X_i=m,\qquad \sup_i\mathbb{E}|X_i|^4\le c
+\quad\Longrightarrow\quad
+\frac1n\sum_{i=1}^{n}X_i\longrightarrow m\quad\text{almost surely}.
+\]
+形式任务还规定可测性、四次幂可积性、独立性与公开声明。代理须将其转为 Lean 可检查的定义和证明，可使用所供通用库、检索引理、测试接口、写辅助引理并修订。交付是代码版本及依赖。[R02, R14；T01]
+
+本运行作者检索强大数定律、独立性和积分乘积接口，读实现并写小文件查精确类型，再实现有限和四阶矩展开，用独立性消项，推导尾概率界并应用 Borel-Cantelli。最初八次构建前七次失败，第八次通过。
+
+但第八次构建通过的候选仍要求调用者提供涉及 $X_i-m$ 的中心四阶矩界；教材给的是涉及 $X_i$ 的原始四阶矩界。代码证明有用中间定理，却仍留部分任务给调用者。
+
+通用评审指出缺口；后续作者证明逐点不等式及积分推论：
+
+\[
+(x-m)^4\le 8(x^4+m^4),\qquad
+\mathbb{E}(X_i-m)^4\le 8(c+m^4).
+\]
+第十一版把转换移入内部，公开定理直接接受原始矩假设，旧中心矩证明作辅助。第十一版内部复审通过，最终文件逐字节一致。原截止点尚无共同评估；后续既有双评审通过见正文\href{zh.pdf\#section-3-1}{第 3.1 节}及\hyperlink{k9}{附录 K.9}。[R02, R14, R18]
+
+这说明为何需要代码、构建输出和评审意见。构建成功确认 Lean 接受实际声明与证明；同教材比较可揭示声明索要了本应推导的额外前提；版本比较确认后期是否真正补齐。
+
+强大数定律修订可追踪到实际工作。作者不仅输出草稿，还检索接口、读实现，在 \nolinkurl{apply_patch} 和 \nolinkurl{python} 不可用时改用 \nolinkurl{python3}，用 Lean 反馈修复函数表示、可积性组合及类型。七次失败构建外层 shell 状态仍为零，输出明确失败，因此只看 shell 状态会误判。[R02, R03；T01]
+
+最终原始矩桥接也是代码变化，确认公开前提缺口在该反馈与控制链中被定位并补齐。首提示明确禁求助，并要求准备评审请求后返回；两者不建立作者自主认为无需更多工作。教材路线也约束方法选择，没有证据表明作者比较了所有强大数定律证明后才选它。
+
+\subsubsection[T02：L3 移除本应由证明推出的额外前提]{\texorpdfstring{\protect\hypertarget{g14-2}{}T02：L3 移除本应由证明推出的额外前提}{T02：L3 移除本应由证明推出的额外前提}}
+A 的 \nolinkurl{prob_7_6} 第六版要求调用者提供极限函数处处非负、可测；第十版移除两项公开要求，从给定收敛及非负条件推出几乎处处非负，再由可积性获得所需几乎处处强可测。收敛成立处，非负值收敛序列的极限非负，此步应由证明完成。[R02, R03；T02]
+
+记录含具体批评、读取反馈命令、声明与证明体变化，以及绑定第十版的复审，强于仅有评审先于通过。但链中也有宿主恢复、绑定修复、诊断、原文决定和数学检查，不把全部修复归给一位评审者。
+
+同题旧B最终代码仍公开假设极限几乎处处非负；当时的接口审核把它记为缺口。将该前提移入证明是真实的接口修改。按本版Q.2的共同成果标准，同一输入上可直接推出的冗余非负前提不单独阻断成果；旧A/B的未完成仍由缺失尾部范围决定。原审核判断与本次成果判据分别保留。
+
+\subsection[L2：通用协方差展开采用同一标准]{\texorpdfstring{\protect\hypertarget{g15}{}L2：通用协方差展开采用同一标准}{L2：通用协方差展开采用同一标准}}
+当前 L2 验收用允许通用数学基础设施的 G。A、早期 B、B r4、C 均通过。候选仍须由给定不相关假设推出零交叉项，并完成弱大数定律的均值、方差、Chebyshev 与极限步骤；直接假定目标仍禁止。[Y001-Y003]
+
+A 调用 variance\_sum'，C 调用 variance\_fun\_sum'；后者在库中直接由前者获得。二者使用对一般相关族成立的展开，再处理非对角项：
+
+\[
+\operatorname{Var}\!\left(\sum_i X_i\right)
+=\sum_i\sum_j\operatorname{Cov}(X_i,X_j),
+\qquad \operatorname{Cov}(X_i,X_j)=0\quad(i\ne j).
+\]
+原评估允许 A，却拒绝 C 对应行为。原文和约定匹配不保证解释匹配。修正消除此不一致：C 从失败转通过，A 仍接受。[Q017-Q027, Q098-Q107, Y002]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{候选} & \textbf{当前 G 标准} & \textbf{补充 S：自行展开}\\\midrule
+
+{A} & {通过} & {覆盖不完整}\\
+{早期 B} & {通过} & {覆盖不完整}\\
+{B r4} & {通过} & {通过}\\
+{C} & {通过} & {覆盖不完整}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+S 还要求候选或允许支持自行展开中心化平方并用期望线性性。B r4 完成；A、C 未交付完整自行展开，尽管 C 单独证明了一个中心化乘积积分为零。保留的逐义务评估区分缺口，不从相同总标签推断证明覆盖相同。这些是 S 路线要求，不是对 G 证明的数学反例。[Z020, Z021, X018；30]
+
+十次早期 L2 评估及有效裁决已提供足够证据；05:17 补充和 09:22 修复均未新增 L2 模型调用。G 现为明确主要标准，S 为补充。选择在看到结果后作出，不建立原先固定标准下的配置优越性。[Y001, Y007]
+
+B 早期支持导出失败仍是过程观测。最终 r4 候选连接给定不相关定义，并自行展开，最终接口不再未决。支持采用与最终数学正确性是不同问题。[Q081-Q086；U17, U18]
+
+\subsection[L7：早期停止与修复中的任务约定问题]{\texorpdfstring{\protect\hypertarget{g16}{}L7：早期停止与修复中的任务约定问题}{L7：早期停止与修复中的任务约定问题}}
+\textbf{时点说明。}本节保留截至 9 月 12 日的证据，包含较早另行修复的 A 候选。9 月 13 日恢复原作者后的成功结果是另一份产物与阶段，见 \hyperlink{o2}{O.2}。
+
+B/C 当前完成合理修正任务，原始及独立修复 A 候选仍有交付缺口。本节先说明 A 停止与不足假设，再区分修正验收下的结果。运行、范围及资源分别保留。[Y001-Y003]
+
+L7 路线关卡指出接口修订与未决义务，外层宿主随后禁全部编辑、协助和新评审并封存。这是不同层级的独立决定。原根预算 7,200 秒，封存剩约 3,668 秒，因此预算耗尽不能解释停止。后来 H1 完成不证明 L7 继续就必然完成。[U10]
+
+三个端点意见接受保存的定理 10.10，却不同处理未完成的 10.11 与部分范围。裁决者直接提示未继承普通评审相同的部分范围限制。此次部分材料评估最终记录失败；三意见均接受 10.10，完整双目标约定仍缺 10.11。原失败、范围差异和目标缺失都须可见，不改为通过，也不声称范围差异是失败唯一原因。[U11]
+
+下面说明停止前的具体数学争议。单点反例否定某连续性接口，不完成第二目标全部义务。
+
+通用评审质疑 L7 连续映射命题，建议将集合各点的环境连续性换成相对集合连续性。所提接口不足。在单点概率空间取：
+
+\[
+S=\{0\},\quad V=0,\quad V_n=\frac1{n+1},\qquad
+f(x)=\begin{cases}0,&x=0,\\1,&x\ne0.\end{cases}
+\]
+函数相对于单点集 $S$ 连续，$V_n$ 收敛于 $V$，但 $f(V_n)=1$ 对每个 $n$ 成立，因此不收敛于 $f(V)=0$。逼近变量取值在集合外，只限制集合上的函数行为不足。这个可直接核对的反例解决建议问题，无须对评审置信度排名。[R02, R03；T07]
+
+反例否定该修改，不否定针对原候选的一切未决批评；其他教材路线义务仍在。最终作者轮次中宿主明确禁代码变化与求助，要求记录停止。结果保留首目标内部通过、第二目标不完整，不能称作者自主放弃整题。
+
+\subsubsection[修复候选：遗漏义务与不足假设]{\texorpdfstring{\protect\hypertarget{g16-1}{}修复候选：遗漏义务与不足假设}{修复候选：遗漏义务与不足假设}}
+后期 A-L7 修复交付两目标文件，内部评审和构建通过，但两名原共同评审均判失败，当前验收仍不完整。两者接受坐标等价和连续映射收敛控制，却指出返回的向量收敛谓词无可测性字段，且未另证每个复合输出为随机向量。这是相对书面约定的实际遗漏，技术成功不能抹去。[Q069-Q076]
+
+任务约定一方面只假设在几乎必然包含极限的集合 S 上连续，另一方面要求全部复合函数可测。即使 S 各点环境连续仍不足。取 Lebesgue 概率空间 $\Omega=[1,2]$ 及非 Lebesgue 可测子集 $E$，定义
+
+\[
+f(x)=\mathbf{1}_E(x),\qquad S=\{0\},\qquad
+V_1(\omega)=\omega,\quad V_n(\omega)=0\ (n\ge2),\quad V(\omega)=0.
+\]
+f 在 0 附近为零且在该处连续。各输入可测，序列逐点收敛至取值于 S 的 V；但 $f(V_1)=\mathbf{1}_E$ 不可测。此初始项不影响收敛，却已违反每个输出可测要求。这是对任务条件充分性的数学反例，不是新 Lean 验证实验。
+
+它不同于前述相对连续反例：前者否定不当连续性替换，后者显示环境连续仍不控制 S 外可测性。执行者和独立方法核查读取冻结原文及有限章节上下文，未发现“全部确定性函数均可测”的可追溯约定；这不是对出版教材的穷尽检索。09:22 采用的修正任务明确增加 f 的 Borel 可测性，保留 S 各点环境连续，评估既有合理修复，不新增求解。[Z030, Z031]
+
+\subsubsection[当前验收：B/C 完成合理修正任务]{\texorpdfstring{\protect\hypertarget{g16-2}{}当前验收：B/C 完成合理修正任务}{当前验收：B/C 完成合理修正任务}}
+当前 L7 允许合理、已披露且证明完整的修正。映射 Borel 可测，在 S 各点环境连续，极限在概率为一事件上或几乎处处属于 S。候选必须实际交付每个复合函数可测性及两种收敛结果，可由公开支持定理承载。[Y001]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{候选} & \textbf{当前结果} & \textbf{交付范围}\\\midrule
+
+{A 原始部分交付} & {不完整} & {缺整个连续映射分支}\\
+{A 独立修复} & {不完整} & {数值收敛获接受，复合可测性未交付}\\
+{B r4} & {修正任务通过} & {公开支持交付可测性及两种收敛，另假设 S 可测}\\
+{C r3} & {修正任务通过} & {以可测原像或几乎处处成员关系完成修复，另有数值核心}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+B 假设 S 可测，比 C 表述更强，差异明确保留。当前要求合理充分修复，不要求唯一或最弱假设，因此不再据此维持 B 失败。允许加条件不自动补上 A 缺失证明，两 A 候选仍不完整。[Y002, Y003]
+
+原字面约定拒绝与格式相关不确定仍为历史记录。当前结果依据修正验收和充分既有数学证据，无新求解，不表示三配置最初使用相同修正输入。
+
+\subsubsection[定向评审如何支持修正验收]{\texorpdfstring{\protect\hypertarget{g16-3}{}定向评审如何支持修正验收}{定向评审如何支持修正验收}}
+05:17 完成的两份独立意见有效，十项义务完全一致，无需裁决。它们接受 C 的坐标等价、范数与收敛桥接、不带映射可测性的几乎必然数值核心，以及完整修正后的依概率收敛证明。原交付明确披露函数级 Borel 可测性，不直接假设复合收敛或可测性。[X053, X058, X010]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{当前证据} & \textbf{两份独立评审}\\\midrule
+
+{精确公开假设下数学正确} & {通过}\\
+{条件修正合理} & {通过}\\
+{改动与范围披露} & {通过}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+两意见也指出不符合原字面条件。09:22 验收修复明确接受合理修正任务，因此 C-L7 现通过。仅格式修复不能解决旧范围分歧；当前验收同时依赖评估者修复与评估设计修正。[Y001-Y003]
+
+教材印刷页 176–177 和页 58 可测复合定理是事后提供，未倒填为求解输入。局部命题未明确假设全局映射可测，可测复合则要求兼容空间之间的可测映射。这不是穷尽约定检索或作者确认。[X037]
+
+归属需具体：A 修复的外部评审者也发现条件不足，C 不是唯一发现者。A 不带映射可测性的数值依概率控制是实质工作；B 也给出合理修复；C 明确披露修复，并独立保留弱假设数值核心。发现、交付修复和外部认可是不同事件。[X003, X012]
+
+\subsection[L3：对各候选保留相同最终尾部要求]{\texorpdfstring{\protect\hypertarget{g17}{}L3：对各候选保留相同最终尾部要求}{L3：对各候选保留相同最终尾部要求}}
+\textbf{后续核查。}9 月 13 日检查确认 A 数学审核者实际收到尾部表述，B 使用了新的内部复核会话。该证据更新责任解释，不改变下列范围标签，见 \hyperlink{o3}{O.3}。
+
+当前 L3 用原任务明确允许的最终可积表述 T。C 交付该公开接口并保持接受；A、B r4 要求每项可积，无一般尾部封装，因此均不完整。A 由原通过改判，修正并不限于提高通过率。[Y001-Y003]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{候选} & \textbf{当前 T 标准} & \textbf{交付范围}\\\midrule
+
+{A} & {不完整} & {缺最终尾部封装及原序列极限恢复}\\
+{早期 B} & {不完整} & {缺对应尾部封装}\\
+{B r4} & {不完整} & {缺最终尾部封装及原序列极限恢复}\\
+{C} & {通过} & {交付任务允许的最终尾部接口}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+逐项与最终可积不同。在 $\Omega=(0,1]$ 令 $f_1(x)=1/x$，后续项与极限为零。非负扩展积分趋于有限极限，但首项不可积。尾部归约可舍弃有限前缀并恢复原序列的一范数收敛，但 A/B 实际公开交付中无该封装。[X003, X012, Y002]
+
+缺口不否定其负部控制、在声明假设下的一范数论证，或密度、全变差、Gaussian 分支。缺的是实际接口与推导，不是已有数学全部被拒。反之，原任务允许 T，因此不要求 C 增加由扩展积分推导最终可积的更强 E 封装。[Y001]
+
+四候选此前获十二次一致性评估。A、B r4 原裁决已指出范围缺口，却受引号或换行转义不匹配阻塞。修复核对实际上下文中的可确定对应，复用原推理与投票，主要结果不再因格式未决。旧 F/E/T 表保留于\hyperlink{k8}{附录 K.8}。[Z022, Z023, Y005]
+
+案例揭示两种评估问题：原评价不一致对待相同额外前提；重评一度要求超出任务许可的封装。修正保留 A/B 真缺口，接受 C 已完成的允许范围。
+
+\subsection[六次服务核查：有效性、暴露与采用分别报告]{\texorpdfstring{\protect\hypertarget{g18}{}六次服务核查：有效性、暴露与采用分别报告}{六次服务核查：有效性、暴露与采用分别报告}}
+保存的定向核查恰覆盖六次 L2 服务：两次 A 通用评审、一次 B 支持作者、一次 B 通用评审、两次 C 目标评审。核查记于 9 月 11 日北京时间约 21:54；本版呈现既有标注和支持记录，不是六次新评估。原任务及服务请求与 G.15 后来的 G/S 解读分开；G 允许通用协方差展开，S 另要求候选自行展开。\href{zh.pdf\#ref-16}{\mbox{[16,21,37]}}
+
+表使用各原派发标识前八位，在六记录内唯一。完整服务、根运行、派发与会话标识，原反馈、候选路径和来源位置保留于 \nolinkurl{verification/L2_SERVICE_AUDIT.csv} 及证据指南。\textbf{暴露未核实不等于已核实未读。}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.135\linewidth}>{\raggedright\arraybackslash}p{0.305\linewidth}}
+\toprule
+\textbf{服务与短标识} & \textbf{按后期解读保存的有效性评价} & \textbf{完整文本暴露} & \textbf{已建立的采用或数学修复}\\\midrule\endfirsthead
+\toprule
+\textbf{服务与短标识} & \textbf{按后期解读保存的有效性评价} & \textbf{完整文本暴露} & \textbf{已建立的采用或数学修复}\\\midrule\endhead
+\midrule\multicolumn{4}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{A 方差评审 \nolinkurl{50194432}} & {G 下通用展开和交叉项消去有支持；S 展开未交付。} & {未核实} & {通过意见，未要求证明修复；中间调用者编辑未完整重建。}\\
+{A 弱大数评审 \nolinkurl{bb680eb5}} & {局部均值／方差、Chebyshev 和极限论证有支持；方差依赖保留 G/S 限制。} & {未核实} & {通过意见，未主张证明修复；最终代码对应不确认全部中间动作。}\\
+{B r4 助手 \nolinkurl{6361bff3}} & {保存核查未独立验证隔离补丁；最终 B 的 G/S 通过不能移用于助手产物。} & {恢复后仍未核实} & {导出已恢复，但实际阅读、补丁采用和所致义务修复仍未知。}\\
+{B r4 联合评审 \nolinkurl{f5e4ae15}} & {两个受评审目标在 G、S 下均有支持。} & {已验证} & {作者提交前确认验证；两受评审文件与最终文件逐字节相同，是验证而非证明修复。}\\
+{C r3 方差评审 \nolinkurl{8ce74337}} & {G 下通用展开与交叉项消去有支持；完整 S 展开未交付。} & {已验证} & {意见文本到达协调者；未主张修复，期间全部编辑未重建。}\\
+{C r3 弱大数评审 \nolinkurl{abbc1cbd}} & {局部弱大数论证有支持；方差依赖保留 G/S 限制。} & {已验证} & {意见文本到达协调者；未主张修复，完整调用者编辑链未重建。}\\
+\end{longtable}\endgroup
+\textbf{分析改变了什么。}B 助手确有模型输出，但权限故障阻止导出；工程恢复后复制产物，无新模型或容器。恢复确认交付，不确认采用。B 联合评审是另一服务：返回文本、作者确认和受评审／最终目标字节相同，确认提交前检查既有结果，不确认找回助手补丁创造该结果。[Z015, Z016]
+
+\textbf{六项结果支持什么。}此子集三次完整文本暴露已验证、三次未核实，不是对全部 127 次服务的新估计。五项是未请求数学修复的通过意见，未变代码不能记为修复失败。助手有效性与采用仍未知。对 A/C，更强 S 路线要求也不使有支持的 G 证明或全部局部弱大数步骤为假。因此核查确立具体验证链和观测限制，不给总体有效反馈采用率或修复率。N.4 保留完整清单边界。
+
+\section[观测窗口与历史资源核算]{\texorpdfstring{\protect\hypertarget{appendix-h}{}观测窗口与历史资源核算}{观测窗口与历史资源核算}}
+统一主表耗时从首派发到最后角色返回，见 \hyperlink{m1}{M.1}。下列历史核算保留原结束事件与窗口，为特定轨迹提供证据，不替代缺失统一测量，也不加入已含相同调用的总量。
+
+\subsection[来源窗口标识材料何时进入分析]{\texorpdfstring{\protect\hypertarget{h1}{}来源窗口标识材料何时进入分析}{来源窗口标识材料何时进入分析}}
+首次清单读取于 2026 年 9 月 11 日北京时间 09:18:50.564–09:18:57.960。后期主窗口为 11:40:14–11:40:24，C r3 尚运行；11:50:33 补充捕获其完整求解序列，11:56:54 再作有限端点补充。U 增量逐文件窗口为 15:49:07-15:49:16，复用 15:04 完成的案例检查。这些是带逐文件身份的非原子采集窗口，不声称全部来源代表同一瞬时系统状态。[R02, R04；N01-N13；U12]
+
+后期证据不追溯改变作者提交时可读内容。助手完成回执也不确认采集时父任务已完整。Q/X/Y/Z 窗口和最终验收截止另保留于 K。
+
+\subsection[L1 各版本：时间与词元边界]{\texorpdfstring{\protect\hypertarget{h2}{}L1 各版本：时间与词元边界}{L1 各版本：时间与词元边界}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{运行与结束事件} & \textbf{根秒数} & \textbf{输入词元（含缓存）} & \textbf{输出词元（含推理）}\\\midrule
+
+{初始 A：首派发至控制器结束} & {5,151.280} & {至少 6,156,275} & {至少 65,876}\\
+{B r3：首派发至作者返回} & {940.836} & {2,664,038} & {30,165}\\
+{初始 C：首派发至明确提交} & {941.191} & {2,887,828} & {35,702}\\
+{B r4：首派发至作者返回} & {714.466} & {2,355,921} & {22,349}\\
+{C r3 补充：首派发至明确提交} & {708.714} & {2,570,670} & {27,730}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+词元合计实际求解角色回执，不含后期共同评估。A 第二作者轮缺用量字段，末评审者缺完成回执，因此用量是下界，不能定义完整成本比。B r4 含 2,222,592 缓存输入，C r3 含 2,354,304，两子集不另加。[N11]
+
+根耗时已含等待协助。作者返回、角色进程结束、明确提交、容器停止和封存是不同事件。C r3 从首次实际派发计时，不从更早外层启动计时。广受讨论的约 7.2 比值采用约 5151、714、709 秒及不同结束事件，不是统一效率比，不替代当前主表比较。
+
+\subsection[M1、M3、H1：详细角色回执]{\texorpdfstring{\protect\hypertarget{h3}{}M1、M3、H1：详细角色回执}{M1、M3、H1：详细角色回执}}
+此早期核算按各运行记录止于作者最后返回或协调者明确提交，已含等待协助。[U13, U16]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{运行} & \textbf{完成调用／不同会话} & \textbf{根秒数} & \textbf{输入（含缓存）} & \textbf{缓存输入} & \textbf{输出}\\\midrule
+
+{B r4，M1} & {3 / 3} & {1,058.725} & {4,426,338} & {4,187,264} & {35,358}\\
+{C r3，M1} & {5 / 3} & {1,594.905} & {8,445,442} & {8,098,048} & {63,518}\\
+{A，M3} & {3 / 3} & {1,267.653} & {7,508,872} & {7,132,032} & {47,040}\\
+{A，H1 原始与延续} & {16 / 12} & {10,929.620} & {95,568,298} & {93,436,160} & {271,009}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+输出分别含 7,761、15,274、15,802、77,033 推理词元，不是额外输出。全部十六次注册 H1 求解侧调用有完成回执，延续共享原根计时。该窗口约三小时二分钟耗时，原十小时额度还剩约六小时五十八分。后期共同评估另计；十六次完成调用不是十六个独立数学实验。
+
+这些历史秒数不全等于 \hyperlink{m1}{M.1} 的统一耗时。尤其 C-M1 此处保留到历史根端点的 1,594.905 秒，而 \hyperlink{m1}{M.1} 报最后角色返回端点的 26.79 分钟。端点定义不同，本次未从原时间戳重建逐事件差异。可用相应核算中，B/C-M1 的 C 时间与输入均较高，但差异不能全归于协调。旧表保留原记录；按统一起止定义重建的A-M1时间见\hyperlink{appendix-p}{P}。
+
+\subsection[分析定义由观测故障推动细化]{\texorpdfstring{\protect\hypertarget{h4}{}分析定义由观测故障推动细化}{分析定义由观测故障推动细化}}
+早期调查细化轨迹框架三方面：求助使用分为代码修订、路线选择、验证决策、提交决策；故障位置分为请求入口、模型执行、产物导出、返回编码、父任务读取、代码应用；还区分谁获准选下一步、该角色可见信息及后续宿主干预。[N01-N13；R01-R03]
+
+这些细化发生于七案例及同题分析之后，未预注册。L5 采用分类改变、L1 接口修复与未变代码提交的区别，都体现证据改变分析定义。旧清单仍在历史归档，此处保留报告使用的资源边界与分析细化。
+
+\section[R 与 N 来源导航]{\texorpdfstring{\protect\hypertarget{appendix-i}{}R 与 N 来源导航}{R 与 N 来源导航}}
+表保留引用所需来源身份。R 经 \hyperlink{e2}{E.2} 的 R 清单解析，N 经 N 清单的文件标识与快照解析。不重复早期编辑检查计数和派发交流。R03 定位 M2 第八版、评审及第十一版变化；R14 是最终第十一版代码，R18 是其结束身份。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.54\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}}
+\toprule
+\textbf{编号} & \textbf{内容与用途}\\\midrule\endfirsthead
+\toprule
+\textbf{编号} & \textbf{内容与用途}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{R01} & {框架 v1：问题、单位、证据类型、自主权和缺失。}\\
+{R02} & {七案例试点分析：主张 C01-C14、成本与替代解释。}\\
+{R03} & {70 项证据引用：原路径、行、调用标识、固定副本及摘录。}\\
+{R04-R05} & {首清单机械核查和交付检查：覆盖计数、哈希及引用。}\\
+{R06-R07} & {原四试验报告及后来的资格、时间解释修正。}\\
+{R08} & {C 简化协调设计：角色、固定服务、信息及比较限制。}\\
+{R09} & {有限执行收尾：结果、故障和候选工程修复。}\\
+{R10} & {修订 B 求解核算：四个真实角色、时间边界、公开事件和词元。}\\
+{R11, R16} & {修订 B 最终评估核算与原裁决：双评审、身份、开发资格和成本。}\\
+{R12, R17} & {C 修订最终评估核算与原裁决：同候选后期双评审及成本。}\\
+{R13} & {执行者的修订 B 原始输出核查，本报告未逐流独立重复。}\\
+{R14, R18} & {M2 第十一版代码和稳定结束回执：公开接口与时间边界。}\\
+{R15} & {修订 B 原求解结果：提交与快照状态。}\\
+{R19} & {规范化结果编译器 v2 的时间定义及旧推断修正。}\\
+{R20-R21} & {结构化七案例编码及条件、角色、会话版本登记。}\\
+{R22} & {执行者结束状态投影，不是本报告的实时进程检查。}\\
+\end{longtable}\endgroup
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.54\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}}
+\toprule
+\textbf{编号} & \textbf{内容}\\\midrule\endfirsthead
+\toprule
+\textbf{编号} & \textbf{内容}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{N01} & {A 两作者轮的提示、检索、检查、请求和公开消息}\\
+{N02} & {A 评审文本、恢复回执、控制器状态及身份字段冲突}\\
+{N03} & {A 原封存最终 Lean 证明}\\
+{N04-N05} & {B r3 最终证明、作者动作及三个帮助角色实际输出}\\
+{N06-N07} & {初始 C 协调、写作者实现及两个真实检查角色}\\
+{N08} & {B r4 中文评审、对应修订、检查和最终证明}\\
+{N09} & {B r3、初始 C、B r4 各自共同裁决}\\
+{N10} & {C r3 结束：返回意见、明确确认、提交与目标}\\
+{N11} & {角色回执、用量、缺失字段和求解范围}\\
+{N12} & {主窗口中 C r3 尚运行的片段}\\
+{N13} & {新 A、C r3 端点、目标字节绑定及 M2 状态决定}\\
+\end{longtable}\endgroup
+\section[U 来源导航]{\texorpdfstring{\protect\hypertarget{appendix-j}{}U 来源导航}{U 来源导航}}
+U 码经 \hyperlink{e2}{E.2} 的主张级证据映射到 15:49 增量原标识，再到原路径、冻结字节、行与校验和。表内原标识只属于该增量，其中 N01 不是本报告 N01。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.14\linewidth}>{\raggedright\arraybackslash}p{0.67\linewidth}}
+\toprule
+\textbf{本版编号} & \textbf{增量标识} & \textbf{检查材料}\\\midrule\endfirsthead
+\toprule
+\textbf{本版编号} & \textbf{增量标识} & \textbf{检查材料}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{U01} & {K02} & {M1 任务绑定、三端点及不同条件}\\
+{U02} & {K03} & {B M1 委派、补丁交付、采用与验证}\\
+{U03} & {K04} & {B M1 外层退出码与实际构建恢复}\\
+{U04} & {K05} & {C M1 复用评审会话、文档变化与未变代码}\\
+{U05} & {K06} & {M3 逆分布构造与实际采用}\\
+{U06} & {K07} & {M3 置信度格式导致无法判断及裁决}\\
+{U07} & {K08} & {H1 缩小求助范围与已采用积分支持}\\
+{U08} & {K09} & {H1 反演代码、导出失败与宿主恢复}\\
+{U09} & {K10} & {实际唯一性调用与评审绑定恢复}\\
+{U10} & {K12} & {L7 路线关卡、宿主停止和剩余预算}\\
+{U11} & {K13} & {L7 部分范围、分歧与裁决}\\
+{U12} & {N01} & {最新清单、增量及 24 根运行覆盖}\\
+{U13} & {N02} & {H1 五项内部评审注册与最终联合构建}\\
+{U14} & {N03} & {标准 Cauchy 应用与唯一性调用}\\
+{U15} & {N04} & {未调用唯一性的整数值判据}\\
+{U16} & {N05} & {H1 完整注册角色核算及共享根计时}\\
+{U17} & {N06} & {最新 B L2 助手导出失败}\\
+{U18} & {N07} & {B L2 助手与给定定义对应}\\
+{U19} & {N08} & {C L2 桥接、复用与运行中状态}\\
+{U20} & {N09} & {17 项端点裁决与比较资格}\\
+\end{longtable}\endgroup
+\section[任务与验收版本索引]{\texorpdfstring{\protect\hypertarget{appendix-k}{}任务与验收版本索引}{任务与验收版本索引}}
+\subsection[任务输入]{\texorpdfstring{\protect\hypertarget{k1}{}任务输入}{任务输入}}
+H1、L2-L7、M2、M3 冻结指令依次为 I17957、I17975、I17996、I18005、I18015、I18042、I18063、I18089、I18099。共同规则 I05757，M2 原文 I18088；L1/M1 保留 N01-N06、R06、U01。\hyperlink{e2}{E.2} 与归档引用文件定位设置清单。
+
+\subsection[如何阅读版本索引]{\texorpdfstring{\protect\hypertarget{k2}{}如何阅读版本索引}{如何阅读版本索引}}
+索引区分执行版本、捕获窗口与验收标准。后期捕获可保留早期运行，后期标准可改变未变候选的解释。\hyperlink{k8}{K.8} 保留原始及中间标签，\hyperlink{k9}{K.9} 标识主表修正验收，\hyperlink{n1}{N.1} 说明主表来自哪些执行。
+
+\subsection[生产约定]{\texorpdfstring{\protect\hypertarget{k3}{}生产约定}{生产约定}}
+P01/P02 保留状态约定和评审标准；V01–V06 为沿用的本地文档快照。\hyperlink{a5}{A.5} 另列扩展系统概述所用公开文档。实验规则与生产映射仍按 \hyperlink{n1}{N.1}、\hyperlink{n2}{N.2}。
+
+\subsection[Q 捕获窗口]{\texorpdfstring{\protect\hypertarget{k4}{}Q 捕获窗口}{Q 捕获窗口}}
+Q 来自 9 月 11 日约 20:00 捕获的 142 个选定文件，包括 23 项裁决及相关候选、意见、约定。这是非原子历史捕获，不是新实验。第 7 版 source\_manifest.json 保留完整身份。
+
+\subsection[Z 首轮最终包]{\texorpdfstring{\protect\hypertarget{k5}{}Z 首轮最终包}{Z 首轮最终包}}
+Z 包于 9 月 12 日 03:07:37 结束，记录此前已执行的十六次额外求解和 31 次一致性评估。关键文件为 Z002 统一状态、Z004 尝试、Z008 版本、Z011 成本、Z015-Z016 语义／采用及 Z020-Z026 标准结果。\nolinkurl{FINAL_PACKAGE_INDEX.json} 提供路径和交付哈希。
+
+\subsection[全部 41 个求解根运行]{\texorpdfstring{\protect\hypertarget{k6}{}全部 41 个求解根运行}{全部 41 个求解根运行}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.34\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.14\linewidth}>{\raggedright\arraybackslash}p{0.35\linewidth}}
+\toprule
+\textbf{版本分层} & \textbf{实际根运行} & \textbf{有共同端点的根运行} & \textbf{原所选标签计数}\\\midrule\endfirsthead
+\toprule
+\textbf{版本分层} & \textbf{实际根运行} & \textbf{有共同端点的根运行} & \textbf{原所选标签计数}\\\midrule\endhead
+\midrule\multicolumn{4}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{A：独立向量收敛修复} & {1} & {1} & {失败：1}\\
+{A：早期开发} & {9} & {9} & {通过：8，失败：1}\\
+{A：后期运行时} & {2} & {2} & {通过：2}\\
+{B：能力修订} & {1} & {1} & {通过：1}\\
+{B：原始开发} & {5} & {0} & {无共同标签：5}\\
+{B：后期可传输实现} & {11} & {11} & {通过：8，失败：3}\\
+{C：初始协调者} & {1} & {1} & {无共同标签：1}\\
+{C：后期协调运行时} & {11} & {11} & {通过：9，失败：1，未决：1}\\
+\end{longtable}\endgroup
+这些是版本分母，不把无共同标签变为失败。早期暂定评估有独立成本类别。根存在、候选完整、端点执行、标签有效和比较资格是不同字段。\hyperlink{n1}{N.1} 解释主表选择，随附证据索引保留逐运行对应。[Z002, Z004, Z008；31]
+
+\subsection[X 定向评估]{\texorpdfstring{\protect\hypertarget{k7}{}X 定向评估}{X 定向评估}}
+X 包于 05:17:25 结束：X018 复用 L2；X053/X058 是两份 L7-C 意见，X010 有效性，X003/X012 范围，X020/X027 新增成本，X037 事后教材上下文。\nolinkurl{TARGETED_R2_PACKAGE_INDEX.json} 定位全部 59 文件；本次编辑未新评估。
+
+\subsection[原始结果与按范围区分的中间表]{\texorpdfstring{\protect\hypertarget{k8}{}原始结果与按范围区分的中间表}{原始结果与按范围区分的中间表}}
+下表重现第 7 版保留的修正前标签，描述历史评估状态，不是当前结果。正文和 \hyperlink{k9}{K.9} 使用修正验收。尤其格式未决格不证明候选现在仍未决。[Y001-Y003]
+
+\subsubsection[原始所选比较表]{\texorpdfstring{\protect\hypertarget{k8-1}{}原始所选比较表}{原始所选比较表}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{组别} & \textbf{A 所选候选} & \textbf{B r4} & \textbf{C r3}\\\midrule\endfirsthead
+\toprule
+\textbf{组别} & \textbf{A 所选候选} & \textbf{B r4} & \textbf{C r3}\\\midrule\endhead
+\midrule\multicolumn{4}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{L1} & {通过} & {通过} & {通过}\\
+{L2} & {通过} & {通过} & {失败}\\
+{L3} & {通过} & {失败} & {通过}\\
+{L4} & {通过} & {通过} & {通过}\\
+{L5} & {通过} & {通过} & {通过}\\
+{L6} & {通过} & {通过} & {通过}\\
+{L7} & {失败} & {失败} & {未决}\\
+{M1} & {通过} & {通过} & {通过}\\
+{M2} & {通过} & {通过} & {通过}\\
+{M3} & {通过} & {通过} & {通过}\\
+{H1} & {通过} & {失败} & {通过}\\
+{原合计} & {10 通过 / 1 失败} & {8 通过 / 3 失败} & {9 通过 / 1 失败 / 1 未决}\\
+\end{longtable}\endgroup
+L2 对通用／自行展开规则敏感，L3 对尾部范围敏感，H1 对 Cauchy 参数族敏感，L7 对任务条件与有效结果处理敏感。其余组保留开发版本记录覆盖。没有一行表示匹配条件的重复试验。
+
+\subsubsection[H1 在处理与验收修正前]{\texorpdfstring{\protect\hypertarget{k8-2}{}H1 在处理与验收修正前}{H1 在处理与验收修正前}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{候选} & \textbf{原端点} & \textbf{标准 Cauchy 评价} & \textbf{一般位置尺度评价}\\\midrule
+
+{A 原根及延续} & {通过} & {通过} & {失败}\\
+{B r4} & {失败} & {未决：引号无效} & {未决：引号无效}\\
+{C r3} & {通过} & {通过} & {通过}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+当前 \hyperlink{g13-1}{G.13.1} 接受三者教材核心，另记 A 标准、B 中心尺度、C 位置尺度交付。旧引号失败保留为处理历史，不是当前数学失败。
+
+\subsubsection[L3 在处理与验收修正前]{\texorpdfstring{\protect\hypertarget{k8-3}{}L3 在处理与验收修正前}{L3 在处理与验收修正前}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}}
+\toprule
+\textbf{候选} & \textbf{原标签} & \textbf{F：逐项有限积分} & \textbf{E：扩展积分原文定义域} & \textbf{T：任务允许的最终尾部}\\\midrule
+
+{A} & {通过} & {格式未决} & {格式未决} & {格式未决}\\
+{早期 B} & {失败} & {通过} & {失败} & {失败}\\
+{B r4} & {失败} & {格式未决} & {格式未决} & {格式未决}\\
+{C} & {通过} & {通过} & {失败} & {通过}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+F 假设逐项有限；T 是允许的最终可积接口；E 另从扩展积分原文假设推导尾部归约。当前 \hyperlink{g17}{G.17} 用 T，保留 A/B 缺封装，不给 C 新加 E 要求。历史 F/E/T 表说明为何旧标签与未决状态不能替代当前决定；它保留原中间标签，不是当前验收表。
+
+\subsection[Y：9 月 12 日比较的修正验收]{\texorpdfstring{\protect\hypertarget{k9}{}Y：9 月 12 日比较的修正验收}{Y：9 月 12 日比较的修正验收}}
+Y 包于 09:22:31 完成：Y001 为当前标准，Y002 为主表，Y003 为解释，Y005 为处理修复，Y006 为十八项回归检查，Y007 为完成记录。它复用既有意见，没有新增模型评价、求解运行或构建；本版保留该原比较截止点。\hyperlink{o2}{O.2}中的 A-L7 追加续作是另一次发生在 9 月 13 日的事件。
+
+\section[支持当前主张的历史数学]{\texorpdfstring{\protect\hypertarget{appendix-l}{}支持当前主张的历史数学}{支持当前主张的历史数学}}
+以下论证解释证明责任、工作流程演变、集券问题、目标变更及反演证明的逐步推进。历史统计和代码检查方法见 C、D。教材任务名标识这些数学历史，与\href{zh.pdf\#section-2-2}{正文第 2.2 节}介绍的实验组标签不同。
+
+\subsection[作者自主编辑如何与明确交付控制共同发展]{\texorpdfstring{\protect\hypertarget{l1}{}作者自主编辑如何与明确交付控制共同发展}{作者自主编辑如何与明确交付控制共同发展}}
+历史变化关乎谁选下一步。早期系统把规划、检索、生成分配给规定阶段；后期代码代理依据当前文件与反馈选择检索编辑，入口程序仍控制可提交对象与验收。这是有证据的职责变化描述，不是测量的性能比较。[E01, E14]
+
+\subsubsection[早期流水线已有内容]{\texorpdfstring{\protect\hypertarget{l1-1}{}早期流水线已有内容}{早期流水线已有内容}}
+检查的 2026 年 3 月 30 日基线提交 \nolinkurl{976756b} 已含调度、证明规划、库检索、候选重排序和局部检查。\nolinkurl{TextbookOrchestrator} 协调阶段，\nolinkurl{ProofArchitect} 制定证明计划。检索用句嵌入和 FAISS 索引，再由语言模型重排序。\nolinkurl{ReflectionManager} 将既有经验注入初始提示，重复错误可扩大检索。因此经验和反馈已在基线存在，并非按名称推断的后期发明。
+
+更早 API 流水线脚本还含重新生成整文件的恢复分支，不能误当作后期任务包作者回应语义反馈的常规方式。组件存在说明可能执行路线，不测量频率、耗时或证明质量。[E01, E14]
+
+\subsubsection[并存入口与向任务包编辑过渡]{\texorpdfstring{\protect\hypertarget{l1-2}{}并存入口与向任务包编辑过渡}{并存入口与向任务包编辑过渡}}
+4 月 8 日，旧调度报告分解 \nolinkurl{ex_1_2_3}，同时记录 \nolinkurl{def_5_1} 任务包与两次验证。旧分解和任务包工作并存。当时验证须按当时接口解释，不能自动视为今日完整语义评审。
+
+5 月 14 日提交 \nolinkurl{8a2e563} 移除旧直接生成和调度入口。普通工作遵循任务包准备、草稿编辑、构建、语义评审，错误与评审理由指导局部修订，代理自主选择动作顺序。入口仍控制合格候选与评审材料。五月独立评审产物不证明每对作者／评审者已用隔离实例；后期独立要求不向前投射。汇总提交包含多项变化，不能隔离编辑代理效果。[E01, E14]
+
+\subsubsection[原文对应为何进入评审对象]{\texorpdfstring{\protect\hypertarget{l1-3}{}原文对应为何进入评审对象}{原文对应为何进入评审对象}}
+4 月 10 日设计请求明确区分构建与判断 Lean 是否忠实表达原文 TeX，指出交互检查、临时／最终构建及关键词启发式不足以回答语义问题，要求结合评审文档与本地语言模型建立评审层。
+
+请求包含原文命题和计划、候选代码、元数据、导入、依赖与评审规则；结构化输出、缓存、失败处理和注册条件也进入设计。后期 \nolinkurl{def_5_1} 产物含候选与输入哈希、规则版本、原文到命题映射及裁决。这确认明确评审输入曾被使用，不确认相对独立数学真值的准确性。\hyperlink{appendix-a}{附录 A}区分请求、实现、执行，不给三者同一日期。[E01, E14]
+
+\subsection[分解证明，但保留整任务责任]{\texorpdfstring{\protect\hypertarget{l2}{}分解证明，但保留整任务责任}{分解证明，但保留整任务责任}}
+长证明带来两个实际问题：接下来应证明哪些较小结果，谁检查它们合起来是否达到教材命题？ToyApollo 的义务、支持文件和路线检查分别处理不同部分。理解它们组织的工作，比只看名称更直接。
+
+\subsubsection[一个辅助名称可能掩盖两种工作]{\texorpdfstring{\protect\hypertarget{l2-1}{}一个辅助名称可能掩盖两种工作}{一个辅助名称可能掩盖两种工作}}
+早期\textbf{桥接}同时涵盖已证表示转换与尚未证明的数学。若教材和库分布定义不同，证明等价便连接表示；仅为缺失定理命名、把它作为前提或声明为公理，都仍留下待完成数学。
+
+\nolinkurl{prob_1_4} 历史展示区别：早期依赖 \nolinkurl{gamma_beta_bridge} 公开公理，后期移除桥接，却把归一化 Gamma 密度定义为目标 Dirichlet 公式，简化即得等式。历史评审仍要求从概率模型推导。随后版本补充乘积分布、归一化映射、单纯形支撑、投影密度和变量替换。这些论证构成进展。[E03]
+
+5 月 17 日提交 \nolinkurl{7cf8717} 区分表示转换（\nolinkurl{translation}）与待证工作（\nolinkurl{proof_debt_support}）。它们是记录类别，不是声明认证，仍须检查声明假设与证明内容。
+
+\subsubsection[证明义务子任务贡献什么]{\texorpdfstring{\protect\hypertarget{l2-2}{}证明义务子任务贡献什么}{证明义务子任务贡献什么}}
+\textbf{证明义务}在项目标为 OBL，是从父任务分出的较小数学职责，可有候选、导入、评审，有些再细分。\nolinkurl{thm_7_8} 中，这类工作由紧集连续性建立可积性，借函数延拓及既有定理获得 Riemann-Stieltjes 积分，并为父任务提供夹逼和共同极限论证。即使父任务未完成，它们也是实质结果。[E04]
+
+正文\href{zh.pdf\#section-1}{第 1 节}与 \hyperlink{l5}{L.5} 的反演案例具体展示完成规则：\nolinkurl{h_spine} 三成分只证两项，第三项仍留给调用者；也展示教材论证所需少于原计划时，可以缩小内部义务。
+
+早期代码允许义务更新与待证工作清除传播到父台账，不一定新建父语义评审。6 月 15 日台账事件将 \nolinkurl{thm_7_9}、\nolinkurl{ex_14_4_2}、\nolinkurl{prob_14_8} 义务吸收进父／支持文件，要求重构建、独立评审、应用。有用数学保留，旧子任务验收不再自动建立父状态。\hyperlink{appendix-b}{附录 B}保留精确时间戳及存留截断结果的有限范围。[E02, E04, E11]
+
+\subsubsection[组装父任务前检查路线]{\texorpdfstring{\protect\hypertarget{l2-3}{}组装父任务前检查路线}{组装父任务前检查路线}}
+\textbf{数学路线关卡}控制下一工作阶段。出现公开前提隐藏证明工作、原文不匹配或阻塞状态等风险时，要求自然语言证明框架，并由独立角色检查命题、路线和拟定 Lean 声明。\nolinkurl{go} 允许下一阶段，\nolinkurl{stop} 在该计划下阻止普通父任务编写，但仍可能允许指定支持结果。
+
+这是动作规则，不是最终定理裁决。调度和构建入口执行它，不能仅凭提示文本描述机制。触发规则含旧试点标识、风险类别和状态文本，故关卡未从每个任务开始统一应用。最终交付仍需合适构建、语义评审和注册。[E02, E10, E16]
+
+\nolinkurl{prob_14_8} 从零附近矩母函数收敛推出紧性与依分布收敛；紧性控制概率质量逃向远处。所选路线将矩母函数延拓到复带，提取并识别解析极限，再在虚轴获得特征函数收敛。
+
+早期候选使用私有公理；后期证明紧性、解析界、基于紧致性的提取、子列结果及对角引理。反复 \nolinkurl{stop} 认可这些成果，却指出组装缺口：各紧片上构造的极限必须是同一全局函数的限制。后续构造该函数、证明一致并接回对角论证。语义评审 13 评价从原假设得到的完整推导；评审 14 评价导入支持的主入口，完整单文件证明早于拆分。[E07]
+
+因此，记录显示停止期间仍积累有用支持，却不显示没有关卡时同一代理会做到什么。
+
+\subsubsection[定义修复也改变调用者]{\texorpdfstring{\protect\hypertarget{l2-4}{}定义修复也改变调用者}{定义修复也改变调用者}}
+7 月 19 日，\nolinkurl{def_8_5} 保留全变差公式，公开签名增加原文概率测度条件。调用者须提供输入为概率测度的证据。修复计划识别定义维护者、直接使用者、重复名称与更广依赖闭包，把工作从修改定义扩展为适配使用代码。[E08]
+
+例如，\nolinkurl{def_10_5} 同时断言测度为概率测度且距离收敛，Lean 需要在形成距离处已有概率证据。修复通过依赖见证和局部实例（\nolinkurl{letI}）传递同一证据。把“两条件都成立”换为“若第一成立则第二成立”会改变定义，使非概率输入也可空泛满足蕴含。
+
+五次实质评审仅涉及两种主文件内容；调用者变化、缺字段注册失败和扩大检查解释其他事件。仅接受定义未完成调用者迁移。保留分析使用报告及保存调用者材料，端点哈希不独立验证每个使用者。
+
+\subsubsection[支持文件与任务身份]{\texorpdfstring{\protect\hypertarget{l2-5}{}支持文件与任务身份}{支持文件与任务身份}}
+\textbf{支持文件}包含供一个或多个任务使用的辅助代码。六月维护指令倾向先由单父任务分层管理，出现第二个实际使用者后才考虑共享。Gamma/Dirichlet 有 \nolinkurl{prob_1_4}、\nolinkurl{ex_1_2_2} 两个使用者，6 月 21 日拆成乘积密度、单纯形坐标图及投影密度层，保留兼容导出；各任务仍保留自身命题和特定论证。
+
+相反，已完成证明拆模块不必产生可复用数学或解决新任务。后期 \nolinkurl{thm_9_5_kernel} 包含原在主文件的反演论证；\nolinkurl{family_member} 模块仍是单教材任务实现部分，父任务是评审根。其他历史 \textbf{family} 指相关任务或教材编号组，\hyperlink{appendix-e}{附录 E}予以区分。
+
+实际阅读应分别问：证了什么数学，谁维护与使用，哪个教材任务拥有最终命题？单凭文件数都答不了。\hyperlink{appendix-b}{附录 B}保留更多归属与提取案例，区分新完成证明和新组织证明。
+
+\subsection[为什么中心极限定理未使集券例题完成]{\texorpdfstring{\protect\hypertarget{l3}{}为什么中心极限定理未使集券例题完成}{为什么中心极限定理未使集券例题完成}}
+通用定理与使用它的例题可能缺不同步骤。本例中教材定理研究独立随机变量和，例题用几何等待时间模拟收集券种。保存历史区分核心极限定理、与预期随机变量的连接、例题最终归一化。[E18, E20]
+
+\subsubsection[从例题数学目标出发]{\texorpdfstring{\protect\hypertarget{l3-1}{}从例题数学目标出发}{从例题数学目标出发}}
+共有 $N$ 种等概率券，目标收集 $m_N=\lfloor(N+1)/2\rfloor$ 种不同券。已集 $i$ 种后，新抽得新种概率为 $p_{N,i}=(N-i)/N$。保存形式模型直接取具有这些概率、正整数值的独立几何变量 $G_{N,i}$，各变量可理解为一个等待阶段时长。
+
+模型总等待时间、精确均值及精确方差为
+
+\[
+T_N=\sum_{i=0}^{m_N-1}G_{N,i},\qquad
+\mathbb E T_N=\sum_{i=0}^{m_N-1}\frac{1}{p_{N,i}},\qquad
+\operatorname{Var}(T_N)=\sum_{i=0}^{m_N-1}\frac{1-p_{N,i}}{p_{N,i}^2}.
+\]
+首和相加等待阶段；另两式用几何变量均值方差，独立性使方差可加。随着 $N$ 增大，均值和方差主项分别为 $N\log2$、$N(1-\log2)$。
+
+此起点有重要范围条件：保存证明使用上述独立阶段模型，证据未另立其与原始独立均匀抽券序列及停止时间的等价。下文讨论保存模型内已证链条，不暗中补上额外等价。
+
+\subsubsection[论证的三个部分]{\texorpdfstring{\protect\hypertarget{l3-2}{}论证的三个部分}{论证的三个部分}}
+项目将通用定理称 \nolinkurl{thm_14_8}，例题称 \nolinkurl{ex_14_4_3}。固定 $N$ 时，一\textbf{行}是被相加的有限随机变量集合；不同行可有不同长度和分布。\textbf{典范乘积模型}将变量置于乘积概率空间，构造自带坐标分布与独立性。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{证明部分} & \textbf{数学职责} & \textbf{为何仍需下一部分}\\\midrule
+
+{核心中心极限定理} & {在相关条件下证明典范乘积模型中的极限} & {具体独立行可能定义于另一概率空间}\\
+{分布连接} & {证明具体行与乘积模型具有相同联合分布} & {所得定理使用行的精确均值和方差}\\
+{教材归一化} & {以教材渐近表达式替换精确均值和方差} & {例题要求最终归一化量}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+分布连接在随机变量的不同构造间转移结果；归一化改变和的数值中心与尺度。二者解决不同问题，虽都为例题使用通用定理所需。
+
+\subsubsection[六月配置的假设不相容]{\texorpdfstring{\protect\hypertarget{l3-3}{}六月配置的假设不相容}{六月配置的假设不相容}}
+四个六月通过快照含相同配置 $C$。此处配置是给定理的数据与假设集合，不是候选版本标签。导出结论同时假设 $C$ 与外部中心极限定理证明 $H$。历史评审允许超出教材证明范围的上游证明留作输入，同时将例题归为 \nolinkurl{textbook_example_completed}。这是评审者接受记录，不证明可行 $C$ 存在；实际上对 $C$ 的部分必要条件不能同时成立。
+
+配置取 $N=n+2$，$n$ 为行索引。首行 $n=0$，故 $N=2$，只需一种券。唯一几何阶段成功概率 $p=1$，总是一次抽取，方差为
+
+\[
+\frac{1-p}{p^2}=0.
+\]
+代码总方差恒等式迫使 \nolinkurl{sn(0)} 的平方为零。\nolinkurl{sn(0)} 是配置首行标准化尺度，父配置又要求 \nolinkurl{sn(0)>0}，无值可同时满足。因此没有配置 $C$ 能给出该条件定理所称实例，尽管文件仍有有用矩估计。
+
+保存 Lean 试探检查精确数值定义，证明首行方差零并推出矛盾；退出码零，仅用保存检查指定基础公理 \nolinkurl{propext}、\nolinkurl{Classical.choice}、\nolinkurl{Quot.sound}。这是记录环境中对必要条件的形式检查，不是重建六月全项目。Lean 可验证条件命题而不断言前提可实现。允许外部证明 $H$ 不消除 $C$ 内矛盾，因为推导不用 $H$。
+
+\subsubsection[八月失败候选却包含核心证明]{\texorpdfstring{\protect\hypertarget{l3-4}{}八月失败候选却包含核心证明}{八月失败候选却包含核心证明}}
+八月主文件在典范乘积模型中证明 Lindeberg、Lyapunov 中心极限分支，即实现的两条充分条件路线。公开接口不再向调用者索要外部中心极限定理证明或任意 Gaussian 目标。
+
+失败评审明确接受核心论证，剩余要求是表中第二部分：连接具体独立行与乘积模型，并更新调用者。8 月 5 日下一版利用联合分布等于边缘分布乘积，以及可测映射下分布行为，补上连接，父定理随后通过。
+
+所以，后期失败候选包含早期允许外部上游证明的例题验收所没有的数学。后期要求内部核心定理及其与具体独立行连接。阅读每个候选所证与每份评审所求即可理解序列；标签本身不对数学质量排名。
+
+\subsubsection[最后一步改变中心与尺度]{\texorpdfstring{\protect\hypertarget{l3-5}{}最后一步改变中心与尺度}{最后一步改变中心与尺度}}
+父定理通过时，例题已构造具体几何行，以逐行精确均值方差应用定理，并取 $N=n+3$ 避免首行退化。剩第三部分是教材归一化。后续例题评审因该缺口拒绝字节相同主体。
+
+通用定理针对精确标准化和
+
+\[
+Z_N=\frac{T_N-\mathbb E T_N}{\sqrt{\operatorname{Var}(T_N)}}.
+\]
+此变量减去精确均值，再除精确标准差。保存定理给出 $Z_N\Rightarrow\mathcal N(0,1)$，即依分布趋于标准正态，不是每个有限 $N$ 都恰为正态。教材要求减 $N\log2$、除 $\sqrt{N(1-\log2)}$ 后有相同极限。连接二者可写
+
+\[
+\frac{T_N-N\log 2}{\sqrt{N(1-\log 2)}}=a_N Z_N+b_N,
+\quad
+a_N=\frac{\sqrt{\operatorname{Var}(T_N)}}{\sqrt{N(1-\log 2)}},
+\quad
+b_N=\frac{\mathbb E T_N-N\log 2}{\sqrt{N(1-\log 2)}}.
+\]
+其中 $a_N$ 衡量尺度改变，$b_N$ 是按教材尺度计的剩余均值误差。只需该改变渐近可忽略，即 $a_N\to1$、$b_N\to0$，并完成相应依分布收敛转移。系数随 $N$ 改变，因此转移本身也须证明。
+
+后期候选把均值误差界为 $O(1)$，即随 $N$ 增长保持有界，并证明 $\operatorname{Var}(T_N)/N\to1-\log2$，给出变化仿射映射的分布论证，例题随后通过。这解释父通过与例题失败为何并存：义务不同。后期成功补上保存模型内剩余步骤，不改变独立的六月矛盾。
+
+\subsection[比较标签前检查目标与受评审对象]{\texorpdfstring{\protect\hypertarget{l4}{}比较标签前检查目标与受评审对象}{比较标签前检查目标与受评审对象}}
+后期通过可能来自数学修复、获接受的问题变化，或提供给评审者的材料变化。下面前两例改变数学目标，第三例主文件不变而依赖上下文改变，说明如何区分。[E09, E18, E20]
+
+\subsubsection[独立逼近不指定极限耦合]{\texorpdfstring{\protect\hypertarget{l4-1}{}独立逼近不指定极限耦合}{独立逼近不指定极限耦合}}
+\nolinkurl{prob_14_7} 中，各对 $X_n,Y_n$ 独立，两序列分别依分布趋于 $X$、$Y$。这些边缘收敛分别指定极限分布，不指定展示的两个极限如何相关。
+
+令各对为独立标准正态，和为方差 2 的正态。再取展示边缘极限 $X=Y=Z$，$Z$ 标准正态；两边缘收敛仍成立，但 $X+Y=2Z$ 方差 4。因此不能对任意极限联合分布都断言和收敛。
+
+早期形式化假设极限和分布为边缘卷积；后期原文决定明确要求极限独立，最终公开 \nolinkurl{hLimitIndep}。这是通过接受目标约定变化修复缺条件，不是新增技术参数证明完全相同原命题。固定数学目标跟踪在此划界。
+
+\subsubsection[比例收敛可能太慢，不足以满足所称中心化]{\texorpdfstring{\protect\hypertarget{l4-2}{}比例收敛可能太慢，不足以满足所称中心化}{比例收敛可能太慢，不足以满足所称中心化}}
+集券 \nolinkurl{prob_14_11} 有相关但不同问题。$m/N\to1/2$ 指定极限比例，中心极限陈述还须在 $\sqrt N$ 量级控制中心化误差；前一条件本身不给速率。
+
+为避取整，取偶数 $k\geq4$，令 $N=k^4$，收集 $m=N/2+k^3$ 种券。$m/N=1/2+1/k$ 趋于 $1/2$。模型几何等待和的精确均值为
+
+\[
+M(N,m)=\sum_{i=0}^{m-1}\frac{1}{1-i/N}.
+\]
+每项是等待下一新种的期望。积分界给出 $-1\leq M(N,N/2)-N\log2\leq0$。额外 $k^3$ 阶段各期望至少 2，因此
+
+\[
+\frac{M(N,m)-N\log2}{\sqrt{N(1-\log2)}}
+\geq\frac{2k^3-1}{k^2\sqrt{1-\log2}}
+\longrightarrow +\infty.
+\]
+尽管比例收敛，按拟定标准差尺度计的中心化误差可无界增长。这正是\hyperlink{l3}{附录 L.3}对更具体集券例题证明趋零的误差类型。
+
+失败候选已构造几何时间、独立乘积行和局部 Lyapunov 论证。通过候选用行的精确均值标准差、证明正性，并经独立数学评审决定改变最终目标。该历史接受还允许上游外部证明 \nolinkurl{H : thm_14_8_ProofBeyondBook}，不能称完全自足最终证明。修订建立接受的条件性精确标准化结果，不是原固定中心化转换。失败到通过关系保留在宽标签比较，却停止固定目标跟踪。
+
+\subsubsection[主文件未变，评审证据仍可不同]{\texorpdfstring{\protect\hypertarget{l4-3}{}主文件未变，评审证据仍可不同}{主文件未变，评审证据仍可不同}}
+\nolinkurl{thm_11_8} 的 7 月 24 日、8 月 5 日主文件内容相同，但绑定上游 \nolinkurl{thm_11_5} 哈希不同；后期输入还含前评审线索，构建输出也不同。
+
+有限检索仅找回后期上游源码。可确认评审输入不同，不能完整重建两上游数学差异。这不是两评审者评估不变证据。案例说明主文件哈希对评审对象的描述过窄，不量化哈希绑定带来的准确率增益。
+
+\subsubsection[区分进展、判断与注册]{\texorpdfstring{\protect\hypertarget{l4-4}{}区分进展、判断与注册}{区分进展、判断与注册}}
+其他案例使\href{zh.pdf\#section-1}{第 1 节}区别具体可见。\nolinkurl{ex_3_1_4} 先加数学论证，后修占位义务绑定；\nolinkurl{thm_9_7} 注册一候选，早期评审却判断覆盖版本，统计排除此关系；\nolinkurl{prob_1_9} 数学源码未变却遇换行哈希失败；6 月 22 日 \nolinkurl{thm_14_8} 序列修正缺报告字段并重评未变代码，最终回执记例外而不采用完成结果。
+
+这些不是可互换的改进。\hyperlink{appendix-b}{附录 B}保留完整版本、角色和事件顺序，以及小型最终调用者修改之前已有大量上游工作的 \nolinkurl{prob_14_10}；也保留因缺原文批准而目标可比未知的 \nolinkurl{def_3_6}。缺失决定保持未知，不归为确认目标变化或已完成修复。
+
+\subsection[反演：连续证明增量与更窄的充分辅助目标]{\texorpdfstring{\protect\hypertarget{l5}{}反演：连续证明增量与更窄的充分辅助目标}{反演：连续证明增量与更窄的充分辅助目标}}
+\nolinkurl{thm_9_5} 在全部分析条件内部证成前已有条件性主论证，含换元、逐点分情况、控制收敛和缩放。公开 \nolinkurl{h_spine} 汇集可积性、交换积分依据及 Dirichlet 积分极限。历史语义评审 29-32 绑定候选 38-41，二者分别编号，不是最终定理三十二次独立试验。[E05]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{连续阶段} & \textbf{证明增量} & \textbf{尚需公开支持}\\\midrule
+
+{初始条件论证} & {以分析条件为前提的主反演证明} & {可积性、积分交换、关键极限}\\
+{乘积可积修订} & {由界和有限测度建立所需乘积可积} & {积分交换、关键极限}\\
+{积分交换修订} & {非负截断参数下证明积分交换} & {关键极限}\\
+{完整组装} & {误差估计证明极限，前成果提供其他条件} & {移除 \nolinkurl{h_spine}}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+非负参数限制缩小了过强内部计划。截断参数趋正无穷，故限制后的辅助命题足以完成不变教材目标。这不同于增加公开假设排除预期输入：前者避免不必要引理，后者可能遗漏必需原文范围。
+
+早期未通过判断已认可数学进展。只数最终验收会丢失增量，每新增支持文件算新任务又会夸大。完整论证后来移入 \nolinkurl{thm_9_5_kernel} 另记于 \hyperlink{b5}{B.5}；组织变化不改变数学证明首次闭合日期。[E03, E05, E18]
+
+\section[描述统计、过程事件与统一引用]{\texorpdfstring{\protect\hypertarget{appendix-m}{}描述统计、过程事件与统一引用}{描述统计、过程事件与统一引用}}
+\subsection[各次运行与测量规则]{\texorpdfstring{\protect\hypertarget{m1}{}各次运行与测量规则}{各次运行与测量规则}}
+以下33次选定运行提供原轮次时间、角色派发和工具返回。时间均从首次派发计至最后角色返回，含阶段内等待和恢复，不含提交后的共同评估。A-L1、A-M1为按相同起止定义重建的估计，以*标记；时间比较现覆盖全部十一组。A-L7在表中保留原运行58.86分钟，后续14.50分钟加总后为73.37分钟，已计入正文的累计指标。完整词元比较仍覆盖八组，见\hyperlink{n5}{N.5}。重建证据及两种时间汇总见\hyperlink{appendix-p}{P}。
+
+\subsubsection[A]{\texorpdfstring{\protect\hypertarget{m1-1}{}A}{A}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{组别} & \textbf{当前结果} & \textbf{分钟} & \textbf{派发} & \textbf{工具返回} & \textbf{输入百万词元}\\\midrule
+
+{H1} & {通过} & {182.16} & {16} & {484} & {95.568}\\
+{L1} & {通过} & {85.82*} & {8} & {136} & {—}\\
+{L2} & {通过} & {14.25} & {4} & {49} & {4.542}\\
+{L3} & {未通过} & {69.78} & {12} & {150} & {15.728}\\
+{L4} & {通过} & {46.11} & {13} & {105} & {12.001}\\
+{L5} & {通过} & {76.96} & {10} & {182} & {—}\\
+{L6} & {通过} & {34.34} & {8} & {73} & {6.697}\\
+{L7} & {续作前不完整；现通过} & {58.86} & {12} & {137} & {14.420}\\
+{M1} & {通过} & {136.89*} & {32} & {326} & {—}\\
+{M2} & {通过} & {59.54} & {7} & {138} & {13.880}\\
+{M3} & {通过} & {21.13} & {3} & {133} & {7.509}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+\subsubsection[B]{\texorpdfstring{\protect\hypertarget{m1-2}{}B}{B}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{组别} & \textbf{当前结果} & \textbf{分钟} & \textbf{派发} & \textbf{工具返回} & \textbf{输入百万词元}\\\midrule
+
+{H1} & {通过} & {126.17} & {7} & {513} & {63.346}\\
+{L1} & {通过} & {11.90} & {2} & {33} & {2.356}\\
+{L2} & {通过} & {30.09} & {3} & {93} & {6.397}\\
+{L3} & {未通过} & {33.15} & {3} & {120} & {14.777}\\
+{L4} & {通过} & {15.89} & {2} & {81} & {5.025}\\
+{L5} & {通过} & {67.61} & {5} & {152} & {12.498}\\
+{L6} & {通过} & {21.98} & {3} & {55} & {5.777}\\
+{L7} & {通过} & {28.99} & {2} & {107} & {7.825}\\
+{M1} & {通过} & {17.64} & {3} & {63} & {4.426}\\
+{M2} & {通过} & {36.38} & {2} & {127} & {15.237}\\
+{M3} & {通过} & {41.54} & {3} & {111} & {9.240}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+\subsubsection[C]{\texorpdfstring{\protect\hypertarget{m1-3}{}C}{C}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{组别} & \textbf{当前结果} & \textbf{分钟} & \textbf{派发} & \textbf{工具返回} & \textbf{输入百万词元}\\\midrule
+
+{H1} & {通过} & {103.36} & {12} & {464} & {55.201}\\
+{L1} & {通过} & {12.16} & {3} & {44} & {2.571}\\
+{L2} & {通过} & {18.00} & {4} & {76} & {3.893}\\
+{L3} & {通过} & {39.90} & {7} & {108} & {7.893}\\
+{L4} & {通过} & {16.54} & {5} & {68} & {2.916}\\
+{L5} & {通过} & {28.70} & {5} & {104} & {10.651}\\
+{L6} & {通过} & {23.61} & {5} & {74} & {5.608}\\
+{L7} & {通过} & {32.27} & {7} & {106} & {9.129}\\
+{M1} & {通过} & {26.79} & {5} & {117} & {8.445}\\
+{M2} & {通过} & {36.53} & {6} & {134} & {12.499}\\
+{M3} & {通过} & {15.23} & {3} & {66} & {3.860}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+原派生指标文件及随附运行索引保留各指标的组成员与底层数值。\href{zh.pdf\#ref-31}{\mbox{[31]}}
+
+\subsection[实际过程日志覆盖]{\texorpdfstring{\protect\hypertarget{m2}{}实际过程日志覆盖}{实际过程日志覆盖}}
+已读取 41 个既有求解根运行全部 244 份角色日志，原始日志缺失 0，格式错误非空行 0。工具返回按原生派发／条目身份去重，33 个主根另选。索引保留主表 24 个已启动但无完成返回条目，排除于完成返回计数，不表示工具当前还在运行。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}}
+\toprule
+\textbf{信号} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{合计}\\\midrule\endfirsthead
+\toprule
+\textbf{信号} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{合计}\\\midrule\endhead
+\midrule\multicolumn{5}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{含 Lean 错误的编译或接口试探返回} & {180} & {291} & {322} & {793}\\
+{其中名称／类型接口诊断} & {103} & {171} & {171} & {445}\\
+{可执行命令不可用} & {76} & {58} & {22} & {156}\\
+{文件访问或权限错误} & {27} & {21} & {30} & {78}\\
+{明确工具超时} & {2} & {1} & {0} & {3}\\
+{非零求助请求返回} & {10} & {0} & {0} & {10}\\
+{其中工作区复制／导出失败} & {6} & {0} & {0} & {6}\\
+{评审应用时明确拒绝绑定} & {1} & {0} & {0} & {1}\\
+\end{longtable}\endgroup
+规则检查实际工具结果：明确超时元数据；缺命令和文件访问问题的标准错误；复制／导出失败的明确运行时异常；实际评审应用及不匹配文本构成的绑定拒绝。编译诊断要求命令位置的 Lean/Lake 调用或明确构建检查，排除回显或写入的命令文本。接口诊断为名称、类型子集。有意试探和重复尝试仍计入，返回数不等于独立缺陷数。
+
+宿主控制、外部端点评估及事后语义判断不在工具返回表内。B-L2 宿主导出失败／恢复、L5 未确立采用仍在 G。零匹配返回不能建立其他层面无故障，类别可重叠。\nolinkurl{CLASSIFIED_PROCESS_EVENTS.jsonl} 保留事件、命令、来源位置与匹配摘录；完整提取索引仍为分析目录的 \nolinkurl{PROCESS_TOOL_EVENTS.jsonl}。
+
+\subsection[单次运行内共现]{\texorpdfstring{\protect\hypertarget{m3}{}单次运行内共现}{单次运行内共现}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.113\linewidth}>{\raggedright\arraybackslash}p{0.113\linewidth}>{\raggedright\arraybackslash}p{0.113\linewidth}>{\raggedright\arraybackslash}p{0.113\linewidth}>{\raggedright\arraybackslash}p{0.113\linewidth}>{\raggedright\arraybackslash}p{0.113\linewidth}}
+\toprule
+\textbf{类别} & \textbf{Lean} & \textbf{命令} & \textbf{文件} & \textbf{超时} & \textbf{复制} & \textbf{绑定}\\\midrule\endfirsthead
+\toprule
+\textbf{类别} & \textbf{Lean} & \textbf{命令} & \textbf{文件} & \textbf{超时} & \textbf{复制} & \textbf{绑定}\\\midrule\endhead
+\midrule\multicolumn{7}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{Lean} & {33} & {33} & {27} & {3} & {4} & {1}\\
+{命令} & {33} & {33} & {27} & {3} & {4} & {1}\\
+{文件} & {27} & {27} & {27} & {2} & {3} & {1}\\
+{超时} & {3} & {3} & {2} & {3} & {1} & {1}\\
+{复制} & {4} & {4} & {3} & {1} & {4} & {1}\\
+{绑定} & {1} & {1} & {1} & {1} & {1} & {1}\\
+\end{longtable}\endgroup
+单元格统计同时包含两类工具信号的主表运行数，对角线为包含各类别的运行数。这是运行级共现，不表示同时发生、共同原因或因果关联。
+
+\subsection[统一引用映射]{\texorpdfstring{\protect\hypertarget{m4}{}统一引用映射}{统一引用映射}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\fontsize{9.4}{11.1}\selectfont\renewcommand{\arraystretch}{1.0}\begin{longtable}{>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.54\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}}
+\toprule
+\textbf{引用} & \textbf{材料} & \textbf{原始标识或文件}\\\midrule\endfirsthead
+\toprule
+\textbf{引用} & \textbf{材料} & \textbf{原始标识或文件}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{\hypertarget{ref-1}{}[1]} & {反演中的连续数学进展} & {E05}\\
+{\hypertarget{ref-2}{}[2]} & {编辑、语义评审与注册} & {E01, E10, E15}\\
+{\hypertarget{ref-3}{}[3]} & {早期调度与代码编辑} & {E01, E14}\\
+{\hypertarget{ref-4}{}[4]} & {Gamma 到 Dirichlet 的证明职责} & {E03}\\
+{\hypertarget{ref-5}{}[5]} & {证明义务与父任务重评} & {E02, E04, E11}\\
+{\hypertarget{ref-6}{}[6]} & {数学路线关卡与矩母函数证明组装} & {E02, E07, E10, E16}\\
+{\hypertarget{ref-7}{}[7]} & {全变差及其使用者} & {E08}\\
+{\hypertarget{ref-8}{}[8]} & {中心极限定理与集券链} & {E18, E20}\\
+{\hypertarget{ref-9}{}[9]} & {目标变化与评审对象} & {E09, E18, E20}\\
+{\hypertarget{ref-10}{}[10]} & {历史比较、失败起点与选择效应} & {E18, E19}\\
+{\hypertarget{ref-11}{}[11]} & {保存代码检查与规则比较} & {E18, E19}\\
+{\hypertarget{ref-12}{}[12]} & {配置与共同任务指令} & {R01, R02, Y001}\\
+{\hypertarget{ref-13}{}[13]} & {修正验收与当前比较表} & {Y001, Y002, Y003}\\
+{\hypertarget{ref-14}{}[14]} & {逐次运行耗时、派发与词元} & {\nolinkurl{ATTEMPT_CENSUS_DATA.json}; \nolinkurl{DERIVED_RUN_METRICS.json}}\\
+{\hypertarget{ref-15}{}[15]} & {评估者修复与回归检查} & {Y005, Y006}\\
+{\hypertarget{ref-16}{}[16]} & {反馈语义覆盖与证据索引} & {Z016; \nolinkurl{EPISODE_SEMANTIC_COVERAGE_FINAL.json}}\\
+{\hypertarget{ref-17}{}[17]} & {H1 实际复用、支持与恢复} & {U07-U15}\\
+{\hypertarget{ref-18}{}[18]} & {B/C-M1 采用、构建恢复与文档} & {U01-U04}\\
+{\hypertarget{ref-19}{}[19]} & {协助产出、交付、恢复与采用} & {R02, R03; T03-T06; Z015, Z016}\\
+{\hypertarget{ref-20}{}[20]} & {C-L1 可读评审与提交} & {N10, N11}\\
+{\hypertarget{ref-21}{}[21]} & {对应 L2 调用与一致解释} & {Q017-Q027, Q098-Q107; Z020, Z021; X018}\\
+{\hypertarget{ref-22}{}[22]} & {L7 条件修复、证明与披露} & {X003, X012, X053, X058; Y001, Y002}\\
+{\hypertarget{ref-23}{}[23]} & {L3 尾部与 H1 教材范围} & {X003, X012; Y001-Y003}\\
+{\hypertarget{ref-24}{}[24]} & {原始工具返回、过程分类与共现} & {\nolinkurl{PROCESS_OBSERVATIONS.json}; \nolinkurl{CLASSIFIED_PROCESS_EVENTS.jsonl}}\\
+{\hypertarget{ref-25}{}[25]} & {M2 原始矩到中心矩的修复} & {R02, R03, R14, R18; \hyperlink{g14-1}{G.14.1}}\\
+{\hypertarget{ref-26}{}[26]} & {先前保存的本地架构、流程与版本} & {V01-V06, P01-P02; \hyperlink{a5}{A.5}}\\
+{\hypertarget{ref-27}{}[27]} & {L1 数学路线、控制、信息与后续修订} & {N01-N13, R06-R08; \hyperlink{g5}{G.5}-\hyperlink{g10}{G.10}}\\
+{\hypertarget{ref-28}{}[28]} & {M3 整任务采用与置信度格式裁决} & {U05-U06; \hyperlink{g12}{G.12}}\\
+{\hypertarget{ref-29}{}[29]} & {L3 中间前提移除与版本绑定修复} & {R02, R03; T02; \hyperlink{g14-2}{G.14.2}}\\
+{\hypertarget{ref-30}{}[30]} & {共同评估方法、设置与修正阶段} & {随包 A01–A40, AP01–AP11 及选定意见; \hyperlink{n6}{N.6}}\\
+{\hypertarget{ref-31}{}[31]} & {运行选择、输入对应与缺失用量} & {随包 B01–B12 与 RUN\_INDEX; \hyperlink{n1}{N.1}/\hyperlink{n5}{N.5}}\\
+{\hypertarget{ref-32}{}[32]} & {历史目标决定与抽样元数据} & {随包 C01–C07, E01–E02; \hyperlink{c4}{C.4}/\hyperlink{d1}{D.1}}\\
+{\hypertarget{ref-33}{}[33]} & {L1 恢复与会话归属冲突} & {随包 D01–D05; \hyperlink{g6}{G.6}}\\
+{\hypertarget{ref-34}{}[34]} & {文档所述任务生命周期、修复、调度与正式状态维护} & {公开架构、流程、工作区状态与依赖文档; \hyperlink{a5}{A.5}, \hyperlink{e3}{E.3}}\\
+{\hypertarget{ref-35}{}[35]} & {教材与 Mathlib 接口及证明责任} & {公开接口政策、依赖轨迹与评审标准; \hyperlink{e3}{E.3}}\\
+{\hypertarget{ref-36}{}[36]} & {公开实现与流程演示} & {公开架构与流程演示文档; \hyperlink{e3}{E.3}}\\
+{\hypertarget{ref-37}{}[37]} & {候选状态与六次服务的来源对应} & {第 12 版指南；随包 \nolinkurl{MAINTENANCE_SCOPE.csv}, \nolinkurl{L2_SERVICE_AUDIT.csv}, 候选／L1／H1 映射与 Z015/Z016 原件}\\
+{\hypertarget{ref-38}{}[38]} & {A/B/C 版本、工具与信息权限的独立审计} & {\hyperlink{o1}{O.1}；\nolinkurl{verification/revision13/abc_version_audit.md}}\\
+{\hypertarget{ref-39}{}[39]} & {9 月 13 日 A-L7 续作与 L3 评审责任审计} & {\hyperlink{o2}{O.2}–\hyperlink{o3}{O.3}；\nolinkurl{verification/revision13/SOURCE_INDEX.json} 及其中链接的续作与责任记录}\\
+{\hypertarget{ref-40}{}[40]} & {A-L3 逐步审核与应用关口审计；C-L1 信息与提交} & {\hyperlink{o4}{O.4}；\nolinkurl{verification/revision14/SOURCE_INDEX.json}；\hyperlink{g8}{G.8}–\hyperlink{g9}{G.9}}\\
+\end{longtable}\endgroup
+过程分类保留自原 \nolinkurl{PROCESS_OBSERVATIONS.json} 及事件文件。\hyperlink{e2}{E.2} 和随附来源指南定位原标准、指标、事件及覆盖记录。
+
+\section[生产验收映射与实验细节]{\texorpdfstring{\protect\hypertarget{appendix-n}{}生产验收映射与实验细节}{生产验收映射与实验细节}}
+\subsection[输入、版本、候选选择与时间额度]{\texorpdfstring{\protect\hypertarget{n1}{}输入、版本、候选选择与时间额度}{输入、版本、候选选择与时间额度}}
+\subsubsection[共同任务材料与已观察输入检查]{\texorpdfstring{\protect\hypertarget{n1-1}{}共同任务材料与已观察输入检查}{共同任务材料与已观察输入检查}}
+共同材料规则要求同组种子、教材原文、任务单、库版本与白名单模块一致提供。允许正当数学库设施和等价路线，排除旧候选、生产目录、Git 历史及其他运行。任务特定工作必须证明，不能用额外前提、改名结论或私有公理代替。作者也须说明公开声明如何满足任务。\hyperlink{appendix-k}{[附录 K}；R21]
+
+所供证据检查\textbf{三配置全部所选共同评估包}，包括 C。十一组的原文与任务清单均一致，上游清单十组一致。L7 中 A 额外列出一行“Blank experimental target”（空实验目标）的连续映射文件，无实现；B/C 未把占位文件列为上游。这是打包差异，不是已完成证明。检查确立冻结评估输入，不重建求解期间可访问的每个早期文件。\href{zh.pdf\#ref-31}{\mbox{[31]}}
+
+另行方差库调查还将原 A/B/C L2 容器连接到同一不可变镜像、只读根及匹配库文件，且无挂载覆盖该库目录。这是 L2 实际环境检查，区别于通用协议要求；其他任务运行时和恢复差异仍保留于历史。\href{zh.pdf\#ref-31}{\mbox{[31]}}
+
+M2 展示共用材料中的实质歧义：准备单称中心四阶矩界，教材给原始四阶矩界。面向原文的定理须推导中心界。后期 L7 教材上下文与条件澄清是事后提供，不是初始输入。\hyperlink{g14-1}{G.14.1}、\hyperlink{g16}{G.16} 说明数学后果。
+
+\subsubsection[哪些版本进入主要比较]{\texorpdfstring{\protect\hypertarget{n1-2}{}哪些版本进入主要比较}{哪些版本进入主要比较}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{执行类别} & \textbf{主表使用} & \textbf{其他保留尝试或材料}\\\midrule
+
+{A：早期开发} & {九组：L1–L7、M1、M2} & {各自保留运行时和宿主干预}\\
+{A：后期运行时} & {H1、M3} & {H1 部分与完整交付属于同一延续根}\\
+{A：独立向量收敛修复} & {不替代主条目} & {一个补充 L7 根}\\
+{B：后期可传输实现 r4} & {全十一组} & {五个原开发根、一个能力版本 r3 根为补充}\\
+{C：后期协调运行时 r3} & {全十一组} & {一个初始协调根为补充}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+由此有 33 个所选条目、八个额外根，共 41 个。根内汇总取绑定列表首个有共同裁决的完整候选；无完整者，取首个有共同裁决交付。无共同裁决的根保留全版本清单，不赋共同结果，再应用上述版本筛选。代码不按有利裁决选候选；这是事后汇总规则，无找回的求解前冻结证据。选择保留 A-H1 同根完成与 A-L7 独立修复身份。\href{zh.pdf\#ref-31}{\mbox{[31]}}
+
+版本名对应运行差异。早 B 缺部分预期工具能力；r3 能力修复后仍遇助手和评审返回失败。r4 支持可读反馈，但也有 L2 导出故障。初始 C 检查已运行却无意见返回；后期 C r3 新息案例交付可读反馈。A 在评审关卡旁保留作者自主检索编辑，L1/H1 有恢复，L7 有更广宿主停止。这是实际比较条件，不是只改变组织的匹配重复。[R21；N01–N11；31]
+
+\subsubsection[记录模型、权限与停止]{\texorpdfstring{\protect\hypertarget{n1-3}{}记录模型、权限与停止}{记录模型、权限与停止}}
+保存主表请求和回执中，A/B 作者与服务、C 写作者与检查使用 \nolinkurl{gpt-5.6-sol}、中等推理；C 协调者使用 \nolinkurl{gpt-6-astra}、中等推理。这些是记录执行设置，逐角色记录在证据补充包。\href{zh.pdf\#ref-31}{\mbox{[31]}}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{主表组别} & \textbf{三配置实际顶层额度}\\\midrule
+
+{L1} & {90 分钟}\\
+{L2–L7} & {2 小时}\\
+{M1–M3} & {4 小时}\\
+{H1} & {10 小时}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+计时始于首实际派发，含同根等待协助与恢复。额度来自运行记录，不按计划工作量层级推测。实际停止指令优先：A-L7 有余时被封存，H1 在原额度内延续。A 早 M2 提示禁求助、要求准备评审后返回，不能解读为自愿放弃。不同历史结束事件保留于 H，M 可比耗时用末角色返回。[R06, R07, R22；U10, U16；31]
+
+r3/r4 指执行版本，c1/c2 指运行内候选版本；证据索引保留逐运行实现记录。
+
+\subsection[实验如何支持项目验收评估]{\texorpdfstring{\protect\hypertarget{n2}{}实验如何支持项目验收评估}{实验如何支持项目验收评估}}
+本报告使用两类证据评价 ProbabilityTheoryFormalization。历史审核和代码修订检查实际证明责任、整体组合、调用者维护和验收记录可靠性；任务比较检查相同数学任务组在 A、B、C 下的候选、修复与交付。A 采用项目规定流程，B/C 考察替代组织方式。本节说明实验证据与项目正式接纳规则的关系，不将共同评估通过或一种替代配置直接视为已核实的生产落地。
+
+当前项目约定连接三个问题：候选是否满足原文命题与证明职责，独立评审是否绑定精确代码及依赖，已评审结果能否通过正式应用进入任务完成。构建成功确立技术准备就绪；原文忠实度评审还映射命题、假设、结论与关键步骤，检查列出的直接下游使用者，指定证明和完成类别。[P01, P02]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{评估问题} & \textbf{本报告已有证据} & \textbf{与正式项目验收的关系}\\\midrule
+
+{数学职责是否满足？} & {正文\hyperlink{r2}{附录R.2}与\hyperlink{appendix-g}{附录 G} 的任务、实现、修复；完整或部分候选共同评估} & {实验允许正当等价路线；生产另要求原文证明主线映射及合格类别}\\
+{判断是否针对此候选？} & {K 与 \hyperlink{n6}{N.6} 的候选、原文、约定、技术事实和上游绑定} & {生产还绑定评审请求、提示与评分规则版本和评审依据，需明确对应}\\
+{后续任务可否使用？} & {历史调用者修复、实际 H1 定理调用及 L2 定义接口观测} & {组内调用支持局部可用，不替代所列生产使用者检查}\\
+{项目是否正式接受？} & {构建、内部评审注册、共同评估分别报告} & {正式验收由生产约定与应用回执控制，报告通过标签不能创造它}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+生产评审要求非空 proof\_class、completion\_class；连同语义裁决和来源任务角色，进入应用关卡的任务状态投影。只有合格 phase2\_status=pass 表示无欠缺完成。allowed\_exception 限明确列出的任务／类别对，不是无欠缺完成。传输失败、格式错误、宿主停止不自动成为允许例外。[P01]
+
+主表测量实验交付，不是生产目录无欠缺完成率。构建、内部注册和共同裁决按观测报告；完整逐候选生产落地清查不在研究内。正式落地是另一个问题，由生产类别、当前评审依据、下游检查和应用回执控制。
+
+\subsubsection[维护优先项具体针对哪些产物]{\texorpdfstring{\protect\hypertarget{n2-1}{}维护优先项具体针对哪些产物}{维护优先项具体针对哪些产物}}
+\textbf{后续结果。}下表记录较早候选状态。A-L7 现已有 9 月 13 日续作产生的完整修正版交付，见 \hyperlink{o2}{O.2}。
+
+下表将优先项映射至冻结交付及其记录的后续状态。L3/L7 使用不变的 9 月 12 日 09:22 验收截止，L1/H1 保留更早事件顺序。这是对所供候选、评审、恢复记录的有限阅读，不是新检查现行证明库。\href{zh.pdf\#ref-22}{\mbox{[22,23,27,33,37]}}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.2\linewidth}>{\raggedright\arraybackslash}p{0.38\linewidth}>{\raggedright\arraybackslash}p{0.36\linewidth}}
+\toprule
+\textbf{观测对象} & \textbf{本研究保留的最新状态} & \textbf{维护含义}\\\midrule
+
+{L3：所选 A、B r4、C r3 交付} & {A/B 缺允许的最终尾部接口，C 已交付。重评撤回 A 早期通过，无新求解。} & {将这些 A/B 产物视为完整交付前补齐范围，不给 C 归同样缺口。}\\
+{L7：原 A、独立 A 修复、B r4、C r3} & {原 A 缺连续映射，独立修复缺复合可测性；B/C 交付完整已披露修正命题。} & {两 A 候选分开，保留缺失义务；B/C 修正范围不完成或替代它们。}\\
+{L1：早 A、初始 C、后期 B r4/C r3} & {A 意见宿主恢复，但恢复会话归属仍冲突。初始 C 无可读检查便提交，后期 B/C 获可用反馈。} & {维护返回路径，区分修复后行为与历史故障；归属冲突仍是证据问题。}\\
+{H1：A 同根延续} & {反演助手产物恢复并采用；唯一性评审修绑定未改证明；五目标内部交付。} & {保留产物传输与精确输入验证；成功恢复属于结果，不证明原故障未发生。}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+\textbf{全部这些行}都缺所供记录中可靠的实验候选到当前正式对象绑定。因此当前生产采用及采用后状态仍\textbf{未核实}，不是失败，也不默认为通过。实验内部注册或同名定理不能提供绑定。证据指南通过 \nolinkurl{MAINTENANCE_SCOPE.csv}、\nolinkurl{CANDIDATE_DELIVERY_INDEX.json}、\nolinkurl{L1_MAP.json}、\nolinkurl{H1_MAP.json} 映射七个 L3/L7 候选及 L1/H1 记录，不新增生产落地裁决。
+
+\subsection[已完成覆盖与事后修正限制]{\texorpdfstring{\protect\hypertarget{n3}{}已完成覆盖与事后修正限制}{已完成覆盖与事后修正限制}}
+本节描述 9 月 12 日原比较。9 月 13 日追加续作与审计记录于 O，不改变此处的分母。
+
+比较涉及三种实际实验配置：A 中 Sol 中等推理沿现流程工作；B 由 Sol 中等推理主作者组织；C 由 Astra 中等推理协调者组织 Sol 中等推理作者和检查。协调模型属于 C，结果不能隔离协调效应。教材证明随原文命题提供，实验主要评估实现与协作完成。
+
+十一组按数学与组织工作选择。B/C 在 L1、L2、M1 外各加八组，完成十六次首次求解及评估。A 含不同开发版本、H1 同根延续及独立 L7 修复。33 主条目与 41 总根分母不同，额外版本不是匹配重复。[Z001, Z002]
+
+首轮记录于 9 月 12 日 03:07:37 汇总；L2/L3/H1 一致性评估用 31 次模型调用。05:17:25 结束的定向补充复用有效 L2 意见，加两份独立 L7-C 评审，无新求解。09:22:31 完成的评估修复复用证据、修解析、采用当前标准，新增模型评估、求解、构建均为零。[X030, X031, Y007]
+
+当前标准选择 L2 通用展开、L3 允许尾部、H1 教材核心、L7 合理完整修正，应用于全部受影响候选，包括 A-L3 从通过改不完整。明确事后修正使既有结果可用于完成和轨迹分析，不将旧求解改称在修正约定下开始的实验。尚未执行等条件重复，也无需以此为解释现有材料的前提。[Y001-Y003]
+
+\subsection[最终证据覆盖什么]{\texorpdfstring{\protect\hypertarget{n4}{}最终证据覆盖什么}{最终证据覆盖什么}}
+\textbf{分析单位。}不同单位回答不同问题；历史比较与保存代码对不构成额外的配置试验。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{证据单位} & \textbf{在分析中的作用}\\\midrule\endfirsthead
+\toprule
+\textbf{证据单位} & \textbf{在分析中的作用}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{主表交付} & {判断所选配置与任务组合是否完成采用的义务}\\
+{求解运行} & {一次顶层尝试，包括服务、恢复和同根延续}\\
+{角色派发} & {一次角色调用尝试，包括失败尝试}\\
+{工具返回} & {模型可见的已完成输出，包括有意试探和重复诊断}\\
+{服务与发现} & {一次协助或检查，以及其中可能包含的多项发现}\\
+{历史比较} & {判断或候选间的前后关系，可能共享端点}\\
+{保存代码对} & {为特定编译、公理和前提检查选择的两个冻结文件}\\
+\end{longtable}\endgroup
+下列清单是单列的 9 月 13 日续作之前的原实验证据集合，不是将 C/D 历史分析与实验合并后的分母。
+
+最终交付绑定四十一个实际根运行身份及原评估来源，索引 127 次内部服务和 121 条单独发现。六十七次服务有完整反馈文本暴露的工具结果证据；缺失暴露证据保持未核实，不确认作者未读。[Z016, Z006]
+
+额外统一深度语义与采用核查覆盖六次 L2 服务。\hyperlink{g18}{G.18} 现逐项呈现保存的有效性、暴露、采用结果及未重建连接。其余 121 次服务未受同等核查，不是那 121 条发现。正文\hyperlink{r2}{附录R.2}与\hyperlink{appendix-g}{附录 G} 的早期 L1、M1、M2、M3、H1 案例各保留证据，不加入此统一核查分母。
+
+因此报告区分四层：运行与候选身份、实际反馈暴露、反馈有效性、以及修复相应义务的采用。前两层索引本身不能产生正确反馈采用率或数学修复比例。
+
+\subsection[最终分母与按活动分类的成本]{\texorpdfstring{\protect\hypertarget{n5}{}最终分母与按活动分类的成本}{最终分母与按活动分类的成本}}
+以下核算保留原实验采集及各时点补充。9 月 13 日 A-L7 续作与评价的五次调用只在 O.2 核算，不加入下列行。
+
+表按最终交付识别的全部版本、调用目的分类。词元是累计记录用量，不是去重教材内容。作者／协调者、内部服务、提交后评估、工程试探分别列出。输入已含缓存，输出已含推理，均不另加。“至少”为观测下界，不是完整总量估计。[Z011, Z002]
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.21\linewidth}>{\raggedright\arraybackslash}p{0.21\linewidth}>{\raggedright\arraybackslash}p{0.175\linewidth}}
+\toprule
+\textbf{成本类别} & \textbf{调用} & \textbf{输入（含缓存）} & \textbf{输出（含推理）} & \textbf{测量范围}\\\midrule\endfirsthead
+\toprule
+\textbf{成本类别} & \textbf{调用} & \textbf{输入（含缓存）} & \textbf{输出（含推理）} & \textbf{测量范围}\\\midrule\endhead
+\midrule\multicolumn{5}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{作者与协调者} & {117} & {≥408,139,733} & {≥1,782,393} & {下界，有调用缺失}\\
+{内部服务} & {127} & {≥121,219,401} & {≥1,132,494} & {下界，有调用缺失}\\
+{早期暂定评估} & {11} & {4,240,524} & {69,275} & {记录用量完整}\\
+{原共同评估} & {81} & {24,425,225} & {433,595} & {记录用量完整}\\
+{一致性重评} & {31} & {18,665,837} & {341,168} & {记录用量完整}\\
+{工程模型试探} & {3} & {204,798} & {3,604} & {记录用量完整}\\
+\end{longtable}\endgroup
+五次作者／协调者、六次内部服务调用缺全部四个用量字段：输入、缓存输入、输出、推理输出，位置如下：
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{运行} & \textbf{缺用量调用} & \textbf{缺失内容} & \textbf{对比较的影响}\\\midrule
+
+{A-L1} & {2} & {一作者调用有失败完成记录但无用量；一评审者无完成回执} & {时间已重建；排除完整词元比较}\\
+{A-M1} & {6} & {两作者、四服务缺用量，其中四次无完成回执} & {时间已重建；排除完整词元比较}\\
+{A-L5} & {2} & {两作者调用有带时间的失败完成记录，无用量} & {保留耗时，排除共同词元比较}\\
+{A-L7 独立修复} & {1} & {恢复的数学评审调用有失败完成记录，无用量} & {不在主表，影响全版本活动总量}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+十次用量缺失影响三个A主表运行，一次影响补充修复。完整词元比较排除L1、M1和L5，覆盖八组。A-L1、A-M1的时间已另外重建，含估计的时间比较覆盖全部十一组；重建时间不填补词元缺项，详见\hyperlink{appendix-p}{P}。\href{zh.pdf\#ref-31}{\mbox{[31]}}
+
+完整全版本作者和服务总量仍未知，故表报观测下界。缺调用比例不是缺词元比例，不作无依据上界或插补。未记录货币成本和完整工程劳动；无模型调用的导出或恢复不算额外模型调用。
+
+\hyperlink{appendix-h}{附录 H}保留早期窗口求解测量，不可再次加入本表。根耗时、角色时长之和、精确提交时点、末返回各不相同。部分历史时间仍未知或仅受观测限定。最终包连接角色与根身份，使版本内资源与结果可追踪，含失败尝试。
+
+05:17 补充仅加两份独立 L7-C 评审：累计输入 1,425,757，其中缓存 1,254,912；输出 17,309；实际模型时长合计 481.00 秒。新裁决、求解、构建均零，复用 L2 不重复计费；货币成本不可用。该补充与表内 03:07 截止的 31 次重评及求解成本分开。其 62 个资源样本显示最多两活跃容器，最大采样间隔 5.520 秒；原子准入检查另记。两容器与监控完成即停止。[X020, X027]
+
+09:22 评估修复未加模型评估、求解、构建或容器；实现兼容解析及当前规则综合，十八项记录回归均通过。既有模型成本不重计为修复阶段调用。[Y005-Y007]
+
+\subsection[共同评估：程序、可见证据与修正]{\texorpdfstring{\protect\hypertarget{n6}{}共同评估：程序、可见证据与修正}{共同评估：程序、可见证据与修正}}
+\subsubsection[评估角色与输入]{\texorpdfstring{\protect\hypertarget{n6-1}{}评估角色与输入}{评估角色与输入}}
+共同评估在求解后评价提交实验产物，与运行内协助评审及生产 \nolinkurl{review-apply} 分开。所供请求、绑定程序摘录和执行回执确认下述程序。\href{zh.pdf\#ref-30}{\mbox{[30]}}
+
+81 次原共同调用、31 次一致性调用、两次定向 L7 调用中，请求与本地回执均标 \nolinkurl{gpt-5.6-sol}、中等推理。114 个记录会话标识各异，索引无来源会话延续。设置与会话分离支持所述评估配置，不使同模型重复使用统计独立。
+
+原评审者收到原文命题和论证、任务与共同规则、候选、允许上游／支持文件及中立技术事实。提示要求检查原文忠实、义务、前提、路线和依赖。构建只建立技术事实，评审仍须评价实际数学；不得编辑对象、调用助手，或把作者完成声明当成功证明。
+
+请求接口中候选匿名，排除配置元数据与宿主路径；初始一致性提示还隐藏旧裁决和他候选意见。这是\textbf{元数据设盲}，未证明代码风格、注释或文件内容没有身份线索。后期裁决者有意接收下述额外证据。
+
+\subsubsection[原双评审与裁决规则]{\texorpdfstring{\protect\hypertarget{n6-2}{}原双评审与裁决规则}{原双评审与裁决规则}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{可用且验证有效的结果} & \textbf{记录下一步或结果}\\\midrule\endfirsthead
+\toprule
+\textbf{可用且验证有效的结果} & \textbf{记录下一步或结果}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{少于两份初始结果} & {等待缺失结果}\\
+{两票通过或两票失败} & {以该结果结束}\\
+{两票无法判断} & {以未决结束}\\
+{初始票不同} & {最多请求一名新的只读裁决者}\\
+{有效裁决为通过或失败} & {采用裁决者结果结束}\\
+{有效裁决仍无法判断} & {以未决结束}\\
+\end{longtable}\endgroup
+裁决者读相同对象与两份去身份意见，按共同任务解决具体分歧，不按多数或置信度选票。验证检查候选／请求身份、预期角色、新会话、对象只读证据和必需字段，拒绝重复会话或派发身份。这是归档程序规则，不是按总调用数推测的投票规则。\href{zh.pdf\#ref-30}{\mbox{[30]}}
+
+完整候选的预期单位是整个必需任务组；明确部分材料评审则评价保存材料质量。原 A-L7 序列暴露裁决者未继承初审相同部分范围限制的差异。\hyperlink{g16}{G.16} 保留差异及连续映射分支缺失这一独立事实；首目标通过不完成全组。
+
+格式错误是执行／评估状态，不是数学反例。A-M3 第二原意见称通过，却给对象型置信度，宿主记为无法判断；与另一通过配对后触发裁决，结果通过。其他原端点也有类似类型失败。原模型文本与宿主生成替代记录分开，不把无法判断替代结果归为模型数学投票。
+
+\subsubsection[一致性重评与新输入]{\texorpdfstring{\protect\hypertarget{n6-3}{}一致性重评与新输入}{一致性重评与新输入}}
+L2、L3、H1 重评考察既有任务的不同解释，保留代码，每候选用两名分开初审，初始阅读完成后才检查跨候选规则应用。若必需维度或义务分歧、初始结果无效，或对应行为处理不一致，每候选最多触发一次必要裁决。\href{zh.pdf\#ref-30}{\mbox{[30]}}
+
+裁决者收到自己的候选、新初审和跨候选一致性摘要，不收他候选源码，可以否定初审推理。每种解释下，必需数学、前提、路线、接口、交付义务均须通过：有效必需失败则该解释失败；否则有未决证据则未决；否则通过。解释影响结果时，重评保留标准争议，不选择偏向某配置的解释。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{任务} & \textbf{解释或输入变化} & \textbf{何时进入评估}\\\midrule
+
+{方差与弱大数 L2} & {通用数学展开与候选自证展开；核对冻结库对应} & {原评估后、新独立一致性评审前}\\
+{Scheffé 与密度 L3} & {逐项有限、扩展积分解读，再加允许最终尾部} & {首轮逐项有限和扩展积分评审暴露过度要求后加尾部解读；四候选裁决均获三种解读}\\
+{反演与应用 H1} & {标准 Cauchy 与任意位置尺度；代码完成和交付解释分开} & {B/C H1 派发前已记录范围敏感性；详细重评规则在候选完成后；六初审后、三候选裁决前加入原提交材料}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+H1 材料是实际最终消息、原提交清单和交付解释，不是新写理由。纳入它纠正不完整评估视角：匿名 Lean 代码不能显示作者是否提供必需解释。源码完整性与文档仍分别评估。上述规则变化与材料添加均按实际时点记录，并非全属原求解时协议。
+
+\subsubsection[定向连续映射评审与最终标准综合]{\texorpdfstring{\protect\hypertarget{n6-4}{}定向连续映射评审与最终标准综合}{定向连续映射评审与最终标准综合}}
+05:17 补充对既有 C-L7 加两份独立阅读，提供原任务、原文、候选、交付说明及明确为事后的教材上下文，分别评数学、修复合理性和原字面约定符合度。两有效意见十义务全同，无需裁决，复用候选原构建证据。\hyperlink{g16}{G.16} 解释披露修复数学正确如何与不符合不足原条件并存。\href{zh.pdf\#ref-30}{\mbox{[30]}}
+
+09:22 当前验收选择 L2 通用展开、L3 最终尾部、H1 教材标准 Cauchy 核心、L7 合理已披露完整证明的修正，复用既有意见。结果处理器接受可选置信度元数据及可确定 JSON／文本转义对应，保留投票、数学符号与理由。候选或原文身份不匹配仍阻止使用；无法解决的引号须证据，不能虚构匹配。\href{zh.pdf\#ref-30}{\mbox{[30]}}
+
+该阶段\textbf{同时包含处理修复与实质验收选择}。允许 L7 修正命题的是后者，不只是格式；它也因真实尾部接口遗漏撤回 A-L3 旧通过。十八项记录回归测试处理而非数学真值，本阶段无新模型、求解或构建。原结果与中间范围表保留于 \hyperlink{k8}{K.8}，\hyperlink{k9}{K.9} 标识当前验收。
+
+\section[2026 年 9 月 13 日新增证据]{\texorpdfstring{\protect\hypertarget{appendix-o}{}2026 年 9 月 13 日新增证据}{2026 年 9 月 13 日新增证据}}
+本附录补充保留的 9 月 12 日比较及早期附录。各时点记录中的“当前”结果指各自原截止点。第一批结果已纳入A-L7续作，为A 10/11、B 10/11、C 11/11；第二批及两批共同复核见\hyperlink{appendix-q}{Q}。早期记录用于过程追溯。9 月 13 日补充没有新增 L3 求解或新的 L3 评审意见；L3 审计检查的是既有决定。第 19 版保留这些证据，没有重跑续作或审计。
+
+\subsection[配置变化及代理实际收到的信息]{\texorpdfstring{\protect\hypertarget{o1}{}配置变化及代理实际收到的信息}{配置变化及代理实际收到的信息}}
+已有比较检查了冻结提示、执行代码、启动清单与实际返回。下表说明影响\href{zh.pdf\#section-2-3}{第 2.3 节}解释的变化，并区分已配置的材料与代理实际收到或使用材料的证据。\href{verification/revision13/abc_version_audit.md}{来源比较}保留逐项定位。\href{zh.pdf\#ref-38}{\mbox{[38]}}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{变化} & \textbf{内容与涉及运行} & \textbf{记录确认的情况}\\\midrule
+
+{B 对项目支持的访问} & {早期 B 宣称可用的能力，没有对应挂载项目引擎和参考材料；主表 B 使用后期公共参考包及已能工作的协助接口。} & {早期 B-L2 启动记录确认挂载缺失；后期能力与传递探针确认访问可用。早期 B 试运行不在主表中。}\\
+{反馈与协助代码返回} & {后期 B 向调用者返回可读文字及真正修改目标文件的内层补丁；C 修改从只读工作区导出的方式，并在后续导出检查可能失败之前保存角色结果。} & {B 工程探针读取并应用了补丁，B-M3 记录也展示返回与应用。早期 C-L1 的检查已经结束，但返回导出错误；后期 C-L1 收到可读通过意见并回应。一次返回成功不能确认全部服务成功或被采用。}\\
+{L4 的指定接口要求} & {B 的最终参考包去掉了分布计算必须调用某个精确离散全变差接口的要求。} & {公共任务仍要求离散、连续两类公式及例题计算。A-L4 实际收到点名该接口的条件性指令；指令来源及其对证明选择的影响未确定。}\\
+{M3/H1 的组织线索} & {B 的最终参考资料去掉了 Skorokhod 表示和反演的生产模块名及所属父任务。} & {删除行提示了拆分方式，但不含 Lean 证明正文；尚未重建 A-M3、A-H1 是否打开或使用这些行。}\\
+{C 扩展到其他任务} & {早期试运行使用固定额度和审核目标；后期模板改为填入各任务额度与目标，作者和数学咨询模板不变。} & {主表 C 共用核心后台及角色提示内容，启动副本允许的任务不同。这里确认的是主表 C 实现的共同性，不是 A/B/C 上下文完全相同。}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+\textbf{L4：增加的是实现约束，并非另一个定理。}被移除的指令禁止绕开声明 \nolinkurl{thm_8_6_discrete}，自行证明 Bernoulli 与 Poisson 的分布计算。公共任务已经要求两类全变差公式及计算，共同规则则允许数学等价的证明路线。因此，删除指定接口要求扩大了实现选择，没有删除这些数学义务。另一些提醒两类分支都必须完成的文字也被删除，但对应义务仍在公共任务中。A-L4 第五次作者提示有条件地点名该接口，这直接证明作者收到了该指令，却不能证明条件被执行，或指令由这一参考材料引起。\href{zh.pdf\#ref-38}{\mbox{[38]}}
+
+\textbf{M3/H1：给出证明组织线索，没有提供证明代码。}被删除的 M3 名称指向分位数定义、分位数分布与空间、逆像比较和分位数收敛。公开 M3 任务本已列出概率空间、分位数、可测性、分布、逆像、例外水平和收敛。H1 名称指向反演实现的 Dirichlet、Fubini 和核函数部分；公共任务要求重新完成本组专有的分析支持。这些名称可能帮助组织或定位工作，因此不能假定毫无影响。保存证据确认它们从 B 的参考包中被移除，但没有确认对应 A 作者是否采用，或带来了多大收益。\href{zh.pdf\#ref-38}{\mbox{[38]}}
+
+\textbf{实现共同性有明确范围。}C 的变化不限于模板适配，还涉及返回机制、结果保存和可读产物类型。反过来，主表 C 的启动副本名称不同，也不表示核心角色提示或后台逻辑不同。B 访问投影后的参考包；C 协调者使用 N.1 所述的登记产物接口，两者获得信息的安排并不相同。记录支持比较实际执行的配置，并保留上述具体信息限制，不能分离估计组织方式本身的效果。\href{zh.pdf\#ref-38}{\mbox{[38]}}
+
+A-L7 在尚有时间时被外层停止，改变了允许的下一步行动。\hyperlink{o2}{O.2}与\hyperlink{r2-6}{附录R.2.6}分别说明停止及已完成续作；早期配置比较没有把后来续作当成当时已发生的事件。
+
+\subsection[A-L7 续作与产物身份]{\texorpdfstring{\protect\hypertarget{o2}{}A-L7 续作与产物身份}{A-L7 续作与产物身份}}
+原作者会话 \nolinkurl{01a08d9c-6892-70c2-a44c-6fe9afa47be7} 在封存状态的副本上恢复，明确获准公开说明合理修正。\href{verification/revision13/a-l7/RESULTS.json}{结构化结果}和\href{verification/revision13/a-l7/FINAL_EVIDENCE.json}{证据事实}记录执行与核验。\href{verification/revision13/a-l7/sealed-candidate-to-final.diff}{代码差异}只修改解释性注释：定理签名和证明体已存在于封存工作候选中。它与旧主表选中的不完整交付、较早另行重启的修复是不同产物。
+
+两次新的终验，即\href{verification/revision13/a-l7/endpoint/reviewer-1/VALIDATED_RESULT.json}{评审者 1}和\href{verification/revision13/a-l7/endpoint/reviewer-2/VALIDATED_RESULT.json}{评审者 2}，均判数学、修正合理性、披露通过，原字面合同一致性不通过。增加的条件包括映射的博雷尔可测性、集合每点的环境连续性，以及极限落入集合的事件可测且满概率；复合可测性在证明内导出。这些是充分的合理修正，不代表唯一或最弱修正。
+
+作者在北京时间 11:04:09–11:18:39 运行。共同终验另计，两次并行评价各约 6.7 和 6.0 分钟。五次调用使用输入 7,641,026 个词元（已含缓存 7,054,720），输出 52,712。原恢复材料记录 Docker 通信修复及执行程序版本变化。一份终验正常返回后，需要离线转换字典／列表结构，数学意见未改变。这些后续投入不倒写入原轮次表；作者求解窗口870.275890秒计入正文累计用时，独立共同评估另计，见\hyperlink{appendix-p}{P}。
+
+\subsection[L3 的范围与评审者实际看到的信息]{\texorpdfstring{\protect\hypertarget{o3}{}L3 的范围与评审者实际看到的信息}{L3 的范围与评审者实际看到的信息}}
+\href{verification/revision13/l3/REVIEW_MECHANISM_RECHECK.zh-CN.md}{更新的责任核查}纠正了早先“A 数学审核者可能未收到尾部信息”的解释：实际返回的工具输出包含该表述。A 的三轮数学路线检查在同一评审会话中完成并通过，一般审核也接受逐项可积。B 的可选复核使用新的 Sol 会话，并非作者原会话中的反复自查；返回意见明确把尾部版本判为可选。此后两位作者都未接受针对该缺口的明确修复测试。
+
+因此，应区分按采用标准已经观察到的范围与审核失误，以及尚未测试的“没有能力构造尾部证明”。原任务书的许可式措辞和事后明确验收范围仍是限制。A/B 仍缺所需尾部接口，不改判通过。此前 C-L2、B-H1 及 B/C-L7 的失败或未决转通过，已经进入 9 月 12 日主表。
+
+\href{verification/revision13/SOURCE_INDEX.json}{来源索引}记录复制的后续材料之原始绝对路径与 SHA-256。材料保留原文；其中原有相对链接应按索引中的原位置解析。9 月 13 日证据更新报告了对这些记录及选定代码差异的核查，不是新的 Lean 构建或独立专家认证。第 19 版保留这一有归属的叙述，其编辑检查没有重新验证链接中的原始记录。旧证据仍可通过保留的证据指南访问。
+
+\subsection[A-L3 审核关口与 A/C 轨迹分析范围]{\texorpdfstring{\protect\hypertarget{o4}{}A-L3 审核关口与 A/C 轨迹分析范围}{A-L3 审核关口与 A/C 轨迹分析范围}}
+A 的\href{verification/revision14/l3/author-call-02.txt}{第二次作者指令}应用失败评审并请求修复。三轮\href{verification/revision14/l3/math-gate-response.md}{数学路线检查}均通过。\href{verification/revision14/l3/general-v2.json}{一般复审}接受有限积分编码，未列接口不匹配，并检查了本就满足逐项可积的密度调用者。\href{verification/revision14/l3/author-call-05.txt}{第五次指令}跳过已通过目标。\href{verification/revision14/l3/workspace_state.excerpt.md}{程序文档}说明结果结构和绑定检查，不是新的数学判断；\href{verification/revision14/l3/gate-audit.zh-CN.md}{审计}将这些职责与实际执行对应。\href{verification/revision14/SOURCE_INDEX.json}{来源索引}保留出处。
+
+C-L1 的\hyperlink{g9-2}{早期运行}收到两项检查导出错误；\hyperlink{g8}{后期 r3}确认通用通过意见，没有请求数学咨询，提交未变代码。\hyperlink{o2}{O.2}记录 A-L7；\href{zh.pdf\#section-2-5}{正文第 2.5 节}说明语义审计覆盖限制。
+
+\subsection[M1 的 A 与 H1 的 B：结果、计时和判定范围]{\texorpdfstring{\protect\hypertarget{o5}{}M1 的 A 与 H1 的 B：结果、计时和判定范围}{M1 的 A 与 H1 的 B：结果、计时和判定范围}}
+A-M1的\href{verification/revision18/a-m1-decision.json}{原始终验决定}记录两名评审均通过，最终结果为通过。历史\href{manuscript/evidence/r9_rewrite_evidence/RUN_INDEX.csv}{运行索引}因四次角色调用缺结束回执而未报完整用时；本版按与其他运行相同的首次派发至最后角色返回口径，重建为约136.89分钟，并以估计标记呈现。另有六次调用缺用量，因此词元比较仍不包含该组。正文第3.2节和\hyperlink{appendix-p}{P}给出时间与证据；附录R.2.4的案例选择不影响A-M1的通过结果。
+
+B-H1 的\href{verification/revision18/b-h1-assessment.json}{原裁决}分别记录：数学、公开前提、标准 Cauchy 路线及接口通过；任意位置与正尺度的分布族路线未通过。B 实际给出零位置、任意正尺度，包含标准情形，但没有任意位置归约。9 月 12 日的\href{verification/revision18/current-acceptance.zh-CN.md}{实际验收要求}采用标准 Cauchy 核心，保留五项目标与证明责任，因此当前汇总判 B-H1 通过；任意位置扩展仍单列为未完成。这不是本轮新增判定或新求解。
+
+本轮把上述原文件原样复制并登记\href{verification/revision18/SOURCE_INDEX.json}{来源与校验值}，用于核查第 3.2、4.3–4.5 和 5.4 节。第一批汇总已包含A-L7续作，为A 10/11、B 10/11、C 11/11；本版第3.1节与附录Q另列第二批结果。早期判断与候选状态仍在注明日期的材料中保留。
+
+\section[第22版计时重建与统一口径]{\texorpdfstring{\protect\hypertarget{appendix-p}{}第22版计时重建与统一口径}{第22版计时重建与统一口径}}
+本次只读核对33条原运行及同根恢复的计时数据库。其余31条完整耗时均复算为最后角色返回减首次派发，与原表相符；原生时钟起点也都等于首次派发。数据库检查前后哈希相同。\href{verification/revision22/comparability_008.json}{逐项核对}保留起止时间、来源路径和哈希。
+
+A-L1原先缺一项结束回执，A-M1缺四项。留存的最后角色返回分别给出85.822436和136.892199分钟，五个相关容器均在各自最后返回前停止。\href{verification/revision22/reconstruction.json}{重建记录}同时保存控制器记录及最终候选对应。容器停止支持近似重建，但不等于恢复了缺失的宿主回执，因此两值以估计标记呈现。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{任务组} & \textbf{A原轮次（分钟）} & \textbf{B原轮次（分钟）} & \textbf{C原轮次（分钟）}\\\midrule\endfirsthead
+\toprule
+\textbf{任务组} & \textbf{A原轮次（分钟）} & \textbf{B原轮次（分钟）} & \textbf{C原轮次（分钟）}\\\midrule\endhead
+\midrule\multicolumn{4}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{L1} & {85.82*} & {11.90} & {12.16}\\
+{L2} & {14.25} & {30.09} & {18.00}\\
+{L3} & {69.78} & {33.15} & {39.90}\\
+{L4} & {46.11} & {15.89} & {16.54}\\
+{L5} & {76.96} & {67.61} & {28.70}\\
+{L6} & {34.34} & {21.98} & {23.61}\\
+{L7} & {58.86} & {28.99} & {32.27}\\
+{M1} & {136.89*} & {17.64} & {26.79}\\
+{M2} & {59.54} & {36.38} & {36.53}\\
+{M3} & {21.13} & {41.54} & {15.23}\\
+{H1} & {182.16} & {126.17} & {103.36}\\
+\end{longtable}\endgroup
+*表示重建估计。原轮次起止之间的间隔全部保留；没有按配置选择性扣除等待或恢复时间。
+
+A-L7续作的作者窗口为870.275890秒，即14.504598分钟；原运行58.864038分钟，两段累计73.368636分钟。\href{verification/revision13/a-l7/RESULTS.json}{续作结果}给出实际秒数和调用记录。窗口累计不包括两次授权求解之间的封存期，也不包括提交后独立共同评估；各窗口内的协助与等待包含在跨度中，不再把重叠角色时长相加。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{指标：中位数（范围）} & \textbf{A} & \textbf{B} & \textbf{C}\\\midrule
+
+{原轮次经过时间（分钟）} & {59.5 (14.2-182.2)} & {30.1 (11.9-126.2)} & {26.8 (12.2-103.4)}\\
+{含续作的求解窗口累计用时（分钟）} & {69.8 (14.2-182.2)} & {30.1 (11.9-126.2)} & {26.8 (12.2-103.4)}\\
+{原轮次角色派发次数} & {10 (3-32)} & {3 (2-7)} & {5 (3-12)}\\
+{原轮次模型可见工具返回次数} & {137 (49-484)} & {107 (33-513)} & {104 (44-464)}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+原轮次与累计用时均在十一组上计算，A的中位数分别为59.543999和69.783549分钟；B为30.087101分钟，C为26.792389分钟。\href{REPORT_DATA.json}{统一数据}保存所有未舍入值和计算规则。第20版九组时间汇总仍保留在原版及冻结证据中，不用新数字覆写历史记录。角色与工具统计仍描述原轮次；词元覆盖的八组未改变。
+
+\section[两批共同评价与第二批完整结果]{\texorpdfstring{\protect\hypertarget{appendix-q}{}两批共同评价与第二批完整结果}{两批共同评价与第二批完整结果}}
+\subsection[运行设计与具体变化]{\texorpdfstring{\protect\hypertarget{q1}{}运行设计与具体变化}{运行设计与具体变化}}
+第二批完成33项主运行，采用ABC、BCA、CAB轮换的登记顺序，最多同时运行两个主任务。提交后的共同验收另行进行；后来的六路验收并发不改变主求解时间。另有12次旧代码诊断、2次单独修复，35份主运行或修复交付均完成技术检查与最终判定。模型型号和推理设置沿用第一批：作者和检查者为Sol中等推理，C协调者为Astra中等推理。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{任务组} & \textbf{追加说明}\\\midrule
+
+{L2} & {明确允许一般等价方差展开；仍须消去交叉项}\\
+{L3} & {由允许尾部表述改为提前明确必须覆盖最终可积原序列}\\
+{L7} & {提前允许合理且披露的题设修正，不要求最弱修正}\\
+{M2} & {明确从原始矩推出中心矩；子列路线要求两批原本都有}\\
+{H1} & {明确全部五目标及标准Cauchy核心；参数推广另列}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+教材原文、214项种子清单中的数学来源与给定上游、工具链和依赖保持一致。A的L1/M1由修复后新评审改为同会话复审；八组原已同会话复审的提示改为允许必要时回修已通过目标；M2初始审核交接也统一。A去掉部分精确模块提示，B恢复双分支完整性提醒。客户端由0.153.4转为0.154.0-alpha.6.2，工具调用方式随之调整；第一批A-L7的较晚续作也已使用新版客户端。B的11份初始作者提示相同，C仅少数时间数值格式不同。不能把这些实际变化说成更换模型。
+
+第一批从41个开发运行中事后选取33项，第二批预先登记33项；两批不是同一设置下的随机重复。统一重评改变对旧产物的判断，不改变旧作者当时获知的要求。详细对照：\href{verification/revision23/round_conditions_016.zh-CN.md}{实际条件核查}；\href{verification/revision23/PROTOCOL.md}{冻结协议}及\href{verification/revision23/RESULTS.json}{原始结果}。
+
+\subsection[共同成果标准与66项复核]{\texorpdfstring{\protect\hypertarget{q2}{}共同成果标准与66项复核}{共同成果标准与66项复核}}
+共同成果标准在观察原结果后制定，以教材目标和允许的数学范围为依据。下表对两批三配置共同适用。原先已纠正的方差、尾部、Cauchy与合理修题要求继续采用；本版明确接受等价证明路线和模块化接口。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{组别} & \textbf{共同数学目标}\\\midrule\endfirsthead
+\toprule
+\textbf{组别} & \textbf{共同数学目标}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{L1} & {从原观测构造新息与部分和，证明可积、适应、零条件新息均值及鞅结论}\\
+{L2} & {允许一般方差展开；须消去不相关交叉项，证明方差可加及弱大数律的概率极限}\\
+{L3} & {原序列最终可积范围的Scheffé引理、密度全变差与分布收敛，以及指定的正态边界}\\
+{L4} & {从事件上确界导出离散与密度全变差公式，完成伯努利和泊松应用及端点}\\
+{L5} & {最大耦合的概率律、正确边缘与达到界，含公共质量零与一}\\
+{L6} & {从原题设得到单传感器与双传感器的误差二次型、最优值及全局最优，覆盖有效边界情形}\\
+{L7} & {坐标等价与连续映射，含各复合输出可测性；接受已披露且数学上充分的题设修正}\\
+{M1} & {停止过程为鞅、期望恒定、停止值代表存在，以及三种停止期望情形所需的支配与收敛论证}\\
+{M2} & {从原始四阶矩和独立性，经中心化、矩展开、尾概率可求和及Borel–Cantelli得到全序列强大数律；接受等价的直接全序列路线}\\
+{M3} & {构造共同概率空间与分位数，证明可测边缘分布、逆像比较及几乎处处收敛，处理端点和可数例外水平}\\
+{H1} & {全部五项目标，包括反演、唯一性及其专有分析支持、标准Cauchy核心和整数支撑判据；参数推广可选}\\
+\end{longtable}\endgroup
+每项复核保留原代码、来源及评估对象的对应关系；适用的已有语义意见和构建检查继续使用。程序逐项验证1241个绑定文件，与两批完整清单核对，拒绝缺行、重复行、未经说明的改判和未通过调用检查的接口改判。这是共同判据下的回顾复核，不是对66项全部重新开展一轮设盲数学评审。第一批A-L7使用已绑定的续作结果，原运行对象保留作历史来源。
+
+接口检查保持原任务的输入对象，只实例化已交付结果、转换等价表示，或用允许库的一般事实消去冗余前提。不由评价者构造新输入并补做缺失的任务专有范围扩展。这样既接受C-L3在同一函数上的非负性推论，也保留第一批A/B-L3需要新增尾部论证的区别。特定路线未遵守仍如实记录；数学结论已经成立时，不将该记录改称数学失败。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{范围} & \textbf{本次复核前记录的通过} & \textbf{共同成果完成}\\\midrule\endfirsthead
+\toprule
+\textbf{范围} & \textbf{本次复核前记录的通过} & \textbf{共同成果完成}\\\midrule\endhead
+\midrule\multicolumn{3}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{1-A} & {10/11} & {10/11}\\
+{1-B} & {10/11} & {10/11}\\
+{1-C} & {11/11} & {11/11}\\
+{2-A} & {10/11} & {11/11}\\
+{2-B} & {10/11} & {11/11}\\
+{2-C} & {10/11} & {11/11}\\
+\end{longtable}\endgroup
+第一批的“复核前记录”已经包含既往评分修正与A-L7续作；第二批为此次三项调整之前的原共同终验。它们不是同阶段的原始评分，第一批更早的原始标签仍见K.8.1。数据字段\nolinkurl{recorded_outcome}按此定义，\nolinkurl{recorded_outcome_stage}逐行注明阶段。
+
+主文三项调整均有保留理由。66行完整结果：\href{verification/revision23/evaluation/assessment.csv}{数据表}、\href{verification/revision23/evaluation/assessment.json}{含原判定与代码身份的记录}。可执行程序与规则：\href{verification/revision23/evaluation/evaluate.py}{evaluate.py}、\href{verification/revision23/evaluation/policy.json}{policy.json}。旧结果未覆盖。
+
+\subsection[第二批逐项时间与用量]{\texorpdfstring{\protect\hypertarget{q3}{}第二批逐项时间与用量}{第二批逐项时间与用量}}
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}}
+\toprule
+\textbf{项目} & \textbf{原窗口分钟} & \textbf{恢复分钟} & \textbf{累计分钟} & \textbf{端点统一增加秒}\\\midrule\endfirsthead
+\toprule
+\textbf{项目} & \textbf{原窗口分钟} & \textbf{恢复分钟} & \textbf{累计分钟} & \textbf{端点统一增加秒}\\\midrule\endhead
+\midrule\multicolumn{5}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{A-L1} & {15.21} & {0.00} & {15.21} & {0.000}\\
+{B-L1} & {14.84} & {0.00} & {14.84} & {0.000}\\
+{C-L1} & {15.27} & {0.00} & {15.27} & {8.856}\\
+{A-L2} & {16.75} & {0.00} & {16.75} & {0.000}\\
+{B-L2} & {16.30} & {0.00} & {16.30} & {0.000}\\
+{C-L2} & {18.98} & {0.00} & {18.98} & {7.191}\\
+{A-L3} & {25.64} & {18.71} & {44.35} & {0.000}\\
+{B-L3} & {13.65} & {0.00} & {13.65} & {0.000}\\
+{C-L3} & {23.34} & {0.00} & {23.34} & {9.664}\\
+{A-L4} & {41.03} & {0.00} & {41.03} & {0.000}\\
+{B-L4} & {18.79} & {0.00} & {18.79} & {0.000}\\
+{C-L4} & {18.04} & {0.00} & {18.04} & {6.452}\\
+{A-L5} & {32.72} & {0.00} & {32.72} & {0.000}\\
+{B-L5} & {19.70} & {0.00} & {19.70} & {0.000}\\
+{C-L5} & {30.09} & {0.00} & {30.09} & {9.257}\\
+{A-L6} & {24.51} & {0.00} & {24.51} & {0.000}\\
+{B-L6} & {34.13} & {0.00} & {34.13} & {0.000}\\
+{C-L6} & {21.49} & {0.00} & {21.49} & {8.841}\\
+{A-L7} & {21.61} & {0.00} & {21.61} & {0.000}\\
+{B-L7} & {23.99} & {0.00} & {23.99} & {0.000}\\
+{C-L7} & {22.01} & {0.00} & {22.01} & {7.409}\\
+{A-M1} & {51.91} & {0.00} & {51.91} & {0.000}\\
+{B-M1} & {23.70} & {0.00} & {23.70} & {0.000}\\
+{C-M1} & {24.19} & {0.00} & {24.19} & {30.815}\\
+{A-M2} & {51.17} & {0.00} & {51.17} & {0.000}\\
+{B-M2} & {40.56} & {0.00} & {40.56} & {0.000}\\
+{C-M2} & {22.91} & {0.00} & {22.91} & {7.644}\\
+{A-M3} & {50.24} & {0.00} & {50.24} & {0.000}\\
+{B-M3} & {20.21} & {0.00} & {20.21} & {0.000}\\
+{C-M3} & {18.40} & {0.00} & {18.40} & {6.920}\\
+{A-H1} & {135.59} & {0.00} & {135.59} & {0.000}\\
+{B-H1} & {123.89} & {0.00} & {123.89} & {0.000}\\
+{C-H1} & {86.42} & {0.00} & {86.42} & {8.582}\\
+\end{longtable}\endgroup
+C原表计至提交，本表统一计至最后角色返回；11项共增加111.631秒，各项增加6.45–30.82秒。A、B原窗口与统一端点相同。A-L3恢复采用同一端点1122.899秒，外层另有4.765–5.420秒收尾；不把收尾混入其中一组。求解窗口之间的暂停不计入窗口和，内部等待不扣除。第一批逐项时间及两个估计的重建依据见M.1与P。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{原主运行} & \textbf{输入} & \textbf{其中缓存} & \textbf{输出} & \textbf{其中推理} & \textbf{角色派发}\\\midrule
+
+{A} & {143818952} & {136488448} & {968369} & {259453} & {63}\\
+{B} & {97604774} & {93368448} & {674847} & {183177} & {48}\\
+{C} & {87452495} & {83553536} & {603715} & {150635} & {52}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+A-L3恢复另外记录6070965输入词元；不能将其遗漏后把A原主运行总量称为全部交付成本。B-H1有一次容量错误缺少用量，B合计是下界。35项独立终验涉及75个评价身份及5次同会话格式续接，共80次派发；两份初始无效格式意见不算有效数学票。修复、诊断、终验和工程用量按原结果的独立项目记录，没有完整美元成本。缓存与推理是输入、输出的子集，均不重复相加。
+
+计时数据：\href{verification/revision23/stage2_uniform_timing_20260914.json}{统一端点}。用量、完整运行索引和原始验收：\href{verification/revision23/RESULTS.json}{RESULTS}、\href{verification/revision23/RUN_INDEX.csv}{RUN\_INDEX}。
+
+以下逐项列出第二批原主运行的输入和输出词元；A-L3恢复另列。缓存与推理子集及各次评审明细仍可从原始RESULTS与RUN\_INDEX查阅。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{项目} & \textbf{输入词元} & \textbf{输出词元} & \textbf{记录范围}\\\midrule\endfirsthead
+\toprule
+\textbf{项目} & \textbf{输入词元} & \textbf{输出词元} & \textbf{记录范围}\\\midrule\endhead
+\midrule\multicolumn{4}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{A-L1} & {4346485} & {34139} & {完整}\\
+{B-L1} & {3442740} & {33414} & {完整}\\
+{C-L1} & {2364969} & {36975} & {完整}\\
+{B-L2} & {3170506} & {33131} & {完整}\\
+{C-L2} & {3557210} & {38072} & {完整}\\
+{A-L2} & {5204890} & {35823} & {完整}\\
+{C-L3} & {6642131} & {52291} & {完整}\\
+{A-L3} & {6979609} & {55716} & {完整}\\
+{B-L3} & {3290880} & {28458} & {完整}\\
+{A-L4} & {13021625} & {92806} & {完整}\\
+{B-L4} & {3743245} & {37467} & {完整}\\
+{C-L4} & {3549486} & {32717} & {完整}\\
+{B-L5} & {3683258} & {42041} & {完整}\\
+{C-L5} & {7443795} & {68637} & {完整}\\
+{A-L5} & {8362506} & {70600} & {完整}\\
+{C-L6} & {4908403} & {53253} & {完整}\\
+{A-L6} & {7076995} & {52459} & {完整}\\
+{B-L6} & {7124870} & {78857} & {完整}\\
+{A-L7} & {5153656} & {48426} & {完整}\\
+{B-L7} & {4417544} & {44101} & {完整}\\
+{C-L7} & {4048126} & {42890} & {完整}\\
+{B-M1} & {6772229} & {44414} & {完整}\\
+{C-M1} & {7410304} & {48813} & {完整}\\
+{A-M1} & {17107946} & {102084} & {完整}\\
+{C-M2} & {7572446} & {49372} & {完整}\\
+{A-M2} & {18589232} & {111849} & {完整}\\
+{B-M2} & {14785583} & {74322} & {完整}\\
+{A-M3} & {12650210} & {103408} & {完整}\\
+{B-M3} & {5051196} & {43196} & {完整}\\
+{C-M3} & {3602848} & {38797} & {完整}\\
+{B-H1} & {42122723} & {215446} & {下界}\\
+{C-H1} & {36352777} & {141898} & {完整}\\
+{A-H1} & {45325798} & {261059} & {完整}\\
+\end{longtable}\endgroup
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{单列项目} & \textbf{已知输入词元} & \textbf{已知输出词元}\\\midrule
+
+{A-L3恢复} & {6070965} & {38740}\\
+{12次诊断} & {3578867} & {91652}\\
+{2次修复} & {2009465} & {25124}\\
+{35项独立终验} & {22603252} & {376100}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+独立终验小计为已知下界：B-L2有两次派发缺少用量；它们与B-H1主运行缺少用量的调用分开。上述单列小计不与原主运行相加冒充同一阶段成本，没有完整金额数据。
+
+\subsection[固定旧L3的诊断与完成的修复]{\texorpdfstring{\protect\hypertarget{q4}{}固定旧L3的诊断与完成的修复}{固定旧L3的诊断与完成的修复}}
+两来源冻结的任务书均写道：“合同允许采用最终尾部可积表述”，同时要求从非负性、积分条件和几乎处处收敛完成负部或最小值控制。原诊断保留这一措辞，未把第二批主任务新增的强制尾部条款写回旧任务书。
+
+A原审核重点为：“重点检查 hg\_nonneg/hg\_meas 已从公开接口删除且 AE 推导真实落地。”B原审核要求检查Scheffé、负部、密度、全变差、正态边界，并问：“是否有前提转移、非法依赖或未覆盖合同。”两者共同的外层说明要求使用全新独立只读会话，旧会话身份仅作来源，原被重放审核的最终答复没有提供。
+
+两来源的追加句全文均为：“请明确核对公开结论是否覆盖最终可积序列，以及是否恢复原序列的结论，并说明这一范围核查对你的审核判断有何影响。”除此一句，同一来源的两种条件保持候选、提供的材料及外层说明一致。此干预将先前可被解释为可选的范围明确列为核查对象；句子没有附预期票决或证明方案。原表的判断差异同时涉及注意范围与验收解释。
+
+原文可直接核对：\href{verification/revision23/diagnostic_inputs/A-condition_original.txt}{A原指令}、\href{verification/revision23/diagnostic_inputs/A-condition_scope.txt}{A追加指令}、\href{verification/revision23/diagnostic_inputs/B-condition_original.txt}{B原指令}、\href{verification/revision23/diagnostic_inputs/B-condition_scope.txt}{B追加指令}、\href{verification/revision23/diagnostic_inputs/A-TASK.zh-CN.md}{旧任务书}。\href{verification/revision23/diagnostic_inputs/SOURCE_INDEX.json}{输入索引}包含12份实际提示的校验值；\href{verification/revision23/analysis/L3_DIAGNOSTIC_OUTPUTS.md}{逐次完整回复}保留各次原理由。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{旧候选} & \textbf{指令} & \textbf{重复} & \textbf{提及尾部缺口} & \textbf{必须修复} & \textbf{结论}\\\midrule\endfirsthead
+\toprule
+\textbf{旧候选} & \textbf{指令} & \textbf{重复} & \textbf{提及尾部缺口} & \textbf{必须修复} & \textbf{结论}\\\midrule\endhead
+\midrule\multicolumn{6}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{A} & {原指令} & {1} & {否} & {否} & {通过}\\
+{A} & {原指令} & {2} & {否} & {否} & {通过}\\
+{A} & {原指令} & {3} & {否} & {否} & {通过}\\
+{A} & {明确尾部} & {1} & {是} & {是} & {未通过}\\
+{A} & {明确尾部} & {2} & {是} & {是} & {未通过}\\
+{A} & {明确尾部} & {3} & {是} & {是} & {未通过}\\
+{B} & {原指令} & {1} & {是} & {是} & {未通过}\\
+{B} & {原指令} & {2} & {是} & {否} & {通过}\\
+{B} & {原指令} & {3} & {是} & {否} & {通过}\\
+{B} & {明确尾部} & {1} & {是} & {是} & {未通过}\\
+{B} & {明确尾部} & {2} & {是} & {是} & {未通过}\\
+{B} & {明确尾部} & {3} & {是} & {是} & {未通过}\\
+\end{longtable}\endgroup
+每行是独立启动的Sol中等推理评审会话，对应固定候选与一种指令。A原指令下三份意见均未提出尾部缺口；B三份均讨论该缺口，但只有第一份将其作为必须修复。两候选在明确要求下均三次拒绝。这里有两份代码各两种条件，不能把同一代码的重复意见当成不同数学题；不同会话也不保证判断错误独立。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\raggedright\arraybackslash}p{0.13\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}}
+\toprule
+\textbf{修复来源} & \textbf{秒数} & \textbf{技术检查} & \textbf{最终评审1} & \textbf{最终评审2} & \textbf{结果}\\\midrule
+
+{A} & {436.820} & {pass} & {pass} & {pass} & {pass}\\
+{B} & {418.617} & {pass} & {pass} & {pass} & {pass}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+修复者为新Sol中等推理会话，各有7200秒额度，从冻结的旧候选开始。两者保留负部与支配收敛主体，仅在足够大的指标上使用积分线性，再以最终相等恢复原序列极限。A交付存在截点接口，B交付最终可积接口并保留逐项可积兼容定理；密度及正态调用者相应调整。修复输入在诊断结果返回前冻结，故本设计检验明确要求下的修复，不是诊断回复传给作者的因果对照。B的六次诊断，即原指令与追加指令各第1、2、3行，均报告缺少依赖缓存，无法在本会话完成重新构建；此限制在两种条件中均存在，不计作候选源码编译失败。A的六次回复引用已有绑定构建，也不计为六次新构建。两份后续修复的构建成功另有记录。详见\href{verification/revision23/analysis/L3_INTERPRETATION.zh-CN.md}{诊断解释}及\href{verification/revision23/RESULTS.json}{最终结果}。
+
+\subsection[三项争议的代码依据]{\texorpdfstring{\protect\hypertarget{q5}{}三项争议的代码依据}{三项争议的代码依据}}
+A-M1的存在定理产生停止值代表；最终定理对任意带正确代表证明的函数给出三种条件下的期望结论。调用见证只组合这些结果，第三种条件的几乎处处有限性沿用原增量证明内部已有的一般积分论证。C-L3调用见证由逐项非负与收敛调用一般有序极限定理，并由可积性取得所需的几乎处处强可测性；它直接调用已交付的最终可积Scheffé定理，没有新增负部、支配收敛或尾部论证。两项检查的公理依赖仅为Lean通常使用的命题外延性、选择与商类型公理。
+
+检查文件和输出：\href{verification/revision23/evaluation/M1.lean}{M1调用}、\href{verification/revision23/evaluation/L3.lean}{L3调用}、\href{verification/revision23/evaluation/caller_checks.json}{编译记录}、\href{verification/revision23/evaluation/compiled_source_binding.json}{52份源码对应核验}。检查挂载原编译环境的源码卷为只读，原候选未改变。B-M2已在原交付中完成全序列证明，原技术检查通过；其内部反馈和未修改代码的关系见\href{verification/revision23/analysis/RUN_DETAILS.zh-CN.md}{逐运行分析}与\href{verification/revision23/analysis/M1A_M2B_INTERPRETATION.zh-CN.md}{M1/M2解释}。后者保留原验收者的解释，本版共同判据优先于其中将接口争议写成数学缺口的定性。
+
+\subsection[第23版检查与复核材料]{\texorpdfstring{\protect\hypertarget{q6}{}第23版检查与复核材料}{第23版检查与复核材料}}
+第23版记录第一章保持不变，第二章只作设计与评价所需的调整。中英文正文和附录的公式、数值表格、链接与PDF布局分别核对；检查清单随版本保留。独立外部评阅另作编辑检查，不充当66项数学重验或项目生产状态认证。
+
+\section[详细案例与历史分析]{\texorpdfstring{\protect\hypertarget{appendix-r}{}详细案例与历史分析}{详细案例与历史分析}}
+第23版正文第4—6章的论证按R.1—R.3保留于此。章节编号和交叉引用已随本版位置调整。
+
+\subsection[验收标准怎样改变实验判定]{\texorpdfstring{\protect\hypertarget{r1}{}验收标准怎样改变实验判定}{验收标准怎样改变实验判定}}
+本章解释任务要求如何决定成果判定。附录R.1.1—R.1.4检查第一批的库调用、交付范围和题设修正；附录R.1.5说明第二批三项调整的数学依据；附录R.1.6报告旧L3的诊断与修复。
+
+\subsubsection[相对应的库调用曾被不一致评分（L2）]{\texorpdfstring{\protect\hypertarget{r1-1}{}相对应的库调用曾被不一致评分（L2）}{相对应的库调用曾被不一致评分（L2）}}
+L2对应教材第11章定理11.4和11.5：先证明两两不相关随机变量的方差可加性，再证明相关弱大数定律。原始共同评估允许A调用一条基础展开公式，却因C采用相对应的库调用而拒绝C。核对库内关系并统一要求后，A、B、C均通过。\href{zh.pdf\#ref-21}{\mbox{[21]}}
+
+两种调用给出的都是对一般相关变量成立的方差—协方差展开：
+
+\[
+\operatorname{Var}\!\left(\sum_i X_i\right)
+=\sum_i\sum_j\operatorname{Cov}(X_i,X_j).
+\]
+候选仍需用题目给定的不相关性证明交叉项为零，再完成弱大数定律所需的均值、方差界、切比雪夫不等式和极限步骤。A调用的\nolinkurl{variance_sum'}与C调用的\nolinkurl{variance_fun_sum'}并未直接提供整组目标；后者由前者通过库内转换得到。这个接口关系是纠正评分的依据。
+
+当前验收允许调用这类已证明的基础展开。补充检查另问候选是否把展开本身也从方差定义和期望线性性推导出来；B完成了这项额外工作，它不改变A、C在当前标准下的通过。两种检查在看到结果后被明确区分，原记录的G、S代号及逐项依据保留于\href{zh-appendix.pdf\#g15}{附录 G.15}。\href{zh.pdf\#ref-21}{\mbox{[21]}}
+
+本例说明，共同评估中的拒绝意见也需要核查。即使意见要求作者继续工作，只有该要求适用于双方且属于任务范围，才能把它当作有效反馈。
+
+\subsubsection[完成局部修复，仍会遗漏任务范围（L3）]{\texorpdfstring{\protect\hypertarget{r1-2}{}完成局部修复，仍会遗漏任务范围（L3）}{完成局部修复，仍会遗漏任务范围（L3）}}
+第一批A、B完成了Scheffé引理的主体证明，却要求序列每项都可积。所采用的任务范围只要求从某项起可积。这个差别影响真实输入：在$(0,1]$上令首项为$1/x$，后续各项和极限为零，尾部满足要求，首项却不可积。覆盖该范围，需要在尾部进行积分论证并恢复原序列的极限。\href{zh.pdf\#ref-23}{\mbox{[23]}}
+
+原任务书写的是“允许”尾部表述，共同验收随后明确采用这一范围。第一批C已提供相应论证；A、B的原交付没有。因此，范围遗漏是按共同标准对交付作出的判断，还需结合作者当时得到的说明解释。扩展积分的进一步包装不是本报告额外要求；各范围的形式定义留在附录G.17。\href{zh.pdf\#ref-13}{\mbox{[13,23,39]}}
+
+A的审核曾促成真实修改：早期定理将极限函数的非负性与可测性作为前提，后来的证明自行推出所需性质。但尾部表述在数学路线检查中被理解成可选形式；一般复审也接受了逐项可积接口。它检查的下游概率密度本来就逐项可积，调用成功没有测试更广的范围。B主动请求的复核同样看到了尾部版本，却把它列作可选推广，作者随后提交。\href{zh.pdf\#ref-29}{\mbox{[29,39,40]}}
+
+接纳程序核对意见是否对应当前代码和材料，不再重判数学范围。因此，复审沿用较窄解释时，正确的版本检查也会放行该交付。这个案例说明具体范围怎样在流程中被遗漏，也说明审核已完成的局部修复为何仍不足以完成整组任务。后来开展的明确要求测试及两次成功修复见附录R.1.6。
+
+\subsubsection[Cauchy 均值（H1）：B 为什么由失败改为通过？]{\texorpdfstring{\protect\hypertarget{r1-3}{}Cauchy 均值（H1）：B 为什么由失败改为通过？}{Cauchy 均值（H1）：B 为什么由失败改为通过？}}
+\textbf{B-H1 的当前结论是通过；早期失败记录仍可追溯。}H1 包含五项相连义务，其中一项是 Cauchy 样本均值。争议在于这项应用须覆盖标准分布，还是任意位置与尺度的整个分布族。原裁决分别给出了两种范围下的判断，而非笼统认定 B 的证明错误。\href{zh.pdf\#ref-23}{\mbox{[23]}}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{对 B 的检查} & \textbf{已有裁决} & \textbf{是否影响当前完成数}\\\midrule
+
+{教材标准 Cauchy 核心，以及其余四项目标} & {通过；B 的零位置、任意正尺度结果包含标准情形} & {计为 H1 通过}\\
+{任意共同位置与正尺度的推广} & {未完成任意位置推广} & {单列扩展范围，不作为核心失败}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+9 月 12 日确定的验收要求全部五项目标及反演、唯一性的证明工作，采用教材支持的标准 Cauchy 语义作为核心。A 交付标准分布，B 交付零位置、任意正尺度族，C 交付任意位置与正尺度族。因此三者均通过核心要求，扩展程度不同。这是已明确采用的验收选择；若改为要求任意位置，B 的现有交付就不能满足，但那会改变当前标准。\href{zh-appendix.pdf\#o5}{附录 O.5}保留原裁决的两项结论和实际验收要求。
+
+两项评估处理问题加重了范围争议。B 的裁决在数学上已接受标准核心，却因引号转义被外围检查拒绝。另一次匿名、仅代码的输入遗漏了与文档判断有关的原始提交说明。后来的修正恢复这些实际说明，并解决可确定的引号对应；没有新增证明，也没有代作者补写缺失解释。这些是评估输入和处理缺陷，不是求解者的数学修复。\href{zh.pdf\#ref-15}{\mbox{[15,23]}}；\href{zh-appendix.pdf\#g13-1}{附录 G.13.1}
+
+\subsubsection[连续映射（L7）：错误建议与不足的假设]{\texorpdfstring{\protect\hypertarget{r1-4}{}连续映射（L7）：错误建议与不足的假设}{连续映射（L7）：错误建议与不足的假设}}
+连续映射争议含两个不同数学问题。首先，某评审者建议把集合上各点的环境连续性换为相对于该集合的连续性。取单点概率空间，并令
+
+\[
+S=\{0\},\qquad V=0,\qquad V_n=\frac1{n+1},\qquad
+f(x)=\begin{cases}0,&x=0,\\1,&x\ne0.\end{cases}
+\]
+$f$ 在 $S$ 上的限制连续，但 $f(V_n)=1$ 不收敛于 $f(V)=0$。逼近变量是从集合外趋近该集合。这一反例否定了那条具体接口建议，并未解决原候选的全部义务。\href{zh.pdf\#ref-22}{\mbox{[22]}}；\href{zh-appendix.pdf\#g16}{附录 G.16}
+
+其次，即使保留 $S$ 各点的环境连续性，也不能保证每个复合输出可测。在 Lebesgue 概率空间 $[1,2]$ 上取一个非 Lebesgue 可测子集 $E$，在实线上令 $f=\mathbf 1_E$、$S=\{0\}$，并令 $V_1(\omega)=\omega$，而 $V_n=V=0$（$n\ge2$ 时）。该函数在 0 附近为零，并在 0 连续；全部输入变量可测且逐点收敛，但 $f(V_1)$ 不可测。仅一个初始项就足以违反输出要求，同时不改变收敛。这些是保留的书面反例，不是新执行的 Lean 检查。\href{zh.pdf\#ref-22}{\mbox{[22]}}
+
+因此，当前验收允许合理、已披露且证明完整的修正，加入映射的 Borel 可测性和极限处适当连续性。B/C 完成了这类修正。B 对 $S$ 的额外可测性条件强于 C 的事件表述，但标准不要求唯一最弱修正。C 还保留不带映射可测前提的数值收敛核心。A 修复的一位外部评估者也指出条件不足，因此证据不支持该发现专属于 C。\href{zh.pdf\#ref-22}{\mbox{[22]}}
+
+原来选中的 A-L7 交付和较早另行修复的候选，作为历史产物仍不完整；但 9 月 13 日的续作完成了修正后的任务，包括复合可测性。最终证明已存在于封存工作候选中，新工作明确了修正并完成审核和交付。附录R.2.6说明这一结果及执行条件的变化。\href{zh.pdf\#ref-39}{\mbox{[39]}}
+
+\subsubsection[等价交付与原验收中的三个拒绝]{\texorpdfstring{\protect\hypertarget{r1-5}{}等价交付与原验收中的三个拒绝}{等价交付与原验收中的三个拒绝}}
+第二批的三个拒绝需要分别解释。复核以同一数学目标为准，检查者仅组合交付与允许库中的结果，或验证等价前提；不替作者补写任务专有证明。\href{zh.pdf\#ref-42}{\mbox{[42]}}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{项目} & \textbf{已交付的内容} & \textbf{共同成果判定}\\\midrule
+
+{A-M1} & {停止值代表存在；三种条件下的期望结论} & {已完成。独立调用在原输入上组合这些结果，并验证全部三种情形}\\
+{B-M2} & {四阶矩估计与Borel–Cantelli直接给出完整序列结论} & {已完成。没有按指定子列路线证明，另记为路线要求未遵守}\\
+{C-L3} & {最终可积序列的Scheffé结论及其下游应用} & {已完成。极限非负性由逐项非负与收敛推出，所需的几乎处处强可测性由可积性推出，调用检查通过}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+A-M1的代表证明是已交付的存在定理，并非要求调用者重新证明停时期望。C-L3的额外参数在同一输入上由一般库事实推出，没有排除合法输入。两份独立调用均在原工具链通过，核对了52份候选与上游源码；新增文件是评价用的调用见证，不是原作者提交的一部分。
+
+这与第一批L3的缺口不同：“最终可积”不能推出“每项可积”。若要使用其较窄定理，还须构造尾部输入并恢复原序列结论，这项任务专有的范围扩展不由评价者代做。附录R.1.6的修复作者实际完成了这项工作。
+
+统一成果评价是见到原结果后的复核。两批66项均对照同一组要求；已有适用的评审和构建证据继续使用，争议项补做检查。原判定、改变理由和路线遵守记录均保留于附录Q.2及Q.5。这一程序避免让接口偏好掩盖成果，也保留了实质未完成的范围。
+
+\subsubsection[固定旧 L3 候选：发现遗漏与要求修复是两件事]{\texorpdfstring{\protect\hypertarget{r1-6}{}固定旧 L3 候选：发现遗漏与要求修复是两件事}{固定旧 L3 候选：发现遗漏与要求修复是两件事}}
+十二次新评审已全部返回。逐份阅读实际回复后，表中分别统计明确讨论尾部遗漏、将其列为必须修复，以及最终通过的次数；每行均为同一来源和条件下的三次评审。追加指令只增加一句范围核查要求，输入及逐次理由见\href{zh-appendix.pdf\#q4}{附录Q.4}。这些是对旧候选的诊断意见，不是第二批主运行的验收票数。\href{zh.pdf\#ref-43}{\mbox{[43]}}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{固定来源与指令条件} & \textbf{识别尾部遗漏} & \textbf{要求必须修复} & \textbf{最终通过}\\\midrule
+
+{A，原指令} & {0/3} & {0/3} & {3/3}\\
+{A，追加范围核查} & {3/3} & {3/3} & {0/3}\\
+{B，原指令} & {3/3} & {1/3} & {2/3}\\
+{B，追加范围核查} & {3/3} & {3/3} & {0/3}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+\textbf{A 的区别在于是否辨认缺失范围。}原指令下三份回复都接受全部项可积作为有限实值积分的形式化编码，重点确认旧的非负性、可测性前提已修复，以及概率密度下游能够调用。追加核查后三份回复仍承认这些局部成果，却指出全部项可积排除了有限初始项不可积的序列；只有在输入也允许该范围时，针对原序列写出的结论才覆盖要求。它们要求尾部接口及原序列极限的恢复。\href{zh.pdf\#ref-43}{\mbox{[43]}}
+
+\textbf{B 的区别更多在于是否把已识别的问题作为阻断项。}原指令下三份回复都讨论最终可积，但第一次要求修复并判失败，后两次仅把它列为提高一般性的可选改进，仍判通过。追加核查后三份都要求修复。只看通过率，会遗漏“知道如何推广，却认为不必完成”的判断差异。两来源的原始审核材料不同，且每个条件仅有三次；这些结果支持本案例中范围指令影响注意与验收判断的解释，不能估计全项目的审核成功率或模型独立效应。\href{zh.pdf\#ref-43}{\mbox{[43]}}
+
+\textbf{定向修复给出了新增代码证据。}两次新修复都将公开可积条件放宽到最终可积，只在尾部使用积分线性，并以最终相等保持极限，恢复原序列结论；负部与支配收敛核心保留。A 用存在截点的接口，B 用滤子上的最终可积接口并保留全部项可积的兼容定理。下游修改用于适配调用，原有密度与正态分支没有在此次重新发明。两份修复均通过构建与最终共同验收，分别用时7.28和6.98分钟。它们证明明确要求下可以补齐这两个旧交付；修复作为单独运行保留，不计入第一批原完成数。修复指令在诊断结果返回前另行冻结，不能把成功归因于某条诊断回复的直接采用。差异与构建定位见\href{zh-appendix.pdf\#q4}{附录Q.4}。\href{zh.pdf\#ref-43}{\mbox{[43]}}
+
+\subsection[实验执行轨迹：组织、修复与交付]{\texorpdfstring{\protect\hypertarget{r2}{}实验执行轨迹：组织、修复与交付}{实验执行轨迹：组织、修复与交付}}
+本章回答：作者和协调者具体做了什么，哪些反馈促成了代码修改，哪些只支持提交，以及哪些执行故障耽误了已有成果。将结果连接到产生它的工作与决定，比较才能为项目维护提供依据。本节轨迹回答第二个评价问题：审核、协助与控制怎样影响证明工作和交付。A 提供项目规定流程的实际观察，B/C 提供替代组织方式的观察；后两者不证明相应安排已经成为生产功能。
+
+本节围绕决定任务走向的时刻组织案例。A-L3 的问题是审核如何先促成局部修复、再错误判定范围完整（附录R.1.2）；A-L7 的问题是已有证明为何没有进入原选中交付，以及恢复后实际补了什么（附录R.2.6）。C-L1 则比较协调者在收到检查错误或收到可读通过意见时如何提交。下文将这些情况与确有代码修复和成果采用的案例并列，逐项说明判断依据。每个序列都使用其实际版本和信息状态，不把开发版本前后变化当成受控干预。
+
+本章原有案例来自第一批及其早期开发运行。第二批补充的反馈与交付对照见附录R.2.8；附录R.3历史材料保持各自观察时点。
+
+\subsubsection[新息与鞅（L1）：收到什么反馈后决定提交]{\texorpdfstring{\protect\hypertarget{r2-1}{}新息与鞅（L1）：收到什么反馈后决定提交}{新息与鞅（L1）：收到什么反馈后决定提交}}
+L1 要求代理从观测过程构造新息，并证明其部分和构成鞅。设 $X_0=0$，$\mathcal F_n$ 表示截至时刻 $n$ 的信息，构造为
+
+\[
+Y_{n+1}=X_{n+1}-\mathbb E[X_{n+1}\mid\mathcal F_n],\qquad
+S_n=\sum_{k=1}^{n}Y_k.
+\]
+所需证明建立可积性与适应性，推出新息的条件均值为零，进而得到 $\mathbb E[S_{n+1}\mid\mathcal F_n]=S_n$ 几乎处处成立。A 使用 Mathlib 的自然滤过及通用零条件增量鞅准则；B/C 使用提供的从一开始编号的观测历史滤过，并构造局部鞅定义的各字段。这些路线完成了对应数学工作，使用通用准则本身不构成任务遗漏。\href{zh.pdf\#ref-27}{\mbox{[27]}}; \href{zh-appendix.pdf\#g5}{附录 G.5}–\href{zh-appendix.pdf\#g10}{G.10}
+
+\textbf{A 在数学实现之后的困难是评审意见无法交付，而非没有通过意见。}初始提示含无关任务标识，造成绕路。随后作者阅读相关库源码，绕过缺失的文件写入工具，修复具体 Lean 接口错误。第四候选构建后，评审序列成为主要观测阻塞。七次通用评审请求包括：一次入口拒绝、五个具有完成回执与通过意见的会话，以及最后一个已启动但无完成回执的会话。通过意见未能经正常路径到达作者侧可读结果文件。作者不断检索、等待和重试，尽管分析者后来能在别处读到这些意见。\href{zh.pdf\#ref-27}{\mbox{[27]}}
+
+外层执行记录称，既有评审 JSON 被恢复到要求的结果位置，随后控制器观察到通过。保留的 JSON 与所引评审者输出一致，但恢复回执列出的是另一会话。这一归属冲突尚未解决；观测到的进展是验收路径恢复，不是证明接连改进五次。\href{zh.pdf\#ref-27}{\mbox{[27,33]}}; \href{zh-appendix.pdf\#g6}{附录 G.6}
+
+\textbf{初始 C 遭遇相关交付故障，却到达不同提交状态。}协调者读取写作者候选、构建，再请求通用与数学检查。两名检查模型均运行并产出意见，但只读文件系统导出失败，返回的是错误而非意见。协调者明确披露尚未获得独立检查后提交；后来的共同双评估通过同一候选。该后续证据加强的是对产物的评价，不能回填协调者早先决策时掌握的信息。\href{zh.pdf\#ref-27}{\mbox{[27]}}；\href{zh-appendix.pdf\#g9-2}{附录 G.9.2}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{L1 观测} & \textbf{所选时点的数学状态} & \textbf{实际可用反馈} & \textbf{后果}\\\midrule
+
+{初始 A} & {自然滤过证明，候选构建成功} & {多份通过意见存在，但正常作者侧交付失败} & {等待、重试；外层恢复结果文件后才记录验收}\\
+{B：早期试跑} & {从一编号的滤过与局部鞅证明} & {助手失败；数学评审编码失败；后续通用意见可读} & {作者继续，并在获得可读检查后提交}\\
+{初始 C} & {写作者完成，协调者构建候选} & {两份检查意见存在，但只返回导出错误} & {协调者披露检查缺口后提交}\\
+{B：主比较运行} & {证明完整，但时间索引接口过宽} & {可读非阻断建议指出时刻零假设可推导} & {作者修改公开接口并检查新代码}\\
+{C：主比较运行} & {评审前候选已完整} & {通用评审的完整通过意见返回并获确认} & {未作数学编辑即提交同一候选}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+主比较中 B 的接口修改很具体。早期声明要求每个自然数时刻都可测、可积；原文只要求正时刻前提，并给出 $X_0=0$。B 在内部推导零时刻性质并修改最终接口，同时保留带全时刻前提的辅助引理。对外定理与对应证明的变化，展示了对一项具体建议的采用。主比较中的 C 则用可读的通过意见支持提交未变代码。前者是接口修复，后者是检查结果进入决策。\href{zh.pdf\#ref-20}{\mbox{[20,27]}}
+
+这些运行显示了具体的相互作用：A 的观测流程要求应用可读评审，因此返回交付故障阻止既有数学成果获验收；初始 C 的提交自主权允许在明确检查未决时交付。无法访问位置里的更多意见，以及最终端点意见一致，都不能消除这一运行差异。后期 B/C 显示，可读反馈支持不同的有用动作，不能一概称为“反馈修复了证明”。
+
+主比较中 C 收到的是通用评审意见，没有调用数学咨询。协调者明确确认构建和评审通过，随后提交未变候选。这说明反馈进入了决定，不能作为又做了一次检查或评审促成数学修改的证据。\href{zh.pdf\#ref-20}{\mbox{[20]}}
+
+\subsubsection[四阶矩强大数定律（A-M2）：把缺失的界移入证明]{\texorpdfstring{\protect\hypertarget{r2-2}{}四阶矩强大数定律（A-M2）：把缺失的界移入证明}{四阶矩强大数定律（A-M2）：把缺失的界移入证明}}
+本案例来自主比较中的 A-M2 运行。M2 要求对具有共同均值 $m$、统一原始四阶矩界的独立变量证明强大数定律。准备摘要提到中心矩，而提供的教材给出原始矩。公开定理必须满足原文假设，在内部推导中心矩界。差别表述很短，却改变了必需步骤由谁负责。\href{zh.pdf\#ref-25}{\mbox{[25]}}
+
+作者检索强大数定律、独立性与积分乘积接口，阅读实现，并在小文件中测试精确类型；随后建立有限和四阶矩展开，用独立性消项，推出尾概率界并应用 Borel-Cantelli。最初八次构建检查前七次失败，第八次通过。但第八版候选仍要求调用者提供 $X_i-m$ 的中心四阶矩界。\href{zh.pdf\#ref-25}{\mbox{[25]}}；\href{zh-appendix.pdf\#g14-1}{附录 G.14.1}
+
+通用评审者指出原始矩与中心矩的缺口。后续代码证明
+
+\[
+(x-m)^4\leq8(x^4+m^4),\qquad
+\mathbb E(X_i-m)^4\leq8(c+m^4)
+\quad\text{when}\quad\mathbb E X_i^4\leq c.
+\]
+第十一版把这一转换移入证明，公开声明接受原始矩前提，并将已经证明的中心矩结果作为辅助定理调用。绑定该版本的复审通过，最终源码与其一致，后续共同评估也通过。证据链含可识别批评、调用约定改变、新推导和对新候选的核验，比仅观察到“评审先于验收”更能证明数学修复。\href{zh.pdf\#ref-25}{\mbox{[25]}}
+
+构建轨迹与语义轨迹含义不同。一些构建失败涉及类型、函数表示和可积性接口；输出已报告失败，外层 shell 状态却为零。后续语义缺口仍可在构建成功后存在，因为 Lean 检查的是实际写下的较弱命题。原文比较揭示额外前提，代码比较则显示其确实被移除，而非改名。\href{zh.pdf\#ref-25}{\mbox{[25]}}
+
+首轮提示还禁止协助，并要求在准备评审后返回。因此，无协助或该次返回不能被解释为作者自愿认定无需后续工作。教材指导、作者实现、工具诊断、原文澄清和评审都参与了记录中的链条。证据确认修复，但不把全部贡献归给一位评审者或一个自主决定。
+
+\subsubsection[反演与唯一性（H1）：证明支持结果、交付它，再使用它]{\texorpdfstring{\protect\hypertarget{r2-3}{}反演与唯一性（H1）：证明支持结果、交付它，再使用它}{反演与唯一性（H1）：证明支持结果、交付它，再使用它}}
+H1 结合界 $|e^{ix}-1|\leq|x|$、特征函数反演、经反演证明唯一性、Cauchy 均值应用和整数值判据，可据此检查中间结果是否实际进入后续证明。下述详细采用序列涉及 A 的同根完成；端点比较表也记录 B/C 的完整交付。\href{zh.pdf\#ref-17}{\mbox{[17,23]}}
+
+作者最初请求完成整个反演证明，却把该协助请求限定为只读工作。返回意见定位了 Dirichlet 积分缺口，但没有可用补丁。作者随后请求积分极限与一致界，收到已构建的辅助代码并纳入草稿。之后另一位助手完成剩余反演证明，但导出失败；外层执行环节恢复交付后，作者才得以读取、应用、构建，并请求独立的内部评审。同一序列中既有产出数学成果的调用，也有失败的交付步骤。\href{zh.pdf\#ref-17}{\mbox{[17]}}
+
+交付的反演论证包含有限积分交换、振荡核的不同逐点极限、控制收敛，以及端点的一半质量：
+
+\[
+\lim_{T\to\infty}\frac1{2\pi}\int_{-T}^{T}
+\frac{e^{-iat}-e^{-ibt}}{it}\phi_\mu(t)\,dt
+=\mu((a,b))+\tfrac12\mu(\{a\})+\tfrac12\mu(\{b\}),\qquad a<b.
+\]
+唯一性随后调用该定理，在适当端点比较区间概率，并用测度确定论证。标准 Cauchy 应用推导特征函数，应用独立和乘积与缩放公式，再调用新完成的唯一性定理。这些使用连接的是实际结论，不只是文件。\href{zh.pdf\#ref-17}{\mbox{[17]}}；\href{zh-appendix.pdf\#g13}{附录 G.13}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{结果或依赖} & \textbf{后续证明做什么} & \textbf{对复用的含义}\\\midrule
+
+{反演定理} & {唯一性推出区间概率相等及同分布} & {先前定理确实用于数学论证}\\
+{唯一性定理} & {Cauchy 均值应用由特征函数相等推出分布相等} & {第二次实际定理使用}\\
+{整数值判据导入唯一性文件} & {证明实际使用模为一的指数实部几乎处处达到上界} & {存在导入，但未调用该定理}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+整数值结果证明：$\phi_X(2\pi)=1$ 当且仅当 $X$ 几乎必然取整数值。其不同证明路线反驳了把每次导入都算作定理复用的做法。同样，一份唯一性评审最初通过，却在应用时因输入哈希不匹配被拒绝。评审者修正绑定与解释，代码未变，意见随后被应用。该事件修复的是证据衔接，不是反演或唯一性证明。\href{zh.pdf\#ref-17}{\mbox{[17]}}
+
+该案例不能证明较小助手任务总是更优。请求范围与权限同时改变，较广的剩余证明也由助手完成。B-M1、A-M3 还提供成功的大范围委派案例。H1 证实的是：在所记录的组织方式下，并借助外层代理恢复产物，分析支持、产物交付与下游使用实现了成功组合。
+
+\subsubsection[停止与表示（M1/M3）：大范围委派贡献了什么]{\texorpdfstring{\protect\hypertarget{r2-4}{}停止与表示（M1/M3）：大范围委派贡献了什么}{停止与表示（M1/M3）：大范围委派贡献了什么}}
+M1 的 A、B、C 均已通过。本节选取 B/C-M1 与 A-M3，是因为这些已核查案例能具体展示委派产物的采用，以及后续修改发生在证明还是说明文档。A-M1同样通过，重建用时约136.89分钟，见第3.2节。\href{zh-appendix.pdf\#o5}{附录 O.5}记录本轮核对。
+
+B-M1 把停止过程和停止期望两项任务交给支持作者。工作量实质可观：既要证明停止过程为鞅，又要覆盖指定停止时刻情形。在停止时刻可积、增量有界时，例如下列界
+
+\[
+|X_{T\wedge n}|\leq |X_0|+cT
+\]
+提供了从有限停止结果过渡到极限所需的可积控制。实现还处理可测性、可积性，以及可能无穷的停止时刻所需有效代表。\href{zh.pdf\#ref-18}{\mbox{[18]}}；\href{zh-appendix.pdf\#g11}{附录 G.11}
+
+助手在隔离工作区产出补丁。主作者读取、应用目标修改、构建并请求数学评审。重建后的目标文件与最终评估代码一致。这是整组实现的已证实采用链，不能据此把 B 说成无协助的单一作者。即使委派数学实现，主导角色仍贡献了整合、工具恢复与检查。其首次组合构建命令退出码为零，标准错误却显示命令缺失；它找到可执行文件绝对路径，随后完成真实构建。若只数第一次外层退出码，就会虚构一次验证成功。\href{zh.pdf\#ref-18}{\mbox{[18]}}
+
+C-M1 也委派两项目标并获通过交付，但之后的候选修改涉及文档而非数学。协调者补充缺失的公开声明与前提说明；可见数学文件未变，内部评审也未指出对应证明缺陷。两次内部目标检查复用同一会话，因此是两次调用，不是两名独立评审者。后续共同评估另行进行。B/C 最终均通过，但初始实现之后的贡献不同。\href{zh.pdf\#ref-18}{\mbox{[18]}}
+
+A-M3 是另一个大范围采用案例。Skorokhod 表示任务通过广义逆分布函数与相同均匀输入，在共同空间构造新变量，保持边缘分布并证明几乎必然收敛，处理可测性、端点和例外水平。助手的整任务实现确实被采用。后来格式错误的置信度字段导致共同评估无法判断并进入裁决，候选没有新增数学修复。\href{zh.pdf\#ref-28}{\mbox{[28]}}；\href{zh-appendix.pdf\#g12}{附录 G.12}
+
+这些案例反对两种简单解释：成功协助不必只是一条窄范围引理；新候选版本也不一定意味着新证明。委派工作、返回产物与最终代码之间的对应，决定实际贡献是什么。
+
+\subsubsection[耦合与方差（A-L5/B-L2）：代码产出存在，但采用尚未确证]{\texorpdfstring{\protect\hypertarget{r2-5}{}耦合与方差（A-L5/B-L2）：代码产出存在，但采用尚未确证}{耦合与方差（A-L5/B-L2）：代码产出存在，但采用尚未确证}}
+在较早的 A-L5 运行中，负责整项任务的作者将最大耦合所需的共同最小密度、剩余密度、联合测度、边缘分布与不匹配概率委派给助手。助手产出 534 行候选及构建通过回执。主作者收到容器之外机器上的文件路径和哈希，却无法在自己的容器中取得正文或补丁，于是继续本地实现。助手代码与主作者最终代码在命名和组织上不同；相近的证明路线可能都来自同一教材与原始请求，不能据此确认代码采用。\href{zh.pdf\#ref-19}{\mbox{[19]}}; \href{zh-appendix.pdf\#g1}{附录 G.1}
+
+此次调查改变了早先交接分类及分析框架的采用标准，也区分了外层传输差异文件与实际修改目标文件的内层补丁。包存在、补丁被检查、目标代码被修改，是不同观测。即使采用未确认，助手的 554.094 秒过程时间仍属于已发生工作。证据既不抹去该成本，也不证明不存在任何间接影响。\href{zh.pdf\#ref-19}{\mbox{[19]}}
+
+B-L2 停在另一个证据位置。支持产出先因导出权限受阻，随后通过工程恢复交付，没有另调用模型或新建容器。找回产物存在不等于作者已采用。后来的只读意见针对与最终候选字节相同的版本，作者确认收到：这证明提交前检查了既有结果，不证明找回补丁修复了定理。\href{zh.pdf\#ref-19}{\mbox{[19]}}；\href{zh-appendix.pdf\#g18}{附录 G.18}
+
+该差异对分析与工程均重要。L5 确认了具体的交付不可访问问题；B-L2 确认恢复，但采用仍未核实。后者不自动等于已验证的“未采用”。有用的轨迹分析应明确观测止于何处，不把每个缺环都转为成功或失败。
+
+\subsubsection[向量收敛（A-L7）：外层中止与后来完成的续作]{\texorpdfstring{\protect\hypertarget{r2-6}{}向量收敛（A-L7）：外层中止与后来完成的续作}{向量收敛（A-L7）：外层中止与后来完成的续作}}
+L7 的数学路线审核指出接口与未解决义务问题后，外层实验执行施加了更广的指令：禁止编辑、求助和新审核，并封存运行。总额度 7,200 秒中仍剩约 3,668 秒。因此，这次停止既不是记录中的预算耗尽，也不是作者自主放弃。选入主表的交付缺少连续映射分支；封存工作候选与选中交付是不同产物，后来在前者发现证明，不等于证明已进入后者。\href{zh.pdf\#ref-22}{\mbox{[22,39]}}
+
+9 月 13 日，原作者会话在封存状态的副本上恢复，明确获准对条件不足的原命题作合理且公开说明的修正。它用约 14.5 分钟完成，未超过封存时剩余约 61 分钟。构建、内部数学检查和一般审核通过；两个新的 Sol 中等推理会话进行只读终验，一致确认两项目标交付完整、修正合理且披露充分。两者另行记录：这不是未经修正的原字面合同的逐字实现。\href{zh.pdf\#ref-39}{\mbox{[39]}}
+
+关键代码比较表明，最终定理的签名与证明体已经存在于封存的 \nolinkurl{candidate_v1}。续作修改了解释性注释，并完成内部审核、修正披露和交付。因此，这一结果表明既有证明可以在明确的修正版标准下通过验收，不能写成在这 14.5 分钟内才构造了整道证明。\href{zh.pdf\#ref-39}{\mbox{[39]}}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.4\linewidth}}
+\toprule
+\textbf{材料或阶段} & \textbf{记录结果} & \textbf{如何理解？}\\\midrule
+
+{原来选中的 A-L7 交付} & {不完整：缺连续映射分支} & {原主表中的一项}\\
+{较早另行重启的修复} & {不完整：缺复合可测性} & {较早的补充候选，并非 9 月 13 日的续作}\\
+{原封存工作候选及其续作} & {保留定理签名和证明体，修改说明，修正版完整交付通过} & {明确修正许可后完成的续作}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+续作还需要恢复 Docker 通信；原先安装的执行程序已不可用，因此使用了更新版本。两次共同终验并行进行，各约 6.7 和 6.0 分钟，与作者求解耗时分开。本阶段五次实验模型调用共使用 7,641,026 个输入词元，其中缓存输入 7,054,720；输出 52,712。一份终验正常返回后出现结果处理错误，经离线忠实转换结构恢复，没有新增模型调用或改变意见。附录 O.2 索引完整记录。第3.2节将这段求解时间计入累计用时，同时保留原轮次指标；独立共同评估另行核算。\href{zh.pdf\#ref-39}{\mbox{[39]}}
+
+\subsubsection[跨案例比较：把结果还原为具体过程]{\texorpdfstring{\protect\hypertarget{r2-7}{}跨案例比较：把结果还原为具体过程}{跨案例比较：把结果还原为具体过程}}
+\textbf{审核可以修复一个问题，同时漏掉另一个问题。}A-L3 的首轮审核促成两项前提的内部推导，数学路线检查和一般复审随后仍接受了较窄范围。B 的自选复核也错误放行。相比之下，A-M2 的审核指出原始矩与中心矩差别，代码补上转换并通过复审。是否发出范围警报、作者是否实际修改声明与证明，比审核调用次数更能说明机制发挥了什么作用。\href{zh.pdf\#ref-25}{\mbox{[25,29,39,40]}}
+
+\textbf{检查的作用取决于决定作出时收到的信息。}早期 A-L1 因评审意见未能正常返回而等待和重试，外层恢复结果文件后才继续验收。早期 C-L1 在未收到所请求的检查意见时披露缺口并提交；主比较中的 C-L1 在收到通用通过意见后提交相同候选。这两次 C 运行均没有由该评审触发的新数学编辑。它们揭示不同的提交依据，不能只凭最终都通过就认定协调者作出决定时已掌握相同证据。\href{zh.pdf\#ref-20}{\mbox{[20,27]}}
+
+\textbf{数学成果、可用产物和完成交付是不同阶段。}H1 的助手证明经恢复、读取和整合后才进入后续定理；B-M1 采用了助手的整组实现。A-L7 的封存候选已含最终证明体，恢复原作者后完成说明、审核与交付。该续作支持已有成果能够完成验收，不能把原外层停止解释为作者证明失败，也不能把这段时间算成从零构造整个证明。\href{zh.pdf\#ref-17}{\mbox{[17,18,39]}}
+
+这些比较定位了可以核对的过程差别：漏检发生在范围判断，反馈缺失发生在返回路径，A-L7 的停止来自外层指令。传输故障属于相应运行环境，指令限制属于实验执行；只有代理实际作出的判断与动作，才据其当时可用信息分析。证据没有给出三种配置独立因果贡献的分解，也没有证明每一处已修复环境故障仍存在。
+
+\subsubsection[第二批：收到反馈之后发生了什么]{\texorpdfstring{\protect\hypertarget{r2-8}{}第二批：收到反馈之后发生了什么}{第二批：收到反馈之后发生了什么}}
+B-M2收到的内部意见已经指出子列步骤没有独立承担从子列到全序列的证明。作者收到该意见后，最终目标文件没有再改变。代码此前已由全序列概率可求和直接得到强大数结论，随后写出的子列及余项结论依赖这一完整结论。这个顺序说明指定路线未被落实；数学结论本身已经成立。\href{zh.pdf\#ref-42}{\mbox{[42,44]}}
+
+A-M1的内部复核接受停止值代表及其证明作为合理接口，提交后的共同评估却将没有单一总包装作为拒绝依据。C-L3的最终接口保留极限非负参数，但主体证明已支持最终可积序列。这两个案例提示检查者明确自己要求的是新增数学论证还是已有结果的使用方式；附录R.1.5的独立调用使这个区别可验证。
+
+第二批的H1与M3也在三配置下全部交付。前者完成五个目标与反演、唯一性所需支持，后者完成共同概率空间、分位数分布和几乎处处收敛。这些成功交付与第一批的采用案例共同说明，组织评价应同时保留具体数学成果和实现它们的过程。\href{zh.pdf\#ref-41}{\mbox{[41,44]}}
+
+\subsection[历史证据：数学进展、审核与维护]{\texorpdfstring{\protect\hypertarget{r3}{}历史证据：数学进展、审核与维护}{历史证据：数学进展、审核与维护}}
+项目以往的审核及对应代码修订构成另一类证据，回答十一个任务组的比较无法独自解决的问题：数学工作在哪里积累，获接纳的命题能否按预期使用，修改怎样传到依赖它的调用代码，以及档案能否支持可信的进展叙述。它们的来源与抽样范围不同于实验主表；这些记录既不是追加试验，也不用于解释实验完成数。\href{zh.pdf\#ref-4}{\mbox{[4-11,32]}}
+
+附录R.3.1–R.3.3重建与原文对应的证明工作、整体组合、调用者迁移和获接纳定理的前提。附录R.3.4–R.3.6进一步检查判断身份、对象绑定、目标可比性和追踪选择，再讨论可以跨审核记录测量什么。附录R.3.7直接检查保存代码，检验更复杂的评价方法是否为所选属性增加信息。历史案例解释具体变化；它们具有数学细节，并不意味着统计分析中的每条关系都获得了有代表性的详细核查。\href{zh.pdf\#ref-10}{\mbox{[10,11,32]}}
+
+\subsubsection[移除公理不等于完成缺失推导]{\texorpdfstring{\protect\hypertarget{r3-1}{}移除公理不等于完成缺失推导}{移除公理不等于完成缺失推导}}
+归一化 Gamma 到 Dirichlet 的历史包含两种捷径。早期证明在 \nolinkurl{gamma_beta_bridge} 中使用公开公理；后续版本移除该桥接，却直接把归一化 Gamma 密度定义成目标 Dirichlet 公式，从而简化即得等式。由概率模型推出公式的必要推导仍缺失。后续工作补上乘积分布、归一化映射、单纯形支撑、投影密度和变量替换。改进来自连接模型与公式的新数学，而不只是公理声明消失。\href{zh.pdf\#ref-4}{\mbox{[4]}}；\href{zh-appendix.pdf\#l2-1}{附录 L.2.1}
+
+该案例具体说明\href{zh.pdf\#section-1-5}{第 1.5 节}的接口区别。两个定义之间已证明的转换可以是正当支持；代表未证明数学的名称，或为让目标成为恒真式而选取的定义，不能起相同作用。公理检查与原文对应处理的是不同失效方式。
+
+支持结果后来有两个实际使用者：\nolinkurl{prob_1_4} 和 \nolinkurl{ex_1_2_2}。共享密度识别并未免除各任务自身的命题、坐标图工作或 Beta 分支。后来把已证密度结论添加为具名父定理的第四个合取项，改变的是公开承诺所在位置。这也是进展，但不同于最初证明密度，也不同于提取共享文件。\href{zh.pdf\#ref-4}{\mbox{[4]}}；\href{zh-appendix.pdf\#b4}{附录 B.4}
+
+\subsubsection[局部证明、整体组装与下游迁移是不同工作]{\texorpdfstring{\protect\hypertarget{r3-2}{}局部证明、整体组装与下游迁移是不同工作}{局部证明、整体组装与下游迁移是不同工作}}
+矩母函数任务 \nolinkurl{prob_14_8} 的路线是把矩母函数延拓至复数带状区域，获得紧性与解析界，提取极限，再识别特征函数极限。整体论证完成前，历史中已有真实局部结果。多次给出\nolinkurl{stop}的数学路线检查仍认可这些局部成果，同时指出组装缺口：不同紧致片段上的极限必须来自同一个全局函数的限制。构造该函数并证明限制相容，才补上了单纯列出已完成局部引理无法完成的工作。\href{zh.pdf\#ref-6}{\mbox{[6]}}；\href{zh-appendix.pdf\#l2-3}{附录 L.2.3}
+
+完整单文件证明早于后来的支持模块拆分。使用者 \nolinkurl{prob_14_10} 此前已完成逼近与误差控制，并构造上游定理输入；最终局部改动只是一次调用，选取完整上游结论。但上游版本从依赖私有公理变为内部证成。因此，小规模局部差异和多个支持文件，会误导对数学工作何时、何处发生的解释。\href{zh.pdf\#ref-6}{\mbox{[6]}}；\href{zh-appendix.pdf\#b10}{附录 B.10}
+
+全变差修复暴露了另一种依赖。\nolinkurl{def_8_5} 保留公式，却加入原文的概率测度要求；调用者须在形成表达式处提供证据。对 \nolinkurl{def_10_5}，若将“测度是概率测度且距离收敛”改为“若测度是概率测度则距离收敛”，会使预期定义域之外出现空泛为真。实际修复通过依赖见证和局部实例传递所需证据。五次实质评审仅涉及两种主文件内容，其余事件来自调用者变化、注册失败和检查扩展。\href{zh.pdf\#ref-7}{\mbox{[7]}}；\href{zh-appendix.pdf\#l2-4}{附录 L.2.4}
+
+历史上，一些标为 \textbf{OBL} 的证明义务曾变成独立子任务，拥有各自候选、评审和完成状态传播。后续规则把它们吸收进父任务或支持文件，并要求重新评估组装后的父任务。任务分解仍会产出有用数学，但各部分必须接到最终公开定理及其调用者上。第 5、6 节考察这一衔接。\href{zh.pdf\#ref-5}{\mbox{[5]}}
+
+这些历史使\href{zh.pdf\#section-1-5}{第 1.5 节}的维护职责具体可见：局部证明、可靠上游依据、面向原文的公开定理和迁移后的调用者，可能在不同时点完成。它们也解释了后来为何要求历史 OBL 吸收后重新检查完整父任务。这一规则保留有用分解，同时拒绝用一组旧子任务通过意见替代新的整任务判断。\href{zh.pdf\#ref-5}{\mbox{[5]}}
+
+这种职责分工由更早的流水线演化而来；早期流程规定了规划、检索与候选选择阶段，已包含重排序、错误反馈和经验注入。后来的任务包编辑赋予作者更多自主权，同时保留明确验收控制。\href{zh-appendix.pdf\#l1}{附录 L.1}追溯这段发展；它与 A/B/C 比较是两回事。\href{zh.pdf\#ref-3}{\mbox{[3]}}
+
+\subsubsection[通过的条件定理仍可能没有任何可行实例]{\texorpdfstring{\protect\hypertarget{r3-3}{}通过的条件定理仍可能没有任何可行实例}{通过的条件定理仍可能没有任何可行实例}}
+这里涉及两个相依任务：\nolinkurl{thm_14_8} 证明通用中心极限定理，\nolinkurl{ex_14_4_3} 将它用于集券问题。六月材料是例题的条件性证明，八月候选是上游通用定理；它们不是同一个文件的早晚版本。下文分别检查例题前提、上游证明和应用所需的连接。\href{zh.pdf\#ref-8}{\mbox{[8]}}
+
+保存的集券例题以独立正整数几何变量模拟等待新券种。对 $N$ 种等概率券、已收集 $i$ 种的阶段，成功概率为 $p_{N,i}=(N-i)/N$。分析例题收集 $m_N=\lfloor(N+1)/2\rfloor$ 种；模型对阶段等待时间求和，均值为 $\sum_{i<m_N}1/p_{N,i}$，方差为 $\sum_{i<m_N}(1-p_{N,i})/p_{N,i}^2$。\href{zh.pdf\#ref-8}{\mbox{[8]}}
+
+四份已接受的六月快照在应用任何极限定理前就暴露矛盾。它们使用 $N=n+2$。第一行（某个 $N$ 对应的有限等待阶段集合）取 $N=2$，只需一种新券，包含成功概率为一的几何阶段，故方差为零。同一配置又要求严格正的归一化尺度。保存的 Lean 试探仅用允许的基础公理，就由零方差恒等式与尺度正性推出矛盾；无须外部上游中心极限定理前提。\href{zh.pdf\#ref-8}{\mbox{[8]}}；\href{zh-appendix.pdf\#l3}{附录 L.3}
+
+八月上游定理的一个失败候选已包含实质核心数学：在各坐标具有指定分布与独立性的典范乘积概率空间中，内部证明 Lindeberg 和 Lyapunov 分支。剩余要求是把具体独立行连接到该模型。该连接补上后，上游通用定理通过，但集券例题仍需教材归一化。令
+
+\[
+Z_N=\frac{T_N-\mathbb E T_N}{\sqrt{\operatorname{Var}(T_N)}},\qquad
+\frac{T_N-N\log2}{\sqrt{N(1-\log2)}}=a_N Z_N+b_N,
+\]
+最终一步需要 $a_N\to1$、$b_N\to0$，并在变化的仿射映射下转移分布收敛。后续工作证明有界均值误差与方差极限，并提供该转移。核心定理、分布连接和渐近归一化是不同成果。\href{zh.pdf\#ref-8}{\mbox{[8]}}
+
+这说明不能按历史通过／失败对数学内容排名。结论也有边界：分析的是保存的独立阶段模型；它与原始逐次抽券停止时间的等价性未另行交付。不能借助对几何等待时间的熟悉解释，暗中补上这一未证连接。
+
+其他情形也须区分目标修订与普通证明修复。\nolinkurl{prob_14_7} 中，独立逼近对与边缘收敛并未指定所展示极限的耦合：标准正态独立对的和方差为二，但选边缘极限 $X=Y=Z$ 会得到方差四。加入极限独立性改变了接受目标。\nolinkurl{prob_14_11} 中，$m/N\to1/2$ 不足以控制所需平方根尺度上的中心化误差：取 $N=k^4$、$m=N/2+k^3$，比例极限保持不变，标准化均值误差却发散。获接受的精确中心化结果回答的是修订后的问题。\href{zh-appendix.pdf\#l4}{附录 L.4}保留两项论证及对应原文决策。\href{zh.pdf\#ref-9}{\mbox{[9]}}
+
+\subsubsection[先识别不同判断，再衡量变化]{\texorpdfstring{\protect\hypertarget{r3-4}{}先识别不同判断，再衡量变化}{先识别不同判断，再衡量变化}}
+前述案例比较了数学工作与记录判断。要把比较扩展到审核档案，首先需要识别独立的意见：同一意见可能同时保存原始版和规范化版；程序可以在没有评审者参与时生成失败记录；同一候选也可能接受多次真正的审核。重建依据结果与输入的摘要值、候选及上下文，以及连接审核和应用的记录指针，区分这些情况。措辞相似本身不足以合并记录。\href{zh-appendix.pdf\#c1}{附录 C.1}给出规则及各处理阶段的计数。\href{zh.pdf\#ref-10}{\mbox{[10]}}
+
+这些区别会改变数据的含义。应用失败不自动构成数学否决；把同一意见保存两次也不会产生两个判断。重建分别处理记录身份与数学可比性，因此形成的不同数量不能视为同类对象依次缩减的总数。\href{zh.pdf\#ref-10}{\mbox{[10]}}
+
+只检查主文件也会遗漏实际变化。98 条历史关系的主文件未变，但一同提供给评审的其他对象不同，其中十三条从失败变为通过。对 \nolinkurl{thm_11_8}，后期上游原文已恢复、早期原文尚未恢复，因此能够确认材料变化，却不能确定数学差别。对 \nolinkurl{thm_9_7}，登记的早期候选不同于实际被评候选，该关系因而退出绑定明确的比较。这些实例解释了为什么仅凭主文件相同，不能认定评审者在相同材料上作出了不一致判断。\href{zh.pdf\#ref-9}{\mbox{[9,10]}}
+
+\subsubsection[通过仍在增加，但细读案例只解释了部分增长]{\texorpdfstring{\protect\hypertarget{r3-5}{}通过仍在增加，但细读案例只解释了部分增长}{通过仍在增加，但细读案例只解释了部分增长}}
+分析比较同一任务前后的判断，先要求每个判断对应到预期候选，再选出有肯定证据表明数学目标可比的子集。这是两种不同检查：记录完整，也可能评的是修改后的任务。\href{zh-appendix.pdf\#c3}{附录 C.3}-\href{zh-appendix.pdf\#c4}{C.4}说明选择方法，包括附录R.3.4指出的排除项，以及对目标已变或仍未确定的处理。\href{zh.pdf\#ref-10}{\mbox{[10]}}
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\par\nopagebreak\medskip\noindent\begin{minipage}[t]{\linewidth}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.26\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}}
+\toprule
+\textbf{历史选择范围} & \textbf{比较数 / 任务数} & \textbf{早期 → 后期通过标签} & \textbf{含义}\\\midrule
+
+{广义直接绑定比较} & {461 / 248} & {116 → 324} & {所选档案中记录的接纳增长}\\
+{肯定目标判断与对象资格均满足} & {128 / 79} & {28 → 45} & {有目的考察且可比性合格的子集中，接纳仍增长}\\
+{广义集合与详细异常队列的交集} & {163 条比较} & {32 → 33} & {交集中只有一次净新增通过}\\
+{广义集合在该队列之外} & {298 条比较} & {84 → 291} & {其余 207 次净新增通过在此}\\
+\bottomrule\end{tabular}\end{minipage}\par\medskip\endgroup
+\textbf{目标与对象均合格后，通过仍然增加。}第二行是已检查子集中的正面描述结果。它不是广义集合的随机样本，因此两者趋势不同，不能全部归因于数学目标变化。不同关系可以共享端点；关系较多的任务在按关系汇总时权重也更高。附录同时报告按关系和按任务加权的变化及其定义。\href{zh.pdf\#ref-10}{\mbox{[10]}}
+
+\textbf{精读案例尚未解释广义增长的大部分。}后两行说明广义集合与另一组数学及记录细查工作的重合程度。它们解释了为什么前述案例不能代替对整个趋势同等深入的分析，并不表明队列之外的增长有误。几种选择范围共同区分了观测趋势、可比性得到确认的部分，以及底层变化已被细读的部分。\href{zh-appendix.pdf\#c4-2}{附录 C.4.2}给出集合构造，\href{zh-appendix.pdf\#c3}{C.3}保留转移表。\href{zh.pdf\#ref-10}{\mbox{[10,32]}}
+
+\subsubsection[收益递减的解释未通过任务组成检查]{\texorpdfstring{\protect\hypertarget{r3-6}{}收益递减的解释未通过任务组成检查}{收益递减的解释未通过任务组成检查}}
+失败后追踪先在保存的任务历史中固定失败起点，再观察后续修订，并在每一步检查目标可比性和对象绑定。有些路径因保存片段结束而终止；更多路径因目标可比性未确立而退出严格比较。这种退出本身既不证明任务失败，也不证明数学目标已经变化。\href{zh-appendix.pdf\#c5}{附录 C.5}说明起点与退出规则。\href{zh.pdf\#ref-10}{\mbox{[10]}}
+
+观测步骤呈现一个容易误读的规律：合格首步有 22/69 获接纳，后续步骤为 3/31。但后续步骤来自尚未通过、且仍可观察的路径。已有分析进一步检查哪些任务提供了这些后续步骤：只有十五个任务，而它们的十九个首步中仅有一次通过。较低的后步骤比例因而与进入后续追踪的任务组成纠缠，不能据此识别再修订一次的效果。\href{zh.pdf\#ref-10}{\mbox{[10]}}
+
+这一检查改变了对表面下降的解释：后期观察更多来自那些在第一步就较少成功的任务。从相同起点放宽追踪，可以到达更多记录中的通过结果，但放宽可比性回答的是另一个关于记录可达性的问题。\href{zh-appendix.pdf\#c5}{附录 C.5}-\href{zh-appendix.pdf\#c9}{C.9}保留各项计数、风险集与放宽路径，供读者考察两种结果。
+
+\subsubsection[保存代码检查区分编译、证明捷径和定义行为]{\texorpdfstring{\protect\hypertarget{r3-7}{}保存代码检查区分编译、证明捷径和定义行为}{保存代码检查区分编译、证明捷径和定义行为}}
+代码检查选取十四对冻结文件：六对开发样本，另八对在排除已暴露任务后，按带固定随机种子的分层规则选择。代码对身份在后续资格与执行结果之前固定。这不是代表性基准，但保留了失败和不可用测量，没有替换不方便的代码对。\href{zh.pdf\#ref-11}{\mbox{[11]}}；\href{zh-appendix.pdf\#d1}{附录 D.1}
+
+两种公理规则检查目标声明及其传递依赖：宽松规则拒绝占位证明公理 \nolinkurl{sorryAx}；严格规则只允许 \nolinkurl{propext}、\nolinkurl{Classical.choice}、\nolinkurl{Quot.sound}，或完全不依赖公理。严格通过必然意味着宽松通过。这是为本次代码检查选定的两条规则，不是项目早期和后期的两套政策；它们均不能确认命题忠实表达原文。\href{zh.pdf\#ref-11}{\mbox{[11]}}
+
+28 个文件中十七个可编译，十六个产出所需具名声明。十六个提取目标均通过保存的两种公理规则；额外一个可编译文件缺少所请求声明。另八对中，每侧均六个可编译，但 \nolinkurl{def_13_2} 从失败变成功，\nolinkurl{prob_10_1} 反向变化。总体计数不变掩盖了产物层面的不同转移。历史运行器没有跨端点类型相等关卡，因此双方提取成功仍不能建立共同数学目标。\href{zh.pdf\#ref-11}{\mbox{[11]}}
+
+\nolinkurl{prob_10_1} 给出具体语义发现：早期定理把所求结论原样作为前提并返回。后期源码移除此缺陷，但文件在保存的构建环境中失败。证据支持移除了直接捷径，不认证完整修复实现。这是值得同时报告的不同结果。
+
+\nolinkurl{def_2_1} 的原文约定称集合可数，当且仅当它与全体自然数双射；早期库谓词也接受有限集。空集满足后者，却不可能与自然数双射，因为零无原像。保存的 Lean 见证检查早期谓词、后期谓词和书面参照，包括后期谓词与参照对全部集合一致。这把有争议的解释转为可检验形式命题。将原文连接到参照的解释仍是人工智能辅助判断，不是独立专家认证；但见证确立了形式谓词的精确行为。\href{zh.pdf\#ref-11}{\mbox{[11]}}；\href{zh-appendix.pdf\#d5}{附录 D.5}
+
+同一研究还问：把两个候选都放到两套规则下评估，是否比公平的固定规则比较提供更多信息。对检查过的公理与直接前提属性，有效规则相同或存在已知蕴含，额外单元格没有增加答案。七个构造证明场景表明，刻意安排的条件下，额外单元格可以增加答案；它们验证比较程序，并非新增真实任务成功。\href{zh-appendix.pdf\#appendix-d}{附录 D}保留这些构造场景与历史负结果的区别，以及全部代码对状态和问题计数。更复杂的评估表只有在新增测量解决了较简单、已利用逻辑关系的比较无法回答的问题时才有价值。\href{zh.pdf\#ref-11}{\mbox{[11]}}
+
+\section[工具反馈、后续行动与成果使用]{\texorpdfstring{\protect\hypertarget{appendix-s}{}工具反馈、后续行动与成果使用}{工具反馈、后续行动与成果使用}}
+\subsection[设计与资料范围]{\texorpdfstring{\protect\hypertarget{s1}{}设计与资料范围}{设计与资料范围}}
+本研究追踪智能体怎样查找数学工具、处理检查反馈，并把局部成果用于最终证明。材料为第二批十一组任务在 A、B、C 下各一次主运行，共 33 次；共同数学验收均为通过。分析沿用原验收和投入数据，补充完成过程的证据。
+
+事件抽取覆盖范围内全部公开工具记录：163 份角色派发记录对应 135 个去重会话，共 4,233 个事件，其中实际工具调用 4,054 次、工具发现 179 次。请求与返回全部配对，按会话和调用标识去重；续接派发和并行角色的日志副本不增加调用数。终验、专项审核对照、额外修复及工程续作不进入主运行分母，第一批单列。范围和原始文件对应见\href{research/extraction/README.zh-CN.md}{抽取说明}与\href{research/extraction/source_manifest.json}{来源清单}。
+
+下表列本次实际选读的六份一手来源及用途。工程文章、研究发布和预印本按实际体裁引用；固定版本、阅读章节和获取摘要见\href{research/literature/acquisition_manifest.json}{文献清单}。这些材料帮助制定规则，本项目的具体标签由研究者另行定义。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{来源} & \textbf{本次用途}\\\midrule\endfirsthead
+\toprule
+\textbf{来源} & \textbf{本次用途}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{Anthropic，\href{https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents}{Demystifying evals for AI agents}，工程文章} & {并列检查交互过程与最终成果，容许有效替代路线}\\
+{Anthropic，\href{https://www.anthropic.com/engineering/infrastructure-noise}{Quantifying infrastructure noise in agentic coding evals}，工程报告} & {记录环境约束，分开基础设施问题与任务表现}\\
+{Anthropic，\href{https://www.anthropic.com/engineering/multi-agent-research-system}{How we built our multi-agent research system}，工程文章} & {核对阶段成果、跨角色交接及后续使用}\\
+{Microsoft Research，\href{https://arxiv.org/html/2411.04468v1}{Magentic-One}，预印本 v1} & {在成功运行中查找问题，并结合状态判断重复行动}\\
+{Google DeepMind 等，\href{https://arxiv.org/html/2602.10177v3}{Towards Autonomous Mathematics Research / Aletheia}，预印本 v3} & {分开找到资料、核实适用与完成证明}\\
+{METR，\href{https://metr.org/blog/2024-11-22-evaluating-r-d-capabilities-of-llms/}{RE-Bench 官方研究介绍}，研究发布} & {保留完整投入，说明并行尝试与时间预算}\\
+\end{longtable}\endgroup
+\subsection[每项运行的固定双起点]{\texorpdfstring{\protect\hypertarget{s2}{}每项运行的固定双起点}{每项运行的固定双起点}}
+每次运行按实际时间选择两项：首次证明或接口诊断，以及首次针对具体数学需要的主动检索。前者要求源文件已被读取，反馈涉及类型、名称、语法、实例或证明目标；文件不存在、模块载入失败和工具未启动另记环境问题。后者要求主动选择关键词、声明类型或源码段；按任务要求批量读入全部上游不自动算检索。该规则在开发审查后收窄为 v1.1，保留旧版，属于事后设计。完整定义见\href{research/semantic/PROTOCOL.zh-CN.md}{标注协议}。
+
+标注围绕同一可识别需求，连接检索、编辑、复验和交接。相同文件名、同一会话或任意后续检查通过，均不足以建立连接；跨角色须有派发、返回及候选对应。两个起点在 25 次运行中属于同一需求，因此保留 66 条起点记录，分别解释两组各 33 条，不能相加作为独立恢复次数。固定首项覆盖了每次运行的早期过程，并未普查全部检索与恢复片段。
+
+首次诊断有 19 项发生于实现、14 项发生于接口探测。首次检索对应的后续过程有 29 项可确认至少一项相关声明在最终源码中显式使用，2 项仅确认源码保留，1 项被替换，1 项未确定。这里的采用指所追踪过程中的资源或实现，并非每个首次命中的名称都被使用。“源码保留”也不等于已经核实其被最终定理调用。
+
+下表从\href{research/semantic/adjudicated_annotations.json}{裁决后标注}生成，使用正文任务编号。进展记录分别可能停于定位候选声明、部分实现或局部通过，终点深度不同，不据其计数排列配置优劣。B-L6 的诊断片段未见通过，而整项任务最终通过；现有连接不足以倒推该试验后来已恢复。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.1\linewidth}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.19\linewidth}>{\raggedright\arraybackslash}p{0.19\linewidth}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.1\linewidth}}
+\toprule
+\textbf{运行} & \textbf{首诊断场景} & \textbf{诊断后进展} & \textbf{检索后进展} & \textbf{检索过程最终使用} & \textbf{同一需求}\\\midrule\endfirsthead
+\toprule
+\textbf{运行} & \textbf{首诊断场景} & \textbf{诊断后进展} & \textbf{检索后进展} & \textbf{检索过程最终使用} & \textbf{同一需求}\\\midrule\endhead
+\midrule\multicolumn{6}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{A-L1} & {实现} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+{B-L1} & {实现} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+{C-L1} & {实现} & {局部通过} & {定位候选声明} & {直接使用} & {是}\\
+{A-L2} & {接口探测} & {局部通过} & {局部通过} & {直接使用} & {否}\\
+{B-L2} & {接口探测} & {实现推进} & {局部通过} & {直接使用} & {是}\\
+{C-L2} & {接口探测} & {改用替代接口} & {定位候选声明} & {直接使用} & {是}\\
+{A-L3} & {实现} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+{B-L3} & {实现} & {局部通过} & {局部通过} & {直接使用} & {否}\\
+{C-L3} & {实现} & {局部通过} & {定位候选声明} & {直接使用} & {否}\\
+{A-L4} & {接口探测} & {定位候选声明} & {局部通过} & {直接使用} & {是}\\
+{B-L4} & {接口探测} & {实现推进} & {实现推进} & {直接使用} & {是}\\
+{C-L4} & {接口探测} & {实现推进} & {定位候选声明} & {直接使用} & {是}\\
+{A-L5} & {接口探测} & {定位候选声明} & {局部通过} & {直接使用} & {是}\\
+{B-L5} & {实现} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+{C-L5} & {实现} & {局部通过} & {定位候选声明} & {直接使用} & {否}\\
+{A-L6} & {实现} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+{B-L6} & {接口探测} & {片段未见通过} & {定位候选声明} & {直接使用} & {否}\\
+{C-L6} & {实现} & {局部通过} & {定位候选声明} & {直接使用} & {否}\\
+{A-L7} & {接口探测} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+{B-L7} & {接口探测} & {实现推进} & {局部通过} & {源码保留} & {是}\\
+{C-L7} & {实现} & {局部通过} & {定位候选声明} & {直接使用} & {否}\\
+{A-M1} & {实现} & {局部通过} & {局部通过} & {源码保留} & {是}\\
+{B-M1} & {实现} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+{C-M1} & {实现} & {局部通过} & {定位候选声明} & {直接使用} & {是}\\
+{A-M2} & {接口探测} & {定位候选声明} & {局部通过} & {已替换} & {是}\\
+{B-M2} & {接口探测} & {实现推进} & {局部通过} & {直接使用} & {是}\\
+{C-M2} & {实现} & {局部通过} & {定位候选声明} & {直接使用} & {是}\\
+{A-M3} & {接口探测} & {局部通过} & {局部通过} & {直接使用} & {否}\\
+{B-M3} & {实现} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+{C-M3} & {实现} & {局部通过} & {定位候选声明} & {直接使用} & {是}\\
+{A-H1} & {实现} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+{B-H1} & {接口探测} & {局部通过} & {定位候选声明} & {未确定} & {是}\\
+{C-H1} & {实现} & {局部通过} & {局部通过} & {直接使用} & {是}\\
+\end{longtable}\endgroup
+\subsection[审查与可追溯证据]{\texorpdfstring{\protect\hypertarget{s3}{}审查与可追溯证据}{审查与可追溯证据}}
+自动程序先提供搜索、修改和检查的粗分类候选。复核读取实际输入与完整必要输出，识别标准输入检查、复合命令中的具体目标、旧警告重放，以及某次构建通过后另一命令失败的情况。同文件检查序列只帮助定位，不能直接计为恢复。针对已发现问题的 13 个真实事件和 5 个合成边界回归全部通过；这是程序回归结果，未测量总体分类准确率。见\href{research/review/code_audit/regression_results.json}{回归记录}。
+
+A、C两组共44条由其他代理非盲复核；B组22条由主调查者逐条复核并组织补查，之后汇总为66条裁决记录。初标、复核及改动分别保存；参与者均为模型代理，没有真人专家真值或无偏准确率估计。重点核对首次合格事件、同需求连接和最终源码使用，避免由导入或名称出现直接推断采用。
+
+A-M2 与 A-M3 显示局部通过和成果送达是两步。首次支持者已有局部检查通过记录，但返回中补丁为空、未应用且成果列表为空。作者后来读取的草稿分别仍为 200 行和 65 行输入材料。后续重新委派才出现可核对的非空补丁和作者文件复制；A-M2 中间还有一次导出失败。A-M2 的首次候选最终被替换；A-M3 的首次支持候选被替换，但作者较早发起的检索过程仍可追到后来的实际使用。相关调用、文件摘要和原始行号见\href{research/semantic/review_A.json}{A 配置逐条复核}。
+
+B-M3 则展示了连续处理过程：作者检索分布函数与分位数资料，扩大查询并委派支持实现；支持者因项目函数与库函数表达不同而报错，直接转换仍失败。随后先证明两个函数相等，再重写极限、单调性和右连续性目标，支持文件通过。最终源码保留该桥接和分位数逆像结果。这确认了局部应用及使用，尚不把这一局部终点当整项表示定理完成。事件链与源码位置见\href{research/semantic/adjudicated_annotations.json}{裁决记录中的 B-M3 两项}；\href{research/extraction/events.jsonl}{事件索引}保存请求、返回及各自原始文件行号，可与\href{research/extraction/source_manifest.json}{来源清单}互查。
+
+\subsection[环境记录、原型检查与投入]{\texorpdfstring{\protect\hypertarget{s4}{}环境记录、原型检查与投入}{环境记录、原型检查与投入}}
+实际错误输出中，173 次调用明确报告命令查找失败，覆盖 33 次运行；其中 49 次外层退出码仍为零。同次调用的多条此类诊断只计一次，不同命令类别可重叠。\nolinkurl{apply_patch} 查找失败出现 66 次，涉及全部 33 次运行、64 个会话。因此“零退出码”不能替代对子步骤反馈的读取，跨运行反复出现也不等于同一会话持续忽略反馈。查找失败需结合路径和拼写解释；例如 \nolinkurl{lake} 查找失败不证明镜像未安装该工具。这些是命令查找失败的观测量，不代表全部环境故障或浪费时长。见\href{research/analysis/environment_summary.json}{环境汇总}。
+
+研究原型提供启动工具说明和参数预检，生产程序未改。隔离环境探测核实可用工具；参数静态回放覆盖 3,896 次历史调用，拒绝原规则判为无效的 9 次，接受其余 3,887 次，与原参数规则一致；另有 29 个合成边界检查通过。回放不执行历史命令，参数有效也不表示执行或数学任务成功。证据见\href{research/interventions/README.zh-CN.md}{原型说明}及\href{research/interventions/argument_replay/summary.json}{参数回放汇总}。尚未进行模型效果对照，不能据此报告错误减少或速度提升。
+
+所有运行时间保留原值及原统计口径，正常等待仍计入。交错工作的两个事件之间只能报告经过时间；无独占证据时不归为某次检索用时，也不将并行角色时间相加作为整次运行时间。本附录不通过删去间隔缩短实验投入。
+
+\section[第27版展开案例的证据位置]{\texorpdfstring{\protect\hypertarget{appendix-t}{}第27版展开案例的证据位置}{第27版展开案例的证据位置}}
+本附录为正文新增解释提供紧凑的证据入口。它从已有记录中选取6项运行的65个调用事件和12条裁决记录，逐项原样保存于\href{verification/revision27/expanded_case_events.jsonl}{调用子集}与\href{verification/revision27/expanded_case_annotations.json}{裁决子集}。\href{verification/revision27/expanded_case_index.json}{索引}列出调用编号、角色、时间、原文件物理行及最终源码位置。子集用于复读，没有增加运行、重新分类或扩大附录S的统计范围。
+
+\subsection[B-M3：已经有逐点引理，后来补出函数改写]{\texorpdfstring{\protect\hypertarget{t1}{}B-M3：已经有逐点引理，后来补出函数改写}{B-M3：已经有逐点引理，后来补出函数改写}}
+主作者首次检索见原作者记录的13–14行，扩大查询见15–16行，委派见20–21行。下表行号均指同一支持作者记录，完整文件路径与调用编号见索引中B-M3的条目。每行分别给出调用行和返回行。
+
+\begingroup\small\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3\linewidth}>{\raggedright\arraybackslash}p{0.64\linewidth}}
+\toprule
+\textbf{原记录行} & \textbf{可核对的动作与返回}\\\midrule\endfirsthead
+\toprule
+\textbf{原记录行} & \textbf{可核对的动作与返回}\\\midrule\endhead
+\midrule\multicolumn{2}{r}{\small 续下页}\\\endfoot\bottomrule\endlastfoot
+{21–22} & {读取分布函数与相关表示源码}\\
+{41–42} & {写入并检查初稿；已有逐点相等引理，函数目标仍报错}\\
+{43–44} & {尝试直接转换，返回表达式并非定义上相同}\\
+{45–46} & {读取当前文件与条件完备序的源码}\\
+{47–48} & {试查上确界相关候选，其中出现未知名称}\\
+{49–50} & {调整简化和上确界证明，函数目标错误仍在}\\
+{51–52} & {从已有逐点引理推出函数等式并改写，同时修订其他界；检查通过，保留一项样式警告}\\
+\end{longtable}\endgroup
+\href{research/final_sources/acceptance/r2-m3-b/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8_support.lean}{最终支持文件}在17–18行保留逐点引理，22–24行用于分布函数左端极限，27–29、32–34、38–40行用于其他性质；61–62行给出分位数与分布函数的对应关系。这些位置支持正文关于局部成果及最终保留的判断。原初稿中已有的逐点证明与后来增加的函数等式必须按顺序区分。
+
+\subsection[B-M1：意见送达、索引修订与最终调用]{\texorpdfstring{\protect\hypertarget{t2}{}B-M1：意见送达、索引修订与最终调用}{B-M1：意见送达、索引修订与最终调用}}
+审核意见在2026年9月13日21:49:01.258 UTC返回主作者，位于原作者记录14行。作者在21:49:16.818再查停止过程接口，21:52:38.908写入实现；索引转换修订后，21:55:48.220返回检查通过。这些时间定位顺序，未计算独占的检索用时。
+
+\href{research/final_sources/acceptance/r2-m1-b/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean}{最终文件}在19、21行处理有限索引转换，56行使用停止下鞅接口，61–62行处理负过程，65行合成鞅。意见的实际返回与实现位置另见\href{research/semantic/review_B_addendum.json}{原有补查}。
+
+\subsection[A-L1与B-L6：按目标核对不同终点]{\texorpdfstring{\protect\hypertarget{t3}{}A-L1与B-L6：按目标核对不同终点}{A-L1与B-L6：按目标核对不同终点}}
+A-L1的索引条目保留同一任务文件的检查、读取、修改和复验。\href{research/final_sources/acceptance/r2-l1-a/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean}{最终文件}在49行保留观察历史相关的可测性证明，121行使用有限和可积性接口，140行开始最终鞅定理。正文用这些位置核对相应工作是否保留。
+
+B-L6的三项平方积分试验见该运行的首次诊断条目；高斯矩资料的采用见首次检索条目，二者起点不同。\href{research/final_sources/acceptance/r2-l6-b/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean}{最终文件}在23行使用分布映射等式，25行转移均值积分，33行转移平方积分，44行开始单传感器公式。它们支持相应采用结论，没有为三项试验提供通过证据。
+
+\subsection[对应关系及复读范围]{\texorpdfstring{\protect\hypertarget{t4}{}对应关系及复读范围}{对应关系及复读范围}}
+第4章的数学与历史解释对应附录R.1–R.3及其中的原始来源；本附录只补充第5章所展开过程的定位。A-M2、A-M3的空补丁与候选替换继续以\href{research/semantic/review_A.json}{原有A组复核}为依据。保存的全量调用、原标注、复核结果和最终源码均沿用第26版内容；本版对子集逐项比较，核对其与全量记录一致。这里完成的是证据复读和正文解释，没有重新运行证明实验。
+
+\end{document}\n

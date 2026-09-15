@@ -1,0 +1,25 @@
+[original lines 1-24]
+# Technical appendix: probability-proof workflows and trajectories
+
+<!-- English substantive revision 9. Experimental acceptance remains frozen at 09:22 Beijing time, 12 September 2026. -->
+
+## Abstract
+
+This appendix supports the substantive English revision 9. Experimental acceptance remains frozen at 09:22 Beijing time on 12 September 2026, with the selected candidates and current labels retained from revision 7. It includes the historical reconstruction, selection checks, saved-code measurements and methodological negative result needed to inspect the main report, alongside detailed mathematical and operational trajectories. C and D reproduce essential methods and results rather than replacing them with links to older editions; G.1-G.4 restore the earlier assistance investigations; K.8 retains the original outcome tables; L preserves the historical proof arguments. M and N retain the recorded measurements, version distinctions and acceptance boundaries. No solver runs or model evaluations were added for this edit.
+
+## Main text
+
+## Appendix A Provenance and chronology
+
+This appendix explains what each source establishes and how event dates are located.
+
+### A.1 What each source can establish
+
+| Material | Supported observation | Interpretation limit |
+|---|---|---|
+| Code and documentation in commits | Interfaces, rules, and execution paths present in a version | A commit date need not mark first implementation or use; one commit may consolidate several changes |
+| Candidates, support files, and diffs | Changes to statements, premises, proof bodies, imports, and calls | A shorter file need not contain less proof; identical main files can have different dependencies |
+| Review, build, and application receipts | What was checked, the recorded judgment, and the program result | Model review is not human ground truth; review acceptance differs from successful state application |
+| Operating instructions and handoffs | Actions requested of a person or agent | A request does not establish execution; a retrospective summary may omit the original motivation |
+| Frozen analyses and case investigations | Counts under stated inclusion rules, code identity, and mathematical interpretation | Purposive cases are not random samples; recheck compatibility is not a new mathematical review |
+

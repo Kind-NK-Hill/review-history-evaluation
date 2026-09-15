@@ -1,0 +1,62 @@
+[
+  {
+    "slot": "r2-m1-a",
+    "file": "M1.lean",
+    "sha256": "275f1e5a5538c9d1e9fd123d9de3c0a8db63899f8cd56f5202301566d2d85adb",
+    "exit_code": 0,
+    "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+    "original_volume_read_only": "rep26-p6-tech-9b6c34dede5c-cce478-work",
+    "command": [
+      "docker",
+      "run",
+      "--name",
+      "report23-check-m1",
+      "--network",
+      "none",
+      "--mount",
+      "type=volume,source=rep26-p6-tech-9b6c34dede5c-cce478-work,target=/work,readonly",
+      "--mount",
+      "type=bind,source=D:\\Grad_Study\\Practimum\\Formalization\\reports\\reading_sessions\\chapters4_5_revision20_20260914\\evaluation_019,target=/checks,readonly",
+      "--entrypoint",
+      "/bin/bash",
+      "-w",
+      "/work/ProbabilityTheoryFormalization",
+      "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "lake env lean /checks/M1.lean"
+    ],
+    "output": "/checks/M1.lean:19:6: warning: Try `simp at hω` instead of `simpa using hω`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n'check_optional_stopping' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  {
+    "slot": "r2-l3-c",
+    "file": "L3.lean",
+    "sha256": "6d937919f832601860eae7ff7164eb7b687c572f47f39ce0bae37546c053870c",
+    "exit_code": 0,
+    "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+    "original_volume_read_only": "rep26-tech-50b12251c5fc-4e9935-work",
+    "command": [
+      "docker",
+      "run",
+      "--name",
+      "report23-check-l3",
+      "--network",
+      "none",
+      "--mount",
+      "type=volume,source=rep26-tech-50b12251c5fc-4e9935-work,target=/work,readonly",
+      "--mount",
+      "type=bind,source=D:\\Grad_Study\\Practimum\\Formalization\\reports\\reading_sessions\\chapters4_5_revision20_20260914\\evaluation_019,target=/checks,readonly",
+      "--entrypoint",
+      "/bin/bash",
+      "-w",
+      "/work/ProbabilityTheoryFormalization",
+      "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+      "--noprofile",
+      "--norc",
+      "-c",
+      "lake env lean /checks/L3.lean"
+    ],
+    "output": "'check_scheffe' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  }
+]

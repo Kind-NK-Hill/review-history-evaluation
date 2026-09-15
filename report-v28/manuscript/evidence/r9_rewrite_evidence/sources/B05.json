@@ -1,0 +1,312 @@
+{
+  "epoch": 1789133741.0921803,
+  "schema": "consistency.full_source_contract_scan.r2",
+  "original_task_scan_sha256": "4d289a51ac2131aed4238e85f6f34dc0c2aa69f458ced6ddc611451fa77d1db4",
+  "all_11_source_task_texts_read": true,
+  "all_candidate_feedback_semantics_complete": false,
+  "all_upstream_lean_proofs_checked": false,
+  "rows": [
+    {
+      "label": "L1",
+      "group_id": "prob_13_9",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\prob_13_9\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "b97a02c0e2e6e0604890556993927a0f2f910137e8340791acd1290753ff9f02"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\prob_13_9\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "a560db2dd7a38b9b22e7c4cfdb191d6f98c180e5d6cc8561ff2cd773e2fb9c1b"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\prob_13_9\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "ae6acb6257e3d11d4c5196b924a299434b6bd4e5b6a87995a84c2e6a2a1ea37e"
+      },
+      "source_scope_and_required_steps": "索引从正指标开始、X0=0、自然滤过与平凡初始σ代数；创新项/部分和可积与适应、条件均值为零必须由源条件闭合。",
+      "risk_and_uniform_interpretation": "避免把抽象鞅组装接口的额外可积/适应条件误当源条件。等价自然滤过可接受，须有实际接入。",
+      "scan_status": "no_new_textual_contradiction_identified",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "源转录仅称随机变量并出现条件期望；TASK明确补入每项可测可积、X0=0及平凡初始滤过，作者应依已交付TASK实现。",
+        "proof_obligation": "创新项及部分和的可积、适应、一步条件均值必须导出，不能额外要求调用者给出。",
+        "remaining": "逐份原候选与全部上游定义的逐义务基线绑定仍待完成。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "L2",
+      "group_id": "L2_thm_11_4_to_11_5",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\L2_thm_11_4_to_11_5\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "42de9c21cb60362d7b94b91f6140f4ca131d7c3fe5e6ed3f552fa2d823b4e2a5"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\L2_thm_11_4_to_11_5\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "41418a41fe5bc1b65a9a626bdb1acba4bb10ed4aeaaf59b460c20e2fa7a960a1"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\L2_thm_11_4_to_11_5\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+      },
+      "source_scope_and_required_steps": "两两不相关与二阶矩、有限方差可加、切比雪夫及样本均值概率收敛。",
+      "risk_and_uniform_interpretation": "通用协方差展开与本题可加性目标不能混为一类；G/S双解释对三原候选一致重评。",
+      "scan_status": "registered_symmetric_reassessment",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "原不相关方差可加及弱大数定律；通用协方差基础与目标结论前提化区分。",
+        "resolution": "四个原候选G/S敏感性已经实际重评，见L2_RESULT_MATRIX.json。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "L3",
+      "group_id": "L3_prob_7_6_to_ex_10_3_2",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\L3_prob_7_6_to_ex_10_3_2\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\L3_prob_7_6_to_ex_10_3_2\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\L3_prob_7_6_to_ex_10_3_2\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+      },
+      "source_scope_and_required_steps": "非负可测、几乎处处收敛、积分趋于同一有限值；允许最终尾部可积。密度、全变差、依分布及正态正/零方差分支齐全。",
+      "risk_and_uniform_interpretation": "实数积分序列的默认可积约定与非负扩展积分允许初始无穷的读法需分开。A与B原公开Scheffe主定理都要求逐项可积，却原A通过/B不通过；全体A/B/C纳入同一补充复核。",
+      "scan_status": "new_same_behavior_inconsistency_located",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "源文仅显式要求fn非负可测；TASK把fn、f并列非负可测且明确允许最终可积表述。",
+        "resolution": "F/E原初评保留；看到这些结果后追加T解释登记，完整扩展积分到最终可积包装另作更强源覆盖诊断。四个原候选对称裁决，其他前提独立核查。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "L4",
+      "group_id": "L4_thm_8_6_to_ex_8_4_3",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\L4_thm_8_6_to_ex_8_4_3\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "b3e7f62748ae7add70e506351cbcc05e869330f20ca509fcf2e4a5870f4896b7"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\L4_thm_8_6_to_ex_8_4_3\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "06bf4e8f2a2a8a2966f6249c7d9ef3d3e8c8b8be947be226ae4d90833bd6e214"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\L4_thm_8_6_to_ex_8_4_3\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+      },
+      "source_scope_and_required_steps": "从事件上确界建立全变差半和/半积分，正差事件、两侧界及伯努利/泊松参数端点。",
+      "risk_and_uniform_interpretation": "TASK显式修正泊松尾项及最终表达式，属于已交付的转录澄清；不能称认证原书勘误。检查不能把通用基础与预给本题公式混淆。",
+      "scan_status": "explicit_transcription_clarification_already_in_input",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "源包括非负整数离散半和和实密度半积分，TASK推广到共同可数支撑/共同支配测度，要求构造达到上界的正差事件。",
+        "source_transcription": "泊松尾的转录出现e^{λ}与最终式内部不一致。TASK事先明确采用1-e^{-λ}-λe^{-λ}，不是本次临时修改，也不认证原书勘误。",
+        "boundary": "λ=0、1和无穷可求和；额外Polish/标准Borel背景已由TASK排除为目标。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "L5",
+      "group_id": "L5_prob_8_7",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\L5_prob_8_7\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "eb2730f1b2d14f931d6f1581b2ecc1038ebdc5f54b8e8cb1b9fab7615421ec01"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\L5_prob_8_7\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "20dac8a2bd9d4b97949f78d641aafbed4c759fa5b82cc71ba795db5be9017aab"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\L5_prob_8_7\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+      },
+      "source_scope_and_required_steps": "最大耦合的概率性、边缘、对角/非对角质量；公共质量0和1两端点。",
+      "risk_and_uniform_interpretation": "等价可实现耦合允许；不能只因结构不同扣分。退化分支和所需空间/对角事件可测性需检查，正文不能把边缘或最大性当假设。",
+      "scan_status": "no_new_textual_contradiction_identified",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "源是实值分段连续密度，TASK推广为共同支配密度并允许等价可实现耦合测度。",
+        "boundary": "公共质量0、1必须分支；混合测度的两个边缘及最大性均需实证。对推广空间的相等事件可测性需随实际候选类型和上游定义核查，不能无条件宣称任意可测空间对角可测。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "L6",
+      "group_id": "L6_prob_12_5",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\L6_prob_12_5\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "c04f1eead9f0fd5910940cf2c5570892f66e630520925d7ac639a7cd75f19479"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\L6_prob_12_5\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "2858a351c7a2f0199f17c6595086b153e1610c8f1a36f7f6f34faa735aa307d6"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\L6_prob_12_5\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+      },
+      "source_scope_and_required_steps": "从高斯噪声及独立矩条件导出真实一/二传感器MSE二次型、全局最优、分母/退化边界。",
+      "risk_and_uniform_interpretation": "一般二阶矩接口合法，但TASK明确要求由原高斯条件实例化；数学一般化与交付源实例是两项。",
+      "scan_status": "explicit_source_instantiation_obligation",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "X仅一二阶矩，噪声高斯、零均值与独立，双传感器相互独立。TASK明确要求把一般二阶矩接口实例化回原高斯条件。",
+        "boundary": "误差二次型与交叉项消去、全局最优及分母为零分支都必须闭合；驻点/误差公式不可作为输入。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "L7",
+      "group_id": "L7_thm_10_10_to_10_11",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\L7_thm_10_10_to_10_11\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "6d89cf3fb8332d11bbd7a3908277a7d5fb13da91e5413a039335fc032bface24"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\L7_thm_10_10_to_10_11\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "0f54fe8e24f7b3119ed37efab39907fbea5a4b41c5de8c1f20de3b1777520c91"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\L7_thm_10_10_to_10_11\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+      },
+      "source_scope_and_required_steps": "有限维逐分量等价；连续映射、复合可测性、概率事件。",
+      "risk_and_uniform_interpretation": "原条件不能保证每个复合输出可测；环境连续和相对连续另有差别。原条件诊断层，不排名；修订合同不应用于原队列。",
+      "scan_status": "contract_defect_paper_verified",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "环境ContinuousAt与相对ContinuousOn分开。当前冻结源搜索未找到足以补全全部f(Vn)可测的全局约定。",
+        "resolution": "旧条件仅开发诊断；纸面非可测反例及新Borel可测+环境连续合同草案单独保存，未新增Lean验证、未换原输入。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "M1",
+      "group_id": "thm_13_17_to_13_18",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\thm_13_17_to_13_18\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "7546dcad04034d803f4bbb1dd7446bb0e44f62c35723813e6747c4e9b3f2988c"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\thm_13_17_to_13_18\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "4bcece2e77a3b39f40e80d863421d020187e2415c6ed0c33b22b41938e835e63"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\thm_13_17_to_13_18\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "ae6acb6257e3d11d4c5196b924a299434b6bd4e5b6a87995a84c2e6a2a1ea37e"
+      },
+      "source_scope_and_required_steps": "停止过程鞅及恒期望；有界停时、统一有界过程、可积停时与有界增量三种停止期望条件。",
+      "risk_and_uniform_interpretation": "三分支必须齐全，停止值、支配可积和极限不能换成调用者责任；停止时间无穷值与几乎处处有限的接口须接上。",
+      "scan_status": "no_new_textual_contradiction_identified",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "停止过程仍鞅以及三个可选停止充分条件均由TASK完整列出，WithTop停时允许∞但各结论条件要求几乎处处有限。",
+        "source_transcription": "源转录中的有界T段落写XT=XC，停止过程上标可能在转录中丢失。只可用正确的XT=X^T_C等式；不能把它理解成一般原过程XT=XC。源中停止值积分的简略最大值说法也不替代绝对可积性证明。",
+        "proof_obligation": "停时适应/可积/条件期望及分支(i)有限停止值一致、(ii)常数支配、(iii)|X0|+cT望远镜支配全部闭合。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "M2",
+      "group_id": "M2_thm_11_7",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\M2_thm_11_7\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "b201c33e97aa82661c80f4a71128713af16d2be46217c98e1eeb5c8678075cab"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\M2_thm_11_7\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "48e82a58dfca3b39e242569236511a22175652b659614688af33baed5b5e4804"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\M2_thm_11_7\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+      },
+      "source_scope_and_required_steps": "独立但不要求同分布，中心化四阶矩一致界；四阶展开、消项、可求和偏差概率、Borel–Cantelli和全序列几乎处处收敛。",
+      "risk_and_uniform_interpretation": "TASK还写了从适当子列扩展，而直接对全序列的可求和尾界应用BC可免子列。登记为路线歧义风险：完整等价证明不能仅因不走多余子列步骤被拒；核心矩/尾界责任仍须实际闭合。",
+      "scan_status": "route_redundancy_risk_requires_candidate_specific_check",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "源明确使用全序列四阶界O(n²)得到全序列偏差概率O(1/n²)，直接第一Borel-Cantelli；不要求同分布。TASK采用中心化四阶矩统一界。",
+        "route_ambiguity": "TASK附加“从适当子列扩展到完整序列”，但源证明已直接对完整序列求和，数学上无须另取子列。依共同规则允许等价证明，完整全序列可求和加Borel-Cantelli不能仅因省去无须的子列步骤被否决。中心化、四次展开、混合项消去、四阶界和完整几乎处处收敛仍须实际闭合。",
+        "timing": "此源文说明在新增B/C M2首次派发前登记；不修改其源文、TASK、提示、预算或原共同终验。若实际评审因这一歧义改变标签，三份原候选全纳同判据复核，不只修有利一份。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "M3",
+      "group_id": "M3_thm_10_8",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\M3_thm_10_8\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "4427a31ba338b3571e1e4a7554c8b3de24e6a2e48b6051766cc60eaf20e0893a"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\M3_thm_10_8\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "5f1f4148358bb9c71026023a6e2fb06dbd9bf884a624a4e0af7ed19faf826369"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\M3_thm_10_8\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+      },
+      "source_scope_and_required_steps": "共同概率空间、分位数可测与边缘、逆像比较、坏水平至多可数、端点及几乎处处耦合收敛。",
+      "risk_and_uniform_interpretation": "TASK已说明原文逐点过强措辞不能替代最终几乎处处结论；通用基础允许，目标专有量化/分位数律不能预给。",
+      "scan_status": "explicit_pointwise_vs_ae_clarification_already_in_input",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "源采用实分布函数和[0,1]上的分位数构造；中段逐点断言与最终几乎处处结论不同，TASK早已明确不能把逐点过强措辞当目标。",
+        "boundary": "0/1端点、广义逆逆像、可测与边缘分布、可数坏水平和几乎处处收敛均需代码绑定；不要求错误的处处收敛。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    },
+    {
+      "label": "H1",
+      "group_id": "H1_inversion_chain",
+      "task": {
+        "path": "ROOT/c-r3-inputs\\H1_inversion_chain\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+        "sha256": "d9b89b0a1cd35eede0125e78b21262e495942eb2309b5493efefcd647599696d"
+      },
+      "source": {
+        "path": "ROOT/c-r3-inputs\\H1_inversion_chain\\ProbabilityTheoryFormalization\\SOURCE.tex",
+        "sha256": "4a8a35153eab3b41a463dc449c60fc5907c940a10d6bd8ea07fd20075a648152"
+      },
+      "common_rules": {
+        "path": "ROOT/c-r3-inputs\\H1_inversion_chain\\ProbabilityTheoryFormalization\\COMMON_RULES.zh-CN.md",
+        "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+      },
+      "source_scope_and_required_steps": "五目标、反演核/Fubini/Dirichlet/端点半质量/支配/唯一性及两个应用；密度与特征函数要连接。",
+      "risk_and_uniform_interpretation": "TASK和本组SOURCE未明确位置尺度量词，也未明确写标准柯西。A旧完整候选采用cauchyMeasure 0 1，原双评分歧、裁决按标准接受；标准与全位置尺度族两种范围必须分列，后续B/C同样适用。",
+      "scan_status": "scope_sensitivity_pending_full_candidate_roster",
+      "depth": "All eleven full SOURCE/TASK texts and common rules read and compared. This is contract/source interpretation only, not a claim that every candidate, allowed-support proof, or feedback episode has been semantically checked.",
+      "inputs_changed": false,
+      "full_frozen_source_and_task_read": true,
+      "source_contract_findings": {
+        "source_scope": "傅里叶反演相关完整五目标；其中原SOURCE/TASK的无参数Cauchy文字未唯一指定标准0/1还是任意共同位置及正尺度族。",
+        "resolution": "H1_SCOPE_REGISTRATION.json在新增B/C H1派发前登记Std/Family敏感性，保留A原双评分歧及裁决，不把该旧裁决追认为唯一早冻结定义。待B/C完整原候选返回后，三份原候选与所有其他目标义务一起复核。"
+      },
+      "all_lean_dependency_proofs_checked": false
+    }
+  ],
+  "original_inputs_unchanged": true
+}

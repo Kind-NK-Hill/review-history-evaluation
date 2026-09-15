@@ -1,0 +1,935 @@
+{
+  "note": "本次只比较既有清单中的逻辑路径和原字节哈希；不执行新实验，不证明输入视图外无泄露，不把事后补充材料算入原输入。",
+  "derived_from": "B07-root-bindings.json /roots/*/input_files",
+  "groups": [
+    {
+      "group": "H1",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "B": {
+          "source": {
+            "SOURCE.tex": "4a8a35153eab3b41a463dc449c60fc5907c940a10d6bd8ea07fd20075a648152"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "d9b89b0a1cd35eede0125e78b21262e495942eb2309b5493efefcd647599696d"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_03/thm_3_9.lean": "a3e07073575ba674f2bef5a5add697a1c5d9de57c87ba06d84bc840def0edfec",
+            "ProbabilityTheory/chapter_07/thm_7_7.lean": "a70aafa5b26fb8e1e3731c6037fc4f01d5b7b81947d379fa976ab20471e854b4",
+            "ProbabilityTheory/chapter_08/thm_8_5.lean": "33151b2b924fc3b4dbe6139ebd7f51d9a447d6629a2d3fe02626ec6784ee2106",
+            "ProbabilityTheory/chapter_09/def_9_3.lean": "f8adc17200316261d1675545864d080fbed27a63e784c7c4f262c8563ac04e1f",
+            "ProbabilityTheory/chapter_09/thm_9_3.lean": "6e6042e969db8cfaab2f9a785f8d40b6471f8f7531872f020c35f07e0c7a5ede"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "4a8a35153eab3b41a463dc449c60fc5907c940a10d6bd8ea07fd20075a648152"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "d9b89b0a1cd35eede0125e78b21262e495942eb2309b5493efefcd647599696d"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_03/thm_3_9.lean": "a3e07073575ba674f2bef5a5add697a1c5d9de57c87ba06d84bc840def0edfec",
+            "ProbabilityTheory/chapter_07/thm_7_7.lean": "a70aafa5b26fb8e1e3731c6037fc4f01d5b7b81947d379fa976ab20471e854b4",
+            "ProbabilityTheory/chapter_08/thm_8_5.lean": "33151b2b924fc3b4dbe6139ebd7f51d9a447d6629a2d3fe02626ec6784ee2106",
+            "ProbabilityTheory/chapter_09/def_9_3.lean": "f8adc17200316261d1675545864d080fbed27a63e784c7c4f262c8563ac04e1f",
+            "ProbabilityTheory/chapter_09/thm_9_3.lean": "6e6042e969db8cfaab2f9a785f8d40b6471f8f7531872f020c35f07e0c7a5ede"
+          }
+        },
+        "A": {
+          "source": {
+            "SOURCE.tex": "4a8a35153eab3b41a463dc449c60fc5907c940a10d6bd8ea07fd20075a648152"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "d9b89b0a1cd35eede0125e78b21262e495942eb2309b5493efefcd647599696d"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_03/thm_3_9.lean": "a3e07073575ba674f2bef5a5add697a1c5d9de57c87ba06d84bc840def0edfec",
+            "ProbabilityTheory/chapter_07/thm_7_7.lean": "a70aafa5b26fb8e1e3731c6037fc4f01d5b7b81947d379fa976ab20471e854b4",
+            "ProbabilityTheory/chapter_08/thm_8_5.lean": "33151b2b924fc3b4dbe6139ebd7f51d9a447d6629a2d3fe02626ec6784ee2106",
+            "ProbabilityTheory/chapter_09/def_9_3.lean": "f8adc17200316261d1675545864d080fbed27a63e784c7c4f262c8563ac04e1f",
+            "ProbabilityTheory/chapter_09/thm_9_3.lean": "6e6042e969db8cfaab2f9a785f8d40b6471f8f7531872f020c35f07e0c7a5ede"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    },
+    {
+      "group": "L1",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "A": {
+          "source": {
+            "SOURCE.tex": "a560db2dd7a38b9b22e7c4cfdb191d6f98c180e5d6cc8561ff2cd773e2fb9c1b"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "ae6acb6257e3d11d4c5196b924a299434b6bd4e5b6a87995a84c2e6a2a1ea37e",
+            "TASK.zh-CN.md": "b97a02c0e2e6e0604890556993927a0f2f910137e8340791acd1290753ff9f02"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_06/thm_6_4.lean": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/prob_7_7.lean": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_07/thm_7_3.lean": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_12/def_12_1.lean": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218",
+            "ProbabilityTheory/chapter_12/def_12_2.lean": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a",
+            "ProbabilityTheory/chapter_12/def_12_3.lean": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf",
+            "ProbabilityTheory/chapter_12/def_12_5.lean": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d",
+            "ProbabilityTheory/chapter_12/prob_12_1.lean": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966",
+            "ProbabilityTheory/chapter_12/thm_12_1.lean": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2",
+            "ProbabilityTheory/chapter_12/thm_12_2.lean": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0",
+            "ProbabilityTheory/chapter_12/thm_12_3.lean": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6",
+            "ProbabilityTheory/chapter_12/thm_12_4.lean": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80",
+            "ProbabilityTheory/chapter_12/thm_12_5.lean": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98",
+            "ProbabilityTheory/chapter_12/thm_12_6.lean": "d81354b394ea8c1a04ff17d2490331fbfeb00fde7e76e212161903e53d5fd061",
+            "ProbabilityTheory/chapter_13/def_13_6.lean": "13c023da4791a0613a9573574251bee494b3eb453005407157de65d97524a443",
+            "ProbabilityTheory/chapter_13/def_13_7.lean": "0c8f41af4c7208cbf62111e5c2af9c7070e77d59788dca22b4d0a7787200f462",
+            "ProbabilityTheory/common_support/chapter13_stopping_support.lean": "a7ac9ca5d7de1c2179c0bc5565c4f0eafd60562ab4394f03e14668a17f207674"
+          }
+        },
+        "B": {
+          "source": {
+            "SOURCE.tex": "a560db2dd7a38b9b22e7c4cfdb191d6f98c180e5d6cc8561ff2cd773e2fb9c1b"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "ae6acb6257e3d11d4c5196b924a299434b6bd4e5b6a87995a84c2e6a2a1ea37e",
+            "TASK.zh-CN.md": "b97a02c0e2e6e0604890556993927a0f2f910137e8340791acd1290753ff9f02"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_06/thm_6_4.lean": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/prob_7_7.lean": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_07/thm_7_3.lean": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_12/def_12_1.lean": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218",
+            "ProbabilityTheory/chapter_12/def_12_2.lean": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a",
+            "ProbabilityTheory/chapter_12/def_12_3.lean": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf",
+            "ProbabilityTheory/chapter_12/def_12_5.lean": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d",
+            "ProbabilityTheory/chapter_12/prob_12_1.lean": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966",
+            "ProbabilityTheory/chapter_12/thm_12_1.lean": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2",
+            "ProbabilityTheory/chapter_12/thm_12_2.lean": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0",
+            "ProbabilityTheory/chapter_12/thm_12_3.lean": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6",
+            "ProbabilityTheory/chapter_12/thm_12_4.lean": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80",
+            "ProbabilityTheory/chapter_12/thm_12_5.lean": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98",
+            "ProbabilityTheory/chapter_12/thm_12_6.lean": "d81354b394ea8c1a04ff17d2490331fbfeb00fde7e76e212161903e53d5fd061",
+            "ProbabilityTheory/chapter_13/def_13_6.lean": "13c023da4791a0613a9573574251bee494b3eb453005407157de65d97524a443",
+            "ProbabilityTheory/chapter_13/def_13_7.lean": "0c8f41af4c7208cbf62111e5c2af9c7070e77d59788dca22b4d0a7787200f462",
+            "ProbabilityTheory/common_support/chapter13_stopping_support.lean": "a7ac9ca5d7de1c2179c0bc5565c4f0eafd60562ab4394f03e14668a17f207674"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "a560db2dd7a38b9b22e7c4cfdb191d6f98c180e5d6cc8561ff2cd773e2fb9c1b"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "ae6acb6257e3d11d4c5196b924a299434b6bd4e5b6a87995a84c2e6a2a1ea37e",
+            "TASK.zh-CN.md": "b97a02c0e2e6e0604890556993927a0f2f910137e8340791acd1290753ff9f02"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_06/thm_6_4.lean": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/prob_7_7.lean": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_07/thm_7_3.lean": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_12/def_12_1.lean": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218",
+            "ProbabilityTheory/chapter_12/def_12_2.lean": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a",
+            "ProbabilityTheory/chapter_12/def_12_3.lean": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf",
+            "ProbabilityTheory/chapter_12/def_12_5.lean": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d",
+            "ProbabilityTheory/chapter_12/prob_12_1.lean": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966",
+            "ProbabilityTheory/chapter_12/thm_12_1.lean": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2",
+            "ProbabilityTheory/chapter_12/thm_12_2.lean": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0",
+            "ProbabilityTheory/chapter_12/thm_12_3.lean": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6",
+            "ProbabilityTheory/chapter_12/thm_12_4.lean": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80",
+            "ProbabilityTheory/chapter_12/thm_12_5.lean": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98",
+            "ProbabilityTheory/chapter_12/thm_12_6.lean": "d81354b394ea8c1a04ff17d2490331fbfeb00fde7e76e212161903e53d5fd061",
+            "ProbabilityTheory/chapter_13/def_13_6.lean": "13c023da4791a0613a9573574251bee494b3eb453005407157de65d97524a443",
+            "ProbabilityTheory/chapter_13/def_13_7.lean": "0c8f41af4c7208cbf62111e5c2af9c7070e77d59788dca22b4d0a7787200f462",
+            "ProbabilityTheory/common_support/chapter13_stopping_support.lean": "a7ac9ca5d7de1c2179c0bc5565c4f0eafd60562ab4394f03e14668a17f207674"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    },
+    {
+      "group": "L2",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "A": {
+          "source": {
+            "SOURCE.tex": "41418a41fe5bc1b65a9a626bdb1acba4bb10ed4aeaaf59b460c20e2fa7a960a1"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "42de9c21cb60362d7b94b91f6140f4ca131d7c3fe5e6ed3f552fa2d823b4e2a5"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_09/def_9_1.lean": "c03e02565d8cd10d0d65e6ad4b94ce6925071e4eb1bcf52a51a35c267b390b27",
+            "ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+            "ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+            "ProbabilityTheory/chapter_10/thm_10_3.lean": "2e4a799d071c7af5b07cc2ed0b36ba5af2fdc89217230b93aad8c85bed59d502",
+            "ProbabilityTheory/chapter_11/thm_11_2.lean": "cf7d125e1244c88b13df375e2466028407b3e523957bbc9f4f4b39a91e30fdee"
+          }
+        },
+        "B": {
+          "source": {
+            "SOURCE.tex": "41418a41fe5bc1b65a9a626bdb1acba4bb10ed4aeaaf59b460c20e2fa7a960a1"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "42de9c21cb60362d7b94b91f6140f4ca131d7c3fe5e6ed3f552fa2d823b4e2a5"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_09/def_9_1.lean": "c03e02565d8cd10d0d65e6ad4b94ce6925071e4eb1bcf52a51a35c267b390b27",
+            "ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+            "ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+            "ProbabilityTheory/chapter_10/thm_10_3.lean": "2e4a799d071c7af5b07cc2ed0b36ba5af2fdc89217230b93aad8c85bed59d502",
+            "ProbabilityTheory/chapter_11/thm_11_2.lean": "cf7d125e1244c88b13df375e2466028407b3e523957bbc9f4f4b39a91e30fdee"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "41418a41fe5bc1b65a9a626bdb1acba4bb10ed4aeaaf59b460c20e2fa7a960a1"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "42de9c21cb60362d7b94b91f6140f4ca131d7c3fe5e6ed3f552fa2d823b4e2a5"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_09/def_9_1.lean": "c03e02565d8cd10d0d65e6ad4b94ce6925071e4eb1bcf52a51a35c267b390b27",
+            "ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+            "ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+            "ProbabilityTheory/chapter_10/thm_10_3.lean": "2e4a799d071c7af5b07cc2ed0b36ba5af2fdc89217230b93aad8c85bed59d502",
+            "ProbabilityTheory/chapter_11/thm_11_2.lean": "cf7d125e1244c88b13df375e2466028407b3e523957bbc9f4f4b39a91e30fdee"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    },
+    {
+      "group": "L3",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "A": {
+          "source": {
+            "SOURCE.tex": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_07/thm_7_11.lean": "d426c39e02bb1c0021872b986bcb5efef4201f01fcfd7f0d836cecf367a04b68",
+            "ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+            "ProbabilityTheory/chapter_08/prob_8_7.lean": "e519469e0774622e346298e4302f07f3a1ecbac0ce9a0d5d3ca598f1d850d7d2",
+            "ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+            "ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24",
+            "ProbabilityTheory/chapter_10/def_10_5.lean": "eddf0d56154ef3104ab5fc2852c1fdae85d39da52d8baa5ce6486aba702d762a",
+            "ProbabilityTheory/chapter_10/ex_10_3_1.lean": "90ec14c6ebf589763e63b7afe24ddb71d693b704ee4f82acaf1228b3f67578bb",
+            "ProbabilityTheory/chapter_10/thm_10_6.lean": "2572f91885ca57222a32a058ddf665174438756581f2739ddc149ae15047d38d",
+            "ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+            "ProbabilityTheory/chapter_14/def_14_1.lean": "5f6fad3aea7270b16c5b339f2535a4d1777b72f43073ad01a32658f458144cc1",
+            "ProbabilityTheory/chapter_14/thm_14_4.lean": "921416e3fbe6525b2e87e6b88f1ab42fcb87c7757f4fda5568c74ae73dcf1f47",
+            "ProbabilityTheory/chapter_14/thm_14_4_density_support.lean": "08b047e2251579d907798fbdee67e11a33a6b258cc0a4150a90b9a9460ad6ccb",
+            "ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean": "f5a1f21acd9e1a37c2f445acb4f9d64b33b1442151b6fa90f18c00a0cf43ddfe",
+            "ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+          }
+        },
+        "B": {
+          "source": {
+            "SOURCE.tex": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_07/thm_7_11.lean": "d426c39e02bb1c0021872b986bcb5efef4201f01fcfd7f0d836cecf367a04b68",
+            "ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+            "ProbabilityTheory/chapter_08/prob_8_7.lean": "e519469e0774622e346298e4302f07f3a1ecbac0ce9a0d5d3ca598f1d850d7d2",
+            "ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+            "ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24",
+            "ProbabilityTheory/chapter_10/def_10_5.lean": "eddf0d56154ef3104ab5fc2852c1fdae85d39da52d8baa5ce6486aba702d762a",
+            "ProbabilityTheory/chapter_10/ex_10_3_1.lean": "90ec14c6ebf589763e63b7afe24ddb71d693b704ee4f82acaf1228b3f67578bb",
+            "ProbabilityTheory/chapter_10/thm_10_6.lean": "2572f91885ca57222a32a058ddf665174438756581f2739ddc149ae15047d38d",
+            "ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+            "ProbabilityTheory/chapter_14/def_14_1.lean": "5f6fad3aea7270b16c5b339f2535a4d1777b72f43073ad01a32658f458144cc1",
+            "ProbabilityTheory/chapter_14/thm_14_4.lean": "921416e3fbe6525b2e87e6b88f1ab42fcb87c7757f4fda5568c74ae73dcf1f47",
+            "ProbabilityTheory/chapter_14/thm_14_4_density_support.lean": "08b047e2251579d907798fbdee67e11a33a6b258cc0a4150a90b9a9460ad6ccb",
+            "ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean": "f5a1f21acd9e1a37c2f445acb4f9d64b33b1442151b6fa90f18c00a0cf43ddfe",
+            "ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_07/thm_7_11.lean": "d426c39e02bb1c0021872b986bcb5efef4201f01fcfd7f0d836cecf367a04b68",
+            "ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+            "ProbabilityTheory/chapter_08/prob_8_7.lean": "e519469e0774622e346298e4302f07f3a1ecbac0ce9a0d5d3ca598f1d850d7d2",
+            "ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+            "ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24",
+            "ProbabilityTheory/chapter_10/def_10_5.lean": "eddf0d56154ef3104ab5fc2852c1fdae85d39da52d8baa5ce6486aba702d762a",
+            "ProbabilityTheory/chapter_10/ex_10_3_1.lean": "90ec14c6ebf589763e63b7afe24ddb71d693b704ee4f82acaf1228b3f67578bb",
+            "ProbabilityTheory/chapter_10/thm_10_6.lean": "2572f91885ca57222a32a058ddf665174438756581f2739ddc149ae15047d38d",
+            "ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+            "ProbabilityTheory/chapter_14/def_14_1.lean": "5f6fad3aea7270b16c5b339f2535a4d1777b72f43073ad01a32658f458144cc1",
+            "ProbabilityTheory/chapter_14/thm_14_4.lean": "921416e3fbe6525b2e87e6b88f1ab42fcb87c7757f4fda5568c74ae73dcf1f47",
+            "ProbabilityTheory/chapter_14/thm_14_4_density_support.lean": "08b047e2251579d907798fbdee67e11a33a6b258cc0a4150a90b9a9460ad6ccb",
+            "ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean": "f5a1f21acd9e1a37c2f445acb4f9d64b33b1442151b6fa90f18c00a0cf43ddfe",
+            "ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    },
+    {
+      "group": "L4",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "A": {
+          "source": {
+            "SOURCE.tex": "06bf4e8f2a2a8a2966f6249c7d9ef3d3e8c8b8be947be226ae4d90833bd6e214"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "b3e7f62748ae7add70e506351cbcc05e869330f20ca509fcf2e4a5870f4896b7"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+            "ProbabilityTheory/common_support/ch8_discrete_pmf_core.lean": "a6fd4f8fb8bcb81ea1285774c5cb616e4738ce4e5f5aee0781fd992fea5aa35c"
+          }
+        },
+        "B": {
+          "source": {
+            "SOURCE.tex": "06bf4e8f2a2a8a2966f6249c7d9ef3d3e8c8b8be947be226ae4d90833bd6e214"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "b3e7f62748ae7add70e506351cbcc05e869330f20ca509fcf2e4a5870f4896b7"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+            "ProbabilityTheory/common_support/ch8_discrete_pmf_core.lean": "a6fd4f8fb8bcb81ea1285774c5cb616e4738ce4e5f5aee0781fd992fea5aa35c"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "06bf4e8f2a2a8a2966f6249c7d9ef3d3e8c8b8be947be226ae4d90833bd6e214"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "b3e7f62748ae7add70e506351cbcc05e869330f20ca509fcf2e4a5870f4896b7"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+            "ProbabilityTheory/common_support/ch8_discrete_pmf_core.lean": "a6fd4f8fb8bcb81ea1285774c5cb616e4738ce4e5f5aee0781fd992fea5aa35c"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    },
+    {
+      "group": "L5",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "A": {
+          "source": {
+            "SOURCE.tex": "20dac8a2bd9d4b97949f78d641aafbed4c759fa5b82cc71ba795db5be9017aab"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "eb2730f1b2d14f931d6f1581b2ecc1038ebdc5f54b8e8cb1b9fab7615421ec01"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+            "ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+            "ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+          }
+        },
+        "B": {
+          "source": {
+            "SOURCE.tex": "20dac8a2bd9d4b97949f78d641aafbed4c759fa5b82cc71ba795db5be9017aab"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "eb2730f1b2d14f931d6f1581b2ecc1038ebdc5f54b8e8cb1b9fab7615421ec01"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+            "ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+            "ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "20dac8a2bd9d4b97949f78d641aafbed4c759fa5b82cc71ba795db5be9017aab"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "eb2730f1b2d14f931d6f1581b2ecc1038ebdc5f54b8e8cb1b9fab7615421ec01"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+            "ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+            "ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    },
+    {
+      "group": "L6",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "A": {
+          "source": {
+            "SOURCE.tex": "2858a351c7a2f0199f17c6595086b153e1610c8f1a36f7f6f34faa735aa307d6"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "c04f1eead9f0fd5910940cf2c5570892f66e630520925d7ac639a7cd75f19479"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_06/thm_6_4.lean": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/prob_7_7.lean": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_07/thm_7_3.lean": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_12/def_12_1.lean": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218",
+            "ProbabilityTheory/chapter_12/def_12_2.lean": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a",
+            "ProbabilityTheory/chapter_12/def_12_3.lean": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf",
+            "ProbabilityTheory/chapter_12/def_12_5.lean": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d",
+            "ProbabilityTheory/chapter_12/prob_12_1.lean": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966",
+            "ProbabilityTheory/chapter_12/thm_12_1.lean": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2",
+            "ProbabilityTheory/chapter_12/thm_12_2.lean": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0",
+            "ProbabilityTheory/chapter_12/thm_12_3.lean": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6",
+            "ProbabilityTheory/chapter_12/thm_12_4.lean": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80",
+            "ProbabilityTheory/chapter_12/thm_12_5.lean": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98"
+          }
+        },
+        "B": {
+          "source": {
+            "SOURCE.tex": "2858a351c7a2f0199f17c6595086b153e1610c8f1a36f7f6f34faa735aa307d6"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "c04f1eead9f0fd5910940cf2c5570892f66e630520925d7ac639a7cd75f19479"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_06/thm_6_4.lean": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/prob_7_7.lean": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_07/thm_7_3.lean": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_12/def_12_1.lean": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218",
+            "ProbabilityTheory/chapter_12/def_12_2.lean": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a",
+            "ProbabilityTheory/chapter_12/def_12_3.lean": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf",
+            "ProbabilityTheory/chapter_12/def_12_5.lean": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d",
+            "ProbabilityTheory/chapter_12/prob_12_1.lean": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966",
+            "ProbabilityTheory/chapter_12/thm_12_1.lean": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2",
+            "ProbabilityTheory/chapter_12/thm_12_2.lean": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0",
+            "ProbabilityTheory/chapter_12/thm_12_3.lean": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6",
+            "ProbabilityTheory/chapter_12/thm_12_4.lean": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80",
+            "ProbabilityTheory/chapter_12/thm_12_5.lean": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "2858a351c7a2f0199f17c6595086b153e1610c8f1a36f7f6f34faa735aa307d6"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "c04f1eead9f0fd5910940cf2c5570892f66e630520925d7ac639a7cd75f19479"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_06/thm_6_4.lean": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/prob_7_7.lean": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_07/thm_7_3.lean": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_12/def_12_1.lean": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218",
+            "ProbabilityTheory/chapter_12/def_12_2.lean": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a",
+            "ProbabilityTheory/chapter_12/def_12_3.lean": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf",
+            "ProbabilityTheory/chapter_12/def_12_5.lean": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d",
+            "ProbabilityTheory/chapter_12/prob_12_1.lean": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966",
+            "ProbabilityTheory/chapter_12/thm_12_1.lean": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2",
+            "ProbabilityTheory/chapter_12/thm_12_2.lean": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0",
+            "ProbabilityTheory/chapter_12/thm_12_3.lean": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6",
+            "ProbabilityTheory/chapter_12/thm_12_4.lean": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80",
+            "ProbabilityTheory/chapter_12/thm_12_5.lean": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    },
+    {
+      "group": "L7",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "A": {
+          "source": {
+            "SOURCE.tex": "0f54fe8e24f7b3119ed37efab39907fbea5a4b41c5de8c1f20de3b1777520c91"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "6d89cf3fb8332d11bbd7a3908277a7d5fb13da91e5413a039335fc032bface24"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_02/def_2_5.lean": "098bee697027cdd46a3866f60808987197d4d2c2ec6f426c8340eca4c9e114c3",
+            "ProbabilityTheory/chapter_02/def_2_6.lean": "44fe956df0295a6ad3f6a82e2cf1a9447b610f25bc1ada11dfd943a32cc502d3",
+            "ProbabilityTheory/chapter_02/def_2_7.lean": "6ec3dfeba779dbb8742c673633b59633c04e923cdaca9e73f436450aaabe1d9d",
+            "ProbabilityTheory/chapter_02/def_2_8.lean": "72f0b2a477d52384d99482e1a0daae7bd8afb97b4dcd4d45cde403a8bf56f2c4",
+            "ProbabilityTheory/chapter_02/prob_2_4.lean": "276f944550e2fbaa7f13eaa836d3f2ba4cd9c642c0d2593b2097d952246db3b8",
+            "ProbabilityTheory/chapter_02/thm_2_2.lean": "ce33404b81ab6acde28712963a8dfa72176b5e00d0448a89bae982192cc77307",
+            "ProbabilityTheory/chapter_02/thm_2_3.lean": "49b97f4091018729c7de13728e904a69b382f77146b742db2046fb25256b0613",
+            "ProbabilityTheory/chapter_02/thm_2_4.lean": "72ae2d49de9e5c530dc13a8f9ed706be991ebfd1bc81839c9125b56ab4a5b289",
+            "ProbabilityTheory/chapter_02/thm_2_6.lean": "41c3065e4c5a95591caf967c1e05ebd5a6c5add40d5ceaba0851a4c2bdcc18d8",
+            "ProbabilityTheory/chapter_02/thm_2_8.lean": "1ceddff10a2445e12ab43da89c901dc4fc729524f9db4c2915ac6185926b3c0a",
+            "ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+            "ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+            "ProbabilityTheory/chapter_10/def_10_6.lean": "c408214fca92bd3531134688545a17d2b3c7f4a8a50d514e088a43ff38debc1b",
+            "ProbabilityTheory/chapter_10/thm_10_11.lean": "abc34446bcbc153ec31f949eda0a618671a072ad0b13789211f49045a057354e",
+            "ProbabilityTheory/chapter_10/thm_10_9.lean": "4c458f7dd1ed801b4e18af2818f5024743bab71b507c388c0650ac4e0d50f239"
+          }
+        },
+        "B": {
+          "source": {
+            "SOURCE.tex": "0f54fe8e24f7b3119ed37efab39907fbea5a4b41c5de8c1f20de3b1777520c91"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "6d89cf3fb8332d11bbd7a3908277a7d5fb13da91e5413a039335fc032bface24"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_02/def_2_5.lean": "098bee697027cdd46a3866f60808987197d4d2c2ec6f426c8340eca4c9e114c3",
+            "ProbabilityTheory/chapter_02/def_2_6.lean": "44fe956df0295a6ad3f6a82e2cf1a9447b610f25bc1ada11dfd943a32cc502d3",
+            "ProbabilityTheory/chapter_02/def_2_7.lean": "6ec3dfeba779dbb8742c673633b59633c04e923cdaca9e73f436450aaabe1d9d",
+            "ProbabilityTheory/chapter_02/def_2_8.lean": "72f0b2a477d52384d99482e1a0daae7bd8afb97b4dcd4d45cde403a8bf56f2c4",
+            "ProbabilityTheory/chapter_02/prob_2_4.lean": "276f944550e2fbaa7f13eaa836d3f2ba4cd9c642c0d2593b2097d952246db3b8",
+            "ProbabilityTheory/chapter_02/thm_2_2.lean": "ce33404b81ab6acde28712963a8dfa72176b5e00d0448a89bae982192cc77307",
+            "ProbabilityTheory/chapter_02/thm_2_3.lean": "49b97f4091018729c7de13728e904a69b382f77146b742db2046fb25256b0613",
+            "ProbabilityTheory/chapter_02/thm_2_4.lean": "72ae2d49de9e5c530dc13a8f9ed706be991ebfd1bc81839c9125b56ab4a5b289",
+            "ProbabilityTheory/chapter_02/thm_2_6.lean": "41c3065e4c5a95591caf967c1e05ebd5a6c5add40d5ceaba0851a4c2bdcc18d8",
+            "ProbabilityTheory/chapter_02/thm_2_8.lean": "1ceddff10a2445e12ab43da89c901dc4fc729524f9db4c2915ac6185926b3c0a",
+            "ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+            "ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+            "ProbabilityTheory/chapter_10/def_10_6.lean": "c408214fca92bd3531134688545a17d2b3c7f4a8a50d514e088a43ff38debc1b",
+            "ProbabilityTheory/chapter_10/thm_10_9.lean": "4c458f7dd1ed801b4e18af2818f5024743bab71b507c388c0650ac4e0d50f239"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "0f54fe8e24f7b3119ed37efab39907fbea5a4b41c5de8c1f20de3b1777520c91"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "6d89cf3fb8332d11bbd7a3908277a7d5fb13da91e5413a039335fc032bface24"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_02/def_2_5.lean": "098bee697027cdd46a3866f60808987197d4d2c2ec6f426c8340eca4c9e114c3",
+            "ProbabilityTheory/chapter_02/def_2_6.lean": "44fe956df0295a6ad3f6a82e2cf1a9447b610f25bc1ada11dfd943a32cc502d3",
+            "ProbabilityTheory/chapter_02/def_2_7.lean": "6ec3dfeba779dbb8742c673633b59633c04e923cdaca9e73f436450aaabe1d9d",
+            "ProbabilityTheory/chapter_02/def_2_8.lean": "72f0b2a477d52384d99482e1a0daae7bd8afb97b4dcd4d45cde403a8bf56f2c4",
+            "ProbabilityTheory/chapter_02/prob_2_4.lean": "276f944550e2fbaa7f13eaa836d3f2ba4cd9c642c0d2593b2097d952246db3b8",
+            "ProbabilityTheory/chapter_02/thm_2_2.lean": "ce33404b81ab6acde28712963a8dfa72176b5e00d0448a89bae982192cc77307",
+            "ProbabilityTheory/chapter_02/thm_2_3.lean": "49b97f4091018729c7de13728e904a69b382f77146b742db2046fb25256b0613",
+            "ProbabilityTheory/chapter_02/thm_2_4.lean": "72ae2d49de9e5c530dc13a8f9ed706be991ebfd1bc81839c9125b56ab4a5b289",
+            "ProbabilityTheory/chapter_02/thm_2_6.lean": "41c3065e4c5a95591caf967c1e05ebd5a6c5add40d5ceaba0851a4c2bdcc18d8",
+            "ProbabilityTheory/chapter_02/thm_2_8.lean": "1ceddff10a2445e12ab43da89c901dc4fc729524f9db4c2915ac6185926b3c0a",
+            "ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+            "ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+            "ProbabilityTheory/chapter_10/def_10_6.lean": "c408214fca92bd3531134688545a17d2b3c7f4a8a50d514e088a43ff38debc1b",
+            "ProbabilityTheory/chapter_10/thm_10_9.lean": "4c458f7dd1ed801b4e18af2818f5024743bab71b507c388c0650ac4e0d50f239"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": false
+      }
+    },
+    {
+      "group": "M1",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "A": {
+          "source": {
+            "SOURCE.tex": "4bcece2e77a3b39f40e80d863421d020187e2415c6ed0c33b22b41938e835e63"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "ae6acb6257e3d11d4c5196b924a299434b6bd4e5b6a87995a84c2e6a2a1ea37e",
+            "TASK.zh-CN.md": "7546dcad04034d803f4bbb1dd7446bb0e44f62c35723813e6747c4e9b3f2988c"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_02/def_2_3.lean": "5d6f451f7c05b11f519cd75c9f3809fcaac00714621cf9d9b7e0b48caf8f3cca",
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_06/thm_6_4.lean": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/prob_7_7.lean": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_07/thm_7_3.lean": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_12/def_12_1.lean": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218",
+            "ProbabilityTheory/chapter_12/def_12_2.lean": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a",
+            "ProbabilityTheory/chapter_12/def_12_3.lean": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf",
+            "ProbabilityTheory/chapter_12/def_12_5.lean": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d",
+            "ProbabilityTheory/chapter_12/prob_12_1.lean": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966",
+            "ProbabilityTheory/chapter_12/thm_12_1.lean": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2",
+            "ProbabilityTheory/chapter_12/thm_12_2.lean": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0",
+            "ProbabilityTheory/chapter_12/thm_12_3.lean": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6",
+            "ProbabilityTheory/chapter_12/thm_12_4.lean": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80",
+            "ProbabilityTheory/chapter_12/thm_12_5.lean": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98",
+            "ProbabilityTheory/chapter_12/thm_12_6.lean": "d81354b394ea8c1a04ff17d2490331fbfeb00fde7e76e212161903e53d5fd061",
+            "ProbabilityTheory/chapter_13/def_13_3.lean": "c8e514f934ea8508943ba8a99f6023dd3d241b6195be30adc39c595a235f1444",
+            "ProbabilityTheory/chapter_13/def_13_6.lean": "13c023da4791a0613a9573574251bee494b3eb453005407157de65d97524a443",
+            "ProbabilityTheory/chapter_13/def_13_7.lean": "0c8f41af4c7208cbf62111e5c2af9c7070e77d59788dca22b4d0a7787200f462",
+            "ProbabilityTheory/chapter_13/def_13_8.lean": "eb0f1cd066efc5b26a30e937e385909431e9538fb91ff17d5eeaff55a1a768c2",
+            "ProbabilityTheory/chapter_13/def_13_9.lean": "ab5f5b8a2495f704ed320c5111c2b8affcc94d4b7941986d4f65174e036f2882",
+            "ProbabilityTheory/chapter_13/thm_13_15.lean": "da2dcc770e248ba9a2b2ace6b8e20965b363d6f44d7298c91fcd74e53a7723d5",
+            "ProbabilityTheory/chapter_13/thm_13_16.lean": "bde276fa21566fa2f5e50d3910902fa5ed20a5fef2d57ebf791fb2dc158e6fb6",
+            "ProbabilityTheory/chapter_13/thm_13_4.lean": "82d9b24d570405ff40ab5baba450f86b31ed9bda6c5199948d5dd49055cc0fe4",
+            "ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+            "ProbabilityTheory/chapter_13/thm_13_6.lean": "68fc3f3fc34908e7a8f158dd788b671f14944a92f5f9fd3690fa3d720cb76480",
+            "ProbabilityTheory/chapter_13/thm_13_8.lean": "556eace8982d070440cecf587464c8460cedb60bebee79dd151d8918d7ff7018"
+          }
+        },
+        "B": {
+          "source": {
+            "SOURCE.tex": "4bcece2e77a3b39f40e80d863421d020187e2415c6ed0c33b22b41938e835e63"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "ae6acb6257e3d11d4c5196b924a299434b6bd4e5b6a87995a84c2e6a2a1ea37e",
+            "TASK.zh-CN.md": "7546dcad04034d803f4bbb1dd7446bb0e44f62c35723813e6747c4e9b3f2988c"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_02/def_2_3.lean": "5d6f451f7c05b11f519cd75c9f3809fcaac00714621cf9d9b7e0b48caf8f3cca",
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_06/thm_6_4.lean": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/prob_7_7.lean": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_07/thm_7_3.lean": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_12/def_12_1.lean": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218",
+            "ProbabilityTheory/chapter_12/def_12_2.lean": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a",
+            "ProbabilityTheory/chapter_12/def_12_3.lean": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf",
+            "ProbabilityTheory/chapter_12/def_12_5.lean": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d",
+            "ProbabilityTheory/chapter_12/prob_12_1.lean": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966",
+            "ProbabilityTheory/chapter_12/thm_12_1.lean": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2",
+            "ProbabilityTheory/chapter_12/thm_12_2.lean": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0",
+            "ProbabilityTheory/chapter_12/thm_12_3.lean": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6",
+            "ProbabilityTheory/chapter_12/thm_12_4.lean": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80",
+            "ProbabilityTheory/chapter_12/thm_12_5.lean": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98",
+            "ProbabilityTheory/chapter_12/thm_12_6.lean": "d81354b394ea8c1a04ff17d2490331fbfeb00fde7e76e212161903e53d5fd061",
+            "ProbabilityTheory/chapter_13/def_13_3.lean": "c8e514f934ea8508943ba8a99f6023dd3d241b6195be30adc39c595a235f1444",
+            "ProbabilityTheory/chapter_13/def_13_6.lean": "13c023da4791a0613a9573574251bee494b3eb453005407157de65d97524a443",
+            "ProbabilityTheory/chapter_13/def_13_7.lean": "0c8f41af4c7208cbf62111e5c2af9c7070e77d59788dca22b4d0a7787200f462",
+            "ProbabilityTheory/chapter_13/def_13_8.lean": "eb0f1cd066efc5b26a30e937e385909431e9538fb91ff17d5eeaff55a1a768c2",
+            "ProbabilityTheory/chapter_13/def_13_9.lean": "ab5f5b8a2495f704ed320c5111c2b8affcc94d4b7941986d4f65174e036f2882",
+            "ProbabilityTheory/chapter_13/thm_13_15.lean": "da2dcc770e248ba9a2b2ace6b8e20965b363d6f44d7298c91fcd74e53a7723d5",
+            "ProbabilityTheory/chapter_13/thm_13_16.lean": "bde276fa21566fa2f5e50d3910902fa5ed20a5fef2d57ebf791fb2dc158e6fb6",
+            "ProbabilityTheory/chapter_13/thm_13_4.lean": "82d9b24d570405ff40ab5baba450f86b31ed9bda6c5199948d5dd49055cc0fe4",
+            "ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+            "ProbabilityTheory/chapter_13/thm_13_6.lean": "68fc3f3fc34908e7a8f158dd788b671f14944a92f5f9fd3690fa3d720cb76480",
+            "ProbabilityTheory/chapter_13/thm_13_8.lean": "556eace8982d070440cecf587464c8460cedb60bebee79dd151d8918d7ff7018"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "4bcece2e77a3b39f40e80d863421d020187e2415c6ed0c33b22b41938e835e63"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "ae6acb6257e3d11d4c5196b924a299434b6bd4e5b6a87995a84c2e6a2a1ea37e",
+            "TASK.zh-CN.md": "7546dcad04034d803f4bbb1dd7446bb0e44f62c35723813e6747c4e9b3f2988c"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_02/def_2_3.lean": "5d6f451f7c05b11f519cd75c9f3809fcaac00714621cf9d9b7e0b48caf8f3cca",
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_06/thm_6_4.lean": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/prob_7_7.lean": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_07/thm_7_3.lean": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_12/def_12_1.lean": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218",
+            "ProbabilityTheory/chapter_12/def_12_2.lean": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a",
+            "ProbabilityTheory/chapter_12/def_12_3.lean": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf",
+            "ProbabilityTheory/chapter_12/def_12_5.lean": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d",
+            "ProbabilityTheory/chapter_12/prob_12_1.lean": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966",
+            "ProbabilityTheory/chapter_12/thm_12_1.lean": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2",
+            "ProbabilityTheory/chapter_12/thm_12_2.lean": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0",
+            "ProbabilityTheory/chapter_12/thm_12_3.lean": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6",
+            "ProbabilityTheory/chapter_12/thm_12_4.lean": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80",
+            "ProbabilityTheory/chapter_12/thm_12_5.lean": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98",
+            "ProbabilityTheory/chapter_12/thm_12_6.lean": "d81354b394ea8c1a04ff17d2490331fbfeb00fde7e76e212161903e53d5fd061",
+            "ProbabilityTheory/chapter_13/def_13_3.lean": "c8e514f934ea8508943ba8a99f6023dd3d241b6195be30adc39c595a235f1444",
+            "ProbabilityTheory/chapter_13/def_13_6.lean": "13c023da4791a0613a9573574251bee494b3eb453005407157de65d97524a443",
+            "ProbabilityTheory/chapter_13/def_13_7.lean": "0c8f41af4c7208cbf62111e5c2af9c7070e77d59788dca22b4d0a7787200f462",
+            "ProbabilityTheory/chapter_13/def_13_8.lean": "eb0f1cd066efc5b26a30e937e385909431e9538fb91ff17d5eeaff55a1a768c2",
+            "ProbabilityTheory/chapter_13/def_13_9.lean": "ab5f5b8a2495f704ed320c5111c2b8affcc94d4b7941986d4f65174e036f2882",
+            "ProbabilityTheory/chapter_13/thm_13_15.lean": "da2dcc770e248ba9a2b2ace6b8e20965b363d6f44d7298c91fcd74e53a7723d5",
+            "ProbabilityTheory/chapter_13/thm_13_16.lean": "bde276fa21566fa2f5e50d3910902fa5ed20a5fef2d57ebf791fb2dc158e6fb6",
+            "ProbabilityTheory/chapter_13/thm_13_4.lean": "82d9b24d570405ff40ab5baba450f86b31ed9bda6c5199948d5dd49055cc0fe4",
+            "ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+            "ProbabilityTheory/chapter_13/thm_13_6.lean": "68fc3f3fc34908e7a8f158dd788b671f14944a92f5f9fd3690fa3d720cb76480",
+            "ProbabilityTheory/chapter_13/thm_13_8.lean": "556eace8982d070440cecf587464c8460cedb60bebee79dd151d8918d7ff7018"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    },
+    {
+      "group": "M2",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "A": {
+          "source": {
+            "SOURCE.tex": "48e82a58dfca3b39e242569236511a22175652b659614688af33baed5b5e4804"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "b201c33e97aa82661c80f4a71128713af16d2be46217c98e1eeb5c8678075cab"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_03/def_3_8.lean": "54531e9768e1e767ae6667a86211d593baf9617e24be7a39aca349dd7e083ee8",
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_10.lean": "d34630b37164b4976a034f7f6d2e966ea34bb7e4bcb07f2175fbe671e3b0e4e5",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/def_5_5to10.lean": "71a098455a75ac38e25e40f5a75151a2e8f4468ab9a502f67307873e13292379",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_05/thm_5_8.lean": "d4c3e19494bc2f160e4ffb17bbaa49ecc9f719eb82728a2ac499869d4e6c74b2",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_09/def_9_1.lean": "c03e02565d8cd10d0d65e6ad4b94ce6925071e4eb1bcf52a51a35c267b390b27",
+            "ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+            "ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+            "ProbabilityTheory/chapter_10/thm_10_1.lean": "375af183416c49f80f2a49ec1e1845f0d71ef3a2e05d32239fae067bc80aeecf",
+            "ProbabilityTheory/chapter_10/thm_10_3.lean": "2e4a799d071c7af5b07cc2ed0b36ba5af2fdc89217230b93aad8c85bed59d502",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_11/thm_11_2.lean": "cf7d125e1244c88b13df375e2466028407b3e523957bbc9f4f4b39a91e30fdee",
+            "ProbabilityTheory/chapter_11/thm_11_4.lean": "a32ff1cd25934f731da1465e080d7c753623998b3618691924691235a2526e20",
+            "ProbabilityTheory/chapter_11/thm_11_5.lean": "3b545454866c09cc1d43cfd6a37a2c4aa1b93948d53718c1460d99140faeac48"
+          }
+        },
+        "B": {
+          "source": {
+            "SOURCE.tex": "48e82a58dfca3b39e242569236511a22175652b659614688af33baed5b5e4804"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "b201c33e97aa82661c80f4a71128713af16d2be46217c98e1eeb5c8678075cab"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_03/def_3_8.lean": "54531e9768e1e767ae6667a86211d593baf9617e24be7a39aca349dd7e083ee8",
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_10.lean": "d34630b37164b4976a034f7f6d2e966ea34bb7e4bcb07f2175fbe671e3b0e4e5",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/def_5_5to10.lean": "71a098455a75ac38e25e40f5a75151a2e8f4468ab9a502f67307873e13292379",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_05/thm_5_8.lean": "d4c3e19494bc2f160e4ffb17bbaa49ecc9f719eb82728a2ac499869d4e6c74b2",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_09/def_9_1.lean": "c03e02565d8cd10d0d65e6ad4b94ce6925071e4eb1bcf52a51a35c267b390b27",
+            "ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+            "ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+            "ProbabilityTheory/chapter_10/thm_10_1.lean": "375af183416c49f80f2a49ec1e1845f0d71ef3a2e05d32239fae067bc80aeecf",
+            "ProbabilityTheory/chapter_10/thm_10_3.lean": "2e4a799d071c7af5b07cc2ed0b36ba5af2fdc89217230b93aad8c85bed59d502",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_11/thm_11_2.lean": "cf7d125e1244c88b13df375e2466028407b3e523957bbc9f4f4b39a91e30fdee",
+            "ProbabilityTheory/chapter_11/thm_11_4.lean": "a32ff1cd25934f731da1465e080d7c753623998b3618691924691235a2526e20",
+            "ProbabilityTheory/chapter_11/thm_11_5.lean": "3b545454866c09cc1d43cfd6a37a2c4aa1b93948d53718c1460d99140faeac48"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "48e82a58dfca3b39e242569236511a22175652b659614688af33baed5b5e4804"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "b201c33e97aa82661c80f4a71128713af16d2be46217c98e1eeb5c8678075cab"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_03/def_3_8.lean": "54531e9768e1e767ae6667a86211d593baf9617e24be7a39aca349dd7e083ee8",
+            "ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+            "ProbabilityTheory/chapter_05/def_5_10.lean": "d34630b37164b4976a034f7f6d2e966ea34bb7e4bcb07f2175fbe671e3b0e4e5",
+            "ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+            "ProbabilityTheory/chapter_05/def_5_5to10.lean": "71a098455a75ac38e25e40f5a75151a2e8f4468ab9a502f67307873e13292379",
+            "ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+            "ProbabilityTheory/chapter_05/thm_5_8.lean": "d4c3e19494bc2f160e4ffb17bbaa49ecc9f719eb82728a2ac499869d4e6c74b2",
+            "ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+            "ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+            "ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+            "ProbabilityTheory/chapter_09/def_9_1.lean": "c03e02565d8cd10d0d65e6ad4b94ce6925071e4eb1bcf52a51a35c267b390b27",
+            "ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+            "ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+            "ProbabilityTheory/chapter_10/thm_10_1.lean": "375af183416c49f80f2a49ec1e1845f0d71ef3a2e05d32239fae067bc80aeecf",
+            "ProbabilityTheory/chapter_10/thm_10_3.lean": "2e4a799d071c7af5b07cc2ed0b36ba5af2fdc89217230b93aad8c85bed59d502",
+            "ProbabilityTheory/chapter_11/thm_11_1.lean": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+            "ProbabilityTheory/chapter_11/thm_11_2.lean": "cf7d125e1244c88b13df375e2466028407b3e523957bbc9f4f4b39a91e30fdee",
+            "ProbabilityTheory/chapter_11/thm_11_4.lean": "a32ff1cd25934f731da1465e080d7c753623998b3618691924691235a2526e20",
+            "ProbabilityTheory/chapter_11/thm_11_5.lean": "3b545454866c09cc1d43cfd6a37a2c4aa1b93948d53718c1460d99140faeac48"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    },
+    {
+      "group": "M3",
+      "scope": "selected original endpoint input manifests; not full solver isolation proof",
+      "arms": {
+        "B": {
+          "source": {
+            "SOURCE.tex": "5f1f4148358bb9c71026023a6e2fb06dbd9bf884a624a4e0af7ed19faf826369"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "4427a31ba338b3571e1e4a7554c8b3de24e6a2e48b6051766cc60eaf20e0893a"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_03/prob_3_5.lean": "650312a1ba2a93ffa9ccd5fc6fca1de7ccf002d17b03c8e2df17ac8b52b4c3e2",
+            "ProbabilityTheory/chapter_03/thm_3_9.lean": "a3e07073575ba674f2bef5a5add697a1c5d9de57c87ba06d84bc840def0edfec",
+            "ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24"
+          }
+        },
+        "C": {
+          "source": {
+            "SOURCE.tex": "5f1f4148358bb9c71026023a6e2fb06dbd9bf884a624a4e0af7ed19faf826369"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "4427a31ba338b3571e1e4a7554c8b3de24e6a2e48b6051766cc60eaf20e0893a"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_03/prob_3_5.lean": "650312a1ba2a93ffa9ccd5fc6fca1de7ccf002d17b03c8e2df17ac8b52b4c3e2",
+            "ProbabilityTheory/chapter_03/thm_3_9.lean": "a3e07073575ba674f2bef5a5add697a1c5d9de57c87ba06d84bc840def0edfec",
+            "ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24"
+          }
+        },
+        "A": {
+          "source": {
+            "SOURCE.tex": "5f1f4148358bb9c71026023a6e2fb06dbd9bf884a624a4e0af7ed19faf826369"
+          },
+          "task_contract": {
+            "COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+            "TASK.zh-CN.md": "4427a31ba338b3571e1e4a7554c8b3de24e6a2e48b6051766cc60eaf20e0893a"
+          },
+          "upstream": {
+            "ProbabilityTheory/chapter_03/prob_3_5.lean": "650312a1ba2a93ffa9ccd5fc6fca1de7ccf002d17b03c8e2df17ac8b52b4c3e2",
+            "ProbabilityTheory/chapter_03/thm_3_9.lean": "a3e07073575ba674f2bef5a5add697a1c5d9de57c87ba06d84bc840def0edfec",
+            "ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24"
+          }
+        }
+      },
+      "equal_by_category": {
+        "source": true,
+        "task_contract": true,
+        "upstream": true
+      }
+    }
+  ]
+}

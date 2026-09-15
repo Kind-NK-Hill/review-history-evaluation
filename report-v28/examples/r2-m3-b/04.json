@@ -1,0 +1,139 @@
+{
+  "schema": "public-tool-event.v1",
+  "event_id": "01a09d26-7314-7611-9656-f53ab7795a6f:call_K7Rq7FRTSJRi4vCSp7YjoF07",
+  "run_id": "r2-m3-b",
+  "config": "B",
+  "task": "M3",
+  "targets": [
+    "thm_10_8"
+  ],
+  "role": "support_author",
+  "actor": "176b1ced-9541-43f7-a5bd-c9aca162a62a",
+  "parent_actor": "c0ec0b66-6066-4225-a9d1-9ced5f4a41c2",
+  "actor_dir": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4c2ad4ca-423d-42a8-b414-e94dc9bd7e52\\actor",
+  "session_id": "01a09d26-7314-7611-9656-f53ab7795a6f",
+  "tool_call_id": "call_K7Rq7FRTSJRi4vCSp7YjoF07",
+  "tool": "mcp__pilot.container_exec",
+  "tool_family": "service",
+  "arguments": {
+    "command": "cd /work/ProbabilityTheoryFormalization && perl -0pi -e 's/change Tendsto \\(fun x => ProbabilityTheory\\.cdf \\(μ : Measure ℝ\\) x\\) atBot \\(𝓝 0\\)\\n  exact ProbabilityTheory\\.tendsto_cdf_atBot \\(μ : Measure ℝ\\)/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\n    ProbabilityTheory.tendsto_cdf_atBot (μ : Measure ℝ)/; s/change Tendsto \\(fun x => ProbabilityTheory\\.cdf \\(μ : Measure ℝ\\) x\\) atTop \\(𝓝 1\\)\\n  exact ProbabilityTheory\\.tendsto_cdf_atTop \\(μ : Measure ℝ\\)/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\n    ProbabilityTheory.tendsto_cdf_atTop (μ : Measure ℝ)/; s/change Monotone \\(fun x => ProbabilityTheory\\.cdf \\(μ : Measure ℝ\\) x\\)\\n  exact ProbabilityTheory\\.monotone_cdf \\(μ : Measure ℝ\\)/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\n    ProbabilityTheory.monotone_cdf (μ : Measure ℝ)/; s/change ContinuousWithinAt \\(fun y => ProbabilityTheory\\.cdf \\(μ : Measure ℝ\\) y\\) \\(Ici x\\) x\\n  exact \\(ProbabilityTheory\\.cdf \\(μ : Measure ℝ\\)\\)\\.right_continuous x/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\n    (ProbabilityTheory.cdf (μ : Measure ℝ)).right_continuous x/; s/\\(lt_trans ha hx\\)/(lt_trans hx ha)/; s/exact \\(not_lt_of_ge \\(\\(monotone μ\\) hxy\\)\\) \\(lt_of_le_of_lt hux hyS\\)/exact (not_lt_of_ge (hux.trans ((monotone μ) hxy))) hyS/; s/    apply le_csSup \\(lowerSet_bddAbove μ hv\\.2\\)\\n    exact lt_of_le_of_lt \\(\\(quantile_le_iff μ hu\\.1 hu\\.2\\)\\.1 le_rfl\\) huv_strict/    refine csSup_le (lowerSet_nonempty μ hu.1) ?_\\n    intro y hy\\n    change measureCdf μ y < u at hy\\n    exact le_csSup (lowerSet_bddAbove μ hv.2) (lt_trans hy huv_strict)/' ProbabilityTheory/chapter_10/thm_10_8_support.lean\nPATH=/opt/lean/bin:$PATH lake env lean ProbabilityTheory/chapter_10/thm_10_8_support.lean",
+    "timeout_seconds": 120
+  },
+  "input_raw": "{\"command\":\"cd /work/ProbabilityTheoryFormalization && perl -0pi -e 's/change Tendsto \\\\(fun x => ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\) x\\\\) atBot \\\\(𝓝 0\\\\)\\\\n  exact ProbabilityTheory\\\\.tendsto_cdf_atBot \\\\(μ : Measure ℝ\\\\)/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\\\n    ProbabilityTheory.tendsto_cdf_atBot (μ : Measure ℝ)/; s/change Tendsto \\\\(fun x => ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\) x\\\\) atTop \\\\(𝓝 1\\\\)\\\\n  exact ProbabilityTheory\\\\.tendsto_cdf_atTop \\\\(μ : Measure ℝ\\\\)/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\\\n    ProbabilityTheory.tendsto_cdf_atTop (μ : Measure ℝ)/; s/change Monotone \\\\(fun x => ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\) x\\\\)\\\\n  exact ProbabilityTheory\\\\.monotone_cdf \\\\(μ : Measure ℝ\\\\)/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\\\n    ProbabilityTheory.monotone_cdf (μ : Measure ℝ)/; s/change ContinuousWithinAt \\\\(fun y => ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\) y\\\\) \\\\(Ici x\\\\) x\\\\n  exact \\\\(ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\)\\\\)\\\\.right_continuous x/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\\\n    (ProbabilityTheory.cdf (μ : Measure ℝ)).right_continuous x/; s/\\\\(lt_trans ha hx\\\\)/(lt_trans hx ha)/; s/exact \\\\(not_lt_of_ge \\\\(\\\\(monotone μ\\\\) hxy\\\\)\\\\) \\\\(lt_of_le_of_lt hux hyS\\\\)/exact (not_lt_of_ge (hux.trans ((monotone μ) hxy))) hyS/; s/    apply le_csSup \\\\(lowerSet_bddAbove μ hv\\\\.2\\\\)\\\\n    exact lt_of_le_of_lt \\\\(\\\\(quantile_le_iff μ hu\\\\.1 hu\\\\.2\\\\)\\\\.1 le_rfl\\\\) huv_strict/    refine csSup_le (lowerSet_nonempty μ hu.1) ?_\\\\n    intro y hy\\\\n    change measureCdf μ y < u at hy\\\\n    exact le_csSup (lowerSet_bddAbove μ hv.2) (lt_trans hy huv_strict)/' ProbabilityTheory/chapter_10/thm_10_8_support.lean\\nPATH=/opt/lean/bin:$PATH lake env lean ProbabilityTheory/chapter_10/thm_10_8_support.lean\",\"timeout_seconds\":120}",
+  "output": [
+    {
+      "type": "input_text",
+      "text": "Wall time: 4.7775 seconds\nOutput:"
+    },
+    {
+      "type": "input_text",
+      "text": "{\"exit_code\": 1, \"timed_out\": false, \"elapsed_seconds\": 4.76600000000326, \"stdout\": \"ProbabilityTheory/chapter_10/thm_10_8_support.lean:21:2: error: Type mismatch: After simplification, term\\n  tendsto_cdf_atBot ↑μ\\n has type\\n  Tendsto (↑(cdf ↑μ)) atBot (𝓝 0)\\nbut is expected to have type\\n  Tendsto (measureCdf μ) atBot (𝓝 0)\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:25:2: error: Type mismatch: After simplification, term\\n  tendsto_cdf_atTop ↑μ\\n has type\\n  Tendsto (↑(cdf ↑μ)) atTop (𝓝 1)\\nbut is expected to have type\\n  Tendsto (measureCdf μ) atTop (𝓝 1)\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:29:2: error: Type mismatch: After simplification, term\\n  monotone_cdf ↑μ\\n has type\\n  Monotone ↑(cdf ↑μ)\\nbut is expected to have type\\n  Monotone (measureCdf μ)\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:34:2: error: Type mismatch: After simplification, term\\n  StieltjesFunction.right_continuous (cdf ↑μ) x\\n has type\\n  ContinuousWithinAt (↑(cdf ↑μ)) (Ici x) x\\nbut is expected to have type\\n  ContinuousWithinAt (measureCdf μ) (Ici x) x\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:90:4: warning: try 'simp' instead of 'simpa'\\n\\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\\n\", \"stderr\": \"\", \"stdout_truncated\": false, \"stderr_truncated\": false, \"raw_stdout\": {\"bytes\": 1197, \"sha256\": \"34fca3f2328bb33d80b2249c6ed1b72f82df46e1c85f409a084355403d71b4dd\"}, \"raw_stderr\": {\"bytes\": 0, \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}}"
+    }
+  ],
+  "dispatch_time": "2026-09-13T23:46:36.688Z",
+  "result_time": "2026-09-13T23:46:41.493Z",
+  "dispatch_metadata_time": 1789343181.300331,
+  "result_metadata_time": 1789343201.4931536,
+  "dispatch_result_elapsed_seconds": 4.805,
+  "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4c2ad4ca-423d-42a8-b414-e94dc9bd7e52\\actor\\full-public-trace.jsonl",
+  "source_line": 49,
+  "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4c2ad4ca-423d-42a8-b414-e94dc9bd7e52\\actor\\full-public-trace.jsonl",
+  "result_source_line": 50,
+  "dispatch_sources": [
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4c2ad4ca-423d-42a8-b414-e94dc9bd7e52\\actor\\full-public-trace.jsonl",
+      "source_line": 49,
+      "timestamp": "2026-09-13T23:46:36.688Z",
+      "ordinal": 156,
+      "line_sha256": "a17d496ea924b31cd2ed8e56e002f2de36c5f246f0338deb3a27fd202247f50b",
+      "payload_sha256": "f1358a362d68018fc7ecd48a21b6bb4247f888ea371b344d1e0d6c735286a807"
+    }
+  ],
+  "result_sources": [
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4c2ad4ca-423d-42a8-b414-e94dc9bd7e52\\actor\\full-public-trace.jsonl",
+      "source_line": 50,
+      "timestamp": "2026-09-13T23:46:41.493Z",
+      "ordinal": 159,
+      "line_sha256": "fcf19322534ce082cd110b9fc2a922165913a0592e6f1f6b402317ff22dfc64b",
+      "payload_sha256": "035ca93cca744b953275b59ccf948930f7064c950a7f332accdf532f8391890f"
+    }
+  ],
+  "dispatch_present": true,
+  "result_present": true,
+  "pair_status": "paired",
+  "payload_conflict": false,
+  "within_actor_window": true,
+  "dispatch_payload": {
+    "type": "function_call",
+    "id": "fc_0c94447e1b4e9ec1016aa735d0a58c87d0b0b2c2df78615a61",
+    "name": "container_exec",
+    "namespace": "mcp__pilot",
+    "arguments": "{\"command\":\"cd /work/ProbabilityTheoryFormalization && perl -0pi -e 's/change Tendsto \\\\(fun x => ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\) x\\\\) atBot \\\\(𝓝 0\\\\)\\\\n  exact ProbabilityTheory\\\\.tendsto_cdf_atBot \\\\(μ : Measure ℝ\\\\)/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\\\n    ProbabilityTheory.tendsto_cdf_atBot (μ : Measure ℝ)/; s/change Tendsto \\\\(fun x => ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\) x\\\\) atTop \\\\(𝓝 1\\\\)\\\\n  exact ProbabilityTheory\\\\.tendsto_cdf_atTop \\\\(μ : Measure ℝ\\\\)/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\\\n    ProbabilityTheory.tendsto_cdf_atTop (μ : Measure ℝ)/; s/change Monotone \\\\(fun x => ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\) x\\\\)\\\\n  exact ProbabilityTheory\\\\.monotone_cdf \\\\(μ : Measure ℝ\\\\)/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\\\n    ProbabilityTheory.monotone_cdf (μ : Measure ℝ)/; s/change ContinuousWithinAt \\\\(fun y => ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\) y\\\\) \\\\(Ici x\\\\) x\\\\n  exact \\\\(ProbabilityTheory\\\\.cdf \\\\(μ : Measure ℝ\\\\)\\\\)\\\\.right_continuous x/simpa only [measureCdf, ProbabilityTheory.cdf_eq_real] using\\\\n    (ProbabilityTheory.cdf (μ : Measure ℝ)).right_continuous x/; s/\\\\(lt_trans ha hx\\\\)/(lt_trans hx ha)/; s/exact \\\\(not_lt_of_ge \\\\(\\\\(monotone μ\\\\) hxy\\\\)\\\\) \\\\(lt_of_le_of_lt hux hyS\\\\)/exact (not_lt_of_ge (hux.trans ((monotone μ) hxy))) hyS/; s/    apply le_csSup \\\\(lowerSet_bddAbove μ hv\\\\.2\\\\)\\\\n    exact lt_of_le_of_lt \\\\(\\\\(quantile_le_iff μ hu\\\\.1 hu\\\\.2\\\\)\\\\.1 le_rfl\\\\) huv_strict/    refine csSup_le (lowerSet_nonempty μ hu.1) ?_\\\\n    intro y hy\\\\n    change measureCdf μ y < u at hy\\\\n    exact le_csSup (lowerSet_bddAbove μ hv.2) (lt_trans hy huv_strict)/' ProbabilityTheory/chapter_10/thm_10_8_support.lean\\nPATH=/opt/lean/bin:$PATH lake env lean ProbabilityTheory/chapter_10/thm_10_8_support.lean\",\"timeout_seconds\":120}",
+    "call_id": "call_K7Rq7FRTSJRi4vCSp7YjoF07",
+    "internal_chat_message_metadata_passthrough": {
+      "turn_id": "01a09d26-74f6-7470-bf21-348ef7599c1b",
+      "create_time": 1789343181.300331
+    }
+  },
+  "result_payload": {
+    "type": "function_call_output",
+    "id": "fco_01a09d2a-78d5-7b63-a26f-51f73858936a",
+    "call_id": "call_K7Rq7FRTSJRi4vCSp7YjoF07",
+    "output": [
+      {
+        "type": "input_text",
+        "text": "Wall time: 4.7775 seconds\nOutput:"
+      },
+      {
+        "type": "input_text",
+        "text": "{\"exit_code\": 1, \"timed_out\": false, \"elapsed_seconds\": 4.76600000000326, \"stdout\": \"ProbabilityTheory/chapter_10/thm_10_8_support.lean:21:2: error: Type mismatch: After simplification, term\\n  tendsto_cdf_atBot ↑μ\\n has type\\n  Tendsto (↑(cdf ↑μ)) atBot (𝓝 0)\\nbut is expected to have type\\n  Tendsto (measureCdf μ) atBot (𝓝 0)\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:25:2: error: Type mismatch: After simplification, term\\n  tendsto_cdf_atTop ↑μ\\n has type\\n  Tendsto (↑(cdf ↑μ)) atTop (𝓝 1)\\nbut is expected to have type\\n  Tendsto (measureCdf μ) atTop (𝓝 1)\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:29:2: error: Type mismatch: After simplification, term\\n  monotone_cdf ↑μ\\n has type\\n  Monotone ↑(cdf ↑μ)\\nbut is expected to have type\\n  Monotone (measureCdf μ)\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:34:2: error: Type mismatch: After simplification, term\\n  StieltjesFunction.right_continuous (cdf ↑μ) x\\n has type\\n  ContinuousWithinAt (↑(cdf ↑μ)) (Ici x) x\\nbut is expected to have type\\n  ContinuousWithinAt (measureCdf μ) (Ici x) x\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:90:4: warning: try 'simp' instead of 'simpa'\\n\\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\\n\", \"stderr\": \"\", \"stdout_truncated\": false, \"stderr_truncated\": false, \"raw_stdout\": {\"bytes\": 1197, \"sha256\": \"34fca3f2328bb33d80b2249c6ed1b72f82df46e1c85f409a084355403d71b4dd\"}, \"raw_stderr\": {\"bytes\": 0, \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}}"
+      }
+    ],
+    "internal_chat_message_metadata_passthrough": {
+      "turn_id": "01a09d26-74f6-7470-bf21-348ef7599c1b",
+      "create_time": 1789343201.4931536
+    }
+  },
+  "continuation_of": null,
+  "continuation_index": null,
+  "exit_code": 1,
+  "stdout": "ProbabilityTheory/chapter_10/thm_10_8_support.lean:21:2: error: Type mismatch: After simplification, term\n  tendsto_cdf_atBot ↑μ\n has type\n  Tendsto (↑(cdf ↑μ)) atBot (𝓝 0)\nbut is expected to have type\n  Tendsto (measureCdf μ) atBot (𝓝 0)\nProbabilityTheory/chapter_10/thm_10_8_support.lean:25:2: error: Type mismatch: After simplification, term\n  tendsto_cdf_atTop ↑μ\n has type\n  Tendsto (↑(cdf ↑μ)) atTop (𝓝 1)\nbut is expected to have type\n  Tendsto (measureCdf μ) atTop (𝓝 1)\nProbabilityTheory/chapter_10/thm_10_8_support.lean:29:2: error: Type mismatch: After simplification, term\n  monotone_cdf ↑μ\n has type\n  Monotone ↑(cdf ↑μ)\nbut is expected to have type\n  Monotone (measureCdf μ)\nProbabilityTheory/chapter_10/thm_10_8_support.lean:34:2: error: Type mismatch: After simplification, term\n  StieltjesFunction.right_continuous (cdf ↑μ) x\n has type\n  ContinuousWithinAt (↑(cdf ↑μ)) (Ici x) x\nbut is expected to have type\n  ContinuousWithinAt (measureCdf μ) (Ici x) x\nProbabilityTheory/chapter_10/thm_10_8_support.lean:90:4: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+  "stderr": "",
+  "timed_out": false,
+  "elapsed_seconds": 4.76600000000326,
+  "backend_error": null,
+  "stdout_truncated": false,
+  "stderr_truncated": false,
+  "raw_stdout": {
+    "bytes": 1197,
+    "sha256": "34fca3f2328bb33d80b2249c6ed1b72f82df46e1c85f409a084355403d71b4dd"
+  },
+  "raw_stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "output_text": "Wall time: 4.7775 seconds\nOutput:\n{\"exit_code\": 1, \"timed_out\": false, \"elapsed_seconds\": 4.76600000000326, \"stdout\": \"ProbabilityTheory/chapter_10/thm_10_8_support.lean:21:2: error: Type mismatch: After simplification, term\\n  tendsto_cdf_atBot ↑μ\\n has type\\n  Tendsto (↑(cdf ↑μ)) atBot (𝓝 0)\\nbut is expected to have type\\n  Tendsto (measureCdf μ) atBot (𝓝 0)\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:25:2: error: Type mismatch: After simplification, term\\n  tendsto_cdf_atTop ↑μ\\n has type\\n  Tendsto (↑(cdf ↑μ)) atTop (𝓝 1)\\nbut is expected to have type\\n  Tendsto (measureCdf μ) atTop (𝓝 1)\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:29:2: error: Type mismatch: After simplification, term\\n  monotone_cdf ↑μ\\n has type\\n  Monotone ↑(cdf ↑μ)\\nbut is expected to have type\\n  Monotone (measureCdf μ)\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:34:2: error: Type mismatch: After simplification, term\\n  StieltjesFunction.right_continuous (cdf ↑μ) x\\n has type\\n  ContinuousWithinAt (↑(cdf ↑μ)) (Ici x) x\\nbut is expected to have type\\n  ContinuousWithinAt (measureCdf μ) (Ici x) x\\nProbabilityTheory/chapter_10/thm_10_8_support.lean:90:4: warning: try 'simp' instead of 'simpa'\\n\\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\\n\", \"stderr\": \"\", \"stdout_truncated\": false, \"stderr_truncated\": false, \"raw_stdout\": {\"bytes\": 1197, \"sha256\": \"34fca3f2328bb33d80b2249c6ed1b72f82df46e1c85f409a084355403d71b4dd\"}, \"raw_stderr\": {\"bytes\": 0, \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}}",
+  "decoded_outputs": [
+    {
+      "exit_code": 1,
+      "timed_out": false,
+      "elapsed_seconds": 4.76600000000326,
+      "stdout": "ProbabilityTheory/chapter_10/thm_10_8_support.lean:21:2: error: Type mismatch: After simplification, term\n  tendsto_cdf_atBot ↑μ\n has type\n  Tendsto (↑(cdf ↑μ)) atBot (𝓝 0)\nbut is expected to have type\n  Tendsto (measureCdf μ) atBot (𝓝 0)\nProbabilityTheory/chapter_10/thm_10_8_support.lean:25:2: error: Type mismatch: After simplification, term\n  tendsto_cdf_atTop ↑μ\n has type\n  Tendsto (↑(cdf ↑μ)) atTop (𝓝 1)\nbut is expected to have type\n  Tendsto (measureCdf μ) atTop (𝓝 1)\nProbabilityTheory/chapter_10/thm_10_8_support.lean:29:2: error: Type mismatch: After simplification, term\n  monotone_cdf ↑μ\n has type\n  Monotone ↑(cdf ↑μ)\nbut is expected to have type\n  Monotone (measureCdf μ)\nProbabilityTheory/chapter_10/thm_10_8_support.lean:34:2: error: Type mismatch: After simplification, term\n  StieltjesFunction.right_continuous (cdf ↑μ) x\n has type\n  ContinuousWithinAt (↑(cdf ↑μ)) (Ici x) x\nbut is expected to have type\n  ContinuousWithinAt (measureCdf μ) (Ici x) x\nProbabilityTheory/chapter_10/thm_10_8_support.lean:90:4: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": "",
+      "stdout_truncated": false,
+      "stderr_truncated": false,
+      "raw_stdout": {
+        "bytes": 1197,
+        "sha256": "34fca3f2328bb33d80b2249c6ed1b72f82df46e1c85f409a084355403d71b4dd"
+      },
+      "raw_stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ],
+  "execution_wrapper_count": 1,
+  "structured_result": null,
+  "process_session_id": null
+}

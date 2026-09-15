@@ -1,0 +1,17 @@
+{
+  "rows": 66,
+  "outcome_and_time_tables_match": true,
+  "process_tables_match": true,
+  "bundled_final_sources": 38,
+  "timestamp_arithmetic_max_error_seconds": 0.0,
+  "review_provenance": {
+    "second_agent_records": 44,
+    "lead_investigator_records": 22,
+    "all_nonblind": true
+  },
+  "source": {
+    "assessment_sha256": "7b3ce4f748815bfab4eddf8cbe1ac8dcbed13b069c56adfe70f15c2fe04ae32c",
+    "events_sha256": "4d8370825a882088c362be37868ff6fe9be66c7d85704939ea3d4193cb1a8e27"
+  },
+  "scope": "Recomputed frozen assessments, event classifications, annotations and static argument checks. No fresh mathematical judging, Lean build or model run."
+}

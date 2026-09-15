@@ -1,0 +1,67 @@
+batch,arm,group,outcome,recorded_outcome,minutes,estimated_time,reason
+1,A,L1,pass,pass,85.8224361817042,True,"Innovation and partial sums, integrability, adaptation, zero conditional innovation mean and martingale from the original observations."
+1,B,L1,pass,pass,11.902941040198009,False,"Innovation and partial sums, integrability, adaptation, zero conditional innovation mean and martingale from the original observations."
+1,C,L1,pass,pass,12.1617618004481,False,"Innovation and partial sums, integrability, adaptation, zero conditional innovation mean and martingale from the original observations."
+1,A,L2,pass,pass,14.249333826700846,False,"Uncorrelated variance sum and weak law; generic variance expansion is allowed, cross terms and probability limit must be proved."
+1,B,L2,pass,pass,30.087100998560587,False,"Uncorrelated variance sum and weak law; generic variance expansion is allowed, cross terms and probability limit must be proved."
+1,C,L2,pass,pass,17.999100987116496,False,"Uncorrelated variance sum and weak law; generic variance expansion is allowed, cross terms and probability limit must be proved."
+1,A,L3,fail,fail,69.7835489988327,False,The original input sequence is required to be integrable at every index. Eventual integrability does not imply that premise; covering it requires an added tail argument.
+1,B,L3,fail,fail,33.15099265575409,False,The original input sequence is required to be integrable at every index. Eventual integrability does not imply that premise; covering it requires an added tail argument.
+1,C,L3,pass,pass,39.90197506745656,False,"Scheffe for eventual integrability of the original sequence, density total variation and distribution limits, including the specified normal boundaries."
+1,A,L4,pass,pass,46.111268504460654,False,Both discrete and density total-variation formulas from the event supremum; Bernoulli and Poisson applications with endpoints.
+1,B,L4,pass,pass,15.89416131178538,False,Both discrete and density total-variation formulas from the event supremum; Bernoulli and Poisson applications with endpoints.
+1,C,L4,pass,pass,16.536970949172975,False,Both discrete and density total-variation formulas from the event supremum; Bernoulli and Poisson applications with endpoints.
+1,A,L5,pass,pass,76.95963382720947,False,"Maximal coupling, probability and marginal laws, attainment, with common mass zero and one."
+1,B,L5,pass,pass,67.61228816509247,False,"Maximal coupling, probability and marginal laws, attainment, with common mass zero and one."
+1,C,L5,pass,pass,28.695783603191376,False,"Maximal coupling, probability and marginal laws, attainment, with common mass zero and one."
+1,A,L6,pass,pass,34.33955276012421,False,"One- and two-sensor quadratic mean-square error, global optimality and valid boundary cases from source assumptions."
+1,B,L6,pass,pass,21.97549634774526,False,"One- and two-sensor quadratic mean-square error, global optimality and valid boundary cases from source assumptions."
+1,C,L6,pass,pass,23.611812579631806,False,"One- and two-sensor quadratic mean-square error, global optimality and valid boundary cases from source assumptions."
+1,A,L7,pass,pass,73.36863634983699,False,"Coordinate equivalences and continuous mapping, including output measurability; disclosed mathematically sufficient premise correction is accepted."
+1,B,L7,pass,pass,28.994902857144673,False,"Coordinate equivalences and continuous mapping, including output measurability; disclosed mathematically sufficient premise correction is accepted."
+1,C,L7,pass,pass,32.2727250734965,False,"Coordinate equivalences and continuous mapping, including output measurability; disclosed mathematically sufficient premise correction is accepted."
+1,A,M1,pass,pass,136.8921988328298,True,"Stopped martingale and constant expectations, stopped-value existence and all three optional-stopping cases with required domination and convergence."
+1,B,M1,pass,pass,17.641447885831198,False,"Stopped martingale and constant expectations, stopped-value existence and all three optional-stopping cases with required domination and convergence."
+1,C,M1,pass,pass,26.792389221986134,False,"Stopped martingale and constant expectations, stopped-value existence and all three optional-stopping cases with required domination and convergence."
+1,A,M2,pass,pass,59.543999608357744,False,"Full-sequence strong law from source raw fourth moments and independence; centering, moment expansion, summable tails and Borel-Cantelli. Equivalent direct full-sequence route is accepted."
+1,B,M2,pass,pass,36.37646155754725,False,"Full-sequence strong law from source raw fourth moments and independence; centering, moment expansion, summable tails and Borel-Cantelli. Equivalent direct full-sequence route is accepted."
+1,C,M2,pass,pass,36.53466563622157,False,"Full-sequence strong law from source raw fourth moments and independence; centering, moment expansion, summable tails and Borel-Cantelli. Equivalent direct full-sequence route is accepted."
+1,A,M3,pass,pass,21.127544629573823,False,"Constructed common probability space and quantiles, measurable marginals, inverse comparisons and almost-sure convergence, with endpoints and countable exceptional levels."
+1,B,M3,pass,pass,41.54309892257054,False,"Constructed common probability space and quantiles, measurable marginals, inverse comparisons and almost-sure convergence, with endpoints and countable exceptional levels."
+1,C,M3,pass,pass,15.232938408851624,False,"Constructed common probability space and quantiles, measurable marginals, inverse comparisons and almost-sure convergence, with endpoints and countable exceptional levels."
+1,A,H1,pass,pass,182.16032890081405,False,"All five goals, including inversion and uniqueness with task-specific analysis, standard Cauchy core and integer-support criterion; extra parameters optional."
+1,B,H1,pass,pass,126.17445581754049,False,"All five goals, including inversion and uniqueness with task-specific analysis, standard Cauchy core and integer-support criterion; extra parameters optional."
+1,C,H1,pass,pass,103.36300174395244,False,"All five goals, including inversion and uniqueness with task-specific analysis, standard Cauchy core and integer-support criterion; extra parameters optional."
+2,A,L1,pass,pass,15.207516193389893,False,"Innovation and partial sums, integrability, adaptation, zero conditional innovation mean and martingale from the original observations."
+2,B,L1,pass,pass,14.84463586807251,False,"Innovation and partial sums, integrability, adaptation, zero conditional innovation mean and martingale from the original observations."
+2,C,L1,pass,pass,15.266217982769012,False,"Innovation and partial sums, integrability, adaptation, zero conditional innovation mean and martingale from the original observations."
+2,A,L2,pass,pass,16.752785289287566,False,"Uncorrelated variance sum and weak law; generic variance expansion is allowed, cross terms and probability limit must be proved."
+2,B,L2,pass,pass,16.300715816020965,False,"Uncorrelated variance sum and weak law; generic variance expansion is allowed, cross terms and probability limit must be proved."
+2,C,L2,pass,pass,18.97616809209188,False,"Uncorrelated variance sum and weak law; generic variance expansion is allowed, cross terms and probability limit must be proved."
+2,A,L3,pass,pass,44.35426495192846,False,"Scheffe for eventual integrability of the original sequence, density total variation and distribution limits, including the specified normal boundaries."
+2,B,L3,pass,pass,13.65489445924759,False,"Scheffe for eventual integrability of the original sequence, density total variation and distribution limits, including the specified normal boundaries."
+2,C,L3,pass,fail,23.339583818117777,False,The limit's nonnegativity follows on the same functions from the given convergence and nonnegative terms by the general order-limit theorem; measurability follows from supplied integrability. The checked caller invokes the already delivered eventual-integrability Scheffe theorem without adding its proof or a tail extension.
+2,A,L4,pass,pass,41.02550613482793,False,Both discrete and density total-variation formulas from the event supremum; Bernoulli and Poisson applications with endpoints.
+2,B,L4,pass,pass,18.787473233540855,False,Both discrete and density total-variation formulas from the event supremum; Bernoulli and Poisson applications with endpoints.
+2,C,L4,pass,pass,18.04038459857305,False,Both discrete and density total-variation formulas from the event supremum; Bernoulli and Poisson applications with endpoints.
+2,A,L5,pass,pass,32.71709539890289,False,"Maximal coupling, probability and marginal laws, attainment, with common mass zero and one."
+2,B,L5,pass,pass,19.696388844648997,False,"Maximal coupling, probability and marginal laws, attainment, with common mass zero and one."
+2,C,L5,pass,pass,30.09359211921692,False,"Maximal coupling, probability and marginal laws, attainment, with common mass zero and one."
+2,A,L6,pass,pass,24.509454810619353,False,"One- and two-sensor quadratic mean-square error, global optimality and valid boundary cases from source assumptions."
+2,B,L6,pass,pass,34.12867840925853,False,"One- and two-sensor quadratic mean-square error, global optimality and valid boundary cases from source assumptions."
+2,C,L6,pass,pass,21.493418900171914,False,"One- and two-sensor quadratic mean-square error, global optimality and valid boundary cases from source assumptions."
+2,A,L7,pass,pass,21.609986209869383,False,"Coordinate equivalences and continuous mapping, including output measurability; disclosed mathematically sufficient premise correction is accepted."
+2,B,L7,pass,pass,23.988849039872488,False,"Coordinate equivalences and continuous mapping, including output measurability; disclosed mathematically sufficient premise correction is accepted."
+2,C,L7,pass,pass,22.005229608217874,False,"Coordinate equivalences and continuous mapping, including output measurability; disclosed mathematically sufficient premise correction is accepted."
+2,A,M1,pass,fail,51.910352396965024,False,The supplied existence and expectation theorems compose on the original inputs. All three cases pass the caller check; finite expected time implies almost-sure finiteness by the same general argument already present inside the delivered increment proof. No optional-stopping argument is added.
+2,B,M1,pass,pass,23.69711390733719,False,"Stopped martingale and constant expectations, stopped-value existence and all three optional-stopping cases with required domination and convergence."
+2,C,M1,pass,pass,24.188500253359475,False,"Stopped martingale and constant expectations, stopped-value existence and all three optional-stopping cases with required domination and convergence."
+2,A,M2,pass,pass,51.16596621672313,False,"Full-sequence strong law from source raw fourth moments and independence; centering, moment expansion, summable tails and Borel-Cantelli. Equivalent direct full-sequence route is accepted."
+2,B,M2,pass,fail,40.55507711569468,False,The delivered proof already obtains the full-sequence strong law by fourth moments and Borel-Cantelli. The subsequence route constraint is reported as instruction noncompliance rather than mathematical noncompletion; the same route policy applies to both batches.
+2,C,M2,pass,pass,22.908610808849335,False,"Full-sequence strong law from source raw fourth moments and independence; centering, moment expansion, summable tails and Borel-Cantelli. Equivalent direct full-sequence route is accepted."
+2,A,M3,pass,pass,50.2390918970108,False,"Constructed common probability space and quantiles, measurable marginals, inverse comparisons and almost-sure convergence, with endpoints and countable exceptional levels."
+2,B,M3,pass,pass,20.2089257756869,False,"Constructed common probability space and quantiles, measurable marginals, inverse comparisons and almost-sure convergence, with endpoints and countable exceptional levels."
+2,C,M3,pass,pass,18.398693641026814,False,"Constructed common probability space and quantiles, measurable marginals, inverse comparisons and almost-sure convergence, with endpoints and countable exceptional levels."
+2,A,H1,pass,pass,135.5876588543256,False,"All five goals, including inversion and uniqueness with task-specific analysis, standard Cauchy core and integer-support criterion; extra parameters optional."
+2,B,H1,pass,pass,123.88697911898295,False,"All five goals, including inversion and uniqueness with task-specific analysis, standard Cauchy core and integer-support criterion; extra parameters optional."
+2,C,H1,pass,pass,86.41807678937911,False,"All five goals, including inversion and uniqueness with task-specific analysis, standard Cauchy core and integer-support criterion; extra parameters optional."

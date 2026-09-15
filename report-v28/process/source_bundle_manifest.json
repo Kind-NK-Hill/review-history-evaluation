@@ -1,0 +1,212 @@
+{
+  "final_sources": {
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l1-a/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l1-a/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+      "sha256": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585",
+      "bytes": 6682
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_5.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_5.lean",
+      "sha256": "2a735d9eb050e5dd1ee26affb292ea3c629c1ef5c012183ccf35e799968bf28d",
+      "bytes": 5706
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "sha256": "55815cf0347fd5a6a45413d135e78dde801fda29f542997870b5da9374dc2d8c",
+      "bytes": 2209
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-a/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l3-a/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf",
+      "bytes": 5404
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l4-a/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l4-a/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "sha256": "a43f158f9c4492cec84bc77b569bb369e51e533ac6123e27d7f1eda648ef4958",
+      "bytes": 10256
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-a/technical/saved-sources/ProbabilityTheory/chapter_08/prob_8_7.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l5-a/technical/saved-sources/ProbabilityTheory/chapter_08/prob_8_7.lean",
+      "sha256": "75a68c69686d1c2d01a9c5d7b7b45a63a8a73fc77409cd37b095bdf467d8bd67",
+      "bytes": 21214
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l6-a/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l6-a/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+      "sha256": "daaaad2b28db1b8e794960e63139cf3daf6884819fd7b6246cb0faf90d5158af",
+      "bytes": 10008
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-a/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_10.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l7-a/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "sha256": "0d28a5c4704aafd34e8475fdb52ec8376b5144e0477cbcba1c5c5cecb6c7d216",
+      "bytes": 9587
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m1-a/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean": {
+      "bundled_path": "final_sources/acceptance/r2-m1-a/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+      "sha256": "60ea3415c72aa452f1626e29704245d4b701c356472eb45b2deece01daaa8d97",
+      "bytes": 10220
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean": {
+      "bundled_path": "final_sources/acceptance/r2-m2-a/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+      "sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f",
+      "bytes": 21632
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m3-a/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean": {
+      "bundled_path": "final_sources/acceptance/r2-m3-a/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+      "sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3",
+      "bytes": 17485
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-h1-a/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean": {
+      "bundled_path": "final_sources/acceptance/r2-h1-a/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean",
+      "sha256": "8ee5672a96131dc215d51ac52cbbaad181e4620bd8f176f0d51abaaed48dbc24",
+      "bytes": 1224
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-h1-b/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_6.lean": {
+      "bundled_path": "final_sources/acceptance/r2-h1-b/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_6.lean",
+      "sha256": "17ca0f644d5f72b83c016c51c32883e715795a0407560267658070018a77cd1f",
+      "bytes": 7283
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l1-b/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l1-b/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+      "sha256": "829a38754dd24f57c2baa8f68cdf976d94db7ffa3dbf07e299b40bfdb8d2c9cf",
+      "bytes": 7888
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l2-b/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l2-b/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "sha256": "43935188aef77259238402913ab8d47c36c03dd8225dc40fa6687e50b3268e62",
+      "bytes": 1887
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-b/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l3-b/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "sha256": "bc1e576d1935368b688c1bbd87fe16dc39dba4c935029082e14bb01a97e93d39",
+      "bytes": 6570
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-b/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l3-b/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "sha256": "9f892ee2c9000f143a683c87ec0578988727a4477d7c81402f16fa456ffa7be5",
+      "bytes": 12399
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l4-b/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l4-b/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "sha256": "f7cbec62f8dd891f924fb1bea03b3e36916745a2d069e51de3ffb8c09996a805",
+      "bytes": 13224
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-b/technical/saved-sources/ProbabilityTheory/chapter_08/prob_8_7.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l5-b/technical/saved-sources/ProbabilityTheory/chapter_08/prob_8_7.lean",
+      "sha256": "1b34b99cf462226744871023cecb09c9c12496239dcf5d9c6c5af3d4acb06050",
+      "bytes": 20339
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l6-b/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l6-b/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+      "sha256": "3814cb3c45720606e0ba90e6467e66cd9196a67693965caef2f5007ef0ceff9a",
+      "bytes": 10170
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-b/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_10.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l7-b/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "sha256": "01055015a15447155b772486f72e652987377708782a100487420d73c621700f",
+      "bytes": 6492
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m1-b/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean": {
+      "bundled_path": "final_sources/acceptance/r2-m1-b/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+      "sha256": "c48bee10190bab3905f10bd222d63c33608ec74a45374c05b6b6509410c052a5",
+      "bytes": 3813
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m2-b/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7_support.lean": {
+      "bundled_path": "final_sources/acceptance/r2-m2-b/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7_support.lean",
+      "sha256": "0d7bbd161ac5e601b9127ca0738752ecb8eace4b2f262126a386e1545dec58bd",
+      "bytes": 20857
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m3-b/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8_support.lean": {
+      "bundled_path": "final_sources/acceptance/r2-m3-b/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8_support.lean",
+      "sha256": "9bb24498fd60d0203d4b811bd326ad0374f588c6b9b8133dbb1632ddefa3941e",
+      "bytes": 13616
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-h1-c/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean": {
+      "bundled_path": "final_sources/acceptance/r2-h1-c/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean",
+      "sha256": "20953d24387b8397fd3445ed1552d4140ea9f2c85f7e80e7bfcd82bb220abbfe",
+      "bytes": 425
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+      "sha256": "77a4ef2c28d48b7e0b64a2b0de4ef98c899785aedd04cd3e793f78680a73d902",
+      "bytes": 7659
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "sha256": "a900d189dd3e3b2310467f459ae2b3e0adf513584b1e8292ba6e391384416067",
+      "bytes": 5344
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "sha256": "cdef1040d6b4cd19df030f8406dc158944830cce2a1f0fe3624239315ce982f6",
+      "bytes": 4658
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "sha256": "82bbbc0c33430266abe139fad7632a4d3b7124c33589c015d6e63344b85effc2",
+      "bytes": 11191
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l4-c/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l4-c/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "sha256": "8f1813c952b8747cd079feafffc4d3ecd00296a5cbc8b2ae6e738b8b58e16a40",
+      "bytes": 10028
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/coupling_core.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/coupling_core.lean",
+      "sha256": "feb0c9414f7a20fb388f60c35ac7a6a49465f933e7284b927d5023d491a99270",
+      "bytes": 3775
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/max_coupling_core.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/max_coupling_core.lean",
+      "sha256": "9b9ff43149bdf258b3b0c8203f623ffc2fdb8a5def313eab4c98feea37e52bf5",
+      "bytes": 7133
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+      "sha256": "4765c7affa5264dec9fd9813f956daa5766a4600d6200b82f90db3b797d0914d",
+      "bytes": 26436
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/coordinate_convergence_support.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/coordinate_convergence_support.lean",
+      "sha256": "565a692411387f290c3b074296724c55aa499e650283eaacd3f8f60be296f900",
+      "bytes": 7365
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/convergence_support.lean": {
+      "bundled_path": "final_sources/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/convergence_support.lean",
+      "sha256": "212bc06c07333c99bc46986bc2f4c8434e85ca405738dfc2ef439144c2413ccb",
+      "bytes": 5705
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean": {
+      "bundled_path": "final_sources/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+      "sha256": "ce6c14a5f54d6cd0f723942f3e2fdd2bf8e1e4432e3e993ee1ac9f17e95f26a2",
+      "bytes": 5034
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean": {
+      "bundled_path": "final_sources/acceptance/r2-m2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+      "sha256": "f502d1e308dd6c312006714c67351638eb72e81f175914ed44588d51629d3817",
+      "bytes": 25145
+    },
+    "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean": {
+      "bundled_path": "final_sources/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean",
+      "sha256": "eff38b3259aa6124521b21842b6ca0d362119adc803001ccb5ecd36582ae1718",
+      "bytes": 11429
+    }
+  },
+  "final_source_aliases": {
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-h1-c/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-h1-c/technical/saved-sources/ProbabilityTheory/chapter_09/thm_9_4.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l1-c/technical/saved-sources/ProbabilityTheory/chapter_13/prob_13_9.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_4.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l3-c/technical/saved-sources/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l4-c/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l4-c/technical/saved-sources/ProbabilityTheory/chapter_08/thm_8_6.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/coupling_core.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/coupling_core.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/max_coupling_core.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l5-c/technical/saved-sources/ProbabilityTheory/common_support/max_coupling_core.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l6-c/technical/saved-sources/ProbabilityTheory/chapter_12/prob_12_5.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/coordinate_convergence_support.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/coordinate_convergence_support.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/convergence_support.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-l7-c/technical/saved-sources/ProbabilityTheory/chapter_10/convergence_support.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m1-c/technical/saved-sources/ProbabilityTheory/chapter_13/thm_13_17.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m2-c/technical/saved-sources/ProbabilityTheory/chapter_11/thm_11_7.lean",
+    "review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/replication_20260913/acceptance/r2-m3-c/technical/saved-sources/ProbabilityTheory/chapter_10/thm_10_8.lean"
+  },
+  "scope": "Included final sources keyed by their preserved historical locator. All checks use the included paths.",
+  "original_manifest_sha256": "39e2b8d6c3fa3fd7740bbaca31769442043c666756245fb9f3e05a29cc7441d1"
+}

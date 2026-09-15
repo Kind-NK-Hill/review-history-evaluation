@@ -1,0 +1,34 @@
+{
+  "baseline_decision_hashes": {
+    "EVIDENCE_INVESTIGATION_COMPLETE_2026-09-07.md": "c1dce7042fd2763cb37a4a683a6c40442e12699c29c426b07efb071874f93226",
+    "case_assessments.jsonl": "e7137b902709a8c8cd2914e789928edfc4b86beb6053859b80a0c3a141219f87",
+    "endpoint_eligibility_exclusions.json": "2ab67e8afb0fba03e0a2ab5fc611d600bca9b7c6db76470a73a8505fa349c8e5",
+    "evidence_qualification_completion.json": "f440f9de94148a7babecaab6ab1512a5ba43b44115f552b05b3d9b64cdea30e2",
+    "main_relation_qualification_map.jsonl": "ec375c8b51dc4d3b9c80d0987222ed2ebb424f018c088551582d70c86d223454",
+    "new_issue_assessments.jsonl": "3159a560df9fd3453f9a426f6b4860b712feec04074cd442ebcf547d89adc5cc",
+    "target_change_adjudications.jsonl": "b080161d7602953b8aa21a6ddab458727effb63e0d7c91c249b58d381a229319"
+  },
+  "path_base": "ROOT",
+  "reading_files": [
+    {
+      "path": "ROOT/review_history_retro_20260901\\research_framework\\evaluation_rebuild_v2_20260907\\investigation\\revisions\\v0.7.1\\readings\\target_reading_a.json",
+      "path_relative_to_formalization": "review_history_retro_20260901/research_framework/evaluation_rebuild_v2_20260907/investigation/revisions/v0.7.1/readings/target_reading_a.json",
+      "role": "v071_substantive_reading_record",
+      "sha256": "269a509bca3259a09731285f77e9a2f0f0f7891d23418a477c4d855b7bb35ee7"
+    },
+    {
+      "path": "ROOT/review_history_retro_20260901\\research_framework\\evaluation_rebuild_v2_20260907\\investigation\\revisions\\v0.7.1\\readings\\target_reading_b.json",
+      "path_relative_to_formalization": "review_history_retro_20260901/research_framework/evaluation_rebuild_v2_20260907/investigation/revisions/v0.7.1/readings/target_reading_b.json",
+      "role": "v071_substantive_reading_record",
+      "sha256": "038e2783011ed0a03ccba6b8b75cc2a181ee765e82f37ff3a97fac20f1024343"
+    },
+    {
+      "path": "ROOT/review_history_retro_20260901\\research_framework\\evaluation_rebuild_v2_20260907\\investigation\\revisions\\v0.7.1\\readings\\target_reading_primary.json",
+      "path_relative_to_formalization": "review_history_retro_20260901/research_framework/evaluation_rebuild_v2_20260907/investigation/revisions/v0.7.1/readings/target_reading_primary.json",
+      "role": "v071_substantive_reading_record",
+      "sha256": "3d9ad1775d4b7d026583ccfc4d92c3eb6410172f1269977b4fca90377da5b4f1"
+    }
+  ],
+  "revision": "v0.7.1",
+  "scope": "Explicit target review and one relation interpretation correction; historical labels unchanged."
+}

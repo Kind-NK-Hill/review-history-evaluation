@@ -1,0 +1,36 @@
+{
+  "1": {
+    "A": {
+      "pass": 10,
+      "recorded_pass": 10,
+      "median_minutes": 69.7835489988327
+    },
+    "B": {
+      "pass": 10,
+      "recorded_pass": 10,
+      "median_minutes": 30.087100998560587
+    },
+    "C": {
+      "pass": 11,
+      "recorded_pass": 11,
+      "median_minutes": 26.792389221986134
+    }
+  },
+  "2": {
+    "A": {
+      "pass": 11,
+      "recorded_pass": 10,
+      "median_minutes": 41.02550613482793
+    },
+    "B": {
+      "pass": 11,
+      "recorded_pass": 10,
+      "median_minutes": 20.2089257756869
+    },
+    "C": {
+      "pass": 11,
+      "recorded_pass": 10,
+      "median_minutes": 22.005229608217874
+    }
+  }
+}

@@ -1,13 +1,4 @@
 __pycache__/
 *.pyc
-.venv/
-venv/
 recomputed/
-*.aux
-*.bbl
-*.blg
-*.log
-*.out
-*.toc
-.env
-.env.*
+report-v28/process/extraction/events.jsonl

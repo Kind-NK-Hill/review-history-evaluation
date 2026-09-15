@@ -1,0 +1,151 @@
+{
+  "epoch": 1789131485.5824704,
+  "mapping_private": [
+    {
+      "candidate_id": "candidate-6d87e44415de",
+      "root": "ROOT/rr-l3-v1\\candidate-6d87e44415de",
+      "subject": "ROOT/rr-l3-v1\\candidate-6d87e44415de\\subject",
+      "private_source_arm": "C",
+      "original_case": "ROOT/ep-bc-l3-c\\development-ac-r1\\cases\\5b273faa031edeeab7424ef676fb0bcb9d7040aad2c4887125328b2d5c495b2b",
+      "original_decision": "ROOT/ep-bc-l3-c\\development-ac-r1\\cases\\5b273faa031edeeab7424ef676fb0bcb9d7040aad2c4887125328b2d5c495b2b\\final\\decision.json",
+      "original_verdict": "pass",
+      "subject_manifest": {
+        "reevaluation/RULES.json": "f36ae55a1e31e72b183a53b8acb1c2bde603adbe8e1a6b4b48ecf5ec47962c6c",
+        "source/SOURCE.tex": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614",
+        "task_contract/COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "task_contract/TASK.zh-CN.md": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16",
+        "tool_fact/technical-validation.json": "7fb7cfa779396568c328ead65819e39ba52e75b753244e795610eb9bcb0bf98c",
+        "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean": "25ac85093f03845e5588731b8e2135d9493d543280d662e22cf05549ec53c3ef",
+        "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean": "701d35d4461cefa4835b99ec60d60d9ece41411deae08bd78d5e918964eefbc3",
+        "candidate/ProbabilityTheory/common_support/scheffe.lean": "e503cd27d3d2c89826bdd06415deb9c6772d9cbad91e1815b5d9d55350046bac",
+        "upstream/ProbabilityTheory/chapter_07/thm_7_11.lean": "d426c39e02bb1c0021872b986bcb5efef4201f01fcfd7f0d836cecf367a04b68",
+        "upstream/ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+        "upstream/ProbabilityTheory/chapter_08/prob_8_7.lean": "e519469e0774622e346298e4302f07f3a1ecbac0ce9a0d5d3ca598f1d850d7d2",
+        "upstream/ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+        "upstream/ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24",
+        "upstream/ProbabilityTheory/chapter_10/def_10_5.lean": "eddf0d56154ef3104ab5fc2852c1fdae85d39da52d8baa5ce6486aba702d762a",
+        "upstream/ProbabilityTheory/chapter_10/ex_10_3_1.lean": "90ec14c6ebf589763e63b7afe24ddb71d693b704ee4f82acaf1228b3f67578bb",
+        "upstream/ProbabilityTheory/chapter_10/thm_10_6.lean": "2572f91885ca57222a32a058ddf665174438756581f2739ddc149ae15047d38d",
+        "upstream/ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+        "upstream/ProbabilityTheory/chapter_14/def_14_1.lean": "5f6fad3aea7270b16c5b339f2535a4d1777b72f43073ad01a32658f458144cc1",
+        "upstream/ProbabilityTheory/chapter_14/thm_14_4.lean": "921416e3fbe6525b2e87e6b88f1ab42fcb87c7757f4fda5568c74ae73dcf1f47",
+        "upstream/ProbabilityTheory/chapter_14/thm_14_4_density_support.lean": "08b047e2251579d907798fbdee67e11a33a6b258cc0a4150a90b9a9460ad6ccb",
+        "upstream/ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean": "f5a1f21acd9e1a37c2f445acb4f9d64b33b1442151b6fa90f18c00a0cf43ddfe",
+        "upstream/ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+      }
+    },
+    {
+      "candidate_id": "candidate-b299284a15fd",
+      "root": "ROOT/rr-l3-v1\\candidate-b299284a15fd",
+      "subject": "ROOT/rr-l3-v1\\candidate-b299284a15fd\\subject",
+      "private_source_arm": "B",
+      "original_case": "ROOT/ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b",
+      "original_decision": "ROOT/ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\final\\decision.json",
+      "original_verdict": "fail",
+      "subject_manifest": {
+        "reevaluation/RULES.json": "f36ae55a1e31e72b183a53b8acb1c2bde603adbe8e1a6b4b48ecf5ec47962c6c",
+        "source/SOURCE.tex": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614",
+        "task_contract/COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "task_contract/TASK.zh-CN.md": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16",
+        "tool_fact/technical-validation.json": "f34884919ddfb6fbd8517f897cc9697d244ad7d7c3564803eb478f3130d66676",
+        "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean": "d2c237c168b2346e235ded87654798c76b356de65387ffe86dab48666cb53d13",
+        "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean": "4a67292b0fe682cc35702861bc241286ba642fc1dc6a5423f7d838f6ec3ef08e",
+        "upstream/ProbabilityTheory/chapter_07/thm_7_11.lean": "d426c39e02bb1c0021872b986bcb5efef4201f01fcfd7f0d836cecf367a04b68",
+        "upstream/ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+        "upstream/ProbabilityTheory/chapter_08/prob_8_7.lean": "e519469e0774622e346298e4302f07f3a1ecbac0ce9a0d5d3ca598f1d850d7d2",
+        "upstream/ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+        "upstream/ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24",
+        "upstream/ProbabilityTheory/chapter_10/def_10_5.lean": "eddf0d56154ef3104ab5fc2852c1fdae85d39da52d8baa5ce6486aba702d762a",
+        "upstream/ProbabilityTheory/chapter_10/ex_10_3_1.lean": "90ec14c6ebf589763e63b7afe24ddb71d693b704ee4f82acaf1228b3f67578bb",
+        "upstream/ProbabilityTheory/chapter_10/thm_10_6.lean": "2572f91885ca57222a32a058ddf665174438756581f2739ddc149ae15047d38d",
+        "upstream/ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+        "upstream/ProbabilityTheory/chapter_14/def_14_1.lean": "5f6fad3aea7270b16c5b339f2535a4d1777b72f43073ad01a32658f458144cc1",
+        "upstream/ProbabilityTheory/chapter_14/thm_14_4.lean": "921416e3fbe6525b2e87e6b88f1ab42fcb87c7757f4fda5568c74ae73dcf1f47",
+        "upstream/ProbabilityTheory/chapter_14/thm_14_4_density_support.lean": "08b047e2251579d907798fbdee67e11a33a6b258cc0a4150a90b9a9460ad6ccb",
+        "upstream/ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean": "f5a1f21acd9e1a37c2f445acb4f9d64b33b1442151b6fa90f18c00a0cf43ddfe",
+        "upstream/ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+      }
+    },
+    {
+      "candidate_id": "candidate-ca86a7f5709c",
+      "root": "ROOT/rr-l3-v1\\candidate-ca86a7f5709c",
+      "subject": "ROOT/rr-l3-v1\\candidate-ca86a7f5709c\\subject",
+      "private_source_arm": "A",
+      "original_case": "ROOT/ep-a-stage-l3\\development-ac-r1\\cases\\da84ef9a9f0ba214ab52b794960ac6abcbfd3cdefa45ae811e1d70dd9f8edf47",
+      "original_decision": "ROOT/ep-a-stage-l3\\development-ac-r1\\cases\\da84ef9a9f0ba214ab52b794960ac6abcbfd3cdefa45ae811e1d70dd9f8edf47\\final\\decision.json",
+      "original_verdict": "pass",
+      "subject_manifest": {
+        "reevaluation/RULES.json": "f36ae55a1e31e72b183a53b8acb1c2bde603adbe8e1a6b4b48ecf5ec47962c6c",
+        "source/SOURCE.tex": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614",
+        "task_contract/COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "task_contract/TASK.zh-CN.md": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16",
+        "tool_fact/technical-validation.json": "2c8b5b3b4aca641a6703689000d71bf18a449fe7d4cf7ad713daa581c3288d35",
+        "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean": "56c208c148b8528350fadd192743712b22a696d606b3febb8eefce3e140866b2",
+        "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean": "9c7a123c815c1d5a91f92de77239e205e502849c24feff7a57e25000fc57aedb",
+        "upstream/ProbabilityTheory/chapter_07/thm_7_11.lean": "d426c39e02bb1c0021872b986bcb5efef4201f01fcfd7f0d836cecf367a04b68",
+        "upstream/ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+        "upstream/ProbabilityTheory/chapter_08/prob_8_7.lean": "e519469e0774622e346298e4302f07f3a1ecbac0ce9a0d5d3ca598f1d850d7d2",
+        "upstream/ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+        "upstream/ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24",
+        "upstream/ProbabilityTheory/chapter_10/def_10_5.lean": "eddf0d56154ef3104ab5fc2852c1fdae85d39da52d8baa5ce6486aba702d762a",
+        "upstream/ProbabilityTheory/chapter_10/ex_10_3_1.lean": "90ec14c6ebf589763e63b7afe24ddb71d693b704ee4f82acaf1228b3f67578bb",
+        "upstream/ProbabilityTheory/chapter_10/thm_10_6.lean": "2572f91885ca57222a32a058ddf665174438756581f2739ddc149ae15047d38d",
+        "upstream/ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+        "upstream/ProbabilityTheory/chapter_14/def_14_1.lean": "5f6fad3aea7270b16c5b339f2535a4d1777b72f43073ad01a32658f458144cc1",
+        "upstream/ProbabilityTheory/chapter_14/thm_14_4.lean": "921416e3fbe6525b2e87e6b88f1ab42fcb87c7757f4fda5568c74ae73dcf1f47",
+        "upstream/ProbabilityTheory/chapter_14/thm_14_4_density_support.lean": "08b047e2251579d907798fbdee67e11a33a6b258cc0a4150a90b9a9460ad6ccb",
+        "upstream/ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean": "f5a1f21acd9e1a37c2f445acb4f9d64b33b1442151b6fa90f18c00a0cf43ddfe",
+        "upstream/ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+      }
+    }
+  ],
+  "initial_review_order": [
+    {
+      "candidate_id": "candidate-6d87e44415de",
+      "slot": "reviewer-1",
+      "request": "ROOT/rr-l3-v1\\candidate-6d87e44415de\\requests\\reviewer-1.json"
+    },
+    {
+      "candidate_id": "candidate-b299284a15fd",
+      "slot": "reviewer-1",
+      "request": "ROOT/rr-l3-v1\\candidate-b299284a15fd\\requests\\reviewer-1.json"
+    },
+    {
+      "candidate_id": "candidate-ca86a7f5709c",
+      "slot": "reviewer-1",
+      "request": "ROOT/rr-l3-v1\\candidate-ca86a7f5709c\\requests\\reviewer-1.json"
+    },
+    {
+      "candidate_id": "candidate-6d87e44415de",
+      "slot": "reviewer-2",
+      "request": "ROOT/rr-l3-v1\\candidate-6d87e44415de\\requests\\reviewer-2.json"
+    },
+    {
+      "candidate_id": "candidate-b299284a15fd",
+      "slot": "reviewer-2",
+      "request": "ROOT/rr-l3-v1\\candidate-b299284a15fd\\requests\\reviewer-2.json"
+    },
+    {
+      "candidate_id": "candidate-ca86a7f5709c",
+      "slot": "reviewer-2",
+      "request": "ROOT/rr-l3-v1\\candidate-ca86a7f5709c\\requests\\reviewer-2.json"
+    }
+  ],
+  "all_initial_request_bindings": {
+    "ROOT/rr-l3-v1\\candidate-6d87e44415de\\requests\\reviewer-1.json": "ee481d5cbc0af4690e9fc5b0441059cbdc34c60d40133d6667af017886828b42",
+    "ROOT/rr-l3-v1\\candidate-b299284a15fd\\requests\\reviewer-1.json": "569df22a5bde647fea614e8e82b01d893b781492975c7bf0a0ea3e58993b1a93",
+    "ROOT/rr-l3-v1\\candidate-ca86a7f5709c\\requests\\reviewer-1.json": "64808356f8f1bf38d10f398f81453ce8563376b14460176cc84153dbedd91160",
+    "ROOT/rr-l3-v1\\candidate-6d87e44415de\\requests\\reviewer-2.json": "db735c784df809e738d43ec1d0c7575522edad6a792b7523e615158b78abedfe",
+    "ROOT/rr-l3-v1\\candidate-b299284a15fd\\requests\\reviewer-2.json": "9add07dfc5fdcbd2bc94afc397facb808b3a6b0a473e7298e8d8d26930163f9a",
+    "ROOT/rr-l3-v1\\candidate-ca86a7f5709c\\requests\\reviewer-2.json": "327774649a658f0306319df7b4af9126e199395137ca5ba9a78e0b3486ec95a7"
+  },
+  "rule_sha256": "5b90a4b7fff828e42faccb797562ca4917b2d71999ff8943c0503df2380404e4",
+  "max_unique_adjudications_per_candidate": 1,
+  "adjudication_triggers": [
+    "initial pair disagrees on a registered dimension or obligation",
+    "invalid initial evaluation",
+    "cross-candidate same-behavior rule application inconsistency after all independent reviews"
+  ],
+  "independent_reviews_before_cross_candidate_check": true,
+  "new_solver_trials": 0
+}

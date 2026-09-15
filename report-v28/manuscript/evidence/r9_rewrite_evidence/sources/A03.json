@@ -1,0 +1,194 @@
+{
+  "reviews": [
+    {
+      "label": "L2-candidate-67c83c8b4bf7-1",
+      "source": "ROOT/rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-67c83c8b4bf7-1.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "L2-candidate-92da00620333-1",
+      "source": "ROOT/rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-92da00620333-1.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "L2-candidate-92da00620333-2",
+      "source": "ROOT/rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-92da00620333-2.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "L2-candidate-dddb2b2aae36-1",
+      "source": "ROOT/rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-dddb2b2aae36-1.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "L2-candidate-8df72d8fe638-1",
+      "source": "ROOT/rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-8df72d8fe638-1.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "L2-candidate-8df72d8fe638-2",
+      "source": "ROOT/rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-8df72d8fe638-2.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "L3-candidate-6d87e44415de-1",
+      "source": "ROOT/rr-l3-v1\\candidate-6d87e44415de-adjud\\executions\\adjudicator\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-6d87e44415de-1.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "L3-candidate-b299284a15fd-1",
+      "source": "ROOT/rr-l3-v1\\candidate-b299284a15fd-adjud\\executions\\adjudicator\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-b299284a15fd-1.json",
+      "state": "ready",
+      "repairs": [
+        {
+          "kind": "quotation_presentation",
+          "resolution": {
+            "state": "presentation_repair",
+            "path": "reevaluation\\TAIL_SCOPE_REVISION.json",
+            "line_start": 3,
+            "line_end": 5,
+            "original_quote": "\"not_original_preregistration\": true,\r\n  \"trigger\": \"Initial F/E reviews exposed that E demands an extended-integral-to-eventual-integrability wrapper even when a candidate uses the eventual-integrability formulation expressly permitted by TASK. Preserve E as strict source-scope sensitivity; do not silently impose it as the only original TASK acceptance rule.\",\r\n  \"quoted_original_task\": \"合同允许采用最终尾部可积表述\"",
+            "exact_source_context": "  \"not_original_preregistration\": true,\n  \"trigger\": \"Initial F/E reviews exposed that E demands an extended-integral-to-eventual-integrability wrapper even when a candidate uses the eventual-integrability formulation expressly permitted by TASK. Preserve E as strict source-scope sensitivity; do not silently impose it as the only original TASK acceptance rule.\",\n  \"quoted_original_task\": \"合同允许采用最终尾部可积表述\",",
+            "normalization": "whitespace; prose literal newlines; TeX repeated command escapes and math delimiters only",
+            "location": "$.source_reading.evidence[2]"
+          }
+        }
+      ],
+      "issue_count": 0
+    },
+    {
+      "label": "L3-candidate-ca86a7f5709c-1",
+      "source": "ROOT/rr-l3-v1\\candidate-ca86a7f5709c-adjud\\executions\\adjudicator\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-ca86a7f5709c-1.json",
+      "state": "ready",
+      "repairs": [
+        {
+          "kind": "quotation_presentation",
+          "resolution": {
+            "state": "presentation_repair",
+            "path": "source\\SOURCE.tex",
+            "line_start": 2,
+            "line_end": 2,
+            "original_quote": "Assume that \\int f_n\\, d\\mu \\to \\int f\\, d\\mu < \\infty$.",
+            "exact_source_context": "\\textbf{7.6 (Scheff\\'e Lemma).} Suppose $f_n$'s are nonnegative measurable functions that converge to $f$ almost everywhere as $n\\to\\infty$. Assume that $\\int f_n\\, d\\mu \\to \\int f\\, d\\mu < \\infty$.",
+            "normalization": "whitespace; prose literal newlines; TeX repeated command escapes and math delimiters only",
+            "location": "$.source_reading.evidence[0]"
+          }
+        }
+      ],
+      "issue_count": 0
+    },
+    {
+      "label": "L3-candidate-2ec562216bc6-1",
+      "source": "ROOT/rr-l3-v1\\candidate-2ec562216bc6-adjud\\executions\\adjudicator\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-2ec562216bc6-1.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "H1-candidate-ad3cbe004a3a-1",
+      "source": "ROOT/rr-h1-v1\\candidate-ad3cbe004a3a-adjud\\executions\\adjudicator\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-ad3cbe004a3a-1.json",
+      "state": "ready",
+      "repairs": [
+        {
+          "kind": "quotation_presentation",
+          "resolution": {
+            "state": "presentation_repair",
+            "path": "source\\SOURCE.tex",
+            "line_start": 132,
+            "line_end": 132,
+            "original_quote": "\\\\textbf{Problem 9.6} Let $X_1,\\\\ldots,X_n$ be i.i.d. Cauchy random variables.",
+            "exact_source_context": "\\textbf{Problem 9.6} Let $X_1,\\ldots,X_n$ be i.i.d. Cauchy random variables. Show that $(X_1+\\cdots+X_n)/n$ is Cauchy with the same distribution as $X_1$.",
+            "normalization": "whitespace; prose literal newlines; TeX repeated command escapes and math delimiters only",
+            "location": "$.source_reading.evidence[0]"
+          }
+        }
+      ],
+      "issue_count": 0
+    },
+    {
+      "label": "H1-candidate-c47950c412e8-1",
+      "source": "ROOT/rr-h1-v1\\candidate-c47950c412e8-adjud\\executions\\adjudicator\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-c47950c412e8-1.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "H1-candidate-dfce8b6cb8f4-1",
+      "source": "ROOT/rr-h1-v1\\candidate-dfce8b6cb8f4-adjud\\executions\\adjudicator\\attempt-01\\REVIEW_RESULT.json",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-dfce8b6cb8f4-1.json",
+      "state": "ready",
+      "repairs": [],
+      "issue_count": 0
+    },
+    {
+      "label": "L7-C-original-reviewer-1",
+      "source": "ROOT/ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\executions\\reviewer-1\\attempt-01\\actor\\raw-public-events.bin",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L7-C-original-reviewer-1.json",
+      "state": "ready",
+      "repairs": [
+        {
+          "kind": "optional_confidence",
+          "original": {
+            "score": 0.97,
+            "level": "high",
+            "rationale": "技术验证通过，且两份候选源码及全部指定上游文件均已完整核验；失败原因是公开定理 thm_10_11 增加了无法由教材条件推出的全局可测性前提 hf，因而没有证明原公开陈述的强度。"
+          },
+          "normalized": 0.97,
+          "note": "Unavailable numerical confidence is null and never a mathematical verdict."
+        }
+      ],
+      "historical_vote_unchanged": "fail",
+      "issue_count": 0
+    },
+    {
+      "label": "L7-C-original-reviewer-2",
+      "source": "ROOT/ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\executions\\reviewer-2\\attempt-01\\actor\\raw-public-events.bin",
+      "output": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L7-C-original-reviewer-2.json",
+      "state": "ready",
+      "repairs": [
+        {
+          "kind": "optional_confidence",
+          "original": {
+            "score": 0.97,
+            "level": "高",
+            "rationale": "已完整读取全部指定冻结输入，逐项核对公开声明、定义展开、证明路线和中性技术事实。两项目标均闭合，未发现结论迁移、额外公理、未证关键责任或语义削弱。"
+          },
+          "normalized": 0.97,
+          "note": "Unavailable numerical confidence is null and never a mathematical verdict."
+        }
+      ],
+      "historical_vote_unchanged": "pass",
+      "issue_count": 0
+    }
+  ],
+  "real_previously_invalid_outputs_recovered": 5,
+  "unresolved_evidence_items": [],
+  "new_model_calls": 0,
+  "original_votes_and_reasons_preserved": true
+}

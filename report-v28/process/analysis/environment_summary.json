@@ -1,0 +1,95 @@
+{
+  "observed_calls": 173,
+  "affected_runs": 33,
+  "affected_sessions": 98,
+  "outer_exit_zero": 49,
+  "later_same_session_unavailability_calls": 2,
+  "commands": {
+    "apply_patch": {
+      "calls": 66,
+      "runs": 33,
+      "sessions": 64
+    },
+    "cmd": {
+      "calls": 1,
+      "runs": 1,
+      "sessions": 1
+    },
+    "file": {
+      "calls": 7,
+      "runs": 7,
+      "sessions": 7
+    },
+    "formalformalize": {
+      "calls": 1,
+      "runs": 1,
+      "sessions": 1
+    },
+    "jq": {
+      "calls": 20,
+      "runs": 11,
+      "sessions": 20
+    },
+    "lake": {
+      "calls": 36,
+      "runs": 11,
+      "sessions": 36
+    },
+    "node": {
+      "calls": 2,
+      "runs": 2,
+      "sessions": 2
+    },
+    "patch": {
+      "calls": 40,
+      "runs": 23,
+      "sessions": 40
+    },
+    "python": {
+      "calls": 10,
+      "runs": 6,
+      "sessions": 10
+    },
+    "ruby": {
+      "calls": 1,
+      "runs": 1,
+      "sessions": 1
+    },
+    "sqlite3": {
+      "calls": 1,
+      "runs": 1,
+      "sessions": 1
+    },
+    "xxd": {
+      "calls": 3,
+      "runs": 3,
+      "sessions": 3
+    }
+  },
+  "configs": {
+    "A": {
+      "calls": 83,
+      "runs": 11,
+      "sessions": 44,
+      "outer_exit_zero": 41,
+      "later_same_session_unavailability_calls": 0
+    },
+    "B": {
+      "calls": 69,
+      "runs": 11,
+      "sessions": 43,
+      "outer_exit_zero": 8,
+      "later_same_session_unavailability_calls": 0
+    },
+    "C": {
+      "calls": 21,
+      "runs": 11,
+      "sessions": 11,
+      "outer_exit_zero": 0,
+      "later_same_session_unavailability_calls": 2
+    }
+  },
+  "protocol_no_exit_code_calls": 9,
+  "input_sha256": "4d8370825a882088c362be37868ff6fe9be66c7d85704939ea3d4193cb1a8e27",
+  "interpretation": "Counts explicit unavailable-command feedback in actual stderr. Multiple diagnostics within a call count once. Repeated feedback does not independently prove waste or a causal time penalty."
+}

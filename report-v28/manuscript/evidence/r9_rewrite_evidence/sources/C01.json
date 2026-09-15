@@ -1,0 +1,50 @@
+{
+  "/analysis_revision": "v0.7.1",
+  "/investigation_sources": {
+    "case_assessments.jsonl": "a1c7e4c2917200bfdd7445be8a28cb62964b0d8f89b08ce86f08c38e9da05735",
+    "endpoint_eligibility_exclusions.json": "b003a86beca522ad2699fd4bc45fbda35e03d8f45e6e41d248529d4cdb395963",
+    "EVIDENCE_INVESTIGATION_COMPLETE_2026-09-07.md": "51ba7f7c259063734de7727c07a9c57f9f48baba91c3c39f9a0027e996b74576",
+    "evidence_qualification_completion.json": "0e1d554dc5da6414a233d561f812206f63ca422fb6322a627c41cb37ee18678a",
+    "main_relation_qualification_map.jsonl": "8e3632dfe81a9e23ad6f30a5d048564c5d896d5e8f4e7b5dcd12d70e76dbdbae",
+    "new_issue_assessments.jsonl": "04e2b96980cb949efa1707a48465f9b5bbd09ac14378203f3fbd5afd2a13b7ac",
+    "qualification_validation.json": "e0547002446f68157179b27557305129cfd3acf0016feac837a998021b8413d1",
+    "revision_provenance.json": "1a95cde11a123e604e778060e092294d944bf3777dcb7eae269aa3f999b7ebc4",
+    "target_change_adjudications.jsonl": "778240d3284a3ee8c514c4625610dbf776a5e088dd917f91c922857577242657"
+  },
+  "/decision_validation/status": "passed",
+  "/decision_validation/scope": "Explicit provenance and byte binding; not independent mathematical adjudication.",
+  "/decision_validation/target_decisions": 131,
+  "/decision_validation/positive": 129,
+  "/decision_validation/registered_subject_binding_conflicts": 1,
+  "/decision_validation/positive_and_registered_object_eligible": 128,
+  "/decision_validation/confirmed_boundaries": 2,
+  "/decision_validation/unknown_decisions": 0,
+  "/main_exclusions": [
+    {
+      "relation_id": "rel_78d94c395b6e4d133b872dff",
+      "reason": "registered_subject_binding_conflict",
+      "review_ids": [
+        "8709ce19b104685a8351d589187cbce48b8606b3bb17d6699a78e4edf08680f2"
+      ]
+    }
+  ],
+  "/coverage": {
+    "original_queue": 1018,
+    "relation_read_main_intersection": 163,
+    "main_frame_total": 462,
+    "main_total": 461,
+    "target_decision_records": 131,
+    "target_adjudications": 131,
+    "positive_target_decisions": 129,
+    "eligible_positive_target_relations": 128,
+    "confirmed_target_boundaries": 2,
+    "target_unknown": 331,
+    "target_and_relation_read_overlap": 114
+  },
+  "/limitations": [
+    "Historical labels are not current mathematical correctness.",
+    "The target-adjudicated subset was selected purposively and is not representative.",
+    "Positive source-target comparability does not establish unchanged review conditions.",
+    "Endpoint eligibility and report-identity corrections are applied separately from this relation projection."
+  ]
+}

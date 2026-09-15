@@ -1,0 +1,24 @@
+{
+  "run": "r2-l3-a",
+  "main_and_recovery_identical": true,
+  "recovery_and_accepted_identical": true,
+  "files": {
+    "main": {
+      "archive_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf",
+      "file": "a-l3-main-prob_7_6.lean",
+      "bytes": 5404
+    },
+    "recovery": {
+      "archive_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf",
+      "file": "a-l3-recovery-prob_7_6.lean",
+      "bytes": 5404
+    },
+    "accepted": {
+      "sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf",
+      "file": "../process/final_sources/acceptance/r2-l3-a/technical/saved-sources/ProbabilityTheory/chapter_07/prob_7_6.lean"
+    }
+  },
+  "scope": "Compare the particular prob_7_6 source followed by both selected process records; this does not assert identical full deliveries or recovery-free execution."
+}

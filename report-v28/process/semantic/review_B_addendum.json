@@ -1,0 +1,394 @@
+{
+  "schema": "semantic_configuration_B_review_addendum.v1",
+  "created_date": "2026-09-14",
+  "protocol_version": "1.1",
+  "scope_zh": "只复核 B-M1、B-L6 的首次数学检索条目，并补正两个接口名称的末尾撇号。原 annotations_B.json 未修改。",
+  "original_annotations_path": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\tool_feedback_recovery_20260914\\semantic\\annotations_B.json",
+  "original_annotations_sha256": "d3c17e5965308a4cbd53430fb1161cf79d0fd6a6365137beb2cbbb4449f780b3",
+  "checks": [
+    {
+      "run_id": "r2-m1-b",
+      "sample_kind": "first_math_retrieval",
+      "review_question_zh": "数学审核者的检索是否通过实际意见回传给作者，作者是否在收到后使用该接口？",
+      "decision": "retain_explicit_final_source_use",
+      "information_transfer": "confirmed_visible_return_and_subsequent_matching_implementation",
+      "finding_zh": "作者的求助回执明确包含 Submartingale.stoppedProcess 与 martingale_iff，以及对原过程和负过程分别取下鞅再合成鞅的路线。回执之后作者重新检索、读取这些接口，写入对应实现；最终留存源码保留该路线。此结论具有可见信息传递证据，不只依据共同需求与先后顺序。",
+      "boundary_zh": "记录支持意见已进入作者可见工具回执及随后出现相应实现；不能证明该意见是成功的必要原因，也不证明未公开的内部推理。回执中的补丁字段为空，实施工作由作者后续工具操作完成。",
+      "start_event_id": "01a09cba-ea20-7c12-bd25-26a9e0975d81:call_eOYpIoWQpSYNy5Vl0ZmaQvxp",
+      "evidence": [
+        {
+          "event_id": "01a09cba-ea20-7c12-bd25-26a9e0975d81:call_eOYpIoWQpSYNy5Vl0ZmaQvxp",
+          "run_id": "r2-m1-b",
+          "role": "math_reviewer",
+          "actor": "274767ab-d343-439f-bb61-ab5c9ec1b5b0",
+          "session_id": "01a09cba-ea20-7c12-bd25-26a9e0975d81",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T21:45:14.541Z",
+          "result_time": "2026-09-13T21:45:14.811Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\full-public-trace.jsonl",
+          "source_line": 15,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\full-public-trace.jsonl",
+          "result_source_line": 16,
+          "exit_code": 0,
+          "pack_index_zero_based": 4,
+          "detail_zh": "数学审核者首次针对停止过程、鞅及支配收敛检索；返回包含 Submartingale.stoppedProcess 的声明位置。"
+        },
+        {
+          "event_id": "01a09cba-ea20-7c12-bd25-26a9e0975d81:call_CZaGBSXBPh5YBGAVlTSVycYC",
+          "run_id": "r2-m1-b",
+          "role": "math_reviewer",
+          "actor": "274767ab-d343-439f-bb61-ab5c9ec1b5b0",
+          "session_id": "01a09cba-ea20-7c12-bd25-26a9e0975d81",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T21:45:20.360Z",
+          "result_time": "2026-09-13T21:45:20.615Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\full-public-trace.jsonl",
+          "source_line": 17,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\full-public-trace.jsonl",
+          "result_source_line": 18,
+          "exit_code": 0,
+          "pack_index_zero_based": 5,
+          "detail_zh": "读取该声明及鞅接口的实际源码。"
+        },
+        {
+          "event_id": "01a09cba-ea20-7c12-bd25-26a9e0975d81:call_xEPnj68qSBWH0H3srzk5V4gp",
+          "run_id": "r2-m1-b",
+          "role": "math_reviewer",
+          "actor": "274767ab-d343-439f-bb61-ab5c9ec1b5b0",
+          "session_id": "01a09cba-ea20-7c12-bd25-26a9e0975d81",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T21:45:36.152Z",
+          "result_time": "2026-09-13T21:45:36.479Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\full-public-trace.jsonl",
+          "source_line": 21,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\full-public-trace.jsonl",
+          "result_source_line": 22,
+          "exit_code": 0,
+          "pack_index_zero_based": 7,
+          "detail_zh": "进一步核对停止过程定理及其提供的次鞅接口。"
+        },
+        {
+          "event_id": "01a09cba-64c9-7942-9b2c-b39e598bea23:call_3P8RTiM0oTBJH7WlvfuLexAL",
+          "run_id": "r2-m1-b",
+          "role": "author",
+          "actor": "330487f5-d3a3-4436-8f2c-a98d09ca25d5",
+          "session_id": "01a09cba-64c9-7942-9b2c-b39e598bea23",
+          "tool": "mcp__pilot.request_help",
+          "dispatch_time": "2026-09-13T21:44:34.772Z",
+          "result_time": "2026-09-13T21:49:01.258Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "source_line": 13,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "result_source_line": 14,
+          "exit_code": 0,
+          "pack_index_zero_based": 1,
+          "detail_zh": "作者 request_help 的实际回执含精确接口及建议路线；使用回执时间定位信息到达。",
+          "returned_response_excerpt": "1. `hMX.submartingale.stoppedProcess hTmath` 得到停止过程为下鞅；\n2. 对 `-X` 应用同一定理，再取负，得到原停止过程为上鞅；\n3. 用 `MeasureTheory.martingale_iff.mpr ⟨..., ...⟩` 合成为鞅。",
+          "response_sha256_as_recorded": "c2452c30ae9b48e52814816e12b0feae7c3598c0ddf8d7cb9bfe4fd083cb2a37",
+          "patch_applied": false,
+          "patch_path": null
+        },
+        {
+          "event_id": "01a09cba-64c9-7942-9b2c-b39e598bea23:call_WRfkQT8hakHze4rjjGPeKw8E",
+          "run_id": "r2-m1-b",
+          "role": "author",
+          "actor": "330487f5-d3a3-4436-8f2c-a98d09ca25d5",
+          "session_id": "01a09cba-64c9-7942-9b2c-b39e598bea23",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T21:49:16.818Z",
+          "result_time": "2026-09-13T21:49:17.458Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "source_line": 17,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "result_source_line": 18,
+          "exit_code": 0,
+          "pack_index_zero_based": 14,
+          "detail_zh": "作者收到意见后再次检索 stoppedProcess 和 martingale_iff。"
+        },
+        {
+          "event_id": "01a09cba-64c9-7942-9b2c-b39e598bea23:call_ivahTKRlA4DX9WE5N6xXlLVA",
+          "run_id": "r2-m1-b",
+          "role": "author",
+          "actor": "330487f5-d3a3-4436-8f2c-a98d09ca25d5",
+          "session_id": "01a09cba-64c9-7942-9b2c-b39e598bea23",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T21:49:25.896Z",
+          "result_time": "2026-09-13T21:49:26.151Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "source_line": 19,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "result_source_line": 20,
+          "exit_code": 0,
+          "pack_index_zero_based": 15,
+          "detail_zh": "作者随后阅读对应源码。"
+        },
+        {
+          "event_id": "01a09cba-64c9-7942-9b2c-b39e598bea23:call_wzQu9Ha0xNcw2xvZVidQr0sf",
+          "run_id": "r2-m1-b",
+          "role": "author",
+          "actor": "330487f5-d3a3-4436-8f2c-a98d09ca25d5",
+          "session_id": "01a09cba-64c9-7942-9b2c-b39e598bea23",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T21:52:38.908Z",
+          "result_time": "2026-09-13T21:52:45.317Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "source_line": 39,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "result_source_line": 40,
+          "exit_code": 1,
+          "pack_index_zero_based": 24,
+          "detail_zh": "作者写入下鞅、负过程与 martingale_iff 的实现；实际 Lean 回执报告索引桥接问题，不能将此次整体编译标为通过。"
+        },
+        {
+          "event_id": "01a09cba-64c9-7942-9b2c-b39e598bea23:call_egyR5O5ZfRM9T8LIi6UZqLbY",
+          "run_id": "r2-m1-b",
+          "role": "author",
+          "actor": "330487f5-d3a3-4436-8f2c-a98d09ca25d5",
+          "session_id": "01a09cba-64c9-7942-9b2c-b39e598bea23",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T21:55:43.166Z",
+          "result_time": "2026-09-13T21:55:48.220Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "source_line": 75,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+          "result_source_line": 76,
+          "exit_code": 0,
+          "pack_index_zero_based": 42,
+          "detail_zh": "继续修复桥接后，本阶段 thm_13_17.lean 检查返回退出码 0、无诊断输出。"
+        }
+      ],
+      "final_evidence": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+          "line": 56,
+          "code": "    hMX.submartingale.stoppedProcess hτ",
+          "detail_zh": "对原过程使用 Submartingale.stoppedProcess。"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+          "line": 61,
+          "code": "      hMX.neg.submartingale.stoppedProcess hτ",
+          "detail_zh": "对负过程使用相同停止定理。"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+          "line": 62,
+          "code": "    simpa using hnsub.neg",
+          "detail_zh": "取负得到上鞅。"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+          "line": 65,
+          "code": "    MeasureTheory.martingale_iff.mpr ⟨hsuper, hsub⟩",
+          "detail_zh": "通过 MeasureTheory.martingale_iff.mpr 合成为鞅。"
+        }
+      ],
+      "suggested_annotation_updates": {
+        "final_adoption": "explicit_final_source_use",
+        "review_notes_zh": "已核对作者 request_help 的实际返回文本：其中明确传递 Submartingale.stoppedProcess、martingale_iff 与原过程/负过程路线。作者在回执后检索、读取并实现这一路线，最终源码显式保留。记录证明信息可见与后续对应实现，不作因果效果估计。"
+      }
+    },
+    {
+      "run_id": "r2-l6-b",
+      "sample_kind": "first_math_retrieval",
+      "review_question_zh": "最终正文是否实际调用检索所得的 HasLaw 积分或矩转移接口，而不只是声明 HasLaw 前提？",
+      "decision": "retain_explicit_final_source_use_with_body_evidence",
+      "information_transfer": "exact_retrieved_interfaces_in_final_source_causal_path_not_claimed",
+      "finding_zh": "同一检索序列的最后一条事件实际返回 HasLaw.integral_eq 与 HasLaw.integral_comp。最终 gaussian_noise_moments 正文分别用这两个接口计算噪声均值并将平方积分转移到高斯分布；因此可保留显式源码采用，不必降为只出现同主题前提。",
+      "boundary_zh": "起点事件本身尚未返回 HasLaw；精确接口来自随后沿同一需求继续检索的事件。本文对应的是检索序列与最终源码使用，不能把它写成第一次命中即直接解决任务。最终实现涉及后续支持作者；此补查不声称已证明首位作者向支持作者传递了 integral_eq/integral_comp 的具体文本。最终没有使用此次返回的 HasLaw.variance_eq，不能将该名字计为已采用。",
+      "start_event_id": "01a09c84-7626-7991-a7cf-d8ce3778a7cb:call_mtHJiQP7LILtAdpHAXgQwhGH",
+      "evidence": [
+        {
+          "event_id": "01a09c84-7626-7991-a7cf-d8ce3778a7cb:call_mtHJiQP7LILtAdpHAXgQwhGH",
+          "run_id": "r2-l6-b",
+          "role": "author",
+          "actor": "d2c1c6a7-9ce0-40f6-9c38-5e7177a9c0e7",
+          "session_id": "01a09c84-7626-7991-a7cf-d8ce3778a7cb",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T20:45:40.919Z",
+          "result_time": "2026-09-13T20:45:41.144Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+          "source_line": 13,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+          "result_source_line": 14,
+          "exit_code": 0,
+          "pack_index_zero_based": 1,
+          "detail_zh": "起点主动检索高斯、独立性、方差及相关积分性质；返回尚无 HasLaw。"
+        },
+        {
+          "event_id": "01a09c84-7626-7991-a7cf-d8ce3778a7cb:call_lXXoSAmrWYFEWotfJCMCqLnc",
+          "run_id": "r2-l6-b",
+          "role": "author",
+          "actor": "d2c1c6a7-9ce0-40f6-9c38-5e7177a9c0e7",
+          "session_id": "01a09c84-7626-7991-a7cf-d8ce3778a7cb",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T20:46:09.815Z",
+          "result_time": "2026-09-13T20:46:10.063Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+          "source_line": 21,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+          "result_source_line": 22,
+          "exit_code": 0,
+          "pack_index_zero_based": 5,
+          "detail_zh": "继续定位 HasLaw 与矩转移接口。"
+        },
+        {
+          "event_id": "01a09c84-7626-7991-a7cf-d8ce3778a7cb:call_AGfESGRLlJWLI7bpd7pX8qhj",
+          "run_id": "r2-l6-b",
+          "role": "author",
+          "actor": "d2c1c6a7-9ce0-40f6-9c38-5e7177a9c0e7",
+          "session_id": "01a09c84-7626-7991-a7cf-d8ce3778a7cb",
+          "tool": "mcp__pilot.container_exec",
+          "dispatch_time": "2026-09-13T20:46:22.083Z",
+          "result_time": "2026-09-13T20:46:22.337Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+          "source_line": 23,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+          "result_source_line": 24,
+          "exit_code": 0,
+          "pack_index_zero_based": 6,
+          "detail_zh": "实际读取 HasLaw 源码并获得下列精确声明；是原标注检索片段终点。",
+          "returned_declarations": [
+            "lemma HasLaw.integral_comp {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]",
+            "lemma HasLaw.integral_eq {E : Type*} [NormedAddCommGroup E] [NormedSpace ℝ E]",
+            "protected map_eq : P.map X = μ"
+          ]
+        },
+        {
+          "event_id": "01a09c84-7626-7991-a7cf-d8ce3778a7cb:call_RgjmyuCz4WPOTBoDOcsyjfvl",
+          "run_id": "r2-l6-b",
+          "role": "author",
+          "actor": "d2c1c6a7-9ce0-40f6-9c38-5e7177a9c0e7",
+          "session_id": "01a09c84-7626-7991-a7cf-d8ce3778a7cb",
+          "tool": "mcp__pilot.request_help",
+          "dispatch_time": "2026-09-13T20:55:05.972Z",
+          "result_time": "2026-09-13T21:06:15.729Z",
+          "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+          "source_line": 47,
+          "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+          "result_source_line": 48,
+          "exit_code": 0,
+          "pack_index_zero_based": 43,
+          "detail_zh": "作者随后请求支持作者直接实现目标。请求提及 HasLaw gaussianReal 和 gaussian_noise_moments，未明确传递 integral_eq 或 integral_comp 名字；不据此声称具体接口的跨角色因果传递。"
+        }
+      ],
+      "final_evidence": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+          "line": 23,
+          "code": "    rw [← hN.map_eq] at hg",
+          "detail_zh": "使用 HasLaw.map_eq 将高斯分布上的二阶可积性质转到映射测度。"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+          "line": 25,
+          "code": "  have hm : (∫ ω, N ω ∂P) = 0 := by simpa using hN.integral_eq",
+          "detail_zh": "实际调用 HasLaw.integral_eq，将噪声的积分转为其高斯律的均值。"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+          "line": 33,
+          "code": "      hN.integral_comp (show AEStronglyMeasurable (fun x : ℝ => x ^ 2)",
+          "detail_zh": "实际调用 HasLaw.integral_comp，对平方函数完成二阶矩的积分转移。"
+        }
+      ],
+      "unused_returned_interface": "HasLaw.variance_eq",
+      "alternative_final_variance_step": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+        "line": 27,
+        "code": "    have hv := variance_fun_id_gaussianReal (μ := (0 : ℝ)) (v := v)",
+        "detail_zh": "二阶矩证明使用 variance_fun_id_gaussianReal，随后由积分转移得到原随机变量的二阶矩。"
+      },
+      "suggested_annotation_updates": {
+        "final_adoption": "explicit_final_source_use",
+        "resolution_zh": "检索从一般 Gaussian 名称推进到 HasLaw.integral_eq 与 HasLaw.integral_comp 的具体源码；最终 gaussian_noise_moments 正文实际调用这两个接口。",
+        "review_notes_zh": "采用证据为最终正文第 25、33 行，不再仅引用 HasLaw 前提。接口在同一检索序列后续找到；不声称首次返回已含这些接口，也不把最终角色使用当作已证明的检索因果效果。"
+      }
+    }
+  ],
+  "name_corrections": [
+    {
+      "run_id": "r2-l2-b",
+      "sample_kind": "first_lean_feedback",
+      "field": "final_evidence[0].detail_zh",
+      "old": "使用memLp_finsetSum替代探测中不存在的MemLp.finset_sum接口。",
+      "replacement": "使用 memLp_finsetSum' 替代探测中不存在的 MemLp.finset_sum 接口。",
+      "source": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l2-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+        "line": 13,
+        "code": "  · convert memLp_finsetSum' Finset.univ (fun i _ ↦ hX i) using 1",
+        "detail_zh": "精确名称为 memLp_finsetSum'。"
+      }
+    },
+    {
+      "run_id": "r2-m2-b",
+      "sample_kind": "first_lean_feedback",
+      "field": "final_evidence[0].detail_zh",
+      "old": "最终使用integrable_norm_pow证明四次方可积。",
+      "replacement": "最终使用 MemLp.integrable_norm_pow' 证明四次方可积。",
+      "source": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m2-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_7_support.lean",
+        "line": 24,
+        "code": "  simpa [Real.norm_eq_abs, abs_fourth] using hX.integrable_norm_pow'",
+        "detail_zh": "实际调用 hX.integrable_norm_pow'，保留名称末尾撇号。"
+      }
+    },
+    {
+      "run_id": "r2-m2-b",
+      "sample_kind": "first_lean_feedback",
+      "field": "actions[2].explanation_zh",
+      "old": "找到MemLp.integrable_norm_pow及其有限测度版本。",
+      "replacement": "找到 MemLp.integrable_norm_pow 及有限测度版本 MemLp.integrable_norm_pow'。",
+      "event_id": "01a09d01-5630-7c01-aa16-d08af47975ac:call_FzApthCMVGiGwKddO8Lz9R2L"
+    }
+  ],
+  "validation": {
+    "source_and_result_physical_rows_checked": 24,
+    "all_call_ids_match": true,
+    "m1_return_precedes_author_read_and_implementation": true,
+    "l6_exact_retrieved_names_match_proof_body": true,
+    "original_annotations_unchanged": true
+  },
+  "input_manifest": [
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\tool_feedback_recovery_20260914\\semantic\\annotations_B.json",
+      "sha256": "d3c17e5965308a4cbd53430fb1161cf79d0fd6a6365137beb2cbbb4449f780b3"
+    },
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\tool_feedback_recovery_20260914\\semantic\\packs\\r2-l6-b.jsonl",
+      "sha256": "c977e743a872a68c328a3c1543460436053c9a1c6b3c0a3f04e5b615f198f5fe"
+    },
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\tool_feedback_recovery_20260914\\semantic\\packs\\r2-m1-b.jsonl",
+      "sha256": "38ab75ceecd63b4bca63178c71996977347a55c3f8270e83cd0243b62dab80bb"
+    },
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l2-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+      "sha256": "43935188aef77259238402913ab8d47c36c03dd8225dc40fa6687e50b3268e62"
+    },
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+      "sha256": "3814cb3c45720606e0ba90e6467e66cd9196a67693965caef2f5007ef0ceff9a"
+    },
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+      "sha256": "c48bee10190bab3905f10bd222d63c33608ec74a45374c05b6b6509410c052a5"
+    },
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m2-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_7_support.lean",
+      "sha256": "0d7bbd161ac5e601b9127ca0738752ecb8eace4b2f262126a386e1545dec58bd"
+    },
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "a4090cedfb249a5747b1bc8aa2a2b56e8735f2c04bccfdba6bc1aadcf54e2957"
+    },
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "9ee59bd55c8d6861cba9548c872964575f5960a027e5d73055651e497be827ab"
+    },
+    {
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\full-public-trace.jsonl",
+      "sha256": "648fe019423af72bd6a751c5f5dde590c35f876dc878e69d1c2d8e4b2a9ecf82"
+    }
+  ]
+}

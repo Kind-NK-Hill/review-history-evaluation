@@ -1,0 +1,948 @@
+[
+  {
+    "run_id": "r2-l1-a",
+    "config": "A",
+    "task": "L1",
+    "common_outcome": "pass",
+    "run_minutes": 15.207516193389893,
+    "public_tool_events": 57,
+    "service_tool_calls": 54,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_or_search": 47,
+      "search_command": 20,
+      "workflow_operation": 14,
+      "check_invocation": 8,
+      "write_or_script": 13,
+      "delegate_or_review": 1,
+      "version_control": 1
+    },
+    "check_observations": {
+      "negative_feedback": 6,
+      "check_passed": 2
+    },
+    "same_file_sequences": 0,
+    "same_file_later_pass": 0,
+    "sessions": 2
+  },
+  {
+    "run_id": "r2-l1-b",
+    "config": "B",
+    "task": "L1",
+    "common_outcome": "pass",
+    "run_minutes": 14.84463586807251,
+    "public_tool_events": 53,
+    "service_tool_calls": 51,
+    "discovery_calls": 2,
+    "actions": {
+      "tool_discovery": 2,
+      "read_or_search": 28,
+      "search_command": 15,
+      "check_invocation": 20,
+      "write_or_script": 4,
+      "version_control": 24,
+      "delegate_or_review": 1
+    },
+    "check_observations": {
+      "unresolved": 3,
+      "check_passed": 6,
+      "negative_feedback": 12
+    },
+    "same_file_sequences": 1,
+    "same_file_later_pass": 1,
+    "sessions": 2
+  },
+  {
+    "run_id": "r2-l1-c",
+    "config": "C",
+    "task": "L1",
+    "common_outcome": "pass",
+    "run_minutes": 15.266217982769012,
+    "public_tool_events": 55,
+    "service_tool_calls": 51,
+    "discovery_calls": 4,
+    "actions": {
+      "tool_discovery": 4,
+      "read_collaboration": 10,
+      "delegate_or_review": 2,
+      "read_or_search": 22,
+      "search_command": 11,
+      "check_invocation": 17,
+      "write_or_script": 6,
+      "version_control": 13,
+      "workflow_operation": 1,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 7,
+      "negative_feedback": 6,
+      "check_passed": 5
+    },
+    "same_file_sequences": 1,
+    "same_file_later_pass": 1,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l2-a",
+    "config": "A",
+    "task": "L2",
+    "common_outcome": "pass",
+    "run_minutes": 16.752785289287566,
+    "public_tool_events": 73,
+    "service_tool_calls": 70,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_or_search": 53,
+      "search_command": 31,
+      "workflow_operation": 15,
+      "check_invocation": 15,
+      "write_or_script": 15,
+      "delegate_or_review": 2,
+      "version_control": 1
+    },
+    "check_observations": {
+      "negative_feedback": 9,
+      "check_passed": 6,
+      "unresolved": 1
+    },
+    "same_file_sequences": 2,
+    "same_file_later_pass": 2,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l2-b",
+    "config": "B",
+    "task": "L2",
+    "common_outcome": "pass",
+    "run_minutes": 16.300715816020965,
+    "public_tool_events": 72,
+    "service_tool_calls": 69,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_or_search": 42,
+      "search_command": 18,
+      "delegate_or_review": 2,
+      "check_invocation": 36,
+      "write_or_script": 25,
+      "version_control": 8
+    },
+    "check_observations": {
+      "unresolved": 20,
+      "negative_feedback": 20,
+      "check_passed": 7
+    },
+    "same_file_sequences": 4,
+    "same_file_later_pass": 2,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l2-c",
+    "config": "C",
+    "task": "L2",
+    "common_outcome": "pass",
+    "run_minutes": 18.97616809209188,
+    "public_tool_events": 74,
+    "service_tool_calls": 68,
+    "discovery_calls": 6,
+    "actions": {
+      "tool_discovery": 6,
+      "read_collaboration": 9,
+      "delegate_or_review": 4,
+      "read_or_search": 31,
+      "search_command": 16,
+      "check_invocation": 30,
+      "write_or_script": 6,
+      "version_control": 19,
+      "workflow_operation": 1,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 13,
+      "negative_feedback": 9,
+      "check_passed": 14
+    },
+    "same_file_sequences": 3,
+    "same_file_later_pass": 2,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l3-a",
+    "config": "A",
+    "task": "L3",
+    "common_outcome": "pass",
+    "run_minutes": 44.35426495192846,
+    "public_tool_events": 92,
+    "service_tool_calls": 89,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_or_search": 60,
+      "search_command": 30,
+      "workflow_operation": 22,
+      "check_invocation": 23,
+      "write_or_script": 26,
+      "other_command_or_service": 1,
+      "version_control": 4,
+      "delegate_or_review": 3
+    },
+    "check_observations": {
+      "negative_feedback": 16,
+      "check_passed": 7
+    },
+    "same_file_sequences": 2,
+    "same_file_later_pass": 2,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l3-b",
+    "config": "B",
+    "task": "L3",
+    "common_outcome": "pass",
+    "run_minutes": 13.65489445924759,
+    "public_tool_events": 50,
+    "service_tool_calls": 48,
+    "discovery_calls": 2,
+    "actions": {
+      "tool_discovery": 2,
+      "read_or_search": 35,
+      "search_command": 15,
+      "check_invocation": 28,
+      "write_or_script": 27,
+      "delegate_or_review": 1,
+      "version_control": 3
+    },
+    "check_observations": {
+      "unresolved": 7,
+      "negative_feedback": 17,
+      "check_passed": 7
+    },
+    "same_file_sequences": 5,
+    "same_file_later_pass": 5,
+    "sessions": 2
+  },
+  {
+    "run_id": "r2-l3-c",
+    "config": "C",
+    "task": "L3",
+    "common_outcome": "pass",
+    "run_minutes": 23.339583818117777,
+    "public_tool_events": 84,
+    "service_tool_calls": 81,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_collaboration": 8,
+      "delegate_or_review": 3,
+      "read_or_search": 56,
+      "search_command": 22,
+      "version_control": 10,
+      "check_invocation": 34,
+      "write_or_script": 19,
+      "other_command_or_service": 1,
+      "workflow_operation": 1,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 20,
+      "negative_feedback": 10,
+      "check_passed": 6
+    },
+    "same_file_sequences": 2,
+    "same_file_later_pass": 2,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l4-a",
+    "config": "A",
+    "task": "L4",
+    "common_outcome": "pass",
+    "run_minutes": 41.02550613482793,
+    "public_tool_events": 139,
+    "service_tool_calls": 132,
+    "discovery_calls": 7,
+    "actions": {
+      "tool_discovery": 7,
+      "read_or_search": 82,
+      "search_command": 40,
+      "workflow_operation": 21,
+      "check_invocation": 40,
+      "write_or_script": 24,
+      "delegate_or_review": 4,
+      "other_command_or_service": 2,
+      "version_control": 1
+    },
+    "check_observations": {
+      "negative_feedback": 25,
+      "check_passed": 13,
+      "unresolved": 2
+    },
+    "same_file_sequences": 0,
+    "same_file_later_pass": 0,
+    "sessions": 5
+  },
+  {
+    "run_id": "r2-l4-b",
+    "config": "B",
+    "task": "L4",
+    "common_outcome": "pass",
+    "run_minutes": 18.787473233540855,
+    "public_tool_events": 83,
+    "service_tool_calls": 79,
+    "discovery_calls": 4,
+    "actions": {
+      "tool_discovery": 4,
+      "read_or_search": 50,
+      "search_command": 24,
+      "version_control": 12,
+      "check_invocation": 40,
+      "write_or_script": 32,
+      "delegate_or_review": 2,
+      "other_command_or_service": 1
+    },
+    "check_observations": {
+      "unresolved": 15,
+      "negative_feedback": 20,
+      "check_passed": 9
+    },
+    "same_file_sequences": 9,
+    "same_file_later_pass": 5,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l4-c",
+    "config": "C",
+    "task": "L4",
+    "common_outcome": "pass",
+    "run_minutes": 18.04038459857305,
+    "public_tool_events": 76,
+    "service_tool_calls": 72,
+    "discovery_calls": 4,
+    "actions": {
+      "tool_discovery": 4,
+      "read_collaboration": 10,
+      "delegate_or_review": 2,
+      "read_or_search": 30,
+      "search_command": 18,
+      "check_invocation": 39,
+      "write_or_script": 24,
+      "version_control": 7,
+      "workflow_operation": 1,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 8,
+      "negative_feedback": 23,
+      "check_passed": 12
+    },
+    "same_file_sequences": 6,
+    "same_file_later_pass": 5,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l5-a",
+    "config": "A",
+    "task": "L5",
+    "common_outcome": "pass",
+    "run_minutes": 32.71709539890289,
+    "public_tool_events": 126,
+    "service_tool_calls": 120,
+    "discovery_calls": 6,
+    "actions": {
+      "tool_discovery": 6,
+      "read_or_search": 91,
+      "search_command": 38,
+      "workflow_operation": 9,
+      "write_or_script": 31,
+      "version_control": 5,
+      "delegate_or_review": 4,
+      "check_invocation": 34,
+      "other_command_or_service": 1
+    },
+    "check_observations": {
+      "unresolved": 10,
+      "negative_feedback": 21,
+      "check_passed": 4
+    },
+    "same_file_sequences": 3,
+    "same_file_later_pass": 1,
+    "sessions": 5
+  },
+  {
+    "run_id": "r2-l5-b",
+    "config": "B",
+    "task": "L5",
+    "common_outcome": "pass",
+    "run_minutes": 19.696388844648997,
+    "public_tool_events": 90,
+    "service_tool_calls": 85,
+    "discovery_calls": 5,
+    "actions": {
+      "tool_discovery": 5,
+      "read_or_search": 57,
+      "search_command": 24,
+      "delegate_or_review": 3,
+      "write_or_script": 36,
+      "check_invocation": 43,
+      "version_control": 5
+    },
+    "check_observations": {
+      "unresolved": 13,
+      "negative_feedback": 21,
+      "check_passed": 13
+    },
+    "same_file_sequences": 7,
+    "same_file_later_pass": 5,
+    "sessions": 4
+  },
+  {
+    "run_id": "r2-l5-c",
+    "config": "C",
+    "task": "L5",
+    "common_outcome": "pass",
+    "run_minutes": 30.09359211921692,
+    "public_tool_events": 103,
+    "service_tool_calls": 96,
+    "discovery_calls": 7,
+    "actions": {
+      "tool_discovery": 7,
+      "read_collaboration": 11,
+      "delegate_or_review": 4,
+      "read_or_search": 45,
+      "search_command": 27,
+      "check_invocation": 49,
+      "write_or_script": 44,
+      "workflow_operation": 3,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 16,
+      "negative_feedback": 28,
+      "check_passed": 17
+    },
+    "same_file_sequences": 10,
+    "same_file_later_pass": 8,
+    "sessions": 4
+  },
+  {
+    "run_id": "r2-l6-a",
+    "config": "A",
+    "task": "L6",
+    "common_outcome": "pass",
+    "run_minutes": 24.509454810619353,
+    "public_tool_events": 71,
+    "service_tool_calls": 69,
+    "discovery_calls": 2,
+    "actions": {
+      "tool_discovery": 2,
+      "read_or_search": 49,
+      "search_command": 21,
+      "workflow_operation": 22,
+      "write_or_script": 15,
+      "check_invocation": 16,
+      "version_control": 10,
+      "delegate_or_review": 1
+    },
+    "check_observations": {
+      "negative_feedback": 14,
+      "check_passed": 2
+    },
+    "same_file_sequences": 0,
+    "same_file_later_pass": 0,
+    "sessions": 2
+  },
+  {
+    "run_id": "r2-l6-b",
+    "config": "B",
+    "task": "L6",
+    "common_outcome": "pass",
+    "run_minutes": 34.12867840925853,
+    "public_tool_events": 122,
+    "service_tool_calls": 117,
+    "discovery_calls": 5,
+    "actions": {
+      "tool_discovery": 5,
+      "read_or_search": 87,
+      "search_command": 47,
+      "delegate_or_review": 4,
+      "check_invocation": 46,
+      "write_or_script": 23,
+      "other_command_or_service": 2,
+      "version_control": 21
+    },
+    "check_observations": {
+      "unresolved": 16,
+      "check_passed": 15,
+      "negative_feedback": 22
+    },
+    "same_file_sequences": 4,
+    "same_file_later_pass": 2,
+    "sessions": 5
+  },
+  {
+    "run_id": "r2-l6-c",
+    "config": "C",
+    "task": "L6",
+    "common_outcome": "pass",
+    "run_minutes": 21.493418900171914,
+    "public_tool_events": 63,
+    "service_tool_calls": 60,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_collaboration": 8,
+      "delegate_or_review": 2,
+      "read_or_search": 31,
+      "search_command": 13,
+      "check_invocation": 26,
+      "write_or_script": 13,
+      "version_control": 18,
+      "other_command_or_service": 1,
+      "workflow_operation": 1,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 11,
+      "negative_feedback": 11,
+      "check_passed": 11
+    },
+    "same_file_sequences": 6,
+    "same_file_later_pass": 2,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l7-a",
+    "config": "A",
+    "task": "L7",
+    "common_outcome": "pass",
+    "run_minutes": 21.609986209869383,
+    "public_tool_events": 62,
+    "service_tool_calls": 59,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_or_search": 42,
+      "search_command": 22,
+      "workflow_operation": 14,
+      "check_invocation": 15,
+      "write_or_script": 14,
+      "delegate_or_review": 2,
+      "version_control": 2
+    },
+    "check_observations": {
+      "negative_feedback": 10,
+      "check_passed": 4,
+      "unresolved": 1
+    },
+    "same_file_sequences": 0,
+    "same_file_later_pass": 0,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-l7-b",
+    "config": "B",
+    "task": "L7",
+    "common_outcome": "pass",
+    "run_minutes": 23.988849039872488,
+    "public_tool_events": 109,
+    "service_tool_calls": 105,
+    "discovery_calls": 4,
+    "actions": {
+      "tool_discovery": 4,
+      "read_or_search": 64,
+      "search_command": 42,
+      "delegate_or_review": 3,
+      "version_control": 31,
+      "write_or_script": 22,
+      "check_invocation": 38,
+      "other_command_or_service": 2
+    },
+    "check_observations": {
+      "unresolved": 21,
+      "negative_feedback": 18,
+      "check_passed": 10
+    },
+    "same_file_sequences": 7,
+    "same_file_later_pass": 4,
+    "sessions": 4
+  },
+  {
+    "run_id": "r2-l7-c",
+    "config": "C",
+    "task": "L7",
+    "common_outcome": "pass",
+    "run_minutes": 22.005229608217874,
+    "public_tool_events": 74,
+    "service_tool_calls": 65,
+    "discovery_calls": 9,
+    "actions": {
+      "tool_discovery": 9,
+      "read_collaboration": 9,
+      "delegate_or_review": 6,
+      "read_or_search": 35,
+      "search_command": 21,
+      "check_invocation": 25,
+      "write_or_script": 17,
+      "version_control": 1,
+      "workflow_operation": 2,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 12,
+      "negative_feedback": 8,
+      "check_passed": 11
+    },
+    "same_file_sequences": 4,
+    "same_file_later_pass": 2,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-m1-a",
+    "config": "A",
+    "task": "M1",
+    "common_outcome": "pass",
+    "run_minutes": 51.910352396965024,
+    "public_tool_events": 189,
+    "service_tool_calls": 178,
+    "discovery_calls": 11,
+    "actions": {
+      "tool_discovery": 11,
+      "read_or_search": 118,
+      "workflow_operation": 24,
+      "search_command": 56,
+      "check_invocation": 46,
+      "write_or_script": 48,
+      "delegate_or_review": 5,
+      "other_command_or_service": 6,
+      "version_control": 1
+    },
+    "check_observations": {
+      "negative_feedback": 30,
+      "check_passed": 15,
+      "unresolved": 2
+    },
+    "same_file_sequences": 7,
+    "same_file_later_pass": 5,
+    "sessions": 6
+  },
+  {
+    "run_id": "r2-m1-b",
+    "config": "B",
+    "task": "M1",
+    "common_outcome": "pass",
+    "run_minutes": 23.69711390733719,
+    "public_tool_events": 87,
+    "service_tool_calls": 84,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_or_search": 50,
+      "delegate_or_review": 2,
+      "search_command": 31,
+      "check_invocation": 35,
+      "write_or_script": 4,
+      "version_control": 26,
+      "other_command_or_service": 1
+    },
+    "check_observations": {
+      "unresolved": 5,
+      "check_passed": 8,
+      "negative_feedback": 25
+    },
+    "same_file_sequences": 2,
+    "same_file_later_pass": 2,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-m1-c",
+    "config": "C",
+    "task": "M1",
+    "common_outcome": "pass",
+    "run_minutes": 24.188500253359475,
+    "public_tool_events": 89,
+    "service_tool_calls": 85,
+    "discovery_calls": 4,
+    "actions": {
+      "tool_discovery": 4,
+      "read_collaboration": 10,
+      "delegate_or_review": 3,
+      "read_or_search": 51,
+      "search_command": 24,
+      "check_invocation": 36,
+      "write_or_script": 15,
+      "version_control": 7,
+      "workflow_operation": 1,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 5,
+      "negative_feedback": 22,
+      "check_passed": 12
+    },
+    "same_file_sequences": 3,
+    "same_file_later_pass": 3,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-m2-a",
+    "config": "A",
+    "task": "M2",
+    "common_outcome": "pass",
+    "run_minutes": 51.16596621672313,
+    "public_tool_events": 183,
+    "service_tool_calls": 178,
+    "discovery_calls": 5,
+    "actions": {
+      "tool_discovery": 5,
+      "read_or_search": 117,
+      "search_command": 57,
+      "workflow_operation": 16,
+      "delegate_or_review": 4,
+      "check_invocation": 61,
+      "write_or_script": 65,
+      "version_control": 10
+    },
+    "check_observations": {
+      "unresolved": 6,
+      "negative_feedback": 39,
+      "check_passed": 16
+    },
+    "same_file_sequences": 8,
+    "same_file_later_pass": 5,
+    "sessions": 5
+  },
+  {
+    "run_id": "r2-m2-b",
+    "config": "B",
+    "task": "M2",
+    "common_outcome": "pass",
+    "run_minutes": 40.55507711569468,
+    "public_tool_events": 153,
+    "service_tool_calls": 150,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_or_search": 101,
+      "search_command": 35,
+      "delegate_or_review": 2,
+      "check_invocation": 84,
+      "write_or_script": 19,
+      "version_control": 44,
+      "other_command_or_service": 1
+    },
+    "check_observations": {
+      "unresolved": 10,
+      "negative_feedback": 54,
+      "check_passed": 24
+    },
+    "same_file_sequences": 19,
+    "same_file_later_pass": 12,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-m2-c",
+    "config": "C",
+    "task": "M2",
+    "common_outcome": "pass",
+    "run_minutes": 22.908610808849335,
+    "public_tool_events": 86,
+    "service_tool_calls": 83,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_collaboration": 8,
+      "delegate_or_review": 2,
+      "read_or_search": 40,
+      "search_command": 22,
+      "check_invocation": 36,
+      "write_or_script": 4,
+      "version_control": 36,
+      "workflow_operation": 1,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 9,
+      "negative_feedback": 24,
+      "check_passed": 5
+    },
+    "same_file_sequences": 8,
+    "same_file_later_pass": 4,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-m3-a",
+    "config": "A",
+    "task": "M3",
+    "common_outcome": "pass",
+    "run_minutes": 50.2390918970108,
+    "public_tool_events": 174,
+    "service_tool_calls": 165,
+    "discovery_calls": 9,
+    "actions": {
+      "tool_discovery": 9,
+      "read_or_search": 120,
+      "search_command": 50,
+      "workflow_operation": 10,
+      "write_or_script": 64,
+      "delegate_or_review": 4,
+      "check_invocation": 66,
+      "version_control": 2
+    },
+    "check_observations": {
+      "unresolved": 10,
+      "negative_feedback": 42,
+      "check_passed": 17
+    },
+    "same_file_sequences": 14,
+    "same_file_later_pass": 10,
+    "sessions": 5
+  },
+  {
+    "run_id": "r2-m3-b",
+    "config": "B",
+    "task": "M3",
+    "common_outcome": "pass",
+    "run_minutes": 20.2089257756869,
+    "public_tool_events": 81,
+    "service_tool_calls": 78,
+    "discovery_calls": 3,
+    "actions": {
+      "tool_discovery": 3,
+      "read_or_search": 48,
+      "search_command": 24,
+      "delegate_or_review": 2,
+      "check_invocation": 37,
+      "write_or_script": 13,
+      "version_control": 21
+    },
+    "check_observations": {
+      "unresolved": 9,
+      "negative_feedback": 17,
+      "check_passed": 15
+    },
+    "same_file_sequences": 9,
+    "same_file_later_pass": 4,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-m3-c",
+    "config": "C",
+    "task": "M3",
+    "common_outcome": "pass",
+    "run_minutes": 18.398693641026814,
+    "public_tool_events": 79,
+    "service_tool_calls": 75,
+    "discovery_calls": 4,
+    "actions": {
+      "tool_discovery": 4,
+      "read_collaboration": 14,
+      "delegate_or_review": 3,
+      "read_or_search": 32,
+      "search_command": 23,
+      "check_invocation": 26,
+      "write_or_script": 1,
+      "version_control": 23,
+      "workflow_operation": 1,
+      "other_command_or_service": 1,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 6,
+      "negative_feedback": 14,
+      "check_passed": 8
+    },
+    "same_file_sequences": 3,
+    "same_file_later_pass": 3,
+    "sessions": 3
+  },
+  {
+    "run_id": "r2-h1-a",
+    "config": "A",
+    "task": "H1",
+    "common_outcome": "pass",
+    "run_minutes": 135.5876588543256,
+    "public_tool_events": 486,
+    "service_tool_calls": 471,
+    "discovery_calls": 15,
+    "actions": {
+      "tool_discovery": 15,
+      "read_or_search": 318,
+      "search_command": 166,
+      "workflow_operation": 39,
+      "check_invocation": 168,
+      "write_or_script": 165,
+      "delegate_or_review": 13,
+      "other_command_or_service": 9,
+      "version_control": 26
+    },
+    "check_observations": {
+      "check_passed": 52,
+      "negative_feedback": 59,
+      "unresolved": 68
+    },
+    "same_file_sequences": 13,
+    "same_file_later_pass": 7,
+    "sessions": 14
+  },
+  {
+    "run_id": "r2-h1-b",
+    "config": "B",
+    "task": "H1",
+    "common_outcome": "pass",
+    "run_minutes": 123.88697911898295,
+    "public_tool_events": 551,
+    "service_tool_calls": 535,
+    "discovery_calls": 16,
+    "actions": {
+      "tool_discovery": 16,
+      "read_or_search": 357,
+      "search_command": 199,
+      "delegate_or_review": 15,
+      "check_invocation": 220,
+      "other_command_or_service": 3,
+      "write_or_script": 131,
+      "version_control": 53
+    },
+    "check_observations": {
+      "unresolved": 52,
+      "negative_feedback": 122,
+      "check_passed": 58
+    },
+    "same_file_sequences": 24,
+    "same_file_later_pass": 18,
+    "sessions": 16
+  },
+  {
+    "run_id": "r2-h1-c",
+    "config": "C",
+    "task": "H1",
+    "common_outcome": "pass",
+    "run_minutes": 86.41807678937911,
+    "public_tool_events": 347,
+    "service_tool_calls": 332,
+    "discovery_calls": 15,
+    "actions": {
+      "tool_discovery": 15,
+      "read_collaboration": 9,
+      "delegate_or_review": 10,
+      "read_or_search": 181,
+      "search_command": 83,
+      "check_invocation": 193,
+      "write_or_script": 167,
+      "version_control": 3,
+      "other_command_or_service": 1,
+      "workflow_operation": 1,
+      "submit": 1
+    },
+    "check_observations": {
+      "unresolved": 28,
+      "negative_feedback": 138,
+      "check_passed": 48
+    },
+    "same_file_sequences": 34,
+    "same_file_later_pass": 29,
+    "sessions": 3
+  }
+]
