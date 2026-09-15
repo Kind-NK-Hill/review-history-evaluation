@@ -1,0 +1,561 @@
+{
+  "scope": "Revision 20 selected first-batch runs; original run stage only, later L7 continuation excluded consistently with existing timing table",
+  "definition": "Elapsed time from first dispatch to last role return, including inter-call intervals and within-call waits. Standalone post-submission common evaluation excluded.",
+  "selected_run_count": 33,
+  "complete_original_spans_verified": 31,
+  "reconstructed_estimates": [
+    "A-L1",
+    "A-M1"
+  ],
+  "all_clock_starts_match_first_dispatch": true,
+  "checks": [
+    {
+      "label": "A-L1",
+      "first_dispatch_epoch": 1789051916.5959792,
+      "last_recorded_return_epoch": 1789057065.94215,
+      "elapsed_minutes": 85.8224361817042,
+      "unclosed_dispatch_count": 1,
+      "original_span_seconds": null,
+      "original_minus_recomputed_seconds": null,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-prob_13_9-A-r1\\deadline.sqlite3",
+          "sha256": "3dcc134ebe6ffd37ae11926a55aca584c3d9c03df118f55c337fcdac42ea0bce"
+        }
+      ],
+      "missing_containers_precede_last_return": true,
+      "estimate_note": "Same first-dispatch/last-recorded-return endpoints. Missing return receipts corroborated by container stops; retain estimate marker. No gaps subtracted."
+    },
+    {
+      "label": "A-M1",
+      "first_dispatch_epoch": 1789057099.068422,
+      "last_recorded_return_epoch": 1789065312.600352,
+      "elapsed_minutes": 136.8921988328298,
+      "unclosed_dispatch_count": 4,
+      "original_span_seconds": null,
+      "original_minus_recomputed_seconds": null,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-thm_13_17_to_13_18-A-r1\\deadline.sqlite3",
+          "sha256": "c25bcbe75af76ba150eda64da0d790db806333bd542e1e474a29ea8f8b59beca"
+        }
+      ],
+      "missing_containers_precede_last_return": true,
+      "estimate_note": "Same first-dispatch/last-recorded-return endpoints. Missing return receipts corroborated by container stops; retain estimate marker. No gaps subtracted."
+    },
+    {
+      "label": "A-L2",
+      "first_dispatch_epoch": 1789070711.3651283,
+      "last_recorded_return_epoch": 1789071566.3251579,
+      "elapsed_minutes": 14.249333826700846,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 854.9600296020508,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\deadline.sqlite3",
+          "sha256": "ff8ec39ec92d580241e7ed92010f916feb19981b953b95ecaf9c7a71c0b47154"
+        }
+      ]
+    },
+    {
+      "label": "A-L3",
+      "first_dispatch_epoch": 1789072533.8577754,
+      "last_recorded_return_epoch": 1789076720.8707154,
+      "elapsed_minutes": 69.7835489988327,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 4187.012939929962,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L3_prob_7_6_to_ex_10_3_2\\A\\deadline.sqlite3",
+          "sha256": "5ab57140f6c2e83d39f97ac7306db93f02d55a8d3aea2f647b3a1e66dd6bf270"
+        }
+      ]
+    },
+    {
+      "label": "A-L4",
+      "first_dispatch_epoch": 1789079408.0409636,
+      "last_recorded_return_epoch": 1789082174.717074,
+      "elapsed_minutes": 46.111268504460654,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 2766.676110267639,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L4_thm_8_6_to_ex_8_4_3\\A\\deadline.sqlite3",
+          "sha256": "d0800669f1451b22675e828045dc38f04fbe4b631a0037c7fa106b633a7ee665"
+        }
+      ]
+    },
+    {
+      "label": "A-L5",
+      "first_dispatch_epoch": 1789067465.785604,
+      "last_recorded_return_epoch": 1789072083.3636336,
+      "elapsed_minutes": 76.95963382720947,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 4617.578029632568,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L5_prob_8_7\\A\\deadline.sqlite3",
+          "sha256": "7d8bd3693d895e60ad562654ebc9438da73351b7c56f04f24ce46441cfad31ad"
+        }
+      ]
+    },
+    {
+      "label": "A-L6",
+      "first_dispatch_epoch": 1789077045.6303465,
+      "last_recorded_return_epoch": 1789079106.0035121,
+      "elapsed_minutes": 34.33955276012421,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 2060.3731656074524,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L6_prob_12_5\\A\\deadline.sqlite3",
+          "sha256": "4f7d1d9bb297946c47626eb7c8486a7e2680702caa3134e7faf75e4e1aedba40"
+        }
+      ]
+    },
+    {
+      "label": "A-L7",
+      "first_dispatch_epoch": 1789082232.6132648,
+      "last_recorded_return_epoch": 1789085764.4555557,
+      "elapsed_minutes": 58.864038181304934,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 3531.842290878296,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L7_thm_10_10_to_10_11\\A\\deadline.sqlite3",
+          "sha256": "a733ad181bbfec83d39b8303880eadb5ace3579e2157e507a1d8794a6ebdfe28"
+        }
+      ]
+    },
+    {
+      "label": "A-M2",
+      "first_dispatch_epoch": 1789085912.0499573,
+      "last_recorded_return_epoch": 1789089484.6899338,
+      "elapsed_minutes": 59.543999608357744,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 3572.639976501465,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\M2_thm_11_7\\A\\deadline.sqlite3",
+          "sha256": "cfe6f648b3b77ab576d355f0f4b36da22d8ee504794250237f9e711481cee4de"
+        }
+      ]
+    },
+    {
+      "label": "B-L1",
+      "first_dispatch_epoch": 1789096786.8740013,
+      "last_recorded_return_epoch": 1789097501.0504637,
+      "elapsed_minutes": 11.902941040198009,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 714.1764624118805,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-B-r4-first-authorized-run\\deadline.sqlite3",
+          "sha256": "636282c858386c23cb176df98b538a0816cdd254996566d15ad7a10281081ee2"
+        }
+      ]
+    },
+    {
+      "label": "B-H1",
+      "first_dispatch_epoch": 1789140343.7982602,
+      "last_recorded_return_epoch": 1789147914.2656093,
+      "elapsed_minutes": 126.17445581754049,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 7570.467349052429,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-H1-B-r4-001\\deadline.sqlite3",
+          "sha256": "4bd015c2c6e741764904832798bfa0beb4ef96ee0798fb56575bcf12e52369b2"
+        }
+      ]
+    },
+    {
+      "label": "B-L2",
+      "first_dispatch_epoch": 1789112001.468458,
+      "last_recorded_return_epoch": 1789113806.6945179,
+      "elapsed_minutes": 30.087100998560587,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1805.2260599136353,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\deadline.sqlite3",
+          "sha256": "1471de080450eb4add3147eebeeb71c755c7689a1df434f4bc50ac9368a017c2"
+        }
+      ]
+    },
+    {
+      "label": "B-L3",
+      "first_dispatch_epoch": 1789119413.619378,
+      "last_recorded_return_epoch": 1789121402.6789374,
+      "elapsed_minutes": 33.15099265575409,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1989.0595593452454,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L3-B-r4-001\\deadline.sqlite3",
+          "sha256": "3c845ce931661505720cfe10c2547daf04f035525beca97d711aa7ddeba8b64e"
+        }
+      ]
+    },
+    {
+      "label": "B-L4",
+      "first_dispatch_epoch": 1789122540.819873,
+      "last_recorded_return_epoch": 1789123494.4695518,
+      "elapsed_minutes": 15.89416131178538,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 953.6496787071228,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L4-B-r4-001\\deadline.sqlite3",
+          "sha256": "ca0460356e59ea36ed3d550a4cef95982351d57b4183f93a6c7339014388ab6d"
+        }
+      ]
+    },
+    {
+      "label": "B-L5",
+      "first_dispatch_epoch": 1789123787.4103014,
+      "last_recorded_return_epoch": 1789127844.1475914,
+      "elapsed_minutes": 67.61228816509247,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 4056.737289905548,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L5-B-r4-001\\deadline.sqlite3",
+          "sha256": "3e8e0e14778c682a3c8933928bcc50320e9b2595144dbdde234580b9735745d8"
+        }
+      ]
+    },
+    {
+      "label": "B-L6",
+      "first_dispatch_epoch": 1789128487.118586,
+      "last_recorded_return_epoch": 1789129805.648367,
+      "elapsed_minutes": 21.97549634774526,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1318.5297808647156,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L6-B-r4-001\\deadline.sqlite3",
+          "sha256": "6395f00042af89d6de228abbb7792094624a7c56ebfa84291601696d87b6e3c2"
+        }
+      ]
+    },
+    {
+      "label": "B-L7",
+      "first_dispatch_epoch": 1789150433.3800418,
+      "last_recorded_return_epoch": 1789152173.0742133,
+      "elapsed_minutes": 28.994902857144673,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1739.6941714286804,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L7-B-r4-001\\deadline.sqlite3",
+          "sha256": "fda862cf2a8de3dda767bcc18c00b9d86674c383449ab33393e0de40f38c5337"
+        }
+      ]
+    },
+    {
+      "label": "B-M1",
+      "first_dispatch_epoch": 1789098619.9769857,
+      "last_recorded_return_epoch": 1789099678.4638588,
+      "elapsed_minutes": 17.641447885831198,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1058.4868731498718,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-M1-B-r4-001\\deadline.sqlite3",
+          "sha256": "1350106081d521b456d01ecbfc41f49f1c71bb057aa5d7944cc4788d0902235a"
+        }
+      ]
+    },
+    {
+      "label": "B-M2",
+      "first_dispatch_epoch": 1789134893.4466584,
+      "last_recorded_return_epoch": 1789137076.0343518,
+      "elapsed_minutes": 36.37646155754725,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 2182.587693452835,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-M2-B-r4-001\\deadline.sqlite3",
+          "sha256": "b062d137e68174d161ba24d9de47c8aed02944cd023d8c9199159d747402ea2d"
+        }
+      ]
+    },
+    {
+      "label": "B-M3",
+      "first_dispatch_epoch": 1789137453.558203,
+      "last_recorded_return_epoch": 1789139946.1441383,
+      "elapsed_minutes": 41.54309892257054,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 2492.585935354233,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-M3-B-r4-001\\deadline.sqlite3",
+          "sha256": "3ac2fa23fe2fbf4da02a688d590a33c9fe522ab423bc221c948efea784d06be2"
+        }
+      ]
+    },
+    {
+      "label": "C-H1",
+      "first_dispatch_epoch": 1789140333.1847808,
+      "last_recorded_return_epoch": 1789146534.9648855,
+      "elapsed_minutes": 103.36300174395244,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 6201.780104637146,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-h1-001\\deadline.sqlite3",
+          "sha256": "91a818236a0a51476f2ed36131c31a372164c3737aba29796de01a10c383b956"
+        }
+      ]
+    },
+    {
+      "label": "C-L1",
+      "first_dispatch_epoch": 1789097537.5854557,
+      "last_recorded_return_epoch": 1789098267.2911637,
+      "elapsed_minutes": 12.1617618004481,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 729.705708026886,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l1-001\\deadline.sqlite3",
+          "sha256": "6268bf12de3d2a679972def036fe14996b7332993dd38186855d4d6db0fd3677"
+        }
+      ]
+    },
+    {
+      "label": "C-L2",
+      "first_dispatch_epoch": 1789111990.3457227,
+      "last_recorded_return_epoch": 1789113070.291782,
+      "elapsed_minutes": 17.999100987116496,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1079.9460592269897,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\deadline.sqlite3",
+          "sha256": "2d399fea08b1ed77b37c38638802f558cad39cf3c8b2f64f0a790c4da6b1bf0d"
+        }
+      ]
+    },
+    {
+      "label": "C-L3",
+      "first_dispatch_epoch": 1789119401.2157226,
+      "last_recorded_return_epoch": 1789121795.3342266,
+      "elapsed_minutes": 39.90197506745656,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 2394.118504047394,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l3-001\\deadline.sqlite3",
+          "sha256": "533234486be540a03ba112480336ee69f5c16eed435a07febb76c046c1a8f914"
+        }
+      ]
+    },
+    {
+      "label": "C-L4",
+      "first_dispatch_epoch": 1789122529.6246367,
+      "last_recorded_return_epoch": 1789123521.8428936,
+      "elapsed_minutes": 16.536970949172975,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 992.2182569503784,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l4-001\\deadline.sqlite3",
+          "sha256": "6e7875a6a60924955c4cdcc637f6228b5baabc4a2ef5bc5bf2b7e0f7d5f22801"
+        }
+      ]
+    },
+    {
+      "label": "C-L5",
+      "first_dispatch_epoch": 1789123776.7063868,
+      "last_recorded_return_epoch": 1789125498.453403,
+      "elapsed_minutes": 28.695783603191376,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1721.7470161914825,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l5-001\\deadline.sqlite3",
+          "sha256": "5d8d485a5fdb8438ee439a58d2d48e15f90769d958c0cebe3c9fefd170d21259"
+        }
+      ]
+    },
+    {
+      "label": "C-L6",
+      "first_dispatch_epoch": 1789128471.3524494,
+      "last_recorded_return_epoch": 1789129888.0612042,
+      "elapsed_minutes": 23.611812579631806,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1416.7087547779083,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l6-001\\deadline.sqlite3",
+          "sha256": "3c386efafc4a7e30a86e95b4edd0b55087e878159e5e3cad3436ea827bb6973c"
+        }
+      ]
+    },
+    {
+      "label": "C-L7",
+      "first_dispatch_epoch": 1789150420.6830218,
+      "last_recorded_return_epoch": 1789152357.0465262,
+      "elapsed_minutes": 32.2727250734965,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1936.36350440979,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l7-001\\deadline.sqlite3",
+          "sha256": "4403122ba444801861fceacbae64ea0e0f08beabdeff764ae04be502b4f179ef"
+        }
+      ]
+    },
+    {
+      "label": "C-M1",
+      "first_dispatch_epoch": 1789100072.7364862,
+      "last_recorded_return_epoch": 1789101680.2798395,
+      "elapsed_minutes": 26.792389221986134,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1607.543353319168,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-m1-001\\deadline.sqlite3",
+          "sha256": "7262b52e4ed2757e0dcb05a48ac219f948cc55be9054305d0ed8d22d2ad74fb9"
+        }
+      ]
+    },
+    {
+      "label": "C-M2",
+      "first_dispatch_epoch": 1789134878.3627489,
+      "last_recorded_return_epoch": 1789137070.442687,
+      "elapsed_minutes": 36.53466563622157,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 2192.079938173294,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-m2-001\\deadline.sqlite3",
+          "sha256": "20049a52b1aaaaec2c7aedeb2b31cbb129c7b19c3ed01dc66bd54471b4a435c3"
+        }
+      ]
+    },
+    {
+      "label": "C-M3",
+      "first_dispatch_epoch": 1789137443.8364537,
+      "last_recorded_return_epoch": 1789138357.8127582,
+      "elapsed_minutes": 15.232938408851624,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 913.9763045310974,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-m3-001\\deadline.sqlite3",
+          "sha256": "035aa11b83da9fb5d8dacb8a134eb00935e94eb5f8a9f7029530a0daa9c0b21a"
+        }
+      ]
+    },
+    {
+      "label": "A-H1",
+      "first_dispatch_epoch": 1789101004.9486196,
+      "last_recorded_return_epoch": 1789111934.5683537,
+      "elapsed_minutes": 182.16032890081405,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 10929.619734048843,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\a-stage-runs\\H1_inversion_chain\\A\\deadline.sqlite3",
+          "sha256": "fead53a4c1f2fa05384993259bd7c4a7e8de81faf386a47d2aaab9116f7e4639"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r1\\deadline.sqlite3",
+          "sha256": "2b9055f16e2659342ce166929cf34c9880fe4c63d9bd18ef32687ee3cc5394bf"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r2\\deadline.sqlite3",
+          "sha256": "2b9055f16e2659342ce166929cf34c9880fe4c63d9bd18ef32687ee3cc5394bf"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r3\\deadline.sqlite3",
+          "sha256": "2b9055f16e2659342ce166929cf34c9880fe4c63d9bd18ef32687ee3cc5394bf"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\deadline.sqlite3",
+          "sha256": "000e5113372de17c7fa6b1cb57c08bd006da3f626befa9b16dda7209d49ff2d5"
+        }
+      ]
+    },
+    {
+      "label": "A-M3",
+      "first_dispatch_epoch": 1789098776.5594149,
+      "last_recorded_return_epoch": 1789100044.2120926,
+      "elapsed_minutes": 21.127544629573823,
+      "unclosed_dispatch_count": 0,
+      "original_span_seconds": 1267.6526777744293,
+      "original_minus_recomputed_seconds": 0.0,
+      "clock_start_matches_first_dispatch": true,
+      "source_databases": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\a-stage-runs\\M3_thm_10_8\\A\\deadline.sqlite3",
+          "sha256": "e2d10ae1a58f0be067b59393b4236051d7105aeb41b9786ad6af5d9c9b36817c"
+        }
+      ]
+    }
+  ]
+}

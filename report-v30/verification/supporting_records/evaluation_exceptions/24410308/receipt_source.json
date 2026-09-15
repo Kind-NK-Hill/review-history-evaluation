@@ -1,0 +1,48 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "b-endpoint-47e738ffc037453d4d24-reviewer-1",
+  "arm": "B",
+  "role": "reviewer",
+  "dispatch_id": "24410308-f939-44ae-9a69-a82392631b5b",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": null,
+  "help_config_sha256": null,
+  "effective_help_config_sha256": "7f38e5af77a2f88a98af357f42f5841bcec5a87b75cfaec35850e8e342a87097",
+  "session_ids": [
+    "01a09187-c8eb-7613-8287-47ae9dc4aae5"
+  ],
+  "usage": [
+    {
+      "input_tokens": 299035,
+      "cached_input_tokens": 244608,
+      "output_tokens": 6730
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 171.78200000000652,
+    "deadline_epoch": 1789149789.2062817,
+    "remaining_at_launch_seconds": 1799.979466676712,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-h1-b\\development-b-r4\\cases\\47e738ffc037453d4d24ee76143fbc98dfd6102041a2fa1daaa60e3c28726722\\executions\\reviewer-1\\attempt-01\\actor\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-h1-b\\development-b-r4\\cases\\47e738ffc037453d4d24ee76143fbc98dfd6102041a2fa1daaa60e3c28726722\\executions\\reviewer-1\\attempt-01\\actor\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 1800.0,
+    "started_epoch": 1789147989.2062817,
+    "deadline_epoch": 1789149789.2062817,
+    "remaining_seconds": 1628.1853370666504
+  },
+  "public_events_sha256": "cdac0dd094ab96f4c1b750398ab8b6001897510284207efe2133a7a1ef9061bc",
+  "raw_public_events_sha256": "cdac0dd094ab96f4c1b750398ab8b6001897510284207efe2133a7a1ef9061bc",
+  "usd": null
+}

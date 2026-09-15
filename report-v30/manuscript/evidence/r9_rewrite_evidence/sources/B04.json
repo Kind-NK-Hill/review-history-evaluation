@@ -1,0 +1,246 @@
+{
+  "epoch": 1789129269.5656438,
+  "status": "verified",
+  "original_solver_containers": [
+    {
+      "arm": "A",
+      "original_solver_container": "c5751da00f57204affae3df528b7a756b2a0baeeac4a4bcc7db51c261222bcc7",
+      "source_receipt": "ROOT/fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\setup-result.json",
+      "source_receipt_sha256": "adc1945faf1e27106a2f2b93e38c42f009614e134b5baba3dbb5619a1f43af58",
+      "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+      "readonly_rootfs": true,
+      "no_override_mount_under_image_library": true,
+      "container_was_not_started": true,
+      "inspect_sha256": "712325f1757f45b933f796d4dfc7848ce5dc5c931affe137bc46dce5d63f4a30",
+      "files": {
+        "Variance.lean": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\A\\Variance.lean",
+          "sha256": "f848104c3a63f3f9727ac5bffdd3a426edbb22b46b42fe9fe085fdfa19a73900"
+        },
+        "image-lake-manifest.json": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\A\\image-lake-manifest.json",
+          "sha256": "b583e42a8c5434792e7b5e04865a354710a9aa3b8f7c90665cf862d300c33c4d"
+        },
+        "mathlib-HEAD": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\A\\mathlib-HEAD",
+          "sha256": "b5017ae798c1946ebd517271aeaa1d44720270b74e96ea9b73222061b945ad55"
+        },
+        "solver-lake-manifest.json": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\A\\solver-lake-manifest.json",
+          "sha256": "b583e42a8c5434792e7b5e04865a354710a9aa3b8f7c90665cf862d300c33c4d"
+        }
+      },
+      "commands": [
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "c5751da00f57204affae3df528b7a756b2a0baeeac4a4bcc7db51c261222bcc7:/opt/cacheproject/.lake/packages/mathlib/Mathlib/Probability/Moments/Variance.lean",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\A\\Variance.lean"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "c5751da00f57204affae3df528b7a756b2a0baeeac4a4bcc7db51c261222bcc7:/opt/cacheproject/lake-manifest.json",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\A\\image-lake-manifest.json"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "c5751da00f57204affae3df528b7a756b2a0baeeac4a4bcc7db51c261222bcc7:/opt/cacheproject/.lake/packages/mathlib/.git/HEAD",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\A\\mathlib-HEAD"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "c5751da00f57204affae3df528b7a756b2a0baeeac4a4bcc7db51c261222bcc7:/work/ProbabilityTheoryFormalization/lake-manifest.json",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\A\\solver-lake-manifest.json"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "arm": "B",
+      "original_solver_container": "f7456be2f8cb6fc8841265255496c93095c909ab53374a595986d9ca9fa8b5ed",
+      "source_receipt": "ROOT/bcap-r4-runs\\coverage-L2-B-r4-001\\RESULT.json",
+      "source_receipt_sha256": "9b0edbb47e9305f7a92800219a50b28d5ef8c863e744df447ac1f4e9200348da",
+      "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+      "readonly_rootfs": true,
+      "no_override_mount_under_image_library": true,
+      "container_was_not_started": true,
+      "inspect_sha256": "de5725ad466f0f61c40508d60c0de102f0cdefbef47567e5ba9fdb0f3c6fbdfc",
+      "files": {
+        "Variance.lean": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\B\\Variance.lean",
+          "sha256": "f848104c3a63f3f9727ac5bffdd3a426edbb22b46b42fe9fe085fdfa19a73900"
+        },
+        "image-lake-manifest.json": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\B\\image-lake-manifest.json",
+          "sha256": "b583e42a8c5434792e7b5e04865a354710a9aa3b8f7c90665cf862d300c33c4d"
+        },
+        "mathlib-HEAD": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\B\\mathlib-HEAD",
+          "sha256": "b5017ae798c1946ebd517271aeaa1d44720270b74e96ea9b73222061b945ad55"
+        },
+        "solver-lake-manifest.json": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\B\\solver-lake-manifest.json",
+          "sha256": "b583e42a8c5434792e7b5e04865a354710a9aa3b8f7c90665cf862d300c33c4d"
+        }
+      },
+      "commands": [
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "f7456be2f8cb6fc8841265255496c93095c909ab53374a595986d9ca9fa8b5ed:/opt/cacheproject/.lake/packages/mathlib/Mathlib/Probability/Moments/Variance.lean",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\B\\Variance.lean"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "f7456be2f8cb6fc8841265255496c93095c909ab53374a595986d9ca9fa8b5ed:/opt/cacheproject/lake-manifest.json",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\B\\image-lake-manifest.json"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "f7456be2f8cb6fc8841265255496c93095c909ab53374a595986d9ca9fa8b5ed:/opt/cacheproject/.lake/packages/mathlib/.git/HEAD",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\B\\mathlib-HEAD"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "f7456be2f8cb6fc8841265255496c93095c909ab53374a595986d9ca9fa8b5ed:/work/ProbabilityTheoryFormalization/lake-manifest.json",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\B\\solver-lake-manifest.json"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "arm": "C",
+      "original_solver_container": "1e674d7bc2e10af10a2f2672b99b982f2949ff3a6294e4213350723b5cadca39",
+      "source_receipt": "ROOT/c-r3-runs\\c-r3-l2-001\\run\\actors\\writer-001\\worker-config.json",
+      "source_receipt_sha256": "017aee9d7b87651b8d15027a9c7e07ee5c6ad3d165739f12a1b733379bd2fcde",
+      "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+      "readonly_rootfs": true,
+      "no_override_mount_under_image_library": true,
+      "container_was_not_started": true,
+      "inspect_sha256": "9f07f7804247898d834b2ee042b285f8c206aa44dfaf10ef65f591c3917f04ca",
+      "files": {
+        "Variance.lean": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\C\\Variance.lean",
+          "sha256": "f848104c3a63f3f9727ac5bffdd3a426edbb22b46b42fe9fe085fdfa19a73900"
+        },
+        "image-lake-manifest.json": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\C\\image-lake-manifest.json",
+          "sha256": "b583e42a8c5434792e7b5e04865a354710a9aa3b8f7c90665cf862d300c33c4d"
+        },
+        "mathlib-HEAD": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\C\\mathlib-HEAD",
+          "sha256": "b5017ae798c1946ebd517271aeaa1d44720270b74e96ea9b73222061b945ad55"
+        },
+        "solver-lake-manifest.json": {
+          "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\C\\solver-lake-manifest.json",
+          "sha256": "b583e42a8c5434792e7b5e04865a354710a9aa3b8f7c90665cf862d300c33c4d"
+        }
+      },
+      "commands": [
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "1e674d7bc2e10af10a2f2672b99b982f2949ff3a6294e4213350723b5cadca39:/opt/cacheproject/.lake/packages/mathlib/Mathlib/Probability/Moments/Variance.lean",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\C\\Variance.lean"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "1e674d7bc2e10af10a2f2672b99b982f2949ff3a6294e4213350723b5cadca39:/opt/cacheproject/lake-manifest.json",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\C\\image-lake-manifest.json"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "1e674d7bc2e10af10a2f2672b99b982f2949ff3a6294e4213350723b5cadca39:/opt/cacheproject/.lake/packages/mathlib/.git/HEAD",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\C\\mathlib-HEAD"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "C:/Program Files/Docker/Docker/resources/bin/docker.exe",
+            "cp",
+            "1e674d7bc2e10af10a2f2672b99b982f2949ff3a6294e4213350723b5cadca39:/work/ProbabilityTheoryFormalization/lake-manifest.json",
+            "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\frozen-library\\C\\solver-lake-manifest.json"
+          ],
+          "exit_code": 0,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    }
+  ],
+  "variance_file_identical_across_all_three": true,
+  "solver_manifest_identical_across_all_three": true,
+  "locations": [
+    {
+      "line": 287,
+      "text": "lemma variance_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :"
+    },
+    {
+      "line": 297,
+      "text": "  variance_sum' (fun _ _ ↦ hX _)"
+    },
+    {
+      "line": 299,
+      "text": "lemma variance_fun_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :"
+    },
+    {
+      "line": 301,
+      "text": "  convert! variance_sum' hX"
+    },
+    {
+      "line": 443,
+      "text": "  rw [variance_sum' hs]"
+    }
+  ],
+  "binding_argument": "Actual original solver containers point to the same immutable image. Their root filesystems are read-only and no mount overrides /opt/cacheproject. The library bytes were copied from each retained stopped container, not inferred from the current host checkout.",
+  "model_calls": 0,
+  "containers_started_or_unpaused": 0
+}

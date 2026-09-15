@@ -1,0 +1,247 @@
+你是独立数学形式化评审，所有输入只读位于 /endpoint/input，身份与旧标签隐藏。请先用container_exec实际完整读取 source/SOURCE.tex 和 task_contract/TASK.zh-CN.md，再读共同规则、reevaluation/RULES.json、完整候选及允许上游支持。不要猜测其他候选、臂或旧结果。
+分别依登记F/E两解释检查所有12个义务。F有限积分约定要检验冻结源文依据；无依据时明确回顾性敏感性假设，不可从Lean积分取实数值推出函数可积。TASK允许最终尾部不可省略。
+特别分别查逐项/尾部可积、极限可测、处处/几乎处处非负及实际公开包装；数学正确、源范围不足与不满足接口须分开。一般密度和正/零方差正态结论全部独立核查，不能因一个义务与某种模式相同就预设整体标签。无需新求解，不修改文件。
+最后只输出严格JSON。confidence必须0到1数值。每个确定义务给出真实相对路径、有效行号和在该范围中连续存在的逐字引用，不拼接不相邻JSON字段。不可确认标unresolved。封套逐字复制：
+{"request_id": "l3-r1-candidate-2ec562216bc6-reviewer-1", "candidate_id": "candidate-2ec562216bc6", "role": "reviewer"}
+结构：
+{
+  "schema": "consistency.l3.review.v1",
+  "request_id": "COPY_REQUEST_ID",
+  "candidate_id": "COPY_CANDIDATE_ID",
+  "role": "reviewer",
+  "confidence": 0.95,
+  "source_reading": {
+    "F_source_convention": "supported_by_frozen_text|retrospective_sensitivity_assumption|unresolved",
+    "reason": "区分源文与任务书依据，不以Lean实值语法代替可积性",
+    "evidence": [
+      {
+        "path": "source/SOURCE.tex",
+        "line_start": 1,
+        "line_end": 1,
+        "quote": "逐字连续短引用"
+      }
+    ]
+  },
+  "dimensions": {
+    "mathematics": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "public_premises": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "route_F": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "route_E": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "interface": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    },
+    "delivery": {
+      "status": "pass|fail|unresolved",
+      "reason": "具体理由",
+      "evidence": []
+    }
+  },
+  "contract_responsibility": {
+    "status": "clear|ambiguous|unsatisfiable|unresolved",
+    "reason": "说明"
+  },
+  "obligations": [
+    {
+      "id": "P1",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "P2",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "P3",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "P4",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "P5",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "D1",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "N1",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "N2",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "N3",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    },
+    {
+      "id": "I1",
+      "status_F": "pass|fail|unresolved",
+      "status_E": "pass|fail|unresolved",
+      "derivation_class": "all_terms_integrable|eventual_integrability|ae_representative|other|not_applicable",
+      "reason": "逐义务分析",
+      "evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "逐字连续引用"
+        }
+      ]
+    }
+  ],
+  "overall_F": "pass|fail|unresolved",
+  "overall_E": "pass|fail|unresolved",
+  "summary": "完整候选结论及解释条件性",
+  "limitations": []
+}

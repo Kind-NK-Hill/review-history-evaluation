@@ -1,0 +1,25 @@
+{
+  "block_id": "thm_11_7",
+  "type": "Theorem_with_Proof",
+  "title": "11.7 (4th-moment Strong Law of Large Numbers)",
+  "content": "\\begin{thmbox}{11.7 (4th-moment Strong Law of Large Numbers)}\n\\end{thmbox}\n\nSuppose Xi ,f o r i\\geq 1 , are independent random variables with mean \\mu and\n\nE[X4\n\ni ]\\leq c< \\infty for all i Then Sn\n\nn \\to \\mu almost surely.\n\n\\textit{Proof} Without loss of generality, we assume that \\mu= 0 . (We can consider Yi =\n\nXi -\\mu if the mean of Xi is not zero.)\n\nThe expectation of S4\n\nn can be expanded as\n\nE[S4\n\nn]= E[(X1 +X 2 +\\cdot\\cdot\\cdot+ Xn)4]\n\n=E\n\n[ n\\sum\n\ni=1\n\nX4\n\ni +3\n\n\\sum\n\ni/=j\n\nX2\n\ni X2\n\nj +4\n\n\\sum\n\ni/=j\n\nXiX3\n\nj\n\n+6\n\n\\sum\n\ni,j,k\n\ni,j,kdistinct\n\nXiXj X2\n\nk +\n\n\\sum\n\ni,j,k,\\ell\n\ni,j,k,\\elldistinct\n\nXiXj XkX\\ell\n\n]\n\nWe analyze the terms one by one. For distinct indices i , j , k , and \\ell,we have\n\nE[XiXj XkX\\ell]= E[XiXj X2\n\nk]= E[XiX3\n\nj ]= 0,\n\nby the assumption that X1,...,X n are independent. The fourth-power terms are\n\nbounded byE[\\sumn\n\ni=1 X4\n\ni ]\\leq nc becauseE[X4\n\ni ]\\leq c.\n\nFori/=j , by Cauchy-Schwarz inequality,\n\nE[X2\n\ni X2\n\nj ]\\leq\n\n\\sqrt\n\nE[X4\n\ni ]E[X4\n\nj ]\\leq \\sqrt c\\cdot c = c.\n\nHence,\n\n3E\n\n[ \\sum\n\ni/=j\n\nX2\n\ni X2\n\nj\n\n]\n\n\\leq3 n(n- 1 )c\n\nThis givesE[S4\n\nn]\\leq nc+ 3 n(n- 1 )c. We now fix any \\epsilon> 0,\n\nP\n\n( \\vertSn\\vert\n\nn >\\epsilon\n\n)\n\n=P(S 4\n\nn >n 4\\epsilon4)\\leq nc+ 3 n(n- 1 )c\n\nn4\\epsilon4 \\leq 3n2c+ nc - 3 nc\n\nn4\\epsilon4 \\leq 3c\n\nn2\\epsilon4 .\n\nBecause\n\n\\infty\\sum\n\nn=1\n\nP\n\n( \\vertSn\\vert\n\nn >\\epsilon\n\n)\n\n\\leq\n\n\\infty\\sum\n\nn=1\n\n3c\n\nn2\\epsilon4 <\\infty ,\n\nwe can apply the first Borel-Cantelli lemma (Theorem 5.8) to conclude that the\n\nevent .{\\vertSn\\vert/n > \\epsilon io. } has probability 0. Therefore, by Theorem 10.1, Sn/n\n\nconverges to 0 almost surely. \\hfill $\\square$\n\nNote that Theorem 11.7 does not assume that the random variables Xi are\n\nidentically distributed, but it requires that the 4th moments are uniformly bounded.\n\nWe state below a stronger version the strong law that assumes finite mean and\n\npairwise independence.\n",
+  "source_plan": "experiment_targets",
+  "dependencies": [
+    "def_5_10",
+    "def_9_1",
+    "thm_5_8",
+    "thm_10_1",
+    "thm_11_1",
+    "thm_11_5"
+  ],
+  "soft_imports": [],
+  "soft_imports_confirmed_at": "",
+  "final_import_union": [
+    "def_5_10",
+    "def_9_1",
+    "thm_5_8",
+    "thm_10_1",
+    "thm_11_1",
+    "thm_11_5"
+  ]
+}

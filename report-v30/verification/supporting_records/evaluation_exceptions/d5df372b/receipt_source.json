@@ -1,0 +1,48 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "b-endpoint-cf5b6aef3c35c8b4a290-reviewer-2",
+  "arm": "B",
+  "role": "reviewer",
+  "dispatch_id": "d5df372b-9696-4f8b-b7c5-aea4546c3d57",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": null,
+  "help_config_sha256": null,
+  "effective_help_config_sha256": "bc6fad0704ea26f4905744cd9ab898b1618d35d560f5a3d51210bed060e2e69d",
+  "session_ids": [
+    "01a09057-049d-7a01-9ac2-15c35a8f95d6"
+  ],
+  "usage": [
+    {
+      "input_tokens": 84741,
+      "cached_input_tokens": 40192,
+      "output_tokens": 4332
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 103.32799999997951,
+    "deadline_epoch": 1789129816.5902069,
+    "remaining_at_launch_seconds": 1799.9684326648712,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l5-b\\development-b-r4\\cases\\cf5b6aef3c35c8b4a29084605321dfede7088188224048061c7a621e4b0c2058\\executions\\reviewer-2\\attempt-01\\actor\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l5-b\\development-b-r4\\cases\\cf5b6aef3c35c8b4a29084605321dfede7088188224048061c7a621e4b0c2058\\executions\\reviewer-2\\attempt-01\\actor\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 1800.0,
+    "started_epoch": 1789128016.5902069,
+    "deadline_epoch": 1789129816.5902069,
+    "remaining_seconds": 1696.613740682602
+  },
+  "public_events_sha256": "4c7adc8fa5d0e91038050a4cfbb12e8baa7bdeba1b42926fbe874b775ce5a230",
+  "raw_public_events_sha256": "4c7adc8fa5d0e91038050a4cfbb12e8baa7bdeba1b42926fbe874b775ce5a230",
+  "usd": null
+}

@@ -1,0 +1,2074 @@
+{
+  "baseline": [
+    {
+      "pdf": "en.pdf",
+      "sha256": "f0d100634a1f705956ddb08067661c8f471979b5f07e2b2079779720e7001500",
+      "matches_supplied_baseline": true,
+      "pages": 27,
+      "metadata": {
+        "/Creator": "LaTeX with hyperref",
+        "/Producer": "xdvipdfmx (0.1)",
+        "/CreationDate": "D:20260912115403-00'00'"
+      },
+      "named_destinations": 159
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "sha256": "a3e1aa889cbbadf7ec689d710c9caa8fc665a21f383ecf1f44ebaf6b47bbfc47",
+      "matches_supplied_baseline": true,
+      "pages": 57,
+      "metadata": {
+        "/Creator": "LaTeX with hyperref",
+        "/Producer": "xdvipdfmx (0.1)",
+        "/CreationDate": "D:20260912115403-00'00'"
+      },
+      "named_destinations": 417
+    }
+  ],
+  "source_checks": [
+    {
+      "source": "report.en.md",
+      "sha256": "b657fd1687dc63eafb19706f05d0588e419b3b38aa97b4f4a87cdde9a9443a1a",
+      "existing_tex_body_equal_to_source_conversion": true,
+      "check": "本轮仅内存转换与既有 TeX 文本比较；使用通用换行读取规则并还原原绝对链接根；没有调用 TeX 引擎或改写报告",
+      "display_equations": 7
+    },
+    {
+      "source": "appendix.en.md",
+      "sha256": "cb341fa0d122035990442f32f575935283af2d2328f4cc26f087a69fab8724b7",
+      "existing_tex_body_equal_to_source_conversion": true,
+      "check": "本轮仅内存转换与既有 TeX 文本比较；使用通用换行读取规则并还原原绝对链接根；没有调用 TeX 引擎或改写报告",
+      "display_equations": 19
+    }
+  ],
+  "counts": {
+    "en": {
+      "cross_pdf": 113
+    },
+    "en-appendix": {
+      "cross_pdf": 10,
+      "local_file_uri": 3
+    }
+  },
+  "links": [
+    {
+      "pdf": "en.pdf",
+      "page": 2,
+      "label": "Technical appendix",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": [
+          0,
+          "/Fit"
+        ]
+      },
+      "target_file_exists": true,
+      "destination_type": "page_array",
+      "raw_named_destination_exists": null,
+      "intended_named_destination": "",
+      "intended_named_destination_exists": null,
+      "page_destination_exists": true
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 3,
+      "label": "Appendix N.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 5,
+      "label": "Appendix N.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 5,
+      "label": "Ap\u0002",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 5,
+      "label": "pendix L.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 7,
+      "label": "Appendix N.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 8,
+      "label": "30; [Appendix N.6",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n6"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n6",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 8,
+      "label": "Appendix N.6",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n6"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n6",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 8,
+      "label": "24; [Appendix M.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=m2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "m2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 9,
+      "label": "Appendix N.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 10,
+      "label": "Appendix M.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=m1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "m1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 10,
+      "label": "Appendix H",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=appendix-h"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "appendix-h",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 11,
+      "label": "Appendix M.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=m2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "m2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 11,
+      "label": "M.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=m3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "m3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 11,
+      "label": "Appendix N.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 12,
+      "label": "31;",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 12,
+      "label": "[Appendix N.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 12,
+      "label": "21;",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g15"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g15",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 12,
+      "label": "[Appendix G.15",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g15"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g15",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 12,
+      "label": "Appendix G.15",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g15"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g15",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 13,
+      "label": "23; [Appendix G.17",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g17"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g17",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 13,
+      "label": "29;",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g14-2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g14-2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 13,
+      "label": "Appendices [G.14.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g14-2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g14-2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 13,
+      "label": "G.17",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g17"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g17",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 13,
+      "label": "15,23; [Appendix G.13.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g13-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g13-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 14,
+      "label": "22; [Appendix G.16",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g16"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g16",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 14,
+      "label": "Appendix",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=k8"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "k8",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 14,
+      "label": "K.8",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=k8"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "k8",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 14,
+      "label": "K.9",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=k9"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "k9",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 15,
+      "label": "27; [Appendix G.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 15,
+      "label": "G.10",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g10"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g10",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 15,
+      "label": "27,33; [Ap\u0002",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g6"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g6",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 15,
+      "label": "pendix G.6",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g6"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g6",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 16,
+      "label": "27; [Appendix G.9.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g9-2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g9-2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 16,
+      "label": "25; [Appendix G.14.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g14-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g14-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 18,
+      "label": "17; [Appendix G.13",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g13"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g13",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 18,
+      "label": "18; [Appendix G.11",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g11"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g11",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 19,
+      "label": "28; [Appendix G.12",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g12"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g12",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 19,
+      "label": "19; [Appendix G.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 19,
+      "label": "19; [Appendix G.18",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g18"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g18",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 20,
+      "label": "4; [Appendix L.2.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l2-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l2-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 21,
+      "label": "4; [Appendix B.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=b4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "b4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 21,
+      "label": "6; [Appendix L.2.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l2-3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l2-3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 21,
+      "label": "6;",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=b10"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "b10",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 21,
+      "label": "[Appendix B.10",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=b10"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "b10",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 21,
+      "label": "7; [Appendix L.2.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l2-4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l2-4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 21,
+      "label": "8; [Appendix L.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 22,
+      "label": "Appendix L.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 22,
+      "label": "10; [Appendix C.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=c1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "c1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 23,
+      "label": "10; [Appendix C.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=c3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "c3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 23,
+      "label": "Appendix C.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=c4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "c4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 23,
+      "label": "Appendix C",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=appendix-c"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "appendix-c",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 23,
+      "label": "10; [Appendix C.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=c5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "c5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 24,
+      "label": "Appendix C.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=c5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "c5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 24,
+      "label": "C.9",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=c9"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "c9",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 24,
+      "label": "11; [Appendix D.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=d1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "d1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 24,
+      "label": "11; [Appendix D.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=d5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "d5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 24,
+      "label": "Appendix D",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=appendix-d"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "appendix-d",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 26,
+      "label": "Appendix E.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=e2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "e2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 26,
+      "label": "L.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 26,
+      "label": "A.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=a2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "a2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 26,
+      "label": "L.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 26,
+      "label": "B.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=b4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "b4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 26,
+      "label": "L.2.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l2-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l2-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "B.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=b1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "b1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "B.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=b3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "b3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "L.2.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l2-2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l2-2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "B.10",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=b10"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "b10",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "L.2.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l2-3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l2-3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "L.2.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l2-4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l2-4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "L.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "L.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=l4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "l4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "N.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "K.8",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=k8"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "k8",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "K.9",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=k9"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "k9",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "N.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "K.9",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=k9"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "k9",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "N.6",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n6"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n6",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.18",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g18"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g18",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "N.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.13",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g13"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g13",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.11",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g11"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g11",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.18",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g18"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g18",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.8",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g8"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g8",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.15",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g15"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g15",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.16",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g16"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g16",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.13.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g13-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g13-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.17",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g17"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g17",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "K.8",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=k8"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "k8",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "M.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=m2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "m2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "M.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=m3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "m3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.14.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g14-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g14-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "A.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=a5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "a5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.10",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g10"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g10",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.12",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g12"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g12",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.14.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g14-2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g14-2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "N.6",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n6"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n6",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "E.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=e2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "e2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "N.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "N.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=n5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "n5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "E.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=e2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "e2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "C.4",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=c4"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "c4",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "D.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=d1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "d1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "E.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=e2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "e2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "G.6",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=g6"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "g6",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "E.2",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=e2"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "e2",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "A.5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=a5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "a5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "E.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=e3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "e3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "E.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=e3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "e3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en.pdf",
+      "page": 27,
+      "label": "E.3",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en-appendix.pdf",
+        "/D": "nameddest=e3"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "e3",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 1,
+      "label": "Main report",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": [
+          0,
+          "/Fit"
+        ]
+      },
+      "target_file_exists": true,
+      "destination_type": "page_array",
+      "raw_named_destination_exists": null,
+      "intended_named_destination": "",
+      "intended_named_destination_exists": null,
+      "page_destination_exists": true
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 19,
+      "label": "source guide",
+      "action": {
+        "/S": "/URI",
+        "/URI": "file:///D:/Grad_Study/Practimum/Formalization/reports/trajectory_analysis/team_review_v031_trajectory_v3_20260911/combined_revision_v11_20260912/evidence/README.md"
+      },
+      "target_file_exists": true,
+      "destination_type": "URI",
+      "raw_named_destination_exists": null,
+      "intended_named_destination": "",
+      "intended_named_destination_exists": null,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 21,
+      "label": "the",
+      "action": {
+        "/S": "/URI",
+        "/URI": "file:///D:/Grad_Study/Practimum/Formalization/reports/trajectory_analysis/team_review_v031_trajectory_v3_20260911/combined_revision_v11_20260912/evidence/project_docs/README.md"
+      },
+      "target_file_exists": true,
+      "destination_type": "URI",
+      "raw_named_destination_exists": null,
+      "intended_named_destination": "",
+      "intended_named_destination_exists": null,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 21,
+      "label": "documentation source guide",
+      "action": {
+        "/S": "/URI",
+        "/URI": "file:///D:/Grad_Study/Practimum/Formalization/reports/trajectory_analysis/team_review_v031_trajectory_v3_20260911/combined_revision_v11_20260912/evidence/project_docs/README.md"
+      },
+      "target_file_exists": true,
+      "destination_type": "URI",
+      "raw_named_destination_exists": null,
+      "intended_named_destination": "",
+      "intended_named_destination_exists": null,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 23,
+      "label": "Section 5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": "nameddest=section-5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "section-5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 25,
+      "label": "Section 3.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": "nameddest=section-3-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "section-3-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 26,
+      "label": "Section 3.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": "nameddest=section-3-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "section-3-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 30,
+      "label": "Section 3.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": "nameddest=section-3-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "section-3-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 40,
+      "label": "Section 2.1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": "nameddest=section-2-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "section-2-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 42,
+      "label": "Section 1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": "nameddest=section-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "section-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 46,
+      "label": "Section 1",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": "nameddest=section-1"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "section-1",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 52,
+      "label": "Section 5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": "nameddest=section-5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "section-5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    },
+    {
+      "pdf": "en-appendix.pdf",
+      "page": 53,
+      "label": "Section 5",
+      "action": {
+        "/S": "/GoToR",
+        "/F": "en.pdf",
+        "/D": "nameddest=section-5"
+      },
+      "target_file_exists": true,
+      "destination_type": "named",
+      "raw_named_destination_exists": false,
+      "intended_named_destination": "section-5",
+      "intended_named_destination_exists": true,
+      "page_destination_exists": null
+    }
+  ]
+}

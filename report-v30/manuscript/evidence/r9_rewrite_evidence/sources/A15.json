@@ -1,0 +1,45 @@
+{
+  "epoch": 1789131485.333638,
+  "rule": {
+    "version": "L3-integral-domain-sensitivity-r1",
+    "original_rule_quote": "合同允许采用最终尾部可积表述",
+    "readings": {
+      "F_finite_real_integral_sequence": "Interpret the displayed integral convergence as a real-valued sequence of finite integrals. Then individual integrability is part of that convention; assess the rest of the original theorem and density/Gaussian obligations independently.",
+      "E_nonnegative_extended_integrals": "Nonnegative measurable inputs have extended integrals; convergence to a finite limit implies only eventual integrability, allowing finitely many infinite initial integrals. A source-scope public theorem must close this tail reduction rather than require all terms integrable."
+    },
+    "required_separation": [
+      "correctness of the theorem under explicitly stated premises",
+      "source-domain convention for integral sequence",
+      "public interface closure or missing tail wrapper",
+      "all general density and Gaussian positive/zero-variance obligations"
+    ],
+    "composition": "Both readings applied to all three candidates; retain original labels. Do not infer mathematical falsity from a stronger interface. If source-domain convention changes acceptance, mark criterion_dispute and retain both sensitivity labels.",
+    "obligations": {
+      "P1": "Scheffe定理在自身明确前提下的数学陈述和证明正确性。",
+      "P2": "源积分定义域与逐项/最终尾部可积的公共接口，分别依F/E解释判断。",
+      "P3": "极限函数可测、几乎处处/处处非负，源文与已交付任务书的差别；有无实际代表元或几乎处处包装。",
+      "P4": "从非负性与几乎处处收敛建立负部/最小值控制并应用支配收敛。",
+      "P5": "从积分收敛闭合绝对差积分趋零，不假定最终L1结论。",
+      "D1": "一般概率密度，包括极限仍是密度及几乎处处收敛条件。",
+      "D2": "实际由Scheffe闭合分布全变差趋零。",
+      "D3": "由全变差推依分布收敛及公开接口。",
+      "N1": "原正态参数收敛和参数边界，是否额外加强公共前提。",
+      "N2": "极限正方差的密度/全变差或等价证明完整闭合。",
+      "N3": "零方差极限到点质量的弱收敛，不误称全变差收敛。",
+      "I1": "所有必需文件、端点、支持和依赖真实闭合，无循环、sorry或额外公理。"
+    },
+    "registration_context": "看过旧结果后的敏感性登记，发生在本批新重评前，不是原实验前预注册。",
+    "source_convention_limit": "F是需要单独检验源文依据的有限积分解释。若交付源材料无该约定，必须写为回顾性敏感性假设，不能凭Lean实值积分语法推断各项可积。TASK明确允许最终尾部表述这一事实始终保留。",
+    "independent_scope": "逐项可积行为相同不等于所有公开前提相同，更不预定整组标签相同。对每份候选分别核极限可测、处处/几乎处处非负及实际包装。",
+    "dimension_semantics": {
+      "mathematics": "定理在自身明确前提下正确性",
+      "public_premises": "除P2积分定义域敏感性外的公共前提是否获交付源文/任务许可，差异须明确归因",
+      "route_F_E": "对应解释的源范围与必须承担的证明义务是否闭合",
+      "interface": "必需接口存在且真实接入；P2范围单列，避免机械重复归罪",
+      "delivery": "完整一般密度和正态分支及允许支持"
+    },
+    "composition_rule": "各解释按数学、非P2公共前提、对应路线、接口、交付及全部逐义务状态合成；任何fail则该解释fail，否则有unresolved则unresolved，否则pass。解释改变标签则判据争议。F无冻结源依据必须明确其条件性，不成为唯一真实标签。"
+  },
+  "original_registration_sha256": "a00d1718a78295bfe7d513fe02db51db37b2ab5b82eaf7737bb26698880d39e4",
+  "new_model_calls": 0
+}

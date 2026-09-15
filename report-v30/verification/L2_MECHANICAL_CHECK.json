@@ -1,0 +1,129 @@
+{
+  "unique_services": 6,
+  "checked_ids_match_Z016": true,
+  "original_full_exposure_counts": {
+    "verified": 3,
+    "not_verified": 3
+  },
+  "checks": [
+    {
+      "service_id": "episode-50194432-a91e-494c-9e66-d6b1e08c6812",
+      "raw_event_hash_matches_existing": true,
+      "full_feedback_text_hash_matches_existing": true,
+      "session_receipt": "verification/supporting_records/L2/50194432/actor-receipt.json",
+      "references": [
+        "verification/supporting_records/L2/50194432/feedback-context.jsonl",
+        "verification/supporting_records/L2/50194432/feedback.txt",
+        "verification/supporting_records/L2/50194432/actor-receipt.json",
+        "verification/supporting_records/L2/50194432/role-request.json",
+        "verification/supporting_records/candidates/L2-A/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "verification/supporting_records/candidates/L2-A",
+        "verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json",
+        "verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json",
+        "verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json"
+      ]
+    },
+    {
+      "service_id": "episode-bb680eb5-cdc6-431c-9f0e-43cad6af06aa",
+      "raw_event_hash_matches_existing": true,
+      "full_feedback_text_hash_matches_existing": true,
+      "session_receipt": "verification/supporting_records/L2/bb680eb5/actor-receipt.json",
+      "references": [
+        "verification/supporting_records/L2/bb680eb5/feedback-context.jsonl",
+        "verification/supporting_records/L2/bb680eb5/feedback.txt",
+        "verification/supporting_records/L2/bb680eb5/actor-receipt.json",
+        "verification/supporting_records/L2/bb680eb5/role-request.json",
+        "verification/supporting_records/candidates/L2-A/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "verification/supporting_records/candidates/L2-A",
+        "verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json",
+        "verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json",
+        "verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json"
+      ]
+    },
+    {
+      "service_id": "episode-6361bff3-acfe-4e01-88e8-df006dc42b00",
+      "raw_event_hash_matches_existing": true,
+      "full_feedback_text_hash_matches_existing": true,
+      "session_receipt": "verification/supporting_records/L2/6361bff3/actor-receipt.json",
+      "references": [
+        "verification/supporting_records/L2/6361bff3/feedback-context.jsonl",
+        "verification/supporting_records/L2/6361bff3/feedback.txt",
+        "verification/supporting_records/L2/6361bff3/actor-receipt.json",
+        "verification/supporting_records/L2/6361bff3/role-request.json",
+        "verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "verification/supporting_records/L2/6361bff3/delivery_receipt.json",
+        "verification/supporting_records/L2/6361bff3/delivery_recovery.json",
+        "verification/supporting_records/L2/6361bff3/recovered/patch.diff",
+        "verification/supporting_records/L2/6361bff3/recovered/response.md",
+        "verification/supporting_records/L2/6361bff3/recovered/after-manifest.json",
+        "verification/supporting_records/L2/6361bff3/recovered/role-artifacts/1-patch.diff",
+        "verification/supporting_records/L2/6361bff3/recovered/role-artifacts/2-response.md",
+        "verification/supporting_records/L2/6361bff3/parent-context-1.jsonl",
+        "verification/supporting_records/candidates/L2-B",
+        "verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json",
+        "verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json",
+        "verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json"
+      ]
+    },
+    {
+      "service_id": "episode-f5e4ae15-c287-42a7-9c9e-5d913e6dfb91",
+      "raw_event_hash_matches_existing": true,
+      "full_feedback_text_hash_matches_existing": true,
+      "session_receipt": "verification/supporting_records/L2/f5e4ae15/actor-receipt.json",
+      "references": [
+        "verification/supporting_records/L2/f5e4ae15/feedback-context.jsonl",
+        "verification/supporting_records/L2/f5e4ae15/feedback.txt",
+        "verification/supporting_records/L2/f5e4ae15/actor-receipt.json",
+        "verification/supporting_records/L2/f5e4ae15/role-request.json",
+        "verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "verification/supporting_records/L2/f5e4ae15/before_manifest/thm_11_4.json",
+        "verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "verification/supporting_records/L2/f5e4ae15/before_manifest/thm_11_4.json",
+        "verification/supporting_records/L2/f5e4ae15/delivery_receipt.json",
+        "verification/supporting_records/L2/f5e4ae15/parent-context-1.jsonl",
+        "verification/supporting_records/candidates/L2-B",
+        "verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json",
+        "verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json",
+        "verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json"
+      ]
+    },
+    {
+      "service_id": "episode-8ce74337-4095-46e8-a9e2-cb03190c78c4",
+      "raw_event_hash_matches_existing": true,
+      "full_feedback_text_hash_matches_existing": true,
+      "session_receipt": "verification/supporting_records/L2/8ce74337/actor-receipt.json",
+      "references": [
+        "verification/supporting_records/L2/8ce74337/feedback-context.jsonl",
+        "verification/supporting_records/L2/8ce74337/feedback.txt",
+        "verification/supporting_records/L2/8ce74337/actor-receipt.json",
+        "verification/supporting_records/candidates/L2-C/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "verification/supporting_records/L2/8ce74337/reviewed_c1_code/thm_11_4.lean",
+        "verification/supporting_records/L2/8ce74337/parent-context-1.jsonl",
+        "verification/supporting_records/candidates/L2-C",
+        "verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json",
+        "verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json",
+        "verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json"
+      ]
+    },
+    {
+      "service_id": "episode-abbc1cbd-ffbd-4258-9154-f3849b3106ed",
+      "raw_event_hash_matches_existing": true,
+      "full_feedback_text_hash_matches_existing": true,
+      "session_receipt": "verification/supporting_records/L2/abbc1cbd/actor-receipt.json",
+      "references": [
+        "verification/supporting_records/L2/abbc1cbd/feedback-context.jsonl",
+        "verification/supporting_records/L2/abbc1cbd/feedback.txt",
+        "verification/supporting_records/L2/abbc1cbd/actor-receipt.json",
+        "verification/supporting_records/candidates/L2-C/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "verification/supporting_records/L2/abbc1cbd/reviewed_c1_code/thm_11_5.lean",
+        "verification/supporting_records/L2/abbc1cbd/parent-context-1.jsonl",
+        "verification/supporting_records/candidates/L2-C",
+        "verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json",
+        "verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json",
+        "verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json"
+      ]
+    }
+  ],
+  "no_new_semantic_reviews": true
+}

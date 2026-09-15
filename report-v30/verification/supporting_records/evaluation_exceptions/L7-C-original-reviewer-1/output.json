@@ -1,0 +1,159 @@
+{
+  "assessment": {
+    "schema": "formal_endpoint.model_assessment.v1",
+    "request_id": "rev-c2fb5f540fc9fa12c894317b-1",
+    "anonymous_candidate_id": "cand-c2fb5f540fc9fa12c894",
+    "role": "reviewer",
+    "verdict": "fail",
+    "confidence": 0.97,
+    "statement_fidelity": {
+      "status": "partial",
+      "thm_10_10": {
+        "status": "faithful",
+        "assessment": "公开声明准确表达有限维随机向量几乎处处收敛和依概率收敛分别等价于逐坐标收敛。hVn 与 hV 对应教材中 Vn、V 为随机向量的可测性要求，未改变数学结论。"
+      },
+      "thm_10_11": {
+        "status": "not_faithful",
+        "assessment": "教材只规定 f 在 S 上连续且极限向量以概率一落入 S；候选公开声明额外要求 hf : Measurable f，即 f 在整个定义域上可测。这排除了教材允许的局部连续但全局不可测函数，严格削弱了定理强度。候选同时显式给出复合输出可测性，属于有价值的加强结论，但该加强依赖新增的 hf，不能替代原强度定理。"
+      }
+    },
+    "obligation_closure": {
+      "status": "incomplete",
+      "closed": [
+        "thm_10_10 中证明了坐标绝对值不超过欧氏范数。",
+        "thm_10_10 中证明了欧氏范数不超过坐标绝对值之和，并用阈值 ε/d 完成反向事件控制。",
+        "逐坐标几乎处处收敛到向量几乎处处收敛使用了有限坐标满测集的交。",
+        "向量依概率收敛到逐坐标依概率收敛使用了偏差事件包含关系。",
+        "逐坐标依概率收敛到向量依概率收敛使用了有限并集界 prob_2_4_finset_union_bound。",
+        "零维情形在依概率证明及度量桥接中被单独处理。",
+        "thm_10_11 的几乎处处部分正确相交了收敛满测性质与 V 落入 S 的几乎处处性质，并只在 V(ω)∈S 时使用 ContinuousAt。",
+        "thm_10_11 的依概率部分通过欧氏范数与上确界范数的双向控制、依测度收敛桥接及子列刻画完成，数学路线与连续映射定理等价。",
+        "在假设 hf 后，所有复合输出的可测性均在证明中由复合规则推出，没有直接把复合可测性或复合收敛作为前提。"
+      ],
+      "not_closed": [
+        "未在教材给定的 f 仅在 S 上连续这一公开前提下完成完整连续映射定理；概率部分和复合可测性均依赖新增的全局可测性前提 hf。",
+        "COMMON_RULES 要求新增支持前提必须由题目条件或白名单公共结果在正文中推出；候选没有也不可能从现有 hcontinuous、hVSmeas、hVSone 推出 hf。"
+      ]
+    },
+    "proof_route_assessment": {
+      "status": "mathematically_sound_under_added_premise",
+      "thm_10_10_route": "证明直接落实欧氏范数与坐标控制、满测集有限交和有限概率并集界，路线完整且无循环依赖。",
+      "thm_10_11_almost_sure_route": "先将事件式向量几乎处处收敛转换为几乎处处极限，再与 hVS 相交并逐点复合 ContinuousAt，最后重新构造可测满测事件；该核心证明本身不需要 hf。",
+      "thm_10_11_probability_route": "先用 piNorm_le_vectorEuclideanNorm 将欧氏偏差控制转为 Mathlib 的依测度收敛，再用子列刻画及局部连续性获得复合后的依测度收敛，最后以 vectorEuclideanNorm_le_card_mul_piNorm 返回欧氏概率接口。该替代路线在 hf 和 hVn 下成立，属于合同允许的数学等价路线。",
+      "dependency_assessment": "候选使用 Mathlib、指定的 prob_2_4、def_10_6、thm_10_9 及候选 thm_10_10，没有发现循环证明、目标重命名为支持定理或不透明支持逃逸。"
+    },
+    "public_premise_check": {
+      "status": "fail",
+      "acceptable_premises": [
+        {
+          "premise": "hVn : ∀ n, Measurable (Vn n)",
+          "reason": "对应教材中 Vn 为随机向量。"
+        },
+        {
+          "premise": "hV : Measurable V",
+          "reason": "对应教材中 V 为随机向量。"
+        },
+        {
+          "premise": "hVSmeas 与 hVSone",
+          "reason": "把教材的事件 P(V∈S)=1 明确展开为事件可测且测度为一。"
+        }
+      ],
+      "unacceptable_premises": [
+        {
+          "premise": "hf : Measurable f",
+          "location": "ProbabilityTheory/chapter_10/thm_10_11.lean 中 vectorContinuousMapping_inProbability、thm_10_11_ae 和 thm_10_11",
+          "reason": "这是教材和任务书未给出的全局条件，也未从已有条件推出。它是依概率证明及复合输出可测性的关键输入，因此构成实质性的公开前提迁移。"
+        }
+      ],
+      "direct_composite_premise_escape": false
+    },
+    "support_files_checked": {
+      "candidate_files": [
+        "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+        "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean"
+      ],
+      "source_and_contract": [
+        "/endpoint/input/source/SOURCE.tex",
+        "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+        "/endpoint/input/task_contract/TASK.zh-CN.md"
+      ],
+      "upstream_files": [
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+        "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean"
+      ],
+      "tool_fact": [
+        "/endpoint/input/tool_fact/technical-validation.json"
+      ],
+      "additional_candidate_support_files": []
+    },
+    "findings": [
+      {
+        "id": "F1",
+        "severity": "blocking",
+        "category": "public_premise_migration",
+        "target": "thm_10_11",
+        "finding": "公开声明增加 hf : Measurable f，并以此证明复合可测性及依概率连续映射结论。该条件既不在 SOURCE.tex 的定理中，也不在 TASK.zh-CN.md 的条件中，且未由局部连续性和满测集条件推出。",
+        "impact": "候选只证明了一个适用范围更窄的修正版，没有共同确认完整教材定理。",
+        "evidence": "thm_10_11_ae 与 thm_10_11 的参数列表均含 hf；证明中的 hf.comp 和 vectorContinuousMapping_inProbability 对其有实质依赖。"
+      },
+      {
+        "id": "F2",
+        "severity": "info",
+        "category": "mathematical_correctness",
+        "target": "thm_10_10",
+        "finding": "两种收敛的逐坐标等价、双向范数控制、满测集交和有限并集界均得到实际证明。",
+        "impact": "第一项数学任务完整闭合。"
+      },
+      {
+        "id": "F3",
+        "severity": "info",
+        "category": "proof_integrity",
+        "target": "candidate_bundle",
+        "finding": "未发现 sorry、admit、新公理、以复合结论作为前提、私有不透明支持或其他证明逃逸；中性扫描结果亦为通过。",
+        "impact": "失败仅来自公开陈述强度，而不是候选证明在其自身前提下失效。"
+      }
+    ],
+    "technical_evidence_scope": {
+      "source": "/endpoint/input/tool_fact/technical-validation.json",
+      "technical_status": "pass",
+      "build_exit_code": 0,
+      "axiom_audit_exit_code": 0,
+      "escape_scan_exit_code": 0,
+      "candidate_source_sha256": {
+        "ProbabilityTheory/chapter_10/thm_10_10.lean": "d12af203caf856906c015e843b85e70f366ad2da77ff23d1d02c065652a1ad5d",
+        "ProbabilityTheory/chapter_10/thm_10_11.lean": "f1a601112d2998aaf91738bedf21f53c1e180d74448a4d9d89a93a52eb6ca95b"
+      },
+      "interpretation": "这些事实只确认冻结候选能够构建、未检出新增公理或扫描定义的逃逸模式；它们不证明公开陈述忠实于教材，也不能消除 hf 所造成的前提加强。"
+    },
+    "unresolved": [],
+    "summary": "thm_10_10 完整且忠实，thm_10_11 在额外假设 f 全局可测时给出了严谨的几乎处处和依概率连续映射证明，并实际推出复合可测性。然而 hf : Measurable f 不属于冻结教材与任务书条件，也未在正文中推出，实质缩小了公开定理的适用范围。由于 verdict 针对整束任务，完整候选不能判为共同完成。"
+  },
+  "processing_state": "ready",
+  "issues": [],
+  "repairs": [
+    {
+      "kind": "optional_confidence",
+      "original": {
+        "score": 0.97,
+        "level": "high",
+        "rationale": "技术验证通过，且两份候选源码及全部指定上游文件均已完整核验；失败原因是公开定理 thm_10_11 增加了无法由教材条件推出的全局可测性前提 hf，因而没有证明原公开陈述的强度。"
+      },
+      "normalized": 0.97,
+      "note": "Unavailable numerical confidence is null and never a mathematical verdict."
+    }
+  ],
+  "evidence_checks": [],
+  "semantics_preserved": true
+}

@@ -1,0 +1,175 @@
+[original lines 1-174]
+FRAME = AUDIT.parents[1]
+ROUND = AUDIT / 'continuation/round3'
+SEED = 'astra-cross-evaluation-prototype-20260906-task-isolation-v1'
+DEVELOPMENT = {
+    'thm_14_3': 'existing_development_explicit_no_review',
+    'def_12_1': 'existing_development_partial_progress',
+    'thm_14_7': 'existing_development_partial_progress',
+    'thm_14_8': 'existing_development_completion_target_change',
+    'prob_5_6': 'existing_development_requirement_interface_change',
+    'def_10_5': 'existing_development_explicit_response',
+}
+QUOTAS = {'definition_example|recorded_change': 2,
+          'definition_example|no_recorded_change': 2,
+          'theorem_problem|recorded_change': 2,
+          'theorem_problem|no_recorded_change': 2}
+
+
+def sha(data):
+    return hashlib.sha256(data).hexdigest()
+
+
+def digest(obj):
+    return sha(json.dumps(obj, ensure_ascii=False, sort_keys=True,
+                          separators=(',', ':')).encode('utf-8'))
+
+
+def read_jsonl(path):
+    return [json.loads(line) for line in path.read_text(encoding='utf-8').split('\n') if line.strip()]
+
+
+def write_json(path, obj):
+    path = path.resolve()
+    if not path.is_relative_to(HERE):
+        raise ValueError('Refusing write outside new data_selection directory')
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+def metadata():
+    edges = read_jsonl(ROUND / 'edge_view.jsonl')
+    events = {r['review_event_id']: r for r in read_jsonl(ROUND / 'review_events.jsonl')}
+    annotations = read_jsonl(ROUND / 'case_annotations.jsonl')
+    return edges, events, annotations
+
+
+def rank(kind, identifier):
+    return sha(f'{SEED}|{kind}|{identifier}'.encode('utf-8'))
+
+
+def freeze():
+    if (HERE / 'selection.json').exists():
+        raise SystemExit('selection.json already exists; frozen IDs will not be overwritten')
+    edges, events, annotations = metadata()
+    by_pair = {e['raw_pair_id']: e for e in edges}
+    sources = {}
+    exclusions = collections.defaultdict(list)
+
+    def register(path):
+        sources[str(path)] = {'sha256': sha(path.read_bytes()), 'bytes': path.stat().st_size}
+
+    def exclude(task, reason, path, row):
+        exclusions[task].append({'reason': reason, 'source_path': str(path), 'row_or_id': row})
+
+    for name in ('edge_view.jsonl', 'review_events.jsonl', 'case_annotations.jsonl'):
+        register(ROUND / name)
+    for a in annotations:
+        exclude(by_pair[a['raw_pair_id']]['task_id'], 'continuation_existing_14_development_edges',
+                ROUND / 'case_annotations.jsonl', a['annotation_id'])
+    pipeline = AUDIT / 'attachments/pipeline_cases.json'
+    register(pipeline)
+    for case in json.loads(pipeline.read_text(encoding='utf-8'))['cases']:
+        exclude(case['transition']['task_id'], 'prior_audit_explicit_case_reading', pipeline, case['case'])
+    ledger = FRAME / 'stage5_review_content/execution_v1/results/pair_semantic_ledger.csv'
+    register(ledger)
+    with ledger.open(encoding='utf-8-sig', newline='') as f:
+        for rownum, row in enumerate(csv.DictReader(f), 2):
+            if row['encoding_method'] == 'manual_semantic_review_of_registered_structured_content':
+                exclude(row['task_id'], 'stage5_29_explicit_manual_cases', ledger, rownum)
+    for v in (1, 2):
+        path = FRAME / f'stage6_repair_trajectory/execution_v{v}/results/astra_blind_package_v{v}/stage6_finding_alignment_blind_cases.csv'
+        register(path)
+        with path.open(encoding='utf-8-sig', newline='') as f:
+            for row in csv.DictReader(f):
+                exclude(row['task_id'], 'conservative_exclusion_prior_case_review_package_not_proof_each_was_read',
+                        path, row['blind_case_id'])
+    # First choose one representative edge per eligible task using metadata only.
+    # This makes strata task-disjoint even when a task has several edge types.
+    by_task = collections.defaultdict(list)
+    for e in edges:
+        if e['task_id'] not in exclusions:
+            by_task[e['task_id']].append(e)
+    population = []
+    for task, task_edges in sorted(by_task.items()):
+        e = min(task_edges, key=lambda x: (rank('edge', x['raw_pair_id']), x['raw_pair_id']))
+        prefix = task.split('_', 1)[0]
+        family = ('definition_example' if prefix in ('def', 'ex') else
+                  'theorem_problem' if prefix in ('thm', 'prob') else 'other')
+        comparisons = {k: e[k] for k in ('task_content_comparison', 'spine_contract_comparison')}
+        change = 'recorded_change' if 'different_recorded_value' in comparisons.values() else 'no_recorded_change'
+        population.append({'task_id': task, 'raw_pair_id': e['raw_pair_id'],
+                           'stratum': f'{family}|{change}', 'task_rank_sha256': rank('task', task),
+                           'edge_rank_sha256': rank('edge', e['raw_pair_id']),
+                           'eligible_task_edge_count': len(task_edges), 'comparisons': comparisons})
+    heldout = []
+    strata = {}
+    for group, quota in QUOTAS.items():
+        ordered = sorted((p for p in population if p['stratum'] == group),
+                         key=lambda x: (x['task_rank_sha256'], x['task_id']))
+        strata[group] = {'planned_quota': quota, 'eligible_tasks': len(ordered),
+                         'selected_tasks': min(quota, len(ordered))}
+        heldout.extend(ordered[:quota])
+    dev = []
+    annotated_pairs = {a['raw_pair_id'] for a in annotations}
+    for task, reason in DEVELOPMENT.items():
+        options = [by_pair[p] for p in annotated_pairs if by_pair[p]['task_id'] == task]
+        if len(options) != 1:
+            raise ValueError(f'Expected one annotated edge for development task {task}, got {len(options)}')
+        dev.append({'task_id': task, 'raw_pair_id': options[0]['raw_pair_id'], 'selection_reason': reason})
+
+    selected = []
+    # Only hash bytes here; selected raw input JSON is not parsed until package().
+    for split, rows in (('development', dev), ('task_isolated_holdout', heldout)):
+        for row in rows:
+            e = by_pair[row['raw_pair_id']]
+            result = dict(row, split=split, adjacent_transition_id=e['adjacent_transition_id'], endpoints={})
+            for side in ('from', 'to'):
+                ev = events[e[side + '_review_event_id']]
+                ip = Path(ev['input_snapshot'])
+                try:
+                    data = ip.read_bytes()
+                    actual = sha(data)
+                    state = 'sha_matches_expected' if actual == ev['input_expected_sha256'] else 'sha_mismatch'
+                except OSError as err:
+                    actual, state = None, f'read_error:{type(err).__name__}'
+                result['endpoints'][side] = {
+                    'review_event_id': ev['review_event_id'], 'input_snapshot': str(ip),
+                    'input_expected_sha256': ev['input_expected_sha256'],
+                    'input_frozen_actual_sha256': actual, 'freeze_state': state,
+                    'registered_candidate_sha256': ev['candidate_sha256']}
+            selected.append(result)
+    assert len({s['task_id'] for s in selected}) == len(selected)
+    assert not ({s['task_id'] for s in heldout} & set(exclusions))
+    frozen = {
+        'schema_version': 1, 'frozen_at_utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        'selection_method': 'predeclared_metadata_strata_then_stable_sha256_task_selection',
+        'seed': SEED, 'units': 'one preselected candidate-repair edge per task',
+        'not_gold_standard': True,
+        'isolation_limit': 'Excluded documented prior case tasks; no proof of never-seen across all history, model training, or undocumented human/agent review.',
+        'selection_inputs_used': ['task_id', 'raw_pair_id', 'task_content_comparison', 'spine_contract_comparison',
+                                  'prior exposure identifiers', 'input snapshot path and registered hashes'],
+        'selection_inputs_not_used': ['recorded verdict', 'finding meaning', 'candidate code content',
+                                      'successful execution', 'apparent quality improvement'],
+        'rule_order': ['exclude whole tasks', 'select minimum seeded edge hash per task',
+                       'assign 2x2 metadata strata', 'take two smallest seeded task hashes per stratum',
+                       'freeze event/input/candidate identities and byte hashes', 'only then parse selected raw inputs'],
+        'stratum_semantics': 'recorded_change means a recorded task/content or spine field differs; no_recorded_change includes noncomparable fields and does not prove identical historical requirements.',
+        'failure_policy': 'Retain selected missing, malformed, mismatched, or inapplicable inputs; never replace based on restoration or evaluation results.',
+        'strata': strata, 'source_files': sources,
+        'excluded_tasks': dict(sorted(exclusions.items())),
+        'eligible_task_metadata': population, 'selected': selected}
+    frozen['selection_content_sha256'] = digest(frozen)
+    write_json(HERE / 'selection.json', frozen)
+    print(json.dumps({'selection_path': str(HERE / 'selection.json'), 'content_sha256': frozen['selection_content_sha256'],
+                      'excluded_task_count': len(exclusions), 'eligible_task_count': len(population),
+                      'strata': strata, 'selected': [{k: s[k] for k in ('split', 'task_id', 'raw_pair_id')} for s in selected]},
+                     ensure_ascii=False, indent=2))
+
+
+def pointer(obj, path):
+    current = obj
+    try:
+        for part in path.strip('/').split('/'):
+            key = part.replace('~1', '/').replace('~0', '~')
+            current = current[int(key)] if isinstance(current, list) else current[key]

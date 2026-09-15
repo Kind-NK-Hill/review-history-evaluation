@@ -1,0 +1,25 @@
+{
+  "epoch": 1789160951.5379758,
+  "A_repair_external_endpoint_reviewer_1": {
+    "path": "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\results\\reviewer-1.json",
+    "sha256": "3b32d46275ef498a3f1a55ab2cf4739ef74aaaf2e96c273b746086e544946d3d",
+    "completed_at_utc": "2026-09-11T09:05:49.116756+00:00",
+    "confidence": 0.98,
+    "exact_public_premise_assessment": "候选没有把复合收敛或复合可测性直接增加为公开前提，输入可测性、逐点连续性和极限落入 S 的概率为一均符合题意。然而问题并非增加前提，而是公开结论未要求复合输出可测，从而迁弱了目标。仅凭 f 在 S 中各点连续且 V 几乎处处落入 S，也不能一般推出每个 f ∘ Vn 在 Vn 可于 S 外取值时可测；候选既未补充足以推出该性质的合法路线，也未把该义务纳入结论。",
+    "recognizes_original_conditions_insufficient": true
+  },
+  "A_internal_first_identification": "not investigated; unknown",
+  "C_contribution": "Delivered explicit correction and kept almost-sure numerical core without Measurable f; not claimed first discovery across project.",
+  "B_followup_source": {
+    "path": "ROOT/reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\followup_textbook_20260912\\B_FAILURE_REVIEW.zh-CN.md",
+    "sha256": "47b49d8d1601f3e8a24a9e83e9be1afb1ba16005b45f92ac7eac9f5b8e34fdb9",
+    "nature": "Integrator read-only evidence analysis; not a new valid endpoint/model re-evaluation."
+  },
+  "B_consistency": {
+    "L7": "Same reasonable global-measurability correction standard applies to B/C. B support theorems deliver composition measurability. B additionally requires MeasurableSet S; C only preimage event measurability or ae membership.",
+    "H1": "Book table 9.1 describes zero-center arbitrary scale, supporting B covered textbook context; missing arbitrary location remains separate Family limitation, not uniquely mandated original reading. r1 format unresolved preserved.",
+    "L3": "All-term integrability and absent general eventual-tail wrapper are real scope/interface gap. Already proved results are not thereby mathematically false. r1 format unresolved preserved."
+  },
+  "new_B_model_calls": 0,
+  "no_historical_label_overwrite": true
+}

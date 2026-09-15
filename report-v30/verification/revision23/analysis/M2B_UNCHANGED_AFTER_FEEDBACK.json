@@ -1,0 +1,15 @@
+{
+  "before_manifest": "review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\help\\6980e974-1596-49aa-9923-2aa89a9cd5bb\\before-manifest.json",
+  "files": [
+    {
+      "source_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_7.lean",
+      "before_sha256": "c47ddfe66fd7a2ce2c2a2d14025b081fb11cdf4733de083483a67c1d2ffc6dea",
+      "final_sha256": "c47ddfe66fd7a2ce2c2a2d14025b081fb11cdf4733de083483a67c1d2ffc6dea"
+    },
+    {
+      "source_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_7_support.lean",
+      "before_sha256": "0d7bbd161ac5e601b9127ca0738752ecb8eace4b2f262126a386e1545dec58bd",
+      "final_sha256": "0d7bbd161ac5e601b9127ca0738752ecb8eace4b2f262126a386e1545dec58bd"
+    }
+  ]
+}

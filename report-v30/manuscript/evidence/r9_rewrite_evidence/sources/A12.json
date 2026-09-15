@@ -1,0 +1,13 @@
+{
+  "epoch": 1789149911.8834066,
+  "status": "additional_evidence_scope_registered_after_six_initial_reviews_before_unique_adjudications",
+  "trigger": "Initial reviews inconsistently equate delivery with Lean source completeness, or infer missing final explanation from an endpoint subject that omitted original non-Lean delivery artifacts. B D1 differs; A has invalid quote and delivery disagreement; C uses source completeness only. Symmetric adjudication is required.",
+  "original_rule": "最终说明须列出全部目标/支持文件、公开声明与前提，并把任务书每项义务绑定到实际证明。",
+  "uniform_application": "Evaluate original delivered explanation across preserved final message, native neutral submission manifest, original delivered documentation and explicit source documentation. Missing from the anonymized endpoint view does not prove absent from the solver delivery. Do not require a new centralized filename or the later 12-row evaluator decomposition: original TASK has five targets and its stated sub-obligations.",
+  "separation": "Report source-code completeness and explanatory-delivery completeness separately within dimensions.delivery, with reasons and evidence. Mathematical correctness under stated premises does not fail solely because explanation is absent. Overall composition retains the original delivery dimension, with uncertainty explicit.",
+  "no_changed_solver_artifacts": true,
+  "old_initial_views_unchanged": true,
+  "not_original_preregistration": true,
+  "max_adjudications_per_candidate": 1,
+  "new_solver_trials": 0
+}

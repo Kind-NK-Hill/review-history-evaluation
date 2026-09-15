@@ -1,0 +1,14 @@
+{
+  "reconstruction_events": [
+    "E462",
+    "E463",
+    "E464",
+    "E465",
+    "E466"
+  ],
+  "prefix_identical_to_final": true,
+  "reconstructed_source_sha256": "df91b3a17d3157e82ed6671ed569ea8997f8c6df16c434ed5d049a36fae3d5a5",
+  "only_pre_review_helpers_copied": true,
+  "final_uniqueness_imported": false,
+  "caller_sha256": "7bcb306051de9961270ab866ceed6411204d3090f7ec88c6411c62409224aaaa"
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "c-pilot-final.v1",
+  "terminal": {
+    "kind": "explicit_submit",
+    "candidate_id": "c1",
+    "stop_reason": "believes_complete",
+    "unresolved": [
+      "未发现待完成的数学义务；但独立题意审核和数学咨询均因工具容器 openat 报只读文件系统错误而未完成，不能声称独立验收已通过。固定构建 build-2 已通过目标模块和总入口编译。"
+    ],
+    "submitted_epoch": 1789086250.1128874,
+    "elapsed_seconds": 941.1911261081696,
+    "deadline": {
+      "allowance_seconds": 5400.0,
+      "started_epoch": 1789085308.9217613,
+      "deadline_epoch": 1789090708.9217613,
+      "remaining_seconds": 4458.80887389183
+    },
+    "run_ended": true
+  },
+  "deadline": {
+    "allowance_seconds": 5400.0,
+    "started_epoch": 1789085308.9217613,
+    "deadline_epoch": 1789090708.9217613,
+    "remaining_seconds": 4444.580064058304
+  },
+  "coordinator_dispatch": "8124accb-668d-499a-800f-6dcf2d1aad02",
+  "coordinator_sessions": [
+    "01a08dcb-58d5-7fa0-8128-16aa4885c0df"
+  ],
+  "coordinator_error": null,
+  "all_role_usage": [
+    {
+      "role": "coordinator",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 961717,
+          "cached_input_tokens": 918912,
+          "output_tokens": 3528
+        }
+      ],
+      "dispatch_id": "8124accb-668d-499a-800f-6dcf2d1aad02",
+      "parent_dispatch_id": null,
+      "receipt": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\c-pilot-r1\\prob_13_9\\actors\\coordinator-001\\actor-receipt.json"
+    },
+    {
+      "role": "math_checker",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 118651,
+          "cached_input_tokens": 94336,
+          "output_tokens": 3285
+        }
+      ],
+      "dispatch_id": "ebac7251-a39a-4e7c-9aa2-6123ea2ab75f",
+      "parent_dispatch_id": "8124accb-668d-499a-800f-6dcf2d1aad02",
+      "receipt": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\c-pilot-r1\\prob_13_9\\actors\\math_checker-002\\actor-receipt.json"
+    },
+    {
+      "role": "reviewer",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 174527,
+          "cached_input_tokens": 142720,
+          "output_tokens": 4437
+        }
+      ],
+      "dispatch_id": "52a6f5bd-5949-4ebd-9412-4eace0205a4b",
+      "parent_dispatch_id": "8124accb-668d-499a-800f-6dcf2d1aad02",
+      "receipt": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\c-pilot-r1\\prob_13_9\\actors\\reviewer-002\\actor-receipt.json"
+    },
+    {
+      "role": "writer",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 1632933,
+          "cached_input_tokens": 1542272,
+          "output_tokens": 24452
+        }
+      ],
+      "dispatch_id": "df58d2ac-c8cb-4eee-8a40-1a87e5127a77",
+      "parent_dispatch_id": "8124accb-668d-499a-800f-6dcf2d1aad02",
+      "receipt": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\c-pilot-r1\\prob_13_9\\actors\\writer-001\\actor-receipt.json"
+    }
+  ],
+  "state_sha256": "405309ccee6e2dc884ff803f41ea3b4694583fbe3e77e1120edc6241632dfc2f"
+}

@@ -1,0 +1,311 @@
+{
+  "schema_version": "phase2.semantic_review.result.v8",
+  "task_id": "thm_9_6",
+  "mode": "review-pack",
+  "attempt": 1,
+  "prompt_version": 11,
+  "rubric_version": 9,
+  "review_input_hash": "cc337d949b1c399be7ea01c57f210d2811a29ec64e1251876e76186612de4555",
+  "review_input_file": "/work/artifacts/phase2_prompt_packs/thm_9_6/semantic_review_input_v1.json",
+  "review_prompt_file": "/work/artifacts/phase2_prompt_packs/thm_9_6/semantic_review_prompt_v1.md",
+  "review_context_file": "/work/artifacts/phase2_prompt_packs/thm_9_6/semantic_review_context_v1.md",
+  "expected_result_file": "/work/artifacts/phase2_prompt_packs/thm_9_6/semantic_review_result_v1.json",
+  "candidate_hash": "9a254ab90956c342f6ebfaa54f38b8b05def0bbe1a95f1ce0a16ee30e013dc2e",
+  "verdict": "pass",
+  "confidence": "high",
+  "summary": "候选定理以概率测度的等分布表述忠实实现特征函数唯一性。证明没有调用 Measure.ext_of_charFun，而是先排除两测度的可数原子集并选取共同无原子的稠密端点集，再分别调用 thm_9_5，由相同特征函数和极限唯一性得到这些端点间开区间的测度相等；随后显式证明这些区间构成生成实数 Borel σ-代数的 π 系，最后通过 thm_3_9 将分布函数值的相等提升为测度相等。公共声明没有额外定理级假设，候选及允许依赖中未发现 sorry、admit、自定义 axiom、opaque 或占位实现。",
+  "proof_class": "source_route_theorem",
+  "completion_class": "source_route_proof_completed",
+  "reviewer_independence": {
+    "role": "independent_read_only_reviewer",
+    "read_only": true,
+    "did_edit_candidate": false,
+    "used_current_review_request": true,
+    "attestation": "本次审核独立进行，仅只读检查当前请求绑定的候选、上下文和允许依赖，未编辑任何文件。"
+  },
+  "source_claims": [
+    "两个实值随机变量的特征函数处处相等时，它们具有相同分布。",
+    "两个分布的共同连续端点可从各自至多可数的不连续点之外的稠密集合中选取。",
+    "在共同连续端点 a<b 上，反演公式和特征函数相等推出开区间 (a,b) 的概率相等。",
+    "由稠密端点形成的开区间 π 系生成实数上的 Borel σ-代数。",
+    "在生成类上相等的概率测度具有相同分布函数，并由 thm_3_9 得到测度相等。"
+  ],
+  "claim_mapping": [
+    {
+      "source_claim": "特征函数唯一确定分布",
+      "lean_declaration": "thm_9_6",
+      "assumptions": "μ ν : Measure ℝ，IsProbabilityMeasure μ，IsProbabilityMeasure ν，以及 hφ : characteristicFunction μ = characteristicFunction ν",
+      "conclusion": "μ = ν",
+      "assessment": "passed；这是教材随机变量结论的等价测度级公共接口，def_9_3 中 characteristicFunction_map_apply 提供随机变量推前分布到该接口的桥接。"
+    },
+    {
+      "source_claim": "存在共同无原子的稠密端点集",
+      "lean_declaration": "thm_9_6 内的 Aμ、Aν、G、hG_dense 和 D",
+      "assumptions": "μ、ν 为概率测度，因而是有限测度",
+      "conclusion": "D ⊆ (Aμ ∪ Aν)ᶜ 且 Dense D",
+      "assessment": "passed；Measure.countable_meas_level_set_pos 证明原子集可数，Countable.dense_compl 与 Dense.exists_countable_dense_subset 构造共同稠密端点集。"
+    },
+    {
+      "source_claim": "共同无原子端点间的开区间概率相等",
+      "lean_declaration": "thm_9_6 内的 h_interval",
+      "assumptions": "a,b ∈ D，a<b，以及 hφ",
+      "conclusion": "μ (Ioo a b) = ν (Ioo a b)",
+      "assessment": "passed；对 μ、ν 分别调用 thm_9_5，以 hφ 对齐反演积分，再由 tendsto_nhds_unique 和端点单点质量为零消去半原子项。"
+    },
+    {
+      "source_claim": "稠密端点开区间构成生成 Borel σ-代数的 π 系",
+      "lean_declaration": "thm_9_6 内的 C、hC_basis、hC_pi 和 h_on_C",
+      "assumptions": "Dense D",
+      "conclusion": "C 是拓扑基和 π 系，generateFrom C = borel ℝ，且 μ、ν 在 C 上相等",
+      "assessment": "passed；拓扑基由稠密性直接构造，π 系性质由 isPiSystem_Ioo_mem 给出，Borel 生成性由 hC_basis.borel_eq_generateFrom 给出。"
+    },
+    {
+      "source_claim": "由生成类相等得到相同分布",
+      "lean_declaration": "thm_9_6 末段对 MeasureTheory.ext_on_measurableSpace_of_generate_finite 和 thm_3_9 的调用",
+      "assumptions": "概率测度在 C 上相等，C 生成 borel ℝ",
+      "conclusion": "∀x, μ (Iic x) = ν (Iic x)，继而 μ = ν",
+      "assessment": "passed；生成 π 系唯一性先得到每个 Iic 的相等，随后明确通过 thm_3_9 完成最终唯一性。"
+    }
+  ],
+  "route_inspection": {
+    "status": "covered",
+    "source_route": "可数原子集的共同补集 → 共同无原子稠密端点集 D → thm_9_5 比较 D 端点开区间 → 构造开区间 Borel 生成 π 系 C → 生成类唯一性得到 Iic 相等 → thm_3_9 得到 μ=ν。",
+    "expected_answer_or_statement": "对实数上的两个概率分布 μ、ν，若 characteristicFunction μ = characteristicFunction ν，则 μ = ν；该测度级结论等价于教材中随机变量具有相同分布的结论。",
+    "local_mathlib_search": "只读检索确认 Mathlib 确有 Measure.ext_of_charFun，但候选及三个允许依赖均未引用它。候选实际使用 countable_meas_level_set_pos、exists_countable_dense_subset、isPiSystem_Ioo_mem 和 ext_on_measurableSpace_of_generate_finite 来承载教材各步骤。",
+    "public_interface_check": "公共声明仅要求 μ、ν 为概率测度及其特征函数相等；概率测度条件对应教材中的分布对象，hφ 正是教材前提。证明所需的无原子端点、稠密集、区间相等及生成性质全部在定理体内推导，没有迁移为公共前提。",
+    "support_or_reassembly_decision": "候选本身完整落地源证明路线，无需支持定理重组或路线重设计。",
+    "stop_go_verdict": "go",
+    "notes": "采用的 Mathlib 引理只压缩标准拓扑和测度唯一性细节；核心反演比较明确经过 thm_9_5，最终唯一性明确经过 thm_3_9，不是特征函数唯一性黑箱捷径。"
+  },
+  "spine_alignment": {
+    "status": "covered",
+    "summary": "教材证明的四个核心阶段均有可定位且透明的 Lean 落点：共同连续端点、反演公式比较区间、Borel 生成 π 系、由分布函数唯一性完成测度相等。",
+    "source_steps_checked": [
+      {
+        "source_step": "排除两个分布至多可数的不连续点并选取共同稠密端点。",
+        "lean_landing": "局部推导 hAμ、hAν、hG_dense，以及 hG_dense.exists_countable_dense_subset 得到 D",
+        "landing_kind": "lemma",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "源路线定理/引理；以原子点刻画分布函数的不连续端点，所有性质均由有限测度和拓扑引理在证明体内推出。"
+      },
+      {
+        "source_step": "利用反演公式和相等的特征函数证明共同连续端点间的开区间概率相等。",
+        "lean_landing": "局部结论 h_interval，其中 hμ := thm_9_5 μ hab、hν := thm_9_5 ν hab，并由 tendsto_nhds_unique 得到 hlim",
+        "landing_kind": "theorem",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "源路线定理；两次直接使用 thm_9_5，hφ 只改写积分中的特征函数，端点零质量来自 D⊆G，并非重新假设区间相等。"
+      },
+      {
+        "source_step": "由稠密端点开区间构造生成 Borel σ-代数的 π 系。",
+        "lean_landing": "局部定义 C 及证明 hC_basis、hC_pi、h_on_C",
+        "landing_kind": "lemma",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "Mathlib 支持的源路线落点；hC_basis 从 D 的稠密性显式构造，hC_pi 使用通用的 isPiSystem_Ioo_mem，未隐藏任务专用适配器。"
+      },
+      {
+        "source_step": "从生成类上的测度相等得到分布函数相等，再用 Theorem 3.9 完成唯一性。",
+        "lean_landing": "apply thm_3_9 μ ν；对每个 x 使用 MeasureTheory.ext_on_measurableSpace_of_generate_finite 证明 μ (Iic x)=ν (Iic x)",
+        "landing_kind": "theorem",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "源路线定理；通用生成 π 系引理实现教材的 Borel 唯一性步骤，thm_3_9 随后按教材引用完成最终 μ=ν。"
+      }
+    ],
+    "missing_source_steps": [],
+    "shortcut_assessment": "未发现适配器式捷径。特别是候选没有使用 Measure.ext_of_charFun；特征函数相等必须经过 thm_9_5、共同无原子稠密端点和 Borel 生成 π 系后才得到最终测度相等。"
+  },
+  "evidence_review": {
+    "status": "covered",
+    "summary": "任务源、绑定候选、允许依赖、构建结果、哈希、账本状态和下游存根均已只读核验；缺失的历史审核与分类记录不被当作完成依据。",
+    "items": [
+      {
+        "evidence_class": "source_tex",
+        "status": "covered",
+        "evidence": "审核上下文给出完整教材定理和证明；候选的结论及证明顺序与其中的反演公式、稠密连续端点、Borel 生成类和 thm_3_9 唯一性步骤一致。"
+      },
+      {
+        "evidence_class": "lean_subject",
+        "status": "covered",
+        "evidence": "直接读取 candidate_v2.lean；其唯一公共任务声明为 thm_9_6，定理体完整，未发现 Measure.ext_of_charFun、sorry、admit、自定义 axiom、opaque 或占位符。绑定构建记录显示代码有效且完整，临时和最终构建均成功。"
+      },
+      {
+        "evidence_class": "audit",
+        "status": "not_applicable",
+        "evidence": "review_basis 明确记录 latest_audit_result_file 为空且 success 为 null；没有可用历史审核结果，因此未以缺失审核决定结论，而是直接审核当前绑定候选和依赖。"
+      },
+      {
+        "evidence_class": "classification",
+        "status": "not_applicable",
+        "evidence": "classification_history 的文件、版本和条目均为空；本次 proof_class 与 completion_class 依据当前源码路线和任务级允许前缀独立判定。"
+      },
+      {
+        "evidence_class": "dependency_status",
+        "status": "covered",
+        "evidence": "直接读取 def_9_3、thm_9_5、thm_3_9；文件哈希分别与输入记录 f8adc172…、70c37e83…、a3e07073…一致。thm_9_5 的主体确实给出反演极限，thm_3_9 的公共前提是所有 Iic 测度相等。def_9_3 和 thm_3_9 的账本项缺失仅是元数据缺口，实际依赖文件存在且无占位。"
+      },
+      {
+        "evidence_class": "downstream",
+        "status": "covered",
+        "evidence": "直接下游 prob_9_6 和 prob_9_8 的官方文件目前均为空白实验目标存根，未形成可执行调用约束。候选导出的通用概率律唯一性定理不引入源外前提，可供后续任务直接复用。"
+      },
+      {
+        "evidence_class": "ledger_status",
+        "status": "covered",
+        "evidence": "任务和输出所有者状态均为 PACKED，最新 build-ready 候选哈希与本次候选一致；PACKED 是审核前状态而非语义完成证据，未被错误用作通过依据。"
+      },
+      {
+        "evidence_class": "hashes",
+        "status": "covered",
+        "evidence": "原请求文件实测 SHA-256 为 05517f3c3ab8213dffb671a9627c26ecab988472c3a8594aa2265add52c355ea；其中绑定的 review_input_hash 为 cc337d949b1c399be7ea01c57f210d2811a29ec64e1251876e76186612de4555。candidate_v2.lean 实测 SHA-256 为 9a254ab9…，与请求、输入、构建结果和模板绑定值一致；build_result_v2.json 实测哈希为 2e551004…，与输入记录一致；依赖和上下文哈希也与记录一致。"
+      }
+    ],
+    "blocking_issues": []
+  },
+  "interface_contract": {
+    "status": "covered",
+    "summary": "thm_9_6 是可复用的测度级唯一性公共定理。随机变量的同分布在 Lean 中由其推前概率测度相等表达，而 def_9_3 的 characteristicFunction_map_apply 提供随机变量到分布特征函数的桥接。声明未弱化结论，也未增加连续性、矩、密度、无原子性或区间相等等额外假设。",
+    "mismatches": []
+  },
+  "downstream_adequacy": {
+    "status": "covered",
+    "summary": "两个直接下游目前都是空白存根，因而没有现存调用冲突；候选的公共结论 μ=ν 是完整的分布相等接口，未来消费者无需新增源外定理级假设。",
+    "consumers_checked": [
+      {
+        "block_id": "prob_9_6",
+        "status": "not_applicable",
+        "evidence": "官方文件目前仅含空白实验目标注释，没有导入或定理调用可进一步核验；thm_9_6 的概率律等式接口本身完整且无额外前提。"
+      },
+      {
+        "block_id": "prob_9_8",
+        "status": "not_applicable",
+        "evidence": "官方文件目前仅含空白实验目标注释，没有导入或定理调用可进一步核验；候选结论可作为后续特征函数唯一性推理的直接公共依赖。"
+      }
+    ],
+    "blocking_issues": []
+  },
+  "forbidden_weakenings": [
+    {
+      "weakening": "禁止把教材中的公共接口偷换成纯存在性壳、占位定义或只记录 witness 的结构。",
+      "status": "not_present",
+      "evidence": "候选导出具体定理 thm_9_6，并直接证明 μ=ν；不存在存在性壳、记录结构或占位定义。"
+    },
+    {
+      "weakening": "禁止把应当供下游复用的 theorem 改写成只够当前文件自证的 theorem-specific wrapper。",
+      "status": "not_present",
+      "evidence": "thm_9_6 对任意实数概率测度 μ、ν 陈述，使用公开 characteristicFunction 接口并返回完整测度等式，具有通用下游复用性。"
+    },
+    {
+      "weakening": "禁止通过额外 theorem-level 假设来掩盖上游接口缺口，除非任务文本本身明确包含该假设。",
+      "status": "not_present",
+      "evidence": "唯一实质前提是两个概率律的特征函数相等；共同无原子端点、稠密性、区间相等和 Borel 生成性均在证明体内推出。"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "informational",
+      "finding": "候选采用教材源路线而非 Mathlib 的特征函数唯一性黑箱。",
+      "evidence": "候选及允许依赖中没有 Measure.ext_of_charFun 调用；核心链条可逐段定位到 thm_9_5、h_interval、hC_basis、hC_pi、ext_on_measurableSpace_of_generate_finite 和 thm_3_9。"
+    },
+    {
+      "severity": "informational",
+      "finding": "候选构建记录与当前文件绑定一致。",
+      "evidence": "候选哈希 9a254ab9… 与 build_result_v2.json 的 candidate_hash 一致，构建记录的 hard_checks、repl、temp_build 和 final_build 均成功且无诊断。"
+    }
+  ],
+  "recommended_disposition": "accept",
+  "reviewer_schema_hints": {
+    "completion_class_contract": {
+      "required_fields": [
+        "proof_class",
+        "completion_class"
+      ],
+      "must_be_non_empty": true,
+      "authority": "reviewer_classification_then_official_task_status_projection",
+      "task_role": "proof_bearing",
+      "clean_pass_prefixes": [
+        "textbook_proof_completed",
+        "textbook_problem_completed",
+        "textbook_exercise_completed",
+        "textbook_source_route_completed",
+        "source_route_proof_completed",
+        "source_faithful_proof_completed",
+        "normal_proof_source_route",
+        "source_route_theorem"
+      ],
+      "allowed_exception_classes": [],
+      "projection_rule": "For clean pass, both class fields must use a clean pass prefix allowed for the projected task role; task-specific allowed exceptions are non-clean."
+    },
+    "reviewer_independence_shape": {
+      "role": "independent_read_only_reviewer",
+      "read_only": true,
+      "did_edit_candidate": false,
+      "used_current_review_request": true,
+      "attestation": "<short statement that this was an independent read-only review>"
+    },
+    "section_status_values": [
+      "covered",
+      "partial",
+      "missing",
+      "violated",
+      "unclear"
+    ],
+    "route_inspection_fields": [
+      "source_route",
+      "expected_answer_or_statement",
+      "local_mathlib_search",
+      "public_interface_check",
+      "support_or_reassembly_decision",
+      "stop_go_verdict"
+    ],
+    "route_inspection_stop_go_values": [
+      "go",
+      "stop",
+      "needs_reassembly",
+      "needs_route_redesign",
+      "unclear",
+      "not_applicable"
+    ],
+    "source_step_entry_shape": {
+      "source_step": "<essential step from the source proof spine>",
+      "lean_landing": "<Lean theorem/lemma or transparent derivation discharging the source step>",
+      "landing_kind": "theorem | lemma | private_axiom | structure_field | support_predicate | support_constructor | adapter | public_premise | empty | unknown",
+      "signature_match": "unverified | passed | failed | not_applicable",
+      "body_reassumption_check": "unverified | passed | failed | not_applicable",
+      "public_premise_check": "unverified | passed | failed | not_applicable",
+      "notes": "<why this landing does or does not preserve the source proof step>"
+    },
+    "evidence_item_shape": {
+      "evidence_class": "source_tex | lean_subject | audit | classification | dependency_status | downstream | ledger_status | hashes",
+      "status": "covered | partial | missing | violated | unclear | not_applicable",
+      "evidence": "<what was checked and how conflicts/staleness were resolved>"
+    },
+    "required_evidence_classes": [
+      "source_tex",
+      "lean_subject",
+      "audit",
+      "classification",
+      "dependency_status",
+      "downstream",
+      "ledger_status",
+      "hashes"
+    ],
+    "downstream_consumer_entry_shape": {
+      "block_id": "<direct downstream block_id>",
+      "status": "covered | not_applicable | blocked",
+      "evidence": "<why this exported interface is adequate or not applicable>"
+    },
+    "forbidden_weakening_status_values": [
+      "not_present",
+      "present",
+      "not_applicable"
+    ],
+    "pass_review_apply_command": "formalize --phase 2 --phase2-mode review-apply --tasks <task_id> --review-result <semantic_review_result_vM.json>"
+  }
+}

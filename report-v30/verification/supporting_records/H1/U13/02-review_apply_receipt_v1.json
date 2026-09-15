@@ -1,0 +1,83 @@
+{
+  "applied_at": "2026-09-11T04:39:19.348411+00:00",
+  "attempt": 1,
+  "authority_scope": "phase2_review_apply",
+  "disposition": "codex_review_pass_promoted",
+  "final_build_success": true,
+  "profile": "mat",
+  "projected_subject": {
+    "bundle_hash": "c9dbaebe9ff99ddc5b87670777b78c950bcb53dc275674720464da13043fe3c2",
+    "files": [
+      {
+        "content_sha256": "89f4ccae402ffab1513fc2a990e1b31b24b7bf1fb55c04918c9c1a7e1ebeaa83",
+        "git_blob_sha": "68647d1a712131b90321e94382e9e7174c3fef30",
+        "path": "ProbabilityTheory/chapter_09/thm_9_4.lean",
+        "size": 2022
+      }
+    ],
+    "layout": "toy",
+    "primary_hash": "89f4ccae402ffab1513fc2a990e1b31b24b7bf1fb55c04918c9c1a7e1ebeaa83",
+    "primary_path": "ProbabilityTheory/chapter_09/thm_9_4.lean",
+    "schema": "toy-apollo.subject-bundle.v1",
+    "source_commit": "",
+    "source_repo": "formalization_engine",
+    "subject_id": "1eebbc18456fb3a8b0abf9fc81caa47090181163cfd415365435c6615184bd4a",
+    "subject_kind": "reviewed_output",
+    "task_id": "thm_9_4"
+  },
+  "projected_subject_id": "1eebbc18456fb3a8b0abf9fc81caa47090181163cfd415365435c6615184bd4a",
+  "receipt_id": "46255a1681a87d31695e9463caa1393e2854fead285590eb4faae9491971a7fd",
+  "review": {
+    "completion_class": "source_faithful_proof_completed",
+    "phase2_status": "pass",
+    "prompt_version": 11,
+    "proof_class": "source_route_theorem_interval_integral",
+    "reviewer_backend_id": "codex-handoff",
+    "reviewer_independence": {
+      "attestation": "本次审核为首次独立只读审核；未编写或修改候选及任何工作区文件，并使用了当前绑定请求。",
+      "did_edit_candidate": false,
+      "read_only": true,
+      "role": "independent_read_only_reviewer",
+      "used_current_review_request": true
+    },
+    "rubric_version": 9,
+    "verdict": "pass"
+  },
+  "review_basis_hash": "39a5aaa0db88bd87cfd33fe0f07d30ba52813f425396cde4a5895f17d600c3e4",
+  "review_id": "b43c1ca7cf4d07884cf55286f9c7262782367c8ff24a3e51b7fa3ee5503c8f8f",
+  "review_input_file": "/work/artifacts/phase2_prompt_packs/thm_9_4/semantic_review_input_v1.json",
+  "review_input_hash": "a9a7239d472a27fb6d3db451ebd779fc370889ec9cb901458003b84107cd01ec",
+  "review_result_file": "/work/artifacts/phase2_prompt_packs/thm_9_4/semantic_review_result_v1.json",
+  "review_result_hash": "62bc4aa2d4c938b70bba2ee936ebf0a8d38d4d00c5ae819bd3db45b3efa6a394",
+  "review_subject": {
+    "bundle_hash": "00eec6a1d8708e496599392c639a01799702b989afd1f47985e5b22433dea121",
+    "files": [
+      {
+        "content_sha256": "89f4ccae402ffab1513fc2a990e1b31b24b7bf1fb55c04918c9c1a7e1ebeaa83",
+        "git_blob_sha": "68647d1a712131b90321e94382e9e7174c3fef30",
+        "path": "/work/artifacts/phase2_prompt_packs/thm_9_4/candidate_v5.lean",
+        "size": 2022
+      }
+    ],
+    "layout": "review_candidate",
+    "primary_hash": "89f4ccae402ffab1513fc2a990e1b31b24b7bf1fb55c04918c9c1a7e1ebeaa83",
+    "primary_path": "/work/artifacts/phase2_prompt_packs/thm_9_4/candidate_v5.lean",
+    "schema": "toy-apollo.subject-bundle.v1",
+    "source_commit": "",
+    "source_repo": "formalization_engine",
+    "subject_id": "73bea789354c3beecbd6dc6ca3f31b2675fc6c7a39c18145e27e27d03e78affc",
+    "subject_kind": "review_bundle",
+    "task_id": "thm_9_4"
+  },
+  "review_subject_id": "73bea789354c3beecbd6dc6ca3f31b2675fc6c7a39c18145e27e27d03e78affc",
+  "reviewed_head_role": "toy_reviewed",
+  "schema_version": "toy-apollo.phase2-review-apply-receipt.v1",
+  "success": true,
+  "task_id": "thm_9_4",
+  "transformation": {
+    "build_status": "pass",
+    "kind": "review_apply_output_relocation",
+    "mechanical_status": "pass"
+  },
+  "transformation_id": "0b6b2317fadf7b13af637fe3bb6ab6ed09aa7556fd3aefb0de2975ff683a5798"
+}

@@ -1,0 +1,942 @@
+服务ID,配置及版本,root_ID,dispatch_ID,session_ID,角色,服务发生时间_UTC8,既有审计时间_UTC8,被检查候选,服务目的,原始反馈全文,既有审计结论,当时标准,后续G_S分标准结论,是否送达可读,实际全文暴露,父角色明确确认,是否采用或进入决策,是否修复对应数学义务,前后候选及变更证据,包内证据引用,仍未知
+episode-50194432-a91e-494c-9e66-d6b1e08c6812,A / A_original_development_r1,root-9b18654b-e41d-4ebb-b0cb-54e39bfcff94,50194432-a91e-494c-9e66-d6b1e08c6812,['01a08cef-ba58-72f2-a5c7-cfe10365b333'],general_reviewer,2026-09-11T04:08:35.972156+08:00,2026-09-11T21:54:27.798440+08:00,candidate-67c83c8b4bf7\subject\candidate\ProbabilityTheory\chapter_11\thm_11_4.lean,"# Semantic Review for thm_11_4
+
+- Mode: `review-pack`
+- Prompt version: `11`
+- Rubric version: `9`
+- Candidate: `/work/artifacts/phase2_prompt_packs/thm_11_4/candidate_v4.lean`
+- Review context file: `/work/artifacts/phase2_prompt_packs/thm_11_4/semantic_review_context_v1.md`
+
+## Reviewer Role Contract
+
+This prompt is for an independent read-only reviewer subagent or a configured external reviewer runner.
+If you authored or edited this candidate in the current repair attempt, do not fill the result; hand it to an independent reviewer.
+Do not edit Lean files, prompt-pack files, historical checklist artifacts, classification, or ledger state while reviewing.
+The result must include a `reviewer_independence` object attesting that the review was read-only and independent.
+
+## Textbook / Mathlib Bridge Policy
+
+Use the textbook-first, bridge-then-Mathlib policy for shared mathematical interfaces.
+Textbook fidelity does not forbid Mathlib. A reviewed equivalence bridge may use Mathlib infrastructure when it maps to a specific source proof step and is reusable beyond the current task.
+Reject adapter-only shortcut routes: if the candidate merely applies a stronger Mathlib theorem or task-shaped bridge without landing the source proof spine, the verdict must be fail or inconclusive for proof-bearing tasks.
+For theorem/problem/exercise tasks, `interface_bridge_completed` by itself is not a clean proof class; the review must classify the final task route as source-route proof completion if the bridge genuinely discharges source steps.
+
+## Task-Level Pass Class Contract
+
+- Projected task role: `proof_bearing`
+- Clean pass prefixes allowed for this role: `textbook_proof_completed, textbook_problem_completed, textbook_exercise_completed, textbook_source_route_completed, source_route_proof_completed, source_faithful_proof_completed, normal_proof_source_route, source_route_theorem`
+- Explicit allowed-exception classes for this task: `(none)`
+For a clean pass, both `proof_class` and `completion_class` must be non-empty and each must use a clean pass prefix allowed for this task role.
+An explicit allowed-exception class may be used only when it is listed for this exact task; it does not project to clean pass.
+Do not invent a completion class: an otherwise semantic `pass` with a class outside this contract will be rejected by `review-apply`.
+
+## Task Source
+
+Type: `Theorem_with_Proof`
+Source plan: `experiment_targets`
+
+### Title
+
+11.4
+
+### TeX / Plan Content
+
+\begin{thmbox}{11.4}
+\end{thmbox}
+
+IfX1,X 2,...,X n are pairwise uncorrelated, then
+
+Va r(X1 + X2 +\cdot\cdot\cdot+ Xn) =
+
+n\sum
+
+i=1
+
+Va r(Xi).
+
+\textit{Proof} Without loss of generality, suppose the random variables X1,...,X n have
+
+zero mean. (We can consider the centered random variable Yn = Xn - E[Xn]
+
+otherwise.)
+
+Using the definition of variance and the linearity of expectation, we have
+
+Va r(X1 + X2 +\cdot\cdot\cdot+ Xn) = E
+
+[
+
+X2
+
+1 + X2
+
+2 +\cdot\cdot\cdot+ X2
+
+n + 2
+
+\sum
+
+i<j
+
+XiXj
+
+]
+
+=
+
+n\sum
+
+i=1
+
+E[X2
+
+i ].
+
+The assumption of pairwise uncorrelatedness guarantees that the cross-terms
+
+E[XiXj ] are zero for i /=j Therefore, we have
+
+Va r(X1 + X2 +\cdot\cdot\cdot+ Xn) =
+
+n\sum
+
+i=1
+
+E[X2
+
+i ]=
+
+n\sum
+
+i=1
+
+Va r(Xi).
+
+\hfill $\square$
+
+We will present two versions of weak law of large numbers. The first one
+
+assumes that the random variables are pairwise uncorrelated with the same mean
+
+and variance. Note that the random variables need not be identically distributed, and
+
+they need not be independent.
+
+## Candidate Lean
+
+```lean
+import Mathlib
+import ProbabilityTheory.chapter_07.def_7_3
+import ProbabilityTheory.chapter_09.def_9_1
+
+/-
+TASK ID: thm_11_4
+TYPE: Theorem_with_Proof
+SOURCE PLAN: experiment_targets
+TASK CONTENT:
+\begin{thmbox}{11.4}
+\end{thmbox}
+
+IfX1,X 2,...,X n are pairwise uncorrelated, then
+
+Va r(X1 + X2 +\cdot\cdot\cdot+ Xn) =
+
+n\sum
+
+i=1
+
+Va r(Xi).
+
+\textit{Proof} Without loss of generality, suppose the random variables X1,...,X n have
+
+zero mean. (We can consider the centered random variable Yn = Xn - E[Xn]
+
+otherwise.)
+
+Using the definition of variance and the linearity of expectation, we have
+
+Va r(X1 + X2 +\cdot\cdot\cdot+ Xn) = E
+
+[
+
+X2
+
+1 + X2
+
+2 +\cdot\cdot\cdot+ X2
+
+n + 2
+
+\sum
+
+i<j
+
+XiXj
+
+]
+
+=
+
+n\sum
+
+i=1
+
+E[X2
+
+i ].
+
+The assumption of pairwise uncorrelatedness guarantees that the cross-terms
+
+E[XiXj ] are zero for i /=j Therefore, we have
+
+Va r(X1 + X2 +\cdot\cdot\cdot+ Xn) =
+
+n\sum
+
+i=1
+
+E[X2
+
+i ]=
+
+n\sum
+
+i=1
+
+Va r(Xi).
+
+\hfill $\square$
+
+We will present two versions of weak law of large numbers. The first one
+
+assumes that the random variables are pairwise uncorrelated with the same mean
+
+and variance. Note that the random variables need not be identically distributed, and
+
+they need not be independent.
+-/
+
+-- WRITE FINAL LEAN CODE BELOW
+
+open MeasureTheory ProbabilityTheory
+
+/-- For a finite pairwise-uncorrelated family with finite second moments, the
+variance of the sum is the sum of the variances. -/
+theorem thm_11_4 {Ω ι : Type*} [MeasurableSpace Ω] {μ : Measure Ω}
+    [IsProbabilityMeasure μ] (s : Finset ι) (X : ι → Ω → ℝ)
+    (hX : ∀ i ∈ s, FiniteAbsMoment μ (X i) 2)
+    (huncorrelated : ∀ i ∈ s, ∀ j ∈ s, i ≠ j → Uncorrelated μ (X i) (X j)) :
+    ProbabilityTheory.variance (∑ i ∈ s, X i) μ =
+      ∑ i ∈ s, ProbabilityTheory.variance (X i) μ := by
+  classical
+  have hmem : ∀ i ∈ s, MemLp (X i) 2 μ := fun i hi =>
+    (hX i hi).memLp (by norm_num)
+  rw [ProbabilityTheory.variance_sum' hmem]
+  refine Finset.sum_congr rfl fun i hi => ?_
+  rw [Finset.sum_eq_single i]
+  · exact ProbabilityTheory.covariance_self (hmem i hi).aemeasurable
+  · intro j hj hji
+    have hij : i ≠ j := Ne.symm hji
+    exact (covariance_zero_iff_uncorrelated (hmem i hi) (hmem j hj)).2
+      (huncorrelated i hi j hj hij)
+  · exact fun hnot => (hnot hi).elim
+```
+
+## Full Review Context
+
+# Semantic Review Context for thm_11_4
+
+This file is the authoritative review context for `review-pack` and `review-existing`.
+A local build is not enough: the reviewer must check statement fidelity, proof spine adequacy, interface contract, and downstream adequacy against this context.
+
+## Original Task Text
+
+- Type: `Theorem_with_Proof`
+- Source plan: `experiment_targets`
+- Title: `11.4`
+
+\begin{thmbox}{11.4}
+\end{thmbox}
+
+IfX1,X 2,...,X n are pairwise uncorrelated, then
+
+Va r(X1 + X2 +\cdot\cdot\cdot+ Xn) =
+
+n\sum
+
+i=1
+
+Va r(Xi).
+
+\textit{Proof} Without loss of generality, suppose the random variables X1,...,X n have
+
+zero mean. (We can consider the centered random variable Yn = Xn - E[Xn]
+
+otherwise.)
+
+Using the definition of variance and the linearity of expectation, we have
+
+Va r(X1 + X2 +\cdot\cdot\cdot+ Xn) = E
+
+[
+
+X2
+
+1 + X2
+
+2 +\cdot\cdot\cdot+ X2
+
+n + 2
+
+\sum
+
+i<j
+
+XiXj
+
+]
+
+=
+
+n\sum
+
+i=1
+
+E[X2
+
+i ].
+
+The assumption of pairwise uncorrelatedness guarantees that the cross-terms
+
+E[XiXj ] are zero for i /=j Therefore, we have
+
+Va r(X1 + X2 +\cdot\cdot\cdot+ Xn) =
+
+n\sum
+
+i=1
+
+E[X2
+
+i ]=
+
+n\sum
+
+i=1
+
+Va r(Xi).
+
+\hfill $\square$
+
+We will present two versions of weak law of large numbers. The first one
+
+assumes that the random variables are pairwise uncorrelated with the same mean
+
+and variance. Note that the random variables need not be identically distributed, and
+
+they need not be independent.
+
+## Upstream Textbook Chain
+
+### Hard dependencies
+- `def_7_3` from `unknown` / `OUTPUT_PRESENT_LEDGER_MISSING`: (ledger entry missing; output file present)
+  - Fallback output file: `/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/def_7_3.lean`
+  - Fallback declarations: `Uncorrelated, Covariance, covariance_zero_iff_uncorrelated, independent_uncorrelated, def_7_3`
+- `def_9_1` from `chapter9-moments-mgf` / `OUTPUT_PRESENT_LEDGER_MISSING`: (ledger entry missing; output file present)
+  - Fallback output file: `/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/def_9_1.lean`
+  - Fallback declarations: `FiniteAbsMoment, measurable, integrable_abs_pow, of_memLp, mono, memLp, centered, generalMoment`
+### Soft imports
+- None
+
+## Direct Downstream Consumers
+
+- `thm_11_5` from `experiment_targets` via `hard_dependency` / `Theorem_with_Proof`: 11.5 (Weak Law of Large Numbers (L2 Version))
+
+## Current Public Interface Summary
+
+- Output owner task: `thm_11_4`
+- Official Lean module: `ProbabilityTheory.chapter_11.thm_11_4`
+- Official output targets: `/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_4.lean, /work/artifacts/output_lean_files/general/thm_11_4.lean, /work/artifacts/output_lean_files/experiment_targets/thm_11_4.lean`
+- Task-scoped official declarations: `(not policy-mapped)`
+- Recorded exported symbols: `(none recorded)`
+- Current ledger status: `PACKED`
+- Build candidate state: `build_ready`
+- Last completed semantic review result: `(none)`
+
+## Allowed Abstraction Layer
+
+- 可以在证明内部调用 Mathlib 或已有测度论/积分论引理，但导出的 theorem/definition statement 必须忠实对应教材对象。
+- 可以引入局部 helper lemma，但不能把全局 theorem 偷换成更弱、局部或带额外结构假设的版本。
+- 可以在 proof spine 上做抽象化压缩，但不能跳过教材真正依赖的桥接对象或中间结论。
+
+## Forbidden Weakenings
+
+- 禁止把教材中的公共接口偷换成纯存在性壳、占位定义或只记录 witness 的结构。
+- 禁止把应当供下游复用的 theorem 改写成只够当前文件自证的 theorem-specific wrapper。
+- 禁止通过额外 theorem-level 假设来掩盖上游接口缺口，除非任务文本本身明确包含该假设。
+
+## Historical Shortcut / Shell Risks
+
+- No task-specific historical shortcut is recorded; still enforce the general forbidden weakenings above.
+
+## Downstream Acceptance Checklist
+
+- No extra downstream checklist recorded beyond the general rubric.
+
+## Pack Snapshot
+
+- Pack directory: `/work/artifacts/phase2_prompt_packs/thm_11_4`
+- Context markdown: `/work/artifacts/phase2_prompt_packs/thm_11_4/context.md`
+- Search manifest: `/work/artifacts/phase2_prompt_packs/thm_11_4/search_manifest.json`
+- Intent contract: `/work/artifacts/phase2_prompt_packs/thm_11_4/intent_contract.json`
+
+## Review Task
+
+Return JSON only, written to the result path supplied by the runner.
+Use the generated result template as the starting JSON payload.
+Keep these binding fields unchanged: task_id, mode, attempt, prompt_version, rubric_version, review_input_file, review_prompt_file, expected_result_file, candidate_hash.
+Fill these semantic review fields: verdict, confidence, summary, proof_class, completion_class, reviewer_independence, source_claims, claim_mapping, route_inspection, spine_alignment, evidence_review, interface_contract, downstream_adequacy, forbidden_weakenings, findings, recommended_disposition.
+The `reviewer_independence` object must be shaped as {""role"": ""independent_read_only_reviewer"", ""read_only"": true, ""did_edit_candidate"": false, ""used_current_review_request"": true, ""attestation"": ""<short statement>""}.
+Allowed verdict values: pass, fail, inconclusive.
+Status enum fields `spine_alignment.status`, `evidence_review.status`, `interface_contract.status`, and `downstream_adequacy.status` must use covered/partial/missing/violated/unclear; evidence_review may also use not_applicable for individual items.
+The route_inspection object is review context only, not completion authority. Fill source_route, expected_answer_or_statement, local_mathlib_search, public_interface_check, support_or_reassembly_decision, and stop_go_verdict.
+A pass requires route_inspection.status covered or not_applicable, stop_go_verdict go, and a public_interface_check that rules out public-premise relocation.
+The review basis lists required_evidence_classes. evidence_review.items must include one object per required class: source_tex, lean_subject, audit, classification, dependency_status, downstream, ledger_status, hashes.
+For audit, classification, dependency_status, downstream, ledger_status, and hashes, explain conflicts or stale evidence instead of letting any single artifact decide completion.
+In spine_alignment.source_steps_checked, record each essential source proof step, its Lean landing, and whether that landing genuinely discharges the step.
+A source-step landing must not merely re-assume the same step, relocate it to a public premise, or hide it behind an unverified adapter.
+A pass requires non-empty source_claims and claim_mapping that explicitly connect source claims to Lean declarations, assumptions, and conclusions.
+A pass also requires spine_alignment.status = covered with non-empty source_steps_checked and no missing_source_steps, evidence_review.status = covered with every required evidence class covered/not_applicable and no blocking_issues, plus interface_contract.status = covered and downstream_adequacy.status = covered.
+Each covered source step must identify a theorem/lemma or transparent derivation with a source-faithful signature and no body-level reassumption or public-premise relocation.
+If the source text relies on a proof, construction, reduction, interface translation, case split, contradiction, or partition argument, a pass must explain in spine_alignment.source_steps_checked where every essential source step lands in Lean.
+Historical proof-obligation checklist files are not review evidence or completion authority. Ignore them and judge the bound source, Lean subject, dependencies, interfaces, and source proof spine directly.
+Classify each source-step route as source-route theorem/lemma, Mathlib-backed adapter, or reusable interface bridge; do not report an adapter-only shortcut as textbook proof completion.
+A reusable bridge may support a proof-bearing task only when the review maps it to source proof steps and the final proof_class is a source-route completion class rather than `interface_bridge_completed` alone.
+If the reviewer cannot point to the Lean landing place of the source spine and can only describe a shortcut or black-box replacement, the verdict must be fail or inconclusive rather than pass.
+When the review basis lists direct downstream consumers, a pass must include one consumers_checked entry per consumer with status covered/not_applicable and no blocking_issues.
+downstream_adequacy.consumers_checked entries must be objects shaped as {""block_id"": ""<direct downstream block_id>"", ""status"": ""covered | not_applicable | blocked"", ""evidence"": ""<why>""}.
+Every forbidden weakening listed in the context must be judged explicitly in forbidden_weakenings.
+forbidden_weakenings entries use status not_present/present/not_applicable; pass cannot include a present forbidden weakening.
+If a theorem is only locally correct but its direct downstream consumer would need new theorem-level assumptions, the verdict must be fail rather than pass.
+If a definition uses a fallback value to mask divergence or undefinedness, the verdict must be fail rather than pass.
+
+
+请严格作为全新独立只读一般审核者完成审核。只输出符合模板的原始 JSON，不要加 Markdown 代码围栏或解释。",verification/supporting_records/L2/50194432/feedback.txt,interpretation_sensitive; The positive review correctly identifies general covariance expansion plus candidate cross-term cancellation. This is permitted under G but does not satisfy the stricter candidate-built expansion required by S. Neither the mathematical statement nor every unrelated obligation becomes false because S fails.,原任务、共同规则与原服务请求见 verification/supporting_records/candidates/L2-A/subject/task_contract；不将后置 G/S 解释倒写为当时标准,The positive review correctly identifies general covariance expansion plus candidate cross-term cancellation. This is permitted under G but does not satisfy the stricter candidate-built expansion required by S. Neither the mathematical statement nor every unrelated obligation becomes false because S fails.,not_proven_by_this_index,not_verified,原审计未作明确确认判断；未知,No new mathematical repair claimed; positive validation is distinct from a proof-changing intervention.,不适用：通过意见未要求数学修复；不得计为修复失败,"{""status"": ""not_fully_reconstructed"", ""reason"": ""A positive review and final candidate equality do not establish every intervening caller edit.""}",verification/supporting_records/L2/50194432/feedback-context.jsonl; verification/supporting_records/L2/50194432/feedback.txt; verification/supporting_records/L2/50194432/actor-receipt.json; verification/supporting_records/L2/50194432/role-request.json; verification/supporting_records/candidates/L2-A/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean; verification/supporting_records/candidates/L2-A; verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json; verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json; verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json,父角色全部中间编辑未重建；G/S 是后续解释
+episode-bb680eb5-cdc6-431c-9f0e-43cad6af06aa,A / A_original_development_r1,root-9b18654b-e41d-4ebb-b0cb-54e39bfcff94,bb680eb5-cdc6-431c-9f0e-43cad6af06aa,['01a08cf7-338b-7413-b1a9-cf9cc7e4b6ca'],general_reviewer,2026-09-11T04:16:45.713568+08:00,2026-09-11T21:54:27.800002+08:00,candidate-67c83c8b4bf7\subject\candidate\ProbabilityTheory\chapter_11\thm_11_5.lean,"# Semantic Review for thm_11_5
+
+- Mode: `review-pack`
+- Prompt version: `11`
+- Rubric version: `9`
+- Candidate: `/work/artifacts/phase2_prompt_packs/thm_11_5/candidate_v3.lean`
+- Review context file: `/work/artifacts/phase2_prompt_packs/thm_11_5/semantic_review_context_v1.md`
+
+## Reviewer Role Contract
+
+This prompt is for an independent read-only reviewer subagent or a configured external reviewer runner.
+If you authored or edited this candidate in the current repair attempt, do not fill the result; hand it to an independent reviewer.
+Do not edit Lean files, prompt-pack files, historical checklist artifacts, classification, or ledger state while reviewing.
+The result must include a `reviewer_independence` object attesting that the review was read-only and independent.
+
+## Textbook / Mathlib Bridge Policy
+
+Use the textbook-first, bridge-then-Mathlib policy for shared mathematical interfaces.
+Textbook fidelity does not forbid Mathlib. A reviewed equivalence bridge may use Mathlib infrastructure when it maps to a specific source proof step and is reusable beyond the current task.
+Reject adapter-only shortcut routes: if the candidate merely applies a stronger Mathlib theorem or task-shaped bridge without landing the source proof spine, the verdict must be fail or inconclusive for proof-bearing tasks.
+For theorem/problem/exercise tasks, `interface_bridge_completed` by itself is not a clean proof class; the review must classify the final task route as source-route proof completion if the bridge genuinely discharges source steps.
+
+## Task-Level Pass Class Contract
+
+- Projected task role: `proof_bearing`
+- Clean pass prefixes allowed for this role: `textbook_proof_completed, textbook_problem_completed, textbook_exercise_completed, textbook_source_route_completed, source_route_proof_completed, source_faithful_proof_completed, normal_proof_source_route, source_route_theorem`
+- Explicit allowed-exception classes for this task: `(none)`
+For a clean pass, both `proof_class` and `completion_class` must be non-empty and each must use a clean pass prefix allowed for this task role.
+An explicit allowed-exception class may be used only when it is listed for this exact task; it does not project to clean pass.
+Do not invent a completion class: an otherwise semantic `pass` with a class outside this contract will be rejected by `review-apply`.
+
+## Task Source
+
+Type: `Theorem_with_Proof`
+Source plan: `experiment_targets`
+
+### Title
+
+11.5 (Weak Law of Large Numbers (L2 Version))
+
+### TeX / Plan Content
+
+\begin{thmbox}{11.5 (Weak Law of Large Numbers (L2 Version))}
+\end{thmbox}
+
+Let .(Xi)\infty
+
+i=1 be a sequence of pairwise uncorrelated random variables with
+
+common mean E[Xi]= \mu and variance Va r(Xi) = \sigma2 for all i. Then
+
+Sn/n
+
+P
+
+-\to \mu.
+
+\textit{Proof} The proof is an application of Chebyshev inequality (Theorem 11.2).
+
+Fix any \epsilon> 0 and integer n. Using the fact that Sn/n is an average of pairwise
+
+uncorrelated random variables with common mean \mu,we have
+
+P
+
+(\vert\vertSn
+
+n -\mu
+
+\vert\vert >\epsilon
+
+)
+
+=P
+
+(\vert\vertSn -n\mu
+
+\vert\vert >n \epsilon
+
+)
+
+\leq Va r(Sn)
+
+n2\epsilon2 = 1
+
+n2\epsilon2
+
+n\sum
+
+i=1
+
+Va r(Xi).
+
+The last equality follows from Theorem 11.4.
+
+Using Theorem 11.4, we know that .
+
+\sumn
+
+i=1 Va r(Xi)= n\sigma 2. Therefore, we have
+
+P
+
+( \vert\vert\vertSn
+
+n -\mu
+
+\vert\vert\vert >\epsilon
+
+)
+
+\leq n\sigma2
+
+n2\epsilon2 = \sigma2
+
+n\epsilon2 .
+
+Asn\to\infty , the right-hand side approaches zero, which implies thatSn/n converges
+
+in probability to \mu. This completes the proof. \hfill $\square$
+
+The assumption of finite second moment can be relaxed to finite mean, but at the
+
+cost of strengthening the uncorrelated assumption to independence.
+
+## Candidate Lean
+
+```lean
+import Mathlib
+import ProbabilityTheory.chapter_07.def_7_3
+import ProbabilityTheory.chapter_09.def_9_1
+import ProbabilityTheory.chapter_10.def_10_2
+import ProbabilityTheory.chapter_11.thm_11_2
+import ProbabilityTheory.chapter_11.thm_11_4
+
+/-
+TASK ID: thm_11_5
+TYPE: Theorem_with_Proof
+SOURCE PLAN: experiment_targets
+TASK CONTENT:
+\begin{thmbox}{11.5 (Weak Law of Large Numbers (L2 Version))}
+\end{thmbox}
+
+Let .(Xi)\infty
+
+i=1 be a sequence of pairwise uncorrelated random variables with
+
+common mean E[Xi]= \mu and variance Va r(Xi) = \sigma2 for all i. Then
+
+Sn/n
+
+P
+
+-\to \mu.
+
+\textit{Proof} The proof is an application of Chebyshev inequality (Theorem 11.2).
+
+Fix any \epsilon> 0 and integer n. Using the fact that Sn/n is an average of pairwise
+
+uncorrelated random variables with common mean \mu,we have
+
+P
+
+(\vert\vertSn
+
+n -\mu
+
+\vert\vert >\epsilon
+
+)
+
+=P
+
+(\vert\vertSn -n\mu
+
+\vert\vert >n \epsilon
+
+)
+
+\leq Va r(Sn)
+
+n2\epsilon2 = 1
+
+n2\epsilon2
+
+n\sum
+
+i=1
+
+Va r(Xi).
+
+The last equality follows from Theorem 11.4.
+
+Using Theorem 11.4, we know that .
+
+\sumn
+
+i=1 Va r(Xi)= n\sigma 2. Therefore, we have
+
+P
+
+( \vert\vert\vertSn
+
+n -\mu
+
+\vert\vert\vert >\epsilon
+
+)
+
+\leq n\sigma2
+
+n2\epsilon2 = \sigma2
+
+n\epsilon2 .
+
+Asn\to\infty , the right-hand side approaches zero, which implies thatSn/n converges
+
+in probability to \mu. This completes the proof. \hfill $\square$
+
+The assumption of finite second moment can be relaxed to finite mean, but at the
+
+cost of strengthening the uncorrelated assumption to independence.
+-/
+
+-- WRITE FINAL LEAN CODE BELOW
+
+open Filter MeasureTheory ProbabilityTheory
+
+/-- The weak law of large numbers for a sequence of pairwise uncorrelated
+real-valued random variables with common mean and common finite variance. -/
+theorem thm_11_5 {Ω : Type*} [MeasurableSpace Ω] (P : Measure Ω)
+    [IsProbabilityMeasure P] (X : ℕ → Ω → ℝ) (μ σ2 : ℝ)
+    (hX : ∀ i, FiniteAbsMoment P (X i) 2)
+    (hmean : ∀ i, ∫ ω, X i ω ∂P = μ)
+    (hvar : ∀ i, ProbabilityTheory.variance (X i) P = σ2)
+    (huncorrelated : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :
+    ConvergesInProbability P
+      (fun n ω => (∑ i ∈ Finset.range (n + 1), X i ω) / (n + 1 : ℝ))
+      (fun _ => μ) := by
+  let A : ℕ → Ω → ℝ :=
+    fun n ω => (∑ i ∈ Finset.range (n + 1), X i ω) / (n + 1 : ℝ)
+  have hmem : ∀ i, MemLp (X i) 2 P := fun i => (hX i).memLp (by norm_num)
+  have hAmeas : ∀ n, Measurable (A n) := by
+    intro n
+    exact (Finset.measurable_sum (Finset.range (n + 1))
+      (fun i _ => (hX i).measurable)).div_const _
+  have hAmem : ∀ n, MemLp (A n) 2 P := by
+    intro n
+    have hs : MemLp (∑ i ∈ Finset.range (n + 1), X i) 2 P :=
+      memLp_finsetSum' _ (fun i _ => hmem i)
+    simpa [A, div_eq_inv_mul] using hs.const_mul ((n + 1 : ℝ)⁻¹)
+  have hAmean : ∀ n, ∫ ω, A n ω ∂P = μ := by
+    intro n
+    rw [show A n = fun ω => (∑ i ∈ Finset.range (n + 1), X i ω) /
+      (n + 1 : ℝ) by rfl]
+    rw [integral_div, integral_finsetSum]
+    · simp_rw [hmean]
+      simp only [Finset.sum_const, Finset.card_range, nsmul_eq_mul]
+      field_simp
+      push_cast
+      ring
+    · exact fun i _ => (hmem i).integrable one_le_two
+  have hAvar : ∀ n, ProbabilityTheory.variance (A n) P = σ2 / (n + 1 : ℝ) := by
+    intro n
+    have hsum :=
+      thm_11_4 (μ := P) (Finset.range (n + 1)) X
+        (fun i _ => hX i) (fun i _ j _ hij => huncorrelated i j hij)
+    calc
+      ProbabilityTheory.variance (A n) P =
+          ProbabilityTheory.variance
+            (fun ω => (n + 1 : ℝ)⁻¹ * (∑ i ∈ Finset.range (n + 1), X i) ω) P := by
+              congr 1
+              funext ω
+              simp [A, div_eq_inv_mul]
+      _ = ((n + 1 : ℝ)⁻¹) ^ 2 *
+          ProbabilityTheory.variance (∑ i ∈ Finset.range (n + 1), X i) P := by
+            rw [ProbabilityTheory.variance_const_mul]
+      _ = ((n + 1 : ℝ)⁻¹) ^ 2 *
+          ∑ i ∈ Finset.range (n + 1), ProbabilityTheory.variance (X i) P := by
+            rw [hsum]
+      _ = σ2 / (n + 1 : ℝ) := by
+            simp_rw [hvar]
+            simp only [Finset.sum_const, Finset.card_range, nsmul_eq_mul]
+            have hn : (n + 1 : ℝ) ≠ 0 := by positivity
+            field_simp
+            push_cast
+            ring
+  refine ⟨?_, measurable_const, ?_⟩
+  · simpa [A] using hAmeas
+  · intro ε hε
+    have hreal :
+        Tendsto (fun n => P.real (deviationEvent A (fun _ => μ) n ε))
+          atTop (nhds 0) := by
+      apply squeeze_zero' (Filter.Eventually.of_forall fun _ => measureReal_nonneg)
+        (Filter.Eventually.of_forall ?_)
+        ((tendsto_const_div_atTop_nhds_zero_nat (σ2 / ε ^ 2)).comp
+          (Filter.tendsto_add_atTop_nat 1))
+      intro n
+      have hcheb := thm_11_2 P (A n) (hAmeas n) (hAmem n) hε
+      have hsubset :
+          deviationEvent A (fun _ => μ) n ε ⊆
+            {ω | ε ≤ |A n ω - P[A n]|} := by
+        intro ω hω
+        simp only [deviationEvent, Set.mem_setOf_eq, Pi.one_apply] at hω ⊢
+        rw [hAmean n]
+        exact hω.le
+      calc
+        P.real (deviationEvent A (fun _ => μ) n ε)
+            ≤ P.real {ω | ε ≤ |A n ω - P[A n]|} :=
+              measureReal_mono hsubset
+        _ ≤ _root_.variance P (A n)
+              (FiniteAbsMoment.of_memLp (hAmeas n) (hAmem n)) / ε ^ 2 := hcheb
+        _ = ProbabilityTheory.variance (A n) P / ε ^ 2 := by
+              rw [_root_.variance, rthCentralMoment,
+                ProbabilityTheory.centralMoment_two_eq_variance (hAmem n).aemeasurable]
+        _ = (σ2 / ε ^ 2) / (n + 1 : ℝ) := by
+              rw [hAvar]
+              ring
+        _ = ((fun k : ℕ => (σ2 / ε ^ 2) / (k : ℝ)) ∘
+              fun a => a + 1) n := by
+              simp
+    simpa only [measureReal_def,
+      ENNReal.tendsto_toReal_zero_iff (fun _ => measure_ne_top P _)] using hreal
+```
+
+## Full Review Context
+
+# Semantic Review Context for thm_11_5
+
+This file is the authoritative review context for `review-pack` and `review-existing`.
+A local build is not enough: the reviewer must check statement fidelity, proof spine adequacy, interface contract, and downstream adequacy against this context.
+
+## Original Task Text
+
+- Type: `Theorem_with_Proof`
+- Source plan: `experiment_targets`
+- Title: `11.5 (Weak Law of Large Numbers (L2 Version))`
+
+\begin{thmbox}{11.5 (Weak Law of Large Numbers (L2 Version))}
+\end{thmbox}
+
+Let .(Xi)\infty
+
+i=1 be a sequence of pairwise uncorrelated random variables with
+
+common mean E[Xi]= \mu and variance Va r(Xi) = \sigma2 for all i. Then
+
+Sn/n
+
+P
+
+-\to \mu.
+
+\textit{Proof} The proof is an application of Chebyshev inequality (Theorem 11.2).
+
+Fix any \epsilon> 0 and integer n. Using the fact that Sn/n is an average of pairwise
+
+uncorrelated random variables with common mean \mu,we have
+
+P
+
+(\vert\vertSn
+
+n -\mu
+
+\vert\vert >\epsilon
+
+)
+
+=P
+
+(\vert\vertSn -n\mu
+
+\vert\vert >n \epsilon
+
+)
+
+\leq Va r(Sn)
+
+n2\epsilon2 = 1
+
+n2\epsilon2
+
+n\sum
+
+i=1
+
+Va r(Xi).
+
+The last equality follows from Theorem 11.4.
+
+Using Theorem 11.4, we know that .
+
+\sumn
+
+i=1 Va r(Xi)= n\sigma 2. Therefore, we have
+
+P
+
+( \vert\vert\vertSn
+
+n -\mu
+
+\vert\vert\vert >\epsilon
+
+)
+
+\leq n\sigma2
+
+n2\epsilon2 = \sigma2
+
+n\epsilon2 .
+
+Asn\to\infty , the right-hand side approaches zero, which implies thatSn/n converges
+
+in probability to \mu. This completes the proof. \hfill $\square$
+
+The assumption of finite second moment can be relaxed to finite mean, but at the
+
+cost of strengthening the uncorrelated assumption to independence.
+
+## Upstream Textbook Chain
+
+### Hard dependencies
+- `def_7_3` from `unknown` / `OUTPUT_PRESENT_LEDGER_MISSING`: (ledger entry missing; output file present)
+  - Fallback output file: `/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/def_7_3.lean`
+  - Fallback declarations: `Uncorrelated, Covariance, covariance_zero_iff_uncorrelated, independent_uncorrelated, def_7_3`
+- `def_9_1` from `chapter9-moments-mgf` / `OUTPUT_PRESENT_LEDGER_MISSING`: (ledger entry missing; output file present)
+  - Fallback output file: `/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/def_9_1.lean`
+  - Fallback declarations: `FiniteAbsMoment, measurable, integrable_abs_pow, of_memLp, mono, memLp, centered, generalMoment`
+- `def_10_2` from `chapter10-almost-sure-probability` / `OUTPUT_PRESENT_LEDGER_MISSING`: (ledger entry missing; output file present)
+  - Fallback output file: `/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/def_10_2.lean`
+  - Fallback declarations: `deviationEvent, ConvergesInProbability, def_10_2`
+- `thm_11_2` from `chapter11-bounds-inequalities` / `OUTPUT_PRESENT_LEDGER_MISSING`: (ledger entry missing; output file present)
+  - Fallback output file: `/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_2.lean`
+  - Fallback declarations: `thm_11_2`
+- `thm_11_4` from `experiment_targets` / `COMPLETED`: 11.4
+### Soft imports
+- None
+
+## Direct Downstream Consumers
+
+- No direct downstream consumers were found in current plans.
+
+## Current Public Interface Summary
+
+- Output owner task: `thm_11_5`
+- Official Lean module: `ProbabilityTheory.chapter_11.thm_11_5`
+- Official output targets: `/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_5.lean, /work/artifacts/output_lean_files/general/thm_11_5.lean, /work/artifacts/output_lean_files/experiment_targets/thm_11_5.lean`
+- Task-scoped official declarations: `(not policy-mapped)`
+- Recorded exported symbols: `(none recorded)`
+- Current ledger status: `PACKED`
+- Build candidate state: `build_ready`
+- Last completed semantic review result: `(none)`
+
+## Allowed Abstraction Layer
+
+- 可以在证明内部调用 Mathlib 或已有测度论/积分论引理，但导出的 theorem/definition statement 必须忠实对应教材对象。
+- 可以引入局部 helper lemma，但不能把全局 theorem 偷换成更弱、局部或带额外结构假设的版本。
+- 可以在 proof spine 上做抽象化压缩，但不能跳过教材真正依赖的桥接对象或中间结论。
+
+## Forbidden Weakenings
+
+- 禁止把教材中的公共接口偷换成纯存在性壳、占位定义或只记录 witness 的结构。
+- 禁止把应当供下游复用的 theorem 改写成只够当前文件自证的 theorem-specific wrapper。
+- 禁止通过额外 theorem-level 假设来掩盖上游接口缺口，除非任务文本本身明确包含该假设。
+
+## Historical Shortcut / Shell Risks
+
+- No task-specific historical shortcut is recorded; still enforce the general forbidden weakenings above.
+
+## Downstream Acceptance Checklist
+
+- No extra downstream checklist recorded beyond the general rubric.
+
+## Pack Snapshot
+
+- Pack directory: `/work/artifacts/phase2_prompt_packs/thm_11_5`
+- Context markdown: `/work/artifacts/phase2_prompt_packs/thm_11_5/context.md`
+- Search manifest: `/work/artifacts/phase2_prompt_packs/thm_11_5/search_manifest.json`
+- Intent contract: `/work/artifacts/phase2_prompt_packs/thm_11_5/intent_contract.json`
+
+## Review Task
+
+Return JSON only, written to the result path supplied by the runner.
+Use the generated result template as the starting JSON payload.
+Keep these binding fields unchanged: task_id, mode, attempt, prompt_version, rubric_version, review_input_file, review_prompt_file, expected_result_file, candidate_hash.
+Fill these semantic review fields: verdict, confidence, summary, proof_class, completion_class, reviewer_independence, source_claims, claim_mapping, route_inspection, spine_alignment, evidence_review, interface_contract, downstream_adequacy, forbidden_weakenings, findings, recommended_disposition.
+The `reviewer_independence` object must be shaped as {""role"": ""independent_read_only_reviewer"", ""read_only"": true, ""did_edit_candidate"": false, ""used_current_review_request"": true, ""attestation"": ""<short statement>""}.
+Allowed verdict values: pass, fail, inconclusive.
+Status enum fields `spine_alignment.status`, `evidence_review.status`, `interface_contract.status`, and `downstream_adequacy.status` must use covered/partial/missing/violated/unclear; evidence_review may also use not_applicable for individual items.
+The route_inspection object is review context only, not completion authority. Fill source_route, expected_answer_or_statement, local_mathlib_search, public_interface_check, support_or_reassembly_decision, and stop_go_verdict.
+A pass requires route_inspection.status covered or not_applicable, stop_go_verdict go, and a public_interface_check that rules out public-premise relocation.
+The review basis lists required_evidence_classes. evidence_review.items must include one object per required class: source_tex, lean_subject, audit, classification, dependency_status, downstream, ledger_status, hashes.
+For audit, classification, dependency_status, downstream, ledger_status, and hashes, explain conflicts or stale evidence instead of letting any single artifact decide completion.
+In spine_alignment.source_steps_checked, record each essential source proof step, its Lean landing, and whether that landing genuinely discharges the step.
+A source-step landing must not merely re-assume the same step, relocate it to a public premise, or hide it behind an unverified adapter.
+A pass requires non-empty source_claims and claim_mapping that explicitly connect source claims to Lean declarations, assumptions, and conclusions.
+A pass also requires spine_alignment.status = covered with non-empty source_steps_checked and no missing_source_steps, evidence_review.status = covered with every required evidence class covered/not_applicable and no blocking_issues, plus interface_contract.status = covered and downstream_adequacy.status = covered.
+Each covered source step must identify a theorem/lemma or transparent derivation with a source-faithful signature and no body-level reassumption or public-premise relocation.
+If the source text relies on a proof, construction, reduction, interface translation, case split, contradiction, or partition argument, a pass must explain in spine_alignment.source_steps_checked where every essential source step lands in Lean.
+Historical proof-obligation checklist files are not review evidence or completion authority. Ignore them and judge the bound source, Lean subject, dependencies, interfaces, and source proof spine directly.
+Classify each source-step route as source-route theorem/lemma, Mathlib-backed adapter, or reusable interface bridge; do not report an adapter-only shortcut as textbook proof completion.
+A reusable bridge may support a proof-bearing task only when the review maps it to source proof steps and the final proof_class is a source-route completion class rather than `interface_bridge_completed` alone.
+If the reviewer cannot point to the Lean landing place of the source spine and can only describe a shortcut or black-box replacement, the verdict must be fail or inconclusive rather than pass.
+When the review basis lists direct downstream consumers, a pass must include one consumers_checked entry per consumer with status covered/not_applicable and no blocking_issues.
+downstream_adequacy.consumers_checked entries must be objects shaped as {""block_id"": ""<direct downstream block_id>"", ""status"": ""covered | not_applicable | blocked"", ""evidence"": ""<why>""}.
+Every forbidden weakening listed in the context must be judged explicitly in forbidden_weakenings.
+forbidden_weakenings entries use status not_present/present/not_applicable; pass cannot include a present forbidden weakening.
+If a theorem is only locally correct but its direct downstream consumer would need new theorem-level assumptions, the verdict must be fail rather than pass.
+If a definition uses a fallback value to mask divergence or undefinedness, the verdict must be fail rather than pass.
+
+
+请严格作为该候选首次且唯一的全新独立只读一般审核者完成审核。只输出符合模板的原始 JSON，不要添加 Markdown 代码围栏或解释。",verification/supporting_records/L2/bb680eb5/feedback.txt,"valid_local_WLLN_reasoning_with_route_dependency_limit; The review correctly identifies internal mean/variance, Chebyshev tail control and convergence. This local weak-law proof remains mathematically correct. Its use of the variance result retains that dependency’s G/S route sensitivity; do not mechanically mark every local obligation false.",原任务、共同规则与原服务请求见 verification/supporting_records/candidates/L2-A/subject/task_contract；不将后置 G/S 解释倒写为当时标准,"The review correctly identifies internal mean/variance, Chebyshev tail control and convergence. This local weak-law proof remains mathematically correct. Its use of the variance result retains that dependency’s G/S route sensitivity; do not mechanically mark every local obligation false.",not_proven_by_this_index,not_verified,原审计未作明确确认判断；未知,No new mathematical repair claimed; positive validation is distinct from a proof-changing intervention.,不适用：通过意见未要求数学修复；不得计为修复失败,"{""status"": ""not_fully_reconstructed"", ""reason"": ""A positive review and final candidate equality do not establish every intervening caller edit.""}",verification/supporting_records/L2/bb680eb5/feedback-context.jsonl; verification/supporting_records/L2/bb680eb5/feedback.txt; verification/supporting_records/L2/bb680eb5/actor-receipt.json; verification/supporting_records/L2/bb680eb5/role-request.json; verification/supporting_records/candidates/L2-A/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean; verification/supporting_records/candidates/L2-A; verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json; verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json; verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json,父角色全部中间编辑未重建；G/S 是后续解释
+episode-6361bff3-acfe-4e01-88e8-df006dc42b00,B / B_transport_r4,root-7960f8a1-b0a1-4006-8e36-00122a42c118,6361bff3-acfe-4e01-88e8-df006dc42b00,['01a08f63-e446-7950-9ed4-c74c8c906fcc'],support_author,2026-09-11T15:34:43.288241+08:00,2026-09-11T21:54:27.800520+08:00,candidate-92da00620333\subject\candidate\ProbabilityTheory\chapter_11\thm_11_4.lean; candidate-92da00620333\subject\candidate\ProbabilityTheory\chapter_11\thm_11_5.lean,请在 /work/ProbabilityTheoryFormalization 中协助完成 TASK.zh-CN.md 的两个 Lean 定理。请读取规定文件和现有定义，直接研究可编译实现；重点是 thm_11_4 的有限和方差可加（从 Uncorrelated 展开交叉项，不能调用现成和方差公式）及 thm_11_5 的弱大数定律。请报告建议的完整代码、可用构建命令及任何接口问题；如有权限可编辑目标文件，但不要读取禁止资料或 git 历史。,verification/supporting_records/L2/6361bff3/feedback.txt,"partial_unresolved; Helper claims a compiled covariance-based implementation, but this audit has not independently validated its isolated patch. Final B r4 instead proves the centered-square expansion. Self-reported completion is not proof of correctness or adoption.",原任务、共同规则与原服务请求见 verification/supporting_records/candidates/L2-B/subject/task_contract；不将后置 G/S 解释倒写为当时标准,帮助补丁未单独确认；最终 B r4 的 G/S 通过不能移植给帮助补丁,original_export_failed_then_host_recovered_delivery,not_verified,原审计未作明确确认判断；未知,"Unknown. Original help export failed, later recovery copied patch and response into the caller container. No observed tool result/read establishes actual patch adoption.",未知；原审计未独立验证帮助补丁或采用,"{""status"": ""not_fully_reconstructed"", ""reason"": ""A positive review and final candidate equality do not establish every intervening caller edit.""}",verification/supporting_records/L2/6361bff3/feedback-context.jsonl; verification/supporting_records/L2/6361bff3/feedback.txt; verification/supporting_records/L2/6361bff3/actor-receipt.json; verification/supporting_records/L2/6361bff3/role-request.json; verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean; verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean; verification/supporting_records/L2/6361bff3/delivery_receipt.json; verification/supporting_records/L2/6361bff3/delivery_recovery.json; verification/supporting_records/L2/6361bff3/recovered/patch.diff; verification/supporting_records/L2/6361bff3/recovered/response.md; verification/supporting_records/L2/6361bff3/recovered/after-manifest.json; verification/supporting_records/L2/6361bff3/recovered/role-artifacts/1-patch.diff; verification/supporting_records/L2/6361bff3/recovered/role-artifacts/2-response.md; verification/supporting_records/L2/6361bff3/parent-context-1.jsonl; verification/supporting_records/candidates/L2-B; verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json; verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json; verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json,帮助补丁数学有效性及实际采用；父角色完整变更链
+episode-f5e4ae15-c287-42a7-9c9e-5d913e6dfb91,B / B_transport_r4,root-7960f8a1-b0a1-4006-8e36-00122a42c118,f5e4ae15-c287-42a7-9c9e-5d913e6dfb91,['01a08f7a-962f-7ab2-8820-23b9dd8d35ad'],general_reviewer,2026-09-11T15:59:30.646358+08:00,2026-09-11T21:54:27.807961+08:00,candidate-92da00620333\subject\candidate\ProbabilityTheory\chapter_11\thm_11_4.lean; candidate-92da00620333\subject\candidate\ProbabilityTheory\chapter_11\thm_11_5.lean,请对 /work/ProbabilityTheoryFormalization 当前最终状态做只读复核，重点检查 TASK.zh-CN.md、COMMON_RULES.zh-CN.md、SOURCE.tex 与 ProbabilityTheory/chapter_11/thm_11_4.lean、thm_11_5.lean 是否数学完整、接口是否忠实、是否有循环/结论前提化/禁用占位符、thm_11_4 是否确实从不相关处理交叉项而未调用和方差公式、thm_11_5 是否内部得到切比雪夫界并证明趋零。请给出 pass/fail 与具体问题，不要编辑文件，不读禁止资料或 git 历史。,verification/supporting_records/L2/f5e4ae15/feedback.txt,"supported_under_G_and_S; The reviewed snapshot equals both final files byte-for-byte. Centered-square double-sum expansion, cross-term cancellation and internal Chebyshev limit are independently accepted under both G and S.",原任务、共同规则与原服务请求见 verification/supporting_records/candidates/L2-B/subject/task_contract；不将后置 G/S 解释倒写为当时标准,"The reviewed snapshot equals both final files byte-for-byte. Centered-square double-sum expansion, cross-term cancellation and internal Chebyshev limit are independently accepted under both G and S.",copy_command_succeeded,verified,是；原 line 164,"Validation acknowledged in author raw line 164, followed by submission. No repair was requested or needed for the checked obligations.",不适用：通过意见未要求数学修复；不得计为修复失败,"{""status"": ""both_reviewed_target_hashes_equal_final"", ""target_changes"": [], ""scope"": ""Review snapshot versus final target files, not every intermediate filesystem action.""}",verification/supporting_records/L2/f5e4ae15/feedback-context.jsonl; verification/supporting_records/L2/f5e4ae15/feedback.txt; verification/supporting_records/L2/f5e4ae15/actor-receipt.json; verification/supporting_records/L2/f5e4ae15/role-request.json; verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean; verification/supporting_records/L2/f5e4ae15/before_manifest/thm_11_4.json; verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean; verification/supporting_records/L2/f5e4ae15/delivery_receipt.json; verification/supporting_records/L2/f5e4ae15/parent-context-1.jsonl; verification/supporting_records/candidates/L2-B; verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json; verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json; verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json,仅确认评审快照与最终目标字节相同；不是全部中间活动普查
+episode-8ce74337-4095-46e8-a9e2-cb03190c78c4,C / C_runtime_r3,root-018a1503-17bf-4957-b80f-94af1c1b696c,8ce74337-4095-46e8-a9e2-cb03190c78c4,['01a08f6e-a522-7803-9da8-0112ce871627'],reviewer,2026-09-11T15:46:28.010013+08:00,2026-09-11T21:54:27.811646+08:00,candidate-dddb2b2aae36\subject\candidate\ProbabilityTheory\chapter_11\thm_11_4.lean,,verification/supporting_records/L2/8ce74337/feedback.txt,interpretation_sensitive; The positive review correctly identifies general covariance expansion plus candidate cross-term cancellation. This is permitted under G but does not satisfy the stricter candidate-built expansion required by S. Neither the mathematical statement nor every unrelated obligation becomes false because S fails.,原任务、共同规则与原服务请求见 verification/supporting_records/candidates/L2-C/subject/task_contract；不将后置 G/S 解释倒写为当时标准,The positive review correctly identifies general covariance expansion plus candidate cross-term cancellation. This is permitted under G but does not satisfy the stricter candidate-built expansion required by S. Neither the mathematical statement nor every unrelated obligation becomes false because S fails.,not_proven_by_this_index,verified,原审计未作明确确认判断；未知,No new mathematical repair claimed; positive validation is distinct from a proof-changing intervention.,不适用：通过意见未要求数学修复；不得计为修复失败,"{""status"": ""not_fully_reconstructed"", ""reason"": ""A positive review and final candidate equality do not establish every intervening caller edit.""}",verification/supporting_records/L2/8ce74337/feedback-context.jsonl; verification/supporting_records/L2/8ce74337/feedback.txt; verification/supporting_records/L2/8ce74337/actor-receipt.json; verification/supporting_records/candidates/L2-C/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean; verification/supporting_records/L2/8ce74337/reviewed_c1_code/thm_11_4.lean; verification/supporting_records/L2/8ce74337/parent-context-1.jsonl; verification/supporting_records/candidates/L2-C; verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json; verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json; verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json,父角色全部中间编辑未重建；G/S 是后续解释
+episode-abbc1cbd-ffbd-4258-9154-f3849b3106ed,C / C_runtime_r3,root-018a1503-17bf-4957-b80f-94af1c1b696c,abbc1cbd-ffbd-4258-9154-f3849b3106ed,['01a08f6e-a522-7803-9da8-0112ce871627'],reviewer,2026-09-11T15:48:36.809712+08:00,2026-09-11T21:54:27.813877+08:00,candidate-dddb2b2aae36\subject\candidate\ProbabilityTheory\chapter_11\thm_11_5.lean,,verification/supporting_records/L2/abbc1cbd/feedback.txt,"valid_local_WLLN_reasoning_with_route_dependency_limit; The review correctly identifies internal mean/variance, Chebyshev tail control and convergence. This local weak-law proof remains mathematically correct. Its use of the variance result retains that dependency’s G/S route sensitivity; do not mechanically mark every local obligation false.",原任务、共同规则与原服务请求见 verification/supporting_records/candidates/L2-C/subject/task_contract；不将后置 G/S 解释倒写为当时标准,"The review correctly identifies internal mean/variance, Chebyshev tail control and convergence. This local weak-law proof remains mathematically correct. Its use of the variance result retains that dependency’s G/S route sensitivity; do not mechanically mark every local obligation false.",not_proven_by_this_index,verified,原审计未作明确确认判断；未知,No new mathematical repair claimed; positive validation is distinct from a proof-changing intervention.,不适用：通过意见未要求数学修复；不得计为修复失败,"{""status"": ""not_fully_reconstructed"", ""reason"": ""A positive review and final candidate equality do not establish every intervening caller edit.""}",verification/supporting_records/L2/abbc1cbd/feedback-context.jsonl; verification/supporting_records/L2/abbc1cbd/feedback.txt; verification/supporting_records/L2/abbc1cbd/actor-receipt.json; verification/supporting_records/candidates/L2-C/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean; verification/supporting_records/L2/abbc1cbd/reviewed_c1_code/thm_11_5.lean; verification/supporting_records/L2/abbc1cbd/parent-context-1.jsonl; verification/supporting_records/candidates/L2-C; verification/supporting_records/archive/Z015_EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json; verification/supporting_records/archive/Z018_RULE_INTERPRETATION.json; verification/supporting_records/archive/Z020_L2_RESULT_MATRIX.json,父角色全部中间编辑未重建；G/S 是后续解释

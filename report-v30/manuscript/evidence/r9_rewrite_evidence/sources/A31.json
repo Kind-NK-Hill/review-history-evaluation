@@ -1,0 +1,95 @@
+{
+  "schema": "targeted.final.scope_clarification.v2",
+  "completed_at": "2026-09-12T05:17:25.132165+08:00",
+  "authorization": "Final integration clarification received after the two reviews returned; reviewer prompts and outputs unchanged. Reuse only; no new A/B evaluations.",
+  "A_original": {
+    "case": "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669",
+    "decision_sha256": "3a03f032e3c625aa7464c14fb99c6c3903cef8240b6fe74a6fb4e733b89cc72a",
+    "historical_verdict": "fail",
+    "missing_thm_10_11_target_file_verified": true,
+    "classification": "missing full second target; justified incomplete delivery; not re-evaluated"
+  },
+  "A_repair": {
+    "case": "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f",
+    "sources": [
+      {
+        "slot": "reviewer-1",
+        "path": "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\results\\reviewer-1.json",
+        "sha256": "3b32d46275ef498a3f1a55ab2cf4739ef74aaaf2e96c273b746086e544946d3d",
+        "original_verdict": "fail",
+        "summary": "thm_10_10 的两个双向等价以及 thm_10_11 的收敛事件控制均有有效证明，范数双向控制、有限坐标满测合并、概率并集界、连续点满测集与紧集一致连续路线也已落实。但完整候选没有证明或公开要求 f ∘ Vn 与 f ∘ V 的可测性，借助不含随机向量可测性条件的上游收敛谓词形成了实质性目标弱化。该缺口正中任务书明确义务，故整束任务不能共同确认完成。",
+        "proof_route_assessment": {
+          "assessment": "范数控制、有限并集、满测集以及紧集一致连续路线在数学上有效，且属于教材路线的等价实现。主要缺口不在收敛事件估计，而在复合函数随机向量资格完全未进入证明或结论。",
+          "escape_assessment": "未见 sorry、admit、新增 axiom、私有公理或把目标结论换名封装成不透明前提的证据；但通过使用不含输出可测性的向量收敛谓词，实质上绕开了任务书的一项必要义务。",
+          "new_support": [
+            {
+              "assessment": "合法且直接证明单坐标范数控制。",
+              "declaration": "abs_apply_le_vectorEuclideanNorm"
+            },
+            {
+              "assessment": "合法且为有限坐标到向量的控制提供充分界。",
+              "declaration": "vectorEuclideanNorm_le_sum_abs"
+            },
+            {
+              "assessment": "合法地把有限坐标的共同几乎处处收敛转为向量收敛。",
+              "declaration": "coordinatewiseAETendsto_to_vector"
+            },
+            {
+              "assessment": "从公开坐标收敛谓词推出共同满测结论，未引入额外公理。",
+              "declaration": "coordinatewiseAlmostSurely_to_vector"
+            },
+            {
+              "assessment": "合法使用有限坐标和及并集界。",
+              "declaration": "coordinatewiseDeviationTendsto_to_vector"
+            },
+            {
+              "assessment": "只是对前述充分条件的合法封装。",
+              "declaration": "coordinatewiseInProbability_to_vector"
+            },
+            {
+              "assessment": "合法连接函数空间默认上确界范数与显式欧氏范数。",
+              "declaration": "piNorm_le_vectorEuclideanNorm"
+            }
+          ],
+          "status": "partially_valid"
+        }
+      },
+      {
+        "slot": "reviewer-2",
+        "path": "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\results\\reviewer-2.json",
+        "sha256": "c3de87d2c8a2071891fd54e46a4bea20a4ae990331f680c52e12bcdc41ea6e74",
+        "original_verdict": "fail",
+        "summary": "定理 10.10 的逐坐标等价及其范数、满测集和有限并集义务得到有效证明；定理 10.11 也正确处理了只在满测极限集合上连续时的数值收敛控制。然而，候选利用上游向量收敛定义不携带可测性的弱接口，既未证明也未在结论中要求复合输出是随机向量，直接遗漏任务书明确指定的复合输出可测性义务。因此完整候选不能通过共同终验。",
+        "proof_route_assessment": {
+          "dependencies_and_support": "新增支持均位于两个候选目标文件内，包括欧氏范数与坐标/和式控制、逐坐标几乎处处收敛合成向量收敛、逐坐标偏差合成向量依概率收敛以及上确界范数到欧氏范数的控制。路线使用了给定上游定义和 Mathlib 的测度、有限和、映射测度、紧集逼近及一致连续性结果；未见新增外部支持文件。",
+          "status": "partially_valid",
+          "thm_10_10": "证明路线数学上有效。两条范数控制足以替代教材中的 ε/√d 估计；有限和趋零及有限并集测度界完成依概率方向，属于合同允许的等价路线。",
+          "thm_10_11": "数值收敛路线数学上有效：先把 S 包含到 f 的连续点集合 C，证明 V 落入 C 几乎处处，再以极限分布在 C 上的紧集逼近和紧集上的一致连续性控制输出偏差。这是连续映射定理的合法等价路线。但它只证明任意输出偏差集合的测度趋零，未补足输出作为随机向量的可测性。"
+        }
+      }
+    ],
+    "technical_facts_sha256": "77df541c079c3777b7938e79a8564ede7543e8ed5f88b609b48c3a5ae2fa1029",
+    "target_source_identity_verified": true,
+    "three_distinct_findings": {
+      "numerical_convergence_under_explicit_interface": "supported_correct_by_both_existing_reviews_and_build",
+      "composition_measurability_delivery": "not_delivered",
+      "original_conditions": "insufficient_to_derive_every_composition_measurable"
+    },
+    "historical_verdict_preserved": "fail",
+    "no_new_overall_pass": true
+  },
+  "research_interpretation": {
+    "user_hypothesis": "Most models basically passed, including H1-B, leaving trajectory evaluation.",
+    "status": "hypothesis constrained by evidence, not a required review verdict",
+    "supported_direction": "Shift analytical attention toward trajectories, effort, diagnosis, revisions, disclosure and delivered scope, since many apparent failures concern criteria or contract defects.",
+    "counterconstraints": [
+      "A original L7 lacks full second target",
+      "B L3 lacks general eventual-tail wrapper",
+      "Invalid evaluations remain unresolved",
+      "Mathematical validity, reasonable repairs and literal original contract are distinct",
+      "No exhaustive all-model mathematical-success census was performed in this limited reassessment"
+    ]
+  },
+  "new_model_calls": 0,
+  "new_solver_calls": 0
+}

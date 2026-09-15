@@ -1,0 +1,146 @@
+{
+  "scope": "Disjoint wall-clock intervals bounded by observed role handoffs and verified candidate events; includes reasoning and tools, not pure compute, causal delay, or removable overhead.",
+  "rows": [
+    {
+      "run_id": "r2-m3-a",
+      "config": "A",
+      "stage": "准备、骨架审查与修订",
+      "start_min": 0,
+      "end_min": 7.590061088403066,
+      "span_min": 7.590061088403066
+    },
+    {
+      "run_id": "r2-m3-a",
+      "config": "A",
+      "stage": "首助手实现，未传回",
+      "start_min": 7.590061088403066,
+      "end_min": 23.035177755355836,
+      "span_min": 15.44511666695277
+    },
+    {
+      "run_id": "r2-m3-a",
+      "config": "A",
+      "stage": "识别传递问题并重新安排",
+      "start_min": 23.035177755355836,
+      "end_min": 23.99704442024231,
+      "span_min": 0.9618666648864753
+    },
+    {
+      "run_id": "r2-m3-a",
+      "config": "A",
+      "stage": "第二助手重新实现",
+      "start_min": 23.99704442024231,
+      "end_min": 37.295944420496625,
+      "span_min": 13.298900000254314
+    },
+    {
+      "run_id": "r2-m3-a",
+      "config": "A",
+      "stage": "接收、去除多余导入并构建",
+      "start_min": 37.295944420496625,
+      "end_min": 38.40782775481542,
+      "span_min": 1.1118833343187973
+    },
+    {
+      "run_id": "r2-m3-a",
+      "config": "A",
+      "stage": "复核、注释说明与最终交付",
+      "start_min": 38.40782775481542,
+      "end_min": 50.2390918970108,
+      "span_min": 11.83126414219538
+    },
+    {
+      "run_id": "r2-m3-b",
+      "config": "B",
+      "stage": "准备与检索",
+      "start_min": 0,
+      "end_min": 0.6160369674364726,
+      "span_min": 0.6160369674364726
+    },
+    {
+      "run_id": "r2-m3-b",
+      "config": "B",
+      "stage": "助手部分实现",
+      "start_min": 0.6160369674364726,
+      "end_min": 6.427036964893341,
+      "span_min": 5.810999997456869
+    },
+    {
+      "run_id": "r2-m3-b",
+      "config": "B",
+      "stage": "作者接收、补证与整合",
+      "start_min": 6.427036964893341,
+      "end_min": 16.449220299720764,
+      "span_min": 10.022183334827423
+    },
+    {
+      "run_id": "r2-m3-b",
+      "config": "B",
+      "stage": "复核与最终交付",
+      "start_min": 16.449220299720764,
+      "end_min": 20.2089257756869,
+      "span_min": 3.759705475966136
+    },
+    {
+      "run_id": "r2-m3-c",
+      "config": "C",
+      "stage": "读取任务并安排作者",
+      "start_min": 0,
+      "end_min": 0.9868205785751343,
+      "span_min": 0.9868205785751343
+    },
+    {
+      "run_id": "r2-m3-c",
+      "config": "C",
+      "stage": "作者实现、修复与自检",
+      "start_min": 0.9868205785751343,
+      "end_min": 13.147987246513367,
+      "span_min": 12.161166667938232
+    },
+    {
+      "run_id": "r2-m3-c",
+      "config": "C",
+      "stage": "协调者检查与复核",
+      "start_min": 13.147987246513367,
+      "end_min": 16.290903913974763,
+      "span_min": 3.142916667461396
+    },
+    {
+      "run_id": "r2-m3-c",
+      "config": "C",
+      "stage": "作者补交说明",
+      "start_min": 16.290903913974763,
+      "end_min": 18.12195391257604,
+      "span_min": 1.8310499986012765
+    },
+    {
+      "run_id": "r2-m3-c",
+      "config": "C",
+      "stage": "检查说明并提交",
+      "start_min": 18.12195391257604,
+      "end_min": 18.398693641026814,
+      "span_min": 0.27673972845077444
+    }
+  ],
+  "first_complete_candidate_checks": {
+    "A_helper_not_delivered": {
+      "event": "E091",
+      "minute": 22.820677757263184
+    },
+    "A_delivered_formal_build": {
+      "event": "E143",
+      "minute": 38.40782775481542
+    },
+    "B_target_with_updated_support": {
+      "event": "E067",
+      "minute": 16.449220299720764
+    },
+    "C_target_including_main_theorems": {
+      "event": "E058",
+      "minute": 11.941503914197286
+    }
+  },
+  "rejected_candidate_time_proxy": {
+    "C_E056": "Patch adding main theorems failed; subsequent build checked earlier partial source. E057 readback confirms target lacked both main declarations."
+  }
+}

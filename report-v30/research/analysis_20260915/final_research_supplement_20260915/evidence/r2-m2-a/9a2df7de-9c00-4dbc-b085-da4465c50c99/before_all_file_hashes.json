@@ -1,0 +1,1907 @@
+[
+  {
+    "member": "./private_seed_record.json",
+    "sha256": "92325f05b5e26475aac40bd1c53c91d9785a04a7d15ce899448f2a7aae904eb6",
+    "size": 4838
+  },
+  {
+    "member": "./container.env",
+    "sha256": "bdcbae31a06f54035bb275544e2a140605b15d594599341ddc39eb40d7a3922b",
+    "size": 1092
+  },
+  {
+    "member": "./environment.json",
+    "sha256": "f39491bc92a7c337c0032a5a3ad96443498c8acdfde6733559ccd4b9c22f76f0",
+    "size": 1136
+  },
+  {
+    "member": "./SUBMISSION_SPEC.json",
+    "sha256": "6ab6dc20ef84efb8612d7328583caf269707965e5f22572c6b4c8c6b413f98aa",
+    "size": 400
+  },
+  {
+    "member": "./artifacts/state.sqlite3",
+    "sha256": "c9c081d4da774ac05761f83462247b500c3db30cd10acf0ea476705a53a09c1a",
+    "size": 294912
+  },
+  {
+    "member": "./artifacts/private_catalog.json",
+    "sha256": "a8f9f4dbeab316bdc4b99f6f03fd4c30a521d2335c020c36e2855990396008f5",
+    "size": 7718
+  },
+  {
+    "member": "./artifacts/upstream_authority.json",
+    "sha256": "9121cae46fcf3e645c80ce9b69f9ec5f20ce2d3f30d87df45e284d61384c2811",
+    "size": 4612
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/task.json",
+    "sha256": "a7f6418560bb62fd5dbcf87b56aebb17e31cc171c1e51e5df4e96b73fa7862dd",
+    "size": 2605
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/draft.lean",
+    "sha256": "ee4cc387ed8c948476f4e32b570077ecfefc074ac86748de6477e8aa8ab2ba21",
+    "size": 2296
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/build_feedback.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/dependency_decision_context.md",
+    "sha256": "bff16e516c20693e31e26a4466161e13b9338f3efd64824dcf427c9dd86301e2",
+    "size": 597
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/context.md",
+    "sha256": "ea6d4d04e01ff03a37696e84c8258acbc38615345aa08ade26981641d6a3770e",
+    "size": 11248
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/intent_contract.json",
+    "sha256": "f47374757d6c5cf9e8ad9fa041e20f2e3bb6d27b55303040a8128bd5a6d0eaa9",
+    "size": 153
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/search_notes.md",
+    "sha256": "1e0c6abd895de1e0db4a4c44bc457e24b77955f582b60d2330a6c83da2cffd0d",
+    "size": 25794
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/failure_summary.md",
+    "sha256": "53517438e6debc7d59e0fde6be1882e98649a0f6a7efd8906635b817426a4cb0",
+    "size": 259
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/verification_report.md",
+    "sha256": "2bca906ef47aae67ada63c46aef336cbef762df2496629dc99160554614e5fe4",
+    "size": 36
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/dependency_decision_context.json",
+    "sha256": "6203f0e1d93092598a51fd52529d2241b967fe9fc4f8434c7d6bf54e0b16dade",
+    "size": 572
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/target_stub.lean",
+    "sha256": "ee4cc387ed8c948476f4e32b570077ecfefc074ac86748de6477e8aa8ab2ba21",
+    "size": 2296
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/operator_prompt.md",
+    "sha256": "523d610116fda529911d3041593529a49f8bf5a20d41f370d2e00395f43c54ee",
+    "size": 2282
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/metadata.json",
+    "sha256": "05f7562d59ba2b3252d55bfefa23997b780a6c5bc37b19e06838288a37df27b1",
+    "size": 4400
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/search_manifest.json",
+    "sha256": "52d7bb1a46d93c558924426daeb98082b244df356d46f7fa3290e16ab8c79c66",
+    "size": 51764
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/attempt_history.json",
+    "sha256": "52982c655f107691972dd1a24d25422275446be0d6b0ae832a0f4f0a74125ebf",
+    "size": 45
+  },
+  {
+    "member": "./artifacts/phase2_prompt_packs/thm_11_7/imports.lean",
+    "sha256": "f8bc9c468c8d46fcd872a55bc392fa6000af0e2838cdc61ee3b470380294face",
+    "size": 283
+  },
+  {
+    "member": "./artifacts/plans/experiment_targets_plan.json",
+    "sha256": "9fafe55f9bc5ee5ad37e4430f6c4c7ea4f9f5c8dfc7dc0e163028c4512ab61f0",
+    "size": 2502
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.claude/rules/30-security-secrets.md",
+    "sha256": "758862ab8c52c1ee3694b6dc2e0e88fcb08b3d9cc4fae0f33ab9db92155e8467",
+    "size": 1322
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.claude/rules/20-artifacts-and-ledger.md",
+    "sha256": "4c8ce27f6e6f7beb94d65601db9995e4809d9d78a23a5306aa60babfe819edfa",
+    "size": 3499
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.claude/rules/40-folder-playbooks.md",
+    "sha256": "8c4ad3686b34db13fd1461389aa5de5f5c1a45a69d7b6094ce7693aab5f2b1e9",
+    "size": 862
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.claude/rules/00-repo-boundary.md",
+    "sha256": "bef816dcb0560c5a5833d49e450244756a1091b50da48ba41b5254d7523c010d",
+    "size": 3643
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.claude/rules/10-phase-runtime.md",
+    "sha256": "511902c475a5e565f9f966810a936a5e388bddb735476a1ac25eb9f72f2d7146",
+    "size": 14946
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "sha256": "59a77a4005809ac7fa5474611dc078e01efdbef67b6ded3f884f6744c170a507",
+    "size": 817
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/COMMON_RULES.zh-CN.md",
+    "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+    "size": 1541
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/HEAD",
+    "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10",
+    "size": 23
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/refs/heads/master",
+    "sha256": "ed287e93500e52cc824ffe3fe1767aaba91a7095a9dd6e8f4e51d4edb77588b9",
+    "size": 41
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/index",
+    "sha256": "c98cc33db903107d553e5a67469872680da60430ff828748a385bfb552e4c14c",
+    "size": 3801
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/description",
+    "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    "size": 73
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/info/exclude",
+    "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    "size": 240
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/config",
+    "sha256": "05becdb83bb897f6103c8d91439e2e9092144edf5b3955a746fce4975c12bfdc",
+    "size": 130
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/COMMIT_EDITMSG",
+    "sha256": "1ae6a54809b43832592f5030845dc2b589e025964fdcf8d8c0a787e30a557e14",
+    "size": 45
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/logs/HEAD",
+    "sha256": "1a28185d304010e48dbee4edb94cf277352e7ec3bfeb1f867bfedbccf39df7e9",
+    "size": 393
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/logs/refs/heads/master",
+    "sha256": "1a28185d304010e48dbee4edb94cf277352e7ec3bfeb1f867bfedbccf39df7e9",
+    "size": 393
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/pre-push.sample",
+    "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    "size": 1374
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/prepare-commit-msg.sample",
+    "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    "size": 1492
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/pre-commit.sample",
+    "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    "size": 1649
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/pre-rebase.sample",
+    "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    "size": 4898
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/commit-msg.sample",
+    "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    "size": 896
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/post-update.sample",
+    "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    "size": 189
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/applypatch-msg.sample",
+    "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    "size": 478
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/pre-merge-commit.sample",
+    "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    "size": 416
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/fsmonitor-watchman.sample",
+    "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    "size": 4726
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/pre-receive.sample",
+    "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    "size": 544
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/update.sample",
+    "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    "size": 3650
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/push-to-checkout.sample",
+    "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    "size": 2783
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/sendemail-validate.sample",
+    "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    "size": 2308
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/hooks/pre-applypatch.sample",
+    "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    "size": 424
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/7f/d28141cd3a6e6071bef13ee875003db66c5698",
+    "sha256": "d593c746d2eacac52dce02c44627cda97c80643b610c0f6fb9bd66f1a609d5e0",
+    "size": 67
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/cf/a45a3d0513d1652173f7ca175f2283e46d8ca8",
+    "sha256": "c8f24e3ad6579c5f1f1b0427b68bbba398586408bb719b7a89458b7814133b2b",
+    "size": 1680
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/cf/9ec80be049d54283395731ccd9a0eb26cb97dc",
+    "sha256": "a0ddf14864aa27cc4f7da39e19879eb51c65970477753201d0c18b762d0b2ce4",
+    "size": 418
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/bc/af406acacdc692eb39d0d76a950b22981101c3",
+    "sha256": "271da98511a6d52a18a7f3497de2c6d28d70a1c152368eba080cb1be048dc607",
+    "size": 1382
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/46/881455a5dd34a2ea9d3cb8357d3cf11acc5303",
+    "sha256": "c46bdb214d0f0e76d734cf666e45e13a8ccead98ed3a2a4e52baa53a279ecbda",
+    "size": 3444
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/27/6608bfdf670e684485212a1f49c888c4c6cb99",
+    "sha256": "234fa45b88d81549f0a4256d064bea324a1d74180a7cc3cd1ffbc25e4f0bcda2",
+    "size": 124
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/9d/d15f016f0fcbe4ac19f61ea0832d701adaabc7",
+    "sha256": "5af735f01b2e51063344ec9727f2362cd24428225a031bd708a1e79d850e8a5a",
+    "size": 164
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/36/ec800822fec25553a4574749e0145a54cdf07b",
+    "sha256": "5f887fcc4515252e770449c92feb73e945aa0b30f18d31a7f8b57b58cd1ce78f",
+    "size": 54
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/9a/4f819e13542b1d0d925da08314748807f03870",
+    "sha256": "9c214fbe5db8cdfce78b0c115fab566326021c0876ef57956ebd7b3de689e038",
+    "size": 490
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/75/a92e18533c5c9bc107bb19e4c1ac97e4f0538a",
+    "sha256": "ecdd2697de396318108cfeadee680fa7c57241407db17b6a4fee9ab416197dbb",
+    "size": 196
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/66/c3cdc28204006529bcc0ea42988b587c0b9a86",
+    "sha256": "604e1cb21108ed77c38e547da43128a85e19274810a59bc9ced1df590a106962",
+    "size": 524
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/d0/c9fa7e9b922d49d1b9784eb2a79e5561b9cd1a",
+    "sha256": "4ad70c8e34e6ce84bf0150bd1b2526f1bd5271c7e255df8eb9708f90627214fd",
+    "size": 56
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/d8/ed77059390edb4bd5c81e15c4310d05a42cc6f",
+    "sha256": "255851d5d012cd1fffd36efff2057019cb10ac39cb6173b539749cdb660a6541",
+    "size": 72
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/57/9c7360b69d5f50ff97d8be7788e07f858faeec",
+    "sha256": "a4a473446f8fdf8dea7e3d613cab65329109af120d5855193ad2836d33b01767",
+    "size": 527
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/af/1826f1e44ead5e9c35dc8378611c5eb8654cb5",
+    "sha256": "fcf09f53dc3b424c431532906644569f8160e0056bff090daefff907d47a9e1c",
+    "size": 154
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/e1/bdc65f5f93d7e8722201c91338b48d231082f6",
+    "sha256": "2db301d20b1411e2f05f952ab6e5c32bf2cbcf36dbfa1ee75b691aed7089cd89",
+    "size": 414
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/8f/e9e3c978127dbd8b2a3caf69371346a2a54728",
+    "sha256": "139bbc0cac3bd0e30d6859c462cc37b2ad8019717dfd0be281c14d7a722a2ed4",
+    "size": 208
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/b7/0a379ddd6392a96bbe65b87233ca4bbf044619",
+    "sha256": "29247deee929622e590e75e87ee867267f5b0024e35b4b8d446c716de067377e",
+    "size": 1058
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/76/c0fc83bff4b327ff632d3af262032fc72fe9dd",
+    "sha256": "874bd47ea61eee4bfdc8a650adf56bc036a6ef60610fa28327035ae6be5f2ee6",
+    "size": 4637
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/a4/ac7d7b16b654b1e3b15100e36b10a5e47957ef",
+    "sha256": "7b7c7ca064b816e9be89e61a42abf6f0e5df511d9b18185bdcd631e34c17cceb",
+    "size": 514
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/d3/2ebd78fd01eaf2b756855ddaabbbfa0323888d",
+    "sha256": "238b04795819d755e82fe751cdac529bbd79e472fb91f0c9689206c1ed929de6",
+    "size": 1854
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/71/db4b93e6c11b51a6e75df1e23a9039ffdd45d0",
+    "sha256": "95d8cca6e2ed09b4bab169cd74d652bbdf4fe510e320de74f671da2fb9371978",
+    "size": 1054
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/7e/d5750553211ca39d6989718fe73230bd3563d5",
+    "sha256": "7da16d011c8c6478b7d081b9e12d69610f02b6aa7c956646bfe45446c6a6c588",
+    "size": 1043
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/14/a185e19d6a3cf0fc2c536b8a545c357235a318",
+    "sha256": "2992bd5785d20868e3515f2785d1351be2fedbf4bff4b3e19318c2e98d83aec6",
+    "size": 1668
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/fd/819f7db3ab81902d8146950cda965a7371c1bf",
+    "sha256": "6ee827d821b70505f73a3581bec57b18511c7025aad9c08722e86aab38208cad",
+    "size": 67
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/67/8d1e9a3a650554e633d32b8c48b43ec2fe878a",
+    "sha256": "1eeefbb046f3d3431f2f57f160c22a8c272f3f3d0103d9930baf3a7b1b8d0762",
+    "size": 1232
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/ba/0aa9ab3ad18be165abc726e6aae7580b20caa7",
+    "sha256": "d8cd5c2522652c4419ed53d84804bf421033947c88b4a2d946f1cb512d7bb955",
+    "size": 57
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/04/e4e88795ca38a7716e461c4e9379e468571bdd",
+    "sha256": "e4234cb02314ac04d1b46894a1cf8f7470f12b6ae7940f263f02a5bcb0fd0b1b",
+    "size": 1806
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/1f/b49133470a7aa1d892e131a3b55c867e035e00",
+    "sha256": "be917bd29c78093d24f6210ecc6ac0a4949138567e40fd9b1a377fcfcf356e6a",
+    "size": 465
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/72/fe4d96be87e0c182538272f13672708afe5c7b",
+    "sha256": "8e4de8b1c6278f70cac4b8b8a59392e37235bf56735166533148ef4aa52b0681",
+    "size": 234
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/72/02c63d58b4d36062dc8cf1bfbb3be6b827a657",
+    "sha256": "67a7e65572d3d69ef9eb9e6e2583d503627245922aaea2acec064938a20a580d",
+    "size": 42
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/6b/fc13585462d208c71e66dadd835742b74eae3a",
+    "sha256": "2b4436fe04e55b00a2fab92f69cb411dbefb9e087b7a7bb8cf4152ac41df511d",
+    "size": 516
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/df/cabd3e84b097361fc53c518bf2f5ecb6f02265",
+    "sha256": "b838190a4a4e7646d72a66447a312184be04fc6824f81baa97ea44d3c8be44ff",
+    "size": 57
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/3c/827051f1d05316bb8df6ae3fca9130c0670716",
+    "sha256": "de4d5f9456512bd3d6b18dde8845e1498da4da4e61836f471603eec76ab1277f",
+    "size": 489
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/fb/4a4b043100173e9cb17f1c3f63d545cb7c7389",
+    "sha256": "beaff1495d7231fd4d386fa48d00bb5e3f41c0ebe1bac4f46472ea8687d7ff52",
+    "size": 2217
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/1d/9c133b17d7c40cd2ff86c18c6bee75cce359f2",
+    "sha256": "2c0379f033b982593e0218901bae532d179efc28dbdaaa41f40ae58c0157187b",
+    "size": 686
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/4b/bd09415bff4a4fcb76996abefe0fc75e2b5746",
+    "sha256": "34a2d809c10a660bae39528cd6d109350ac8300bb20d4a9b802936c03b11e946",
+    "size": 819
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/7c/971ebeb586540725e9b8c3fda3d489f0dcad66",
+    "sha256": "3b437fdac39239ca080f0ce65814894d27e9fd976885d57b06cfbadf71ff5666",
+    "size": 995
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/42/d44757900640c4770ee520190aff21198aa3e3",
+    "sha256": "7801c84cbbc50f35ef838cf5cee93e8b841d032c0a085f9e9c1d4f191685a693",
+    "size": 1090
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/f5/eabbb57be1e6d260507f97043d3de2f05c3488",
+    "sha256": "c82ca4b835d26c0c5b95f8edee4153a0cc7488bdca3ec76918f12140e2190bd2",
+    "size": 3544
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/a2/e025d130c74acf950af645c3264bee4a8276da",
+    "sha256": "97a0aba4fb6198df5a7ded23f61eb1950a17a21bad309b2ffe588cb229251ef9",
+    "size": 139
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/a8/92505387c3d14d498690ccc129dc74b5bc5a1f",
+    "sha256": "aafc492a5b699e9a026d680a3bece11eb1967c11503e50c8590f3b88d61561a9",
+    "size": 92
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/56/1ad7126be6c074c10065993897d75d197961b1",
+    "sha256": "49d6c0c54ae9b1c8f9ca6eb35775b75eacb166c472b4abaa60008389a8371f7c",
+    "size": 39
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/15/650b16013a1418f7a9e72a920bdc391d9c9eeb",
+    "sha256": "f129d4f5af26dd42a7ae1cf5d05ec9d1a1b6dd2d5e8092eea1d75abf0a4947c8",
+    "size": 1419
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/81/edf3a1cb7fe47ba0c5cbb8df4b2fdbe5be18ca",
+    "sha256": "9dea7182d1ea4adff0a356a0bb613a21784f960cf632b1994a4638fd87e0b8ba",
+    "size": 88
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/c5/b57f93d761b3604376ec2ae28594feffeb09b6",
+    "sha256": "ae7ca5a9c733b539a012b7b2556043410aa9ebfd0438457e252889170f1c4baa",
+    "size": 53
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/b9/5f966f8256687cd4790e4d8f88be6eb5a2298a",
+    "sha256": "3e1c21d418c6ee77a4c20be52210ca3471a681fbfc012c8a8a9c1433e33dbe26",
+    "size": 1217
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/b9/8be0006254eee39a1a2ab6d25bc99faef6b42c",
+    "sha256": "09daf4bf36fe3820281f1e0a755b2540ea80717d3c3898d2dec5dcd7448b347d",
+    "size": 775
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.git/objects/f3/b4ca6c50db3e35c85aae5287b921c40e653685",
+    "sha256": "94b1d5feb355bfbea40ff065068e5c96dfc4ea5063fbad4fedf83c38b1999f3a",
+    "size": 188
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/AGENTS.md",
+    "sha256": "ad093c2260f7d1e8195a167b96c15db800485a985dbb70881a933c5a056d3a59",
+    "size": 10985
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/SEED_MANIFEST.json",
+    "sha256": "26ac517efe0d296eb3a0589de913f927a5ec361e395001ee17ed4f7d4c0ee045",
+    "size": 17031
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/SOURCE.tex",
+    "sha256": "48e82a58dfca3b39e242569236511a22175652b659614688af33baed5b5e4804",
+    "size": 1961
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/pyproject.toml",
+    "sha256": "92bb5b7d61b075ff169340f8a6cf9cff15b6a4717d87b053f7bb35cee81dcd9f",
+    "size": 688
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/inputs/experiment_targets.tex",
+    "sha256": "e3068f0754808da01fd795fb1807c995e5f6040854492d3b22c492a92db9ae70",
+    "size": 2145
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/lake-manifest.json",
+    "sha256": "b583e42a8c5434792e7b5e04865a354710a9aa3b8f7c90665cf862d300c33c4d",
+    "size": 3582
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/AGENTS.md",
+    "sha256": "c8352493af14b6d5c548f604486075258ab0c96420125d1beb8fef3abd5334fd",
+    "size": 458
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/AGENTS.md",
+    "sha256": "6548f7850ebcfb73840352695597beed56f25c07b93299a7c5d2c41251063e9e",
+    "size": 802
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/authority_relocation.py",
+    "sha256": "9e59a01c9509c1cbb96b7082cf4a965dde5685e01472bc123d5ee7455611b171",
+    "size": 41505
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/block_id_aliases.json",
+    "sha256": "81f0d9f6a17f0110a8b1c7ef7597cce5524ecfcb781fb403b2d9b01407331a58",
+    "size": 2490
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/block_id_naming.py",
+    "sha256": "d8b3eef3142c046e0dd6ab4b9d193c46f39d0b52363398e04bb12ce2631398d9",
+    "size": 11941
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/cli/app.py",
+    "sha256": "5210bc3c4cd0fbf2c00d568d5a5c6708ce6ac048e14f63aae35b140c5d81176a",
+    "size": 47841
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/cli/__init__.py",
+    "sha256": "7e64d212ddb97d9234a18135e60db18f6db8af9241f4fbe370452ce75df4c498",
+    "size": 45
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/compiler.py",
+    "sha256": "7376347c4b201bddc2d6a59daa5ada7af907f2268663c387d7650bed734681e7",
+    "size": 10242
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/config.py",
+    "sha256": "f2cf2059e0c70fd8d469b839cf3bc7d45f1ccc3564bb7a96ef22cd13718058ef",
+    "size": 809
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/context_manager.py",
+    "sha256": "c055c57ae9443c51f7254c053ff8c7e2d612116a966921c3576aca1b400b7a26",
+    "size": 6194
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/core/canonical_resolver.py",
+    "sha256": "6b1b55bccecf178261468e3dee080599698f32055528746b5d9d9a890e8d05c6",
+    "size": 7426
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/core/ledger.py",
+    "sha256": "bca6bf20efa889278dc3af3559c6e1486a8f7633d9e621cc9e76d7f05c829e64",
+    "size": 302
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/core/legacy_relocation.py",
+    "sha256": "49cde2f827c3d19acd014fd83e5986af962692e8690870ef0b2234941aece280",
+    "size": 4000
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/core/legacy_support_projection.py",
+    "sha256": "d77e76c2c9d86e577bb893f8d4784651cf7eb8b2bb762318ddd410178a1d9242",
+    "size": 3315
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/core/settings.py",
+    "sha256": "ca79d2c18ca8e63085416eaeb5b8a2a3b9e359d2a8741a889f01f6e75572ce0a",
+    "size": 8200
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/core/source_locator.py",
+    "sha256": "e404332dbdb0655a53eacc45e4e576888726dfba4b957e93305356ac2317ccc1",
+    "size": 8472
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/core/sqlite_ledger.py",
+    "sha256": "b24b5c9f61a73e8e7521a9aaa7694c398e03a60be1aae5c44d14769dd6e82f34",
+    "size": 10443
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/core/__init__.py",
+    "sha256": "89ddc31ffb08e8ff042ef8761d346d013fdcd89a3fe9ae2b37658268bcb059d9",
+    "size": 731
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/dependency_decisions.py",
+    "sha256": "adb2abc3f7dadebc088709987813997dde16b421d8387d022c4def03dbfba215",
+    "size": 4540
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/indexer.py",
+    "sha256": "88d8c049d36a166f4eaeb0251c74de9269cb88a7234463cb941e916d41f3f8dc",
+    "size": 4730
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/integrations/__init__.py",
+    "sha256": "3c5aff574c584215a32a4e6873cddc620fc970d676144293b235e59f19a4c81f",
+    "size": 25
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/ledger_manager.py",
+    "sha256": "ce97016b7bb435c00122313d2329ecc394c49365365c5740f7b9fe0d01302963",
+    "size": 55765
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase0_ingestion_pack.py",
+    "sha256": "7d62898f119a66e1fdf89a3444355eeceec3b8801988ea774b11b09f4c0ae848",
+    "size": 11406
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase1_plan_audit.py",
+    "sha256": "3c2544f00fea82f17ab1b98e9534afbd4f82929656a47ecddd313a2bfc8f89cd",
+    "size": 11726
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase1_prompt_pack.py",
+    "sha256": "be79b1ee48b840a554f160f40b832c5194df351c536a1cb8ff6d527e17584de1",
+    "size": 17623
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_basis_rebind.py",
+    "sha256": "e1f63cffe3cd9a1ac0e01e51ba7b6e43f305a68583204571f6bb94573ccbfd74",
+    "size": 64501
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_batch_controller.py",
+    "sha256": "ac4729124e4384597dc649dec0cedf78197d7c177072e4908884feebbf51014c",
+    "size": 39287
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_batch_runner.py",
+    "sha256": "2f875f1a44c16300ab76e3f782d0933c35a14825f1e545a151a598433d17ae17",
+    "size": 85511
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_dependency_gate.py",
+    "sha256": "9916629fbcd27d291357fa5b272eebf8c6fc498721dc725f0908d8292a5a8205",
+    "size": 35165
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_dependency_reconcile.py",
+    "sha256": "349d9b0fa4131b1f000d754b615a3e3027223336805f2789ed636757d3adba33",
+    "size": 8631
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_failure_budget.py",
+    "sha256": "c3c67397451d00f34e2a77a70e63825813c0ccd82192685517a1ce1905d0b807",
+    "size": 5290
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_handoff.py",
+    "sha256": "de0a0ae7c46bd639d19d24b4c7f32781225066f9afcccc6b6dd9d99a06a82e16",
+    "size": 2410
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_math_review_gate.py",
+    "sha256": "795af4249dde28eec41e457271248795ff766b6e7a6bb7dc8542ff340b9b828f",
+    "size": 16846
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_obligation_tasks.py",
+    "sha256": "bf63e60021fbac7e85b918787db4ceee2593a9157a4024f3c3d23e9bab308d38",
+    "size": 2982
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_output_binding.py",
+    "sha256": "27cb4cdfae38f7dcd00f9de6d6287499149ef77ab01cccfebd08496d778683c7",
+    "size": 3099
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_pack_generation.py",
+    "sha256": "4d927796468b201278a69ec78b5e8bf1b9ff21b6aaba506feed9725b2190461e",
+    "size": 6407
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_pack_shared/artifacts.py",
+    "sha256": "53468369e73a70ac3b253cbd4404a9c9aad129ebd98e1dbad79e316a98cb8d94",
+    "size": 13920
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_pack_shared/io.py",
+    "sha256": "94785c0ae12b10f0d8aec60965f36b6f60f549f743ba06419b526b87003fa3af",
+    "size": 1974
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_pack_shared/review_basis_parts.py",
+    "sha256": "f642c25ca4a8eba0a2dcdbef7409597e123d99c9fccdbbbfa3069a80cc888e14",
+    "size": 12519
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_pack_shared/runtime_state.py",
+    "sha256": "509826f1e35728a66387267ea42fc6f0b00f261543027c710a92ff93a6f8a59f",
+    "size": 8168
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_pack_shared/__init__.py",
+    "sha256": "938d6bf8327c8d57d40fd9e022251ec1ea6e2732bb46ebfa9e2c29bdf8c53aaa",
+    "size": 186
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_pack_views.py",
+    "sha256": "891f02d64cb59e050a4f2582ab15f0d484c54fb429250556572a21e97264626a",
+    "size": 64678
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_prompt_pack.py",
+    "sha256": "7f87f028c474a3a34b0300475033296a37589c38f86e00e229549dd0699dcd15",
+    "size": 277248
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_proof_obligations.py",
+    "sha256": "15054980729660dd917b999e905786b33e283ea695a9faf14a4d6dfe3a64bc25",
+    "size": 39909
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_review_apply.py",
+    "sha256": "88f0566d586a31a10409412cfc13e55a01aecd6176ae88ae8992fc2ee4cc13b4",
+    "size": 55619
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_review_apply_receipt.py",
+    "sha256": "f02030344c4b76c58edbbd8a066f699b3eebda03a7c44a9086df775a19d8bdaa",
+    "size": 5046
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_review_decision.py",
+    "sha256": "85c27413efdad75c74fea1969692915c9b495034c475609c85b8bcd7d010cd27",
+    "size": 3584
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_review_loop.py",
+    "sha256": "fb3211714393dcdbea0b414bc3c39cf2909b81d4cfa697d677b5951b294e5db0",
+    "size": 64209
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_review_request.py",
+    "sha256": "d2367fac0b96ac60c3f69a722af33730849fab360883378eb1cca464d0fd802f",
+    "size": 46139
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_semantic_fail_triage.py",
+    "sha256": "a9c97f879f7e1044af34310fbeb660a7692218565d04950cddc1ebfe4353a2b8",
+    "size": 17124
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_semantic_review.py",
+    "sha256": "3676a7ce3a41355a96622d719d391d37825a18c6df90d4e8326de87e4e2e1231",
+    "size": 80637
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_softdep_pack.py",
+    "sha256": "3c0873258011689dc5b5f2057e23c8255abbd3d0dcbf677a8057610de62bf5b8",
+    "size": 20138
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/phase2_task_status.py",
+    "sha256": "54c0bef7ebdf3362e2ac73c500c2a194b2c5cddd1b88af52ff440a774db6030a",
+    "size": 14672
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/reflection.py",
+    "sha256": "bbea4a4fff6b42f259299e2035cee2bd5ba37cceb6750db8839f215987489e24",
+    "size": 2183
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/review_basis_diagnostics.py",
+    "sha256": "698ae90e90e0214d922932a5dabae654472f2b2f22334bdd35def487c95bdcfa",
+    "size": 6354
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/review_comparison_pilot.py",
+    "sha256": "51e71bca8db570e1f621852c2ea8b40dec5f351b5cb27f73c40cf54f65b5354c",
+    "size": 20572
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/review_versions.py",
+    "sha256": "57820239d1888337bb4618e849c3ae49167fb22320d8a166795209c13ecccb93",
+    "size": 1436
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/search/indexer.py",
+    "sha256": "60036390af6936aebacbed2ee55c57d65f3f3c926edda76dd0c30bcb16304fa0",
+    "size": 88
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/search/searcher.py",
+    "sha256": "bc834493ae75754e58590e934d17d700751a42546cbd81e2db75900074ea5b1b",
+    "size": 91
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/search/__init__.py",
+    "sha256": "7f0020c74dd1504e569e230f3b3cb27b693d28737af1ce479b8b4797d8dfcf00",
+    "size": 127
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/searcher.py",
+    "sha256": "b3f8c20360aa1753f1aa20a9efbf77c36db70ccfb4343c7f32177cfa8fa46cf4",
+    "size": 9864
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_boundary_delta_receipt.py",
+    "sha256": "3594964a4b0d71c4323eeb49f3a4076efc75ddf8def514475234677201455d10",
+    "size": 111222
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_bundle_delta.py",
+    "sha256": "a4a42f1f02a4221384d7ef57fe22ad0f98055d8b05fe41687934ee23ba322044",
+    "size": 11252
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_catalog_sync.py",
+    "sha256": "bdf58bd22f1570d3ba3ddbdb3a381f3b43b5685aeaa2a7a93bf507dba068cbba",
+    "size": 4254
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_cli.py",
+    "sha256": "d2611ceeb0c90386600c6b5d7c879cca717262106e2e63c7255f3ced16cb6530",
+    "size": 32066
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_evidence_bridge.py",
+    "sha256": "7cb2788e73299b2f2a541385bbb5bf4cb64f0f5dd2cda2dbfc8b5c9abac8809f",
+    "size": 115338
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_exact_build_batch.py",
+    "sha256": "244d8a125c703ec1879f07602ada26b27edfd6364eb9da4e1b6be20d41106de4",
+    "size": 28755
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_invalidation_recovery.py",
+    "sha256": "31afd68e9b46348d366b9ab085f92e26b1ed652d90604d5900b14b37c9ea5ce5",
+    "size": 19117
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_migration.py",
+    "sha256": "eceee92ea30342e518ebcd6218775db980d0511956b1a7d518090f788388bf81",
+    "size": 174374
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_pr_review.py",
+    "sha256": "e620a7bd4c6382e6f70aa4d729cc882ad2b2444d51fda0cb7848bde1221a4cb0",
+    "size": 38717
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_reconcile.py",
+    "sha256": "201c7544a996d6e78e2724acc919a6bd11d7b86a5c6e873ab60f40a00ff80af1",
+    "size": 43210
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_review.py",
+    "sha256": "d4f67574d42c3d8fc64610f22f43df071f0b78f7d62d04336ad025bb6c83e693",
+    "size": 12895
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_review_apply_recovery.py",
+    "sha256": "c9936a7d9e2f27a329faf82e543c110d5761eb2110845c97ab6b1c3d81fbb7ca",
+    "size": 27305
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_snapshot.py",
+    "sha256": "03eb2f7a17892e332a81afa6912d24908c1c6a6f90275b0c3b42af83d1791f7a",
+    "size": 11236
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_store.py",
+    "sha256": "75c0d8454cde398c430f102a6b6bc1adc16d95bb029920bc77302dd235f24416",
+    "size": 129924
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/state_transformation_receipt.py",
+    "sha256": "2168f2814938ae323341f456d4d4a2926d14c3d2107e0e5a15802f2f771d2570",
+    "size": 29118
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/task_catalog.py",
+    "sha256": "c2e71d22abffea249c5da66f6d58a52faba73c8e68421693ee82bb20448adba4",
+    "size": 45176
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/workspace_status.py",
+    "sha256": "3971a1bddc62e08ee5ea7ba5416e8fff9fa1df7b15a366d6df4116b3d3824676",
+    "size": 54864
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/__init__.py",
+    "sha256": "3a0000bdedb71b3934bf479dc13253aa6c46c4789bdfb1d2f81e43d9eb53032a",
+    "size": 36
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/src/formalization_engine/__main__.py",
+    "sha256": "108810046090d995a4c5a675c986ab3db92b696a07543efa560cee6dd3d57763",
+    "size": 84
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/lean-toolchain",
+    "sha256": "465c68148dd061230368e3cbe5d1d2973069172b48b684c928ef1a665b627832",
+    "size": 26
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.gitignore",
+    "sha256": "c5e849a047287b5a1514a350175e5b90c8360133425c8a06b29b69f3f9faf292",
+    "size": 29
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/manifest_by_chapter.csv",
+    "sha256": "e015a967c22a089d01b10c1b7d38d930a75c189da01fb781bbb15204429d4df5",
+    "size": 3190
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory.lean",
+    "sha256": "ebbb322c04b9f58bf875cd0229dc62e937834e6585551d12b1ab097f6bb0c88e",
+    "size": 37
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.agents/skills/formalization-engine-phase2-entrypoint/agents/openai.yaml",
+    "sha256": "b64f163c68070d7354b240b33db3d2f6654b57c50bcf721e9f9340192c869bdd",
+    "size": 244
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.agents/skills/formalization-engine-phase2-entrypoint/SKILL.md",
+    "sha256": "84807057c4b30885b6717ea0bd25fe0d8123f389dbac6338f3ef7510cd3eea1c",
+    "size": 6682
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/docs/interface_dependency_policy.md",
+    "sha256": "caf9a30eb172ceeb0c3d9ba7bddf95c46949dc25d18c3afe399b4fd9d38e1d3b",
+    "size": 6748
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/docs/phase2/agent_review_contract.md",
+    "sha256": "68ed784fcfda2c0f1dd942eee9bc2de0538dc6f6e3f11d168233400854b1de35",
+    "size": 9090
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/docs/phase2/artifacts.md",
+    "sha256": "3e7f5dd9414ef370f179a3db19f9c122fccd5d50cc883609c0f962a7b7183b1e",
+    "size": 3941
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/docs/phase2/output_auxiliary_modules.md",
+    "sha256": "93034c604dd0c4b1166e0f2d8c88a63f2d8ac7bcae723eea5ccb341cb91985c1",
+    "size": 3717
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/docs/phase2/README.md",
+    "sha256": "935d35373ac36e4ebbf027ef961dbafa8d5c2a78fa19dc74fa0b0ad919fda706",
+    "size": 3883
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/docs/phase2/review_criteria.md",
+    "sha256": "56fd890faf3f331b7a26706d872637d97f648e7c4cee21f30b7e48863335430a",
+    "size": 2662
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/docs/phase2/status_contract.md",
+    "sha256": "d8ab0cbb45cd21d793991ea62618283a3cf3f06d3d4da1487f548c1a00f5a99a",
+    "size": 5676
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/docs/phase2/workflow.md",
+    "sha256": "2a7a713751ed6708656181bb6444d7b019191ed5f8e94c819b80b3b82fa588c9",
+    "size": 17332
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/README.md",
+    "sha256": "b2139e5e4fe35d6aad99a606e03e5d2809028044e35eb46244dd91e051bc5470",
+    "size": 278
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/tools/check_repo_hygiene.py",
+    "sha256": "d9b601e0e69aabb41e7327870352e44a7f6a8d4b333d7e43f7d88ee356af1e49",
+    "size": 1458
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/tools/phase2_review_decision.py",
+    "sha256": "216ebde60d995c98f7b2342a3fcb4dc40e3e486ece3798a913abadc6fa1c1bfb",
+    "size": 4092
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/data/task_catalog/catalog_policy_v2.json",
+    "sha256": "9a5b93c400e01bc9a2e583c9429603c039bc2394ed2b1db321c45dcbaabf0958",
+    "size": 1529
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/lakefile.toml",
+    "sha256": "243c2a96b5d013a9bc72627cb76bd6148c1a734b9eb083fd58614a3c55c094a5",
+    "size": 855
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/plans/experiment_targets_plan.json",
+    "sha256": "9fafe55f9bc5ee5ad37e4430f6c4c7ea4f9f5c8dfc7dc0e163028c4512ab61f0",
+    "size": 2502
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/def_9_1.lean",
+    "sha256": "c03e02565d8cd10d0d65e6ad4b94ce6925071e4eb1bcf52a51a35c267b390b27",
+    "size": 5995
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_06/def_6_3.lean",
+    "sha256": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+    "size": 4076
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_03/def_3_8.lean",
+    "sha256": "54531e9768e1e767ae6667a86211d593baf9617e24be7a39aca349dd7e083ee8",
+    "size": 1053
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/thm_7_13.lean",
+    "sha256": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+    "size": 3096
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/def_7_3.lean",
+    "sha256": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+    "size": 2259
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05/thm_5_2.lean",
+    "sha256": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+    "size": 765
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05/def_5_2.lean",
+    "sha256": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+    "size": 319
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05/def_5_1.lean",
+    "sha256": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+    "size": 766
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05/def_5_10.lean",
+    "sha256": "d34630b37164b4976a034f7f6d2e966ea34bb7e4bcb07f2175fbe671e3b0e4e5",
+    "size": 122
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05/def_5_5to10.lean",
+    "sha256": "71a098455a75ac38e25e40f5a75151a2e8f4468ab9a502f67307873e13292379",
+    "size": 1829
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05/thm_5_8.lean",
+    "sha256": "d4c3e19494bc2f160e4ffb17bbaa49ecc9f719eb82728a2ac499869d4e6c74b2",
+    "size": 1955
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/def_10_2.lean",
+    "sha256": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+    "size": 1358
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/thm_10_3.lean",
+    "sha256": "2e4a799d071c7af5b07cc2ed0b36ba5af2fdc89217230b93aad8c85bed59d502",
+    "size": 2631
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/def_10_1.lean",
+    "sha256": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+    "size": 4687
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/thm_10_1.lean",
+    "sha256": "375af183416c49f80f2a49ec1e1845f0d71ef3a2e05d32239fae067bc80aeecf",
+    "size": 5742
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_1.lean",
+    "sha256": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720",
+    "size": 13556
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_7.lean",
+    "sha256": "c250b3dfb4ae8562e8de34b6e9a6d47dc79b8e6844634de62366f5184bace287",
+    "size": 85
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_5.lean",
+    "sha256": "3b545454866c09cc1d43cfd6a37a2c4aa1b93948d53718c1460d99140faeac48",
+    "size": 10823
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_4.lean",
+    "sha256": "a32ff1cd25934f731da1465e080d7c753623998b3618691924691235a2526e20",
+    "size": 5053
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_2.lean",
+    "sha256": "cf7d125e1244c88b13df375e2466028407b3e523957bbc9f4f4b39a91e30fdee",
+    "size": 3028
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_09/def_9_1.c",
+    "sha256": "7366c81b2aab576d74b95c8537d969eb2e3799e9da4d51782c25d6f695040dec",
+    "size": 3118
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_09/def_9_1.setup.json",
+    "sha256": "592b3966e049974a20e2d33bc7fd05f7998371a734d6baee7dbe3a3bf6b98f1f",
+    "size": 4383652
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_09/def_9_1.c.hash",
+    "sha256": "c8973babf18b9a6fc04fc7c891c5b81dd56aec87940c7cb32a7c3a4d91c856bc",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06/def_6_3.setup.json",
+    "sha256": "02071cb92968317e8320736fbcea0a980f9a678920190fd0d4c21de43debf0ae",
+    "size": 790865
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06/def_6_3.c",
+    "sha256": "ee4e123febf66ab89a79a9e4c7b9114c99c12ea59c0238c3444c44e1a2f860e2",
+    "size": 1747
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06/def_6_3.c.hash",
+    "sha256": "30e389f91e6d916f4fceb7e1a161fee8d2b587f3306663a6044f84c545604dfc",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_03/def_3_8.c.hash",
+    "sha256": "5dd6a735bc4eceeab75a82faecf6d4a2a67e04a015c5203daf82f461e55c1543",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_03/def_3_8.c",
+    "sha256": "324d7951a11d3dd06bce3dd9122b61e7a0b12f0ecb03dd308de5917535b3c2b5",
+    "size": 1448
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_03/def_3_8.setup.json",
+    "sha256": "02faf9484884a616d053aa8f2eaf164d730fcbdc0650e5e8ee6a219d59878894",
+    "size": 776747
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/def_7_3.setup.json",
+    "sha256": "2cfcd13a1aed8043f6b725bfbf45c2561c259b420179b09d8513b7141410432c",
+    "size": 1661838
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/def_7_3.c",
+    "sha256": "a15454b44fa62a697f7ed77877cb27712c0504f7fafef8cd84971b530819f46a",
+    "size": 1975
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/thm_7_13.setup.json",
+    "sha256": "54997b65f1d121b8083d370b0e554d3fd892b4ee58ffecdb5a0c6ad17c844bbb",
+    "size": 1661178
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/thm_7_13.c.hash",
+    "sha256": "43cf22f169b0493985089b9631055e8e2278d4bf967dccc74aae47626ee9d4ca",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/thm_7_13.c",
+    "sha256": "4809c453c3a5b1bed1d2b4bfd042b003ba972dc5efedd53ea10d8368d738ba8f",
+    "size": 2618
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/def_7_3.c.hash",
+    "sha256": "210c8a9e85e03f83d1de6c3ebe32312050eed9e695d504f4e570a6f345539cd9",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_5to10.c.hash",
+    "sha256": "0466ce8b89faef8475f48638796fb74998ea3e4f22ad0c1c457b1e3fd4a9abed",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/thm_5_8.c",
+    "sha256": "ac7e69432720754f89c4f875fbb86ff0963121dae0899c3b312aa7ddb3fe06b9",
+    "size": 2017
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_2.c",
+    "sha256": "3d27f277e38a8d21e5399eaf8899db2e4866dabbb016455d45d9a19a7e6d1ea2",
+    "size": 1482
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_10.c.hash",
+    "sha256": "ed246c02f69f3256b732389c996007818455b36ad9e1d1e118c77cc6423d0d6f",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/thm_5_2.c.hash",
+    "sha256": "22cb12ee79f54d8c7ea3db9c6a6dcac9ed2b97aa1b6f8d861a35598316fea0d6",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/thm_5_2.setup.json",
+    "sha256": "1b21e6763efaa65238cdcb6333a78d2352f4c48e27aec98bd4e4aff5129842cc",
+    "size": 1490412
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_5to10.setup.json",
+    "sha256": "56925cd777522f4fd8e5a22d228eb7dd00c1590ebdf2456decfc0e0b20d710ac",
+    "size": 1490116
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_1.setup.json",
+    "sha256": "79923880d03fddb790d6cc5e8dbed792e7bfdfa54c585911badd0106cafbaa08",
+    "size": 879560
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_10.setup.json",
+    "sha256": "38eec25c99e2b180116c6b79bfc4e31b684a27ecf51f2cf5c327750f820d30cc",
+    "size": 1490271
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_2.setup.json",
+    "sha256": "0708162a3fa5208c0748388c3ddbadd8cf1ecb9f528fb716187a7be15ceaef7e",
+    "size": 879710
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/thm_5_2.c",
+    "sha256": "ebba5ce5e6cfd11fc1f03472e4042a97edcb9fcd78934547307c0032e46fcdea",
+    "size": 1691
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_2.c.hash",
+    "sha256": "37d79f45447c9759f890db3107dc3c9a0127fe94a8f6c64c5276e886b0e2438e",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_5to10.c",
+    "sha256": "fa11cf711a6e44e63ec07934f9f4232226e991a36e9e92306ea01551b46d45fe",
+    "size": 1955
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/thm_5_8.setup.json",
+    "sha256": "d9eba6132261d5f3df0e3b0cee16b6680d22641b7daeb95b5f390875c724821a",
+    "size": 1444603
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_10.c",
+    "sha256": "412e8bccd1a364cc824b1c1d13dea581c42c0aff6a2b8ad421ccd93848c8f348",
+    "size": 1496
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_1.c",
+    "sha256": "437d1c7d23a0db6ebb99e8a5135a4f86c8fa57cc5ef7232932330d4bd2bfd5df",
+    "size": 1436
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_1.c.hash",
+    "sha256": "bcbf7438770d736a7e8db29826694ec99c82c6284e9b44d5b9e9f1fdac570919",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/thm_5_8.c.hash",
+    "sha256": "081421f9358c2a1030aa07ccfefd3813c5fdaf6d421c3d3937715dfaec4ca4ae",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/thm_10_1.setup.json",
+    "sha256": "2223550b91f4d3e46f69ae3d1bcb23805a8f1adf57d6344fcd119ea3e68f8f2f",
+    "size": 4383805
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/def_10_1.c.hash",
+    "sha256": "56a1996a181bda0ccb083dcdfbaff7835379decb57bfdd5764c22e950b1593ce",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/def_10_1.c",
+    "sha256": "0c40f16bf79442ac8a06d83c89343bf46ee2d96de8fe3fee3cfadb0a262ad63a",
+    "size": 2528
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/def_10_2.c",
+    "sha256": "b3c5c106f26ddba35a9d4e0cb114c5fdd1d18e5ee5e0614b5f3d508294dd2d9a",
+    "size": 1675
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/def_10_2.setup.json",
+    "sha256": "01866283aea81d84ab4f7976e8aa78b590f683a8a91dbf6391dfa07bedf07ffc",
+    "size": 4383805
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/def_10_2.c.hash",
+    "sha256": "691996a687fc27f9fa8858fadcc0ee9eeb1ab34ad26b7bee788e43f00ef0ea0c",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/def_10_1.setup.json",
+    "sha256": "269b662b4fa32e73c179aee51968629bee3012899378cbe25b61538c218bb43c",
+    "size": 4383653
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/thm_10_1.c",
+    "sha256": "c494f8108fdb358e6696662c1534a410e724b814acb051f5b228f6b36f58f4cf",
+    "size": 1675
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/thm_10_3.c.hash",
+    "sha256": "aa1fff7dae32bcc419b369d8c7f1e28ea3edb7810efbd520cfd21b526bdb9cf9",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/thm_10_3.c",
+    "sha256": "53f9969cd46df260c6a4860660bc867769c9545a42e7fd26b11a5f6f96dc79ee",
+    "size": 1345
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/thm_10_3.setup.json",
+    "sha256": "38ca7b7875ddcd48d32c90d510b7ec8e9440ecd4bdb171de04bba90aaad79663",
+    "size": 4383653
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_10/thm_10_1.c.hash",
+    "sha256": "8cc21b614ecb6f79e1c653d0fdec2ccbb0cc130c30dff3084d630b0d4e6e37e7",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_4.c.hash",
+    "sha256": "a37739ae98e87cb65543f2b925fe981e3de5c8e275bde5e129f8855b5e2541a7",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_1.c",
+    "sha256": "0e176f08f1ab8e87ef3dd3918a387d54533f6574a074691994a02e99b2a4a041",
+    "size": 1345
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_5.setup.json",
+    "sha256": "60d2a45eecec1757727cc190d56ff093bebe209ace6e64dbaf221d4c0a754265",
+    "size": 4385465
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_2.setup.json",
+    "sha256": "cd896b750dda4474187368963bb60908ee38f9c75573782cd0758e75195eadb1",
+    "size": 4383955
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_5.c.hash",
+    "sha256": "086e896655ac39d7d90a73e8720bc3b74c461cbb88411f5495f5893640c49010",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_5.c",
+    "sha256": "f0fb4ce616ba48d091baf341e56bcbb84a35790396f73c81a7274049e8cff16a",
+    "size": 2989
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_2.c.hash",
+    "sha256": "1838a210732925190c885c7892ebbceba7e6cf00b2a61f6da913b7636cea3882",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_2.c",
+    "sha256": "0741b23440e6a6ec1f5e403ccab752eb1cb70c489cc48d68f5b879af6f5871ec",
+    "size": 2002
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_4.setup.json",
+    "sha256": "b83a9a7af451ea56c7a6fec74004f4cbfa91da73779daf5abe218f10c37c2a7a",
+    "size": 4384705
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_4.c",
+    "sha256": "4431bc6d76828d86392f0c183e6b15cb6ad5c8a6a4ce9f3701433738fa299988",
+    "size": 1999
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_1.setup.json",
+    "sha256": "c506e9df128aa4682db83fbcc2120cd6f6c49df7b00871265139eb7e87d46ec8",
+    "size": 4383653
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_1.c.hash",
+    "sha256": "70d709a273409a254d640581451a7f3bdd480f8cc7760a3a5b7cecff6b16029e",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_09/def_9_1.trace",
+    "sha256": "38e57795b246f659c1ba5baa78412ad3b631fce68dcfb27e98a204ff86d10c6f",
+    "size": 3217
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_09/def_9_1.ilean",
+    "sha256": "c6554fe35e2c1db971d148cc68dd16ff3ced60408e43cdf9571b422f5c818755",
+    "size": 11815
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_09/def_9_1.ilean.hash",
+    "sha256": "435835bfeb9566096efbe2145d3aa673a387f95b97116a3c4ade9116fe359cdb",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_09/def_9_1.olean",
+    "sha256": "80c4fb7d170ab25f5580115a02433c94abc5d98e0eb86e6d6232ab8d0f9d49b0",
+    "size": 85888
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_09/def_9_1.olean.hash",
+    "sha256": "eda229b011d100acbb1f655be6f506a3a2a45784f958738b2c88d6277492bc47",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.ilean",
+    "sha256": "c7c1c17864ad695976746c762470d8138c47b9232480e2f57c8fd1e446b79562",
+    "size": 4782
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.olean.hash",
+    "sha256": "84d47036cc2e7ca9d73a2bf8ca9334ff4f0120291fa8763959b5f7b9efe213b1",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.ilean.hash",
+    "sha256": "6c8afd91c871a81b47f365bb455144aafc4d9addb8eff5cf25184b7dcc55285e",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.trace",
+    "sha256": "e88071d69fda0b3b636305f0928e5b91e5eafa4913484ef51122af2eeaa6478d",
+    "size": 3521
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.olean",
+    "sha256": "b493bbfc17fcfb5f0b9ca6683f12549e3aa9294f194d68ae62e9879495225e15",
+    "size": 46864
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_03/def_3_8.ilean",
+    "sha256": "3d45cfc1860996e3f7f6bb679bcf3110529c6ffebb0601a3300f0792b9e2b763",
+    "size": 2103
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_03/def_3_8.olean.hash",
+    "sha256": "6aa60d8a796df37614e0a88e35007aa4008bfff9b50e2e04ab7a436be9f71c7b",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_03/def_3_8.trace",
+    "sha256": "b6c8a1b9f592920068ad4e7dadfcb70c5959f8c2db2871924910c1c53dbd43f7",
+    "size": 3066
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_03/def_3_8.olean",
+    "sha256": "1b1522b6b0ce895879ec1ce09605596c5b47965b7f35c32cd51fa4a5665ea76e",
+    "size": 16392
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_03/def_3_8.ilean.hash",
+    "sha256": "2df98a55510cf2e6576881eadd7ab0e43350d13f383d9dc24f9de5c7a240463c",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.olean",
+    "sha256": "a28317235e2b150fb5b2eca3ce99202a472a50ff71a58bde15d2c4a146dd5a6a",
+    "size": 41552
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.ilean",
+    "sha256": "ea9fdd139fcba00bf1bd03f04d14b9d322199942fa4574da535b3f3eb155d0f8",
+    "size": 3896
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.olean.hash",
+    "sha256": "f0e1b48a9922112a43eb12df3ce476224ba254f2d91d59e015ef85750f02f8d2",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.trace",
+    "sha256": "3261482717ab157031ffe6d070fd3523629b6f22e78cbfe68e24da3edd733737",
+    "size": 4794
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.trace",
+    "sha256": "2e37fcbabbc1059bfadb9841d929094d5a2e9140967c3053818b13197fce79b4",
+    "size": 3638
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.olean",
+    "sha256": "e5dc38505a27dbd2ecd82f778563544506f94c091fa6734026565934ba06c5a3",
+    "size": 19784
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.ilean",
+    "sha256": "71ce686eb1163c4cdbe23fc28b4df53333f9dcd13154123b33c961995f236a61",
+    "size": 1665
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.ilean.hash",
+    "sha256": "b108cc8747626a126cd2daf4b2ac38503313b87f5385678edcf5002537a430d6",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.olean.hash",
+    "sha256": "ff5aa120160b7d98acea95e03c63b3604646e5bef87343947ed0db200ee951f5",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.ilean.hash",
+    "sha256": "020c550353a5c70907e0c4e59b20a7f7ecf91ecfce249e88ef389a988b5278c6",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.olean",
+    "sha256": "bb65ce300884345fa150b44d2e34ca55e8308df7ffbcb0c84463513688a43c10",
+    "size": 7056
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_10.ilean.hash",
+    "sha256": "8eb9536cea9e2d3131bcbe26a96c6b8a002b908c265bdfd3a6863bf7b6ff7be7",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.ilean",
+    "sha256": "c4c9a6d2c1b8b08eeca3dc6a648fa68c5ea48e916e0b5c105df0000d3a94c90b",
+    "size": 1536
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.trace",
+    "sha256": "c5983ce909e9cb74855b6f9e1a11ad6852838c75e2ea1e47967bcca150348f6b",
+    "size": 2816
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_5to10.trace",
+    "sha256": "62f95d6648664fae946156c379af7d79ec74179975954f2738dc410ec5b0e8e7",
+    "size": 4909
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.olean.hash",
+    "sha256": "09ff97d2f3a007f0f2757aded760a6e8bb8c6b76df47ab9d3df6196ececc7b38",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_10.olean.hash",
+    "sha256": "767306c651b0dccceae50811376069ddd6a32bba2ccc391d964a6c162bca49bb",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_5to10.ilean.hash",
+    "sha256": "4dcea41b2ae035f0992041309fd7c5c17b3521e63f4a4bf47b6240e8aa9e9664",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_10.ilean",
+    "sha256": "8caa4c7c29b3d427b4f7c89cdf71b63aaad0b232a01e0711ee631ed2f4cc307f",
+    "size": 170
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.olean",
+    "sha256": "517c93f369249564bc5b5624e1c7a991631f5a35794184ed57915db874794df5",
+    "size": 7528
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.ilean",
+    "sha256": "96145b9334804a6b3022151cbdd0755dda47715bd2d977da3bc2209b4bd213c8",
+    "size": 802
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_8.trace",
+    "sha256": "2ac86df8323f5a84634f924cd3381162757be46dede2b8a35043d899ffd76b20",
+    "size": 4144
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.ilean.hash",
+    "sha256": "d8d0f54ac92936c6505ffc2559e7a52098e7f4f41754cf5c6098360332c2bcfb",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.trace",
+    "sha256": "6c86d184aa3115dbe1253fe6583c02ae23abb52d1563f1eafad54001cd4e65ae",
+    "size": 3058
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.ilean",
+    "sha256": "d7f06a2a739489bef8be2a5f984831d43ef073ca3dd6ab0bd0518ec77e044541",
+    "size": 1630
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_5to10.ilean",
+    "sha256": "e3004f59f170410af8d5f60939aa50fcc3d7ca5a4627893109bb4522a317cd19",
+    "size": 3580
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.ilean.hash",
+    "sha256": "6297eb321e3d2090e20f4433fc9a6493555431163d704809e4f619f5fd986e11",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_5to10.olean",
+    "sha256": "c3892ed7b1f2ee0c9d613999e01e0fe327080e9aeedf5f01512f2248567867bd",
+    "size": 20280
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.trace",
+    "sha256": "29680e2d03741ed4d161264e008fbe270dd9baedde335e45df84b55ead8f11f7",
+    "size": 3428
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_8.olean",
+    "sha256": "45740de00cd49b9bb9401dd2762c9b22603088eb11f7a808e743039b44042e33",
+    "size": 17160
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.olean.hash",
+    "sha256": "673a68f28ab99a81a1a47b92db3d1cec9885fb4d749dc4633c41349c613e24fb",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_8.olean.hash",
+    "sha256": "a08819d68c2473d9eee0067cb1c305e1f110ace89b426d39696b39af5bbe5658",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.ilean.hash",
+    "sha256": "e33dded6b35eebe3c4347bfb5a4dd887c6bcf9b6e5f99b82a2073bfd3ac3b46e",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_8.ilean",
+    "sha256": "72b6c18811bec1d6a8e0b39cc04807552d84eb942c2133a13c20c1de82fa11f3",
+    "size": 1561
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_10.olean",
+    "sha256": "d2fb7df6e4450da270acfa5fb0d7b5c39cebe328863a5d7488e6ffa748f9808c",
+    "size": 2264
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.olean.hash",
+    "sha256": "f9be8157e773a64d89c198101d1233646beff9ddbce6b2b102d3074fffb6f463",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_8.ilean.hash",
+    "sha256": "42cc90012a13ea0119b21e071a82784dfa776f3c0bae509615f88467b044d3cb",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_5to10.olean.hash",
+    "sha256": "5944dfd1fc79260f4785ed6fcff8112369d803bd454cd82763895600192b13bf",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_10.trace",
+    "sha256": "e56630dcc2c0f2322742a57a7c84ba8809b8a580f75b1afe50429afb863d9b51",
+    "size": 2832
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.olean",
+    "sha256": "c4ef2f8569df8b48fcc82bcaa7dac7fb17d9f23aad7506efd94fcb878e41a787",
+    "size": 18576
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_1.ilean",
+    "sha256": "a03023ad3939a85ce920acf7a204c5e8bc35543b4ae35b859244110176b81c0a",
+    "size": 13653
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_1.olean",
+    "sha256": "c59e8324ab1cfd5cae63b051b1efd46f14ffa9ad5255b3b45233e5ae3c96b313",
+    "size": 102424
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_3.olean.hash",
+    "sha256": "9914226fc0a57a22500eaae71fd7ee12ec735d9641ea443c049013793532c877",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_1.olean.hash",
+    "sha256": "23ed4e0fb158932ad3c8a06773063d3f65c5e60118fe7e384cf3b100aec3648c",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_1.olean.hash",
+    "sha256": "5346bb0601ed5abc04122fb4f3ba6b31b68a5745e2e93ee5f31dd7038df74bb2",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_1.trace",
+    "sha256": "a836affdef8d1184a420e9f8af746ec61089a73b7f4c7214684bae122d2f6787",
+    "size": 3467
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_3.ilean.hash",
+    "sha256": "9f9b88527e37454b50549da3af454ae9b69426198cefeba3b834dd7e43dee2db",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_3.olean",
+    "sha256": "4ee3a0de64702d0b049d3c47c24362c28072e3892a10bdd7b4d8c1f387d06854",
+    "size": 69976
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_1.trace",
+    "sha256": "cbb060c610960a3df2acdf0dafc7c0ee39d8225574b6aa421f65f843d120ab8d",
+    "size": 3910
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_2.olean",
+    "sha256": "0a6b41f60b3b6994699c6baf75413598b8568f986c95763538f80c53f45db32e",
+    "size": 18000
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_1.ilean",
+    "sha256": "c31703cef733846235cf45dce2584c54c6acfa8c650fd3f241f086b0d7fbe95b",
+    "size": 7879
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_1.ilean.hash",
+    "sha256": "b47d6b80624e9547332f9d83dbcdf742c4b572ace45da1a817bb0289c08292ab",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_2.ilean.hash",
+    "sha256": "c4f6bc3eb94c530b0534a6185051270b97c3f368f500511b968782c0f1ca1e83",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_2.trace",
+    "sha256": "e122fb553a0354566679e0171a6d7e28adfadee857be66770a16b03aa4e78133",
+    "size": 3190
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_3.trace",
+    "sha256": "45e0b66249a50efb101a5c08cc4b4cb9bc7054052bd76f1915368e0fab20e0d6",
+    "size": 3228
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_2.olean.hash",
+    "sha256": "ea631a7e2c4618c68d471fb30ab34fce2352c92d9c7f9cb35048ba92eb865465",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_1.olean",
+    "sha256": "01e42b8781b96f3b64586597a00a52d693e554aad7f05276918c0d87bece5c3b",
+    "size": 102560
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_1.ilean.hash",
+    "sha256": "2805b08a20739cc5c9a7bca13eafec31a7f6ee5b9da91d96ecfdb9210f928047",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/def_10_2.ilean",
+    "sha256": "a52f09816d6bb64a330bc10b11cf65dc494bcf4001d74f75d3689d35f5491c0e",
+    "size": 2603
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_10/thm_10_3.ilean",
+    "sha256": "336449856cd282b62810628c7dcfb5e320410f05622797c877a83c7395191af1",
+    "size": 4350
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.ilean",
+    "sha256": "750ca924959b3f403ba26b9df5630015634cfc4e536ce7e16c0f6f227f50d2b7",
+    "size": 19200
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_2.trace",
+    "sha256": "664afd8db2b4d038d5a3bc941279a47b264b51e75a94467e4d66195f067ba17f",
+    "size": 3150
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.trace",
+    "sha256": "bea0d6b64f25cc4f9b67b0b8feaff134b0f7320e7214c8ff59383fc7cb2f82be",
+    "size": 2748
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_2.ilean",
+    "sha256": "b8898274ebc272cb94f4e18ae78e9271725e5368b732e702fc3e2ad89418058d",
+    "size": 4503
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_4.trace",
+    "sha256": "ce016d3f213916d3db1ebe90665bbe5ee4d0a35724222f8cbbaedadf0b1677fe",
+    "size": 3340
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_5.ilean.hash",
+    "sha256": "964482bc35b7ed32c71591cd5297b1bc675ccbab0df90a018b93bde87d13246a",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_5.olean.hash",
+    "sha256": "77c9a61ac5cfe7159bd66295b1796e9eb3c031fc79a8748b9a27bf64eadca81a",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_5.olean",
+    "sha256": "51dc428c1ce39ca76718c441935d117861da551ede6a915f516dcb0e4dae3242",
+    "size": 244584
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_2.ilean.hash",
+    "sha256": "d4d0154fac729c9e8052195088d2c54ab4f91624753767ef9b8754fe4d921f9b",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.olean",
+    "sha256": "0709aea19c640b1dc7f385ffe04a686d202d47a51ba86175df9091d07c18c2a6",
+    "size": 392720
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_4.olean.hash",
+    "sha256": "d28479250e289c1064991254404f92c4f9a1cc175aa2066e0fc2f20147f577a6",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.olean.hash",
+    "sha256": "fb93bee20db8224e0e4d775fb5afd417e9acb6103357c575fea20be9201fcfd5",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_5.ilean",
+    "sha256": "953e6f09fe1fe4ec56db98fcdf84dd1603b07f10da8ace6cddbf1ed2fc1d66f5",
+    "size": 31554
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_2.olean.hash",
+    "sha256": "3750ddbfafb637da4265668ba158a1bb793ec1df491dd00028a7dc11078aa818",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_4.ilean.hash",
+    "sha256": "c81e083f27883885efeba8946b0f846b39a2d733ae8b531fb575d30be46235d2",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.ilean.hash",
+    "sha256": "d86075e53ec2505cadaf5d0b98828422d891208eba5efdaec77b7463a03fd9e7",
+    "size": 16
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_4.ilean",
+    "sha256": "f8852189be082cdd62cc506be2d15e1cc69a1ee95a4efbff9a6e1303381b62dc",
+    "size": 6968
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_4.olean",
+    "sha256": "77297e6cab619454650548a25f4d953184aaf3d91e87d4f63b21189fdbaefe4b",
+    "size": 61448
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_2.olean",
+    "sha256": "84e776bf2e5cc725dfb675c4d2110029893e481629c4370398e8c38060de5d47",
+    "size": 76112
+  },
+  {
+    "member": "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_5.trace",
+    "sha256": "4b5b1aedbd03382237bf8dd0063ff1fee149fec13cd1738a25f5f30088141658",
+    "size": 4337
+  }
+]

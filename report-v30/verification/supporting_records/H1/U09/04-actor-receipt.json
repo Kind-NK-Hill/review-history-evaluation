@@ -1,0 +1,52 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "coverage-H1_inversion_chain-A-r2-continuation-r4",
+  "arm": "A",
+  "role": "general_reviewer",
+  "dispatch_id": "62122aa7-c01d-447d-a576-d70a135269d2",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": "a822da88-2305-473c-9964-35e23728af68",
+  "help_config_sha256": "90de19d05740a02ecd956438da9ec5de99143bc92721ce0242147c1e9053758a",
+  "effective_help_config_sha256": "1b1ea1260539acf34ae7a4a85607cb2618f159c5ce41b7be17b944b5ef64af4e",
+  "session_ids": [
+    "01a08f37-f53f-7473-95f5-ea5fdfa76e92"
+  ],
+  "usage": [
+    {
+      "input_tokens": 536237,
+      "cached_input_tokens": 473216,
+      "output_tokens": 9959,
+      "reasoning_output_tokens": 2513
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 234.35999999998603,
+    "deadline_epoch": 1789137004.9486196,
+    "remaining_at_launch_seconds": 27800.853450775146,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\help\\3591c148-3fec-464b-9c27-82952cd4f11e\\actor\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\help\\3591c148-3fec-464b-9c27-82952cd4f11e\\actor\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 36000.0,
+    "started_epoch": 1789101004.9486196,
+    "deadline_epoch": 1789137004.9486196,
+    "remaining_seconds": 27566.459743976593
+  },
+  "public_events_sha256": "90e000dd798a986084100c132d5ce9d4ee8414265107ed2b523607cecc18243d",
+  "raw_public_events_sha256": "90e000dd798a986084100c132d5ce9d4ee8414265107ed2b523607cecc18243d",
+  "public_recording_policy": "public-cli-v2-summary-auto-no-raw-agent-reasoning",
+  "event_ledger_sha256": "e9baaa7250bffc4b634caac8e7be18ecfa66e4d4f1d68fd4547b7da353b54526",
+  "event_recording_summary_sha256": "66392fca5dc1205c5f3674bb8004eb2adf1449f805fca174586e8cbe6fa61648",
+  "usd": null
+}

@@ -1,0 +1,8 @@
+{
+  "second_helper_snapshot_files": 381,
+  "first_candidate_sha256": "4d7174c04d1ed4ab47b8cfb2886ce7865ba16093ea6c875ed295b862124516f1",
+  "matching_files_in_second_helper_input": [],
+  "second_helper_read_original_source_event": "E065",
+  "original_source_contains_independent": true,
+  "archive_parse_success_does_not_imply_runtime_export_success": true
+}

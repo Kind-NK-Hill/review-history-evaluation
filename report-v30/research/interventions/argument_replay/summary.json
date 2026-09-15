@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-09-14T11:53:00.219066+00:00",
+  "scope": "static argument replay only; no recorded command executed and no input rewritten",
+  "supported_tools": [
+    "container_exec",
+    "read_artifact"
+  ],
+  "tested_calls": 3896,
+  "prototype_accepted": 3887,
+  "prototype_rejected": 9,
+  "known_argument_rejections": 9,
+  "known_rejections_covered": 9,
+  "known_rejections_detected": 9,
+  "accepted_by_original_guard_but_rejected": 0,
+  "guard_disagreements": 0,
+  "per_tool": {
+    "container_exec": {
+      "accepted": 3797,
+      "rejected": 5
+    },
+    "read_artifact": {
+      "accepted": 90,
+      "rejected": 4
+    }
+  },
+  "input_sha256": "4d8370825a882088c362be37868ff6fe9be66c7d85704939ea3d4193cb1a8e27",
+  "validator_sha256": "2221d7f00d46eb2c6578686ed78524435be20e2e28a6ad151ac293bafdc43176",
+  "runtime_source_sha256": {
+    "A": "243a759caa04ccd823c722ed3ef90d1ffa6413ca48ddb8951cc69c427e4c096c",
+    "B": "f5816659d41cadb38d1126e0634b423f3cd83c61117c3470cc06a721370519cd",
+    "C": "ef2ea2ca9381dc0af15d39fea1954474289d73c67d1554f690700b0f46c172d8",
+    "C_coordinator": "cf0811f472cf05170c1adbbe5132bae23654095ef042726175e3c6f52db08312"
+  },
+  "limitations": [
+    "Accepting arguments does not mean command success, artifact existence, mathematical success or root deadline availability.",
+    "Reference guards were extracted and executed only up to the validation boundary; no bridge logging or backend subprocess was run.",
+    "Observed inputs are used for this development check, not an independent held-out estimate of future error reduction."
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "label": "H1_TASK",
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\candidates\\c1\\visible-files\\TASK.zh-CN.md",
+    "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\two_pass_review_20260915\\review\\additional_evidence\\H1_TASK.md",
+    "sha256": "a37336b609ce2df94aaf9b289145ad6b6c2ac57e6c94ff86d9d378720543825f"
+  },
+  {
+    "label": "H1_COMMON",
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\candidates\\c1\\visible-files\\COMMON_RULES.zh-CN.md",
+    "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\two_pass_review_20260915\\review\\additional_evidence\\H1_COMMON.md",
+    "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+  },
+  {
+    "label": "L6_TASK",
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\candidates\\c1\\visible-files\\TASK.zh-CN.md",
+    "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\two_pass_review_20260915\\review\\additional_evidence\\L6_TASK.md",
+    "sha256": "c04f1eead9f0fd5910940cf2c5570892f66e630520925d7ac639a7cd75f19479"
+  },
+  {
+    "label": "L6_SOURCE",
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\candidates\\c1\\visible-files\\SOURCE.tex",
+    "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\two_pass_review_20260915\\review\\additional_evidence\\L6_SOURCE.tex",
+    "sha256": "2858a351c7a2f0199f17c6595086b153e1610c8f1a36f7f6f34faa735aa307d6"
+  },
+  {
+    "label": "L7_REVIEW_PROMPT",
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-002\\prompt.txt",
+    "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\two_pass_review_20260915\\review\\additional_evidence\\L7_REVIEW_PROMPT.txt",
+    "sha256": "fe6b43137ea09fcab302085998ea00fc42778ba723fe3a6b161284111f651f1f"
+  },
+  {
+    "label": "H1_FINAL_UNIQUENESS",
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-h1-b\\technical\\saved-sources\\ProbabilityTheory\\chapter_09\\thm_9_6.lean",
+    "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\two_pass_review_20260915\\review\\additional_evidence\\H1_FINAL_UNIQUENESS.lean",
+    "sha256": "17ca0f644d5f72b83c016c51c32883e715795a0407560267658070018a77cd1f"
+  },
+  {
+    "label": "COMMON_POLICY",
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v28_20260915\\verification\\revision23\\evaluation\\policy.json",
+    "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\two_pass_review_20260915\\review\\additional_evidence\\COMMON_POLICY.json",
+    "sha256": "2f070a8281e90f73c0634315228a27a36245c57b960793b46960d129301f96dd"
+  }
+]

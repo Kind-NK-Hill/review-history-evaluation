@@ -1,0 +1,999 @@
+{
+  "schema": "current.corrected_acceptance.r3",
+  "updated_at": "2026-09-12T09:19:19.833182+08:00",
+  "criterion": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\CURRENT_ACCEPTANCE.zh-CN.md",
+  "main_rows": [
+    {
+      "root_id": "root-795ff7ed-7d40-4ca2-93f1-aa1a8f0a7f2c",
+      "group": "L1",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "pilot-prob_13_9-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-a-stage-l1\\development-ac-r1\\cases\\5ce512ef66be196cea4e6ebb9c882c4f2aa87697f0524cc604b88d0de6a7bae1\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-b1a16493-c16c-4d08-8617-4aba833e9247",
+      "group": "M1",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "pilot-thm_13_17_to_13_18-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-a-stage-m1\\development-ac-r1\\cases\\f93607e7809c996c616bd68e730059057c5405d2a64347677eb1a3ec87b35901\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-9b18654b-e41d-4ebb-b0cb-54e39bfcff94",
+      "group": "L2",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-L2_thm_11_4_to_11_5-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-67c83c8b4bf7-1.json"
+      ]
+    },
+    {
+      "root_id": "root-4169a07f-6749-48c1-b087-fbabfa223640",
+      "group": "L3",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-L3_prob_7_6_to_ex_10_3_2-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "incomplete",
+      "mathematics": "pass",
+      "reason": "证明在已声明前提下正确，但Scheffé入口仍要求所有项可积，未交付原任务允许的最终尾部包装。",
+      "remaining_work": "补交仅要求最终尾部可积的Scheffé公开定理，或将现有逐项可积定理包装为尾部版本并恢复原序列极限。",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-ca86a7f5709c-1.json"
+      ]
+    },
+    {
+      "root_id": "root-3d5dcc37-593a-4e43-aea2-f10b22a62889",
+      "group": "L4",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-L4_thm_8_6_to_ex_8_4_3-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-a-stage-l4\\development-ac-r1\\cases\\4e47172e5e4bd37303beb4a1f5a8a3bc0e62eef8c9820c2aef1f70e9f599b6db\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-866ba1c8-d04a-43d0-b7da-7914b1499fd4",
+      "group": "L5",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-L5_prob_8_7-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-a-stage-l5\\development-ac-r1\\cases\\09b3fc0d3f222400fcbf7278c807574eebdd2c1804086f70d17ea7363abf40c5\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-f79bdf29-74e4-44c6-9901-44569fc624d7",
+      "group": "L6",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-L6_prob_12_5-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-a-stage-l6\\development-ac-r1\\cases\\c6de8d42a39b83ff21f2023618350271606082c5902d91da0123f8558751f6ee\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-8b1680db-a629-4fa3-9f68-941ccba4c8d1",
+      "group": "L7",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-L7_thm_10_10_to_10_11-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "fail",
+      "current_verdict": "incomplete",
+      "mathematics": "partial_not_all_targets",
+      "reason": "原部分候选缺整个thm_10_11分支；条件修正不能代替缺失的交付。",
+      "remaining_work": "完成连续映射定理整个第二分支，包含复合可测性与两种收敛保持。",
+      "scope": "原部分候选，仅第一题完成。",
+      "evidence": [
+        "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\adjudicator.json",
+        "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\reviewer-1.json",
+        "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\reviewer-2.json"
+      ]
+    },
+    {
+      "root_id": "root-762098d4-2c2c-4f2f-9976-a5b717e46e2c",
+      "group": "M2",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-M2_thm_11_7-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-a-stage-m2\\development-ac-r1\\cases\\da8482f2664971d2273473f225b6b6a3efd1cc28fd840676109daa7c4d297ca9\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-4dc90fd1-556f-4086-8c76-0e2cc1dbe364",
+      "group": "L1",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-B-r4-first-authorized-run",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-b-r4-l1\\development-b-r2\\cases\\38132e5b2ece7758f5c8bd730cc59ecdbe14a7201d237226784e24e3ceea1402\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-ab7d38dc-6b6e-4719-9686-524a9ef08926",
+      "group": "H1",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-H1-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "fail",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "五目标证明和说明完整；按教材支持的无参数标准柯西核心范围通过。中心尺度/任意位置推广单列。",
+      "remaining_work": "无",
+      "scope": "中心为零、任意正尺度",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-ad3cbe004a3a-1.json"
+      ]
+    },
+    {
+      "root_id": "root-7960f8a1-b0a1-4006-8e36-00122a42c118",
+      "group": "L2",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-L2-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-92da00620333-1.json",
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-92da00620333-2.json"
+      ]
+    },
+    {
+      "root_id": "root-38384577-742c-4f28-814a-95d1a272bff5",
+      "group": "L3",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-L3-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "fail",
+      "current_verdict": "incomplete",
+      "mathematics": "pass",
+      "reason": "证明在已声明前提下正确，但Scheffé入口仍要求所有项可积，未交付原任务允许的最终尾部包装。",
+      "remaining_work": "补交仅要求最终尾部可积的Scheffé公开定理，或将现有逐项可积定理包装为尾部版本并恢复原序列极限。",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-b299284a15fd-1.json"
+      ]
+    },
+    {
+      "root_id": "root-c6b029fb-7338-4497-95c6-e5b0e821c42c",
+      "group": "L4",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-L4-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-l4-b\\development-b-r4\\cases\\dceab23fa9877a2dbf495ea61af2df80c1c6db83b30d430213755061f03d9041\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-0198bb93-9805-49b4-aa07-39288ef8188c",
+      "group": "L5",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-L5-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-l5-b\\development-b-r4\\cases\\cf5b6aef3c35c8b4a29084605321dfede7088188224048061c7a621e4b0c2058\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-36e5f295-5517-488c-b712-fa66ced434c4",
+      "group": "L6",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-L6-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-l6-b\\development-b-r4\\cases\\a5d983bea244faa677b2bf4634d83eec5bdfaea79e33b7ff4f804b62c73a1048\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-7df97779-0b9e-4401-acb6-2887a3798f62",
+      "group": "L7",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-L7-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "fail",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "原双评及裁决均认可显式前提下的证明；两个公开支持定理实际交付复合可测性。当前标准接纳已说明的合理修正版，不再以原缺陷合同阻断。",
+      "remaining_work": "无",
+      "scope": "Borel函数、环境空间逐点连续；另要求S本身可测，是较强充分修正，按当前修正版标准接纳但不抹平范围差别。",
+      "evidence": [
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\adjudicator.json",
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\reviewer-1.json",
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\reviewer-2.json",
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_11.lean"
+      ]
+    },
+    {
+      "root_id": "root-6eec75c0-3c64-4ba2-bc9c-37bd5c8d0ea9",
+      "group": "M1",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-M1-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-b-r4-m1\\development-b-r4\\cases\\61a8231ebcedf32d50de087c8445877b2e9e7c93d0f54bdf49748f6d1420b440\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-c4cd6411-56b6-4b3e-8f78-b0f06bdbe7d5",
+      "group": "M2",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-M2-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-m2-b\\development-b-r4\\cases\\93f677388b16fddfcce569930ffabfa3e74dbd1e63b7f7f763c4d35fbb09abe6\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-769796c8-a936-417e-bbbe-5e2eff72a404",
+      "group": "M3",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-M3-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-m3-b\\development-b-r4\\cases\\587d4ca06e08dc859acc76c3812ac40f5ffc788fff48f85af471cf6492b0481c\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-61b36e90-0a25-469e-b9a8-27f2e3a6b5e3",
+      "group": "H1",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-h1-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "五目标证明和说明完整；按教材支持的无参数标准柯西核心范围通过。中心尺度/任意位置推广单列。",
+      "remaining_work": "无",
+      "scope": "任意位置、任意正尺度",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-c47950c412e8-1.json"
+      ]
+    },
+    {
+      "root_id": "root-5cff43da-5b77-4bcc-99fe-57d5bc067bac",
+      "group": "L1",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l1-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-c-stage-l1\\development-ac-r1\\cases\\d56aed55fd9d719ae39ac50c533228f19a709fe49498cec3bdb78004b45a277f\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-018a1503-17bf-4957-b80f-94af1c1b696c",
+      "group": "L2",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l2-001",
+      "same_root_continuation": false,
+      "original_verdict": "fail",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-dddb2b2aae36-1.json"
+      ]
+    },
+    {
+      "root_id": "root-ba17577d-9363-4b5d-bd31-de00307fd0dd",
+      "group": "L3",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l3-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "真实最终尾部可积接口及负部、一范数、密度和正态边界证明均完成。",
+      "remaining_work": "无",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-6d87e44415de-1.json"
+      ]
+    },
+    {
+      "root_id": "root-beab927d-cd5d-4729-af1a-afc548ddb859",
+      "group": "L4",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l4-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-l4-c\\development-ac-r1\\cases\\9b51da818930e8047a706f0bc898ca4875cdd23a828a803009c25033e8b502c2\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-2e878848-8b03-4d18-8fad-f676a5e203c7",
+      "group": "L5",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l5-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-l5-c\\development-ac-r1\\cases\\5b042cfc4733751fedbb86015139422f378348dd33c204ad87eb2426f9978af9\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-529cab62-43db-4426-b429-dec1a1162240",
+      "group": "L6",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l6-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-l6-c\\development-ac-r1\\cases\\e9631ca85ed57320f7cd78c059cde4438113dd907319b0e3d08b41c698da8d24\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-0d242f5b-bee0-4c49-8a38-3a608b699779",
+      "group": "L7",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l7-001",
+      "same_root_continuation": false,
+      "original_verdict": "unresolved",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "两份有效独立评价确认两题数学、修正和披露；当前标准接纳该完整合理修正版。",
+      "remaining_work": "无",
+      "scope": "Borel函数、环境空间逐点连续；预像事件可测或几乎处处成员。另保留无函数可测性的数值核心。",
+      "evidence": [
+        "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+        "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json"
+      ]
+    },
+    {
+      "root_id": "root-4db4cb40-9320-4120-be80-e22d9271e86a",
+      "group": "M1",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-m1-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-c-stage-m1\\development-ac-r1\\cases\\7b0556d75b777db35863e14f3499d9644ffd8bdc0e7c89683cc2c5f3d29ca285\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-4ee231c8-627c-4880-820d-26f6ec94cd8a",
+      "group": "M2",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-m2-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-m2-c\\development-ac-r1\\cases\\a79aba3130983242c247eb90a09d2957a3e5b56351e7d2a3ba65b521edf3d19f\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-5d16f36f-ffcc-4291-a76a-ad66c6ea0947",
+      "group": "M3",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-m3-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-bc-m3-c\\development-ac-r1\\cases\\6a08818a69f91ce30338d49bacb220a83524911b845d4d46010106f84d57ac93\\final\\decision.json"
+      ]
+    },
+    {
+      "root_id": "root-629e5842-2dbe-4bf4-be4d-b8eb1d3a26d4",
+      "group": "H1",
+      "arm": "A",
+      "version": "A_runtime_r2_late_development",
+      "run_id": "coverage-H1_inversion_chain-A-r2",
+      "same_root_continuation": true,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "五目标证明和说明完整；按教材支持的无参数标准柯西核心范围通过。中心尺度/任意位置推广单列。",
+      "remaining_work": "无",
+      "scope": "标准柯西",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-dfce8b6cb8f4-1.json"
+      ]
+    },
+    {
+      "root_id": "root-13c1c28a-8f3d-4cde-8a2e-bd5d551de8ae",
+      "group": "M3",
+      "arm": "A",
+      "version": "A_runtime_r2_late_development",
+      "run_id": "coverage-M3_thm_10_8-A-r2",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "previously_accepted_not_reaudited",
+      "reason": "沿用未受本次规则修正影响的既有完整验收。",
+      "remaining_work": "无",
+      "scope": "原任务范围",
+      "evidence": [
+        "ROOT/ep-a-stage-m3\\development-ac-r1\\cases\\03ca44ff6112c2a452d83b998985c2aa22bdeb3d40524939c786d403cce8dc1e\\final\\decision.json"
+      ]
+    }
+  ],
+  "affected_and_supplementary_rows": [
+    {
+      "group": "L2",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "original_verdict": "pass",
+      "r1_result": {
+        "new_G": "pass",
+        "new_S": "fail"
+      },
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "original_decision": {
+        "path": "ROOT/ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\final\\decision.json",
+        "sha256": "090dea2e9da8c129a17891c49e50c5ad387077054b3a2b54291b9215f322b94d"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-67c83c8b4bf7-1.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L2",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "candidate_id": "candidate-92da00620333",
+      "original_verdict": "pass",
+      "r1_result": {
+        "new_G": "pass",
+        "new_S": "pass"
+      },
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "original_decision": {
+        "path": "ROOT/ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\final\\decision.json",
+        "sha256": "5989594d77e7793ad480a39a970919c6fe9d7b03549d52249754ca40e88aa0ff"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-92da00620333-1.json",
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-92da00620333-2.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L2",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "candidate_id": "candidate-dddb2b2aae36",
+      "original_verdict": "fail",
+      "r1_result": {
+        "new_G": "pass",
+        "new_S": "fail"
+      },
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "original_decision": {
+        "path": "ROOT/ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\final\\decision.json",
+        "sha256": "912b5ea429852ac6fd59a4f118d7116df959e3cc4c4a29f074f95c122c0ffdb0"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-dddb2b2aae36-1.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L2",
+      "arm": "B",
+      "version": "B_original_r1",
+      "candidate_id": "candidate-8df72d8fe638",
+      "original_verdict": "fail",
+      "r1_result": {
+        "new_G": "pass",
+        "new_S": "fail"
+      },
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "original_decision": {
+        "path": "ROOT/fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+        "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-8df72d8fe638-1.json",
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-8df72d8fe638-2.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L3",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "candidate_id": "candidate-6d87e44415de",
+      "original_verdict": "pass",
+      "r1_result": {
+        "new_F": "pass",
+        "new_E": "fail",
+        "new_T": "pass"
+      },
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "真实最终尾部可积接口及负部、一范数、密度和正态边界证明均完成。",
+      "remaining_work": "无",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "original_decision": {
+        "path": "ROOT/ep-bc-l3-c\\development-ac-r1\\cases\\5b273faa031edeeab7424ef676fb0bcb9d7040aad2c4887125328b2d5c495b2b\\final\\decision.json",
+        "sha256": "a9584a6d9444728bca11afe8d93cd698b71f90db8e77cc7504a7ea5e6a68c08b"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-6d87e44415de-1.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L3",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "candidate_id": "candidate-b299284a15fd",
+      "original_verdict": "fail",
+      "r1_result": {
+        "new_F": "unresolved_format",
+        "new_E": "unresolved_format",
+        "new_T": "unresolved_format"
+      },
+      "current_verdict": "incomplete",
+      "mathematics": "pass",
+      "reason": "证明在已声明前提下正确，但Scheffé入口仍要求所有项可积，未交付原任务允许的最终尾部包装。",
+      "remaining_work": "补交仅要求最终尾部可积的Scheffé公开定理，或将现有逐项可积定理包装为尾部版本并恢复原序列极限。",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "original_decision": {
+        "path": "ROOT/ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\final\\decision.json",
+        "sha256": "f6267dc0651ff979a2d10877f93e79952f8056c489e4b42d191c0fcd06593a51"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-b299284a15fd-1.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L3",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "candidate_id": "candidate-ca86a7f5709c",
+      "original_verdict": "pass",
+      "r1_result": {
+        "new_F": "unresolved_format",
+        "new_E": "unresolved_format",
+        "new_T": "unresolved_format"
+      },
+      "current_verdict": "incomplete",
+      "mathematics": "pass",
+      "reason": "证明在已声明前提下正确，但Scheffé入口仍要求所有项可积，未交付原任务允许的最终尾部包装。",
+      "remaining_work": "补交仅要求最终尾部可积的Scheffé公开定理，或将现有逐项可积定理包装为尾部版本并恢复原序列极限。",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "original_decision": {
+        "path": "ROOT/ep-a-stage-l3\\development-ac-r1\\cases\\da84ef9a9f0ba214ab52b794960ac6abcbfd3cdefa45ae811e1d70dd9f8edf47\\final\\decision.json",
+        "sha256": "9458846909ec9b3b33704e2abb955bcd24d5d161dc59010397146d1ba6d771d1"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-ca86a7f5709c-1.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L3",
+      "arm": "B",
+      "version": "B_original_r1",
+      "candidate_id": "candidate-2ec562216bc6",
+      "original_verdict": "fail",
+      "r1_result": {
+        "new_F": "pass",
+        "new_E": "fail",
+        "new_T": "fail"
+      },
+      "current_verdict": "incomplete",
+      "mathematics": "pass",
+      "reason": "证明在已声明前提下正确，但Scheffé入口仍要求所有项可积，未交付原任务允许的最终尾部包装。",
+      "remaining_work": "补交仅要求最终尾部可积的Scheffé公开定理，或将现有逐项可积定理包装为尾部版本并恢复原序列极限。",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "original_decision": {
+        "path": "ROOT/fw_pilot_20260910_staging\\coverage-runs-r1\\L3_prob_7_6_to_ex_10_3_2\\common-validation\\B\\semantic-single\\semantic-result.json",
+        "sha256": "4f1b2899fa3383749d8c14f40fce27c1a0413dc1a5705652e79a630b3e81f08b"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-2ec562216bc6-1.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "H1",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "candidate_id": "candidate-ad3cbe004a3a",
+      "original_verdict": "fail",
+      "r1_result": {
+        "new_Std": "unresolved_format",
+        "new_Family": "unresolved_format"
+      },
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "五目标证明和说明完整；按教材支持的无参数标准柯西核心范围通过。中心尺度/任意位置推广单列。",
+      "remaining_work": "无",
+      "scope": "中心为零、任意正尺度",
+      "original_decision": {
+        "path": "ROOT/ep-bc-h1-b\\development-b-r4\\cases\\47e738ffc037453d4d24ee76143fbc98dfd6102041a2fa1daaa60e3c28726722\\final\\decision.json",
+        "sha256": "babcd07aee34620cf192cd0fa671d8e9fd8dea73daee57afccfc0c1bc835c1ce"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-ad3cbe004a3a-1.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "H1",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "candidate_id": "candidate-c47950c412e8",
+      "original_verdict": "pass",
+      "r1_result": {
+        "new_Std": "pass",
+        "new_Family": "pass"
+      },
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "五目标证明和说明完整；按教材支持的无参数标准柯西核心范围通过。中心尺度/任意位置推广单列。",
+      "remaining_work": "无",
+      "scope": "任意位置、任意正尺度",
+      "original_decision": {
+        "path": "ROOT/ep-bc-h1-c\\development-ac-r1\\cases\\2b5fbf160ef9aa19acd4c50b65160813ccced53e0d4735d8b3dbf1ddc14414a5\\final\\decision.json",
+        "sha256": "326ab03d0fd054912d7b757b48d5a8302ecb935094734d82369d3fcb9021f28d"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-c47950c412e8-1.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "H1",
+      "arm": "A",
+      "version": "A_H1_original_root_continued_full",
+      "candidate_id": "candidate-dfce8b6cb8f4",
+      "original_verdict": "pass",
+      "r1_result": {
+        "new_Std": "pass",
+        "new_Family": "fail"
+      },
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "五目标证明和说明完整；按教材支持的无参数标准柯西核心范围通过。中心尺度/任意位置推广单列。",
+      "remaining_work": "无",
+      "scope": "标准柯西",
+      "original_decision": {
+        "path": "ROOT/ep-a-h1-cont-r4\\development-ac-r1\\cases\\bbf0b1df57367d2af03356e67a418abc99e4b428621f3c16764c8b75ca9aac8f\\final\\decision.json",
+        "sha256": "2856a0532ae329b36c65e0f0ab817453c3f932c1f431ff56f09927d3a2b9ae4e"
+      },
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-dfce8b6cb8f4-1.json"
+      ],
+      "decision_method": "Current user-authorized criterion applied to existing reviews after compatibility repair; no new model vote.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L7",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "candidate_id": "c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d",
+      "original_verdict": "unresolved",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "facts_for_current_rule": {
+        "both_targets_present": true,
+        "mathematics": "pass",
+        "composition_measurability_delivered": true,
+        "repair_reasonable": "pass",
+        "disclosure": "pass"
+      },
+      "reason": "两份有效独立评价确认两题数学、修正和披露；当前标准接纳该完整合理修正版。",
+      "remaining_work": "无",
+      "scope": "Borel函数、环境空间逐点连续；预像事件可测或几乎处处成员。另保留无函数可测性的数值核心。",
+      "original_decision": {
+        "path": "ROOT/ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\final\\decision.json"
+      },
+      "evidence": [
+        "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+        "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json"
+      ],
+      "decision_method": "Current corrected-task acceptance using existing proof reviews, direct public-interface checks and r2 C reviews; no new model call.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L7",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "candidate_id": "101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154",
+      "original_verdict": "fail",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "facts_for_current_rule": {
+        "both_targets_present": true,
+        "mathematics": "pass",
+        "composition_measurability_delivered": true,
+        "repair_reasonable": "pass",
+        "disclosure": "pass"
+      },
+      "reason": "原双评及裁决均认可显式前提下的证明；两个公开支持定理实际交付复合可测性。当前标准接纳已说明的合理修正版，不再以原缺陷合同阻断。",
+      "remaining_work": "无",
+      "scope": "Borel函数、环境空间逐点连续；另要求S本身可测，是较强充分修正，按当前修正版标准接纳但不抹平范围差别。",
+      "original_decision": {
+        "path": "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\final\\decision.json"
+      },
+      "evidence": [
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\adjudicator.json",
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\reviewer-1.json",
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\reviewer-2.json",
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_11.lean"
+      ],
+      "decision_method": "Current corrected-task acceptance using existing proof reviews, direct public-interface checks and r2 C reviews; no new model call.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L7",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "candidate_id": "a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669",
+      "original_verdict": "fail",
+      "current_verdict": "incomplete",
+      "mathematics": "partial_not_all_targets",
+      "facts_for_current_rule": {
+        "both_targets_present": false,
+        "mathematics": "partial_not_all_targets",
+        "composition_measurability_delivered": false,
+        "repair_reasonable": "not_applicable",
+        "disclosure": "not_applicable"
+      },
+      "reason": "原部分候选缺整个thm_10_11分支；条件修正不能代替缺失的交付。",
+      "remaining_work": "完成连续映射定理整个第二分支，包含复合可测性与两种收敛保持。",
+      "scope": "原部分候选，仅第一题完成。",
+      "original_decision": {
+        "path": "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\final\\decision.json"
+      },
+      "evidence": [
+        "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\adjudicator.json",
+        "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\reviewer-1.json",
+        "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\reviewer-2.json"
+      ],
+      "decision_method": "Current corrected-task acceptance using existing proof reviews, direct public-interface checks and r2 C reviews; no new model call.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "L7",
+      "arm": "A",
+      "version": "A_l7_repair_r1",
+      "candidate_id": "1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f",
+      "original_verdict": "fail",
+      "current_verdict": "incomplete",
+      "mathematics": "pass",
+      "facts_for_current_rule": {
+        "both_targets_present": true,
+        "mathematics": "pass",
+        "composition_measurability_delivered": false,
+        "repair_reasonable": "not_applicable",
+        "disclosure": "not_applicable"
+      },
+      "reason": "原两评认可数值收敛证明，但原公开结论未交付复合输出可测性；修正任务允许加入函数可测性，并不自动生成候选缺少的证明。",
+      "remaining_work": "补交在修正前提下证明全部复合输出可测的公开定理/支持，以及与两种收敛结论的完整接口。",
+      "scope": "原显式接口中的数值收敛已证明；完整随机向量资格尚未交付。",
+      "original_decision": {
+        "path": "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\final\\decision.json"
+      },
+      "evidence": [
+        "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\results\\reviewer-1.json",
+        "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\results\\reviewer-2.json",
+        "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_11.lean"
+      ],
+      "decision_method": "Current corrected-task acceptance using existing proof reviews, direct public-interface checks and r2 C reviews; no new model call.",
+      "model_followup_needed": false
+    },
+    {
+      "group": "H1",
+      "arm": "A",
+      "version": "A_original_partial_snapshot",
+      "candidate_id": "c7a26306e9b06c6472300187391c5d80b7b0e44c6517617d0be2acdbf9dc1208",
+      "original_verdict": "pass",
+      "current_verdict": "incomplete",
+      "mathematics": "partial_not_all_targets",
+      "reason": "原部分快照仍缺目标；与后来同根完整续跑分别保留。",
+      "remaining_work": "原快照缺少：thm_9_5, thm_9_6, prob_9_6, prob_9_8；同根后续候选已完成当前核心范围，不能倒写为原快照完成。",
+      "scope": "原部分快照",
+      "original_decision": {
+        "path": "ROOT/ep-a-stage-h1\\development-ac-r1\\cases\\c7a26306e9b06c6472300187391c5d80b7b0e44c6517617d0be2acdbf9dc1208\\final\\decision.json"
+      },
+      "evidence": [
+        "ROOT/ep-a-stage-h1\\development-ac-r1\\cases\\c7a26306e9b06c6472300187391c5d80b7b0e44c6517617d0be2acdbf9dc1208\\final\\decision.json"
+      ],
+      "model_followup_needed": false
+    }
+  ],
+  "new_model_calls": 0,
+  "new_solver_calls": 0,
+  "format_unresolved_main_rows": 0,
+  "pending_mathematical_reviews": [],
+  "historical_evidence_preserved": true,
+  "comparison_limits": "Version-stratified development observations, including A H1 same-root continuation; corrected criteria are retrospective, not a new equal-condition experiment."
+}

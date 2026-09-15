@@ -1,0 +1,32 @@
+[original lines 1-20]
+% BEGIN EXACT CATALOG SOURCE: thm_11_7
+\begin{thmbox}{11.7 (4th-moment Strong Law of Large Numbers)}
+\end{thmbox}
+
+Suppose Xi ,f o r i\geq 1 , are independent random variables with mean \mu and
+
+E[X4
+
+i ]\leq c< \infty for all i Then Sn
+
+n \to \mu almost surely.
+
+\textit{Proof} Without loss of generality, we assume that \mu= 0 . (We can consider Yi =
+
+Xi -\mu if the mean of Xi is not zero.)
+
+The expectation of S4
+
+n can be expanded as
+
+
+[original lines 173-181]
+we can apply the first Borel-Cantelli lemma (Theorem 5.8) to conclude that the
+
+event .{\vertSn\vert/n > \epsilon io. } has probability 0. Therefore, by Theorem 10.1, Sn/n
+
+converges to 0 almost surely. \hfill $\square$
+
+Note that Theorem 11.7 does not assume that the random variables Xi are
+
+identically distributed, but it requires that the 4th moments are uniformly bounded.

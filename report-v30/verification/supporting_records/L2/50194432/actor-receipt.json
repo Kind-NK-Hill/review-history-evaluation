@@ -1,0 +1,48 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "coverage-L2_thm_11_4_to_11_5-A-r1",
+  "arm": "A",
+  "role": "general_reviewer",
+  "dispatch_id": "50194432-a91e-494c-9e66-d6b1e08c6812",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": "9b18654b-e41d-4ebb-b0cb-54e39bfcff94",
+  "help_config_sha256": "905a4d21df681b6452d66a041ffca6f858b8ccbebe12d74967cfef4332399ddf",
+  "effective_help_config_sha256": "3afae84d0dede68ea0fbe0a30bcfa9f87a4e49abbe00fb25b437bcdd8517d570",
+  "session_ids": [
+    "01a08cef-ba58-72f2-a5c7-cfe10365b333"
+  ],
+  "usage": [
+    {
+      "input_tokens": 299683,
+      "cached_input_tokens": 252672,
+      "output_tokens": 7299
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 162.59399999998277,
+    "deadline_epoch": 1789077911.3651283,
+    "remaining_at_launch_seconds": 6995.381942987442,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\help\\321a4d18-232b-48b5-9dbf-effb9e64c988\\actor\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\help\\321a4d18-232b-48b5-9dbf-effb9e64c988\\actor\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 7200.0,
+    "started_epoch": 1789070711.3651283,
+    "deadline_epoch": 1789077911.3651283,
+    "remaining_seconds": 6832.77358341217
+  },
+  "public_events_sha256": "fc2e4112c200f0323657f91214c3fc0402eaf167eeb3083a993982a12b117f33",
+  "raw_public_events_sha256": "fc2e4112c200f0323657f91214c3fc0402eaf167eeb3083a993982a12b117f33",
+  "usd": null
+}

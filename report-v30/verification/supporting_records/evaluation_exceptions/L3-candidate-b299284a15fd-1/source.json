@@ -1,0 +1,422 @@
+{
+  "epoch": 1789134279.6870844,
+  "candidate_id": "candidate-b299284a15fd",
+  "slot": "adjudicator",
+  "assessment": {
+    "schema": "consistency.l3.review.v1",
+    "request_id": "l3-r1-candidate-b299284a15fd-adjudicator",
+    "candidate_id": "candidate-b299284a15fd",
+    "role": "adjudicator",
+    "confidence": 0.98,
+    "source_reading": {
+      "F_source_convention": "retrospective_sensitivity_assumption",
+      "reason": "冻结源文只写积分收敛到有限极限，没有明确规定每个初始项均可积；任务书还明确允许最终尾部可积表述。因此F是看过初评后登记的条件性敏感性解释，不能由Lean实值积分语法反推逐项可积。",
+      "evidence": [
+        {
+          "path": "source/SOURCE.tex",
+          "line_start": 2,
+          "line_end": 2,
+          "quote": "Assume that $\\int f_n\\, d\\mu \\to \\int f\\, d\\mu < \\infty$."
+        },
+        {
+          "path": "task_contract/TASK.zh-CN.md",
+          "line_start": 3,
+          "line_end": 3,
+          "quote": "合同允许采用最终尾部可积表述"
+        },
+        {
+          "path": "reevaluation/TAIL_SCOPE_REVISION.json",
+          "line_start": 3,
+          "line_end": 5,
+          "quote": "\"not_original_preregistration\": true,\r\n  \"trigger\": \"Initial F/E reviews exposed that E demands an extended-integral-to-eventual-integrability wrapper even when a candidate uses the eventual-integrability formulation expressly permitted by TASK. Preserve E as strict source-scope sensitivity; do not silently impose it as the only original TASK acceptance rule.\",\r\n  \"quoted_original_task\": \"合同允许采用最终尾部可积表述\""
+        }
+      ]
+    },
+    "dimensions": {
+      "mathematics": {
+        "status": "pass",
+        "reason": "候选的Scheffé定理在其显式逐项可积、极限可积、可测、处处非负及收敛前提下证明正确；一般密度、全变差、依分布及正态正方差和零方差分支也分别闭合。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 62,
+            "line_end": 65,
+            "quote": "    (hfseq_int : ∀ n, Integrable (fseq n) μ) (hf_int : Integrable f μ)\n    (hconv : ∀ᵐ x ∂μ, Tendsto (fun n => fseq n x) atTop (𝓝 (f x)))\n    (hintegral : Tendsto (fun n => ∫ x, fseq n x ∂μ) atTop (𝓝 (∫ x, f x ∂μ))) :\n    Tendsto (fun n => ∫ x, |fseq n x - f x| ∂μ) atTop (𝓝 0) := by"
+          },
+          {
+            "path": "tool_fact/technical-validation.json",
+            "line_start": 1,
+            "line_end": 1,
+            "quote": "\"axiom_audit_exit_code\":0,\"build_exit_code\":0"
+          }
+        ]
+      },
+      "public_premises": {
+        "status": "pass",
+        "reason": "排除单列的P2积分范围争议后，极限函数可测、处处非负、几乎处处收敛及极限仍为概率密度均由任务书许可并在公开接口中明确出现；正态一般端点未额外要求全部近似方差非零。",
+        "evidence": [
+          {
+            "path": "task_contract/TASK.zh-CN.md",
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "非负可测函数 fₙ、f 几乎处处收敛"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 82,
+            "line_end": 85,
+            "quote": "    (hfseq : ∀ n, IsProbabilityDensity (fseq n))\n    (hf : IsProbabilityDensity f)\n    (hconv : ∀ᵐ x ∂volume, Tendsto (fun n => fseq n x) atTop (𝓝 (f x))) :\n    IsProbabilityDensity f ∧"
+          }
+        ]
+      },
+      "route_F": {
+        "status": "pass",
+        "reason": "在回顾性采用F的有限积分序列约定、把逐项可积视为该约定组成部分时，候选的逐项可积公开定理及其余义务全部闭合；这只是条件性通过，不表示冻结源文支持F。",
+        "evidence": [
+          {
+            "path": "reevaluation/RULES.json",
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "\"F_finite_real_integral_sequence\": \"Interpret the displayed integral convergence as a real-valued sequence of finite integrals. Then individual integrability is part of that convention; assess the rest of the original theorem and density/Gaussian obligations independently.\","
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 62,
+            "line_end": 64,
+            "quote": "    (hfseq_int : ∀ n, Integrable (fseq n) μ) (hf_int : Integrable f μ)\n    (hconv : ∀ᵐ x ∂μ, Tendsto (fun n => fseq n x) atTop (𝓝 (f x)))\n    (hintegral : Tendsto (fun n => ∫ x, fseq n x ∂μ) atTop (𝓝 (∫ x, f x ∂μ))) :"
+          }
+        ]
+      },
+      "route_E": {
+        "status": "fail",
+        "reason": "E要求从非负扩展积分收敛到有限值推导最终尾部可积并公开完成尾部归约。候选仅提供要求所有项可积的定理，没有扩展积分入口、最终可积推导或重编号包装。",
+        "evidence": [
+          {
+            "path": "reevaluation/RULES.json",
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "\"E_nonnegative_extended_integrals\": \"Nonnegative measurable inputs have extended integrals; convergence to a finite limit implies only eventual integrability, allowing finitely many infinite initial integrals. A source-scope public theorem must close this tail reduction rather than require all terms integrable.\""
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 60,
+            "line_end": 64,
+            "quote": "    (hfseq_meas : ∀ n, Measurable (fseq n)) (hf_meas : Measurable f)\n    (hfseq_nonneg : ∀ n x, 0 ≤ fseq n x) (hf_nonneg : ∀ x, 0 ≤ f x)\n    (hfseq_int : ∀ n, Integrable (fseq n) μ) (hf_int : Integrable f μ)\n    (hconv : ∀ᵐ x ∂μ, Tendsto (fun n => fseq n x) atTop (𝓝 (f x)))\n    (hintegral : Tendsto (fun n => ∫ x, fseq n x ∂μ) atTop (𝓝 (∫ x, f x ∂μ))) :"
+          }
+        ]
+      },
+      "interface": {
+        "status": "pass",
+        "reason": "按规则将P2范围缺口单列后，其余必需公开接口均存在并真实接入：一般密度由Scheffé连接全变差、弱收敛和依分布，正态正方差及零方差也有独立公开端点。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 67,
+            "line_end": 76,
+            "quote": "/-- Consequently the density laws converge weakly (hence in distribution). -/\ntheorem ex_10_3_2_density_weakConvergence\n    {fseq : ℕ → ℝ → ℝ} {f : ℝ → ℝ}\n    (hfseq : ∀ n, IsProbabilityDensity (fseq n))\n    (hf : IsProbabilityDensity f)\n    (hconv : ∀ᵐ x ∂volume, Tendsto (fun n => fseq n x) atTop (𝓝 (f x))) :\n    def_14_1\n      (fun n => ex_10_3_2_densityLaw (fseq n) (hfseq n))\n      (ex_10_3_2_densityLaw f hf) :=\n  thm_14_4 _ _ (ex_10_3_2_density_totalVariation hfseq hf hconv)"
+          }
+        ]
+      },
+      "delivery": {
+        "status": "pass",
+        "reason": "完整交付一般Scheffé、概率密度的L1与全变差及依分布结论、正极限方差的全变差和依分布结论，以及零方差到点质量的依分布收敛和适当条件下非全变差结论。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 234,
+            "line_end": 247,
+            "quote": "/-- Complete zero-variance statement: weak/distributional convergence holds,\nwhereas total-variation convergence fails for genuinely nondegenerate approximants. -/\ntheorem ex_10_3_2_gaussian_zero_complete\n    {mseq : ℕ → ℝ} {m : ℝ} {vseq : ℕ → ℝ≥0}\n    (hm : Tendsto mseq atTop (𝓝 m)) (hv : Tendsto vseq atTop (𝓝 0))\n    (hvseq0 : ∀ n, vseq n ≠ 0) :\n    MeasuresConvergeInDistribution\n        (fun n => ex_10_3_2_gaussianLaw (mseq n) (vseq n))\n        (ex_10_3_2_gaussianLaw m 0) ∧\n      ¬ thm_14_4_totalVariationConvergence\n        (fun n => ex_10_3_2_gaussianLaw (mseq n) (vseq n))\n        (ex_10_3_2_gaussianLaw m 0) :=\n  ⟨ex_10_3_2_gaussian_zero_distribution hm hv,\n    ex_10_3_2_gaussian_zero_not_totalVariation hvseq0⟩"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 301,
+            "line_end": 307,
+            "quote": "theorem ex_10_3_2_gaussian_positive_distribution_general\n    {mseq : ℕ → ℝ} {m : ℝ} {vseq : ℕ → ℝ≥0} {v : ℝ≥0}\n    (hm : Tendsto mseq atTop (𝓝 m)) (hv : Tendsto vseq atTop (𝓝 v))\n    (hv0 : v ≠ 0) :\n    MeasuresConvergeInDistribution\n      (fun n => ex_10_3_2_gaussianLaw (mseq n) (vseq n))\n      (ex_10_3_2_gaussianLaw m v) :="
+          }
+        ]
+      },
+      "route_T": {
+        "status": "fail",
+        "reason": "T按原TASK接受公开的最终尾部可积表述，但候选实际公开前提是所有项可积，并无从最终可积条件重编号和恢复原序列极限的包装。其负部与L1证明本身正确，失败仅在T域未被公开覆盖，不能以E的扩展积分额外义务替代此判断。",
+        "evidence": [
+          {
+            "path": "task_contract/TASK.zh-CN.md",
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "合同允许采用最终尾部可积表述"
+          },
+          {
+            "path": "reevaluation/TAIL_SCOPE_REVISION.json",
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "\"T_task_permitted_eventual_tail\": \"Read the delivered TASK permission literally: explicit eventual integrability of the sequence and integrability of its limit may be used as the tail formulation of finite integral convergence, with the real integral convergence condition still required. Candidate must actually prove the negative-part/minimum control and L1 limit for that eventual-tail domain. Requiring every initial term integrable without a real eventual-tail wrapper does not cover this T domain. Never assume L1 convergence itself.\""
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 62,
+            "line_end": 62,
+            "quote": "    (hfseq_int : ∀ n, Integrable (fseq n) μ) (hf_int : Integrable f μ)"
+          }
+        ]
+      }
+    },
+    "contract_responsibility": {
+      "status": "clear",
+      "reason": "候选须分别对自身强前提定理的正确性、F条件解释、E扩展积分包装和T最终尾部公开域负责。原TASK允许最终尾部表述但不免除真实尾部包装，也不许可额外假定L1收敛；一般密度及正态两个方差分支仍须独立交付。"
+    },
+    "obligations": [
+      {
+        "id": "P1",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "all_terms_integrable",
+        "reason": "公开Scheffé定理在自身显式逐项可积、极限可积、可测、处处非负、几乎处处收敛及积分收敛前提下数学正确；E和T的域覆盖缺口不构成该强定理本身的数学错误。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 57,
+            "line_end": 65,
+            "quote": "theorem prob_7_6\n    {α : Type*} [MeasurableSpace α] (μ : Measure α)\n    {fseq : ℕ → α → ℝ} {f : α → ℝ}\n    (hfseq_meas : ∀ n, Measurable (fseq n)) (hf_meas : Measurable f)\n    (hfseq_nonneg : ∀ n x, 0 ≤ fseq n x) (hf_nonneg : ∀ x, 0 ≤ f x)\n    (hfseq_int : ∀ n, Integrable (fseq n) μ) (hf_int : Integrable f μ)\n    (hconv : ∀ᵐ x ∂μ, Tendsto (fun n => fseq n x) atTop (𝓝 (f x)))\n    (hintegral : Tendsto (fun n => ∫ x, fseq n x ∂μ) atTop (𝓝 (∫ x, f x ∂μ))) :\n    Tendsto (fun n => ∫ x, |fseq n x - f x| ∂μ) atTop (𝓝 0) := by"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "P2",
+        "status_F": "pass",
+        "status_E": "fail",
+        "derivation_class": "all_terms_integrable",
+        "reason": "F回顾性约定包含逐项可积，故候选接口条件性闭合。E要求扩展积分到最终可积的推导，T接受显式最终可积接口；候选却只要求所有项可积，且没有任何真实尾部包装，因此E和T均失败。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 60,
+            "line_end": 64,
+            "quote": "    (hfseq_meas : ∀ n, Measurable (fseq n)) (hf_meas : Measurable f)\n    (hfseq_nonneg : ∀ n x, 0 ≤ fseq n x) (hf_nonneg : ∀ x, 0 ≤ f x)\n    (hfseq_int : ∀ n, Integrable (fseq n) μ) (hf_int : Integrable f μ)\n    (hconv : ∀ᵐ x ∂μ, Tendsto (fun n => fseq n x) atTop (𝓝 (f x)))\n    (hintegral : Tendsto (fun n => ∫ x, fseq n x ∂μ) atTop (𝓝 (∫ x, f x ∂μ))) :"
+          }
+        ],
+        "status_T": "fail"
+      },
+      {
+        "id": "P3",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "候选使用实际函数代表元，公开要求fₙ和f均可测且处处非负，并以几乎处处收敛为输入。该要求强于仅从源文语法推导的几乎处处版本，但由原TASK对fₙ、f均为非负可测函数的明确表述许可。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 60,
+            "line_end": 63,
+            "quote": "    (hfseq_meas : ∀ n, Measurable (fseq n)) (hf_meas : Measurable f)\n    (hfseq_nonneg : ∀ n x, 0 ≤ fseq n x) (hf_nonneg : ∀ x, 0 ≤ f x)\n    (hfseq_int : ∀ n, Integrable (fseq n) μ) (hf_int : Integrable f μ)\n    (hconv : ∀ᵐ x ∂μ, Tendsto (fun n => fseq n x) atTop (𝓝 (f x)))"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "P4",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "候选定义负部为max(f-fₙ,0)，由非负性逐点证明其范数受f控制，随后建立可测性和几乎处处趋零并应用支配收敛；没有把L1结论作为前提。此核心证明在三种解释下均正确。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 13,
+            "line_end": 18,
+            "quote": "theorem prob_7_6_negPart_le {α : Type*} {fseq : ℕ → α → ℝ} {f : α → ℝ}\n    (hfseq_nonneg : ∀ n x, 0 ≤ fseq n x) (hf_nonneg : ∀ x, 0 ≤ f x) :\n    ∀ n x, ‖prob_7_6_negPart fseq f n x‖ ≤ f x := by\n  intro n x\n  rw [Real.norm_eq_abs, abs_of_nonneg (le_max_right _ _)]\n  exact max_le (sub_le_self _ (hfseq_nonneg n x)) (hf_nonneg x)"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 36,
+            "line_end": 44,
+            "quote": "  have hlim : ∀ᵐ x ∂μ,\n      Tendsto (fun n => prob_7_6_negPart fseq f n x) atTop (𝓝 0) := by\n    filter_upwards [hconv] with x hx\n    simpa [prob_7_6_negPart] using\n      ((tendsto_const_nhds :\n        Tendsto (fun _ : ℕ => f x) atTop (𝓝 (f x))).sub hx).max (tendsto_const_nhds :\n        Tendsto (fun _ : ℕ => (0 : ℝ)) atTop (𝓝 0))\n  simpa using\n    (tendsto_integral_of_dominated_convergence f hmeas hf_int hbound hlim)"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "P5",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "all_terms_integrable",
+        "reason": "候选证明绝对差恒等式并合法拆分积分，再将给定积分收敛与已证负部积分趋零相加得到L1结论；未预设目标。其强前提证明在三种解释下均正确，域覆盖问题仅归P2。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 89,
+            "line_end": 101,
+            "quote": "      _ = (∫ x, fseq n x ∂μ) - (∫ x, f x ∂μ) +\n          2 * ∫ x, prob_7_6_negPart fseq f n x ∂μ := by\n            rw [integral_sub (hfseq_int n) hf_int, integral_const_mul]\n  have hconst : Tendsto (fun _ : ℕ => ∫ x, f x ∂μ) atTop (𝓝 (∫ x, f x ∂μ)) :=\n    tendsto_const_nhds\n  have hmain := (hintegral.sub hconst).add (hneg.const_mul 2)\n  have heq :\n      (fun n => ∫ x, |fseq n x - f x| ∂μ) =\n        (fun n => (∫ x, fseq n x ∂μ) - (∫ x, f x ∂μ) +\n          2 * ∫ x, prob_7_6_negPart fseq f n x ∂μ) :=\n    funext hformula\n  rw [heq]\n  simpa only [sub_self, zero_add, mul_zero] using hmain"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "D1",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "all_terms_integrable",
+        "reason": "一般密度接口要求每个fₙ及极限f均为概率密度，并接受Lebesgue测度下几乎处处收敛；极限的可测性、处处非负性和积分为1均由真实结构字段保证。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 22,
+            "line_end": 31,
+            "quote": "theorem ex_10_3_2_density_L1\n    {fseq : ℕ → ℝ → ℝ} {f : ℝ → ℝ}\n    (hfseq : ∀ n, IsProbabilityDensity (fseq n))\n    (hf : IsProbabilityDensity f)\n    (hconv : ∀ᵐ x ∂volume, Tendsto (fun n => fseq n x) atTop (𝓝 (f x))) :\n    Tendsto (fun n => ∫ x, |fseq n x - f x|) atTop (𝓝 0) := by\n  apply prob_7_6 volume (fun n => (hfseq n).measurable) hf.measurable\n    (fun n => (hfseq n).nonneg) hf.nonneg\n    (fun n => integrable_of_integral_eq_one (hfseq n).integral_eq_one)\n    (integrable_of_integral_eq_one hf.integral_eq_one) hconv"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "D2",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "all_terms_integrable",
+        "reason": "一般密度定理实际调用Scheffé所得L1收敛，并用全变差距离等于绝对密度差积分一半的公式得到全变差趋零。所有密度逐项可积，故该应用不受一般Scheffé尾部接口缺口影响。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 47,
+            "line_end": 61,
+            "quote": "  have hL1 := ex_10_3_2_density_L1 hfseq hf hconv\n  rw [thm_14_4_totalVariationConvergence]\n  have heq : ∀ n,\n      totalVariationDistance\n          ((ex_10_3_2_densityLaw (fseq n) (hfseq n) : ProbabilityMeasure ℝ) : Measure ℝ)\n          ((ex_10_3_2_densityLaw f hf : ProbabilityMeasure ℝ) : Measure ℝ) =\n        (1 / 2 : ℝ) * ∫ x, |fseq n x - f x| := by\n    intro n\n    simpa [ex_10_3_2_densityLaw, densityDiff] using\n      continuous_totalVariationDistance_eq_half_integral_abs\n        (hfseq n).measurable hf.measurable\n        (integrable_of_integral_eq_one (hfseq n).integral_eq_one)\n        (integrable_of_integral_eq_one hf.integral_eq_one)\n        (hfseq n).nonneg hf.nonneg\n        (hfseq n).integral_eq_one hf.integral_eq_one"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "D3",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "候选从一般密度全变差收敛得到弱收敛，并通过公开桥接定理交付MeasuresConvergeInDistribution；接口真实接入。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 84,
+            "line_end": 91,
+            "quote": "    (hconv : ∀ᵐ x ∂volume, Tendsto (fun n => fseq n x) atTop (𝓝 (f x))) :\n    IsProbabilityDensity f ∧\n      MeasuresConvergeInDistribution\n        (fun n => ex_10_3_2_densityLaw (fseq n) (hfseq n))\n        (ex_10_3_2_densityLaw f hf) := by\n  refine ⟨hf, ?_⟩\n  exact thm_10_6_weak_to_distribution_bridge _ _\n    (ex_10_3_2_density_weakConvergence hfseq hf hconv)"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "N1",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "均值参数为实数、方差参数为非负实数。覆盖全部方差边界的弱收敛只要求参数收敛；正极限方差的一般端点只要求极限方差非零，没有把所有近似方差非零作为公开前提。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 162,
+            "line_end": 167,
+            "quote": "theorem ex_10_3_2_gaussian_weakConvergence\n    {mseq : ℕ → ℝ} {m : ℝ} {vseq : ℕ → ℝ≥0} {v : ℝ≥0}\n    (hm : Tendsto mseq atTop (𝓝 m)) (hv : Tendsto vseq atTop (𝓝 v)) :\n    def_14_1\n      (fun n => ex_10_3_2_gaussianLaw (mseq n) (vseq n))\n      (ex_10_3_2_gaussianLaw m v) := by"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 251,
+            "line_end": 258,
+            "quote": "theorem ex_10_3_2_gaussian_positive_totalVariation_general\n    {mseq : ℕ → ℝ} {m : ℝ} {vseq : ℕ → ℝ≥0} {v : ℝ≥0}\n    (hm : Tendsto mseq atTop (𝓝 m)) (hv : Tendsto vseq atTop (𝓝 v))\n    (hv0 : v ≠ 0) :\n    thm_14_4_totalVariationConvergence\n      (fun n => ex_10_3_2_gaussianLaw (mseq n) (vseq n))\n      (ex_10_3_2_gaussianLaw m v) := by\n  have hne : ∀ᶠ n : ℕ in atTop, vseq n ≠ 0 := hv.eventually_ne hv0"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "N2",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "eventual_integrability",
+        "reason": "极限方差为正时，候选由参数收敛推出近似方差最终非零，证明密度积分最终恒为1并获得积分收敛；高斯密度本身对所有参数可积，随后仅在非退化尾部应用密度全变差公式，公开结论没有全局非退化前提。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 258,
+            "line_end": 278,
+            "quote": "  have hne : ∀ᶠ n : ℕ in atTop, vseq n ≠ 0 := hv.eventually_ne hv0\n  have hpoint : ∀ᵐ x ∂volume,\n      Tendsto (fun n => gaussianPDFReal (mseq n) (vseq n) x)\n        atTop (𝓝 (gaussianPDFReal m v x)) :=\n    Filter.Eventually.of_forall fun x =>\n      ex_10_3_2_gaussianPDFReal_tendsto hm hv hv0 x\n  have hint : Tendsto (fun n => ∫ x, gaussianPDFReal (mseq n) (vseq n) x)\n      atTop (𝓝 (∫ x, gaussianPDFReal m v x)) := by\n    have hc : Tendsto (fun _ : ℕ => (1 : ℝ)) atTop (𝓝 1) := tendsto_const_nhds\n    rw [integral_gaussianPDFReal_eq_one _ hv0]\n    apply hc.congr'\n    filter_upwards [hne] with n hn\n    rw [integral_gaussianPDFReal_eq_one _ hn]\n  have hL1 : Tendsto\n      (fun n => ∫ x, |gaussianPDFReal (mseq n) (vseq n) x -\n        gaussianPDFReal m v x|) atTop (𝓝 0) := by\n    exact prob_7_6 volume\n      (fun n => measurable_gaussianPDFReal _ _) (measurable_gaussianPDFReal _ _)\n      (fun n => gaussianPDFReal_nonneg _ _) (gaussianPDFReal_nonneg _ _)\n      (fun n => integrable_gaussianPDFReal _ _) (integrable_gaussianPDFReal _ _)\n      hpoint hint"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "N3",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "方差趋零时，候选通过涵盖零方差的特征函数弱收敛证明公开推出到零方差高斯律即极限均值点质量的依分布收敛；另在近似方差均非零时证明不发生全变差收敛，没有误称零方差极限为全变差收敛。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 189,
+            "line_end": 198,
+            "quote": "/-- If the variances tend to zero, the Gaussian laws converge in distribution\nto the point mass at the limiting mean. -/\ntheorem ex_10_3_2_gaussian_zero_distribution\n    {mseq : ℕ → ℝ} {m : ℝ} {vseq : ℕ → ℝ≥0}\n    (hm : Tendsto mseq atTop (𝓝 m)) (hv : Tendsto vseq atTop (𝓝 0)) :\n    MeasuresConvergeInDistribution\n      (fun n => ex_10_3_2_gaussianLaw (mseq n) (vseq n))\n      (ex_10_3_2_gaussianLaw m 0) :=\n  thm_10_6_weak_to_distribution_bridge _ _\n    (ex_10_3_2_gaussian_weakConvergence hm hv)"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 209,
+            "line_end": 216,
+            "quote": "/-- With every approximating variance nonzero, convergence to a point mass is\nnot convergence in total variation (the distance is always at least one). -/\ntheorem ex_10_3_2_gaussian_zero_not_totalVariation\n    {mseq : ℕ → ℝ} {m : ℝ} {vseq : ℕ → ℝ≥0}\n    (hvseq0 : ∀ n, vseq n ≠ 0) :\n    ¬ thm_14_4_totalVariationConvergence\n      (fun n => ex_10_3_2_gaussianLaw (mseq n) (vseq n))\n      (ex_10_3_2_gaussianLaw m 0) := by"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "I1",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "not_applicable",
+        "reason": "两份候选文件及其允许的上游支持和导入链完整存在。只读技术事实记录候选哈希对应的构建、公理审计和逃逸扫描均通过；源码未见sorry、admit或新增公理。E和T的P2范围缺口不改变现有资产的技术闭合。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 1,
+            "line_end": 6,
+            "quote": "import Mathlib\nimport ProbabilityTheory.chapter_07.prob_7_6\nimport ProbabilityTheory.chapter_08.prob_8_7\nimport ProbabilityTheory.chapter_10.thm_10_6\nimport ProbabilityTheory.chapter_14.thm_14_4\nimport ProbabilityTheory.common_support.tv_distance_core"
+          },
+          {
+            "path": "tool_fact/technical-validation.json",
+            "line_start": 1,
+            "line_end": 1,
+            "quote": "\"escape_scan_exit_code\":0,\"source_launch_manifest_sha256\""
+          },
+          {
+            "path": "tool_fact/technical-validation.json",
+            "line_start": 1,
+            "line_end": 1,
+            "quote": "\"technical_status\":\"pass\""
+          }
+        ],
+        "status_T": "pass"
+      }
+    ],
+    "overall_F": "pass",
+    "overall_E": "fail",
+    "summary": "候选在自身明确前提下数学正确，且完整交付一般密度、全变差、依分布、正方差正态及零方差点质量分支。F在回顾性逐项有限积分约定下条件性通过，但该约定没有冻结源文依据。E因缺少从扩展积分条件到最终可积的公开包装而失败。T不暗加E的扩展积分推导义务，但候选也没有原TASK所许可的实际最终尾部可积公开表述，而只要求所有项可积，故T同样因P2失败。该解释差异属于判据争议，不是现有强前提定理的数学错误。",
+    "limitations": [
+      "F/E/T澄清是在看过原F/E初评后追加，并非原实验前登记；原F/E输出未被覆盖。",
+      "技术结论仅依据所提供的只读技术回执：其记录候选哈希对应的构建、公理审计和逃逸扫描通过；本次裁决未重新构建或扩大回执范围。",
+      "跨候选材料仅用于检查规则适用一致性，没有采用多数投票，也没有据其他候选标签强制本候选结论。"
+    ],
+    "overall_T": "fail"
+  },
+  "assessment_accepted": false,
+  "issues": [
+    {
+      "kind": "evidence_quote_or_location",
+      "context": "source",
+      "evidence": {
+        "path": "reevaluation/TAIL_SCOPE_REVISION.json",
+        "line_start": 3,
+        "line_end": 5,
+        "quote": "\"not_original_preregistration\": true,\r\n  \"trigger\": \"Initial F/E reviews exposed that E demands an extended-integral-to-eventual-integrability wrapper even when a candidate uses the eventual-integrability formulation expressly permitted by TASK. Preserve E as strict source-scope sensitivity; do not silently impose it as the only original TASK acceptance rule.\",\r\n  \"quoted_original_task\": \"合同允许采用最终尾部可积表述\""
+      }
+    }
+  ],
+  "actor_receipt": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l3-v1\\candidate-b299284a15fd-adjud\\executions\\adjudicator\\attempt-01\\actor\\actor-receipt.json",
+  "actor_receipt_sha256": "92ee0fea6ab67ee5bf503fdbfd2e82666d011623bf352cccb22ab28899f671b6",
+  "raw_events_sha256": "c41c474941b36da96c8fc70669ca0f49e1d1e114a82cd72fbcaef438436f0057",
+  "subject_manifest_unchanged": true,
+  "source_exposure_verified": true,
+  "host_elapsed_seconds": 246.4458167552948,
+  "no_model_retry": true,
+  "original_results_unchanged": true
+}

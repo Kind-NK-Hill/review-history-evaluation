@@ -1,0 +1,80 @@
+{
+  "schema": "c-pilot-final.v1",
+  "terminal": {
+    "kind": "explicit_submit",
+    "candidate_id": "c1",
+    "stop_reason": "believes_complete",
+    "unresolved": [],
+    "submitted_epoch": 1789098246.2992585,
+    "elapsed_seconds": 708.7138028144836,
+    "deadline": {
+      "allowance_seconds": 5400.0,
+      "started_epoch": 1789097537.5854557,
+      "deadline_epoch": 1789102937.5854557,
+      "remaining_seconds": 4691.286197185516
+    },
+    "run_ended": true
+  },
+  "deadline": {
+    "allowance_seconds": 5400.0,
+    "started_epoch": 1789097537.5854557,
+    "deadline_epoch": 1789102937.5854557,
+    "remaining_seconds": 4668.470812797546
+  },
+  "coordinator_dispatch": "5cff43da-5b77-4bcc-99fe-57d5bc067bac",
+  "coordinator_sessions": [
+    "01a08e85-f127-7591-bb0e-eb50ee5285e7"
+  ],
+  "coordinator_error": null,
+  "all_role_usage": [
+    {
+      "role": "coordinator",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 1640110,
+          "cached_input_tokens": 1588224,
+          "output_tokens": 4284,
+          "reasoning_output_tokens": 594
+        }
+      ],
+      "dispatch_id": "5cff43da-5b77-4bcc-99fe-57d5bc067bac",
+      "parent_dispatch_id": null,
+      "receipt": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l1-001\\run\\actors\\coordinator-001\\actor-receipt.json"
+    },
+    {
+      "role": "reviewer",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 263319,
+          "cached_input_tokens": 217088,
+          "output_tokens": 5925,
+          "reasoning_output_tokens": 1905
+        }
+      ],
+      "dispatch_id": "21c7b483-2594-416e-9d74-6feeb336ef06",
+      "parent_dispatch_id": "5cff43da-5b77-4bcc-99fe-57d5bc067bac",
+      "receipt": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l1-001\\run\\actors\\reviewer-002\\actor-receipt.json"
+    },
+    {
+      "role": "writer",
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 667241,
+          "cached_input_tokens": 548992,
+          "output_tokens": 17521,
+          "reasoning_output_tokens": 3127
+        }
+      ],
+      "dispatch_id": "4a3bffb2-c0ac-481e-aec3-0cf08dd9444e",
+      "parent_dispatch_id": "5cff43da-5b77-4bcc-99fe-57d5bc067bac",
+      "receipt": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l1-001\\run\\actors\\writer-001\\actor-receipt.json"
+    }
+  ],
+  "state_sha256": "88e60e92396446630d72fdd9a17cffac7996737d1b4d86259f2a557090c2f595"
+}

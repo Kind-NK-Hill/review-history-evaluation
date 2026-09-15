@@ -1,0 +1,28 @@
+{
+  "/seed": "astra-cross-evaluation-prototype-20260906-task-isolation-v1",
+  "/selection_inputs_used": [
+    "task_id",
+    "raw_pair_id",
+    "task_content_comparison",
+    "spine_contract_comparison",
+    "prior exposure identifiers",
+    "input snapshot path and registered hashes"
+  ],
+  "/selection_inputs_not_used": [
+    "recorded verdict",
+    "finding meaning",
+    "candidate code content",
+    "successful execution",
+    "apparent quality improvement"
+  ],
+  "/rule_order": [
+    "exclude whole tasks",
+    "select minimum seeded edge hash per task",
+    "assign 2x2 metadata strata",
+    "take two smallest seeded task hashes per stratum",
+    "freeze event/input/candidate identities and byte hashes",
+    "only then parse selected raw inputs"
+  ],
+  "/stratum_semantics": "recorded_change means a recorded task/content or spine field differs; no_recorded_change includes noncomparable fields and does not prove identical historical requirements.",
+  "/projection_note": "Original frozen selection with local paths made relative or omitted; original content hash is provenance, not the hash of this projection."
+}

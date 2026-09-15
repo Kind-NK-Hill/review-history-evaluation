@@ -1,0 +1,17 @@
+[
+  {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-m1\\development-ac-r1\\cases\\f93607e7809c996c616bd68e730059057c5405d2a64347677eb1a3ec87b35901\\final\\decision.json",
+    "copy": "a-m1-decision.json",
+    "sha256": "473f72c3596dde487b94df03038af78dff2b2c31ab29aa135b8ead5c431d61b2"
+  },
+  {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\H1-candidate-ad3cbe004a3a-1.json",
+    "copy": "b-h1-assessment.json",
+    "sha256": "f19547e4a64d18c71903c9dd35cfe59b8ec913c44c48d59fb1bd0d30d078b1a1"
+  },
+  {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\CURRENT_ACCEPTANCE.zh-CN.md",
+    "copy": "current-acceptance.zh-CN.md",
+    "sha256": "28672b45989c21f7c56d9b20b6205d047e124e6849d0ca07db8cb2331fca5113"
+  }
+]

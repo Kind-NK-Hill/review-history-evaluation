@@ -1,0 +1,261 @@
+{
+  "created_at_utc": "2026-09-14T02:12:07.192528+00:00",
+  "scope": "Revision 20 first-batch A-L1/A-M1, read-only reconstruction; no official statistics changed",
+  "runs": [
+    {
+      "label": "A-L1",
+      "run_id": "pilot-prob_13_9-A-r1",
+      "root_path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-prob_13_9-A-r1",
+      "clock": {
+        "singleton": 1,
+        "allowance": 5400.0,
+        "started_epoch": 1789051916.5959792,
+        "deadline_epoch": 1789057316.5959792
+      },
+      "first_dispatch_utc": "2026-09-10T14:51:56.595979+00:00",
+      "last_recorded_return": {
+        "id": "2ad8d4e6-0248-488c-b48e-445137c5d5c4",
+        "parent_id": "795ff7ed-7d40-4ca2-93f1-aa1a8f0a7f2c",
+        "role": "author",
+        "session_id": "01a08bcd-d233-7231-9106-2c0066dcfd53",
+        "opened_epoch": 1789055351.180108,
+        "closed_epoch": 1789057065.94215,
+        "status": "failed"
+      },
+      "last_recorded_return_utc": "2026-09-10T16:17:45.942150+00:00",
+      "recorded_return_span_seconds": 5149.346170902252,
+      "recorded_return_span_minutes": 85.8224361817042,
+      "missing_return_evidence": [
+        {
+          "id": "65515f74-ec7e-4111-99dc-ef3058c3f755",
+          "parent_id": "2ad8d4e6-0248-488c-b48e-445137c5d5c4",
+          "role": "general_reviewer",
+          "session_id": null,
+          "opened_epoch": 1789057027.7723842,
+          "closed_epoch": null,
+          "status": "active",
+          "actor_path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-prob_13_9-A-r1\\help\\c719c4d7-52dd-41b2-a6ab-55bc13c4f4bd\\actor",
+          "worker_config_sha256": "0dba51ec209e0d3b9c6294f225faebd77a31647535172a3980801683185d8f45",
+          "session_identity": {
+            "session_id": "01a08c1b-cf8b-79f2-921e-80a7793d90b6"
+          },
+          "container_id": "da23cb6ebfa5f2984686b585cd4aef3f75a6366372ac88768c14560c8e85a727",
+          "container_name": "/fw-help-c719c4d752dd41b2a6ab",
+          "container_state": {
+            "Status": "exited",
+            "Running": false,
+            "StartedAt": "2026-09-10T16:17:07.269284805Z",
+            "FinishedAt": "2026-09-10T16:17:32.063648617Z",
+            "ExitCode": 137
+          },
+          "container_finished_before_last_recorded_return_seconds": 13.878502130508423,
+          "last_bridge_event_utc": "2026-09-10T16:17:08.314000+00:00",
+          "raw_events_sha256": "6c15912f80e15209b84482189ee0eec50e6a65974cb39e10e4a34a4626613144"
+        }
+      ],
+      "all_missing_containers_stopped_before_last_recorded_return": true,
+      "last_return_receipt": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-prob_13_9-A-r1\\a-controller\\actors\\author-002\\actor-receipt.json",
+        "sha256": "b77d07a5ea7b64efbdfa55122a984f43330a491da9bc83065bdbb553ccaa1e0a",
+        "deadline": {
+          "allowance_seconds": 5400.0,
+          "started_epoch": 1789051916.5959792,
+          "deadline_epoch": 1789057316.5959792,
+          "remaining_seconds": 250.63931107521057
+        },
+        "process": {
+          "elapsed_seconds": 1714.734999999986,
+          "exit_code": 4294967295,
+          "timed_out": false,
+          "remaining_at_launch_seconds": 1965.4038226604462
+        }
+      },
+      "selected_candidates": [
+        {
+          "logical_path": "ProbabilityTheory/chapter_13/prob_13_9.lean",
+          "sha256": "f13136af8fc976af336a5e1622983fbae41f1712f8392fd5dc1a797bccdaf333"
+        }
+      ],
+      "database_sha256_before": "3dcc134ebe6ffd37ae11926a55aca584c3d9c03df118f55c337fcdac42ea0bce",
+      "database_sha256_after": "3dcc134ebe6ffd37ae11926a55aca584c3d9c03df118f55c337fcdac42ea0bce",
+      "controller_completion": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-prob_13_9-A-r1\\a-controller\\result.json",
+        "sha256": "3fa17ab4c93ba6380405e276e6c8da15421d36a8b04dcc5d94d619a24058c1bb",
+        "status": "completed",
+        "span_seconds": 5151.28022480011,
+        "span_minutes": 85.85467041333517,
+        "snapshot_utc": "2026-09-10T16:17:47.876204+00:00"
+      },
+      "recommended_display_minutes_rounded": 86,
+      "interpretation": "Supported approximate execution-to-recorded-completion duration. Container stop corroborates no remaining in-container role activity; it is not a recovered host return receipt."
+    },
+    {
+      "label": "A-M1",
+      "run_id": "pilot-thm_13_17_to_13_18-A-r1",
+      "root_path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-thm_13_17_to_13_18-A-r1",
+      "clock": {
+        "singleton": 1,
+        "allowance": 14400.0,
+        "started_epoch": 1789057099.068422,
+        "deadline_epoch": 1789071499.068422
+      },
+      "first_dispatch_utc": "2026-09-10T16:18:19.068422+00:00",
+      "last_recorded_return": {
+        "id": "2444d9c9-e192-4980-89af-e667a15c1745",
+        "parent_id": null,
+        "role": "author",
+        "session_id": "01a08c1c-e60e-7630-bacd-e5ffcc0dc354",
+        "opened_epoch": 1789065201.892221,
+        "closed_epoch": 1789065312.600352,
+        "status": "completed"
+      },
+      "last_recorded_return_utc": "2026-09-10T18:35:12.600352+00:00",
+      "recorded_return_span_seconds": 8213.531929969788,
+      "recorded_return_span_minutes": 136.8921988328298,
+      "missing_return_evidence": [
+        {
+          "id": "08dec13b-ffed-435e-b459-2a3d00af9bfa",
+          "parent_id": "b1a16493-c16c-4d08-8617-4aba833e9247",
+          "role": "support_author",
+          "session_id": null,
+          "opened_epoch": 1789057341.1518686,
+          "closed_epoch": null,
+          "status": "active",
+          "actor_path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-thm_13_17_to_13_18-A-r1\\help\\3cccabf0-f4ce-4981-81af-3ee8aeb1aefd\\actor",
+          "worker_config_sha256": "51122efdfc514af72d6bc7b847f0f4f36010b647d785278feb467d8496c9ad8a",
+          "session_identity": {
+            "session_id": "01a08c20-97b5-7590-ac99-5e11cdc72edb"
+          },
+          "container_id": "ca7d7e8ec98ebb46b09f0971f2d34fcaf2eebf88e9e59ad1f293affd580daa8c",
+          "container_name": "/fw-help-3cccabf0f4ce498181af",
+          "container_state": {
+            "Status": "exited",
+            "Running": false,
+            "StartedAt": "2026-09-10T16:22:20.653044019Z",
+            "FinishedAt": "2026-09-10T16:29:41.86529895Z",
+            "ExitCode": 137
+          },
+          "container_finished_before_last_recorded_return_seconds": 7530.735054016113,
+          "last_bridge_event_utc": "2026-09-10T16:29:38.749504+00:00",
+          "raw_events_sha256": "0e13515f46c6e8e11bc2eec59d25d5100c724a485da52b784fdde7808e6f8b72"
+        },
+        {
+          "id": "93a19068-a9a8-4d0a-b13a-08d35213cdeb",
+          "parent_id": "d9978003-9b99-4ae5-8f59-dcb58ea09319",
+          "role": "general_reviewer",
+          "session_id": null,
+          "opened_epoch": 1789062140.6660283,
+          "closed_epoch": null,
+          "status": "active",
+          "actor_path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-thm_13_17_to_13_18-A-r1\\help\\de1cc412-f82f-4db7-b9cd-d252c9e37c48\\actor",
+          "worker_config_sha256": "db19c009f47ff02dff04954d3df784d4628dfe10497e146e9bfd31b1b4d8d185",
+          "session_identity": {
+            "session_id": "01a08c69-d3a9-7931-992f-b904cf7ab994"
+          },
+          "container_id": "77c4261b530c4d7a428bc8de2338b417e85f8eea906f56da76d7c4d6724d31c8",
+          "container_name": "/fw-help-de1cc412f82f4db7b9cd",
+          "container_state": {
+            "Status": "exited",
+            "Running": false,
+            "StartedAt": "2026-09-10T17:42:20.171173133Z",
+            "FinishedAt": "2026-09-10T17:43:38.336886402Z",
+            "ExitCode": 137
+          },
+          "container_finished_before_last_recorded_return_seconds": 3094.2634661197662,
+          "last_bridge_event_utc": "2026-09-10T17:43:48.096266+00:00",
+          "raw_events_sha256": "a12f61fd9f6f5268a762d3656aa1af95047c61d81c8298bb068b777beb6abc1b"
+        },
+        {
+          "id": "43df3e43-df3c-4576-9240-92e2641b14f7",
+          "parent_id": "d9978003-9b99-4ae5-8f59-dcb58ea09319",
+          "role": "author",
+          "session_id": null,
+          "opened_epoch": 1789062321.3593178,
+          "closed_epoch": null,
+          "status": "active",
+          "actor_path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-thm_13_17_to_13_18-A-r1\\a-controller\\actors\\author-008",
+          "worker_config_sha256": "ce1da136c913e2b0619e83f147fa2dffc4cf899c19ef04fd24fa95b3b3b1a747",
+          "session_identity": {
+            "session_id": "01a08c1c-e60e-7630-bacd-e5ffcc0dc354"
+          },
+          "container_id": "281df39bf354916bcd3aee327acd9f22b948760fdf67fd9230bf0233f034b228",
+          "container_name": "/pilot-thm_13_17_to_13_18-A-r1-author-008",
+          "container_state": {
+            "Status": "exited",
+            "Running": false,
+            "StartedAt": "2026-09-10T17:45:20.970788535Z",
+            "FinishedAt": "2026-09-10T17:46:44.040831723Z",
+            "ExitCode": 137
+          },
+          "container_finished_before_last_recorded_return_seconds": 2908.559520959854,
+          "last_bridge_event_utc": "2026-09-10T17:45:46.994691+00:00",
+          "raw_events_sha256": "5e5e435d062932121dda18b29ac292a0ed4c576747daff1bd5b5dc2392240a2f"
+        },
+        {
+          "id": "401146c7-fb76-41f8-81ff-988e05bf92f8",
+          "parent_id": "43df3e43-df3c-4576-9240-92e2641b14f7",
+          "role": "general_reviewer",
+          "session_id": null,
+          "opened_epoch": 1789062372.8433428,
+          "closed_epoch": null,
+          "status": "active",
+          "actor_path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-thm_13_17_to_13_18-A-r1\\help\\d3e54a2b-797d-4356-82e1-37bb32b6e117\\actor",
+          "worker_config_sha256": "09ed89ead908bdb9ace0def8718118775dec20bfcddc6900a0852e08cc0f063d",
+          "session_identity": {
+            "session_id": "01a08c6d-5ee8-7f61-bc6a-14017bac0beb"
+          },
+          "container_id": "3e4152f5e054616b6618d5eceec2b5b3fb75d12895b5883eb6a9519d3e8c735b",
+          "container_name": "/fw-help-d3e54a2b797d435682e1",
+          "container_state": {
+            "Status": "exited",
+            "Running": false,
+            "StartedAt": "2026-09-10T17:46:12.279888309Z",
+            "FinishedAt": "2026-09-10T17:46:30.874639923Z",
+            "ExitCode": 137
+          },
+          "container_finished_before_last_recorded_return_seconds": 2921.7257130146027,
+          "last_bridge_event_utc": "2026-09-10T17:46:43.551336+00:00",
+          "raw_events_sha256": "2dddfba4837ba202853e36f33fd4f2bfb70b4ef65d3ab429638a61d61754d2f4"
+        }
+      ],
+      "all_missing_containers_stopped_before_last_recorded_return": true,
+      "last_return_receipt": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-thm_13_17_to_13_18-A-r1\\manual-controller-recovery\\author-015\\actor-receipt.json",
+        "sha256": "21b23b393d6499d6748874e424f3192019865f09c98096af3a88eb671f4de795",
+        "deadline": {
+          "allowance_seconds": 14400.0,
+          "started_epoch": 1789057099.068422,
+          "deadline_epoch": 1789071499.068422,
+          "remaining_seconds": 6186.465070486069
+        },
+        "process": {
+          "elapsed_seconds": 110.67199999999139,
+          "exit_code": 0,
+          "timed_out": false,
+          "remaining_at_launch_seconds": 6297.163944721222
+        }
+      },
+      "selected_candidates": [
+        {
+          "logical_path": "ProbabilityTheory/chapter_13/thm_13_17.lean",
+          "sha256": "abb4a629c9a9aae11dcaf2699fe3a1a3a37159a67199d801192613dd0749fd8b"
+        },
+        {
+          "logical_path": "ProbabilityTheory/chapter_13/thm_13_18.lean",
+          "sha256": "b28563d1c3ab4bebe8eeaa39c6f2bcbe940bb74923539ee72b3f65250cc7894b"
+        }
+      ],
+      "database_sha256_before": "c25bcbe75af76ba150eda64da0d790db806333bd542e1e474a29ea8f8b59beca",
+      "database_sha256_after": "c25bcbe75af76ba150eda64da0d790db806333bd542e1e474a29ea8f8b59beca",
+      "final_author_message": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\pilot-runs-r1\\pilot-thm_13_17_to_13_18-A-r1\\manual-controller-recovery\\author-015\\raw-public-events.bin",
+        "sha256": "a44d7c9ab03b7eaf47da3da1acc61f740270e9edccb6e0db349d25de97fe5bec",
+        "turn_completed_present": true,
+        "text": "任务组已正式通过，且实际构建成功。\n\n执行结果：\n\n- 绑定核验：退出码 0\n  - 结果 schema：`phase2.semantic_review.result.v8`\n  - `task_id=thm_13_18`\n  - `verdict=pass`\n  - 候选哈希与请求一致\n  - 审核输入哈希与请求一致\n- `review-apply`：退出码 0\n- `auto-loop`：退出码 0\n- `lake build ProbabilityTheory.chapter_13.thm_13_17 ProbabilityTheory.chapter_13.thm_13_18`：退出码 0，8590 项构建成功\n\n哈希：\n\n- 审核结果：`225c3c814f64afb09ff2f73ade13c3942f5821c844b8b190b2d90a535b15e948`\n- v2 请求：`552d8050b2e9ec21b42e613de102edc4c9de8f5d431d294247b1e5bd09511322`\n- `candidate_v2.lean`：`b28563d1c3ab4bebe8eeaa39c6f2bcbe940bb74923539ee72b3f65250cc7894b`\n- 正式 `thm_13_18.lean`：`b28563d1c3ab4bebe8eeaa39c6f2bcbe940bb74923539ee72b3f65250cc7894b`\n- 正式 `thm_13_17.lean`：`abb4a629c9a9aae11dcaf2699fe3a1a3a37159a67199d801192613dd0749fd8b`\n\n元数据：\n\n- `phase2_status = pass`\n- `phase2_task_status = pass`\n- 原因：`source_route_theorem is source-route completion for a proof-bearing task`\n\n注意：按要求运行的 `auto-loop` 在终态之后误生成了非权威 v3 待审请求，使 `pack_candidate_state` 显示 `review_pending`；没有派发该请求，也没有创建新审核者。正式文件、应用结果和权威 `phase2_status` 均为通过。\n\n容器没有暴露根截止时间或剩余秒数，无法可靠报告数值；根时钟未被重置或延长。",
+        "selected_candidate_hashes_present": true
+      },
+      "recommended_display_minutes_rounded": 137,
+      "interpretation": "Supported approximate execution-to-recorded-completion duration. Container stop corroborates no remaining in-container role activity; it is not a recovered host return receipt."
+    }
+  ]
+}

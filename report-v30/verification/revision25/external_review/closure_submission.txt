@@ -1,0 +1,36 @@
+请仅核查你对第25版指出的两处必要修改是否已关闭，不扩大研究范围，中文400字内即可。本轮未改变任何统计数字、语义分类、数学成果或用时。以下均为已经写入的实际段落；不是计划。可选的“尾部范围缺口”与第6.2节“第一批”也已双语落实。
+
+== zh-CN 摘要新增段 ==
+
+新增的第二批过程分析覆盖全部33项运行，核对4,054次实际工具调用（不含179次工具发现）及66条固定起点记录。它揭示从检索到实际证明所需的接口转换、局部成果传回的断点，并据重复出现的工具问题完成启动信息和参数预检原型。[[45,46]](#ref-45)
+
+== zh-CN 5.1单位 ==
+
+材料覆盖11个任务组的三种配置。去重并配对后，共有4,054次实际工具调用，不含179次工具发现。一次调用可以同时搜索、修改和检查，因此先保存实际输入输出，再核对它处理的具体证明需要。
+
+== zh-CN S.1单位 ==
+
+事件抽取覆盖范围内全部公开工具记录：163 份角色派发记录对应 135 个去重会话，共 4,233 个事件，其中实际工具调用 4,054 次、工具发现 179 次。请求与返回全部配对，按会话和调用标识去重；续接派发和并行角色的日志副本不增加调用数。终验、专项审核对照、额外修复及工程续作不进入主运行分母，第一批单列。范围和原始文件对应见[抽取说明](../research/extraction/README.zh-CN.md)与[来源清单](../research/extraction/source_manifest.json)。
+
+== zh-CN S.3实际复核分工 ==
+
+A、C两组共44条由其他代理非盲复核；B组22条由主调查者逐条复核并组织补查，之后汇总为66条裁决记录。初标、复核及改动分别保存；参与者均为模型代理，没有真人专家真值或无偏准确率估计。重点核对首次合格事件、同需求连接和最终源码使用，避免由导入或名称出现直接推断采用。
+
+== en 摘要新增段 ==
+
+The new process analysis covers all 33 second-batch runs, with 4,054 actual tool calls (excluding 179 tool-discovery calls) and 66 fixed-start records. It identifies interface adaptations between retrieval and proof, breaks in delivery of local work, and recurring tool problems that motivate validated startup-information and parameter-checking prototypes. [[45,46]](#ref-45)
+
+== en 5.1单位 ==
+
+The material covers three configurations on 11 task groups. Deduplication and pairing yielded 4,054 actual tool calls, excluding 179 tool-discovery calls. A call can combine searching, editing, and checking, so its recorded inputs and outputs are examined against the particular proof need it addresses.
+
+== en S.1单位 ==
+
+Extraction covers all public tool records within this scope: 163 role dispatch records represent 135 distinct sessions and 4,233 events, comprising 4,054 actual tool calls and 179 tool discoveries. Every request has a matched response. Session and call identifiers remove duplicate records from continued dispatches and parallel-role copies. Final acceptance, dedicated review controls, additional repairs, and engineering continuations are outside the main-run denominator; the first batch remains separate. The [extraction account](../research/extraction/README.zh-CN.md) and [source manifest](../research/extraction/source_manifest.json) document inclusion and provenance.
+
+== en S.3实际复核分工 ==
+
+The 44 records for A and C received non-blind review by other agents. The principal investigator reviewed all 22 B records and requested supplementary checks; the results were then consolidated into 66 adjudicated records. Initial labels, reviews, and changes are preserved separately. All assessors were model agents; there was no human-expert reference set or unbiased accuracy estimate. Review focused on first eligible events, continuity of need, and final-source evidence, rather than inferring adoption from imports or name occurrences.
+
+抽取说明同时明确：机器字段tool_family=service为兼容保留，但4,054包括命令执行、读取产物和求助等实际工具请求；不等于旧127项协助/评审活动、163次派发或135个会话。
+END_REVISION25_CLOSURE

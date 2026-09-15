@@ -1,0 +1,5 @@
+/checks/M1.lean:19:6: warning: Try `simp at hω` instead of `simpa using hω`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'check_optional_stopping' depends on axioms: [propext, Classical.choice, Quot.sound]
+

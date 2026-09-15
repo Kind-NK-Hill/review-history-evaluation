@@ -1,0 +1,29 @@
+{
+  "candidate_id": "candidate-92da00620333",
+  "files_sha256": {
+    "library/Variance.lean": "f848104c3a63f3f9727ac5bffdd3a426edbb22b46b42fe9fe085fdfa19a73900",
+    "reevaluation/RULES.json": "3787d7d033ee9498aefc496b74189b9bb9911dfaef6f39920a8c0b645c283c0b",
+    "source/SOURCE.tex": "41418a41fe5bc1b65a9a626bdb1acba4bb10ed4aeaaf59b460c20e2fa7a960a1",
+    "task_contract/COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+    "task_contract/TASK.zh-CN.md": "42de9c21cb60362d7b94b91f6140f4ca131d7c3fe5e6ed3f552fa2d823b4e2a5",
+    "tool_fact/technical-validation.json": "e1db603fb73a35926d8e7628d2b7484d9f8444f1d979a4774216cea0f74f1d12",
+    "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean": "0a0a2fb7a8016025bef9f3c4d948d61fd0704a1958de195fd0379953cd4dd2a3",
+    "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean": "19d0d4224cfd2eb9e8658d88c126bcb1b2fad1fd3f3826221542d9e1339d9bbb",
+    "upstream/ProbabilityTheory/chapter_05/def_5_1.lean": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450",
+    "upstream/ProbabilityTheory/chapter_05/def_5_2.lean": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f",
+    "upstream/ProbabilityTheory/chapter_05/thm_5_2.lean": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904",
+    "upstream/ProbabilityTheory/chapter_06/def_6_3.lean": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb",
+    "upstream/ProbabilityTheory/chapter_07/def_7_3.lean": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77",
+    "upstream/ProbabilityTheory/chapter_07/thm_7_13.lean": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227",
+    "upstream/ProbabilityTheory/chapter_09/def_9_1.lean": "c03e02565d8cd10d0d65e6ad4b94ce6925071e4eb1bcf52a51a35c267b390b27",
+    "upstream/ProbabilityTheory/chapter_10/def_10_1.lean": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+    "upstream/ProbabilityTheory/chapter_10/def_10_2.lean": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+    "upstream/ProbabilityTheory/chapter_10/thm_10_3.lean": "2e4a799d071c7af5b07cc2ed0b36ba5af2fdc89217230b93aad8c85bed59d502",
+    "upstream/ProbabilityTheory/chapter_11/thm_11_2.lean": "cf7d125e1244c88b13df375e2466028407b3e523957bbc9f4f4b39a91e30fdee"
+  },
+  "original_candidate_files_unchanged": true,
+  "new_uniform_attachments": [
+    "library/Variance.lean",
+    "reevaluation/RULES.json"
+  ]
+}

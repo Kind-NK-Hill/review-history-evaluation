@@ -1,0 +1,138 @@
+{
+  "arm_source": "B",
+  "prototype": "author_requested_math_review_in_fresh_session",
+  "candidate_sha256": "d2c237c168b2346e235ded87654798c76b356de65387ffe86dab48666cb53d13",
+  "source_manifest": [
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_07\\thm_7_11.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/thm_7_11.lean",
+      "sha256": "d426c39e02bb1c0021872b986bcb5efef4201f01fcfd7f0d836cecf367a04b68"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_08\\def_8_5.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_08/def_8_5.lean",
+      "sha256": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_08\\prob_8_7.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_08/prob_8_7.lean",
+      "sha256": "e519469e0774622e346298e4302f07f3a1ecbac0ce9a0d5d3ca598f1d850d7d2"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_08\\thm_8_6.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "sha256": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_10\\def_10_4.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/def_10_4.lean",
+      "sha256": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_10\\def_10_5.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/def_10_5.lean",
+      "sha256": "eddf0d56154ef3104ab5fc2852c1fdae85d39da52d8baa5ce6486aba702d762a"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_10\\ex_10_3_1.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/ex_10_3_1.lean",
+      "sha256": "90ec14c6ebf589763e63b7afe24ddb71d693b704ee4f82acaf1228b3f67578bb"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_10\\thm_10_6.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/thm_10_6.lean",
+      "sha256": "2572f91885ca57222a32a058ddf665174438756581f2739ddc149ae15047d38d"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_13\\thm_13_5.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13/thm_13_5.lean",
+      "sha256": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_14\\def_14_1.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_14/def_14_1.lean",
+      "sha256": "5f6fad3aea7270b16c5b339f2535a4d1777b72f43073ad01a32658f458144cc1"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_14\\thm_14_4.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_14/thm_14_4.lean",
+      "sha256": "921416e3fbe6525b2e87e6b88f1ab42fcb87c7757f4fda5568c74ae73dcf1f47"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_14\\thm_14_4_density_support.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_14/thm_14_4_density_support.lean",
+      "sha256": "08b047e2251579d907798fbdee67e11a33a6b258cc0a4150a90b9a9460ad6ccb"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\chapter_14\\thm_14_4_dominating_measure.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean",
+      "sha256": "f5a1f21acd9e1a37c2f445acb4f9d64b33b1442151b6fa90f18c00a0cf43ddfe"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\upstream\\ProbabilityTheory\\common_support\\tv_distance_core.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/common_support/tv_distance_core.lean",
+      "sha256": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\candidate\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "sha256": "d2c237c168b2346e235ded87654798c76b356de65387ffe86dab48666cb53d13"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "destination": "work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "sha256": "4a67292b0fe682cc35702861bc241286ba642fc1dc6a5423f7d838f6ec3ef08e"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\source\\SOURCE.tex",
+      "destination": "work/ProbabilityTheoryFormalization/SOURCE.tex",
+      "sha256": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\task_contract\\COMMON_RULES.zh-CN.md",
+      "destination": "work/ProbabilityTheoryFormalization/COMMON_RULES.zh-CN.md",
+      "sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949"
+    },
+    {
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\subject\\task_contract\\TASK.zh-CN.md",
+      "destination": "work/ProbabilityTheoryFormalization/TASK.zh-CN.md",
+      "sha256": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16"
+    }
+  ],
+  "actor_files": {
+    "ProbabilityTheoryFormalization/COMMON_RULES.zh-CN.md": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+    "ProbabilityTheoryFormalization/lake-manifest.json": "b583e42a8c5434792e7b5e04865a354710a9aa3b8f7c90665cf862d300c33c4d",
+    "ProbabilityTheoryFormalization/lakefile.toml": "243c2a96b5d013a9bc72627cb76bd6148c1a734b9eb083fd58614a3c55c094a5",
+    "ProbabilityTheoryFormalization/lean-toolchain": "465c68148dd061230368e3cbe5d1d2973069172b48b684c928ef1a665b627832",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/prob_7_6.lean": "d2c237c168b2346e235ded87654798c76b356de65387ffe86dab48666cb53d13",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/thm_7_11.lean": "d426c39e02bb1c0021872b986bcb5efef4201f01fcfd7f0d836cecf367a04b68",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_08/def_8_5.lean": "f1eabbdb8039dcb106bf5c1d2e45cb19709c5e09e1a646dd8a9ec5a7d2485963",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_08/prob_8_7.lean": "e519469e0774622e346298e4302f07f3a1ecbac0ce9a0d5d3ca598f1d850d7d2",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_08/thm_8_6.lean": "6bdefb8b6d56ede91290d4b5cabf2be96badb792b177178ceb9813b9ade0330a",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/def_10_4.lean": "3a1acf25daa209a89fc590bb47e562fccd83051433688af7a1383512f637bc24",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/def_10_5.lean": "eddf0d56154ef3104ab5fc2852c1fdae85d39da52d8baa5ce6486aba702d762a",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/ex_10_3_1.lean": "90ec14c6ebf589763e63b7afe24ddb71d693b704ee4f82acaf1228b3f67578bb",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/ex_10_3_2.lean": "4a67292b0fe682cc35702861bc241286ba642fc1dc6a5423f7d838f6ec3ef08e",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_10/thm_10_6.lean": "2572f91885ca57222a32a058ddf665174438756581f2739ddc149ae15047d38d",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13/thm_13_5.lean": "1f873b33c7c446e3f9840896c8a4362eb1fa1757e96a8a5be39774652e4d2edc",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_14/def_14_1.lean": "5f6fad3aea7270b16c5b339f2535a4d1777b72f43073ad01a32658f458144cc1",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_14/thm_14_4.lean": "921416e3fbe6525b2e87e6b88f1ab42fcb87c7757f4fda5568c74ae73dcf1f47",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_14/thm_14_4_density_support.lean": "08b047e2251579d907798fbdee67e11a33a6b258cc0a4150a90b9a9460ad6ccb",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean": "f5a1f21acd9e1a37c2f445acb4f9d64b33b1442151b6fa90f18c00a0cf43ddfe",
+    "ProbabilityTheoryFormalization/ProbabilityTheory/common_support/tv_distance_core.lean": "b05b2b4d9b460fd9be5d1a3d4327ed6642ff0aa96a88b65ff2aa577987f80881",
+    "ProbabilityTheoryFormalization/README.md": "faaba631de82bcb441731a6e96cfaa9e1c7b78e577509621211076e518dd959f",
+    "ProbabilityTheoryFormalization/SEED_MANIFEST.json": "a386e195e9683d563d4736c5036eb6a4dde8f8b3b8939890d3202171747fa1e7",
+    "ProbabilityTheoryFormalization/SOURCE.tex": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614",
+    "ProbabilityTheoryFormalization/TASK.zh-CN.md": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16"
+  },
+  "excluded_A_packet_files": [],
+  "replayed_final_answer_excluded": true,
+  "posthoc_evaluation_material_excluded": true,
+  "review_allowance_seconds": 7200,
+  "same_files_both_conditions": true,
+  "fresh_session": true,
+  "unobserved_prior_session_memory_not_reconstructed": true,
+  "original_prompt_sha256": "72b627f5a7531b780265a499cfc27b08bbed4ec9b5a44528de86676bebf81c93",
+  "condition_original_sha256": "27ca9756c997710b2ffcd398c1b8935d2948e8f07bade11fb918c9b1ec552d67",
+  "condition_scope_sha256": "5ce6cdaa5ebc29675671781bb6516dcb8e8254e1540e65511a8052404910869b"
+}

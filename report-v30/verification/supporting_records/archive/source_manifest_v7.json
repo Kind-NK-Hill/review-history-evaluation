@@ -1,0 +1,426 @@
+{
+  "predecessor_manifest": {
+    "generated_utc": "2026-09-11T10:35:34.130206+00:00",
+    "data_window": "2026-09-11T20:00:19.214945+08:00 to 2026-09-11T20:00:20.007273+08:00",
+    "inputs": [
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/pipeline_evolution_20260910/releases/v0.3.1/source/report.zh-CN.md",
+        "sha256": "2a2895a6a916f072432cff0bc7ce97f8c1253f3602fa50fda6a7f51b6601aa2d",
+        "bytes": 90147
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/pipeline_evolution_20260910/releases/v0.3.1/source/report.en.md",
+        "sha256": "96d0525d2d06fae5ec73b989df8ed32a7d855eda4574c114ab48d4442fb2d0b8",
+        "bytes": 112411
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/revision_v3_20260911/report.zh-CN.md",
+        "sha256": "715d37bb2ef0c1f91bd353bbbf65e0725c4ec105388b06c2bd52e15df9059ce3",
+        "bytes": 76544
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/revision_v3_20260911/report.en.md",
+        "sha256": "552f4f927458313253896c83382a830c702dba8900cbf9fd088b30f4b2cda37b",
+        "bytes": 92238
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/revision_v3_20260911/baseline/sources/R06_FIRST_FOUR_PILOTS_RESULTS.zh-CN.md",
+        "sha256": "6a4c7931c96abfa74808b7c933f2fa82542bd7575b73b6aeeb1ac24c2629482e",
+        "bytes": 5550
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/revision_v3_20260911/baseline/sources/R07_PROTOCOL_REVIEW_20260911.zh-CN.md",
+        "sha256": "3960bd04fc3acd5b2b3f8e31159abe74fbdb7f008e2fd9f863ddac02dc476b10",
+        "bytes": 2607
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/revision_v3_20260911/baseline/sources/R08_C_SIMPLE_COORDINATION_r2_20260911.zh-CN.md",
+        "sha256": "a2abe4b9530a7682fc792d583d8f0dfbef75684ca430e1d027ccc1bcfcea0f77",
+        "bytes": 4208
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/revision_v3_20260911/baseline/sources/R21_CONDITION_REGISTRY.v1.json",
+        "sha256": "8a50111973c51a1b327a3d50c388168abbdc121dcb9772d082b8451a3b9f81b0",
+        "bytes": 488389
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/revision_v3_20260911/baseline/sources/R22_STATE.json",
+        "sha256": "2beb500f2fea5576b7ed35bb9688fb570c780072a4d11bdf09ec00dd727761e9",
+        "bytes": 6743
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/reports/trajectory_analysis/team_review_v031_trajectory_v3_20260911/combined_revision_v1_20260911/report.zh-CN.md",
+        "sha256": "3973a5b27163f9b1c11618ff0a4deed99d75851cce22010d9f3117c5f0adfba1",
+        "bytes": 178370
+      },
+      {
+        "path": "D:/Grad_Study/Practimum/Formalization/reports/trajectory_analysis/team_review_v031_trajectory_v3_20260911/combined_revision_v1_20260911/report.en.md",
+        "sha256": "ac92dfa4ddacd842913f927e56d686ba77bbe62e13ae557ee74ac76445a740d9",
+        "bytes": 219063
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v2_20260911\\report.zh-CN.md",
+        "sha256": "33c1e88c39384506439d8e1bfb92aac1c4f17cee5c4c1993d2dbc862ae786242"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v2_20260911\\report.en.md",
+        "sha256": "14ca4ba16f4b51fa1fca06c802ae212e87cdf5ecea3723cc6d39dd77a4ba587a"
+      }
+    ],
+    "extra_frozen_settings": "evidence/SETTINGS_INPUTS.json",
+    "historical_evidence_root": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/pipeline_evolution_20260910/releases/v0.3.1/evidence",
+    "trajectory_evidence_root": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/revision_v3_20260911/evidence",
+    "earlier_trajectory_root": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/revision_v3_20260911/baseline",
+    "full_frozen_root": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/trajectory_analysis_20260911/increment_1550_20260911",
+    "predecessor": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v2_20260911",
+    "editorial_contracts": "evidence/PROJECT_CONTRACTS.json",
+    "new_evidence_manifest": "CAPTURE.json"
+  },
+  "final_package_manifest_sha256": "4c4b193f7561b15fc66fd4cef8fd949484e126a0e498cb9d240dcfcd2e0906b2",
+  "final_sources": [
+    {
+      "id": "Z001",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\FINAL_DELIVERY.zh-CN.md",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z001",
+      "bytes": 4985,
+      "captured_sha256": "f6cfa9ed097f3aed653d96d88194155d1985174914efbfb847aa1ca3d253769f",
+      "executor_sha256": "f6cfa9ed097f3aed653d96d88194155d1985174914efbfb847aa1ca3d253769f"
+    },
+    {
+      "id": "Z002",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\FINAL_UNIFIED_STATUS.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z002",
+      "bytes": 137693,
+      "captured_sha256": "855ac21e06cdd54957c0c54edb7216f58679289fb599249192f37bc9d3c366ba",
+      "executor_sha256": "855ac21e06cdd54957c0c54edb7216f58679289fb599249192f37bc9d3c366ba"
+    },
+    {
+      "id": "Z003",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\FINAL_ARTIFACT_CHECKS.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z003",
+      "bytes": 1365,
+      "captured_sha256": "d610005e23a359bc33e5730736e162f3e9a813f756535eff874fd0cffa9ee2dd",
+      "executor_sha256": "d610005e23a359bc33e5730736e162f3e9a813f756535eff874fd0cffa9ee2dd"
+    },
+    {
+      "id": "Z004",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\ATTEMPT_CENSUS.csv",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z004",
+      "bytes": 102939,
+      "captured_sha256": "2a7bd46e1dd8780b9bf03ed5b22f9bb34574af0af2fa51651aa828cb1a61af75",
+      "executor_sha256": "2a7bd46e1dd8780b9bf03ed5b22f9bb34574af0af2fa51651aa828cb1a61af75"
+    },
+    {
+      "id": "Z005",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\UNDISPATCHED_QUEUE.csv",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z005",
+      "bytes": 95,
+      "captured_sha256": "34e644e1162b5174885f5cc6a6b62ac58b46fe14fc50b86609e4dbe5244ceed3",
+      "executor_sha256": "34e644e1162b5174885f5cc6a6b62ac58b46fe14fc50b86609e4dbe5244ceed3"
+    },
+    {
+      "id": "Z006",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\COVERAGE_MATRIX.csv",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z006",
+      "bytes": 37026,
+      "captured_sha256": "3a094f4019ec8b2e27954fe1260907e2a330be863096d64904a9757973dd7253",
+      "executor_sha256": "3a094f4019ec8b2e27954fe1260907e2a330be863096d64904a9757973dd7253"
+    },
+    {
+      "id": "Z007",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\ATTEMPT_CENSUS_DATA.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z007",
+      "bytes": 201370,
+      "captured_sha256": "dadeab612ec4823f5af33380638a3b77d9817086305ef5334203827bf0927c89",
+      "executor_sha256": "dadeab612ec4823f5af33380638a3b77d9817086305ef5334203827bf0927c89"
+    },
+    {
+      "id": "Z008",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\VERSION_REGISTRY.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z008",
+      "bytes": 1138925,
+      "captured_sha256": "f050459b64a13ed6debb5d0be6ae46d42ffb1010c9ce6155fb9d1e8e021d44f3",
+      "executor_sha256": "f050459b64a13ed6debb5d0be6ae46d42ffb1010c9ce6155fb9d1e8e021d44f3"
+    },
+    {
+      "id": "Z009",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\ROOT_ENDPOINT_BINDINGS.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z009",
+      "bytes": 1725541,
+      "captured_sha256": "bf32d00e903f3a61057fbd4c2c2e4e930cb73c3b92fd605a4ee1ea3579b784ca",
+      "executor_sha256": "bf32d00e903f3a61057fbd4c2c2e4e930cb73c3b92fd605a4ee1ea3579b784ca"
+    },
+    {
+      "id": "Z010",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\SOLVER_ROLE_ACCOUNTING.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z010",
+      "bytes": 355502,
+      "captured_sha256": "81faf262ff3edcebc8c9a2d41ba6b544dee1d085312e1f36dc5122becd2a9acf",
+      "executor_sha256": "81faf262ff3edcebc8c9a2d41ba6b544dee1d085312e1f36dc5122becd2a9acf"
+    },
+    {
+      "id": "Z011",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\ALL_COSTS_SEPARATED.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z011",
+      "bytes": 394013,
+      "captured_sha256": "d97c44ae583fd82204ccdcac5d3156ad2a51ef0d5bb8d9131f86d6f6396fcf1d",
+      "executor_sha256": "d97c44ae583fd82204ccdcac5d3156ad2a51ef0d5bb8d9131f86d6f6396fcf1d"
+    },
+    {
+      "id": "Z012",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\EPISODE_AUDIT.jsonl",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z012",
+      "bytes": 2094613,
+      "captured_sha256": "fc0c73b0d4d83ad39e52d500f71ae6a8ac54c95214e956fdb6260abe3fd1d943",
+      "executor_sha256": "fc0c73b0d4d83ad39e52d500f71ae6a8ac54c95214e956fdb6260abe3fd1d943"
+    },
+    {
+      "id": "Z013",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\EPISODE_AUDIT_INDEXED.jsonl",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z013",
+      "bytes": 2066715,
+      "captured_sha256": "b5310b781d9091ac7b192129b51e6573069bb3485f260afaf15f2d953ca0b0eb",
+      "executor_sha256": "b5310b781d9091ac7b192129b51e6573069bb3485f260afaf15f2d953ca0b0eb"
+    },
+    {
+      "id": "Z014",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\EPISODE_INDEX_STATUS.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z014",
+      "bytes": 1805,
+      "captured_sha256": "c047641923573f5cc968839f80f99c341d0aed7eec9973786ee1909db4807423",
+      "executor_sha256": "c047641923573f5cc968839f80f99c341d0aed7eec9973786ee1909db4807423"
+    },
+    {
+      "id": "Z015",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\EPISODE_SEMANTIC_ANNOTATIONS_L2_R1.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z015",
+      "bytes": 25749,
+      "captured_sha256": "737f6cdb133a9a239b4ef126a9ba5bac427b3698583f9a8bc77258ddf426a8a4",
+      "executor_sha256": "737f6cdb133a9a239b4ef126a9ba5bac427b3698583f9a8bc77258ddf426a8a4"
+    },
+    {
+      "id": "Z016",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\EPISODE_SEMANTIC_COVERAGE_FINAL.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z016",
+      "bytes": 7024,
+      "captured_sha256": "5839994be807608862ee26c9b53ca1cad22eb9de103f79bfed5b5955ecc0bdf9",
+      "executor_sha256": "5839994be807608862ee26c9b53ca1cad22eb9de103f79bfed5b5955ecc0bdf9"
+    },
+    {
+      "id": "Z017",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\REEVALUATION_ACCOUNTING_AND_AUDIT.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z017",
+      "bytes": 65491,
+      "captured_sha256": "2af25be4633fafe5146a1045ff9a3b08aa4c0dcc6f2a3244921ca67d9dec2b87",
+      "executor_sha256": "2af25be4633fafe5146a1045ff9a3b08aa4c0dcc6f2a3244921ca67d9dec2b87"
+    },
+    {
+      "id": "Z018",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z018",
+      "bytes": 5160,
+      "captured_sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d",
+      "executor_sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+    },
+    {
+      "id": "Z019",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\FROZEN_LIBRARY_BINDING.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z019",
+      "bytes": 15204,
+      "captured_sha256": "1b0474f8f206f32ef89525039a96c96f0dcd3e4a4bed49b77fbe473df950aa28",
+      "executor_sha256": "1b0474f8f206f32ef89525039a96c96f0dcd3e4a4bed49b77fbe473df950aa28"
+    },
+    {
+      "id": "Z020",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L2_RESULT_MATRIX.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z020",
+      "bytes": 198179,
+      "captured_sha256": "a84cdaca6dfc153e5d811ca575b83b924dd1e056402ec7bdec4e493281344316",
+      "executor_sha256": "a84cdaca6dfc153e5d811ca575b83b924dd1e056402ec7bdec4e493281344316"
+    },
+    {
+      "id": "Z021",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L2_RESULT.zh-CN.md",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z021",
+      "bytes": 2012,
+      "captured_sha256": "7410ebcc7b61e2d1542f7b22a4be6a58621d582a59ba5c01d5b886def061afd2",
+      "executor_sha256": "7410ebcc7b61e2d1542f7b22a4be6a58621d582a59ba5c01d5b886def061afd2"
+    },
+    {
+      "id": "Z022",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L3_RESULT_MATRIX.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z022",
+      "bytes": 569645,
+      "captured_sha256": "119fec1fd4f2d81f428bc575296109cbe9866b6cb347de6e4721c940bdabebfa",
+      "executor_sha256": "119fec1fd4f2d81f428bc575296109cbe9866b6cb347de6e4721c940bdabebfa"
+    },
+    {
+      "id": "Z023",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L3_RESULT.zh-CN.md",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z023",
+      "bytes": 1733,
+      "captured_sha256": "be2d1b24e0b1fc2f0af1e14b87f9b66728f29e2fb1ade63906740bdaa541ff4a",
+      "executor_sha256": "be2d1b24e0b1fc2f0af1e14b87f9b66728f29e2fb1ade63906740bdaa541ff4a"
+    },
+    {
+      "id": "Z024",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L3_TASK_TAIL_READING_REGISTRATION_R1.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z024",
+      "bytes": 3892,
+      "captured_sha256": "9f67d1317928b651ca7af1503d081378b9339717080a92b15d886963f9fdde8b",
+      "executor_sha256": "9f67d1317928b651ca7af1503d081378b9339717080a92b15d886963f9fdde8b"
+    },
+    {
+      "id": "Z025",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\H1_RESULT_MATRIX.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z025",
+      "bytes": 406227,
+      "captured_sha256": "d91a37e7e737163232a05d7fb751af47d418697ace72f2e9d786d5ab0dd16fe7",
+      "executor_sha256": "d91a37e7e737163232a05d7fb751af47d418697ace72f2e9d786d5ab0dd16fe7"
+    },
+    {
+      "id": "Z026",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\H1_RESULT.zh-CN.md",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z026",
+      "bytes": 1940,
+      "captured_sha256": "b83f171f04a25fba4b487816655e316b640f3fcc3780c3e8dfd528d5cf168758",
+      "executor_sha256": "b83f171f04a25fba4b487816655e316b640f3fcc3780c3e8dfd528d5cf168758"
+    },
+    {
+      "id": "Z027",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\H1_SCOPE_REGISTRATION.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z027",
+      "bytes": 861,
+      "captured_sha256": "fd39abddd2b522d5106e5e34bab34b242409c4b5809cad13041a91b2e829e00b",
+      "executor_sha256": "fd39abddd2b522d5106e5e34bab34b242409c4b5809cad13041a91b2e829e00b"
+    },
+    {
+      "id": "Z028",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\H1_DELIVERY_EVIDENCE_SCOPE_ADDENDUM_R1.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z028",
+      "bytes": 1603,
+      "captured_sha256": "9315583ad1f94030fa83f615b969e31d3ac759391affdd9c7b5b26f00a6574db",
+      "executor_sha256": "9315583ad1f94030fa83f615b969e31d3ac759391affdd9c7b5b26f00a6574db"
+    },
+    {
+      "id": "Z029",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\H1_DELIVERY_ORIGINAL_PROVENANCE_R1.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z029",
+      "bytes": 6334,
+      "captured_sha256": "67145ed72304d687d58bf9634738ebd1bde6c0508425169dfdeba9cf0c19a6ed",
+      "executor_sha256": "67145ed72304d687d58bf9634738ebd1bde6c0508425169dfdeba9cf0c19a6ed"
+    },
+    {
+      "id": "Z030",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L7_RESPONSIBILITY_MATRIX.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z030",
+      "bytes": 145966,
+      "captured_sha256": "657afadd14102e3862cf46fabaf0d4fd6533caa38b511de48c73d8723279c41d",
+      "executor_sha256": "657afadd14102e3862cf46fabaf0d4fd6533caa38b511de48c73d8723279c41d"
+    },
+    {
+      "id": "Z031",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L7_RESPONSIBILITY.zh-CN.md",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z031",
+      "bytes": 1481,
+      "captured_sha256": "e41223f9b3ad7ae3a161113e476e84af5c25fbb19024d9b0bf8e9c283eac2c0a",
+      "executor_sha256": "e41223f9b3ad7ae3a161113e476e84af5c25fbb19024d9b0bf8e9c283eac2c0a"
+    },
+    {
+      "id": "Z032",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L7_CONTRACT_DIAGNOSIS.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z032",
+      "bytes": 5930,
+      "captured_sha256": "39322119f4fc1c34e9c6078b173bd94722b4a3d6a14c95228795754040e061e0",
+      "executor_sha256": "39322119f4fc1c34e9c6078b173bd94722b4a3d6a14c95228795754040e061e0"
+    },
+    {
+      "id": "Z033",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L7_CONTRACT_REVISION_DRAFT.zh-CN.md",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z033",
+      "bytes": 1980,
+      "captured_sha256": "e218547d06615db7d799a73f9d641978a988d15c6f62cae7c871d71099ba6688",
+      "executor_sha256": "e218547d06615db7d799a73f9d641978a988d15c6f62cae7c871d71099ba6688"
+    },
+    {
+      "id": "Z034",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\FULL_SOURCE_CONTRACT_SCAN_11_R2.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z034",
+      "bytes": 24067,
+      "captured_sha256": "37b8605df0ae8d0ea154a0f79afa1183afd8819c305b3c8359e51f993858875d",
+      "executor_sha256": "37b8605df0ae8d0ea154a0f79afa1183afd8819c305b3c8359e51f993858875d"
+    },
+    {
+      "id": "Z035",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\FINAL_MODEL_SEGMENT_RETURNED_R1.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z035",
+      "bytes": 5784,
+      "captured_sha256": "23b0667f5cebd2477f938d23dc8bbaad664eeb3bd7ce20d7f8e94f14135fe7cf",
+      "executor_sha256": "23b0667f5cebd2477f938d23dc8bbaad664eeb3bd7ce20d7f8e94f14135fe7cf"
+    },
+    {
+      "id": "Z036",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\artifacts\\CSV_VERIFICATION.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z036",
+      "bytes": 808,
+      "captured_sha256": "34c6af14392f49f48868b993775cc111f7af32b03b9363fb3f07c54d42515808",
+      "executor_sha256": "34c6af14392f49f48868b993775cc111f7af32b03b9363fb3f07c54d42515808"
+    },
+    {
+      "id": "Z037",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\controller_bc_completion_20260911\\AUTHORIZATION.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z037",
+      "bytes": 4106,
+      "captured_sha256": "99ce103b65c2cc7d14812a9ffe5f98019a498047248b062814bcd624c4c5a6a4",
+      "executor_sha256": "99ce103b65c2cc7d14812a9ffe5f98019a498047248b062814bcd624c4c5a6a4"
+    },
+    {
+      "id": "Z038",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\controller_bc_completion_20260911\\PLAN.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z038",
+      "bytes": 14330,
+      "captured_sha256": "7f360214f5f0365d3f2a9f87036dad83399ac2b6d0f4f4823fdccf79c88c9bbc",
+      "executor_sha256": "7f360214f5f0365d3f2a9f87036dad83399ac2b6d0f4f4823fdccf79c88c9bbc"
+    },
+    {
+      "id": "Z039",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\controller_bc_completion_20260911\\ACCOUNTING_CURRENT_R2.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z039",
+      "bytes": 186803,
+      "captured_sha256": "e77659b0202d010ac6290b1bca9987573bb88750c8e633b02cafc868c1ef38bf",
+      "executor_sha256": "e77659b0202d010ac6290b1bca9987573bb88750c8e633b02cafc868c1ef38bf"
+    },
+    {
+      "id": "Z040",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\controller_bc_completion_20260911\\RECORDING_AUDIT_CURRENT.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z040",
+      "bytes": 334748,
+      "captured_sha256": "2e1e1b1a8a3a1b44acf9220f51b01d84d03112a999297e18bc5f24aeddd77514",
+      "executor_sha256": "2e1e1b1a8a3a1b44acf9220f51b01d84d03112a999297e18bc5f24aeddd77514"
+    },
+    {
+      "id": "Z041",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\controller_bc_completion_20260911\\RESOURCE_AND_GUARD_AUDIT_CURRENT.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z041",
+      "bytes": 156744,
+      "captured_sha256": "44a89bf8a58bfecc821b5ea487882bffb84fb1d73a4eecb042598b894db03d55",
+      "executor_sha256": "44a89bf8a58bfecc821b5ea487882bffb84fb1d73a4eecb042598b894db03d55"
+    },
+    {
+      "id": "Z042",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\EXPOSURE_BYTE_ERRATUM_1789132103.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z042",
+      "bytes": 13039,
+      "captured_sha256": "6fe80be392eee2ed5d0a5d649a64a853bf83cb69986d4f0757701af1f7f8d57e",
+      "executor_sha256": "6fe80be392eee2ed5d0a5d649a64a853bf83cb69986d4f0757701af1f7f8d57e"
+    },
+    {
+      "id": "Z043",
+      "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\EXPOSURE_BYTE_ERRATUM_1789153239.json",
+      "copy": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v4_20260912\\ev\\Z043",
+      "bytes": 41596,
+      "captured_sha256": "3b4ec8063f3b8b15f0b266d9c4243d0503254e3a5444a2f9bf4aed4811ba58d8",
+      "executor_sha256": "3b4ec8063f3b8b15f0b266d9c4243d0503254e3a5444a2f9bf4aed4811ba58d8"
+    }
+  ]
+}

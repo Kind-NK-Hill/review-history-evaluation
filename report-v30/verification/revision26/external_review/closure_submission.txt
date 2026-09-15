@@ -1,0 +1,113 @@
+请对第26版作最后一次针对性复核，确认你指出的两组必要修改是否关闭，中文600字以内即可；不再扩大研究或改稿范围。已逐项核对原附录Q.4、R.1.5、R.2.6和第二批裁决记录。以下是已经写入的实际双语段落。
+
+必要处理：3.1具体说明A-M1/B-M2/C-L3；4.1区分原许可式措辞与后来的明确共同标准，并交代尾部输入构造仍需新增论证；4.3明确A-L7签名及证明体早已在封存工作候选；5.4明确两份首支持候选被替换，并解释A-M3的首次检索过程与首支持候选为何统计不同。
+
+可选建议亦已实施：4章导语直接连接完成与工作内容；B-M3过程表区分主作者检索委派与支持作者修订；删除表前后复述；5.3不再重讲B-M3，明确第一批分布与第二批追踪的关系；6.1用既有额外证明覆盖替换重复完成数，6.3保留，6.4删除重复结尾。第一、二章、全部原结果和时间表、附录A-S正文、研究文件均未改。英文附录导读另补P/R导航并修正历史迁移版本号为24，不改25版研究归属。
+
+=== zh-CN 3.1 ===
+第一批A、B的L3交付要求序列全部项可积，尚缺覆盖最终可积序列的尾部论证。
+
+第二批原验收为30项通过，拒绝A-M1、B-M2和C-L3。统一复核逐项检查已有交付：A-M1的存在定理与停止期望结论可以组合，在原输入上覆盖三种要求的情形；B-M2已直接证明完整序列结论，区别在于没有遵守指定子列路线；C-L3的额外前提可以在同一输入上由通用库事实推出，独立调用检查通过。三项因此按共同数学成果标准计入完成，路线遵守另记。附录R.1.5说明每项依据，附录Q保留原判定和复核程序。[[41,42]](#ref-41)
+
+
+=== zh-CN 4.1 ===
+<a id="section-4-1"></a>
+
+### 4.1 明确目标范围，并检查交付是否覆盖它
+
+**确定目标范围。**教材表述、任务说明和库定理的前提需要逐一对应。作者要明确哪些输入属于任务范围，哪些性质应在证明中推出，以及哪些推广属于额外工作。这决定了最后需要交付什么。[附录R.1](appendix.zh-CN.md#r1)保留各项判定的数学依据。
+
+第一批Scheffé引理任务（L3）说明了范围差别为什么会影响完成结果。原任务说明允许采用最终尾部可积表述，后来明确的共同数学成果标准要求覆盖这一范围。旧A、B交付要求函数序列的每一项都可积；从某一项开始可积的输入则允许前面有限项不可积，不能直接交给旧定理。要覆盖这类输入，作者需要截取可积的尾部，在尾部应用论证，再把极限结论接回原序列。第3.1节的三项改判依据已有交付及同一输入上的通用库事实；旧L3则还缺少尾部输入构造及原序列恢复的论证。[附录R.1.2](appendix.zh-CN.md#r1-2)及[Q.4](appendix.zh-CN.md#q4)
+
+**检查最终交付。**评审者也需要核对上述范围。对两份固定旧代码进行的新评审中，原指令下A的三份意见都通过，B的两份通过；明确要求核查尾部范围后，两份代码各自的三份意见都要求修复。B在原指令下的三份意见其实都讨论了范围问题，其中两份仍把它当作可选推广。识别问题和把问题列为验收要求，是这组记录中的两个不同决定。
+
+随后另行开展的两次定向修复均补齐了尾部接口并通过共同验收。修复说明这两个缺口能够在明确要求下解决；固定代码的诊断则说明审核注意到了什么、又要求完成什么。完整的十二次意见、修复指令和代码变化见[附录R.1.6](appendix.zh-CN.md#r1-6)及[Q.4](appendix.zh-CN.md#q4)。这些单独修复保留自己的结果，第一批原交付仍按当时的代码计分。[[43]](#ref-43)
+
+
+
+=== zh-CN 4.3 ===
+<a id="section-4-3"></a>
+
+### 4.3 传回成果，并让后续工作继续
+
+**交付协助成果。**助手可以完成一个引理，也可以实现整个任务组。负责后续工作的作者需要收到可读代码、整合它，并检查实际调用。第一批反演任务（H1）的支持结果被唯一性证明和后续应用使用，说明协助能够接入数学工作；另一些协助已有产出，却未确认进入最终证明。判断采用，需要查看返回内容、代码变化和调用位置。[附录R.2.3–R.2.5](appendix.zh-CN.md#r2-3)保留这些对照。[[17-19,28]](#ref-17)
+
+**恢复执行。**文件访问、命令入口、结果传递或外层停止指令，也会阻塞证明工作。代理需要根据实际返回找到可以继续的动作。第一批A-L7的最终定理签名与证明体已经存在于封存工作候选中。获准续作后，作者明确披露命题修正，完成审核和交付；追加窗口用于使已有证明按明确标准完成验收。[附录R.2.6](appendix.zh-CN.md#r2-6)给出续作前后的状态。[[39]](#ref-39)
+
+这些问题把最终成果与中间工作连接起来：资料要适用于当前目标，局部证明要传到使用者手中，交付还要覆盖要求的范围。下一章沿这些连接读取第二批记录，先报告统一追踪的结果，再展开其中的具体过程。
+
+
+=== zh-CN 5.4 ===
+<a id="section-5-4"></a>
+
+### 5.4 局部检查通过的代码怎样到达作者？
+
+跨角色工作还有一个独立环节：支持角色工作区里的证明需要实际传回。第二批A-M2和A-M3都在这一环节出现断点，下面按成果所在位置列出过程。
+
+| 检查位置 | A-M2与A-M3中观察到的状态 |
+|---|---|
+| 支持角色的工作区 | 已有通过局部检查的代码 |
+| 首次返回 | 补丁为空 |
+| 作者随后读取的文件 | 仍是任务输入 |
+| 后续工作 | 重新委派后，由后续候选替换首支持候选，并以非空补丁传入作者工作区 |
+
+两题的首支持候选均被后续候选替换。第5.2节的检索表只有一条被替换记录，是因为A-M3的首次检索起于主作者更早的构造需要，其后续成果进入最终证明；这里被替换的是首支持候选。两张表追踪的对象不同。[附录S.3](appendix.zh-CN.md#s3)提供补丁内容、文件对应关系及源码引用。
+
+协助是否有用，因而有可以检查的具体依据：作者收到了哪些内容，哪些内容进入后续证明。当前案例确定了这些位置上的成功连接或断点，没有测量协助相比独自求解节省了多少时间。
+
+
+
+=== en 3.1 ===
+The first-batch A and B L3 deliveries require integrability at every index and lack the tail argument for eventually integrable sequences.
+
+Original second-batch acceptance recorded 30 passes and rejected A-M1, B-M2, and C-L3. The common reassessment examined the existing deliveries individually: A-M1's existence theorem and stopped-expectation conclusions compose on the original input to cover all three required cases; B-M2 already proves the full-sequence conclusion directly, although it does not follow the specified subsequence route; and C-L3's additional premises follow from general library facts on the same input, with a successful independent caller check. All three therefore count as complete under the common mathematical-outcome criterion, with route compliance recorded separately. Appendix R.1.5 explains each correction; Appendix Q retains the original decisions and reconciliation procedure. [[41,42]](#ref-41)
+
+
+=== en 4.1 ===
+<a id="section-4-1"></a>
+
+### 4.1 Establish the required scope and check the delivered result
+
+**Establishing scope.** The textbook statement, task instructions, and library assumptions must be aligned. The author needs to identify which inputs the task covers, which properties must be derived within the proof, and which generalizations are additional work. These decisions determine the required delivery. [Appendix R.1](appendix.en.md#r1) preserves the mathematical grounds for the individual judgments.
+
+The first-batch Scheffé task (L3) shows why scope changes the completion result. The original task instructions permitted an eventually integrable tail formulation; the subsequently clarified common mathematical-outcome criterion required coverage of that scope. The old A and B deliveries required every function in the sequence to be integrable. An eventually integrable input permits finitely many initial terms to be nonintegrable and therefore cannot be passed directly to the old theorem. Covering these inputs requires selecting an integrable tail, applying the argument there, and transferring the limiting conclusion back to the original sequence. The three reassessments in Section 3.1 rely on existing deliveries and general library facts on the same input; old L3 still lacks the tail-input construction and the transfer argument. [Appendix R.1.2](appendix.en.md#r1-2) and [Q.4](appendix.en.md#q4)
+
+**Checking the final delivery.** Reviewers must examine the same scope. In new reviews of the two fixed old candidates, all three A reviews and two B reviews passed under the original instructions. After an explicit request to check the tail requirement, all three reviews of each candidate required repair. All three original-instruction B reviews had discussed the scope issue, but two treated it as an optional generalization. Recognizing a problem and making it an acceptance requirement were separate decisions in these records.
+
+Two separately conducted targeted repairs subsequently added the tail interfaces and passed common acceptance. The repairs show that these gaps can be resolved under explicit requirements; the fixed-code diagnostic reviews show what reviewers noticed and required. [Appendix R.1.6](appendix.en.md#r1-6) and [Q.4](appendix.en.md#q4) preserve all twelve opinions, the repair instructions, and the code changes. These separate repairs retain their own results; the original first-batch deliveries remain scored against their recorded code. [[43]](#ref-43)
+
+
+
+=== en 4.3 ===
+<a id="section-4-3"></a>
+
+### 4.3 Deliver work and enable its continuation
+
+**Delivering assistance.** A helper may prove one lemma or implement an entire task group. The author continuing the work needs readable code, integration, and a checked call to the result. In the first-batch inversion task (H1), the helper's result was used in uniqueness and subsequent applications. Other assistance produced code whose use in the final proof was not confirmed. Assessing adoption requires the returned material, code changes, and call sites. [Appendix R.2.3–R.2.5](appendix.en.md#r2-3) preserves these comparisons. [[17-19,28]](#ref-17)
+
+**Resuming execution.** File access, command entry points, result transfer, and external stop instructions can interrupt proof work. The agent must use the actual response to identify a possible next action. First-batch A-L7's final theorem signature and proof body were already present in the frozen working candidate. Once continuation was authorized, the author explicitly disclosed the statement correction and completed review and delivery. The additional window brought an existing proof through acceptance under clarified criteria. [Appendix R.2.6](appendix.en.md#r2-6) gives the states before and after continuation. [[39]](#ref-39)
+
+These problems connect the final result to intermediate work: retrieved material must fit the goal, local proofs must reach their users, and the delivery must cover the required scope. The next section follows those connections in the second-batch records, reporting the common tracking results before examining individual trajectories.
+
+
+=== en 5.4 ===
+<a id="section-5-4"></a>
+
+### 5.4 How does locally checked code reach the author?
+
+Work across roles has a separate delivery step: a proof in a helper's workspace must actually return. Second-batch A-M2 and A-M3 both encountered a break at this step. The table follows the work through its locations.
+
+| Location checked | Observed state in A-M2 and A-M3 |
+|---|---|
+| Helper's workspace | Code had passed a local check |
+| First return | The patch was empty |
+| Author's subsequent file read | The file still contained the task input |
+| Later work | After renewed delegation, later candidates replaced the first support candidates and reached the author's workspace as nonempty patches |
+
+The first support candidates in both tasks were replaced. The retrieval table in Section 5.2 has only one replacement record because A-M3's first retrieval starts from the main author's earlier construction need, whose later work entered the final proof. The replaced object here is the first support candidate. The two tables therefore track different objects. [Appendix S.3](appendix.en.md#s3) provides patch contents, file correspondences, and source references.
+
+The usefulness of assistance thus has concrete checks: what the author received and which material entered the subsequent proof. These cases establish connections or breaks at those locations. They do not measure time saved by assistance relative to working alone.
+
+
+
+END_REVISION26_CLOSURE

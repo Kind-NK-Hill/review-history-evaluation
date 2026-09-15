@@ -1,0 +1,26 @@
+{
+  "edition": 28,
+  "closed_utc": "2026-09-14T16:46:08.550913+00:00",
+  "thread_id": "6aa6afbe-3a60-83ec-8a73-b10183ac7172",
+  "thread_title": "中文评审要求",
+  "kind": "chatgpt",
+  "model_configuration_verified": false,
+  "scope": "Full bilingual main text and Chinese Appendix R, bilingual S/T in the initial review; revised bilingual abstracts, Sections 5/6, appendix introductions and R.3.2/S.3 in the follow-up. Text only, not an external PDF/source execution audit.",
+  "necessary_issues_closed": true,
+  "necessary_groups": 2,
+  "necessary_points": 6,
+  "optional_groups_adopted": 3,
+  "closure_followup_correction_applied": {
+    "file": "manuscript/appendix.en.md",
+    "before": "Appendix R.2 and 6 examine that connection.",
+    "after": "Sections 5 and 6 of the main report examine that connection.",
+    "method": "Exact reviewer-provided correction applied and checked locally; reviewer explicitly permitted text lock after this correction."
+  },
+  "summary_zh": "两组必要修改共六个位置已落实：收准摘要与检索资料的概括、限定必要适配、修正S.4与B-L6引用、消除R.3.2停止决定的句意歧义。三项可选建议同时采纳：结尾补入评价可靠性的已有发现，摘要说明B可求助，案例批次及右连续性称呼统一。原任务定向复核确认两组必要问题关闭、新结尾准确；随后指出的英文R.3.2交叉引用已按其原文改为正文第5、6节，并核对对应位置。",
+  "final_source_sha256": {
+    "report.zh-CN.md": "ad9b3f2295e8239427b737b05482c6c6bafe2a4326c13c9b3555e96a768e7160",
+    "report.en.md": "bcf50b263eb1c8461deb83f4e00c7f2c4e71a212368fb8d7b293df79a39f2b33",
+    "appendix.zh-CN.md": "5f663c488b4395b7e474afd2437d42d2f607588462f040a4fe410297f881e92c",
+    "appendix.en.md": "f4f40b241c6aa70d12cf2af922508b2f452d980544ca8ab23155aaaae4e987c3"
+  }
+}

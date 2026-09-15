@@ -1,0 +1,412 @@
+{
+  "epoch": 1789134867.8144238,
+  "schema": "targeted.L2.feedback_semantic_audit.r1",
+  "annotations": [
+    {
+      "epoch": 1789134867.7984395,
+      "episode_id": "episode-50194432-a91e-494c-9e66-d6b1e08c6812",
+      "dispatch_id": "50194432-a91e-494c-9e66-d6b1e08c6812",
+      "arm": "A",
+      "target": "thm_11_4",
+      "method": "Owner offline semantic inspection of reported feedback, original source/contract and bound candidate; independent L2 reevaluation supplies explicit G/S evidence. No new model call.",
+      "feedback_evidence": {
+        "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\help\\321a4d18-232b-48b5-9dbf-effb9e64c988\\actor\\raw-public-events.bin",
+        "raw_events_sha256": "fc2e4112c200f0323657f91214c3fc0402eaf167eeb3083a993982a12b117f33",
+        "final_message_line": 24,
+        "final_message_utf8_sha256": "d2f72527e4f841dc961e52a7fb44ac6486762f6dfc599e0fccff3d35cddff166"
+      },
+      "request_evidence": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\help\\321a4d18-232b-48b5-9dbf-effb9e64c988\\role-request.json",
+        "sha256": "ebcffedcaaa71fb206c58e86c89d077b1df423e0d07fc6a9911ac978925bfe06"
+      },
+      "code_version_bindings": [
+        {
+          "task": "thm_11_4",
+          "final_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7\\subject\\candidate\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+            "sha256": "6c82a244a84771f610a4fa80103e8c21734c44f841c4da8437af3b04a4bf0ae2"
+          },
+          "review_input_matches_final": true,
+          "full_final_text_in_request_question": true
+        }
+      ],
+      "unified_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "independent_candidate_reassessment": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L2_RESULT_MATRIX.json",
+        "sha256": "a84cdaca6dfc153e5d811ca575b83b924dd1e056402ec7bdec4e493281344316"
+      },
+      "actual_content_exposure": "not_verified",
+      "exposure_evidence": [],
+      "caller_adoption_action": "No new mathematical repair claimed; positive validation is distinct from a proof-changing intervention.",
+      "caller_candidate_before_after_diff": {
+        "status": "not_fully_reconstructed",
+        "reason": "A positive review and final candidate equality do not establish every intervening caller edit."
+      },
+      "change_categories": [],
+      "obligation_repaired": "not_claimed",
+      "semantic_audit_status": "targeted_semantic_check_with_explicit_adoption_limits",
+      "feedback_validity": {
+        "status": "interpretation_sensitive",
+        "reason": "The positive review correctly identifies general covariance expansion plus candidate cross-term cancellation. This is permitted under G but does not satisfy the stricter candidate-built expansion required by S. Neither the mathematical statement nor every unrelated obligation becomes false because S fails."
+      }
+    },
+    {
+      "epoch": 1789134867.8000016,
+      "episode_id": "episode-bb680eb5-cdc6-431c-9f0e-43cad6af06aa",
+      "dispatch_id": "bb680eb5-cdc6-431c-9f0e-43cad6af06aa",
+      "arm": "A",
+      "target": "thm_11_5",
+      "method": "Owner offline semantic inspection of reported feedback, original source/contract and bound candidate; independent L2 reevaluation supplies explicit G/S evidence. No new model call.",
+      "feedback_evidence": {
+        "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\help\\964597f2-a1a3-45ad-a80d-4ca8a8335358\\actor\\raw-public-events.bin",
+        "raw_events_sha256": "d3aed33f4ff8943584509f7b5f37a07d9f734183bba34bf780f1cf4bf9f7bba6",
+        "final_message_line": 15,
+        "final_message_utf8_sha256": "049f9f0dfa59025632133ff39a960b2e6df71ca3e897bf4144f2c0cdc1ac2691"
+      },
+      "request_evidence": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\help\\964597f2-a1a3-45ad-a80d-4ca8a8335358\\role-request.json",
+        "sha256": "252af59eb966bf174d5745df99634fc1839eaba47e7c8f4b40de7fbf64f0a644"
+      },
+      "code_version_bindings": [
+        {
+          "task": "thm_11_5",
+          "final_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7\\subject\\candidate\\ProbabilityTheory\\chapter_11\\thm_11_5.lean",
+            "sha256": "73d72c2ba1ce8841605d8c4208fd932f0d4afe8bb917d565dcd0b9e52cca8db0"
+          },
+          "review_input_matches_final": true,
+          "full_final_text_in_request_question": true
+        }
+      ],
+      "unified_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "independent_candidate_reassessment": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L2_RESULT_MATRIX.json",
+        "sha256": "a84cdaca6dfc153e5d811ca575b83b924dd1e056402ec7bdec4e493281344316"
+      },
+      "actual_content_exposure": "not_verified",
+      "exposure_evidence": [],
+      "caller_adoption_action": "No new mathematical repair claimed; positive validation is distinct from a proof-changing intervention.",
+      "caller_candidate_before_after_diff": {
+        "status": "not_fully_reconstructed",
+        "reason": "A positive review and final candidate equality do not establish every intervening caller edit."
+      },
+      "change_categories": [],
+      "obligation_repaired": "not_claimed",
+      "semantic_audit_status": "targeted_semantic_check_with_explicit_adoption_limits",
+      "feedback_validity": {
+        "status": "valid_local_WLLN_reasoning_with_route_dependency_limit",
+        "reason": "The review correctly identifies internal mean/variance, Chebyshev tail control and convergence. This local weak-law proof remains mathematically correct. Its use of the variance result retains that dependency’s G/S route sensitivity; do not mechanically mark every local obligation false."
+      }
+    },
+    {
+      "epoch": 1789134867.8005197,
+      "episode_id": "episode-6361bff3-acfe-4e01-88e8-df006dc42b00",
+      "dispatch_id": "6361bff3-acfe-4e01-88e8-df006dc42b00",
+      "arm": "B",
+      "target": "support",
+      "method": "Owner offline semantic inspection of reported feedback, original source/contract and bound candidate; independent L2 reevaluation supplies explicit G/S evidence. No new model call.",
+      "feedback_evidence": {
+        "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\eb7cde99-6891-47c5-9dcf-df3826693de2\\actor\\raw-public-events.bin",
+        "raw_events_sha256": "3a8c14c9e89b70781872e16533c48ca5cfca5bda5429f12bf63049e0e4b4ee0b",
+        "final_message_line": 133,
+        "final_message_utf8_sha256": "cd4b37951bd57cea8021bec750906cd9ef596cacee96a363f86b02eb4f146769"
+      },
+      "request_evidence": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\eb7cde99-6891-47c5-9dcf-df3826693de2\\role-request.json",
+        "sha256": "4a851686d43071a243cf6cacc051362e46aa13b35fdaaa95ea901bc6af9c902a"
+      },
+      "code_version_bindings": [
+        {
+          "task": "thm_11_4",
+          "final_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\subject\\candidate\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+            "sha256": "0a0a2fb7a8016025bef9f3c4d948d61fd0704a1958de195fd0379953cd4dd2a3"
+          },
+          "review_input_matches_final": null
+        },
+        {
+          "task": "thm_11_5",
+          "final_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\subject\\candidate\\ProbabilityTheory\\chapter_11\\thm_11_5.lean",
+            "sha256": "19d0d4224cfd2eb9e8658d88c126bcb1b2fad1fd3f3826221542d9e1339d9bbb"
+          },
+          "review_input_matches_final": null
+        }
+      ],
+      "unified_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "independent_candidate_reassessment": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L2_RESULT_MATRIX.json",
+        "sha256": "a84cdaca6dfc153e5d811ca575b83b924dd1e056402ec7bdec4e493281344316"
+      },
+      "actual_content_exposure": "not_verified",
+      "exposure_evidence": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\author-call-01\\raw-public-events.bin",
+            "sha256": "0fdb4116e7534fa533849a38eee2fe32c3c3106d0322cbef34e9d0a1749001ed"
+          },
+          "started_item": "item_17",
+          "completed_item_absent": true,
+          "scope": "Original request_help tool result absent; delivery to a file is not evidence of model reading."
+        }
+      ],
+      "caller_adoption_action": "Unknown. Original help export failed, later recovery copied patch and response into the caller container. No observed tool result/read establishes actual patch adoption.",
+      "caller_candidate_before_after_diff": {
+        "status": "not_fully_reconstructed",
+        "reason": "A positive review and final candidate equality do not establish every intervening caller edit."
+      },
+      "change_categories": [
+        "engineering_export_recovery"
+      ],
+      "obligation_repaired": "unresolved",
+      "semantic_audit_status": "targeted_semantic_check_with_explicit_adoption_limits",
+      "feedback_validity": {
+        "status": "partial_unresolved",
+        "reason": "Helper claims a compiled covariance-based implementation, but this audit has not independently validated its isolated patch. Final B r4 instead proves the centered-square expansion. Self-reported completion is not proof of correctness or adoption."
+      },
+      "readable_delivery_status": "original_export_failed_then_host_recovered_delivery",
+      "delivery_recovery": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\support-export-recovery-r1\\RECOVERY_RECEIPT.json",
+        "sha256": "545803bbfce05cad262286787d2f9b68eeeb85130d4e64c7f1c30f6cbfdaf6cd"
+      },
+      "delivery_receipt": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\support-export-recovery-r1\\caller-feedback-copy.json",
+        "sha256": "04c7e97beac727261ee9237733ed7e322b177fa17fa340ace0de8b234ba12358"
+      },
+      "recovery_facts": {
+        "new_model_calls": 0,
+        "new_started_containers": 0,
+        "mathematical_source_edited_by_host": false,
+        "root_clock_reset": false
+      }
+    },
+    {
+      "epoch": 1789134867.8079605,
+      "episode_id": "episode-f5e4ae15-c287-42a7-9c9e-5d913e6dfb91",
+      "dispatch_id": "f5e4ae15-c287-42a7-9c9e-5d913e6dfb91",
+      "arm": "B",
+      "target": "both",
+      "method": "Owner offline semantic inspection of reported feedback, original source/contract and bound candidate; independent L2 reevaluation supplies explicit G/S evidence. No new model call.",
+      "feedback_evidence": {
+        "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\2b4b2961-5e81-4333-b8f8-dd3aa3dd11b7\\actor\\raw-public-events.bin",
+        "raw_events_sha256": "3ce93d98d1709cfdd8465d6bd7f69a3ae213f71dfe1a6e2af79c8bb3573c85ba",
+        "final_message_line": 34,
+        "final_message_utf8_sha256": "ef9b39beab84d78028f8fba070b402437b19c496efb26c9beed6071bb61c94d5"
+      },
+      "request_evidence": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\2b4b2961-5e81-4333-b8f8-dd3aa3dd11b7\\role-request.json",
+        "sha256": "d4176e1c38a91b526a60aec7859a819af3c4a36c2650345e31be3368406562b4"
+      },
+      "code_version_bindings": [
+        {
+          "task": "thm_11_4",
+          "final_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\subject\\candidate\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+            "sha256": "0a0a2fb7a8016025bef9f3c4d948d61fd0704a1958de195fd0379953cd4dd2a3"
+          },
+          "review_input_matches_final": true,
+          "before_manifest": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\2b4b2961-5e81-4333-b8f8-dd3aa3dd11b7\\before-manifest.json",
+            "sha256": "939affbfbccaa460fc366b6d3bc6a192a8270feb6856a710806b7a556cd88ad8"
+          }
+        },
+        {
+          "task": "thm_11_5",
+          "final_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\subject\\candidate\\ProbabilityTheory\\chapter_11\\thm_11_5.lean",
+            "sha256": "19d0d4224cfd2eb9e8658d88c126bcb1b2fad1fd3f3826221542d9e1339d9bbb"
+          },
+          "review_input_matches_final": true,
+          "before_manifest": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\2b4b2961-5e81-4333-b8f8-dd3aa3dd11b7\\before-manifest.json",
+            "sha256": "939affbfbccaa460fc366b6d3bc6a192a8270feb6856a710806b7a556cd88ad8"
+          }
+        }
+      ],
+      "unified_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "independent_candidate_reassessment": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L2_RESULT_MATRIX.json",
+        "sha256": "a84cdaca6dfc153e5d811ca575b83b924dd1e056402ec7bdec4e493281344316"
+      },
+      "actual_content_exposure": "verified",
+      "exposure_evidence": [
+        {
+          "recipient_dispatch_id": "7960f8a1-b0a1-4006-8e36-00122a42c118",
+          "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\author-call-01\\raw-public-events.bin",
+          "line": 162,
+          "public_item_id": "item_116",
+          "criterion": "full returned feedback text exposed in tool result, not merely filename requested"
+        }
+      ],
+      "caller_adoption_action": "Validation acknowledged in author raw line 164, followed by submission. No repair was requested or needed for the checked obligations.",
+      "caller_candidate_before_after_diff": {
+        "status": "both_reviewed_target_hashes_equal_final",
+        "target_changes": [],
+        "scope": "Review snapshot versus final target files, not every intermediate filesystem action."
+      },
+      "change_categories": [],
+      "obligation_repaired": "already_satisfied_before_review",
+      "semantic_audit_status": "targeted_semantic_check_with_explicit_adoption_limits",
+      "feedback_validity": {
+        "status": "supported_under_G_and_S",
+        "reason": "The reviewed snapshot equals both final files byte-for-byte. Centered-square double-sum expansion, cross-term cancellation and internal Chebyshev limit are independently accepted under both G and S."
+      },
+      "acknowledgement": {
+        "source": {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\author-call-01\\raw-public-events.bin",
+          "sha256": "0fdb4116e7534fa533849a38eee2fe32c3c3106d0322cbef34e9d0a1749001ed"
+        },
+        "line": 164
+      }
+    },
+    {
+      "epoch": 1789134867.811646,
+      "episode_id": "episode-8ce74337-4095-46e8-a9e2-cb03190c78c4",
+      "dispatch_id": "8ce74337-4095-46e8-a9e2-cb03190c78c4",
+      "arm": "C",
+      "target": "thm_11_4",
+      "method": "Owner offline semantic inspection of reported feedback, original source/contract and bound candidate; independent L2 reevaluation supplies explicit G/S evidence. No new model call.",
+      "feedback_evidence": {
+        "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\actors\\reviewer-002\\raw-public-events.bin",
+        "raw_events_sha256": "c7900d883eabe49307b389f49cb2fcfc63931f78a1c3f551670447e0fbc9a74f",
+        "final_message_line": 26,
+        "final_message_utf8_sha256": "169b8820c17ff407c9d8d20d634ee0eeca123d322817d79a321a616184f112df"
+      },
+      "request_evidence": null,
+      "code_version_bindings": [
+        {
+          "task": "thm_11_4",
+          "final_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36\\subject\\candidate\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+            "sha256": "1056eebd64efb1db3b098fc08309c1a5e550f6c57c6c9919ac0a1ffbedcd80db"
+          },
+          "review_input_matches_final": true,
+          "reviewed_c1_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\candidates\\c1\\visible-files\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+            "sha256": "1056eebd64efb1db3b098fc08309c1a5e550f6c57c6c9919ac0a1ffbedcd80db"
+          }
+        }
+      ],
+      "unified_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "independent_candidate_reassessment": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L2_RESULT_MATRIX.json",
+        "sha256": "a84cdaca6dfc153e5d811ca575b83b924dd1e056402ec7bdec4e493281344316"
+      },
+      "actual_content_exposure": "verified",
+      "exposure_evidence": [
+        {
+          "recipient_dispatch_id": "018a1503-17bf-4957-b80f-94af1c1b696c",
+          "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\actors\\coordinator-001\\raw-public-events.bin",
+          "line": 70,
+          "public_item_id": "item_41",
+          "criterion": "full returned feedback text exposed in tool result, not merely filename requested"
+        },
+        {
+          "recipient_dispatch_id": "018a1503-17bf-4957-b80f-94af1c1b696c",
+          "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\actors\\coordinator-001\\raw-public-events.bin",
+          "line": 81,
+          "public_item_id": "item_54",
+          "criterion": "full returned feedback text exposed in tool result, not merely filename requested"
+        }
+      ],
+      "caller_adoption_action": "No new mathematical repair claimed; positive validation is distinct from a proof-changing intervention.",
+      "caller_candidate_before_after_diff": {
+        "status": "not_fully_reconstructed",
+        "reason": "A positive review and final candidate equality do not establish every intervening caller edit."
+      },
+      "change_categories": [],
+      "obligation_repaired": "not_claimed",
+      "semantic_audit_status": "targeted_semantic_check_with_explicit_adoption_limits",
+      "feedback_validity": {
+        "status": "interpretation_sensitive",
+        "reason": "The positive review correctly identifies general covariance expansion plus candidate cross-term cancellation. This is permitted under G but does not satisfy the stricter candidate-built expansion required by S. Neither the mathematical statement nor every unrelated obligation becomes false because S fails."
+      }
+    },
+    {
+      "epoch": 1789134867.8138773,
+      "episode_id": "episode-abbc1cbd-ffbd-4258-9154-f3849b3106ed",
+      "dispatch_id": "abbc1cbd-ffbd-4258-9154-f3849b3106ed",
+      "arm": "C",
+      "target": "thm_11_5",
+      "method": "Owner offline semantic inspection of reported feedback, original source/contract and bound candidate; independent L2 reevaluation supplies explicit G/S evidence. No new model call.",
+      "feedback_evidence": {
+        "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\actors\\reviewer-003\\raw-public-events.bin",
+        "raw_events_sha256": "df1050448229e51ab2d641d8e140dea426eb086eb205bf904edb9868c9293315",
+        "final_message_line": 17,
+        "final_message_utf8_sha256": "4a91716cd3df73969743e57e5bb15960b4192919182089ea2cc72eaea787832f"
+      },
+      "request_evidence": null,
+      "code_version_bindings": [
+        {
+          "task": "thm_11_5",
+          "final_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36\\subject\\candidate\\ProbabilityTheory\\chapter_11\\thm_11_5.lean",
+            "sha256": "4a6d999400bf7fe8e812d7ecd1eb271a7271e8e24ca56ae5c933f6834c54dbf5"
+          },
+          "review_input_matches_final": true,
+          "reviewed_c1_code": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\candidates\\c1\\visible-files\\ProbabilityTheory\\chapter_11\\thm_11_5.lean",
+            "sha256": "4a6d999400bf7fe8e812d7ecd1eb271a7271e8e24ca56ae5c933f6834c54dbf5"
+          }
+        }
+      ],
+      "unified_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "independent_candidate_reassessment": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L2_RESULT_MATRIX.json",
+        "sha256": "a84cdaca6dfc153e5d811ca575b83b924dd1e056402ec7bdec4e493281344316"
+      },
+      "actual_content_exposure": "verified",
+      "exposure_evidence": [
+        {
+          "recipient_dispatch_id": "018a1503-17bf-4957-b80f-94af1c1b696c",
+          "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\actors\\coordinator-001\\raw-public-events.bin",
+          "line": 74,
+          "public_item_id": "item_48",
+          "criterion": "full returned feedback text exposed in tool result, not merely filename requested"
+        },
+        {
+          "recipient_dispatch_id": "018a1503-17bf-4957-b80f-94af1c1b696c",
+          "raw_events": "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\actors\\coordinator-001\\raw-public-events.bin",
+          "line": 83,
+          "public_item_id": "item_55",
+          "criterion": "full returned feedback text exposed in tool result, not merely filename requested"
+        }
+      ],
+      "caller_adoption_action": "No new mathematical repair claimed; positive validation is distinct from a proof-changing intervention.",
+      "caller_candidate_before_after_diff": {
+        "status": "not_fully_reconstructed",
+        "reason": "A positive review and final candidate equality do not establish every intervening caller edit."
+      },
+      "change_categories": [],
+      "obligation_repaired": "not_claimed",
+      "semantic_audit_status": "targeted_semantic_check_with_explicit_adoption_limits",
+      "feedback_validity": {
+        "status": "valid_local_WLLN_reasoning_with_route_dependency_limit",
+        "reason": "The review correctly identifies internal mean/variance, Chebyshev tail control and convergence. This local weak-law proof remains mathematically correct. Its use of the variance result retains that dependency’s G/S route sensitivity; do not mechanically mark every local obligation false."
+      }
+    }
+  ],
+  "coverage": {
+    "episodes": 6,
+    "limits": "This is a targeted L2 subset, not full trajectory semantic coverage. Other episodes remain indexed or unchecked; no automatic score from calls or text length.",
+    "reviewed_target_to_final_diff_verified": 1
+  }
+}

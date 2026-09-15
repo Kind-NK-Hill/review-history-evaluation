@@ -1,0 +1,43 @@
+{
+  "version": "obligation-consistency-sensitivity-r1",
+  "behavior_classes": {
+    "1": "Circular premise or target-specific answer: importing the desired uncorrelated variance additivity as a new premise or delegating the same target obligation without discharging it. Prohibited in both readings.",
+    "2": "General variance/covariance expansion valid for correlated variables, followed by a candidate proof from the given uncorrelated definition that cross terms vanish. Distinct from class 1; assess mathematics and delegation separately.",
+    "3": "Candidate or allowed support proves centered-square expansion and expectation linearity itself, then eliminates cross terms. Permitted in both readings if correct."
+  },
+  "interpretations": {
+    "G_general_foundation_allowed": "Class 2 is permitted by the shared lawful-library and equivalent-route rules; the task-specific prohibition concerns assuming/delegating the target additivity result itself. Centering, cross-term elimination and all WLLN obligations remain mandatory.",
+    "S_expansion_must_be_in_candidate": "Read the task-specific wording as requiring the centered-square/expectation expansion in candidate or allowed support; a general covariance expansion delegates that required derivation and fails route closure even if mathematically correct."
+  },
+  "dimensions": [
+    "mathematical_statement_and_premises",
+    "source_route_obligation",
+    "public_interface",
+    "bundle_delivery",
+    "response_format",
+    "controller_or_contract_responsibility"
+  ],
+  "composition": {
+    "math": "pass only if original mathematical statement follows from original admissible premises with no escapes and all target conclusions present",
+    "route_G_S": "evaluate each obligation under both registered readings",
+    "interface_delivery": "each required endpoint and every task in bundle must close; support may close an obligation only with a real code binding",
+    "overall_G_S": "pass iff math, selected route interpretation, interface and complete delivery all pass; valid negative evidence may yield fail; missing or invalid evaluation yields unresolved rather than mathematical fail",
+    "main_comparison": "criterion_dispute when the registered interpretations change overall status; contract_unresolved for unsupported/unsatisfiable obligations; otherwise retain robust interpretation result",
+    "format": "invalid format is an execution/evaluation failure, not a mathematical verdict; original response and costs retained; at most the existing unique adjudication, never retry until pass"
+  },
+  "obligations": {
+    "V1": "方差定理公共前提保持两两不相关与有限二阶矩，不假定目标可加性。",
+    "V2": "中心化及方差/协方差定义接入的具体证明。",
+    "V3": "有限和展开所使用的资源与证明责任，分别适用G和S解释。",
+    "V4": "由给定不相关定义证明非对角交叉项为零。",
+    "V5": "完整公开有限和方差可加结论。",
+    "W1": "弱大数定律原前提，不加强为独立或同分布。",
+    "W2": "中心化和/样本均值的二阶矩或方差界确实导出。",
+    "W3": "从已导出的界使用切比雪夫，而非要求调用者给最终尾界。",
+    "W4": "证明尾概率上界趋于零，处理索引和边界。",
+    "W5": "完整公开依概率收敛结论与整组接口接入。",
+    "S1": "允许支持、无循环与无证明逃逸，全部候选声明/支持均检查。"
+  },
+  "scope": "完整原始候选，两道任务及允许支持。两种解释分别适用于每个义务。候选的其他义务必须独立检查。",
+  "library_evidence": "library/Variance.lean 来自原运行只读镜像的绑定导出；请实际读取第275–306行，核查两个声明及转换证明，不以搜索退出码代替读到非空内容。"
+}

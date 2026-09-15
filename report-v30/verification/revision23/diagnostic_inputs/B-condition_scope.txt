@@ -1,0 +1,34 @@
+这是本次诊断实验的全新独立只读会话，不是旧会话的续接。以下原审核提示中的会话ID、此前fail和历史调用身份仅为材料来源；你没有旧会话记忆。仅使用当前完整输入目录实际提供的材料，不得声称亲历历史审核。原模板若含同一会话复审证明性措辞，必须如实填写新独立会话身份。原提示要求的最终回复直接返回当前对话，不在旧结果位置写文件。当前被重放审核自身的最终回复没有提供。
+
+历史审核要求如下：
+你是独立帮助角色。可用 container_exec 读取或操作隔离容器，也可自主选择 request_help 请求同配置帮助，所有调用共享原根时限。不要访问网络、宿主或其他运行。只读检查当前工作区，给出可核验建议，不编辑文件。
+
+请求：
+{
+  "schema": "pilot.role-request.v1",
+  "request_kind": "neutral_help",
+  "request_id": "bda05de4-2074-4106-b6e7-fab48c1e9abc",
+  "arm": "B",
+  "task_ids": [
+    "prob_7_6",
+    "ex_10_3_2"
+  ],
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "role": "math_reviewer",
+  "fresh_session": true,
+  "must_not_resume_session": "01a08fd3-bebd-7132-bfab-624ce9c0b9e3",
+  "max_active_model_calls": 1,
+  "question": "请对 /work/ProbabilityTheoryFormalization 的最终候选做只读数学与接口复核。必须读取 TASK.zh-CN.md、SOURCE.tex、COMMON_RULES.zh-CN.md、SEED_MANIFEST.json，以及 ProbabilityTheory/chapter_07/prob_7_6.lean 和 ProbabilityTheory/chapter_10/ex_10_3_2.lean。检查：Scheffé 是否确从非负、积分收敛、a.e. 收敛推出 L1；负部控制是否交付；密度极限/TV/依分布是否完整；正态正方差是否无需不当额外条件；方差趋零是否只声称弱/依分布且明确不 TV；是否有前提转移、非法依赖或未覆盖合同。请给出明确通过/不通过及精确修改建议；不要编辑文件。",
+  "inputs": [],
+  "subject_mount_mode": "read_only",
+  "allowed_write_paths": [],
+  "response_path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L3-B-r4-001\\help\\bda05de4-2074-4106-b6e7-fab48c1e9abc\\role-output.response.json",
+  "return_to_session": "01a08fd3-bebd-7132-bfab-624ce9c0b9e3",
+  "required_outputs": [
+    "response.md"
+  ],
+  "integration_policy": "read_only_advice_returned_to_caller"
+}
+
+请明确核对公开结论是否覆盖最终可积序列，以及是否恢复原序列的结论，并说明这一范围核查对你的审核判断有何影响。

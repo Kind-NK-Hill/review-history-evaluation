@@ -1,0 +1,11 @@
+{
+  "valid_panel": true,
+  "rejected_invalid_cases": [
+    "missing_row",
+    "duplicate_row",
+    "unjustified_correction",
+    "failed_caller"
+  ],
+  "release_program_reproduces_original_assessment": true,
+  "recorded_stages_explicit": true
+}

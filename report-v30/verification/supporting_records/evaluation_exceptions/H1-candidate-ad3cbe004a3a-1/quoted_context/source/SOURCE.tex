@@ -1,0 +1,137 @@
+% BEGIN EXACT CATALOG SOURCE: thm_9_4
+\begin{thmbox}{9.4}
+\[
+\lvert e^{ix}-1\rvert\leq \lvert x\rvert
+\]
+for all $x\in\mathbb{R}$.
+\end{thmbox}
+
+\textit{Proof}
+For fixed $x>0$, we have
+\[
+\int_0^x e^{iu}\,du
+=\left[\frac{e^{iu}}{i}\right]_0^x
+=\frac{e^{ix}-1}{i}.
+\]
+Hence, by the triangle inequality,
+\[
+\lvert e^{ix}-1\rvert\leq \int_0^x \lvert e^{iu}\rvert\,du=x.
+\]
+For negative $x$, we can write
+\[
+\lvert e^{ix}-1\rvert
+=\lvert e^{ix}\rvert\lvert 1-e^{i(-x)}\rvert
+=\lvert e^{i(-x)}-1\rvert
+\leq -x.
+\]
+Therefore $\lvert e^{ix}-1\rvert\leq \lvert x\rvert$ for all $x\in\mathbb{R}$.
+\hfill $\square$
+% END EXACT CATALOG SOURCE: thm_9_4
+
+% BEGIN EXACT CATALOG SOURCE: thm_9_5
+\begin{thmbox}{9.5}
+\textbf{Inversion Formula.}
+Let $X$ be a random variable on a probability space $(\Omega,\mathcal{F},P)$, and let $\phi_X(t)$ be the characteristic function of $X$. Denote the push-forward measure of $P$ by $\mu$. For $a<b$,
+\[
+\mu((a,b))+\frac{\mu(\{a\})}{2}+\frac{\mu(\{b\})}{2}
+=\frac{1}{2\pi}\lim_{T\to\infty}
+\int_{-T}^{T}\frac{e^{-ita}-e^{-itb}}{it}\phi_X(t)\,dt.
+\]
+\end{thmbox}
+
+On the left-hand side of the equation in Theorem 9.5, $(a,b)$ denotes an open interval, and $\mu(\{a\})$ and $\mu(\{b\})$ are probabilities at the points $a$ and $b$, respectively. This formulation is necessary to account for possible discontinuities in the cumulative distribution function. If the cdf is continuous, then both $\mu(\{a\})$ and $\mu(\{b\})$ are zero, and $\mu((a,b))=\mu([a,b])$. The limit on the right-hand side is the Cauchy principal value of the integral, and its existence is part of the theorem.
+
+In the proof we use the Dirichlet integral
+\[
+\lim_{T\to\infty}\int_0^T \frac{\sin u}{u}\,du=\frac{\pi}{2}.
+\]
+This limit is obtained from the Riemann integral of the function $(\sin u)/u$.
+
+\textit{Proof}
+For fixed $T$, consider
+\[
+I_T \coloneqq
+\int_{-T}^{T}\frac{e^{-ita}-e^{-itb}}{it}\phi_X(t)\,dt
+=\int_{-T}^{T}\int_{\mathbb{R}}
+\frac{e^{-ita}-e^{-itb}}{it}e^{itx}\,d\mu(x)\,dt.
+\]
+Using Theorem 9.4, we can bound the integrand by
+\[
+\left\lvert
+\frac{e^{-ita}-e^{-itb}}{it}e^{itx}
+\right\rvert
+=\left\lvert \frac{1}{t}(e^{it(b-a)}-1)\right\rvert
+\leq b-a.
+\]
+Therefore, by Fubini theorem (Theorem 8.5),
+\[
+I_T=\int_{\mathbb{R}}\int_{-T}^{T}
+\frac{e^{-ita}-e^{-itb}}{it}e^{itx}\,dt\,d\mu(x).
+\tag{9.1}
+\]
+
+Let $f(x,T)$ denote the inner integral in (9.1). The imaginary part of the integrand is odd and the real part is even, so integration over $[-T,T]$ gives
+\[
+f(x,T)
+=2\int_0^T \frac{1}{t}\sin(t(b-x))\,dt
+-2\int_0^T \frac{1}{t}\sin(t(a-x))\,dt.
+\]
+Changing variables gives
+\[
+f(x,T)
+=2\int_{(a-x)T}^{(b-x)T}\frac{\sin u}{u}\,du.
+\]
+There are four cases. If $a<x<b$, then $f(x,T)\to 2\pi$. If $x=a$ or $x=b$, then $f(x,T)\to \pi$. If $x<a$ or $x>b$, then $f(x,T)\to 0$. Thus
+\[
+\lim_{T\to\infty} f(x,T)=
+\begin{cases}
+2\pi, & x\in(a,b),\\
+\pi, & x=a\text{ or }x=b,\\
+0, & \text{otherwise}.
+\end{cases}
+\]
+The integral $\int_0^v (\sin u)/u\,du$ converges as $v\to\infty$ and is continuous as a function of $v$. Hence $\lvert f(x,T)\rvert$ is bounded by a constant independent of $x$ and $T$. Applying the complex version of the dominated convergence theorem (Theorem 7.6), we get
+\[
+\lim_{T\to\infty} I_T
+=2\pi\int 1_{(a,b)}(x)\,d\mu(x)
++\pi\int 1_{\{a\}}(x)\,d\mu(x)
++\pi\int 1_{\{b\}}(x)\,d\mu(x).
+\]
+Dividing by $2\pi$ gives the inversion formula.
+\hfill $\square$
+% END EXACT CATALOG SOURCE: thm_9_5
+
+% BEGIN EXACT CATALOG SOURCE: thm_9_6
+Using the inversion formula, we can show that the characteristic function of a random variable uniquely determines the cumulative distribution function.
+
+\begin{thmbox}{9.6}
+\textbf{Uniqueness Theorem.}
+Let $X$ and $Y$ be random variables with characteristic functions $\phi_X(t)$ and $\phi_Y(t)$, respectively. If $\phi_X(t)=\phi_Y(t)$ for all $t\in\mathbb{R}$, then $X$ and $Y$ have the same distribution.
+\end{thmbox}
+
+\textit{Proof}
+Let $F_X(x)$ and $F_Y(y)$ denote the cumulative distribution functions of $X$ and $Y$, respectively. If $F_X$ and $F_Y$ are both continuous at $a$ and $b$, the inversion formula can be simplified to
+\[
+P(a<X<b)
+=\frac{1}{2\pi}\lim_{T\to\infty}\int_{-T}^{T}
+\frac{e^{-iat}-e^{-ibt}}{it}\phi_X(t)\,dt,
+\]
+and
+\[
+P(a<Y<b)
+=\frac{1}{2\pi}\lim_{T\to\infty}\int_{-T}^{T}
+\frac{e^{-iat}-e^{-ibt}}{it}\phi_Y(t)\,dt.
+\]
+Since $\phi_X(t)=\phi_Y(t)$ for all $t$, we have $P(a<X<b)=P(a<Y<b)$.
+
+Because there are at most countably many discontinuity points in the cumulative distribution function of a random variable (see Exercise 3.5), the Lebesgue--Stieltjes measures induced by $F_X$ and $F_Y$ agree on a collection of open intervals $(a,b)$, where $a$ and $b$ range over a dense set in $\mathbb{R}$. This collection of intervals generates the Borel algebra on $\mathbb{R}$. Therefore, the two Lebesgue--Stieltjes measures are the same. Consequently, the cdf's of $X$ and $Y$ are the same (see Theorem 3.9).
+\hfill $\square$
+% END EXACT CATALOG SOURCE: thm_9_6
+
+% BEGIN EXACT CATALOG SOURCE: prob_9_6
+\textbf{Problem 9.6} Let $X_1,\ldots,X_n$ be i.i.d. Cauchy random variables. Show that $(X_1+\cdots+X_n)/n$ is Cauchy with the same distribution as $X_1$.
+% END EXACT CATALOG SOURCE: prob_9_6
+
+% BEGIN EXACT CATALOG SOURCE: prob_9_8
+\textbf{Problem 9.8} Prove that $\phi_X(2\pi)=1$ if and only if $P(X\in\mathbb{Z})=1$.
+% END EXACT CATALOG SOURCE: prob_9_8

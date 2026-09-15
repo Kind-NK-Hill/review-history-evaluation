@@ -1,0 +1,74 @@
+[
+  {
+    "id": "anthropic_evals_20260109",
+    "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+    "retrieved_utc": "2026-09-14T11:27:35.933355+00:00",
+    "resolved_url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+    "content_type": "text/html; charset=utf-8",
+    "last_modified": null,
+    "status": "ok",
+    "path": "sources/anthropic_evals_20260109.html",
+    "bytes": 304651,
+    "sha256": "4eaf3f4c842acfa47935eb2243eafa3ab3ab2d93e89824411fc150894d1abd7b"
+  },
+  {
+    "id": "anthropic_infrastructure_20260205",
+    "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+    "retrieved_utc": "2026-09-14T11:27:36.532161+00:00",
+    "resolved_url": "https://www.anthropic.com/engineering/infrastructure-noise",
+    "content_type": "text/html; charset=utf-8",
+    "last_modified": null,
+    "status": "ok",
+    "path": "sources/anthropic_infrastructure_20260205.html",
+    "bytes": 166187,
+    "sha256": "10fe59745798cba3c5052474e65c591c9a4d472b746939a20868dcbe307a49e5"
+  },
+  {
+    "id": "anthropic_research_system_20250613",
+    "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+    "retrieved_utc": "2026-09-14T11:27:37.035501+00:00",
+    "resolved_url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+    "content_type": "text/html; charset=utf-8",
+    "last_modified": null,
+    "status": "ok",
+    "path": "sources/anthropic_research_system_20250613.html",
+    "bytes": 205683,
+    "sha256": "5c1fdf562d6a35116091a8dcdb9b8c0848357c37c8cbb7292e769f0927c595e7"
+  },
+  {
+    "id": "magentic_one_2411_04468v1",
+    "url": "https://arxiv.org/html/2411.04468v1",
+    "retrieved_utc": "2026-09-14T11:27:37.577346+00:00",
+    "resolved_url": "https://arxiv.org/html/2411.04468v1",
+    "content_type": "text/html; charset=utf-8",
+    "last_modified": "Mon, 24 Aug 2026 21:10:52 GMT",
+    "status": "ok",
+    "path": "sources/magentic_one_2411_04468v1.html",
+    "bytes": 267989,
+    "sha256": "d64ff63c96d955a227626d74844b203e90da1c7145a0d44f0bdbc916b7e08854"
+  },
+  {
+    "id": "aletheia_2602_10177v3",
+    "url": "https://arxiv.org/html/2602.10177v3",
+    "retrieved_utc": "2026-09-14T11:27:37.819608+00:00",
+    "resolved_url": "https://arxiv.org/html/2602.10177v3",
+    "content_type": "text/html; charset=utf-8",
+    "last_modified": "Mon, 24 Aug 2026 20:55:02 GMT",
+    "status": "ok",
+    "path": "sources/aletheia_2602_10177v3.html",
+    "bytes": 655863,
+    "sha256": "22ee078505965360b2f9afbfcfcbfe0ccf70c17ff2af9e3ec79e359c46b2eded"
+  },
+  {
+    "id": "metr_rebench_release_20241122",
+    "url": "https://metr.org/blog/2024-11-22-evaluating-r-d-capabilities-of-llms/",
+    "retrieved_utc": "2026-09-14T11:27:38.218243+00:00",
+    "resolved_url": "https://metr.org/blog/2024-11-22-evaluating-r-d-capabilities-of-llms/",
+    "content_type": "text/html; charset=UTF-8",
+    "last_modified": null,
+    "status": "ok",
+    "path": "sources/metr_rebench_release_20241122.html",
+    "bytes": 85485,
+    "sha256": "75ac42448ac63ecb34db90f12860449c18829975a177bac6a4d06fd4481f4735"
+  }
+]

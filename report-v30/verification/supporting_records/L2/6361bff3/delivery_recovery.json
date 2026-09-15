@@ -1,0 +1,78 @@
+{
+  "schema": "stage.b_l2_support_export_recovery.r1",
+  "epoch": 1789112970.7645464,
+  "source_call": "eb7cde99-6891-47c5-9dcf-df3826693de2",
+  "source_actor_receipt": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\eb7cde99-6891-47c5-9dcf-df3826693de2\\actor\\actor-receipt.json",
+  "source_session_ids": [
+    "01a08f63-e446-7950-9ed4-c74c8c906fcc"
+  ],
+  "original_failure_hashes": {
+    "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\eb7cde99-6891-47c5-9dcf-df3826693de2\\after-workspace.tar": "f72a32ca6500260fcd223c956751ee9a38208940ed826dbe3ece90eee2006f26",
+    "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\eb7cde99-6891-47c5-9dcf-df3826693de2\\after-export.stderr.bin": "0fe7b873a06b93c04952c56281e17606130feed0fee65da6188010e816eabb3f",
+    "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\eb7cde99-6891-47c5-9dcf-df3826693de2\\actor\\actor-receipt.json": "01ac7bb365358c1d81429c286ddad561e16fbff1415eae3e1ee81e34bf00f3b4"
+  },
+  "original_failure": "UID0 export process lacking DAC override cannot read owner-restricted response.md",
+  "repair": "Docker daemon copied exactly one missing file from stopped original support container; append file into separate preserved export copy, verify every existing entry unchanged",
+  "new_started_containers": 0,
+  "new_model_calls": 0,
+  "support_container_restarted": false,
+  "additional_recovered_entries": [
+    "artifacts/response.md"
+  ],
+  "recovered_archive_sha256": "5bb547e75cc700b761300934e27bfa2baa68914bc24d30e7839dc4494c28991c",
+  "role_artifacts": [
+    {
+      "kind": "declared_target_patch",
+      "workspace_path": "/work/artifacts/patch.diff",
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\support-export-recovery-r1\\role-artifacts\\1-patch.diff",
+      "sha256": "5218705a15ae74f948d4c06efbab124d52d6f5441fd7b4cb3fd8bd52ffe8ed62",
+      "bytes": 6531,
+      "applied": false,
+      "adoption": "not_observed"
+    },
+    {
+      "kind": "role_response",
+      "workspace_path": "/work/artifacts/response.md",
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\support-export-recovery-r1\\role-artifacts\\2-response.md",
+      "sha256": "f349163851d4b2d7e1765908e84a98a9680e3532cf11e8fbf2fb94fb43f6b227",
+      "bytes": 2089,
+      "applied": false,
+      "adoption": "not_observed"
+    }
+  ],
+  "delivery": {
+    "schema": "isolated-help-result.v3",
+    "call_id": "eb7cde99-6891-47c5-9dcf-df3826693de2",
+    "status": "completed",
+    "status_scope": "actor_process_only_not_mathematical_success",
+    "response": "已在隔离副本中完成并验证两个定理。\n\n交付文件：\n\n- `/work/artifacts/patch.diff`\n- `/work/artifacts/response.md`\n\n联合构建成功：\n\n```bash\ncd /work/ProbabilityTheoryFormalization\n/opt/lean/bin/lake build \\\n  ProbabilityTheory.chapter_11.thm_11_4 \\\n  ProbabilityTheory.chapter_11.thm_11_5\n```\n\n实现要点：\n\n- `thm_11_4` 展开为协方差双重有限和，以 `Uncorrelated` 消去所有非对角交叉项，没有调用现成的有限和方差公式。\n- `thm_11_5` 推导平均值的均值与方差，应用切比雪夫不等式，并证明 `σ² / ((n+1)ε²)` 趯于零。\n- 未加强为独立或同分布，也未要求调用者提供尾概率界。\n- 补丁仅存在于本次隔离副本，供调用方审阅和应用。",
+    "response_path": "/tmp/help-result-eb7cde99-6891-47c5-9dcf-df3826693de2/response.md",
+    "response_sha256": "eb8314f02aa16cb3a7e1d08ed321668f40c5b382f8859a73a73544a40a21738c",
+    "patch_path": "/tmp/help-result-eb7cde99-6891-47c5-9dcf-df3826693de2/patch.diff",
+    "patch_sha256": "c0fd3bf5c9945524429a1b8c9f4bd2bd45fce004e70e9ced7fc23248a5774d8b",
+    "patch_kind": "workspace_diff",
+    "patch_applied": false,
+    "role_artifacts": [
+      {
+        "kind": "declared_target_patch",
+        "path": "/tmp/help-result-eb7cde99-6891-47c5-9dcf-df3826693de2/role-artifact-1-patch.diff",
+        "sha256": "5218705a15ae74f948d4c06efbab124d52d6f5441fd7b4cb3fd8bd52ffe8ed62",
+        "bytes": 6531,
+        "applied": false,
+        "adoption": "not_observed"
+      },
+      {
+        "kind": "role_response",
+        "path": "/tmp/help-result-eb7cde99-6891-47c5-9dcf-df3826693de2/role-artifact-2-response.md",
+        "sha256": "f349163851d4b2d7e1765908e84a98a9680e3532cf11e8fbf2fb94fb43f6b227",
+        "bytes": 2089,
+        "applied": false,
+        "adoption": "not_observed"
+      }
+    ]
+  },
+  "author_adoption": "not_observed",
+  "author_was_not_interrupted": true,
+  "mathematical_source_edited_by_host": false,
+  "root_clock_reset": false
+}

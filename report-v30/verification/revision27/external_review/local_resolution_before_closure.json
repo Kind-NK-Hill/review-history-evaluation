@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-09-14T16:06:36.352151+00:00",
+  "necessary_groups_implemented": 5,
+  "closure_characters": 21562,
+  "source_hashes": {
+    "report.en.md": "216704e39990b61f930784ec324723173c83c75a409890faa6fdf5afa310c881",
+    "report.zh-CN.md": "418a0505d6171e44e226ad250df11151fff198df86d14228169e34519dea2628",
+    "appendix.en.md": "afce87fc3d975ac443686220826499231b8cf32387ce9ac7e35a0e6499a76c28",
+    "appendix.zh-CN.md": "72ce805fba84aad82980a2ab405c576788800eb41f8cddda95ed87f47023133f"
+  }
+}

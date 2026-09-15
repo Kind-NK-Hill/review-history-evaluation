@@ -1,0 +1,3149 @@
+{
+  "schema": "tool-source-manifest.v1",
+  "sources": [
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\RUN_INDEX.csv",
+      "sha256": "34a323036321d9436744c8a80f6c03ddf8622769a651f96e129a3f1b151a6eb7",
+      "bytes": 50615,
+      "purpose": "main cohort selection"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\SOLVER_TERMINAL.json",
+      "sha256": "30ed5bc2497412d4ea03b234ab5b4f1633d464650e7f1fbc8266f6eb69387890",
+      "bytes": 2784,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-b\\SOLVER_TERMINAL.json",
+      "sha256": "28cdbdce0fb7f4552ccdefdd36c8538afee0902d2e577fa74d009670bc535a6d",
+      "bytes": 1346,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\SOLVER_TERMINAL.json",
+      "sha256": "d2b285aaaf6b4fce65b1877681ecd34dcccb97699b42575e1c8613ce0ee46470",
+      "bytes": 2059,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\SOLVER_TERMINAL.json",
+      "sha256": "06f30c4875f044a6ea290e6edf91cdfb40c5536dda63401f61d2c1bd1d68fd26",
+      "bytes": 1714,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\SOLVER_TERMINAL.json",
+      "sha256": "d01a5b96936e2d75bda72ec694efc2ffd2063ca8b718486fdd121496f8666e6c",
+      "bytes": 2745,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\SOLVER_TERMINAL.json",
+      "sha256": "5b2a5d4119443aa317295518aa798806dd1be7a70e39402c8a04a80363c45abf",
+      "bytes": 3195,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\SOLVER_TERMINAL.json",
+      "sha256": "2915f123227fa032cf283be930354721959403df2a037e7e1bf1744fb63fc524",
+      "bytes": 2424,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\SOLVER_TERMINAL.json",
+      "sha256": "d294b2149605707fb5fb35ac8ba1444be553e318a6d0a2b9fb9d3aed8e36dff9",
+      "bytes": 2624,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\SOLVER_TERMINAL.json",
+      "sha256": "cbfca32d50a0323e0e4ec13427a21488f45639609b2bcd13372e3b226332d7f0",
+      "bytes": 1386,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\SOLVER_TERMINAL.json",
+      "sha256": "e2865eb3cfacdaf4707e35d699bf3890cd827809aa341888994936604befccd2",
+      "bytes": 4409,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\SOLVER_TERMINAL.json",
+      "sha256": "cac84cbc105f01b89609e1679da7ecef2d99cae6d367fb97c060e97bcf83cf60",
+      "bytes": 1719,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\SOLVER_TERMINAL.json",
+      "sha256": "c9762474dede9b30960665d35d1fed9584b38c7b72924f3072e0e813c2523b9c",
+      "bytes": 2087,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\SOLVER_TERMINAL.json",
+      "sha256": "4f5ac0c2419abce2cb4b269931d14f9d58f534ff8d876de898980b383764f492",
+      "bytes": 2026,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\SOLVER_TERMINAL.json",
+      "sha256": "1912853fd7eb3cbb98577ae5a4add0baed70455917dbcdb8523415dd9f2621a4",
+      "bytes": 3054,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\SOLVER_TERMINAL.json",
+      "sha256": "722960d50b4ec85847094f74cb1af41b0b0624ed24ba8795f53b95e86da22622",
+      "bytes": 4581,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\SOLVER_TERMINAL.json",
+      "sha256": "159385a138dc07520484fe6888d3b92445bd77c17b6599f13168970d5ea8371e",
+      "bytes": 2063,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\SOLVER_TERMINAL.json",
+      "sha256": "ab6a1c58a59f80c2712804b4d496febb703029ee9a3331f339a8d3bf0814a5a7",
+      "bytes": 3572,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\SOLVER_TERMINAL.json",
+      "sha256": "01efbee26b81c8d315aad0c6160f3ca0a541c4e6fd8600d96dbdcdc1ca1f054c",
+      "bytes": 2363,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\SOLVER_TERMINAL.json",
+      "sha256": "2d8de024b92904b4c2b9e549d20469097a025b72b837e879f8a2c4648c62747a",
+      "bytes": 3049,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\SOLVER_TERMINAL.json",
+      "sha256": "148db0b2353638499587f25917aa77daff975c6834f51ae9f9c80c2656cde482",
+      "bytes": 2054,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\SOLVER_TERMINAL.json",
+      "sha256": "9ba959d6c2100e6da847182bf6387424a902771c3981578a97e2d4b051c4874c",
+      "bytes": 3408,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\SOLVER_TERMINAL.json",
+      "sha256": "2a12c12b5a702c4e060783b9e8390794485b0f30f45ba845eb83ba38c04b0d90",
+      "bytes": 1718,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\SOLVER_TERMINAL.json",
+      "sha256": "6f20e602fbc6889282e4f780e0f8e8865a6fde5f2d89231969f49710fe863db4",
+      "bytes": 2426,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\SOLVER_TERMINAL.json",
+      "sha256": "66dc68b03f048fce85db2bbdf55124709e3616d4ac712f966e86d68cb9aa7e9c",
+      "bytes": 5194,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\SOLVER_TERMINAL.json",
+      "sha256": "a505f63763e1fc0d9efe30c619398e840cac2e4d5bd3474c37555f50ed1896f3",
+      "bytes": 2061,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\SOLVER_TERMINAL.json",
+      "sha256": "ec4b5686234c7c56a3521d967daebf19eca7f71a9dd6e281c811c21f5be3932b",
+      "bytes": 4128,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\SOLVER_TERMINAL.json",
+      "sha256": "5d0bf7f5b4533843a84e76a5cf70890fefcbbe93e916eb25e457f408dd1bbbf9",
+      "bytes": 1688,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\SOLVER_TERMINAL.json",
+      "sha256": "86e0817a98a4924e5daa75971419188094cd8ab77e140ae70c7311e52f245544",
+      "bytes": 6027,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\SOLVER_TERMINAL.json",
+      "sha256": "f0a025a29a9339d557f451024df92b02a6207e377b164dde04a1af599f8ada8c",
+      "bytes": 1686,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\SOLVER_TERMINAL.json",
+      "sha256": "4c258e7cf190a9445bbd1ea1f8cc0121110be22974ecadc63b86ef7e57ad5755",
+      "bytes": 2391,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\SOLVER_TERMINAL.json",
+      "sha256": "3d96dda8d1bf39e90348869620df0ef56865a45dcf79e640bd7d913ec063eca7",
+      "bytes": 6137,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\SOLVER_TERMINAL.json",
+      "sha256": "d15dd197680318ed0ca19bbcb7cb64bb96547da28c00f234df39c285247ac2cc",
+      "bytes": 4445,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\SOLVER_TERMINAL.json",
+      "sha256": "70235845cdcfa22320f77eff57b51883e2cba402175f36b2088f18b3fff09f82",
+      "bytes": 7435,
+      "purpose": "main solver dispatch authority"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\engineering\\public-rollouts\\INDEX.json",
+      "sha256": "8b14131c0d0268404f1c25dfaa5490b7bbb1a016c2aa8b8a8763c68b4ea9c46a",
+      "bytes": 8396,
+      "purpose": "public mirror cohort check"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\actor-receipt.json",
+      "sha256": "189b601f1556866539445250150dd8d5612afc55d8036be8664531595dd455ea",
+      "bytes": 2267,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "37373bb3c8c03d3e6a22fc5e02972710833f5749eee8ed7d623adaa61b105bc1",
+      "bytes": 23164,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "567298f6be1afb45e6730a4084784fa920ae222aeeb67a1d1ce6c31258382f63",
+      "bytes": 978220,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\0fd5283f-c947-42d8-b25a-1893b4c98a37\\actor\\actor-receipt.json",
+      "sha256": "5a12881c1b570028c6fc5a06d4bcd17623d9d53b6fd46608e92e641776b46b20",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\0fd5283f-c947-42d8-b25a-1893b4c98a37\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "7e356431579a6e4ba419a97e89faa91cc956e4274e47c0f1da6f8b4f3e975e93",
+      "bytes": 4410,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\0fd5283f-c947-42d8-b25a-1893b4c98a37\\actor\\full-public-trace.jsonl",
+      "sha256": "d1761d5e7286f26bd69e26abe614e8977644218ef986931ee10a9914384d5932",
+      "bytes": 128608,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\1f9131e2-3961-40be-b92a-011fba170cdb\\actor\\actor-receipt.json",
+      "sha256": "100119da61d039a6ff428bd5a200f4e0139f1df637f918cda88ef63747ed08f5",
+      "bytes": 2377,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\1f9131e2-3961-40be-b92a-011fba170cdb\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "3a60db96027258d7bb76f0cb65fce7bd849c7763e63691513cb070b38c8d08c6",
+      "bytes": 14560,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\1f9131e2-3961-40be-b92a-011fba170cdb\\actor\\full-public-trace.jsonl",
+      "sha256": "f94e51d6db34877ff5592ba4129495ed940fceaaea79d2a396887faf5d7f2828",
+      "bytes": 607317,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\4be5c7bd-63f4-48f6-9aad-ae6e05fbbddc\\actor\\actor-receipt.json",
+      "sha256": "269e33509d0c598bf12896efa8458b5ef4c373d3eb39e96d4c61429eb53300e1",
+      "bytes": 2388,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\4be5c7bd-63f4-48f6-9aad-ae6e05fbbddc\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "04ab62afc8d8aace27f3d63397196d5f9bd9de34286840c7335dbf4379b70274",
+      "bytes": 5425,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\4be5c7bd-63f4-48f6-9aad-ae6e05fbbddc\\actor\\full-public-trace.jsonl",
+      "sha256": "90f2afb3e24a936bd750c03291d86c14e65b32e50f1d7ffabbbd23882bbccd20",
+      "bytes": 395543,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\6b93b2d4-0188-4813-938f-de4d00d6ecfc\\actor\\actor-receipt.json",
+      "sha256": "3ee5dd81f7bbfa2005d898f8f7d942ac6c6e4f22e5b74b49a92e12d0c63dfa03",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\6b93b2d4-0188-4813-938f-de4d00d6ecfc\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "ca81f0bb9f9b5946ec6effa93892401e747808006d1a44c99c9ff9bd10bae1b3",
+      "bytes": 9555,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\6b93b2d4-0188-4813-938f-de4d00d6ecfc\\actor\\full-public-trace.jsonl",
+      "sha256": "b0b600b2dd66dd65cf6702989cf522038812b10f257016b177030ea96ca34bcb",
+      "bytes": 389581,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\8c4ed420-e847-4d0c-ab6e-7a676e6c55d3\\actor\\actor-receipt.json",
+      "sha256": "93bc296e04300468d057447451621ec6e45d9efaa16a67a5eb4c3f96737ede55",
+      "bytes": 2386,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\8c4ed420-e847-4d0c-ab6e-7a676e6c55d3\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "c2fe53b6135b4f441a1d8d73aedeb60ca6d5fcf9ff0079a4eb431fb583877a89",
+      "bytes": 6813,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\8c4ed420-e847-4d0c-ab6e-7a676e6c55d3\\actor\\full-public-trace.jsonl",
+      "sha256": "60d3bf8b3c264dcbf8eeb597e4eee9147b34dc4fae67b60539c6410e9bddce16",
+      "bytes": 369903,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\a3854ccd-34d3-4523-846b-0d2babf25b43\\actor\\actor-receipt.json",
+      "sha256": "05729d0ff324f3c44bc70868a00dcc7cd80197600f435f279afb70402f45d74b",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\a3854ccd-34d3-4523-846b-0d2babf25b43\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "6629c01fc0b19998956fbedad7e7fd65796181c673b9c036f2159b0b2287f858",
+      "bytes": 7449,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\a3854ccd-34d3-4523-846b-0d2babf25b43\\actor\\full-public-trace.jsonl",
+      "sha256": "ec7e90e30ac68caad16489ad47493e081fada66888edd01488062b1e2a499358",
+      "bytes": 311486,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\b94b7cef-2924-4bd7-931e-49e440a898d7\\actor\\actor-receipt.json",
+      "sha256": "1a4bfaf31db34fca76a74cf027b2611b8a929d5c16836258c2cd70ecf745cde8",
+      "bytes": 2386,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\b94b7cef-2924-4bd7-931e-49e440a898d7\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "efc5b02d24a0c4e07872126c2f7c5f1127cc9513bf8b8063f6f0f3c2938074fb",
+      "bytes": 10321,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\b94b7cef-2924-4bd7-931e-49e440a898d7\\actor\\full-public-trace.jsonl",
+      "sha256": "416b0efaaa09d79479dd70a4dc318c1fac57f22e546e2b007a89383cb374cf2f",
+      "bytes": 493132,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\bb3c476f-ae1a-4d14-8b6d-5c17b1666eb4\\actor\\actor-receipt.json",
+      "sha256": "ef84cc4e409895a7683e16d3eab25c4f7d366f89a7261f9c3d966f188c472729",
+      "bytes": 2386,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\bb3c476f-ae1a-4d14-8b6d-5c17b1666eb4\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "f508746390671f331245ef9da4007fb885e3ee00326dd4de72af8f15a999f24d",
+      "bytes": 6211,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\bb3c476f-ae1a-4d14-8b6d-5c17b1666eb4\\actor\\full-public-trace.jsonl",
+      "sha256": "c53906ad4c5f1a3fa860d7a69687aa0b8dc204cc1150f0a854d5b46b36f93bb5",
+      "bytes": 388091,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\bc8871dd-7f27-47fc-b9c2-6290a52a3a1f\\actor\\actor-receipt.json",
+      "sha256": "b32cc5f3263abab826cdf07a86a9744250ba8bf04533e4230b97cf4ad715a3a6",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\bc8871dd-7f27-47fc-b9c2-6290a52a3a1f\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "da59c05af6c3607ebe0af7740270b4539f9317ccbe3ec0abde263dbd4bce33c9",
+      "bytes": 13709,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\bc8871dd-7f27-47fc-b9c2-6290a52a3a1f\\actor\\full-public-trace.jsonl",
+      "sha256": "99be029dd2fa13d8f1028d2d6ac93856424fafdd7855d1ec9be10740de969fcd",
+      "bytes": 593716,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\bf18669f-f5c9-4cd3-ab51-20d6da4a4a24\\actor\\actor-receipt.json",
+      "sha256": "aa90cd06a8fa48baf7c960fc830bbac620e78590fee9c44eab5edfd21c09f6f4",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\bf18669f-f5c9-4cd3-ab51-20d6da4a4a24\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "b2d2bdd807f8563e037ef32df412f828dcf818c10d7a6bb369108c4eb6d89f16",
+      "bytes": 6061,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\bf18669f-f5c9-4cd3-ab51-20d6da4a4a24\\actor\\full-public-trace.jsonl",
+      "sha256": "02027aa7002ea4dc73f5c691199422707851851a73d1f091ea50da8f98fbf755",
+      "bytes": 250976,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\c5a8d48e-9dd6-4c3b-ac2b-99bee5948b9b\\actor\\actor-receipt.json",
+      "sha256": "0a9a6bda962463e410e1559dfed65c25741acb7d4da7f2fb93b38b4f8c7cd949",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\c5a8d48e-9dd6-4c3b-ac2b-99bee5948b9b\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "97129297a73a61984d085ebb6f17e57b32bd1e54bb4ac0db8cf6b31a8c06e8ac",
+      "bytes": 4222,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\c5a8d48e-9dd6-4c3b-ac2b-99bee5948b9b\\actor\\full-public-trace.jsonl",
+      "sha256": "27c681c987c517ffc58a8755c8564150c03ccc00a066f32bac7de8705bbc74d1",
+      "bytes": 208082,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\dcf1b399-6d8c-461c-8563-bfe9b2e066d2\\actor\\actor-receipt.json",
+      "sha256": "b18349171a0ae8a5e747d777bac1e31b961f6f82c5dd1b7436f3377718afcd2c",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\dcf1b399-6d8c-461c-8563-bfe9b2e066d2\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "30a1a420a96b861e3d48d419159208904cb6768aa0b3c58ab621af8f05e7cea2",
+      "bytes": 12214,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\dcf1b399-6d8c-461c-8563-bfe9b2e066d2\\actor\\full-public-trace.jsonl",
+      "sha256": "f01e17e4a1fb1e5c2324a91658b3267d51856ceebe627d13257aeb308a35966d",
+      "bytes": 618006,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\ff11b6b8-9858-426e-9787-35a6369e7f4d\\actor\\actor-receipt.json",
+      "sha256": "ee1c8bd582c8291a8c5b0b39c235389b2648a5bf3b9bc210944b53cf4b761282",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\ff11b6b8-9858-426e-9787-35a6369e7f4d\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "e3fd6325016963366237e765eb54a3fe472301ab2a5ca37340970f2fc9dea715",
+      "bytes": 8436,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\help\\ff11b6b8-9858-426e-9787-35a6369e7f4d\\actor\\full-public-trace.jsonl",
+      "sha256": "475f9d51330117c441378ca9541b16e962c3190e8a13a9183a1bfa0156454d79",
+      "bytes": 326350,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\author-01\\actor-receipt.json",
+      "sha256": "31329b162e16c4580b9aede2733b8a4460fbcc63851ad46940669d946a71ea2f",
+      "bytes": 2267,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "2b39a1c7c2966c5373ef38d05942bc8fbe9fe18686f0a4adf9119b4e757e4d6c",
+      "bytes": 24050,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "3ebd4964c30d8f03a6b858c0ec980af1b91e3a70e14ed2ac6d67fc9bb83ea0c6",
+      "bytes": 766849,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\001d4518-96cd-4f07-85d9-03bd7a720361\\actor\\actor-receipt.json",
+      "sha256": "bfcc761ba8cd33db31b60d4bc10cc1f91370869f7bd513e29403c5c831ea9ef4",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\001d4518-96cd-4f07-85d9-03bd7a720361\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "0a2666537078362348d7b2f774d7fad8cc2dc52461d8dd198b03254b5336c22f",
+      "bytes": 4387,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\001d4518-96cd-4f07-85d9-03bd7a720361\\actor\\full-public-trace.jsonl",
+      "sha256": "1d640d0e3e67c29648529fadc42c7e18e2aae91297458a64ab43b95fa4b2e4b2",
+      "bytes": 269087,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\1bea53f4-0ba0-42ae-8105-2b66c1b44058\\actor\\actor-receipt.json",
+      "sha256": "8c7676c06fe735dcf90a2afa5d4f26dce0d4e8cf16ae6eeeedda7ad940d910b8",
+      "bytes": 2234,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\1bea53f4-0ba0-42ae-8105-2b66c1b44058\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "3b0628affe8aa8e94e2153354706b0e90c346e2b18accdd29d9c2231ea9f7718",
+      "bytes": 3187,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\1bea53f4-0ba0-42ae-8105-2b66c1b44058\\actor\\full-public-trace.jsonl",
+      "sha256": "e08e464267f893ff0ff5caa1b2567826a154e3659168458418c75d10e9371628",
+      "bytes": 47582,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\2942ca19-47de-4368-81f1-7f01bbfbed0b\\actor\\actor-receipt.json",
+      "sha256": "d1c041d0942643f0253d95a6a7378278cab484d62346c38b62309f082228847a",
+      "bytes": 2386,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\2942ca19-47de-4368-81f1-7f01bbfbed0b\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "cae890dd63394c93da3822dbeaa65ee9490781fc9536864ce71f4426d63e4ba2",
+      "bytes": 14379,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\2942ca19-47de-4368-81f1-7f01bbfbed0b\\actor\\full-public-trace.jsonl",
+      "sha256": "92056e5de8cec9f0c6f6bffa0d3f0299e2277101feb5af68c332e135fc056fac",
+      "bytes": 287017,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\479d9252-5ea5-4c1e-a5d3-c1f2ad69d749\\actor\\actor-receipt.json",
+      "sha256": "d6c0a4c922d68c2e6dd41dd504b824af0b212ed97b809073d7e64efc1dd8f16f",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\479d9252-5ea5-4c1e-a5d3-c1f2ad69d749\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "88bcd18d60b4a97f63b1d442e6e4efd6970639cb08bf6dc288ad8b1a46849ef5",
+      "bytes": 8435,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\479d9252-5ea5-4c1e-a5d3-c1f2ad69d749\\actor\\full-public-trace.jsonl",
+      "sha256": "ecf72e8c448c1c07e7fda1a6c5cc899379ef500a95749eda5e13aa553f1ba415",
+      "bytes": 386866,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\5050c015-7dc0-4ec0-9bbb-ac1d8eac8c15\\actor\\actor-receipt.json",
+      "sha256": "73b22004ce6fef97e223df5d5468bfe0e6d58531f53aca67ca4bb67f18322b3f",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\5050c015-7dc0-4ec0-9bbb-ac1d8eac8c15\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "12a70a01b1e71f68601d791548dbb6c426ba72b6732058b6b917fd8e21776cb8",
+      "bytes": 6401,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\5050c015-7dc0-4ec0-9bbb-ac1d8eac8c15\\actor\\full-public-trace.jsonl",
+      "sha256": "e67036cc99681d2443e2507559ea9575df90710831fc57f75e25fa30afa1c63b",
+      "bytes": 272269,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\516b3bc6-9330-4027-b34a-a510d3e582c1\\actor\\actor-receipt.json",
+      "sha256": "dbd3cbf256b08981bc8d0d1604bca3e9368f6255067ab4ebeb6ec85b8432a5a0",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\516b3bc6-9330-4027-b34a-a510d3e582c1\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "35f090eb1782379bfe4dcf4ce893803838bb4191c5703b16c6c7344c1ba5fbc6",
+      "bytes": 11355,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\516b3bc6-9330-4027-b34a-a510d3e582c1\\actor\\full-public-trace.jsonl",
+      "sha256": "dba9ab1ab1685217f2aec943ad56a84bebd184c2977c2e8192ef277bfeeb68cb",
+      "bytes": 309273,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\6d617bb6-9728-4cfc-b4c1-8ddfe2bfc886\\actor\\actor-receipt.json",
+      "sha256": "1cb8104a41c854364603392f25a4cad790787eadd21957461af0bbe57c906298",
+      "bytes": 2386,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\6d617bb6-9728-4cfc-b4c1-8ddfe2bfc886\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "01b99c1f80fcd7274a80a951984e2e96a5678c51522ff2680440e79ca66e8ef0",
+      "bytes": 9885,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\6d617bb6-9728-4cfc-b4c1-8ddfe2bfc886\\actor\\full-public-trace.jsonl",
+      "sha256": "3a7d7707177abbab5583ca01e1b2f42014a8b9ff16565eecaf90632f9b0d495b",
+      "bytes": 195100,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\77877b49-2be7-4ecc-8746-7649f2633835\\actor\\actor-receipt.json",
+      "sha256": "3e82088409097e7b661949af94a77d5db5ba3d9ef33b85427f72510f80a3618d",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\77877b49-2be7-4ecc-8746-7649f2633835\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "4f0833b7d0747d13d4f68cb1b5e7319b89ee5357db9576494587a4b6ff8da4f2",
+      "bytes": 13841,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\77877b49-2be7-4ecc-8746-7649f2633835\\actor\\full-public-trace.jsonl",
+      "sha256": "9fe84268f8bbb56bd4c1f653a87dc2859d111ee6a24c41bdc755270f44b6f1c6",
+      "bytes": 469873,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\79ff605c-f614-45e1-bce1-04472ef06b0a\\actor\\actor-receipt.json",
+      "sha256": "6b34e6fd208c89950c706477ff2829b48745f7b07a48885fd8de9b1e69eb1b3f",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\79ff605c-f614-45e1-bce1-04472ef06b0a\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "fa3f1d677a655e77e83cc8b7d65e0bbf7b9c72f511301da60cd98cbe7a6a1c48",
+      "bytes": 5790,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\79ff605c-f614-45e1-bce1-04472ef06b0a\\actor\\full-public-trace.jsonl",
+      "sha256": "c435f429abb1be8cff529d06a2932b8672a0ce440cfb4100a731cd7a712541c8",
+      "bytes": 285250,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\7bd27662-2b27-4049-925c-f0cf918e29f8\\actor\\actor-receipt.json",
+      "sha256": "03100dda074bfa77555348f375e0e7b9bb63f4573dd2dadc6cd1fa585f647387",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\7bd27662-2b27-4049-925c-f0cf918e29f8\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "175405378e72d09dd8de52f47bdf26d7325c71940506846cec53dcc743d2051a",
+      "bytes": 11966,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\7bd27662-2b27-4049-925c-f0cf918e29f8\\actor\\full-public-trace.jsonl",
+      "sha256": "e7f4395890fb84e7c721369a9513458a295537b89fd70d0bc30d0619e0242dd8",
+      "bytes": 390787,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\8426e810-170e-41bf-99ac-402f0a026ba2\\actor\\actor-receipt.json",
+      "sha256": "77f0647cabf75f2d9408e22b9ce0d2e2b9c490097f88694e57f43a3a9b87ca1b",
+      "bytes": 2376,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\8426e810-170e-41bf-99ac-402f0a026ba2\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "c63d335f39af0e2a95dd816abc21d288f7da3fbc4095f2e04ee0dd4e3c5737a2",
+      "bytes": 10331,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\8426e810-170e-41bf-99ac-402f0a026ba2\\actor\\full-public-trace.jsonl",
+      "sha256": "285faf77e0f240fbd3ea85c299c5cf15e044f0a3fa2da160e0b223fbe4190d5b",
+      "bytes": 243046,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\b912d228-5e3d-4dee-a2be-08b0a158d7e9\\actor\\actor-receipt.json",
+      "sha256": "ebf6a4f22d480fbaa96d1654d1f083871bb04e1d2efdcdf67ee8f92b133851b9",
+      "bytes": 2383,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\b912d228-5e3d-4dee-a2be-08b0a158d7e9\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "e9364c47fb9745a3e0ac0a6982d0c669875fe72da2a167ebe0979133eb136600",
+      "bytes": 11205,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\b912d228-5e3d-4dee-a2be-08b0a158d7e9\\actor\\full-public-trace.jsonl",
+      "sha256": "cefea42ebbe45dc6c5b181eca7b9f84f282b50979dac654a91a426568da2171c",
+      "bytes": 267322,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\c334d6fc-75e7-4e4e-84e9-2450fb5c08db\\actor\\actor-receipt.json",
+      "sha256": "a778cad4fea8a69ad2e45b77e858cd6e61284aff2474c970d4129b7e429d3fa8",
+      "bytes": 2383,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\c334d6fc-75e7-4e4e-84e9-2450fb5c08db\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "3d53b4c551fe4bd9f004bea12a8dfb7d123d7d6c2920180a3efefa85db85ba5e",
+      "bytes": 5390,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\c334d6fc-75e7-4e4e-84e9-2450fb5c08db\\actor\\full-public-trace.jsonl",
+      "sha256": "1458105df99c1dac18df3884a879120b7351fef77d5dc84dd7183f904a413cc7",
+      "bytes": 326399,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\f32d84e3-754c-49fa-b3bf-c75e1c742ca0\\actor\\actor-receipt.json",
+      "sha256": "e787e81c59c8d9a67642358ce9eab645642df47b95e8a21cef06a0792b6417e4",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\f32d84e3-754c-49fa-b3bf-c75e1c742ca0\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "7747423369c1f9e442bd956dbf529b472066f34190a12b6140a72cdea3393a4f",
+      "bytes": 4801,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\f32d84e3-754c-49fa-b3bf-c75e1c742ca0\\actor\\full-public-trace.jsonl",
+      "sha256": "6a0f4ef9a3345fa192fdb1892d264f696dd137e7cb5c8f5593fe8e2d315a8ffd",
+      "bytes": 146937,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\fd764533-64e4-4eed-b6d2-49dfdc261584\\actor\\actor-receipt.json",
+      "sha256": "e723d56b0e2b23453dfedb9a101480c4cbff68f059beb4be676b11bb1ff58beb",
+      "bytes": 2386,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\fd764533-64e4-4eed-b6d2-49dfdc261584\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "0ef4796f970ee4f7001655b9b60137ca7b5422ebe948b928b4ab084959e2ce8b",
+      "bytes": 4625,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-b\\help\\fd764533-64e4-4eed-b6d2-49dfdc261584\\actor\\full-public-trace.jsonl",
+      "sha256": "f210f5ba3ddb6c53639267d8603931abe92100f16018a2868af936108b8c0c6e",
+      "bytes": 73767,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "585662207582e405e61bfec87546ff2ce2956896235aeb81ee77fd3165903fa1",
+      "bytes": 2230,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "7f2af1180b7bc7e82b7569a11e74c607f42e812ef6fb479e9b3b9880b6eb6ba4",
+      "bytes": 7349,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "6ce7c258e4f1cc50c819ad3be767cb5a4bcb780d6f7bf42334733e5389a85a40",
+      "bytes": 184331,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\reviewer-004\\actor-receipt.json",
+      "sha256": "46307118deea9680731da4b9113db28e0a8f7aedcc8a5c439d055c27df31bc89",
+      "bytes": 2257,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\reviewer-004\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "3ec033349225fc2ee7fc2e84debffe0271c09a84cc3587d43dc828f171d5009e",
+      "bytes": 4164,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\reviewer-004\\full-public-trace.jsonl",
+      "sha256": "582f8fbadf74f972a09e3de719c60e290ec474e0953d293172159705d583994c",
+      "bytes": 205622,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\reviewer-008\\actor-receipt.json",
+      "sha256": "d98445dd29de933aa710e4508de9408516ce6c4c88369bbe96ed98e57d1ac564",
+      "bytes": 2281,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\reviewer-008\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "7df21b6a5a943c790cc4b4f43332c23a721a8a6f85093d876a2c3fadeaaf1f6d",
+      "bytes": 3811,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\reviewer-008\\full-public-trace.jsonl",
+      "sha256": "8cb6e08ecc4671181bb925dcdb3507d65cfd9c9a0e9ebe1fa1760d64d50fbcca",
+      "bytes": 105578,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\reviewer-009\\actor-receipt.json",
+      "sha256": "d251bdf290980ac9c736fa2e95a0bdcb500479c5583b2d3bfdb476e7417c435b",
+      "bytes": 2295,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\reviewer-009\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "690e9392614cf1a51dff7889e82acdaeb3d2819bd2c84812ea0b364cdc456239",
+      "bytes": 3411,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\reviewer-009\\full-public-trace.jsonl",
+      "sha256": "4155025d8ca5134c156b8a88320e65d84fdad6bf07a16d87264f17e571679bc9",
+      "bytes": 89861,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "b477cf69ed2edc6960c7fd6fa0687c2d3bfc27f46313bcbb9ab06df081d76d5d",
+      "bytes": 2249,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "5ff2eca4343a40f41ec3fdef6d907aac4357223f9227c681d8b764dd959dc7d8",
+      "bytes": 4602,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "489d97a195598cb50342ddf850f6e0ba95c47e80396fec37acca668e20bb7991",
+      "bytes": 104274,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-002\\actor-receipt.json",
+      "sha256": "b33dff5bfa1779da84ea66e984e15885d1fea2a18275eb8b2b851593e297aaad",
+      "bytes": 2288,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "6ccae8edf26c253ba302963612af70c96967c9bf4063221aa058974464f8405c",
+      "bytes": 11042,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-002\\full-public-trace.jsonl",
+      "sha256": "a9d228706425e56f594d69d3d8065769af71d6266c0a44bed3ba472b7e36488d",
+      "bytes": 273498,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-003\\actor-receipt.json",
+      "sha256": "13f14b12471d9143d7a200bdaa090810c363e50ee2eb3900e4f107db0e925468",
+      "bytes": 2291,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-003\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "e73eb00eb117c6225eeca5ee44602ec3fbc78fd674f08d9e14fbfd3c4c0ad54c",
+      "bytes": 29370,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-003\\full-public-trace.jsonl",
+      "sha256": "150bc221b9bc019e262255958b50de1df8a70e1d56922f9c45569106e3470482",
+      "bytes": 610634,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-005\\actor-receipt.json",
+      "sha256": "70ee18840c1a4375cd24b2539312dafdefaf9b2363d39ab5c90e07bc1999ab2d",
+      "bytes": 2291,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-005\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "223eb88182a579957ffd6eb9de5cc79d3841cf50bc208ebabd4a16da37addbf8",
+      "bytes": 8087,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-005\\full-public-trace.jsonl",
+      "sha256": "a3b2ea471e24708ce5c683121505b2f8d2d142bad6a179c715c8144f021c5728",
+      "bytes": 309778,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-006\\actor-receipt.json",
+      "sha256": "e956e0186a969b2fb0bb5d9aaceef5f77c8ffa397197fbfdeba85dcc27eb3e72",
+      "bytes": 2282,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-006\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "c38485442ed7913862d7a6456d47aa38abc91549db78071e090ff094288d7c79",
+      "bytes": 17409,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-006\\full-public-trace.jsonl",
+      "sha256": "912c7db27b8a859f8afc6f469ca0d822914fd3eb7c496290a8ea5bb077eaea49",
+      "bytes": 394426,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-007\\actor-receipt.json",
+      "sha256": "ce9d51ccd8c18c821fd101c83e5c440d083e5c5eb131c94209e471549721228e",
+      "bytes": 2281,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-007\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "c29b979ea401a2be5bee193fbbf9f41eb03dab9df77368db47c8e757d911edb2",
+      "bytes": 5876,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-c\\actors\\writer-007\\full-public-trace.jsonl",
+      "sha256": "d0faeba5e8c5abe50038c4dbe618e40904dd80ce874d3b490dfe79a437b24ef9",
+      "bytes": 151970,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\actor-receipt.json",
+      "sha256": "2a9892e1b7e1bf9c97ea664c987ea365d275c07189ba8a5023c8884e1321b623",
+      "bytes": 2262,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "16eb8628d1105bb571cb7224dd2e40869fd8f2b1f5265270d1b6e7907ec03024",
+      "bytes": 9168,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "b5496769b5ec3cda85cd319b9125c39ddd8d312c3d96ae9418cc6042783d2ac0",
+      "bytes": 476311,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\help\\9f37c281-7c57-453a-b20d-a7d62a0841eb\\actor\\actor-receipt.json",
+      "sha256": "3ba0532a15fa2c33122dbf378f6e6bdede69525fbabe6336b9084ce0285ab177",
+      "bytes": 2374,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\help\\9f37c281-7c57-453a-b20d-a7d62a0841eb\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "0a2b192c67df42e97577b69782d90dd373c3074ea7d4128037e4ba5df329a76e",
+      "bytes": 7001,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\help\\9f37c281-7c57-453a-b20d-a7d62a0841eb\\actor\\full-public-trace.jsonl",
+      "sha256": "52df9ebaca9fc372d7d0751821a0dc3321e7693f5f8912d6517d6037e133bb11",
+      "bytes": 399375,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-b\\author-01\\actor-receipt.json",
+      "sha256": "ce3ca82c0cabd97bb4a5b22d746de25fe730f0403fabc018eb7256bb702f6834",
+      "bytes": 2260,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "ac6fdaf4c7d4793f19b8994eca9abbf159972c335d725331b59e47401671f537",
+      "bytes": 11264,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "439265dffafd0c3b22d4dc1bab090dae14e70cf3a9e2cf4e2b2e646d158c51a6",
+      "bytes": 355556,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-b\\help\\c26ea394-6aee-4416-989b-4e5d2e963de3\\actor\\actor-receipt.json",
+      "sha256": "9104ed2a234715bf21ddf01393e7e1d07bafcf9dd31be523d5088fe85c1458cb",
+      "bytes": 2377,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-b\\help\\c26ea394-6aee-4416-989b-4e5d2e963de3\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "b5753b844067181dd5b59d0444a5e436ee64e85348e86ca08d77a2e1076f5653",
+      "bytes": 4186,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-b\\help\\c26ea394-6aee-4416-989b-4e5d2e963de3\\actor\\full-public-trace.jsonl",
+      "sha256": "87000dc9c8d6ff573ced29dddc606d04fb40a11cb6e4900df164466e19013f40",
+      "bytes": 98573,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "955382d6b8995867747ff53ac21edbcb0dd15d2b47b26cb58311075c48f8e2ee",
+      "bytes": 2229,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "bbd971921f1f739c4c1e6c11986c1dc3049f5658b8dddb16af68db1ce82a0790",
+      "bytes": 5209,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "8ff43cbf922e717679ee37fa5cd90f4852cf9b6c8eb503e5f5ed1b6d8f4e689e",
+      "bytes": 118065,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "14dfce8003175796012a5cd3d4e9b132e3704b7aa44dfb2292076607f21d3496",
+      "bytes": 2256,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "0eae54067e460dc7ce4e309007b98ea1568a0e6ad4db07212abce87e4f15d03d",
+      "bytes": 4162,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "aa43fde822066694ba103219d5f0ca77139e1212ea0c346aa74e8d3c29a604ef",
+      "bytes": 114810,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "deaf7bfeae73a0f273605526aa9cf4e13e9b6112623d657ab9f7e736f72a5472",
+      "bytes": 2251,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "59f9f85314cf9b8cac520faee938dd459c70f9aacfded6e4af71b577ee712628",
+      "bytes": 8700,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "80dc589294b2271b40a741b1d759659d9bdcd0b2f9fa972c7453abebc347414c",
+      "bytes": 291813,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\actor-receipt.json",
+      "sha256": "50489e4f97780d2dfee69d9c2fcc6d2869f0eaba91782a67ec08abe38910933c",
+      "bytes": 2263,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "c0ba8e8c0bda084c2103584b8660761a61efa2016a83897b947ddd19c4eb6e20",
+      "bytes": 10570,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "d967058b2d275e5187da4f22b9824bfcb4b4e116f24f242c3a67676cf9d1d0e1",
+      "bytes": 507242,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\help\\56209fa3-d456-4f3a-beaf-7ecb4c2969c0\\actor\\actor-receipt.json",
+      "sha256": "a13d3f7252d7fe5151a6384b52a596c152f6062c9d6462f964869ca8132a8054",
+      "bytes": 2373,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\help\\56209fa3-d456-4f3a-beaf-7ecb4c2969c0\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "b892454e1a3ea032ce623f2e86985b9aae6ad87fdbe6c3c3bb5e085835133a81",
+      "bytes": 4588,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\help\\56209fa3-d456-4f3a-beaf-7ecb4c2969c0\\actor\\full-public-trace.jsonl",
+      "sha256": "c9ce73166aa5d073343d71cb2ec0d5ea62d00325bf071b65a7cccf7cc2e308cd",
+      "bytes": 251920,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\help\\5d23e20a-c419-45d3-bc71-99b420f5760b\\actor\\actor-receipt.json",
+      "sha256": "bcb6eb15cccd9225972db56b1d58b874e9dba92414edcad39c4a3e7d3b33c44f",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\help\\5d23e20a-c419-45d3-bc71-99b420f5760b\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "726354ed019bc5be9baf834e1bb5fd953828791f549c6d1060268de7f8787ff4",
+      "bytes": 6590,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\help\\5d23e20a-c419-45d3-bc71-99b420f5760b\\actor\\full-public-trace.jsonl",
+      "sha256": "841af42a5720ea58d3155f26883cb5489fb3173a6e792f96ed3761c8e41a2075",
+      "bytes": 307335,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\author-01\\actor-receipt.json",
+      "sha256": "aa431981233507aa669b16fa7184ef0cde8dc828e748a7ab7dcdaf400c271743",
+      "bytes": 2248,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "856d535accb19812a9e473f97aed22d79eb341c89e77e37a9fecbc54661e877a",
+      "bytes": 5918,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "16102ab209b26c3a2be3b0e5e79631e162d72c8399f0e79d27fa8188fb60aa8b",
+      "bytes": 171934,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\help\\b061af1f-c99e-451e-b560-4f868f83a1dd\\actor\\actor-receipt.json",
+      "sha256": "8d086927c954e524e76d576c0fcd5853896e492c6c4760a5edb35ebc42f0d7f2",
+      "bytes": 2382,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\help\\b061af1f-c99e-451e-b560-4f868f83a1dd\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "a83c16c6f8b411d051e45b0cff98642e9e49c7b9f5b98307af1580a99754798e",
+      "bytes": 4199,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\help\\b061af1f-c99e-451e-b560-4f868f83a1dd\\actor\\full-public-trace.jsonl",
+      "sha256": "bb8597c517cd6c2a43ff103d9d3d2a6318e114c3c964944948ad747f59dc8042",
+      "bytes": 81031,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\help\\fbb422ca-fb43-4c54-bf39-9188c4a38c19\\actor\\actor-receipt.json",
+      "sha256": "3102b8c500e811181739a224b88c38772b07e445850fb4e42bbb2a2872a5992b",
+      "bytes": 2383,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\help\\fbb422ca-fb43-4c54-bf39-9188c4a38c19\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "1e1f3a85cffeb3017a8193f22edd4b911e64382b256df3502aeac51ac53cac01",
+      "bytes": 11628,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-b\\help\\fbb422ca-fb43-4c54-bf39-9188c4a38c19\\actor\\full-public-trace.jsonl",
+      "sha256": "e9ba09a79da01404ea31a33a18a9c61205a39a370b4c6ffa18c302c8cff579d6",
+      "bytes": 273009,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "5322fb2be52eea22ea9898a538ccd5ba5713a9177aba1b59d5773955bbadd400",
+      "bytes": 2229,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "aadf3c17b7a3f4a71a34311d2fc62164ef0aafb49024a563795c7ae93d93ecd3",
+      "bytes": 5411,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "56dcdb40c5d249d0bafa985050c27f0052dd20ef3e9918386032563e78f9188a",
+      "bytes": 130769,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "a471798cb075d6147431d9291f322069b8ef0f669effc684df695dca34eb41e8",
+      "bytes": 2256,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "f1baf5e15586722ffe285db016114cdc2b5ddb7fe9338ff1574be5c5780026df",
+      "bytes": 4164,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "a13fda893b6fd996d62f3701835e8643f6e7eb554caf059bc62498dbed9f9a4d",
+      "bytes": 120395,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\reviewer-004\\actor-receipt.json",
+      "sha256": "4c3b2bfe9f5204e0646485c665338eee6348a4b183e6c754003e04bc059a6bbf",
+      "bytes": 2289,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\reviewer-004\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "901e17d86814de014db3a3da0c4fb5fe99ac0899f624d03528d97ab67a87c597",
+      "bytes": 3411,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\reviewer-004\\full-public-trace.jsonl",
+      "sha256": "7daedc8812bbc518e8475262e1b54717b5cd2caee877f6066f858481569ce3c6",
+      "bytes": 108460,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "52b7855a61cc86a0ef2a318b653076e2f4d6919f67af121ad1e6f15165fee2bc",
+      "bytes": 2252,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "cbbd14b7cb217ddd2a01944387bc0bb49174b628caf36a4b5cd2390c0ba82a5c",
+      "bytes": 9940,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "ad2a74d6ed3c44585b12ae749db2c0ab20af702f9322012193a660c0f947f63a",
+      "bytes": 285190,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\writer-003\\actor-receipt.json",
+      "sha256": "6bdba1572cb8e7b55f829babdb145fe03a39e02be1dd87514ef43e896ea5020f",
+      "bytes": 2287,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\writer-003\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "23b4e9324aa5ad9e33af896d1330e686fb7ebffc1d8ca264c73adae6f8501a73",
+      "bytes": 3423,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-c\\actors\\writer-003\\full-public-trace.jsonl",
+      "sha256": "3287a29cd1cf063e125a3885bb186aab39f4d2d320384454f2291e1e23421dca",
+      "bytes": 88879,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\actor-receipt.json",
+      "sha256": "ff71d38bbda5c6416509ba314f084593b62a7b3a8445ee1c22914d4501fd2459",
+      "bytes": 2263,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "86ad0d856238f83b540a770043f9a7174b10a26fa61ac003a983846a4e1f48e9",
+      "bytes": 13530,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "fa29d6f1292d2414d9038629c242eb8ab2a91e84a85682e97c0d03b995f65533",
+      "bytes": 598585,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\actor-receipt.json",
+      "sha256": "78d4ebc695cc11ccc7c14294c36fa888b8bcb3dea5e5e6dcb8191277a0452ab3",
+      "bytes": 2374,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "49e36f75927de451d1ead28e30afc9f81a4999d691bad4990b0fecc8efe9cfcd",
+      "bytes": 7462,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+      "sha256": "cab6e94e44ca204cdf5d69140c8651b233f9119ad277c3d22c11b0eb2d6f524e",
+      "bytes": 217216,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\efbeb51f-e349-4dca-b650-687e3f20e88f\\actor\\actor-receipt.json",
+      "sha256": "041f38096a6101d2512bfb6900fea906223590ffd679a78e4ceddfa2e13564a8",
+      "bytes": 2383,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\efbeb51f-e349-4dca-b650-687e3f20e88f\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "28c38b2eb3f6fac2d8cf3dc5b18bba4f16b497ba5e34b0a178e83516706fc15c",
+      "bytes": 4589,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\efbeb51f-e349-4dca-b650-687e3f20e88f\\actor\\full-public-trace.jsonl",
+      "sha256": "12601c1e807660320967659dbc395721eafdb072cad891dfc90df4e6f58e93cb",
+      "bytes": 250732,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\actor-receipt.json",
+      "sha256": "97daeb69e3271c5ccda979cedc2a545cbe83e20fedc1f56caf95c15b5256f091",
+      "bytes": 2251,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "dc614df364c3874f00d878cee381cdc5239757b41ca38d5855a95ee25346f6e7",
+      "bytes": 10712,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "93c4b8aa62c580db0054cc81d0e63db622ad69accf5d2551da64fdf61a7ef0e1",
+      "bytes": 383744,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\help\\25c4bd5e-193d-4d49-b93a-e531005cbcd1\\actor\\actor-receipt.json",
+      "sha256": "f1e46c129836e8372faff5802c78c77f4540e15c9479ca1e17447f8c89820367",
+      "bytes": 2383,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\help\\25c4bd5e-193d-4d49-b93a-e531005cbcd1\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "bbb4071b078ddcdbf02627d726f546f009575b9f0e3b32293fe341e95fa68f5d",
+      "bytes": 4186,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\help\\25c4bd5e-193d-4d49-b93a-e531005cbcd1\\actor\\full-public-trace.jsonl",
+      "sha256": "1497dc721725890afe6daffa93c85028e1ca911afb4f9833e73891b352e94504",
+      "bytes": 107848,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "152f5c94f736177d67ce37313b676b8baa150bea203019ef925be0d1ecc3ab20",
+      "bytes": 2229,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "83bc5a2f823ecc007e46b44342d014ee7869b2ad707fc1e3b05db9ba6fa54777",
+      "bytes": 5013,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "c80acaca9afd8558f4595097e39f5b416f71e8d732521e2887ee675603b985e5",
+      "bytes": 128567,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "75c1e8c04f4075f4d75dea22c2d6a117d3786f2acf45c5112ad1613310d784bb",
+      "bytes": 2251,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "73606a7a7ff95bef5178654bbcb4be79562efec20731a43bc3402fcc393f0aa0",
+      "bytes": 2964,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "6a783a58ac13339da1ece12eb2acc467fc539e2288f1062f0ffe47d249f2074f",
+      "bytes": 42047,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\reviewer-003\\actor-receipt.json",
+      "sha256": "c1c1b1bf10ea3464dd1f79fa477447b113781d60adf573490599fb1adb758a86",
+      "bytes": 2290,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\reviewer-003\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "d12b40743232cec9d1ea90e0924d9e545675583e8ee9e8fc4d121597bd16c812",
+      "bytes": 3367,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\reviewer-003\\full-public-trace.jsonl",
+      "sha256": "6ef5b7e1463b79ab8f8db9aabc992f300083865179048ab6f0b9a3565a227ecf",
+      "bytes": 118126,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "eabc112b7e4eb4f0859f2b6b693877feda277ecf68a455015205c4fcaf88f710",
+      "bytes": 2252,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "31cd236aecca0b4aa7cbe0eba24acafe462b8adccf0e3d6dd6c389b1559b6282",
+      "bytes": 14641,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "ac39382b49a9946a585a42a529e91b366ad7035addb3ed4ebc531d4580349131",
+      "bytes": 513804,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\actor-receipt.json",
+      "sha256": "9138623eb408f0287a8ebdbfc99d4fd475f8cef6f1662b2adf60444c47f18cac",
+      "bytes": 2259,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "fcdf5377854599da722de47f6e68e5f1ffd50f1fb17d927b0fb14477e24f9dff",
+      "bytes": 12654,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "4b84df086c01bc61073dfbfd1226f4070a5cfe4e98b75a9a5c556b2a88a817d2",
+      "bytes": 531054,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-02\\actor-receipt.json",
+      "sha256": "9b2d3afeac2fa8f40e026a86bd023b9795afba9babff7b765ac115506eb003e6",
+      "bytes": 2329,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-02\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "b0646d3e1a26b1879be80865c8dc5cf50819e58561010ff38a944ed616f89cd0",
+      "bytes": 8249,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-02\\full-public-trace.jsonl",
+      "sha256": "accbc0b85aaeb83c2824ba70013bbfa3dbdc15ff7b030b0c550d361d4575f845",
+      "bytes": 257711,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\02592e59-558f-4d23-951d-2e0497f3eb84\\actor\\actor-receipt.json",
+      "sha256": "9645c34ee1b8b1078365b80e8876c99ca2b77974fd0727b3ad87ce410caf8fe6",
+      "bytes": 2381,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\02592e59-558f-4d23-951d-2e0497f3eb84\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "705faa50364a64baf8b4ba3e4d51aa38df5f09bbe918fb5598fbd238cccc8e95",
+      "bytes": 4790,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\02592e59-558f-4d23-951d-2e0497f3eb84\\actor\\full-public-trace.jsonl",
+      "sha256": "e5d3fadfe7476868d5b722dcbf1262eba2dc7bbb8d8311514308c282f9df8999",
+      "bytes": 232856,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\1ac27e61-4e5f-4a19-a24f-09adc712af03\\actor\\actor-receipt.json",
+      "sha256": "7609e61f6e69966751e1933e91c1e0055fe3b6a0df533e3bf9831e860298cd5d",
+      "bytes": 2378,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\1ac27e61-4e5f-4a19-a24f-09adc712af03\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "a7141bf7bb5e0314d8ae9a6c58340f56d491f5f71a72dac17bba5e846ac37de7",
+      "bytes": 5988,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\1ac27e61-4e5f-4a19-a24f-09adc712af03\\actor\\full-public-trace.jsonl",
+      "sha256": "1b0baddcf8d9a2a7b8a9ea84f737ca4d377b6a5aec82045bea288d0c48600d73",
+      "bytes": 294111,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\f8e4de28-8cb4-4934-a46a-bd62ebfef451\\actor\\actor-receipt.json",
+      "sha256": "986040eadfab9a79f657dc8ada91a74095f426cf1fa493d35f39399a3556fb0b",
+      "bytes": 2378,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\f8e4de28-8cb4-4934-a46a-bd62ebfef451\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "43af85c8c7bde235b9fb0617bf77c879d9427ddd532d28c32b5d2ea5053f2113",
+      "bytes": 4599,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\f8e4de28-8cb4-4934-a46a-bd62ebfef451\\actor\\full-public-trace.jsonl",
+      "sha256": "636cd6ca602a1c2707b71b0884165a5083c5d7dc4ce9dc5a7ffd67fe4ca476ed",
+      "bytes": 138383,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\fb5244c4-67dd-4fce-972f-c1871c623197\\actor\\actor-receipt.json",
+      "sha256": "0569bac6e28ef3b05051b3e089643f6ef0d94b07580f0a67960ae224424b81a6",
+      "bytes": 2382,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\fb5244c4-67dd-4fce-972f-c1871c623197\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "aa33758f529172d6438cdcb60a8486da5b0f75cf4b22a842347080c4ef0e46b7",
+      "bytes": 5389,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\help\\fb5244c4-67dd-4fce-972f-c1871c623197\\actor\\full-public-trace.jsonl",
+      "sha256": "3fb5fa59baf76560a837f3fd6269a332516f6c2d0b322be2a1cf7a7c43907268",
+      "bytes": 338395,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\reviewer-resume-01\\actor-receipt.json",
+      "sha256": "e941b4b9f4e4ecf30d855eb068607361e5f3beef0f58d6186b8f1c766df7ded8",
+      "bytes": 2362,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\reviewer-resume-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "1e9d89c00cfd1f121ef0055590c9dd05e00697df2ae8242df14c3d1c264f4db8",
+      "bytes": 3349,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\reviewer-resume-01\\full-public-trace.jsonl",
+      "sha256": "e0ef8a0c58e5eb41f8882fac09228490b8f962f6a552ef6b52b9ad44fcf0b567",
+      "bytes": 169186,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\author-01\\actor-receipt.json",
+      "sha256": "6863837898a7f48f05e5609a56cc471ebedbd3c71eeeb984a22a65810bebdd00",
+      "bytes": 2264,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "30fe9a926e32d1909180a619f56beba49ab4b95c28efee811a11bec8e96fe419",
+      "bytes": 9033,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "875a51ee7f981b1089f7eb9e7b4da98a94f05a8705439d09a03b540fd4c89f1a",
+      "bytes": 253742,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\help\\5fa74d1e-b733-45e9-8909-9572fddcc484\\actor\\actor-receipt.json",
+      "sha256": "01adc66b66cba8fa7aba97653ae6d1b490d446aca177905afaae1b865e4083ac",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\help\\5fa74d1e-b733-45e9-8909-9572fddcc484\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "291de46fbc89938c941d3a7e57975a2145a255276da76fa2bb03d08116710035",
+      "bytes": 4199,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\help\\5fa74d1e-b733-45e9-8909-9572fddcc484\\actor\\full-public-trace.jsonl",
+      "sha256": "232f761d34d9f695d87784f72a008b8d20187c8b5958e3a394260d4b228e2449",
+      "bytes": 87079,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\help\\6c39e3ff-3100-4cea-9ecc-48a2a1b3415f\\actor\\actor-receipt.json",
+      "sha256": "5d3b5f8e4fb6888a7614338bf12f9ff16837d72d749564aabbfcfc3d1ad60ed2",
+      "bytes": 2383,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\help\\6c39e3ff-3100-4cea-9ecc-48a2a1b3415f\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "2b1aecf40896d58ef249e1b1abdd3dc9834b92d53ed23d2988509c8e2a8f57b8",
+      "bytes": 10731,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-b\\help\\6c39e3ff-3100-4cea-9ecc-48a2a1b3415f\\actor\\full-public-trace.jsonl",
+      "sha256": "5815d1c6b18bf6a15325bee1e396c6f14c94958d04aef9419cb5299a84f466b2",
+      "bytes": 277421,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "a9f1313061a219a028275d7d595f5889222db6555b26ef259e4e471da7b72802",
+      "bytes": 2229,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "b4c0df884ad944f25aaac74b7d96d1578035bad7494e1cdeeb3e7ee3a2624fee",
+      "bytes": 5209,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "1970dd1c0d912c902485f5ff245344c01a1a0675b1e83f861af1876ff7c4cb77",
+      "bytes": 104094,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "a94ea3eda3a9b961be1fc5ddf4cbb98c5a5c32ba4d54d0c6b3310594241f8e3a",
+      "bytes": 2254,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "896ede556f512008f548ce9e995118d1fd71719df297213cecd50c3bb0fc6639",
+      "bytes": 3820,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "8e294e0c44e7a22a5b33d291cd82195b28e9e74da28330f8d83010fe07a3ca97",
+      "bytes": 71179,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "23e1e7c64b664af7acae4e6f76dbd7e483bdf78214b819297325cd727f5a8d08",
+      "bytes": 2252,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "483ad4686e965c80339ab456ab8e8dad1c46c2222d7d2105184107bcaf51329a",
+      "bytes": 13451,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "66f469c8983322b30b3e61fa8407b080c9992ebb818dfec6af47459836f67f70",
+      "bytes": 325183,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\actor-receipt.json",
+      "sha256": "78906bad2fa11d68d02ae2095bc49429a5d3ff6477d0650fd1b47c294e29d11c",
+      "bytes": 2262,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "8f177746537033c5b79830e6de02d584ce9c424934122c21d71cada5e8d2fef3",
+      "bytes": 10371,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "a9ca2b96a1b9a5f0340e9a4fc63b903d272b9c7b52ec97d008cccdb62df35f9c",
+      "bytes": 517714,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\4bbdcfe0-a5c2-49a2-9e9b-66300c77ca75\\actor\\actor-receipt.json",
+      "sha256": "9879e7d43c6b7c0fc0f2fed8c8e438f5c23a8c8b1dbd7d70f2b0d64bd4d0d3d5",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\4bbdcfe0-a5c2-49a2-9e9b-66300c77ca75\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "17e40913ae1ff9653408f73507c975e5c2336ed342c96a39f662dccb0da7aaea",
+      "bytes": 9226,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\4bbdcfe0-a5c2-49a2-9e9b-66300c77ca75\\actor\\full-public-trace.jsonl",
+      "sha256": "9c630bf0101e2abe70589c4ddeab216502aebbfe475fc77a1c86879ab67d9967",
+      "bytes": 405044,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\ae8f4a81-12ac-4d63-b0a7-4d0ba08cea6c\\actor\\actor-receipt.json",
+      "sha256": "3c8b900931b253a40236bd7dfb8877266d811a7809da0e8b06ba28000e66a01c",
+      "bytes": 2381,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\ae8f4a81-12ac-4d63-b0a7-4d0ba08cea6c\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "f0b8ac605109564e4db848007487fc30a5ecb5e648665807becb97138ef3e6e9",
+      "bytes": 5837,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\ae8f4a81-12ac-4d63-b0a7-4d0ba08cea6c\\actor\\full-public-trace.jsonl",
+      "sha256": "62892d590d8e8365af1e82dc75c9dae54ca2ab6094e020e39e20890dca498405",
+      "bytes": 222431,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\d576462b-a0b7-4b9e-9985-21b250a1eeeb\\actor\\actor-receipt.json",
+      "sha256": "9b6f1a6de22121a16a605bd9961730b0a01978bfc66390fb1be2ce652394c44f",
+      "bytes": 2380,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\d576462b-a0b7-4b9e-9985-21b250a1eeeb\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "391176cd4a34a338f64601b1e3cf4f3ba0086a6cbeb2ff724b396418c141f7db",
+      "bytes": 6389,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\d576462b-a0b7-4b9e-9985-21b250a1eeeb\\actor\\full-public-trace.jsonl",
+      "sha256": "d8d4a6bf27c324688a94dab267380f12da1227ffac356bcc70e5aff388d96077",
+      "bytes": 207727,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\dac605f7-b570-4072-a664-125704c23e8f\\actor\\actor-receipt.json",
+      "sha256": "2a4ff51c82587c26c6b1aa09e73740531ea54c3f86f32772b4c8118db299ac86",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\dac605f7-b570-4072-a664-125704c23e8f\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "ee7db51152535de5d6c12f025a6a51d7efe361737da2a76154f1153dcf7e0a17",
+      "bytes": 5401,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\dac605f7-b570-4072-a664-125704c23e8f\\actor\\full-public-trace.jsonl",
+      "sha256": "13dbed04cff5b35c7d81841357e53bd81c173511ed4c5955b21709fdd2b4d2da",
+      "bytes": 311158,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\author-01\\actor-receipt.json",
+      "sha256": "8c0902871de53f33549166e66fa8e069b3419cdc4048f2dcff38d7f364947ec3",
+      "bytes": 2260,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "e20a9b28eafe99f2947d4a60dbd830796299c6e2bf3b4f36126d25edcee39bb0",
+      "bytes": 6515,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "d79c81de8e8082e995f909c4dce69ad8b6d0fb667c3327faa79bb9e31ac69b90",
+      "bytes": 193718,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\help\\02a2675a-04cc-4832-ab76-45d83268e016\\actor\\actor-receipt.json",
+      "sha256": "58ae09bbbf61b64478b0e23b184ea5dc333dd07a459ba328d928d35d7b40e25d",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\help\\02a2675a-04cc-4832-ab76-45d83268e016\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "9a3a3b1989ece8c4cd9a764f5bb189bfc9171b61f5fc7c9c651bfe0b6759c0f6",
+      "bytes": 10792,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\help\\02a2675a-04cc-4832-ab76-45d83268e016\\actor\\full-public-trace.jsonl",
+      "sha256": "bf0eea370b429220a0550ff23e0cda05a94b2915f6c8d160964bb1ac3002e80d",
+      "bytes": 255413,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\help\\be9774e5-2de4-4ba6-b950-6aa147c21e4c\\actor\\actor-receipt.json",
+      "sha256": "03a7589b230de237723c91e7a9096114da0133bfeeb1ac3ad2d86713169cce80",
+      "bytes": 2383,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\help\\be9774e5-2de4-4ba6-b950-6aa147c21e4c\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "a7c97f4c03bab795ef858799857ba6ca26f62f12df88ffb068c804c7e1a82304",
+      "bytes": 5880,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\help\\be9774e5-2de4-4ba6-b950-6aa147c21e4c\\actor\\full-public-trace.jsonl",
+      "sha256": "0335501214ad4a5a6f0867b5e64c5d7444e8734622005edc3fd96ec69827b357",
+      "bytes": 127477,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\help\\fc79a976-2d9e-40da-b749-bf30013ad86d\\actor\\actor-receipt.json",
+      "sha256": "1db17fc479bb2850034c97b78dcda517a6c8c0689f77ffc0c4801aed9053fa67",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\help\\fc79a976-2d9e-40da-b749-bf30013ad86d\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "2ff6b4ee304679eb6bbd20bee1080fcbc4fe162c25b3f4f9951a9cd1d5e866d3",
+      "bytes": 4613,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-b\\help\\fc79a976-2d9e-40da-b749-bf30013ad86d\\actor\\full-public-trace.jsonl",
+      "sha256": "b3102b22fe2e6da624e5f0041e2821a53df8da9ec898ef5b24e409248a0d425b",
+      "bytes": 106144,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "bea9c2fdac035128979ac1c47f3dc807efb89f96052ef53a49ff54bb6c7ee2b9",
+      "bytes": 2231,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "f81895c38c3a585a470b8f8d1bc0bcacd46b271f9dd309045cd981acbf1b3c83",
+      "bytes": 6202,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "e7a6cd94c7aeca92bc3f912e511493f6c17af5d28342dc7223d1dbd3041e932c",
+      "bytes": 194000,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\math_checker-003\\actor-receipt.json",
+      "sha256": "bdeab9470ab3b6e13332f0c311eefa034c02805a9e045e4036d4a8bbe919da9d",
+      "bytes": 2268,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\math_checker-003\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "8971a928115bd2f7bb13ac60f8b7579da5be017ee136daa97bf784f2d47de78a",
+      "bytes": 3564,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\math_checker-003\\full-public-trace.jsonl",
+      "sha256": "701cf75abe0b8deeff96b805970810096392798b442ed779c9d09eea8abca74f",
+      "bytes": 117115,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "9222d3c0b455209ae51080886e3b68afc5b705e74e1174fe2592059368419fd6",
+      "bytes": 2255,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "e0b18676bf66673b1def251e16abdb50190ce42e288b71fd5e7ca25f4bc71c9f",
+      "bytes": 3976,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "e100c27b7879be152332754c52b48fdd8399b27fe4fc089c6a5d459672095a47",
+      "bytes": 113649,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\reviewer-005\\actor-receipt.json",
+      "sha256": "db11debfaa80f49da87ebb72b2b2ab7fd257c487f55bc3c9bfaf46e4cc568a0d",
+      "bytes": 2290,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\reviewer-005\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "699d51d86075ab8a8d56e3639603eb4ea25cdde5ef58e1d9e2d921d191bf16f6",
+      "bytes": 3411,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\reviewer-005\\full-public-trace.jsonl",
+      "sha256": "7949cd7224c4053d022215e78f9e215b86f6a6b9a1d6969b91e46649edb56fe5",
+      "bytes": 118817,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "5028c2d3c410ed85e7909217c8defc19b031b9e571afeb8e4550a5a231db1aab",
+      "bytes": 2253,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "dd256a36b68dfe02494c4fe1890720992f26f9a62dd001ee25be4a1de5d11555",
+      "bytes": 9813,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "d42c41a9d8378018b378dbcd76e788ac4b2188f6cf57ad044c3b671f665b2dce",
+      "bytes": 354965,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\writer-004\\actor-receipt.json",
+      "sha256": "253f95e74e8bf2936669bf3de8c840c106dafb475230ce9885b55fd9d3fc733e",
+      "bytes": 2286,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\writer-004\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "3f1d58c9dd57d89035cfad7df4bb9454980de8cfb804c8db9da6a6abbba91038",
+      "bytes": 7735,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-c\\actors\\writer-004\\full-public-trace.jsonl",
+      "sha256": "6995c56f2021a37e225c0d6bf6d13fd46005cf37997d470e18212a70ece5cd32",
+      "bytes": 265259,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\actor-receipt.json",
+      "sha256": "13db433d36c0b1806882756b9b40d0d26845afb686e07da7adc74693d78997fd",
+      "bytes": 2259,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "7572291bde2f525efbf9e28f6c48dffbeed1bced768e736b687830aae7b59363",
+      "bytes": 12935,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "c4f386065cb3852e909884f009b3e81d3633d6053fe21841eb150bf0ee4f2a94",
+      "bytes": 628995,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\help\\e6efd204-a7ac-4be3-8326-67922ecdf110\\actor\\actor-receipt.json",
+      "sha256": "2e7921609ca32920f162f6782d236cc7d2bbd27b6a7e3d0902f6b14d0195a070",
+      "bytes": 2382,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\help\\e6efd204-a7ac-4be3-8326-67922ecdf110\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "e38f523c3386fb6bb880a857ab2d17a5194a864d48594452b519f4d3987f4192",
+      "bytes": 6014,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\help\\e6efd204-a7ac-4be3-8326-67922ecdf110\\actor\\full-public-trace.jsonl",
+      "sha256": "8a48e47c3e251bfc587a53e912141e95412ef53620751b9f00663d0a447b67cc",
+      "bytes": 324364,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\actor-receipt.json",
+      "sha256": "074a36c35b3478be39d9fcbc870241a7c88473d26510102392cda174c0c2bb56",
+      "bytes": 2265,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "6f5f2260016f5fa070239de66c39346ce2ba3961b2629991a5c883bbd7f38213",
+      "bytes": 11823,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "a4090cedfb249a5747b1bc8aa2a2b56e8735f2c04bccfdba6bc1aadcf54e2957",
+      "bytes": 451894,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\1b559782-0ca5-48b3-8ef4-206bfe4783e9\\actor\\actor-receipt.json",
+      "sha256": "9084e2da8a63c7438c9c6546a2f4a6c2e5cba1ec458a980a106a7637113aa329",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\1b559782-0ca5-48b3-8ef4-206bfe4783e9\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "674c8c4c9076f52d35ddbe25a49f1caf559a29abd230a87b1b9f668078b3fab3",
+      "bytes": 9133,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\1b559782-0ca5-48b3-8ef4-206bfe4783e9\\actor\\full-public-trace.jsonl",
+      "sha256": "19ed0e030be3be6d05d30d09abbb529ced992641272a51121a3ac72df460e54c",
+      "bytes": 229606,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\2bd44263-a376-421c-9847-dcead9cc9cb8\\actor\\actor-receipt.json",
+      "sha256": "426f84f8e08e7f65e605941693a4f7aaada2ac04809908d8bbe8eceadf863f06",
+      "bytes": 2380,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\2bd44263-a376-421c-9847-dcead9cc9cb8\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "5eee6ccca1967aed24c6884bc4085c28308889358667220c577967636020d3fd",
+      "bytes": 3986,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\2bd44263-a376-421c-9847-dcead9cc9cb8\\actor\\full-public-trace.jsonl",
+      "sha256": "1491068d0e10769b77fc2139b88f5eec12d421f4bdc09a762a584f818132f43f",
+      "bytes": 57910,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\7badbd07-0a1b-42d5-837d-e1f450a0a61f\\actor\\actor-receipt.json",
+      "sha256": "fb7d72b5e1478940961209ceaadff7573030f932f28958d8e0a46cf537c060d3",
+      "bytes": 2369,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\7badbd07-0a1b-42d5-837d-e1f450a0a61f\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "aa6a5bf7f5a3302070ab3ab30cc7af8f740c39fea7d6d6a52abd5ae660cee64f",
+      "bytes": 3799,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\7badbd07-0a1b-42d5-837d-e1f450a0a61f\\actor\\full-public-trace.jsonl",
+      "sha256": "16a2a821707aac88bd2b15c79d973a35641f0083c7ba677cb23979d56adcb25e",
+      "bytes": 57264,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\f9599de7-6bcd-47e0-8d2c-7eafcaf34263\\actor\\actor-receipt.json",
+      "sha256": "bdaa28b81a985b5fd15c7a3536a0d55f57e0c4b327353fbfe06f98138a9ff012",
+      "bytes": 2380,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\f9599de7-6bcd-47e0-8d2c-7eafcaf34263\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "3d3577ea4efc8763989f79b8e10b9872e80af48d03041aba906dbcc7096e4902",
+      "bytes": 7849,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-b\\help\\f9599de7-6bcd-47e0-8d2c-7eafcaf34263\\actor\\full-public-trace.jsonl",
+      "sha256": "f86a6670e01804015b58befecfd7f1e0493710e38a958be3198776d69c6bf05d",
+      "bytes": 156667,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "a56f2fac4badb0d554b4bdd99a1d90b5c819b9bbdde3ed00b8e28932a36ea4c2",
+      "bytes": 2229,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "680bbd0d78ea38e60f01a94e3f7e953706427a971baf89ac7140958502c1964f",
+      "bytes": 4810,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "dc87450c8846e7e20056aec91d0030a6e9b74f963125bebf58e5ec0fad0fd8c2",
+      "bytes": 126287,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "4235ce0423849422c2a0e5a151c43ce5a6d9ba4ef9a0fd35045c45359184d464",
+      "bytes": 2243,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "03da96c41eca03302e9d05a64c7eb2d80ebb9351e017021cbd4d13ca7c49e556",
+      "bytes": 4163,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "2cd71012267302f64badf6e222c72b014010a478f293c57c2bba21e396e80242",
+      "bytes": 108372,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "290e34a73842137c76632958f9a811c09ce2c18c389d408b8bbe3485840d55d1",
+      "bytes": 2253,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "1ccd2154219074813eeb1b92d909dc62de3656ca4c7db0bff966ff87bfe5f047",
+      "bytes": 10697,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "6f48403ae04c72dac076813a19a4c3d3143a2b2288db04d496767edb7f6a6d21",
+      "bytes": 478389,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\actor-receipt.json",
+      "sha256": "a61f6eb0e1b04eabd313c875fd94c3fa9b26b344a71403ffd97da4dfd37cafc9",
+      "bytes": 2263,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "2379372a3f79e88fd7125bfd544c28a8c9a9a8680324f162d5f229049cd0640a",
+      "bytes": 10406,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "ab406df52d0403197f8df0e74d56a0d12ad91883841ae13d5aa6df397ac7ee5d",
+      "bytes": 560625,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\help\\523be01f-f72c-4e13-8c70-a8bc1e6d93ad\\actor\\actor-receipt.json",
+      "sha256": "f5f7eb471d5b5bc38d5b5622eb9d5594cc9e6f549204eec34514aa40e811e9eb",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\help\\523be01f-f72c-4e13-8c70-a8bc1e6d93ad\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "1360c135bd5f11d5c1399e29cd9a3c114f4072bf4e53d2eff94b592b967c8f1a",
+      "bytes": 4589,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\help\\523be01f-f72c-4e13-8c70-a8bc1e6d93ad\\actor\\full-public-trace.jsonl",
+      "sha256": "e5b00f9411be52138c75a4affab6fdc371afdc0d2729513633b14be9126a3e59",
+      "bytes": 307327,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\help\\e9ac2f7f-300b-4d40-94a3-5f8d9ac8ab9c\\actor\\actor-receipt.json",
+      "sha256": "8ce2ff1c1ea418be2b47349490f77374f37eb85ca011624d031886e55c667467",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\help\\e9ac2f7f-300b-4d40-94a3-5f8d9ac8ab9c\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "f21ad0081d20e7c83c4659b759129bfc9b1cf00810659203143e1f2087d4e50c",
+      "bytes": 4590,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\help\\e9ac2f7f-300b-4d40-94a3-5f8d9ac8ab9c\\actor\\full-public-trace.jsonl",
+      "sha256": "572186c27a35bfba4fbf72a4433557dbdb4691dbb5d9c1c90a9cfa8066ba5fe2",
+      "bytes": 270838,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\author-01\\actor-receipt.json",
+      "sha256": "7038d782e2af52121261202436ab64f6041b1b1bb6d48b98a82726e79d97e368",
+      "bytes": 2263,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "0a5d8384ecedcc946bda42b4063a696e89fd1dca36d473b833341901ae64d0b8",
+      "bytes": 9516,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "226a26a3849dc3659038f419bafadd1fa232f3231f4b344687b773ff62af4f64",
+      "bytes": 290878,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\help\\45e5bcf7-83dd-4467-868f-b75dcbc6608f\\actor\\actor-receipt.json",
+      "sha256": "4b1595a0bac64e81a7afa6b75781215ba3311c515c1aa52013e376c997d6df5b",
+      "bytes": 2385,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\help\\45e5bcf7-83dd-4467-868f-b75dcbc6608f\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "4c02c563114b063514f7cd0c52622c365e2c8e6edf2b0c7ed5dc42674918dd97",
+      "bytes": 10344,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\help\\45e5bcf7-83dd-4467-868f-b75dcbc6608f\\actor\\full-public-trace.jsonl",
+      "sha256": "82fecbd1d55f5d83597e46ef2c3ae957d3ffaf61698309e9b0388eea9b72704a",
+      "bytes": 206962,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\help\\9625f29f-dc50-43ac-a368-9d02b290327a\\actor\\actor-receipt.json",
+      "sha256": "4146c91f193a6144c8b5dea411990e89ba209213254194e5875a5281ee88c3b1",
+      "bytes": 2382,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\help\\9625f29f-dc50-43ac-a368-9d02b290327a\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "08b67205e38f5dbb069883da22ba9e60167e82e4d793d2618a86a30c98f9a69d",
+      "bytes": 6849,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\help\\9625f29f-dc50-43ac-a368-9d02b290327a\\actor\\full-public-trace.jsonl",
+      "sha256": "77bd20865c825d545209c590cc952545253a6e357badf7acb9a1f44fd8bc14e5",
+      "bytes": 176590,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\help\\a0c2a1ca-e41a-4732-a9e3-bb868ea0b00b\\actor\\actor-receipt.json",
+      "sha256": "998ef94512b9dea2181f09bfe3e51e220799c597f1b8925332c1af2f3e51d2bf",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\help\\a0c2a1ca-e41a-4732-a9e3-bb868ea0b00b\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "5d2c48e18f3e4ba30035217f460d48633031a63f13057d1e640c84a454b49e08",
+      "bytes": 4813,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-b\\help\\a0c2a1ca-e41a-4732-a9e3-bb868ea0b00b\\actor\\full-public-trace.jsonl",
+      "sha256": "7c523bf9135214760c86bd7ec93ccf829db1572dc7a995d47f038a3d5db99df4",
+      "bytes": 111645,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "92a32d89c133281dc67e9372a97f15576dc70aea5adb7567a4ca0a6ac000baf7",
+      "bytes": 2226,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "cdffae4bb82d383624b7bd5b5efe8a6a67c39f6f79e5ea130f236dc7271b7b59",
+      "bytes": 6253,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "d0f134cb5557b3ba0a1f5294d37eb704bdf8030454c0b26c0cfc80f106a1f88d",
+      "bytes": 166776,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "0697fc8c68ee82ce50ff93aeb1e2bc3d17c5a0d68bbd2cce28b1ff20b079a83a",
+      "bytes": 2255,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "de317f51e3ec4679fc376b56eeb895e50ccc8e7c6a59f1df0e4e141b37a4f7a3",
+      "bytes": 3376,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "8b2433db5af03cbfb6237625fd2b3fa5cd9c3623226201900907a4ccb2d4f405",
+      "bytes": 74492,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-003\\actor-receipt.json",
+      "sha256": "42cd7dd8f1e3a808d39991c7f955b3e77f44d47c6c92a9044b4efc5a6e6372b1",
+      "bytes": 2278,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-003\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "4b0b22c47184efa2e8036d0a53fdebc17f47d9f61a88065932a0fba8338f168a",
+      "bytes": 3223,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-003\\full-public-trace.jsonl",
+      "sha256": "5ceb939c350c3b4e267dacae6eb65935fad26c9efd4fbdb582d477ffc9b2d493",
+      "bytes": 77908,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-006\\actor-receipt.json",
+      "sha256": "0798711f61fd57dae08911897c807f0d0563f2495b59a0dafd6e480cdd1d4200",
+      "bytes": 2290,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-006\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "986e5eac259dfb58cf53baa118b61588eaa52247b60bfbf414156c76dedadbd5",
+      "bytes": 3411,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\reviewer-006\\full-public-trace.jsonl",
+      "sha256": "6aabeeb961efc0ae2a18891d18fd71e378fd57f4326653e1175f77f5929e43c0",
+      "bytes": 72940,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "d64ae003d3b79703c49b3f970ebef806dc3de390717ac1db99b635a10a40fbd2",
+      "bytes": 2252,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "a5928a5efbf313cdf9d0006e7cce0faf6a6c40c2c662696f52935583799143c9",
+      "bytes": 7093,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "934b0c77cda10cba8477714201d70d878649836fbd34248ac097f129460dc9b5",
+      "bytes": 235184,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-004\\actor-receipt.json",
+      "sha256": "c6db059e8363ece989acf3e3377e15eafe5e0d4dc2560ec0863387bc42de3d57",
+      "bytes": 2286,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-004\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "c597eec9aac66c0711703436f85bf013cc5049d5eb55993488a4aa40a506216b",
+      "bytes": 4425,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-004\\full-public-trace.jsonl",
+      "sha256": "4a190ee0ea4fc5665fe0439c132ddee58a9cae6215c1e36ffabb52f7f80f8c0d",
+      "bytes": 112671,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-005\\actor-receipt.json",
+      "sha256": "3de7ea6059be8fc42e17f5e077103d6da5b83b4b793ece405bd26d4b80612b51",
+      "bytes": 2273,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-005\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "4766071e2f634cb9ac85261046b491bf74587595f4e6f4e11975f4699426c2e3",
+      "bytes": 3011,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\actors\\writer-005\\full-public-trace.jsonl",
+      "sha256": "5ef15a4a8e1b7b91f3692fdf5961be0e7f4d6c6f072c93b25ae7a9139d995d43",
+      "bytes": 67178,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\actor-receipt.json",
+      "sha256": "30abe34083c12a9cfeb29a7ff176fca0abce2b36404226515a2477e092a463f3",
+      "bytes": 2265,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "020ddcde6e1ff72c855e53a045ab9df595f2357d3534515a325e60de18fa257e",
+      "bytes": 15033,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "bc0d6ae25b9290684fd7a7c3422450097f5158feebc04101a465e9fe3a5a1977",
+      "bytes": 687057,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-02\\actor-receipt.json",
+      "sha256": "fa3e62804279ecd620d9f14f05963fed8b437ee729e0b922ac22861ce7248432",
+      "bytes": 2336,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-02\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "557b305281ccb9254b2013944e9d37d8156cef58ef279ad30232bc9e5a275d62",
+      "bytes": 16238,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-02\\full-public-trace.jsonl",
+      "sha256": "3ec36ee2a53fee2b792cc722db99f420f8264aa9f7221c5838fff30fd0363146",
+      "bytes": 530212,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-03\\actor-receipt.json",
+      "sha256": "886bb8067f4a1ff6da06b9e3e78980dc97f740e5563568664df359c74c7e4695",
+      "bytes": 2335,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-03\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "b170c945685e97c3026e2cb40a6daf77079bd6108a9abef8862b8eef52e9ccfa",
+      "bytes": 3592,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-03\\full-public-trace.jsonl",
+      "sha256": "4699d5a1f75de2be2fc0fd8fb5869f7975852044d3562e489377a8331f2bc07c",
+      "bytes": 70906,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\16a190c8-fa36-4187-a018-f313852c245b\\actor\\actor-receipt.json",
+      "sha256": "7f742f14c8fc3d7a2d83a83ec77827ec6a961f3ae8de56900b882fc22a160c8e",
+      "bytes": 2380,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\16a190c8-fa36-4187-a018-f313852c245b\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "347b206b3f1dc821d50ab8eca27e0e48b1f59732392468a10638f76dfb3f5669",
+      "bytes": 3387,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\16a190c8-fa36-4187-a018-f313852c245b\\actor\\full-public-trace.jsonl",
+      "sha256": "bbd997df8cfb680a1ec6f37379e3f68f5691b85d929eb60be467f3a506f6b3bc",
+      "bytes": 106677,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\33d385b6-f47e-4426-a74d-dc7e62596971\\actor\\actor-receipt.json",
+      "sha256": "7ba3ddf15d8897e017aa53ad17df093fd5f7f3c0c329854b48e686c916ab9c59",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\33d385b6-f47e-4426-a74d-dc7e62596971\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "a5f64d4f7a5875148dedc5baf8ea89345bcffaa8e89bf5bcec83030fa2f19d9b",
+      "bytes": 4411,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\33d385b6-f47e-4426-a74d-dc7e62596971\\actor\\full-public-trace.jsonl",
+      "sha256": "f87c2a5a22178f5cb0d3f4a6d356456677bc1345a925ecedf5f5688963f2ec31",
+      "bytes": 271614,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\5a195a0d-5c87-4ce1-b48d-c991f7e8aedf\\actor\\actor-receipt.json",
+      "sha256": "7765a6c7b3fa1f256bebb1aeffc60cb8da52d6609273cbc3500a289284abab64",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\5a195a0d-5c87-4ce1-b48d-c991f7e8aedf\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "6e339018dc54b428e290c898e90c22189e3a981e3e821f9ff2029e0e0ca76267",
+      "bytes": 3987,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\5a195a0d-5c87-4ce1-b48d-c991f7e8aedf\\actor\\full-public-trace.jsonl",
+      "sha256": "9edd1827869afe12439d891e942c37fc2ca8dc5628df817491ae795d7a9e7624",
+      "bytes": 264538,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\77bd8e39-a212-4271-b245-2119f60909bd\\actor\\actor-receipt.json",
+      "sha256": "8b6c833b5b59ef735616b3d14318a5450c37bd6236d608726f0c62dd76cc5d7f",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\77bd8e39-a212-4271-b245-2119f60909bd\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "5722c2c0fa51d828a53728bd6338f5572bf5136e437ad8069b89f68fdf1099b2",
+      "bytes": 4011,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\77bd8e39-a212-4271-b245-2119f60909bd\\actor\\full-public-trace.jsonl",
+      "sha256": "6e74a3e2e0ff708540e739a34f324c3291cfe1f0e5cf40e2a0f2852bdcc1ff59",
+      "bytes": 87183,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\fba3668e-57b7-4bbe-98aa-cd48b40a1b30\\actor\\actor-receipt.json",
+      "sha256": "abee966f5aae24639121b90d6bcc63cea1d71a108aa21554c341df81fedfc78d",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\fba3668e-57b7-4bbe-98aa-cd48b40a1b30\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "57e17b090ce1a92b046df4c655a889959b657a8346535ba9316d0eb493057042",
+      "bytes": 3985,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\help\\fba3668e-57b7-4bbe-98aa-cd48b40a1b30\\actor\\full-public-trace.jsonl",
+      "sha256": "b4ee7a233ba954b2e04a330302aa7d19fdbdfc6b78e0f221ab60e5abb3610a94",
+      "bytes": 131321,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\reviewer-resume-01\\actor-receipt.json",
+      "sha256": "5d4cef57e3203691e0f7808c8ed324d1d78aaea9ad53277e37b1234446a9b928",
+      "bytes": 2357,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\reviewer-resume-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "ddf72c36b8d096d0a04f0316b96eca165e116a77ecde386e45274a40c482a91d",
+      "bytes": 3593,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\reviewer-resume-01\\full-public-trace.jsonl",
+      "sha256": "158f3af6294931fcd4db79b8280dead2b51f5c8f98ccb050feac9cfcabaf6ad6",
+      "bytes": 246344,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\reviewer-resume-02\\actor-receipt.json",
+      "sha256": "d29d31d1a4d3685098b2223685956b65bf71669acc85873e81155c642c618d3d",
+      "bytes": 2369,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\reviewer-resume-02\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "ee06b91808fabd22fead157c442998f3ab09a2312ddd476852ee3608d3f2a945",
+      "bytes": 3549,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\reviewer-resume-02\\full-public-trace.jsonl",
+      "sha256": "b97dca27e4d915af7c4964c48a8c89591099f3f8edada76f1d5bb8c7cb43fc11",
+      "bytes": 212847,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\actor-receipt.json",
+      "sha256": "6cc0e43baa481295e5bef13d8d255c7fa213f6a2759735eb8ae193c0de5eb8bc",
+      "bytes": 2262,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "c68cf122cc15325b8d7714582b678b3c836e20e08394145b15d5d36339c19a4c",
+      "bytes": 15608,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "9ee59bd55c8d6861cba9548c872964575f5960a027e5d73055651e497be827ab",
+      "bytes": 459904,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\actor-receipt.json",
+      "sha256": "2a89e902f137004004b7dc348aed0ba72d1afbb22b5a9e9a4f4f35a4788f4e6f",
+      "bytes": 2377,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "fc4d0a21ca817bd2e4443fae280c3630f4cf77a9db333d6d2c5d2d8b617fb771",
+      "bytes": 4802,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\270fdce2-863b-46bc-aa38-ba28af1a89fb\\actor\\full-public-trace.jsonl",
+      "sha256": "648fe019423af72bd6a751c5f5dde590c35f876dc878e69d1c2d8e4b2a9ecf82",
+      "bytes": 320584,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\9b561873-db2a-49ab-80b1-a8933e51ce83\\actor\\actor-receipt.json",
+      "sha256": "201a12ac132c5c0732701de778bbde08d0000458f0ff4814204cb4b614338308",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\9b561873-db2a-49ab-80b1-a8933e51ce83\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "32bb7b7ded2dccaafe0a226981c9a006d536ca15292c427c766c2f8522bc80b5",
+      "bytes": 4398,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-b\\help\\9b561873-db2a-49ab-80b1-a8933e51ce83\\actor\\full-public-trace.jsonl",
+      "sha256": "2a87ec4094c2fa0c06eda23254ef0a375b86a61aa32f88df7b1dfedbc717fe57",
+      "bytes": 108233,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "f83cad653977fa6140782db4c964f1e562d66ef7e071cd87296b123a743bfe89",
+      "bytes": 2233,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "bab1217e7a094da630659978b0cb924d348ccc799acb96e34e23510badd45323",
+      "bytes": 5411,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "ecd8895d4b14833a9e35e5c3d1f1af392c472a961bc023bec9d02ce96a23715f",
+      "bytes": 147647,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "1050eafd71fb42333954bea4d84841e22c6ca214102f5de1cba1308881d654c0",
+      "bytes": 2258,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "357a73bb725e0e879cac8b719b4f12a5aff2f8adf50673bec3704df42a5a7509",
+      "bytes": 4163,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "dc9691163f3be06eb700b113c14728a3b1ce632a8e897c239db41aae2502dcdc",
+      "bytes": 136060,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\reviewer-003\\actor-receipt.json",
+      "sha256": "eed054ddc2c3b4b7f3d9ae45dbccb21c4053d5a85e4c99b87f39b58a47b91341",
+      "bytes": 2294,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\reviewer-003\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "50c2ca76035ca4f320c1561d1f923e4f28154eb44b5ff349a7926a8506a34c7d",
+      "bytes": 3411,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\reviewer-003\\full-public-trace.jsonl",
+      "sha256": "d3bd0d59e5b7255a627316ddd0f98a54088b4cd073672a31d328d4e5dc2aedb0",
+      "bytes": 139431,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "08aaa85bdd7dbd1ae7e6c91aa869ba36375a1416eaa598c134ce0ced847135ca",
+      "bytes": 2255,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "398b2bcca8f39d0570cc0681e18f92f9e6b0e838be990abab1cd852d91c84ff1",
+      "bytes": 14240,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "a20d95b985c6143502fbfee60767e6b3458cc2ecec3273fb4604d2813e2b60e7",
+      "bytes": 561963,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\actor-receipt.json",
+      "sha256": "25105ef7a6c170e57bc5660390622e233629da5a511fe6f5d4e420ff2a6bd1c3",
+      "bytes": 2263,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "cefeb7d5a80723b11abf33578a618b7fed60c29a55e13cfdd99c3f0b30d90d30",
+      "bytes": 7504,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "ae329a210f7d7f9dd043086f6a40d953280e37436ff0949c7afb609d4644cff6",
+      "bytes": 300422,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\7199ffd4-6d75-4104-9445-b99ab512731c\\actor\\actor-receipt.json",
+      "sha256": "2fe706fac91ebea29ae3e9e49a2fb3056c67e4bc11f3315a495b9e5e9f1733e5",
+      "bytes": 2388,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\7199ffd4-6d75-4104-9445-b99ab512731c\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "f7a1d9587e53d9fa77dfa8b129026072986eb08924d34816b113e1b109bde0bb",
+      "bytes": 7788,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\7199ffd4-6d75-4104-9445-b99ab512731c\\actor\\full-public-trace.jsonl",
+      "sha256": "ee4f63a44d91ad157b34cbf347471c37451ed919e9aa0d8a7e18ca29458f0f42",
+      "bytes": 346449,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\9a2df7de-9c00-4dbc-b085-da4465c50c99\\actor\\actor-receipt.json",
+      "sha256": "27dd535f179ad74a66a3d2f93e2c4a132f33ed42c67d9dfee7c250633ca734ae",
+      "bytes": 2389,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\9a2df7de-9c00-4dbc-b085-da4465c50c99\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "14960b2b97bf77a844a653bf20a5a1dfe21bfdddc2ef0e48867f7cefab6a50c5",
+      "bytes": 15428,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\9a2df7de-9c00-4dbc-b085-da4465c50c99\\actor\\full-public-trace.jsonl",
+      "sha256": "478984ff540052a5673a360acc8034bb1586731401390ccb875cb8aba8a976c8",
+      "bytes": 634582,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\actor-receipt.json",
+      "sha256": "a98cae0bfcd5fe3fbdd515a2a3136b94f68da90415a63fd8d08a6f24de1ab8d8",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "4bd1bc07b6160f24534ee10436208ec64efbd63cfff5bb44ac97e7bebb6e540b",
+      "bytes": 11334,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+      "sha256": "e16ceaae212e725c3b4cde58ddd1e4509bb5cf3ec8230125c3bed8a3a0d5a450",
+      "bytes": 628916,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\c0786595-edb0-465c-95fe-71b68679cc22\\actor\\actor-receipt.json",
+      "sha256": "27beaeb1381b9d7e4226aa481e8ec6db7151fc07279b27db6129fc05e3401cfc",
+      "bytes": 2388,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\c0786595-edb0-465c-95fe-71b68679cc22\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "72f639d093caf89bc9fae900bfe547fdc206a2a487e55fedf69aba83cf384380",
+      "bytes": 6790,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\c0786595-edb0-465c-95fe-71b68679cc22\\actor\\full-public-trace.jsonl",
+      "sha256": "82b9aee096ad47ca042f04fc1a5f8a6242550daee44a79221c3637abae3ee0f0",
+      "bytes": 294195,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\author-01\\actor-receipt.json",
+      "sha256": "d48f31a442409f3b4bba989f137dea7ff336dff0ba4f57036366afc22f408b5e",
+      "bytes": 2256,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "d8ea6cf3bdd669cb3feee066476b42b883d1add53ebac5eb69e0764d3d86d1b4",
+      "bytes": 20091,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "13b6397ef9d58653ed8583a50fb2bd4d7b4cfb44cbb6e42c724e803cf9d18efc",
+      "bytes": 542157,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\help\\6980e974-1596-49aa-9923-2aa89a9cd5bb\\actor\\actor-receipt.json",
+      "sha256": "34799b17aac283ba7de856529e9447c64085f0651d25cebd196366388faaac92",
+      "bytes": 2383,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\help\\6980e974-1596-49aa-9923-2aa89a9cd5bb\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "0106aaae2abe815d9909f6230b55658c8a9ae62e4fecc096663d6c72f4c82043",
+      "bytes": 4211,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\help\\6980e974-1596-49aa-9923-2aa89a9cd5bb\\actor\\full-public-trace.jsonl",
+      "sha256": "e02258edf5df664838da4ed6ec9eff444d47e9700b7d2ff582e679eb6cc95838",
+      "bytes": 89106,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\help\\70f11aeb-6ca8-4273-84ac-3abc7fdb03cb\\actor\\actor-receipt.json",
+      "sha256": "605604b9c0757eb2b695fc4545057744fcbcf456e44f2129201d468048b5e482",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\help\\70f11aeb-6ca8-4273-84ac-3abc7fdb03cb\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "d1998aaad226dff7510846aad9f1e7e48457409d86ef736505c486c9c8f6edac",
+      "bytes": 14051,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-b\\help\\70f11aeb-6ca8-4273-84ac-3abc7fdb03cb\\actor\\full-public-trace.jsonl",
+      "sha256": "2097f3749a04a8d71ff13c585247a18372ef6bacdef32463cfc6d8ac4764bd8d",
+      "bytes": 428955,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "a1f9e937785edab463273697786b5859888027fc7a4360acdd8da8e2f3ea24ea",
+      "bytes": 2232,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "51405b5064d75e39c4b69960cb983bfd276f48f9efd0ceb723364d82c5b2b182",
+      "bytes": 4810,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "5dbec838e1b454c855a97215a2f335f24000d6a07b6ef5a736d56cd75bf066bf",
+      "bytes": 120857,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "e4ca69cdc5c83af07f09c9baf139318c4ebce3074f5519798fcc086a7e308a6a",
+      "bytes": 2258,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "d58edca288028b1d15599c465c881e5412c860966eea92e55bb9bc59f08f4579",
+      "bytes": 3776,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "e367e6595e1a150e9835aadbcbc1a8beb02fba65717922e223c278c7db00ed4c",
+      "bytes": 108250,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "be2157345f5354489f94b7e272230d8896b0c51757b83913ece8a93de666da8a",
+      "bytes": 2243,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "c57ffb76f853cb06cad3be5a7066d132c1770709d7825dae67b48731413088a7",
+      "bytes": 15816,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "326dab201e384bdaf2d6c48caf0dfe521a89c52eec320041570e18c7a6c9292a",
+      "bytes": 548463,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-01\\actor-receipt.json",
+      "sha256": "37b729bc785cab42a895428b3314cab44c315ee518f1ff8c1f695fdc8d2cc54e",
+      "bytes": 2260,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "0331cb1dab1ef369aa8995a5a33b94ce7fdbb9149de96984c5d61f94012c3da2",
+      "bytes": 6309,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-01\\full-public-trace.jsonl",
+      "sha256": "af50b0d2165b3ae7aa84c3deb63e6dd56cf84519c8ea36219fb23fb303fe53f7",
+      "bytes": 295882,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\actor-receipt.json",
+      "sha256": "492eff4d5ced36f113dc643f74beb547238f592501234b2e1878495127d33ff3",
+      "bytes": 2333,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "d51a171fb5cb05230b0ccb7eb5831925b1c11bb3e8aceaf256bf41bf1d07b271",
+      "bytes": 6201,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+      "sha256": "292ce527d14de4cf257cb4b1bb9180ac3be0cdc8d7e419dd39b209adce93bc04",
+      "bytes": 135263,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-03\\actor-receipt.json",
+      "sha256": "98e1e7a5680cebd1af02750bcf686efba9fcc0572ad2bdc5c74cf34f29cc37e0",
+      "bytes": 2332,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-03\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "13a2db9e53f575d97db6bd0f58e223c50eeb4b8a2f6a82b38cb092844b7a8cbb",
+      "bytes": 3193,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-03\\full-public-trace.jsonl",
+      "sha256": "97f511f3eb2472d978d4dade4c42e0ff181a2fdc99c0761669e5a06d9208e634",
+      "bytes": 55975,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\3d2001f3-98db-40b2-8ef6-eebd84a9a70e\\actor\\actor-receipt.json",
+      "sha256": "6f2323cadf97c296e5614f833714b800ad2bd71af4bb55299ab646f998ecb174",
+      "bytes": 2376,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\3d2001f3-98db-40b2-8ef6-eebd84a9a70e\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "ee8498dbdcd64e659ef5d56e0cdadffbf7c4a93be2575f7db281a0ed41c030e9",
+      "bytes": 14064,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\3d2001f3-98db-40b2-8ef6-eebd84a9a70e\\actor\\full-public-trace.jsonl",
+      "sha256": "40f628719d80b1c451e36b94ca552564ca109e8c81a80744c5711c000ea77268",
+      "bytes": 291559,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\5feb1869-3e02-4379-b0d0-72a511680f53\\actor\\actor-receipt.json",
+      "sha256": "49888158ad66ebf03819f837a3c230e4488b02da4918c13059b9fbea2ebb4e12",
+      "bytes": 2383,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\5feb1869-3e02-4379-b0d0-72a511680f53\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "75eddf80c86ccd1765084ef32a627b056c5247db9693755bf22f5dfd1bd15b1f",
+      "bytes": 3587,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\5feb1869-3e02-4379-b0d0-72a511680f53\\actor\\full-public-trace.jsonl",
+      "sha256": "5e1dbfc63207629a42550152af5b08b5b912a82a5f5ef400db15d3571383e225",
+      "bytes": 104675,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\96ddcae5-f683-4cc7-b831-dd8f747da4b0\\actor\\actor-receipt.json",
+      "sha256": "cd34c35d49c14a88a98a076eb45edfb358c0fcb9e58488ad0a37fefc62f90498",
+      "bytes": 2387,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\96ddcae5-f683-4cc7-b831-dd8f747da4b0\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "c5f7f43ce3f2693e50998d7fb25e6bf41a752ee371ddc6d57a099528f5dac412",
+      "bytes": 11204,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\96ddcae5-f683-4cc7-b831-dd8f747da4b0\\actor\\full-public-trace.jsonl",
+      "sha256": "77d4b088322c76dbb19438063259e25399d8f86855d72acabd14db1d280b9d5e",
+      "bytes": 387794,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\b772e9ff-d2b2-4aed-9544-b0e275c623a1\\actor\\actor-receipt.json",
+      "sha256": "96c78f2c8279a1ad0132b54bf729339ad5cdcb6d236bef118a4d0c552811ffcf",
+      "bytes": 2386,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\b772e9ff-d2b2-4aed-9544-b0e275c623a1\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "097b2703924869f67ae40625f44e72d4c10450d82f4f65d26ca268f38d12a143",
+      "bytes": 4602,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\b772e9ff-d2b2-4aed-9544-b0e275c623a1\\actor\\full-public-trace.jsonl",
+      "sha256": "d71bbd65b3902e41964004fdb8c2bcc616f47ad2f9c6ce6a2a56cce997e1ca0a",
+      "bytes": 341863,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\reviewer-resume-01\\actor-receipt.json",
+      "sha256": "5b5b124b855d842a673f65c816f30812a54d5bc041c581bfa5b0fa0d59007e2c",
+      "bytes": 2362,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\reviewer-resume-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "72e0ff44454aa026c620648a8178f4aaf4458c3086d98a1d9a91630af96a8375",
+      "bytes": 2992,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\reviewer-resume-01\\full-public-trace.jsonl",
+      "sha256": "2b2e23e773def1fdd0303be69bd5ffbad3d9067fc91c8bfa30ae7238187bbf95",
+      "bytes": 46167,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\reviewer-resume-02\\actor-receipt.json",
+      "sha256": "215230fc1ddb79e5eb4c68c244f7fda0d866b3dad77044f9296bc2047860789f",
+      "bytes": 2367,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\reviewer-resume-02\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "8e58c20c34500bb05b2480827f44389de1d81cdd0dd20cffb999167f7ba8fced",
+      "bytes": 3793,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\reviewer-resume-02\\full-public-trace.jsonl",
+      "sha256": "1669b806399dcf498b0dff8f1e8167ca92c9a5f185480619f7b35a09f872c091",
+      "bytes": 315812,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\author-01\\actor-receipt.json",
+      "sha256": "20ae858273dc8a69e1935a8ba05cd03a2f936e710f39f9c52d5a507de23bb9fc",
+      "bytes": 2263,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\author-01\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "b4ccbab3b6c90d419f8d1ccc860e40e5bab64e7bbdd1a983b7b6176d61f99d6f",
+      "bytes": 11861,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\author-01\\full-public-trace.jsonl",
+      "sha256": "fa1fd613c24d1b9af6fc81c66797d224bb6c6d03f981d07aedc63b4328e1b8f9",
+      "bytes": 352791,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4298e535-842e-48eb-a338-bea63f2ae05e\\actor\\actor-receipt.json",
+      "sha256": "2c8a73047ae4dc1eba7d1a93d5827625b65f58ed5791e24e53dc85dad3ec8d34",
+      "bytes": 2380,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4298e535-842e-48eb-a338-bea63f2ae05e\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "51bb8903c06c2b5f7968f47dc9e0498045ff14fc357edd5791187ba72ed9ddfb",
+      "bytes": 4211,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4298e535-842e-48eb-a338-bea63f2ae05e\\actor\\full-public-trace.jsonl",
+      "sha256": "2220aa3e94280b17a627134086bb26d222efeeadd24e3cef935923c5864ea665",
+      "bytes": 73306,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4c2ad4ca-423d-42a8-b414-e94dc9bd7e52\\actor\\actor-receipt.json",
+      "sha256": "48cb18b9564b4c8eb368a64d123de60c329294474f48cb6faf0c2b7503cd497f",
+      "bytes": 2384,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4c2ad4ca-423d-42a8-b414-e94dc9bd7e52\\actor\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "5a873505b88899ff0ff69e93c87d850b477aadfbfdd29bf252f35abcd83c580d",
+      "bytes": 7436,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-b\\help\\4c2ad4ca-423d-42a8-b414-e94dc9bd7e52\\actor\\full-public-trace.jsonl",
+      "sha256": "eeeb8eb2f9dc24ccff4da4ed27bf2f09d403b27e0aa93839cfdb3681d3714b20",
+      "bytes": 244471,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\coordinator-001\\actor-receipt.json",
+      "sha256": "b61fe98f20f52e4efec3216fdf49e8eeaa3d152ac90c4edf22b1aa338936fdef",
+      "bytes": 2231,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\coordinator-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "d85bebc5b5f7af9102feef00306cc0a4638dbe040d9ed2d6eea0bee567621396",
+      "bytes": 6204,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+      "sha256": "b43059d9226faa99dfc4d2f200e959927c60220275d9415c0150abaecbb82379",
+      "bytes": 142297,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\reviewer-002\\actor-receipt.json",
+      "sha256": "23c27529c2253390b0ea484017aa5b2c3525ccfd0424b4eb893043d01d61080c",
+      "bytes": 2246,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\reviewer-002\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "a425fb2a23c5121f554dd4cb05d4d455b58c964257576e7c4446877d73bcd197",
+      "bytes": 3364,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\reviewer-002\\full-public-trace.jsonl",
+      "sha256": "d6060cf55662d7f4fab6737d2826e0de5526c098c5a1337c7476148269d71711",
+      "bytes": 116356,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\writer-001\\actor-receipt.json",
+      "sha256": "4d7ecb00f24873ebf43efc0b05ac274d019a6cc1a475ec1f3dfda3dc7c00f545",
+      "bytes": 2255,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\writer-001\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "7d564617898c8db2e329a3abb9dbc0447cb298d7f935717fd54d27beb71bf008",
+      "bytes": 12343,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\writer-001\\full-public-trace.jsonl",
+      "sha256": "6f2864a6b52888d0cf513dd59258d9dbd5185af2c433494b3ce57de2f52e3368",
+      "bytes": 288719,
+      "purpose": "public tool calls and returns"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\writer-003\\actor-receipt.json",
+      "sha256": "1e55222561a4591edc6f8450fd1c633ae9d0424d32f5fc758c73ce96d9bd85f5",
+      "bytes": 2289,
+      "purpose": "actor dispatch binding"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\writer-003\\PUBLIC_TRACE_AUDIT.json",
+      "sha256": "d0c74fe2d08c302dc190efeffbd99fdf1eaac424f463ff7fe85cbc0bd942803f",
+      "bytes": 3211,
+      "purpose": "recording completeness and digest"
+    },
+    {
+      "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-c\\actors\\writer-003\\full-public-trace.jsonl",
+      "sha256": "ba364e89e9fb6551b9468bd404a3fd8114e87102291cfa26dae832720cb3fc14",
+      "bytes": 60648,
+      "purpose": "public tool calls and returns"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "run": "r2-h1-b",
+  "command": [
+    "docker",
+    "run",
+    "--network",
+    "none",
+    "--mount",
+    "type=volume,source=rep26-p6-tech-f848a0fdae9e-e48678-work,target=/work,readonly",
+    "--mount",
+    "type=bind,source=D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\final_research_supplement_20260915,target=/checks,readonly",
+    "--entrypoint",
+    "/bin/bash",
+    "-w",
+    "/work/ProbabilityTheoryFormalization",
+    "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+    "--noprofile",
+    "--norc",
+    "-c",
+    "sed -n \"440,461p\" .lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/Finite.lean; sed -n \"185,205p\" .lake/packages/mathlib/Mathlib/MeasureTheory/PiSystem.lean; rg -n \"Ico.*Ioo|Ioo.*Ico\" .lake/packages/mathlib/Mathlib/MeasureTheory/Measure/NullMeasurable.lean .lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean; cat lean-toolchain; git -C .lake/packages/mathlib rev-parse HEAD"
+  ],
+  "exit_code": 0,
+  "output": "  | compl t htm iht =>\n    rw [measure_compl (h t htm) (by finiteness), measure_compl (h t htm) (by finiteness), iht,\n      h_univ]\n  | iUnion f hfd hfm ihf =>\n    simp [measure_iUnion, hfd, h _ (hfm _), ihf]\n\n/-- Two finite measures are equal if they are equal on the π-system generating the σ-algebra\n  (and `univ`). -/\ntheorem ext_of_generate_finite (C : Set (Set α)) (hA : m0 = generateFrom C) (hC : IsPiSystem C)\n    [IsFiniteMeasure μ] (hμν : ∀ s ∈ C, μ s = ν s) (h_univ : μ univ = ν univ) : μ = ν :=\n  Measure.ext fun _s hs =>\n    ext_on_measurableSpace_of_generate_finite m0 C hμν le_rfl hA hC h_univ hs\n\nnamespace Measure\n\nnamespace FiniteAtFilter\n\nvariable {f g : Filter α}\n\ntheorem filter_mono (h : f ≤ g) : μ.FiniteAtFilter g → μ.FiniteAtFilter f := fun ⟨s, hs, hμ⟩ =>\n  ⟨s, h hs, hμ⟩\n\n\ntheorem isPiSystem_Ixx_mem {Ixx : α → α → Set α} {p : α → α → Prop}\n    (Hne : ∀ {a b}, (Ixx a b).Nonempty → p a b)\n    (Hi : ∀ {a₁ b₁ a₂ b₂}, Ixx a₁ b₁ ∩ Ixx a₂ b₂ = Ixx (max a₁ a₂) (min b₁ b₂)) (s t : Set α) :\n    IsPiSystem { S | ∃ᵉ (l ∈ s) (u ∈ t), p l u ∧ Ixx l u = S } := by\n  rintro _ ⟨l₁, hls₁, u₁, hut₁, _, rfl⟩ _ ⟨l₂, hls₂, u₂, hut₂, _, rfl⟩\n  simp only [Hi]\n  exact fun H => ⟨l₁ ⊔ l₂, sup_ind l₁ l₂ hls₁ hls₂, u₁ ⊓ u₂, inf_ind u₁ u₂ hut₁ hut₂, Hne H, rfl⟩\n\ntheorem isPiSystem_Ixx {Ixx : α → α → Set α} {p : α → α → Prop}\n    (Hne : ∀ {a b}, (Ixx a b).Nonempty → p a b)\n    (Hi : ∀ {a₁ b₁ a₂ b₂}, Ixx a₁ b₁ ∩ Ixx a₂ b₂ = Ixx (max a₁ a₂) (min b₁ b₂)) (f : ι → α)\n    (g : ι' → α) : @IsPiSystem α { S | ∃ i j, p (f i) (g j) ∧ Ixx (f i) (g j) = S } := by\n  simpa only [exists_range_iff] using isPiSystem_Ixx_mem (@Hne) (@Hi) (range f) (range g)\n\ntheorem isPiSystem_Ioo_mem (s t : Set α) :\n    IsPiSystem { S | ∃ᵉ (l ∈ s) (u ∈ t), l < u ∧ Ioo l u = S } :=\n  isPiSystem_Ixx_mem (Ixx := Ioo) (fun ⟨_, hax, hxb⟩ => hax.trans hxb) Ioo_inter_Ioo s t\n\ntheorem isPiSystem_Ioo (f : ι → α) (g : ι' → α) :\n    @IsPiSystem α { S | ∃ l u, f l < g u ∧ Ioo (f l) (g u) = S } :=\n.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean:112:theorem Ioo_ae_eq_Ico : Ioo a b =ᵐ[μ] Ico a b :=\n.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean:113:  Ioo_ae_eq_Ico' (measure_singleton a)\n.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean:136:theorem restrict_Ioo_eq_restrict_Ico : μ.restrict (Ioo a b) = μ.restrict (Ico a b) :=\n.lake/packages/mathlib/Mathlib/MeasureTheory/Measure/Typeclasses/NoAtoms.lean:137:  restrict_congr_set Ioo_ae_eq_Ico\nleanprover/lean4:v4.31.0\nfabf563a7c95a166b8d7b6efca11c8b4dc9d911f\n\n",
+  "volume_read_only": "rep26-p6-tech-f848a0fdae9e-e48678-work",
+  "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c"
+}

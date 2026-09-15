@@ -1,0 +1,142 @@
+{
+  "schema": "toyapollo.neutral_submission.v1",
+  "task_ids": [
+    "thm_9_4",
+    "thm_9_5",
+    "thm_9_6",
+    "prob_9_6",
+    "prob_9_8"
+  ],
+  "target_files": [
+    "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/thm_9_4.lean",
+    "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/thm_9_5_dirichlet.lean",
+    "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/thm_9_5.lean",
+    "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/thm_9_6.lean",
+    "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/prob_9_6.lean",
+    "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/prob_9_8.lean"
+  ],
+  "public_declarations": [
+    "thm_9_4",
+    "dirichletPartial",
+    "dampedDirichlet",
+    "integral_exp_neg_mul_cos_Ioi",
+    "dampedDirichlet_eq_arctan_inv",
+    "tendsto_dirichletPartial_pi_div_two",
+    "inversionCoeff",
+    "inversionKernel",
+    "inversion_fubini_finite",
+    "inversionLimitValue",
+    "inversion_dominated_convergence",
+    "inversionKernel_dirichlet_formula",
+    "tendsto_inversionInner",
+    "inversionInner_norm_le",
+    "thm_9_5",
+    "cdfAtomSet",
+    "cdfAtomSet_countable",
+    "dense_common_cdf_continuity_points",
+    "inversion_openInterval_eq",
+    "thm_9_6",
+    "thm_9_6_randomVariable",
+    "cauchyFourierSource",
+    "fourier_cauchyFourierSource",
+    "fourier_eq_cauchyPDF",
+    "fourierInv_cauchyPDF_eq_exp",
+    "characteristicFunction_cauchyMeasure_zero",
+    "characteristicFunction_iid_average",
+    "cauchy_characteristic_average_pow",
+    "prob_9_6",
+    "integerPoints",
+    "measurableSet_integerPoints",
+    "cos_two_pi_eq_one_iff_integer",
+    "exp_two_pi_I_eq_one_iff_integer",
+    "prob_9_8",
+    "prob_9_8_randomVariable"
+  ],
+  "dependencies": [
+    "ProbabilityTheory.chapter_09.def_9_3",
+    "ProbabilityTheory.chapter_07.thm_7_7",
+    "ProbabilityTheory.chapter_08.thm_8_5",
+    "ProbabilityTheory.chapter_03.thm_3_9",
+    "Mathlib",
+    "Mathlib.MeasureTheory.Measure.IntegralCharFun",
+    "Mathlib.MeasureTheory.Measure.CharacteristicFunction.Basic",
+    "Mathlib.Probability.Distributions.Cauchy",
+    "Mathlib.Probability.Independence.CharacteristicFunction",
+    "Mathlib.Analysis.Fourier.Inversion",
+    "Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap"
+  ],
+  "requirement_bindings": {
+    "thm_9_4": {
+      "declarations": [
+        "thm_9_4"
+      ],
+      "files": [
+        "ProbabilityTheory/chapter_09/thm_9_4.lean"
+      ],
+      "premises": "x : ℝ"
+    },
+    "thm_9_5": {
+      "declarations": [
+        "inversion_fubini_finite",
+        "tendsto_dirichletPartial_pi_div_two",
+        "tendsto_inversionInner",
+        "inversionInner_norm_le",
+        "thm_9_5"
+      ],
+      "files": [
+        "ProbabilityTheory/chapter_09/thm_9_5_dirichlet.lean",
+        "ProbabilityTheory/chapter_09/thm_9_5.lean"
+      ],
+      "premises": "μ : Measure ℝ, IsFiniteMeasure μ, a b : ℝ, a < b",
+      "obligations": "finite-T Fubini; kernel reduction; independently proved Dirichlet limit; interior/endpoints/exterior limits; uniform domination; endpoint half masses"
+    },
+    "thm_9_6": {
+      "declarations": [
+        "cdfAtomSet_countable",
+        "dense_common_cdf_continuity_points",
+        "inversion_openInterval_eq",
+        "thm_9_6",
+        "thm_9_6_randomVariable"
+      ],
+      "files": [
+        "ProbabilityTheory/chapter_09/thm_9_6.lean"
+      ],
+      "premises": "finite real Borel measures with equal characteristic functions",
+      "obligations": "uses thm_9_5 on atom-free endpoints; avoids the countable union of atoms; shifted rational dense intervals determine the Borel measure"
+    },
+    "prob_9_6": {
+      "declarations": [
+        "fourier_eq_cauchyPDF",
+        "fourierInv_cauchyPDF_eq_exp",
+        "characteristicFunction_cauchyMeasure_zero",
+        "characteristicFunction_iid_average",
+        "prob_9_6"
+      ],
+      "files": [
+        "ProbabilityTheory/chapter_09/prob_9_6.lean"
+      ],
+      "premises": "probability measure P; iid X; nonzero scale γ; law of X₀ equals density-defined cauchyMeasure 0 γ; n ≠ 0",
+      "obligations": "derives the Cauchy characteristic function from its Mathlib density via Fourier inversion, then applies iid product and uniqueness"
+    },
+    "prob_9_8": {
+      "declarations": [
+        "integerPoints",
+        "exp_two_pi_I_eq_one_iff_integer",
+        "prob_9_8",
+        "prob_9_8_randomVariable"
+      ],
+      "files": [
+        "ProbabilityTheory/chapter_09/prob_9_8.lean"
+      ],
+      "premises": "probability law, or an AEMeasurable real random variable on a probability space",
+      "obligations": "both law-level and random-variable formulations; equivalence with almost-sure integer-valuedness"
+    }
+  },
+  "verification": {
+    "build": "/opt/lean/bin/lake build: success (8569 jobs)",
+    "forbidden_placeholders": "no sorry, admit, or new axiom in target/support files",
+    "axioms": "All five primary declarations depend only on propext, Classical.choice, Quot.sound"
+  },
+  "unresolved": [],
+  "stop_reason": "complete"
+}

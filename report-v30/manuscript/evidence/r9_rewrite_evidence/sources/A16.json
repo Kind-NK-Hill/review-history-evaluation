@@ -1,0 +1,43 @@
+{
+  "epoch": 1789132828.4034493,
+  "version": "L3-task-tail-sensitivity-r1",
+  "registered_after_observed_original_F_E_reviews": [
+    {
+      "path": "ROOT/rr-l3-v1\\candidate-6d87e44415de\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+      "sha256": "cd092248138611b3e20efb2aeeaff14089e51d99225747d8c7394a36d6d3b2bb"
+    },
+    {
+      "path": "ROOT/rr-l3-v1\\candidate-6d87e44415de\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+      "sha256": "9daa300077d44fef0a34d8c765ab68b8f637a2a6bd199dcd07a54644a2d3c5fa"
+    },
+    {
+      "path": "ROOT/rr-l3-v1\\candidate-b299284a15fd\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+      "sha256": "8d2762cfb26d36758ecaaeb1a5a4f4744ffc8621d142987fd46970b525448bc5"
+    },
+    {
+      "path": "ROOT/rr-l3-v1\\candidate-b299284a15fd\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+      "sha256": "68a135723e60c9a7afae33ce80a252d62e2ec8942bd137c7a00687d9a86658c2"
+    },
+    {
+      "path": "ROOT/rr-l3-v1\\candidate-ca86a7f5709c\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+      "sha256": "8a1db1f735002c65a97886fafb946650c8ec94092d95572334f8d6901226958f"
+    },
+    {
+      "path": "ROOT/rr-l3-v1\\candidate-ca86a7f5709c\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+      "sha256": "0d0c860962b2b8f94e6e90f0182174840a1565f322670b5bb3549f6de0e88361"
+    }
+  ],
+  "not_original_preregistration": true,
+  "original_rules_and_reviews_unchanged": true,
+  "trigger": "Initial F/E reviews exposed that E demands an extended-integral-to-eventual-integrability wrapper even when a candidate uses the eventual-integrability formulation expressly permitted by TASK. Preserve E as strict source-scope sensitivity; do not silently impose it as the only original TASK acceptance rule.",
+  "quoted_original_task": "合同允许采用最终尾部可积表述",
+  "interpretations": {
+    "F": "Existing finite-integral-sequence convention; conditional retrospective sensitivity unless frozen source supports it.",
+    "E": "Existing exact nonnegative extended-integral source scope including derivation of eventual integrability; preserve all initial results.",
+    "T_task_permitted_eventual_tail": "Read the delivered TASK permission literally: explicit eventual integrability of the sequence and integrability of its limit may be used as the tail formulation of finite integral convergence, with the real integral convergence condition still required. Candidate must actually prove the negative-part/minimum control and L1 limit for that eventual-tail domain. Requiring every initial term integrable without a real eventual-tail wrapper does not cover this T domain. Never assume L1 convergence itself."
+  },
+  "other_scope_obligations": "Source-vs-TASK limit measurability and nonnegativity, public wrappers, general densities and Gaussian positive/zero cases remain independently assessed. Equal P2 behavior does not force equal overall labels.",
+  "assessment_plan": "All four known original L3 candidates, including historical B, receive the same F/E/T scope in their at-most-one necessary fresh Sol-medium adjudication after all independent F/E reviews finish. This resolves the newly exposed rubric conflict as well as any single-case disagreements/format failures. No solver call, candidate edit, or repeated adjudication.",
+  "final_reporting": "Original verdict, independent F/E results, adjudicated F/E/T results and timing of this scope revision remain separate. Comparison is criterion_dispute when acceptance depends on interpretation. No highest-pass-rate interpretation selection.",
+  "new_solver_trials": 0
+}

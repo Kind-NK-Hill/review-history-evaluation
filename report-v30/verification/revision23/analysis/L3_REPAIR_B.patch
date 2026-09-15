@@ -1,0 +1,109 @@
+--- before/ProbabilityTheory/chapter_07/prob_7_6.lean
++++ after/ProbabilityTheory/chapter_07/prob_7_6.lean
+@@ -52,31 +52,32 @@
+     rw [abs_of_neg (sub_neg.mpr h'), max_eq_left (sub_nonneg.mpr h'.le)]
+     ring
+ 
+-/-- Scheffé's lemma. The integrability hypotheses encode the finite-integral
+-assumptions; no `L¹` convergence is assumed. -/
++/-- Scheffé lemma. Only an eventually integrable tail of the approximating
++sequence is required; finitely many initial terms may be nonintegrable. The
++conclusion still concerns the original, unshifted sequence. -/
+ theorem prob_7_6
+     {α : Type*} [MeasurableSpace α] (μ : Measure α)
+     {fseq : ℕ → α → ℝ} {f : α → ℝ}
+     (hfseq_meas : ∀ n, Measurable (fseq n)) (hf_meas : Measurable f)
+     (hfseq_nonneg : ∀ n x, 0 ≤ fseq n x) (hf_nonneg : ∀ x, 0 ≤ f x)
+-    (hfseq_int : ∀ n, Integrable (fseq n) μ) (hf_int : Integrable f μ)
++    (hfseq_int : ∀ᶠ n in atTop, Integrable (fseq n) μ) (hf_int : Integrable f μ)
+     (hconv : ∀ᵐ x ∂μ, Tendsto (fun n => fseq n x) atTop (𝓝 (f x)))
+     (hintegral : Tendsto (fun n => ∫ x, fseq n x ∂μ) atTop (𝓝 (∫ x, f x ∂μ))) :
+     Tendsto (fun n => ∫ x, |fseq n x - f x| ∂μ) atTop (𝓝 0) := by
+   have hneg := prob_7_6_negPart_integral_tendsto μ hfseq_meas hf_meas
+     hfseq_nonneg hf_nonneg hf_int hconv
+-  have hformula : ∀ n,
++  have hformula : ∀ᶠ n in atTop,
+       (∫ x, |fseq n x - f x| ∂μ) =
+         (∫ x, fseq n x ∂μ) - (∫ x, f x ∂μ) +
+           2 * ∫ x, prob_7_6_negPart fseq f n x ∂μ := by
+-    intro n
++    filter_upwards [hfseq_int] with n hn
+     have hneg_int : Integrable (prob_7_6_negPart fseq f n) μ := by
+       apply hf_int.mono'
+       · exact ((hf_meas.sub (hfseq_meas n)).max measurable_const).aestronglyMeasurable
+       · exact Filter.Eventually.of_forall
+           (prob_7_6_negPart_le hfseq_nonneg hf_nonneg n)
+     have hdiff_int : Integrable (fun x => fseq n x - f x) μ :=
+-      (hfseq_int n).sub hf_int
++      hn.sub hf_int
+     calc
+       (∫ x, |fseq n x - f x| ∂μ) =
+           ∫ x, ((fseq n x - f x) + 2 * prob_7_6_negPart fseq f n x) ∂μ := by
+@@ -88,14 +89,29 @@
+             rw [integral_add hdiff_int (hneg_int.const_mul 2)]
+       _ = (∫ x, fseq n x ∂μ) - (∫ x, f x ∂μ) +
+           2 * ∫ x, prob_7_6_negPart fseq f n x ∂μ := by
+-            rw [integral_sub (hfseq_int n) hf_int, integral_const_mul]
++            rw [integral_sub hn hf_int, integral_const_mul]
+   have hconst : Tendsto (fun _ : ℕ => ∫ x, f x ∂μ) atTop (𝓝 (∫ x, f x ∂μ)) :=
+     tendsto_const_nhds
+   have hmain := (hintegral.sub hconst).add (hneg.const_mul 2)
+-  have heq :
+-      (fun n => ∫ x, |fseq n x - f x| ∂μ) =
+-        (fun n => (∫ x, fseq n x ∂μ) - (∫ x, f x ∂μ) +
+-          2 * ∫ x, prob_7_6_negPart fseq f n x ∂μ) :=
+-    funext hformula
+-  rw [heq]
+-  simpa only [sub_self, zero_add, mul_zero] using hmain
++  have hmain_prime : Tendsto
++      (fun n => (∫ x, fseq n x ∂μ) - (∫ x, f x ∂μ) +
++        2 * ∫ x, prob_7_6_negPart fseq f n x ∂μ)
++      atTop (𝓝 0) := by
++    simpa only [sub_self, zero_add, mul_zero] using hmain
++  apply hmain_prime.congr'
++  filter_upwards [hformula] with n hn
++  exact hn.symm
++
++/-- Compatibility wrapper for the stronger assumption that every approximating
++term is integrable. -/
++theorem prob_7_6_of_forall_integrable
++    {α : Type*} [MeasurableSpace α] (μ : Measure α)
++    {fseq : ℕ → α → ℝ} {f : α → ℝ}
++    (hfseq_meas : ∀ n, Measurable (fseq n)) (hf_meas : Measurable f)
++    (hfseq_nonneg : ∀ n x, 0 ≤ fseq n x) (hf_nonneg : ∀ x, 0 ≤ f x)
++    (hfseq_int : ∀ n, Integrable (fseq n) μ) (hf_int : Integrable f μ)
++    (hconv : ∀ᵐ x ∂μ, Tendsto (fun n => fseq n x) atTop (𝓝 (f x)))
++    (hintegral : Tendsto (fun n => ∫ x, fseq n x ∂μ) atTop (𝓝 (∫ x, f x ∂μ))) :
++    Tendsto (fun n => ∫ x, |fseq n x - f x| ∂μ) atTop (𝓝 0) := by
++  exact prob_7_6 μ hfseq_meas hf_meas hfseq_nonneg hf_nonneg
++    (Filter.Eventually.of_forall hfseq_int) hf_int hconv hintegral
+--- before/ProbabilityTheory/chapter_10/ex_10_3_2.lean
++++ after/ProbabilityTheory/chapter_10/ex_10_3_2.lean
+@@ -27,7 +27,8 @@
+     Tendsto (fun n => ∫ x, |fseq n x - f x|) atTop (𝓝 0) := by
+   apply prob_7_6 volume (fun n => (hfseq n).measurable) hf.measurable
+     (fun n => (hfseq n).nonneg) hf.nonneg
+-    (fun n => integrable_of_integral_eq_one (hfseq n).integral_eq_one)
++    (Filter.Eventually.of_forall fun n =>
++      integrable_of_integral_eq_one (hfseq n).integral_eq_one)
+     (integrable_of_integral_eq_one hf.integral_eq_one) hconv
+   convert (tendsto_const_nhds :
+     Tendsto (fun _ : ℕ => (1 : ℝ)) atTop (𝓝 1)) using 1
+@@ -145,7 +146,6 @@
+   filter_upwards with n
+   dsimp only [fseq, f] at *
+   rw [ex_10_3_2_densityLaw_gaussian_eq _ (hvseq0 n),
+-
+     ex_10_3_2_densityLaw_gaussian_eq _ hv0]
+ /-- Positive limiting variance: the corresponding normal laws converge in distribution. -/
+ theorem ex_10_3_2_gaussian_positive_distribution
+@@ -274,7 +274,8 @@
+     exact prob_7_6 volume
+       (fun n => measurable_gaussianPDFReal _ _) (measurable_gaussianPDFReal _ _)
+       (fun n => gaussianPDFReal_nonneg _ _) (gaussianPDFReal_nonneg _ _)
+-      (fun n => integrable_gaussianPDFReal _ _) (integrable_gaussianPDFReal _ _)
++      (Filter.Eventually.of_forall fun n => integrable_gaussianPDFReal _ _)
++      (integrable_gaussianPDFReal _ _)
+       hpoint hint
+   rw [thm_14_4_totalVariationConvergence]
+   have hhalf : Tendsto

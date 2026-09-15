@@ -1,0 +1,11 @@
+{
+  "command": "python -m unittest discover -s evaluation_repair_r3_20260912 -p test_*.py",
+  "observed_exit_code": 0,
+  "tests_run": 18,
+  "failures": 0,
+  "errors": 0,
+  "observed_elapsed_seconds": 0.117,
+  "before_fix_repro": "parser-before-tests.txt",
+  "real_legacy_failure_samples": 5,
+  "new_model_calls": 0
+}

@@ -1,0 +1,586 @@
+{
+  "analysis_sha256": "25ccf8802400e48631be6793ed191e25112116945534c81a375223b7a369c622",
+  "fixture_input_sha256": "4d8370825a882088c362be37868ff6fe9be66c7d85704939ea3d4193cb1a8e27",
+  "scope": "targeted regression and synthetic boundary suite; not accuracy estimation",
+  "real": {
+    "total": 13,
+    "passed": 13
+  },
+  "synthetic": {
+    "total": 5,
+    "passed": 5
+  },
+  "results": [
+    {
+      "name": "stdin located error",
+      "fixture_type": "real_event",
+      "event_id": "01a09dff-e040-7dd2-8d88-0a15b99b7f2e:call_kveBenDNEJ36DL9miC2Wx30o",
+      "expected": "one stdin observation with located negative feedback",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lean_stdin",
+          "target": "/dev/stdin",
+          "segment": 1,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "negative_feedback",
+          "reason": "located_lean_diagnostic",
+          "diagnostics": [
+            {
+              "path": "/dev/stdin",
+              "line": "4",
+              "col": "7",
+              "message": "Unknown constant `Real.integral_sin`"
+            },
+            {
+              "path": "/dev/stdin",
+              "line": "11",
+              "col": "7",
+              "message": "Unknown constant `intervalIntegral.integral_eq_setIntegral`"
+            },
+            {
+              "path": "/dev/stdin",
+              "line": "12",
+              "col": "7",
+              "message": "Unknown identifier `integral_Ioc_eq_integral_Icc`"
+            },
+            {
+              "path": "/dev/stdin",
+              "line": "14",
+              "col": "7",
+              "message": "Unknown constant `Complex.integral_re`"
+            },
+            {
+              "path": "/dev/stdin",
+              "line": "16",
+              "col": "7",
+              "message": "Unknown constant `RCLike.integral_re`"
+            },
+            {
+              "path": "/dev/stdin",
+              "line": "18",
+              "col": "7",
+              "message": "Unknown constant `Real.integral_div_sq_add_sq`"
+            }
+          ],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "stdin option recognised",
+      "fixture_type": "real_event",
+      "event_id": "01a09da5-ae2b-7372-9807-389066904448:call_KBfufIQPzq2bj9vz7tKxgnJo",
+      "expected": "one stdin observation; invocation uses --stdin",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lean_stdin",
+          "target": "/dev/stdin",
+          "segment": 1,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "check_passed",
+          "reason": "final_direct_lean_exit_zero",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "direct lean recognised",
+      "fixture_type": "real_event",
+      "event_id": "01a09d49-73d0-7cc1-8b1e-03e1b5f3a588:call_5W4IdiS1NtnjdBQR7ZyqaFZ0",
+      "expected": "direct /opt/lean/bin/lean reports missing module via stdin",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lean_stdin",
+          "target": "/dev/stdin",
+          "segment": 1,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "negative_feedback",
+          "reason": "located_lean_diagnostic",
+          "diagnostics": [
+            {
+              "path": "/dev/stdin",
+              "line": "1",
+              "col": "0",
+              "message": "unknown module prefix 'Mathlib'"
+            }
+          ],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "lake directory option",
+      "fixture_type": "real_event",
+      "event_id": "01a09e50-8653-7173-8a3c-a506fe9f7f93:call_JCJl9FXG59EMYzKdw7fOlto6",
+      "expected": "lake -d directory env lean stdin recognised",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lean_stdin",
+          "target": "/dev/stdin",
+          "segment": 1,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "check_passed",
+          "reason": "final_direct_lean_exit_zero",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "environment assignment preserved",
+      "fixture_type": "real_event",
+      "event_id": "01a09be2-8cc1-70c1-8ea9-d55a871b6891:call_3FRH9yPRyydzMYAyz4XV1O9g",
+      "expected": "PATH assignment does not hide actual target failure",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lean_file",
+          "target": "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13/prob_13_9.lean",
+          "segment": 5,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "negative_feedback",
+          "reason": "located_lean_diagnostic",
+          "diagnostics": [
+            {
+              "path": "ProbabilityTheory/chapter_13/prob_13_9.lean",
+              "line": "38",
+              "col": "2",
+              "message": "Type mismatch: After simplification, term"
+            },
+            {
+              "path": "ProbabilityTheory/chapter_13/prob_13_9.lean",
+              "line": "54",
+              "col": "18",
+              "message": "synthesized type class instance is not definitionally equal to expression inferred by typing rules, synthesized"
+            },
+            {
+              "path": "ProbabilityTheory/chapter_13/prob_13_9.lean",
+              "line": "57",
+              "col": "4",
+              "message": "Type mismatch"
+            },
+            {
+              "path": "ProbabilityTheory/chapter_13/prob_13_9.lean",
+              "line": "106",
+              "col": "2",
+              "message": "Tactic `apply` failed: could not unify the conclusion of `@Finset.measurable_sum`"
+            },
+            {
+              "path": "ProbabilityTheory/chapter_13/prob_13_9.lean",
+              "line": "131",
+              "col": "7",
+              "message": "Unknown identifier `EventuallyEq.of_eq`"
+            }
+          ],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "service compile result",
+      "fixture_type": "real_event",
+      "event_id": "01a09bf0-7b4f-70a3-87f0-626e01cdf4d7:call_wTxDoK8zKtnxOUz2IUSqi0Mg",
+      "expected": "structured compile_pass true is candidate compile evidence",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "service_build_check",
+          "target": "c1",
+          "segment": null,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "check_passed",
+          "reason": "structured_candidate_compile_result",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": false,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "build then other operation fails",
+      "fixture_type": "real_event",
+      "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_QFwb7YatsZb2S7MPARkdSC7V",
+      "expected": "later git failure does not reverse successful build",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lean_file",
+          "target": "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/thm_9_4.lean",
+          "segment": 2,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "unresolved",
+          "reason": "insufficient_or_compound_output",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        },
+        {
+          "kind": "lake_build",
+          "target": "ProbabilityTheory.chapter_09.thm_9_4",
+          "segment": 3,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "check_passed",
+          "reason": "explicit_build_completion",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "mixed target feedback",
+      "fixture_type": "real_event",
+      "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_GWO7BnfZBl8Xuqe2pq0cctup",
+      "expected": "fubini build passed, separate kernel direct check failed",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lake_build",
+          "target": "ProbabilityTheory.chapter_09.thm_9_5_fubini",
+          "segment": 1,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "check_passed",
+          "reason": "explicit_build_completion",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        },
+        {
+          "kind": "lean_file",
+          "target": "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_09/thm_9_5_kernel.lean",
+          "segment": 2,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "negative_feedback",
+          "reason": "located_lean_diagnostic",
+          "diagnostics": [
+            {
+              "path": "ProbabilityTheory/chapter_09/thm_9_5_kernel.lean",
+              "line": "19",
+              "col": "2",
+              "message": "Tactic `apply` failed: could not unify the conclusion of `norm_eq_zero.mp`"
+            },
+            {
+              "path": "ProbabilityTheory/chapter_09/thm_9_5_kernel.lean",
+              "line": "35",
+              "col": "2",
+              "message": "unsolved goals"
+            },
+            {
+              "path": "ProbabilityTheory/chapter_09/thm_9_5_kernel.lean",
+              "line": "46",
+              "col": "6",
+              "message": "Tactic `rewrite` failed: Did not find an occurrence of the pattern"
+            },
+            {
+              "path": "ProbabilityTheory/chapter_09/thm_9_5_kernel.lean",
+              "line": "60",
+              "col": "16",
+              "message": "Failed to rewrite using equation theorems for `inversionJoint`"
+            },
+            {
+              "path": "ProbabilityTheory/chapter_09/thm_9_5_kernel.lean",
+              "line": "67",
+              "col": "16",
+              "message": "Unknown identifier `intervalIntegral_intervalIntegral_swap`"
+            },
+            {
+              "path": "ProbabilityTheory/chapter_09/thm_9_5_kernel.lean",
+              "line": "69",
+              "col": "10",
+              "message": "Tactic `apply` failed: could not unify the conclusion of `@intervalIntegral.integral_congr`"
+            }
+          ],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "warning replay not failure",
+      "fixture_type": "real_event",
+      "event_id": "01a09bf0-d807-7842-bffa-c88108ef9b0e:call_Au7tcM0KwbykUTsqcCiVORXX",
+      "expected": "warning-prefixed old error strings do not become fresh failures",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lake_build",
+          "target": "ProbabilityTheory.chapter_11.thm_11_4",
+          "segment": 1,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "unresolved",
+          "reason": "insufficient_or_compound_output",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        },
+        {
+          "kind": "lean_file",
+          "target": "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "segment": 2,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "unresolved",
+          "reason": "insufficient_or_compound_output",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        },
+        {
+          "kind": "lake_build",
+          "target": "ProbabilityTheory",
+          "segment": 3,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "unresolved",
+          "reason": "insufficient_or_compound_output",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "malformed heredoc does not run trailing source",
+      "fixture_type": "real_event",
+      "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_DDxeZTzmVAJ6u5PtyQw3Anvz",
+      "expected": "unclosed CONTENT heredoc consumes trailing lake command as text",
+      "passed": true,
+      "actual_checks": []
+    },
+    {
+      "name": "build redirect is not a module",
+      "fixture_type": "real_event",
+      "event_id": "01a09caa-43e5-7151-9324-35a356bfdbc1:call_B3Bv6Cxvt2Drxd8hBuGTFZuO",
+      "expected": "shell redirect is excluded from build target list",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lake_build",
+          "target": "<default build>",
+          "segment": 1,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "check_passed",
+          "reason": "explicit_build_completion",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "multiple builds no broad false failure",
+      "fixture_type": "real_event",
+      "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_TBzwGE6p3FMfQXEFgviRfSKS",
+      "expected": "two requests; unresolved allowed until output attribution is supported",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lake_build",
+          "target": "ProbabilityTheory.chapter_09.thm_9_5",
+          "segment": 3,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "unresolved",
+          "reason": "insufficient_or_compound_output",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        },
+        {
+          "kind": "lake_build",
+          "target": "<default build>",
+          "segment": 4,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "unresolved",
+          "reason": "insufficient_or_compound_output",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "pipeline failure beats outer zero",
+      "fixture_type": "real_event",
+      "event_id": "01a09c73-645a-7193-bcf6-5cebbed5a78b:call_wiwzjdgOvyzFa0nPdaeTpMYL",
+      "expected": "real target diagnostics retain negative feedback through output pipeline",
+      "passed": true,
+      "actual_checks": [
+        {
+          "kind": "lean_file",
+          "target": "/work/role-output/draft.lean",
+          "segment": 10,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "negative_feedback",
+          "reason": "located_lean_diagnostic",
+          "diagnostics": [
+            {
+              "path": "/work/role-output/draft.lean",
+              "line": "237",
+              "col": "19",
+              "message": "unexpected token '∂R'; expected ',' or '∂'"
+            },
+            {
+              "path": "/work/role-output/draft.lean",
+              "line": "177",
+              "col": "10",
+              "message": "Function expected at"
+            },
+            {
+              "path": "/work/role-output/draft.lean",
+              "line": "235",
+              "col": "50",
+              "message": "unsolved goals"
+            },
+            {
+              "path": "/work/role-output/draft.lean",
+              "line": "177",
+              "col": "74",
+              "message": "unsolved goals"
+            },
+            {
+              "path": "/work/role-output/draft.lean",
+              "line": "324",
+              "col": "10",
+              "message": "Function expected at"
+            },
+            {
+              "path": "/work/role-output/draft.lean",
+              "line": "324",
+              "col": "74",
+              "message": "unsolved goals"
+            }
+          ],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "heredoc quoted command is data",
+      "fixture_type": "synthetic_boundary",
+      "expected": "no requested Lean action inside literal document body",
+      "passed": true,
+      "command": "cat > note.txt <<'EOF'\nlake env lean Fake.lean\nEOF",
+      "stdout": "",
+      "stderr": "",
+      "actual_checks": []
+    },
+    {
+      "name": "pipeline masks silent failure",
+      "fixture_type": "synthetic_boundary",
+      "expected": "pipeline final status cannot establish Lean success",
+      "passed": true,
+      "command": "lake env lean F.lean 2>/dev/null | head -1",
+      "stdout": "",
+      "stderr": "",
+      "actual_checks": [
+        {
+          "kind": "lean_file",
+          "target": "/work/ProbabilityTheoryFormalization/F.lean",
+          "segment": 0,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "unresolved",
+          "reason": "insufficient_or_compound_output",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "or branch not reached",
+      "fixture_type": "synthetic_boundary",
+      "expected": "right branch may be skipped, so exit zero cannot establish check success",
+      "passed": true,
+      "command": "true || lake env lean F.lean",
+      "stdout": "",
+      "stderr": "",
+      "actual_checks": [
+        {
+          "kind": "lean_file",
+          "target": "/work/ProbabilityTheoryFormalization/F.lean",
+          "segment": 1,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "unresolved",
+          "reason": "insufficient_or_compound_output",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "old log cannot establish fresh build",
+      "fixture_type": "synthetic_boundary",
+      "expected": "old log success belongs to a read, not fresh failed build",
+      "passed": true,
+      "command": "cat old.log; lake build F 2>/dev/null",
+      "stdout": "Build completed successfully (1 jobs).\n",
+      "stderr": "",
+      "actual_checks": [
+        {
+          "kind": "lake_build",
+          "target": "F",
+          "segment": 1,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "unresolved",
+          "reason": "insufficient_or_compound_output",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": true,
+          "dynamic_shell": false
+        }
+      ]
+    },
+    {
+      "name": "output redirect not second check",
+      "fixture_type": "synthetic_boundary",
+      "expected": "redirect destination with .lean extension is not a second input",
+      "passed": true,
+      "command": "lake env lean F.lean > transcript.lean",
+      "stdout": "",
+      "stderr": "",
+      "actual_checks": [
+        {
+          "kind": "lean_file",
+          "target": "/work/ProbabilityTheoryFormalization/F.lean",
+          "segment": 0,
+          "cwd": "/work/ProbabilityTheoryFormalization",
+          "state": "check_passed",
+          "reason": "final_direct_lean_exit_zero",
+          "diagnostics": [],
+          "output_truncated": false,
+          "compound_command": false,
+          "dynamic_shell": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "A_original_candidate_recovered_review_and_final_source_same_hash": "23c9e5644c29a096464dfe92906d30ec047e52fdc64b3b3199234df1c9795332",
+  "final_source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+  "original_event": "E092",
+  "recovery_events": [
+    "R021",
+    "R044"
+  ],
+  "official_original_min": 25.639281618595124,
+  "official_recovery_min": 18.714983333333333,
+  "official_total_min": 44.35426495192846,
+  "scope": "Identity of ex_10_3_2 source across interruption; no new model or Lean execution."
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "group": "L1",
+    "arm": "A",
+    "label": "候选",
+    "minute": 7.45338807106018,
+    "event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_fHa1f9Ue82nEpmSUeacKMaqO"
+  },
+  {
+    "group": "L1",
+    "arm": "A",
+    "label": "终点",
+    "minute": 15.207516193389893,
+    "event_id": null
+  },
+  {
+    "group": "L1",
+    "arm": "B",
+    "label": "候选",
+    "minute": 11.380989102522532,
+    "event_id": "01a09be2-8cc1-70c1-8ea9-d55a871b6891:call_DCWeVrA7RK67e0ItEc8WicCJ"
+  },
+  {
+    "group": "L1",
+    "arm": "B",
+    "label": "终点",
+    "minute": 14.84463586807251,
+    "event_id": null
+  },
+  {
+    "group": "L1",
+    "arm": "C",
+    "label": "候选",
+    "minute": 10.63125851949056,
+    "event_id": "01a09bf1-4ea5-79e2-a2ba-3e54cf9efe31:call_0jwy02Hvp0ZVBST77Rzmf5lJ"
+  },
+  {
+    "group": "L1",
+    "arm": "C",
+    "label": "终点",
+    "minute": 15.266217982769012,
+    "event_id": null
+  },
+  {
+    "group": "M3",
+    "arm": "A",
+    "label": "助手",
+    "minute": 22.820677757263184,
+    "event_id": "01a09d20-23a3-74e2-95a7-eba4f7be4e36:call_waDZUW7sBUZWLA77f08XQ4IJ"
+  },
+  {
+    "group": "M3",
+    "arm": "A",
+    "label": "采用",
+    "minute": 38.40782775481542,
+    "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_pniiC6CvP3sXHQm4eFhQHUja"
+  },
+  {
+    "group": "M3",
+    "arm": "A",
+    "label": "终点",
+    "minute": 50.2390918970108,
+    "event_id": null
+  },
+  {
+    "group": "M3",
+    "arm": "B",
+    "label": "候选",
+    "minute": 16.449220299720764,
+    "event_id": "01a09d25-d362-74f2-bcab-f1fe1d635d6b:call_HJa6x13wTEyXjvea0yb35eKl"
+  },
+  {
+    "group": "M3",
+    "arm": "B",
+    "label": "终点",
+    "minute": 20.2089257756869,
+    "event_id": null
+  },
+  {
+    "group": "M3",
+    "arm": "C",
+    "label": "候选",
+    "minute": 11.941503914197286,
+    "event_id": "01a09d39-80f0-7b80-a4a8-c21460c06495:call_I5TodmiIfr1PItEuuZbiUDJ4"
+  },
+  {
+    "group": "M3",
+    "arm": "C",
+    "label": "终点",
+    "minute": 18.398693641026814,
+    "event_id": null
+  },
+  {
+    "group": "H1",
+    "arm": "A",
+    "label": "积分",
+    "minute": 57.27266439596812,
+    "event_id": "01a09dff-e040-7dd2-8d88-0a15b99b7f2e:call_8RYOPRucuWREHvytkMdSlAGx"
+  },
+  {
+    "group": "H1",
+    "arm": "A",
+    "label": "反演",
+    "minute": 78.39544773101807,
+    "event_id": "01a09dd8-ec2a-78f3-a6ca-f55a33d4bd5f:call_XI8p7Wp4j5vQ35AvEvVs5Wfv"
+  },
+  {
+    "group": "H1",
+    "arm": "A",
+    "label": "终点",
+    "minute": 135.5876588543256,
+    "event_id": null
+  },
+  {
+    "group": "H1",
+    "arm": "B",
+    "label": "积分",
+    "minute": 92.04809761444727,
+    "event_id": "01a09d8f-64a2-7050-a53e-4ad7d896b825:call_SFw09TWD43cl6DKZy8la4WlE"
+  },
+  {
+    "group": "H1",
+    "arm": "B",
+    "label": "反演",
+    "minute": 97.41173094908396,
+    "event_id": "01a09d47-6806-7303-a619-3b310fc19f0a:call_I9gj8NAgWxDGfE4cjxqmtPoH"
+  },
+  {
+    "group": "H1",
+    "arm": "B",
+    "label": "终点",
+    "minute": 123.88697911898295,
+    "event_id": null
+  },
+  {
+    "group": "H1",
+    "arm": "C",
+    "label": "积分",
+    "minute": 33.886734227339424,
+    "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_i0G9QOOF9AKMfNFrJixnQzWw"
+  },
+  {
+    "group": "H1",
+    "arm": "C",
+    "label": "反演",
+    "minute": 47.2203675587972,
+    "event_id": "01a09d4a-834c-7da0-aedd-f64ba089e625:call_5rzsw2utDuADoy9dfW7s6X6G"
+  },
+  {
+    "group": "H1",
+    "arm": "C",
+    "label": "终点",
+    "minute": 86.41807678937911,
+    "event_id": null
+  }
+]

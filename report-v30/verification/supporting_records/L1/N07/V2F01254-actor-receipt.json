@@ -1,0 +1,48 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "pilot-prob_13_9-C-r1",
+  "arm": "C",
+  "role": "math_checker",
+  "dispatch_id": "ebac7251-a39a-4e7c-9aa2-6123ea2ab75f",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": "8124accb-668d-499a-800f-6dcf2d1aad02",
+  "help_config_sha256": null,
+  "effective_help_config_sha256": "7f1edfe6b37e33e40560cf34b223f8c94081b818004d3f6b739d1a0bf517729b",
+  "session_ids": [
+    "01a08dd7-ed75-7cf2-bb1a-5ca5fc9e2a83"
+  ],
+  "usage": [
+    {
+      "input_tokens": 118651,
+      "cached_input_tokens": 94336,
+      "output_tokens": 3285
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 94.6710000000021,
+    "deadline_epoch": 1789090708.9217613,
+    "remaining_at_launch_seconds": 4575.491274833679,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\c-pilot-r1\\prob_13_9\\actors\\math_checker-002\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\c-pilot-r1\\prob_13_9\\actors\\math_checker-002\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 5400.0,
+    "started_epoch": 1789085308.9217613,
+    "deadline_epoch": 1789090708.9217613,
+    "remaining_seconds": 4480.811579704285
+  },
+  "public_events_sha256": "ad800a13cfb0185e74298ad0f335c47f9e924f5b3b282e84612a718317bda3b6",
+  "raw_public_events_sha256": "ad800a13cfb0185e74298ad0f335c47f9e924f5b3b282e84612a718317bda3b6",
+  "usd": null
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "stage.h1_support_export_recovery.v1",
+  "epoch": 1789107777.3150666,
+  "call_id": "a592bc46-fdaa-4507-9594-6e1750eaa0aa",
+  "run_id": "coverage-H1_inversion_chain-A-r2-continuation-r4",
+  "source_actor_receipt": "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\help\\a592bc46-fdaa-4507-9594-6e1750eaa0aa\\actor\\actor-receipt.json",
+  "helper_session_ids": [
+    "01a08eef-d26e-7a31-ab78-409b787b851b"
+  ],
+  "helper_dispatch_id": "6399282e-14f1-4469-a374-f83a5a4061c0",
+  "original_failure_hashes": {
+    "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\help\\a592bc46-fdaa-4507-9594-6e1750eaa0aa\\after-workspace.tar": "375a9ec282b9d06a8a3e9f1d9b61c89948c0268c0c48c139cd4226122e369f95",
+    "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\help\\a592bc46-fdaa-4507-9594-6e1750eaa0aa\\after-export.stderr.bin": "019b99f90096f3913ade6d3229f95580292cdb903f86552cb7fdc407f262109f",
+    "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\help\\a592bc46-fdaa-4507-9594-6e1750eaa0aa\\actor\\actor-receipt.json": "c2d67ecb446f6b2403062863696fdca1ccd7580da4e87f551f5af22e531707e4"
+  },
+  "failure": "UID0 without DAC override cannot read UID1001-owned mode0700 temporary directory in read-only export container",
+  "repair": "Read the unchanged retained support volume as owner UID1001 in a new read-only export container",
+  "export_container": "9409f93fe9d590c7df11ad48c973feb94a9dbbd0768de9594f18f60154d2ed73",
+  "retained_work_volume": "fw-help-a592bc46fdaa45079594-work",
+  "recovered_archive_sha256": "e1956fc278b449a75925bc71a1f687f2ce6db9fb53d616713ac82b6b1069291c",
+  "all_previously_exported_entries_unchanged": true,
+  "additional_recovered_entries": [
+    "thm95.6HqXlx",
+    "thm95.6HqXlx/Main.lean"
+  ],
+  "public_inputs_unchanged": true,
+  "frozen_runtime_unchanged": true,
+  "new_model_calls": 0,
+  "original_root_clock": [
+    1,
+    36000.0,
+    1789101004.9486196,
+    1789137004.9486196
+  ],
+  "role_artifacts": [
+    {
+      "kind": "role_response",
+      "workspace_path": "/work/role-output/response.md",
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\support3-export-recovery-r1\\role-artifacts\\1-response.md",
+      "sha256": "8bcdb8e1451cb9a012e01e537563752c21e8de60da157e686f496435d1cb95bc",
+      "bytes": 1062,
+      "applied": false,
+      "adoption": "not_observed"
+    },
+    {
+      "kind": "declared_target_patch",
+      "workspace_path": "/work/role-output/patch.diff",
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\support3-export-recovery-r1\\role-artifacts\\2-patch.diff",
+      "sha256": "49c2a67e4f2882919a5b6135e42f362eb8d05180f8c2cf48a01ab669b73cf32d",
+      "bytes": 25647,
+      "applied": false,
+      "adoption": "not_observed"
+    },
+    {
+      "kind": "role_response_metadata",
+      "workspace_path": "/work/role-output.response.json",
+      "path": "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\support3-export-recovery-r1\\role-artifacts\\3-role-output.response.json",
+      "sha256": "387a3e12da6f71efd1acf25db39974c097e2395f85767b33b0becb74d8473b36",
+      "bytes": 500,
+      "applied": false,
+      "adoption": "not_observed"
+    }
+  ],
+  "caller_result": {
+    "schema": "isolated-help-result.v3",
+    "call_id": "a592bc46-fdaa-4507-9594-6e1750eaa0aa",
+    "status": "completed",
+    "status_scope": "actor_process_only_not_mathematical_success",
+    "response": "已在隔离副本中完成并验证 `thm_9_5`。\n\n已生成：\n\n- `role-output/patch.diff`\n- `role-output/response.md`\n- `role-output.response.json`\n\n核验结果：\n\n- `lake env lean Thm95Test.lean` 通过\n- 补丁可通过 `git apply --check`\n- imports 未改变\n- 无 `sorry`、`admit` 或自定义公理\n- 未修改规范工作区；补丁留待调用方审阅应用",
+    "response_path": "/tmp/help-result-a592bc46-fdaa-4507-9594-6e1750eaa0aa/response.md",
+    "response_sha256": "9bc540504e601658121309fcdcd32e08fd0d009be22491cc8be41f5a2449924e",
+    "patch_path": "/tmp/help-result-a592bc46-fdaa-4507-9594-6e1750eaa0aa/patch.diff",
+    "patch_sha256": "32554bfce6eeb65683962ac9dd298d4b7566d4dbb05470f9079ae4d1f244aa4f",
+    "patch_kind": "workspace_diff",
+    "patch_applied": false,
+    "role_artifacts": [
+      {
+        "kind": "role_response",
+        "path": "/tmp/help-result-a592bc46-fdaa-4507-9594-6e1750eaa0aa/role-artifact-1-response.md",
+        "sha256": "8bcdb8e1451cb9a012e01e537563752c21e8de60da157e686f496435d1cb95bc",
+        "bytes": 1062,
+        "applied": false,
+        "adoption": "not_observed"
+      },
+      {
+        "kind": "declared_target_patch",
+        "path": "/tmp/help-result-a592bc46-fdaa-4507-9594-6e1750eaa0aa/role-artifact-2-patch.diff",
+        "sha256": "49c2a67e4f2882919a5b6135e42f362eb8d05180f8c2cf48a01ab669b73cf32d",
+        "bytes": 25647,
+        "applied": false,
+        "adoption": "not_observed"
+      },
+      {
+        "kind": "role_response_metadata",
+        "path": "/tmp/help-result-a592bc46-fdaa-4507-9594-6e1750eaa0aa/role-artifact-3-role-output.response.json",
+        "sha256": "387a3e12da6f71efd1acf25db39974c097e2395f85767b33b0becb74d8473b36",
+        "bytes": 500,
+        "applied": false,
+        "adoption": "not_observed"
+      }
+    ]
+  },
+  "author_adoption": "not_observed",
+  "usage_reset_permitted": false
+}

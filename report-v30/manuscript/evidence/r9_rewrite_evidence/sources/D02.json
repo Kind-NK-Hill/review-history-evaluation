@@ -1,0 +1,19 @@
+{
+  "/schema": "pilot.actor-receipt.v1",
+  "/run_id": "pilot-prob_13_9-A-r1",
+  "/dispatch_id": "9d390ba0-5b05-4483-ac5f-fc6dddcb00d1",
+  "/parent_dispatch_id": "2ad8d4e6-0248-488c-b48e-445137c5d5c4",
+  "/session_ids": [
+    "01a08c05-c5e1-7390-848d-7071e21a4878"
+  ],
+  "/source_session": null,
+  "/model": "gpt-5.6-sol",
+  "/reasoning_effort": "medium",
+  "/deadline": {
+    "allowance_seconds": 5400.0,
+    "started_epoch": 1789051916.5959792,
+    "deadline_epoch": 1789057316.5959792,
+    "remaining_seconds": 1319.1072826385498
+  },
+  "/raw_public_events_sha256": "8defaa13268eac8a88e74597c449f93fdf76ba25041bc5df0c366e1820dd1229"
+}

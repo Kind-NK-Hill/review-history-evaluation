@@ -1,5 +1,13 @@
 # Publication history
 
+## 0.7.0 — report revision 30 — 2026-09-15
+
+- Publish the integrated bilingual report and Appendices A–U, with closing corrections from the external text review.
+- Add historical H1/L6 callers and saved checks, M2 input/candidate/return evidence, L7 source comparison, and reproducible task-removal arithmetic.
+- Clarify L6 internal task ambiguity, inherited review timing, configuration units, new H1 connecting code, and M2 input coverage.
+- Preserve every file in `report-v28/` and `releases/v0.5.0/`; retain the prior release and its original interpretation with current qualifications above.
+- Provide an offline reading bundle with the expanded paired-event input. No new model experiment, exhaustive readjudication or causal-effect claim.
+
 ## 0.6.0 — public companion to report revision 28 — 2026-09-15
 
 - Publish the four unchanged revision-28 PDFs, editable text, and generated LaTeX sources.

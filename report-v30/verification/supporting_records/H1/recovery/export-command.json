@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe",
+    "exec",
+    "--user",
+    "1001:1001",
+    "9409f93fe9d590c7df11ad48c973feb94a9dbbd0768de9594f18f60154d2ed73",
+    "/bin/tar",
+    "--numeric-owner",
+    "-cpf",
+    "-",
+    "-C",
+    "/work",
+    "."
+  ],
+  "exit_code": 0,
+  "epoch": 1789107732.703003
+}

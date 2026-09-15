@@ -1,0 +1,343 @@
+{
+  "schema_version": "phase2.semantic_review.result.v8",
+  "task_id": "prob_7_6",
+  "mode": "review-pack",
+  "attempt": 2,
+  "prompt_version": 11,
+  "rubric_version": 9,
+  "review_input_hash": "7325049b5d54b28aa3150ba43666685e2c7b125408b57573c587f744ddec92dd",
+  "review_input_file": "/work/artifacts/phase2_prompt_packs/prob_7_6/semantic_review_input_v2.json",
+  "review_prompt_file": "/work/artifacts/phase2_prompt_packs/prob_7_6/semantic_review_prompt_v2.md",
+  "review_context_file": "/work/artifacts/phase2_prompt_packs/prob_7_6/semantic_review_context_v2.md",
+  "expected_result_file": "/work/artifacts/phase2_prompt_packs/prob_7_6/semantic_review_result_v2.json",
+  "candidate_hash": "56c208c148b8528350fadd192743712b22a696d606b3febb8eefce3e140866b2",
+  "verdict": "pass",
+  "confidence": "high",
+  "summary": "修订候选完整保留了 Scheffé 引理的教材命题与证明主线。此前阻塞审核的 hg_nonneg 和 hg_meas 已从两个公开定理的签名中删除；极限函数的几乎处处非负性由 hf_nonneg 与 hfg 通过 ge_of_tendsto' 在定理体内真实推出，负部的几乎处处强可测性则由 hg_int.aestronglyMeasurable 与 hf_meas 内部构造。随后候选建立几乎处处支配、应用支配收敛、证明教材提示的绝对值恒等式并合并积分极限。候选构建成功，源决议、唯一诊断和三轮 MathGate 与当前实现一致，且公共接口足以支持直接下游 ex_10_3_2。",
+  "proof_class": "source_faithful_proof_completed",
+  "completion_class": "textbook_problem_completed",
+  "reviewer_independence": {
+    "role": "independent_read_only_reviewer",
+    "read_only": true,
+    "did_edit_candidate": false,
+    "used_current_review_request": true,
+    "attestation": "本次为同一独立一般审核会话中的只读复审；完整核对当前请求及所绑定材料，未编辑候选或任何其他文件。"
+  },
+  "source_claims": [
+    {
+      "claim_id": "negative_part_bound",
+      "claim": "由 f_n 非负且几乎处处收敛到 f，推出极限函数几乎处处非负，并证明 (f_n-f)^- 几乎处处由 f 支配。"
+    },
+    {
+      "claim_id": "negative_part_integral_limit",
+      "claim": "负部几乎处处趋于零且由可积的 f 支配，因此其积分由支配收敛定理趋于零。"
+    },
+    {
+      "claim_id": "absolute_difference_identity",
+      "claim": "逐点恒等式 |f_n-f|=(f_n-f)+2(f_n-f)^- 成立，并可在可积性条件下逐项积分。"
+    },
+    {
+      "claim_id": "l1_limit",
+      "claim": "由原积分收敛、负部积分趋零及上述恒等式，推出 ∫|f_n-f| 趋于零。"
+    }
+  ],
+  "claim_mapping": [
+    {
+      "claim_id": "negative_part_bound",
+      "lean_declaration": "prob_7_6_negPart、prob_7_6_negPart_le、prob_7_6_negPart_integral_tendsto 中的 hg_nonneg_ae",
+      "assumptions": "hf_nonneg : ∀ n x, 0 ≤ f n x；hfg : ∀ᵐ x ∂μ, Tendsto (fun n => f n x) atTop (𝓝 (g x))",
+      "conclusion": "∀ᵐ x ∂μ, 0 ≤ g x，且对每个 n 几乎处处有 prob_7_6_negPart (f n) g x ≤ g x",
+      "assessment": "完整覆盖。ge_of_tendsto' 直接从每点序列非负性和该点收敛推出极限非负性；点态辅助引理只接收当前点事实，没有把该步骤迁移到公开前提。"
+    },
+    {
+      "claim_id": "negative_part_integral_limit",
+      "lean_declaration": "prob_7_6_negPart_integral_tendsto",
+      "assumptions": "f n 可测且非负，g 可积，f n 几乎处处趋于 g",
+      "conclusion": "Tendsto (fun n => ∫ x, prob_7_6_negPart (f n) g x ∂μ) atTop (𝓝 0)",
+      "assessment": "完整覆盖。负部的 AEStronglyMeasurable、几乎处处范数界和几乎处处趋零均在定理体内构造，随后直接调用支配收敛定理。"
+    },
+    {
+      "claim_id": "absolute_difference_identity",
+      "lean_declaration": "prob_7_6 中的 heq",
+      "assumptions": "hf_int、hg_int 以及由负部支配得到的 hneg_int",
+      "conclusion": "∫|f n-g|=(∫f n-∫g)+2∫prob_7_6_negPart (f n) g",
+      "assessment": "完整覆盖。候选按 g x ≤ f n x 分情况透明证明点态恒等式，再使用 integral_add、integral_sub 和 integral_const_mul。"
+    },
+    {
+      "claim_id": "l1_limit",
+      "lean_declaration": "prob_7_6",
+      "assumptions": "hf_meas、hf_nonneg、hf_int、hg_int、hfg 和 hint",
+      "conclusion": "Tendsto (fun n => ∫ x, |f n x - g x| ∂μ) atTop (𝓝 0)",
+      "assessment": "完整覆盖。最终证明将 hint 给出的积分差极限与负部积分极限相加，没有假设目标 L1 收敛。"
+    }
+  ],
+  "route_inspection": {
+    "status": "covered",
+    "source_route": "内部推出 g 几乎处处非负；构造负部的几乎处处强可测性和由 g 给出的几乎处处支配；由几乎处处收敛证明负部趋零并应用支配收敛；最后证明并积分教材恒等式，再合并两个极限。",
+    "expected_answer_or_statement": "在非负可测 f_n 几乎处处趋于 g、各相关实值积分有限且 ∫f_n→∫g 的条件下，证明负部积分以及 ∫|f_n-g| 均趋于零，不额外要求 g 处处非负或处处可测。",
+    "local_mathlib_search": "当前路线使用 ge_of_tendsto'、Integrable.aestronglyMeasurable、AEStronglyMeasurable.sub/sup、Integrable.mono'、tendsto_integral_of_dominated_convergence 及积分线性定理。三轮 MathGate 已只读核验这些本地类型形状；candidate_v10 的完整构建进一步确认组合可用。",
+    "public_interface_check": "prob_7_6_negPart_integral_tendsto 与 prob_7_6 的公开签名均已删除 hg_nonneg 和 hg_meas，也没有以改名、几乎处处版本或其他等价形式重新加入。hg_nonneg_ae 在两个证明体内由 hf_nonneg 与 hfg 推出；g 的强可测性来自公开的有限积分编码 hg_int，而非新增可测性前提。",
+    "support_or_reassembly_decision": "来源决议要求的公开接口重组已经完成，无需新增支持文件、适配器或下游前提。",
+    "stop_go_verdict": "go",
+    "notes": "当前候选执行的是教材源路线，不是调用覆盖整个 Scheffé 结论的黑箱捷径。"
+  },
+  "spine_alignment": {
+    "status": "covered",
+    "summary": "教材第(a)、第(b)问的每个必要步骤都有透明 Lean 落点；此前缺失的极限非负性和可测性处理已经在证明体内补齐，且不存在公共前提迁移。",
+    "source_steps_checked": [
+      {
+        "source_step": "由 f_n≥0 及 f_n→g 几乎处处推出 g≥0 几乎处处。",
+        "lean_landing": "prob_7_6_negPart_integral_tendsto 和 prob_7_6 内部的 hg_nonneg_ae；ge_of_tendsto' hx (fun n => hf_nonneg n x)",
+        "landing_kind": "theorem",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "该事实由源假设直接推导，没有出现在公开签名中。"
+      },
+      {
+        "source_step": "建立负部的几乎处处强可测性，无需 g 处处可测。",
+        "lean_landing": "两个定理体内的 hneg_meas；由 hg_int.aestronglyMeasurable、(hf_meas n).aestronglyMeasurable、sub、sup 和常函数强可测性组成",
+        "landing_kind": "theorem",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "hg_meas 已删除；实现精确落到 max (g-f n) 0 的 AE 强可测性。"
+      },
+      {
+        "source_step": "证明 (f_n-g)^- 几乎处处由 g 支配。",
+        "lean_landing": "prob_7_6_negPart_le 以及 DCT 范数界中的 filter_upwards [hg_nonneg_ae]",
+        "landing_kind": "lemma",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "辅助引理仅接收当前点的两个非负事实；对 g 的事实来自内部 AE 推导。"
+      },
+      {
+        "source_step": "负部几乎处处趋于零并应用支配收敛。",
+        "lean_landing": "prob_7_6_negPart_integral_tendsto 中的 max 极限推导及 tendsto_integral_of_dominated_convergence",
+        "landing_kind": "theorem",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "逐点极限由 hfg 经减法和 max 连续性得到，支配函数为 hg_int 所给的可积 g。"
+      },
+      {
+        "source_step": "证明并积分 |f_n-g|=(f_n-g)+2(f_n-g)^-。",
+        "lean_landing": "prob_7_6 中 heq 的逐点分情况证明及 integral_add、integral_sub、integral_const_mul",
+        "landing_kind": "theorem",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "候选直接实现教材提示，未用任务专用包装器替代。"
+      },
+      {
+        "source_step": "结合两个趋零项得到绝对差积分趋零。",
+        "lean_landing": "prob_7_6 末尾的 hint.sub、tendsto_const_nhds.mul hneg 和 add",
+        "landing_kind": "theorem",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "极限组合闭合且不循环使用最终结论。"
+      }
+    ],
+    "missing_source_steps": [],
+    "shortcut_assessment": "不存在适配器捷径、黑箱替代或公开前提迁移；Mathlib 定理仅用于承载对应的局部源步骤。"
+  },
+  "evidence_review": {
+    "status": "covered",
+    "summary": "原始教材、修订候选、此前失败结果、唯一诊断、来源决议、三轮 MathGate、构建、依赖、下游、台账及哈希均已交叉核验；没有阻塞冲突。",
+    "items": [
+      {
+        "evidence_class": "source_tex",
+        "status": "covered",
+        "evidence": "experiment_targets.tex 中 Problem 7.6 的原文与当前上下文一致；去除 CRLF 后的 SHA-256 为 85c744a8a5bbd2dd3c3d1f825a26315e2e6b2558f99b1f5c327e7644bacfd569。来源决议明确要求删除 hg_nonneg 和 hg_meas，并在内部推导所需 AE 事实。"
+      },
+      {
+        "evidence_class": "lean_subject",
+        "status": "covered",
+        "evidence": "完整检查 candidate_v10.lean；直接 SHA-256 为 56c208c148b8528350fadd192743712b22a696d606b3febb8eefce3e140866b2。两个公开签名均不含 hg_nonneg 或 hg_meas，内部 AE 推导、支配收敛和最终恒等式均有实际证明体。"
+      },
+      {
+        "evidence_class": "audit",
+        "status": "not_applicable",
+        "evidence": "review_basis 未绑定单独的 latest_audit_result_file。作为补充而非完成权威，已检查唯一只读诊断、已接受的来源决议、三轮独立 MathGate 和成功构建；最终语义判断仍由本次独立审核直接作出。"
+      },
+      {
+        "evidence_class": "classification",
+        "status": "not_applicable",
+        "evidence": "review_basis 没有分类历史条目。此前失败分类准确定位公共前提迁移；当前候选已消除该缺口，因此按 proof_bearing 合同分类为 source_faithful_proof_completed / textbook_problem_completed。"
+      },
+      {
+        "evidence_class": "dependency_status",
+        "status": "covered",
+        "evidence": "prob_7_6 没有上游教材依赖或软导入；dependency_decision_context 的依赖集合为空。ex_10_3_2 在计划和审核基础中一致列为唯一直接硬依赖消费者。"
+      },
+      {
+        "evidence_class": "downstream",
+        "status": "covered",
+        "evidence": "ex_10_3_2 的源文本正需要从概率密度的几乎处处收敛得到 ∫|f_n-f|→0。概率密度接口可提供可测性、非负性、积分为一和相应可积性，因此无需新增源外定理级假设即可调用当前 prob_7_6。"
+      },
+      {
+        "evidence_class": "ledger_status",
+        "status": "covered",
+        "evidence": "输入记录任务及输出所有者状态为 PACKED，latest_build_ready_candidate_hash 指向 candidate_v10。此前 fail 与当前待复审状态一致；台账没有被当作语义完成权威。"
+      },
+      {
+        "evidence_class": "hashes",
+        "status": "covered",
+        "evidence": "请求和模板绑定 review_input_hash 7325049b5d54b28aa3150ba43666685e2c7b125408b57573c587f744ddec92dd、candidate_hash 56c208c148b8528350fadd192743712b22a696d606b3febb8eefce3e140866b2；请求中的 review_basis_hash 为 f0e3a221ce3c631e1cd6903b1096011104cf31af72a83b155a05ddddefcfb7ca。build_result_v10 的文件哈希 95b3825888142d1425579f3bb0108207a016532f4291601a313423ab91b98da6 也与输入证据一致。"
+      }
+    ],
+    "blocking_issues": []
+  },
+  "interface_contract": {
+    "status": "covered",
+    "summary": "公开接口与已接受的来源决议一致。hg_nonneg 和 hg_meas 已完全删除；没有以 AE 前提、改名包装或更强收敛条件重新引入。hf_int 与 hg_int 是教材有限实值积分的 Bochner 可积性编码，不是假设 L1 收敛。",
+    "mismatches": []
+  },
+  "downstream_adequacy": {
+    "status": "covered",
+    "summary": "当前通用 Scheffé 定理可直接承担 ex_10_3_2 从概率密度几乎处处收敛到 L1 收敛的步骤；消费者不需要新增教材中不存在的假设。",
+    "consumers_checked": [
+      {
+        "block_id": "ex_10_3_2",
+        "status": "covered",
+        "evidence": "其概率密度假设提供 hf_meas、hf_nonneg、hf_int 和 hg_int；各密度积分均为 1，从而提供 hint；给定的几乎处处密度收敛提供 hfg。当前 prob_7_6 的结论正是后续总变差收敛所需的 ∫|f_n-f|→0。"
+      }
+    ],
+    "blocking_issues": []
+  },
+  "forbidden_weakenings": [
+    {
+      "weakening": "禁止把教材中的公共接口偷换成纯存在性壳、占位定义或只记录 witness 的结构。",
+      "status": "not_present",
+      "evidence": "候选给出透明负部定义、辅助引理以及完整收敛证明，没有存在性壳、占位值、sorry、私有公理或任意见证。"
+    },
+    {
+      "weakening": "禁止把应当供下游复用的 theorem 改写成只够当前文件自证的 theorem-specific wrapper。",
+      "status": "not_present",
+      "evidence": "prob_7_6 对任意测度空间和实值函数序列陈述，并以标准可测、可积、AE 收敛及积分收敛接口导出 L1 收敛，能够由直接下游复用。"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "resolved",
+      "code": "public_premise_relocation_resolved",
+      "finding": "此前失败中的 hg_nonneg 与 hg_meas 已从公开接口删除。",
+      "evidence": "candidate_v10 的两个公开定理签名均不含这些字段；hg_nonneg_ae 和负部 AEStronglyMeasurable 均在证明体内构造。"
+    },
+    {
+      "severity": "resolved",
+      "code": "ae_nonnegativity_landed",
+      "finding": "极限函数非负性的源步骤已真实落地。",
+      "evidence": "在 hfg 的几乎处处集合上，ge_of_tendsto' hx (fun n => hf_nonneg n x) 推出 0 ≤ g x，并被用于 DCT 与 Integrable.mono' 的 AE 支配界。"
+    },
+    {
+      "severity": "resolved",
+      "code": "ae_measurability_landed",
+      "finding": "无需 Measurable g 的负部可测性路线已真实落地。",
+      "evidence": "hg_int.aestronglyMeasurable 与 (hf_meas n).aestronglyMeasurable 经 sub 和 sup 构造负部的 AEStronglyMeasurable。"
+    },
+    {
+      "severity": "non_blocking",
+      "code": "build_verified",
+      "finding": "build_result_v10 的硬检查、交互核验、临时构建和最终构建均成功。",
+      "evidence": "仅有未使用节变量及战术样式警告，不影响命题、证明或接口。"
+    },
+    {
+      "severity": "non_blocking",
+      "code": "mathgate_consistent",
+      "finding": "三轮 MathGate 均为 go，且其来源陈述、路线闭合和 Lean 形状判断均与 candidate_v10 的实际实现一致。",
+      "evidence": "math_review_result_v1 的三轮分别覆盖 source_statement、route_closure 和 lean_shape，没有阻塞定理。"
+    }
+  ],
+  "recommended_disposition": "accept",
+  "reviewer_schema_hints": {
+    "completion_class_contract": {
+      "required_fields": [
+        "proof_class",
+        "completion_class"
+      ],
+      "must_be_non_empty": true,
+      "authority": "reviewer_classification_then_official_task_status_projection",
+      "task_role": "proof_bearing",
+      "clean_pass_prefixes": [
+        "textbook_proof_completed",
+        "textbook_problem_completed",
+        "textbook_exercise_completed",
+        "textbook_source_route_completed",
+        "source_route_proof_completed",
+        "source_faithful_proof_completed",
+        "normal_proof_source_route",
+        "source_route_theorem"
+      ],
+      "allowed_exception_classes": [],
+      "projection_rule": "For clean pass, both class fields must use a clean pass prefix allowed for the projected task role; task-specific allowed exceptions are non-clean."
+    },
+    "reviewer_independence_shape": {
+      "role": "independent_read_only_reviewer",
+      "read_only": true,
+      "did_edit_candidate": false,
+      "used_current_review_request": true,
+      "attestation": "<short statement that this was an independent read-only review>"
+    },
+    "section_status_values": [
+      "covered",
+      "partial",
+      "missing",
+      "violated",
+      "unclear"
+    ],
+    "route_inspection_fields": [
+      "source_route",
+      "expected_answer_or_statement",
+      "local_mathlib_search",
+      "public_interface_check",
+      "support_or_reassembly_decision",
+      "stop_go_verdict"
+    ],
+    "route_inspection_stop_go_values": [
+      "go",
+      "stop",
+      "needs_reassembly",
+      "needs_route_redesign",
+      "unclear",
+      "not_applicable"
+    ],
+    "source_step_entry_shape": {
+      "source_step": "<essential step from the source proof spine>",
+      "lean_landing": "<Lean theorem/lemma or transparent derivation discharging the source step>",
+      "landing_kind": "theorem | lemma | private_axiom | structure_field | support_predicate | support_constructor | adapter | public_premise | empty | unknown",
+      "signature_match": "unverified | passed | failed | not_applicable",
+      "body_reassumption_check": "unverified | passed | failed | not_applicable",
+      "public_premise_check": "unverified | passed | failed | not_applicable",
+      "notes": "<why this landing does or does not preserve the source proof step>"
+    },
+    "evidence_item_shape": {
+      "evidence_class": "source_tex | lean_subject | audit | classification | dependency_status | downstream | ledger_status | hashes",
+      "status": "covered | partial | missing | violated | unclear | not_applicable",
+      "evidence": "<what was checked and how conflicts/staleness were resolved>"
+    },
+    "required_evidence_classes": [
+      "source_tex",
+      "lean_subject",
+      "audit",
+      "classification",
+      "dependency_status",
+      "downstream",
+      "ledger_status",
+      "hashes"
+    ],
+    "downstream_consumer_entry_shape": {
+      "block_id": "<direct downstream block_id>",
+      "status": "covered | not_applicable | blocked",
+      "evidence": "<why this exported interface is adequate or not applicable>"
+    },
+    "forbidden_weakening_status_values": [
+      "not_present",
+      "present",
+      "not_applicable"
+    ],
+    "pass_review_apply_command": "formalize --phase 2 --phase2-mode review-apply --tasks <task_id> --review-result <semantic_review_result_vM.json>"
+  }
+}

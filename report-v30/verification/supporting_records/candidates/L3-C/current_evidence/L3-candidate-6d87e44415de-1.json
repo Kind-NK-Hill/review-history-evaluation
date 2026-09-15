@@ -1,0 +1,671 @@
+{
+  "assessment": {
+    "schema": "consistency.l3.review.v1",
+    "request_id": "l3-r1-candidate-6d87e44415de-adjudicator",
+    "candidate_id": "candidate-6d87e44415de",
+    "role": "adjudicator",
+    "confidence": 0.98,
+    "source_reading": {
+      "F_source_convention": "retrospective_sensitivity_assumption",
+      "reason": "冻结源文只声明积分收敛到有限极限，未明确约定每一项积分均有限可积；任务书反而明确允许最终尾部可积。因此F只能作为看过初评后登记的回顾性敏感性假设，不能由Lean实值积分语法反推逐项可积。",
+      "evidence": [
+        {
+          "path": "source/SOURCE.tex",
+          "line_start": 2,
+          "line_end": 2,
+          "quote": "Assume that $\\int f_n\\, d\\mu \\to \\int f\\, d\\mu < \\infty$."
+        },
+        {
+          "path": "task_contract/TASK.zh-CN.md",
+          "line_start": 3,
+          "line_end": 3,
+          "quote": "合同允许采用最终尾部可积表述"
+        }
+      ]
+    },
+    "dimensions": {
+      "mathematics": {
+        "status": "pass",
+        "reason": "候选全部定理在自身明确前提下正确。负部支配、支配收敛、最终可积尾部上的积分恒等式及L¹极限均实际证明；一般密度、全变差、依分布以及正、零方差正态分支也均闭合。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 92,
+            "line_end": 92,
+            "quote": "convert (hint.sub tendsto_const_nhds).add (hneg.const_mul 2) using 1 <;> ring"
+          }
+        ]
+      },
+      "public_premises": {
+        "status": "pass",
+        "reason": "除单列的P2积分范围敏感性外，公开前提均获任务书许可。任务书明确把fₙ和f都规定为非负可测函数；候选相应要求f的实际代表元可测且处处非负，并未依赖未经包装的几乎处处代表元。一般密度接口也明确保证极限仍是概率密度。",
+        "evidence": [
+          {
+            "path": "task_contract/TASK.zh-CN.md",
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "非负可测函数 fₙ、f 几乎处处收敛"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 52,
+            "line_end": 52,
+            "quote": "(hf_nonneg : ∀ x, 0 ≤ f x)"
+          }
+        ]
+      },
+      "route_F": {
+        "status": "pass",
+        "reason": "在回顾性F约定下，每一项可积属于有限积分序列的解释约定，因而足以实例化候选较弱的最终尾部可积前提；其余证明责任全部闭合。此通过是条件性的，不表示冻结源文支持F为唯一解释。",
+        "evidence": [
+          {
+            "path": "reevaluation/RULES.json",
+            "line_start": 5,
+            "line_end": 5,
+            "quote": "Then individual integrability is part of that convention"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 54,
+            "line_end": 54,
+            "quote": "(hfn_int : ∀ᶠ n in atTop, Integrable (fn n) μ)"
+          }
+        ]
+      },
+      "route_E": {
+        "status": "fail",
+        "reason": "E保留完整非负扩展积分源范围，要求公开包装从扩展积分收敛到有限极限推出最终尾部可积。候选直接接收hfn_int，没有扩展积分接口或该尾部归约，因此仅P2失败；这不表示现有强前提定理数学错误，也不是原TASK唯一验收标准。",
+        "evidence": [
+          {
+            "path": "reevaluation/RULES.json",
+            "line_start": 6,
+            "line_end": 6,
+            "quote": "A source-scope public theorem must close this tail reduction rather than require all terms integrable."
+          },
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 54,
+            "line_end": 54,
+            "quote": "(hfn_int : ∀ᶠ n in atTop, Integrable (fn n) μ)"
+          }
+        ]
+      },
+      "interface": {
+        "status": "pass",
+        "reason": "将E路线的P2包装缺口单列后，其余必需公开端点均存在并真实接入。公共入口同时暴露共享Scheffé证明、一般密度应用及正态各分支，导入关系闭合。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 1,
+            "line_end": 1,
+            "quote": "import ProbabilityTheory.common_support.scheffe"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 2,
+            "line_end": 2,
+            "quote": "import ProbabilityTheory.chapter_10.ex_10_3_2"
+          }
+        ]
+      },
+      "delivery": {
+        "status": "pass",
+        "reason": "一般概率密度的全变差及依分布收敛、正极限方差的逐点密度及全变差结论、任意非负方差的弱连续性、零方差到极限均值点质量的依分布收敛均明确交付；零方差分支没有声称全变差收敛。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 169,
+            "line_end": 169,
+            "quote": "theorem ex_10_3_2_gaussian_positiveVariance"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 116,
+            "line_end": 116,
+            "quote": "theorem ex_10_3_2_gaussian_zeroVariance_convergesTo_dirac"
+          }
+        ]
+      },
+      "route_T": {
+        "status": "pass",
+        "reason": "依原TASK的明确许可，候选可把极限函数可积和函数列最终尾部可积作为有限积分收敛的公开尾部表述。候选确实采用最终而非逐项可积接口，并从非负性与几乎处处收敛证明负部控制，再结合实积分收敛证明L¹结论；没有假定L¹收敛本身，其他前提也均获TASK许可。",
+        "evidence": [
+          {
+            "path": "task_contract/TASK.zh-CN.md",
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "合同允许采用最终尾部可积表述"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 60,
+            "line_end": 60,
+            "quote": "have halgebra : ∀ᶠ n in atTop,"
+          }
+        ]
+      }
+    },
+    "contract_responsibility": {
+      "status": "clear",
+      "reason": "合同责任可满足且清楚：T按原TASK接受显式最终尾部可积表述，但仍要求候选实际证明负部控制和L¹极限；E作为追加的更强源覆盖诊断，另要求扩展积分到最终可积的公开包装；F仅是无冻结源文依据的回顾性有限积分敏感性假设。"
+    },
+    "obligations": [
+      {
+        "id": "P1",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "eventual_integrability",
+        "reason": "公开Scheffé定理在其可测、非负、极限可积、最终尾部可积、几乎处处收敛及实积分收敛前提下数学正确。三种解释对其自身前提下的正确性没有分歧。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 46,
+            "line_end": 46,
+            "quote": "theorem prob_7_6_scheffe"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "P2",
+        "status_F": "pass",
+        "status_E": "fail",
+        "derivation_class": "eventual_integrability",
+        "reason": "候选公开要求最终尾部可积。F的条件性逐项可积约定足以提供该前提；E要求从非负扩展积分的有限极限公开导出该前提，而候选缺少此包装；T则按原TASK文字直接允许该最终尾部表述，故通过。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 54,
+            "line_end": 54,
+            "quote": "(hfn_int : ∀ᶠ n in atTop, Integrable (fn n) μ)"
+          },
+          {
+            "path": "reevaluation/TAIL_SCOPE_REVISION.json",
+            "line_start": 9,
+            "line_end": 9,
+            "quote": "explicit eventual integrability of the sequence and integrability of its limit may be used as the tail formulation"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "P3",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "候选明确要求每个fₙ及f可测、处处非负，并将收敛表述为几乎处处。虽然冻结源文的语法只直接修饰fₙ，原TASK明确把fₙ、f都规定为非负可测函数，因此实际代表元接口获许可，无须另设几乎处处代表元包装。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 50,
+            "line_end": 50,
+            "quote": "(hf_meas : Measurable f)"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 55,
+            "line_end": 55,
+            "quote": "(hconv : ∀ᵐ x ∂μ, Tendsto (fun n => fn n x) atTop (𝓝 (f x)))"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "P4",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "候选把负部写为max(f-fₙ,0)，逐点证明其不超过f，并证明可测性、支配界及几乎处处趋零，随后真实调用支配收敛。该步骤不依赖fₙ逐项可积。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 14,
+            "line_end": 14,
+            "quote": "max (f x - g x) 0 ≤ f x := by"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 42,
+            "line_end": 42,
+            "quote": "simpa using tendsto_integral_of_dominated_convergence f hmeas hf_int hbound hlim"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "P5",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "eventual_integrability",
+        "reason": "候选没有假定L¹结论，而是在最终可积尾部证明绝对差积分等于积分差加二倍负部积分，再组合两项极限。E的失败仅在取得该尾部前提的源范围包装，不影响此推导自身。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 61,
+            "line_end": 61,
+            "quote": "(∫ x, |fn n x - f x| ∂μ) ="
+          },
+          {
+            "path": "candidate/ProbabilityTheory/common_support/scheffe.lean",
+            "line_start": 93,
+            "line_end": 93,
+            "quote": "apply hright.congr'"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "D1",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "all_terms_integrable",
+        "reason": "一般密度接口明确要求fₙ和f可测、可积、非负且积分为一，并接收几乎处处收敛；极限f因此真实包装为概率密度，而非仅凭点态极限宣称。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 33,
+            "line_end": 33,
+            "quote": "(hfn_prob : ∀ n, ∫ x, fn n x = 1) (hf_prob : ∫ x, f x = 1)"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 34,
+            "line_end": 34,
+            "quote": "(hconv : ∀ᵐ x ∂volume, Tendsto (fun n => fn n x) atTop (𝓝 (f x))) :"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "D2",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "all_terms_integrable",
+        "reason": "一般密度定理真实调用Scheffé取得L¹收敛，并以密度全变差公式将距离化为绝对差积分的一半，完整推出全变差趋零。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 43,
+            "line_end": 43,
+            "quote": "apply prob_7_6_scheffe volume fn f hfn_meas hf_meas hfn_nonneg hf_nonneg hf_int"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 56,
+            "line_end": 56,
+            "quote": "exact thm_14_4_totalVariationDistance_withDensity_eq_half_integral_abs"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "D3",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "候选将全变差极限接入允许的全变差蕴含弱收敛结果，并通过公开等价接口得到依分布收敛；该结论与全变差结论共同出现在一般密度端点中。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 65,
+            "line_end": 65,
+            "quote": "exact def_14_1_iff_tendsto.mp (thm_14_4 _ _ htv)"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "N1",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "均值用实数、方差用非负实数编码。任意非负极限方差的依分布定理只要求参数收敛；非零条件仅用于正方差的密度和全变差分支，没有被暗中加到零方差结论。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 95,
+            "line_end": 95,
+            "quote": "(hm : Tendsto m atTop (𝓝 M)) (hv : Tendsto v atTop (𝓝 V)) :"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "N2",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "all_terms_integrable",
+        "reason": "正极限方差分支证明高斯密度逐点收敛，从方差收敛取得最终非零，建立积分趋于一并调用Scheffé及密度全变差公式；捆绑定理同时交付逐点密度、全变差和依分布收敛。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 134,
+            "line_end": 134,
+            "quote": "have hv_ne : ∀ᶠ n in atTop, v n ≠ 0 := hv.eventually_ne hV"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 169,
+            "line_end": 169,
+            "quote": "theorem ex_10_3_2_gaussian_positiveVariance"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "N3",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "other",
+        "reason": "零方差分支通过高斯特征函数的参数连续性证明弱收敛，并把零方差高斯律明确改写为极限均值处的点质量；公开类型只断言依分布收敛，没有错误声称全变差收敛。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 119,
+            "line_end": 119,
+            "quote": "MeasuresConvergeInDistribution"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+            "line_start": 122,
+            "line_end": 122,
+            "quote": "⟨Measure.dirac M, by rw [← gaussianReal_zero_var M]; infer_instance⟩) := by"
+          }
+        ],
+        "status_T": "pass"
+      },
+      {
+        "id": "I1",
+        "status_F": "pass",
+        "status_E": "pass",
+        "derivation_class": "not_applicable",
+        "reason": "候选三个登记文件及允许上游依赖闭合，公共入口实际导入共享支持和应用文件。原技术回执确认构建、公理审计及逃逸扫描均通过；E的P2失败是源范围包装缺失，不是现有文件的技术闭合故障。",
+        "evidence": [
+          {
+            "path": "tool_fact/technical-validation.json",
+            "line_start": 1,
+            "line_end": 1,
+            "quote": "\"axiom_audit_exit_code\":0,\"build_exit_code\":0"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+            "line_start": 2,
+            "line_end": 2,
+            "quote": "import ProbabilityTheory.chapter_10.ex_10_3_2"
+          }
+        ],
+        "status_T": "pass"
+      }
+    ],
+    "overall_F": "pass",
+    "overall_E": "fail",
+    "summary": "候选在自身明确前提下数学正确，并完整交付Scheffé负部控制与L¹结论、一般密度的全变差和依分布收敛、正方差正态密度及全变差结论，以及零方差到点质量的依分布收敛。F在无冻结源文依据的回顾性逐项有限积分约定下条件性通过；E因缺少非负扩展积分到最终可积的公开包装而失败；T按原TASK明确许可的最终尾部可积表述通过。F/E量规及T澄清均是看过原F/E初评后的追加敏感性分析，不是原实验前登记。",
+    "limitations": [
+      "F仅是回顾性敏感性标签，不能视为冻结源文支持的唯一真实解释。",
+      "E失败仅限于扩展积分源范围的尾部归约包装，不表示候选现有定理在其明示前提下数学错误，也不取代原TASK的T验收口径。",
+      "技术结论依据只读提供且与候选哈希绑定的原技术回执；本次裁决未修改候选或生成新回执。",
+      "跨候选材料仅用于检查规则应用一致性，本裁决未以其他候选标签进行多数投票或强制同标。"
+    ],
+    "overall_T": "pass"
+  },
+  "processing_state": "ready",
+  "issues": [],
+  "repairs": [],
+  "evidence_checks": [
+    {
+      "state": "exact",
+      "path": "source\\SOURCE.tex",
+      "line_start": 2,
+      "line_end": 2,
+      "location": "$.source_reading.evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "task_contract\\TASK.zh-CN.md",
+      "line_start": 3,
+      "line_end": 3,
+      "location": "$.source_reading.evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 92,
+      "line_end": 92,
+      "location": "$.dimensions.mathematics.evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "task_contract\\TASK.zh-CN.md",
+      "line_start": 3,
+      "line_end": 3,
+      "location": "$.dimensions.public_premises.evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 52,
+      "line_end": 52,
+      "location": "$.dimensions.public_premises.evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "reevaluation\\RULES.json",
+      "line_start": 5,
+      "line_end": 5,
+      "location": "$.dimensions.route_F.evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 54,
+      "line_end": 54,
+      "location": "$.dimensions.route_F.evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "reevaluation\\RULES.json",
+      "line_start": 6,
+      "line_end": 6,
+      "location": "$.dimensions.route_E.evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 54,
+      "line_end": 54,
+      "location": "$.dimensions.route_E.evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+      "line_start": 1,
+      "line_end": 1,
+      "location": "$.dimensions.interface.evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+      "line_start": 2,
+      "line_end": 2,
+      "location": "$.dimensions.interface.evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 169,
+      "line_end": 169,
+      "location": "$.dimensions.delivery.evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 116,
+      "line_end": 116,
+      "location": "$.dimensions.delivery.evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "task_contract\\TASK.zh-CN.md",
+      "line_start": 3,
+      "line_end": 3,
+      "location": "$.dimensions.route_T.evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 60,
+      "line_end": 60,
+      "location": "$.dimensions.route_T.evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 46,
+      "line_end": 46,
+      "location": "$.obligations[0].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 54,
+      "line_end": 54,
+      "location": "$.obligations[1].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "reevaluation\\TAIL_SCOPE_REVISION.json",
+      "line_start": 9,
+      "line_end": 9,
+      "location": "$.obligations[1].evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 50,
+      "line_end": 50,
+      "location": "$.obligations[2].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 55,
+      "line_end": 55,
+      "location": "$.obligations[2].evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 14,
+      "line_end": 14,
+      "location": "$.obligations[3].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 42,
+      "line_end": 42,
+      "location": "$.obligations[3].evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 61,
+      "line_end": 61,
+      "location": "$.obligations[4].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\common_support\\scheffe.lean",
+      "line_start": 93,
+      "line_end": 93,
+      "location": "$.obligations[4].evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 33,
+      "line_end": 33,
+      "location": "$.obligations[5].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 34,
+      "line_end": 34,
+      "location": "$.obligations[5].evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 43,
+      "line_end": 43,
+      "location": "$.obligations[6].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 56,
+      "line_end": 56,
+      "location": "$.obligations[6].evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 65,
+      "line_end": 65,
+      "location": "$.obligations[7].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 95,
+      "line_end": 95,
+      "location": "$.obligations[8].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 134,
+      "line_end": 134,
+      "location": "$.obligations[9].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 169,
+      "line_end": 169,
+      "location": "$.obligations[9].evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 119,
+      "line_end": 119,
+      "location": "$.obligations[10].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+      "line_start": 122,
+      "line_end": 122,
+      "location": "$.obligations[10].evidence[1]"
+    },
+    {
+      "state": "exact",
+      "path": "tool_fact\\technical-validation.json",
+      "line_start": 1,
+      "line_end": 1,
+      "location": "$.obligations[11].evidence[0]"
+    },
+    {
+      "state": "exact",
+      "path": "candidate\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+      "line_start": 2,
+      "line_end": 2,
+      "location": "$.obligations[11].evidence[1]"
+    }
+  ],
+  "semantics_preserved": true,
+  "original_source": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l3-v1\\candidate-6d87e44415de-adjud\\executions\\adjudicator\\attempt-01\\REVIEW_RESULT.json",
+  "subject": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l3-v1\\candidate-6d87e44415de-adjud\\subject"
+}

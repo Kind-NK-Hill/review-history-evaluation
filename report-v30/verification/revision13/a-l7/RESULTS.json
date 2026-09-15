@@ -1,0 +1,126 @@
+{
+  "status": "complete",
+  "candidate_id": "cand-3039b2c1479b5ff53fe4",
+  "target_hashes": {
+    "ProbabilityTheory/chapter_10/thm_10_10.lean": "18689594581a8194a99ce4d82c4db9933dcf23e2752da5734cdba808b3f7d840",
+    "ProbabilityTheory/chapter_10/thm_10_11.lean": "edae455156df8e468eaaf2ec07197c1eb8de3d59302f13179aa5008804e9c297"
+  },
+  "current_verdicts": [
+    "pass",
+    "pass"
+  ],
+  "dimensions": {
+    "mathematics": "pass",
+    "repair_reasonableness": "pass",
+    "disclosure": "pass",
+    "original_contract": "fail"
+  },
+  "T1_statuses": [
+    "pass",
+    "fail"
+  ],
+  "T1_interpretation": "Reviewer 1 scores honest scope accounting; reviewer 2 scores literal equivalence. Both explicitly agree original_contract=fail and reasonable corrected current delivery=pass. No mathematical disagreement and no vote rewritten.",
+  "author_root_seconds": 870.2758901119232,
+  "frozen_allowance_seconds": 3668.1527152061462,
+  "usage_by_call": [
+    {
+      "receipt": "author-call-08\\actor-receipt.json",
+      "role": "author",
+      "session_ids": [
+        "01a08d9c-6892-70c2-a44c-6fe9afa47be7"
+      ],
+      "usage": [
+        {
+          "input_tokens": 4605567,
+          "cached_input_tokens": 4405376,
+          "output_tokens": 16397
+        }
+      ],
+      "process_seconds": 870.0160000000033
+    },
+    {
+      "receipt": "help\\f2adb221-bd9e-4b96-963d-52290b64ce01\\actor\\actor-receipt.json",
+      "role": "general_reviewer",
+      "session_ids": [
+        "01a098bf-fd94-7113-86b9-c0ee753e8b66"
+      ],
+      "usage": [
+        {
+          "input_tokens": 1153296,
+          "cached_input_tokens": 1043584,
+          "output_tokens": 10785,
+          "reasoning_output_tokens": 1976
+        }
+      ],
+      "process_seconds": 292.26500000001397
+    },
+    {
+      "receipt": "help\\f3e3c7a0-9212-4b97-b0ed-55c4ba168fde\\actor\\actor-receipt.json",
+      "role": "math_reviewer",
+      "session_ids": [
+        "01a098ba-f27c-7222-9f54-900e88e40bec"
+      ],
+      "usage": [
+        {
+          "input_tokens": 82451,
+          "cached_input_tokens": 38528,
+          "output_tokens": 4280,
+          "reasoning_output_tokens": 1133
+        }
+      ],
+      "process_seconds": 102.85899999999674
+    },
+    {
+      "receipt": "endpoint\\reviewer-1\\actor\\actor-receipt.json",
+      "role": "reviewer",
+      "session_ids": [
+        "01a098d0-5fac-7eb1-96d7-dd74afbe9deb"
+      ],
+      "usage": [
+        {
+          "input_tokens": 1110509,
+          "cached_input_tokens": 1017984,
+          "output_tokens": 11214
+        }
+      ],
+      "process_seconds": 401.875
+    },
+    {
+      "receipt": "endpoint\\reviewer-2\\actor\\actor-receipt.json",
+      "role": "reviewer",
+      "session_ids": [
+        "01a098d0-5e19-7d62-b822-5da046c01a87"
+      ],
+      "usage": [
+        {
+          "input_tokens": 689203,
+          "cached_input_tokens": 549248,
+          "output_tokens": 10036
+        }
+      ],
+      "process_seconds": 360.280999999959
+    }
+  ],
+  "usage_totals": {
+    "input_tokens": 7641026,
+    "cached_input_tokens": 7054720,
+    "output_tokens": 52712
+  },
+  "usage_note": "Cached input is included within input; do not add. Internal help runs inside author root clock; do not add role durations to root elapsed. Endpoint reviews are separate, concurrent.",
+  "change": {
+    "thm_10_10_unchanged": true,
+    "thm_10_11_original_candidate_sha256": "e1634ffe83b200981e3ec93d55bbb2d5e8acbf0b51d4e09f6467e2bfbc39c154",
+    "thm_10_11_final_sha256": "edae455156df8e468eaaf2ec07197c1eb8de3d59302f13179aa5008804e9c297",
+    "diff_path": "sealed-candidate-to-final.diff"
+  },
+  "new_solver_calls_during_endpoint": 0,
+  "initial_reviews": 2,
+  "adjudications": 0,
+  "format_processing_failure": "Reviewer 1 returned an obligations object; original postprocessor assumed list and crashed after the model completed normally. Offline shape normalization above preserves all judgments, with no new model call.",
+  "all_source_lines_exposed": true,
+  "completed_epoch": 1789271294.697368,
+  "report": "RESULTS.zh-CN.md",
+  "old_main_table_changed": false,
+  "revision12_changed": false,
+  "production_changed": false
+}

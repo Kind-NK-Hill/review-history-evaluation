@@ -1,0 +1,30 @@
+[
+  {
+    "arm": "A",
+    "before": "review_history_retro_20260901\\research_framework\\replication_20260913\\execution_frozen\\repair-inputs\\A\\ProbabilityTheoryFormalization\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+    "after": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\2361825f\\development\\cases\\e6f61108230f7567018b093b789ee3ecd70bac170b9d9ec8ddf39241fd958d52\\subject\\candidate\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+    "before_sha256": "56c208c148b8528350fadd192743712b22a696d606b3febb8eefce3e140866b2",
+    "after_sha256": "3dd3259548284eb0b5cecf8d428483d31f5adae3fc1bf12d7504de58dfdbb9eb"
+  },
+  {
+    "arm": "A",
+    "before": "review_history_retro_20260901\\research_framework\\replication_20260913\\execution_frozen\\repair-inputs\\A\\ProbabilityTheoryFormalization\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+    "after": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\2361825f\\development\\cases\\e6f61108230f7567018b093b789ee3ecd70bac170b9d9ec8ddf39241fd958d52\\subject\\candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+    "before_sha256": "9c7a123c815c1d5a91f92de77239e205e502849c24feff7a57e25000fc57aedb",
+    "after_sha256": "27a56687c55718adadee12f3949fc0e94ced6447cd6f20959b3f79b9fc5dc9ed"
+  },
+  {
+    "arm": "B",
+    "before": "review_history_retro_20260901\\research_framework\\replication_20260913\\execution_frozen\\repair-inputs\\B\\ProbabilityTheoryFormalization\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+    "after": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\698da1a5\\development\\cases\\0786f30f9d7364408c8036bc84c0305ba428fd3c783ec6c666cfe84eaa7e4905\\subject\\candidate\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+    "before_sha256": "d2c237c168b2346e235ded87654798c76b356de65387ffe86dab48666cb53d13",
+    "after_sha256": "623edefdf783817e201958073c1aecd161fe99a8028ac38bbf9abe8e968d4c17"
+  },
+  {
+    "arm": "B",
+    "before": "review_history_retro_20260901\\research_framework\\replication_20260913\\execution_frozen\\repair-inputs\\B\\ProbabilityTheoryFormalization\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+    "after": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\698da1a5\\development\\cases\\0786f30f9d7364408c8036bc84c0305ba428fd3c783ec6c666cfe84eaa7e4905\\subject\\candidate\\ProbabilityTheory\\chapter_10\\ex_10_3_2.lean",
+    "before_sha256": "4a67292b0fe682cc35702861bc241286ba642fc1dc6a5423f7d838f6ec3ef08e",
+    "after_sha256": "2b14e664fce76f865cbb213dbcb056f23e7dc8d1c2a50c5966b19e8ef61f5b21"
+  }
+]

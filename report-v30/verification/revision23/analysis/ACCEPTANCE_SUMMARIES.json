@@ -1,0 +1,832 @@
+[
+  {
+    "slot": "r2-l1-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了问题 13.9。公开结论保持教材原意与强度，所有创新项、部分和、适应性、可积性及条件均值义务均从源条件在证明中推出；没有把目标迁移为额外前提，也未发现证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了问题 13.9：具体定义了自然滤过、创新项和部分和，从原观测的可测性与可积性证明全部中间义务，并最终证明具体部分和过程为鞅。没有把关键结论迁移为附加前提，也没有证明逃逸或未闭合教材义务。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l1-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "候选从原观测的可测性、可积性和 X₀=0 直接构造指定创新项与部分和，完整证明创新项和部分和的可积性与适应性、创新项的零条件均值以及部分和的一步鞅恒等式，最终得到具体过程相对于 σ(X₁,…,Xₙ) 自然过滤的完整鞅结论。未发现额外前提迁移、目标换名、支持文件逃逸或语义缺口。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "候选完整落实问题 13.9 的全部共同义务：定义与索引准确，创新项和部分和的可积性及适应性均有正文证明，创新项条件均值为零，并从原始观测条件直接推出具体部分和过程相对于自然滤过为鞅。未发现前提迁移、结论弱化、上游篡改或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l1-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "候选完整满足问题 13.9 的共同任务合同：定义、可积性、适应性、创新项零条件均值和最终鞅结论均已从原观测的可测性、可积性及 X₀=0 直接证明。未发现前提迁移、结论弱化、依赖滥用或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "候选完整实现并证明了问题 13.9 的具体创新过程及其部分和鞅结论。公开定理只要求原观测的可测性、可积性与 X₀=0，没有迁移关键义务为额外前提；各项教材义务均有对应证明，依赖路线有效，且未发现证明逃逸或语义弱化。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l2-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "inconclusive"
+    ],
+    "adjudication": true,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "整束任务共同确认完成。有限和方差定理从题设不相关性消去通用协方差展开中的交叉项；弱大数定律进一步计算平均值的共同均值和方差，应用切比雪夫得到显式尾概率界并证明其趋零。公开前提未被不当加强，目标未迁移为额外假设，也未发现证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "inconclusive",
+        "summary": "未获得有效、输入不变的结构化原审核意见；原始输出已保存。"
+      },
+      {
+        "role": "adjudicator",
+        "verdict": "pass",
+        "summary": "整束数学任务共同确认完成。第一项使用通用协方差展开，并从题设的不相关定义推出非对角协方差为零，从而得到有限和的方差可加性；第二项据此计算样本平均的均值与方差，应用切比雪夫不等式获得尾概率上界，并证明该上界趋于零，最终得到依概率收敛。另一份评价仅报告审核执行失败，没有提出数学或合同层面的反证，因此不构成否决依据。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l2-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了定理 11.4 与 11.5。公开陈述忠实于教材；不相关性被用于实质消去中心化交叉项；有限和方差可加、平均方差、切比雪夫尾界及其趋零均在证明中闭合；没有加强为独立或同分布，也没有把关键结论转移为额外前提或出现证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "两项教材任务共同完成。有限和方差证明从不相关的乘积期望定义推出中心化交叉项为零，并在一般协方差展开中逐项消除交叉项；弱大数定律证明计算平均的共同均值与精确方差，实际应用切比雪夫不等式，建立显式尾界并证明其趋零。公开前提未承载目标结论，未加强为独立或同分布，也未发现证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l2-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "fail"
+    ],
+    "adjudication": true,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了两项任务：有限个两两不相关 L² 实随机变量的方差可加性，以及具有共同均值和共同方差的两两不相关序列的 L² 弱大数定律。证明实际从不相关定义消去协方差交叉项，计算平均方差，应用切比雪夫不等式并证明尾界趋零；未迁移目标为额外前提，未加强为独立或同分布，也未发现证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "fail",
+        "summary": "两项公开定理的陈述忠实，弱大数定律证明也完成了方差界、切比雪夫应用和界趋零。决定性问题在 thm_11_4：候选直接调用 variance_fun_sum 获得和方差的协方差展开，绕过了任务书明确要求从方差定义完成的中心化与交叉项展开，并触犯“不能把和方差公式作为调用前提”的限制。故完整候选判定为 fail。"
+      },
+      {
+        "role": "adjudicator",
+        "verdict": "pass",
+        "summary": "裁决分歧的关键在于 variance_fun_sum 的性质及任务书末尾的冻结说明。该定理仅提供和方差等于双重协方差和的通用展开，不直接提供两两不相关变量的方差可加结论；候选仍从 Uncorrelated 定义推出非对角协方差为零并逐项消去交叉项。冻结说明明确允许数学等价的一般展开，故此调用不违反“不能把和方差公式作为调用前提”的限制。第二题也完整计算平均方差、应用切比雪夫并证明尾界趋零。整束任务共同完成，判定为 pass。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l3-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "fail",
+    "reviewer_verdicts": [
+      "fail",
+      "pass"
+    ],
+    "adjudication": true,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "fail",
+        "summary": "候选的核心数学证明路线、密度到全变差及依分布桥接、正态正方差和零方差边界处理均合理，技术审计也通过。然而 Scheffé 的公开主定理把极限函数 f 的非负性和可测性作为额外前提，没有从教材给出的 fₙ 非负可测及几乎处处收敛中推出。该缺口属于公开前提迁移，导致整束任务未按原声明共同完成，因此 verdict 为 fail。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "整束数学任务共同完成。Scheffé 引理按合同要求公开支持最终尾部可积序列，并从非负性、几乎处处收敛和积分条件完成负部控制与一阶收敛；一般概率密度的全变差和依分布结论、随机变量版本，以及正态参数在正方差和零方差边界下的全部要求均明确交付。未发现额外前提迁移、语义削弱或证明逃逸。"
+      },
+      {
+        "role": "adjudicator",
+        "verdict": "fail",
+        "summary": "候选源码构建及技术审计通过，Scheffé 的负部证明、最终尾部可积处理、密度到全变差及依分布的推导，以及正态分布正方差和零方差边界均数学可靠。但公开的 Scheffé 主定理额外要求极限函数满足 hf_nonneg，没有从教材给出的各 fₙ 非负及 fₙ 几乎处处收敛到 f 推出该性质，也没有提供保持教材原前提的公开包装。共同规则明确要求新增支持前提须由题目条件在正文中推出，因此这一关键责任被迁移给调用者，整束任务未共同确认完成。hf_meas 虽也显式列为前提，但可由 hf_int 直接获得，故决定性缺口是 hf_nonneg。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l3-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "两项候选共同完成了冻结合同要求：Scheffé 引理含最终尾部可积公开版本；一般概率密度的 L¹、全变差和依分布收敛均已交付；正态参数在正方差极限下给出密度、全变差及依分布结论，在零方差极限下正确地仅给出到点质量的依分布收敛。未发现目标迁移、语义弱化或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了 Scheffé 引理、概率密度的一范数与全变差收敛、由全变差推出依分布收敛，以及正态参数在正方差和零方差边界下的全部合同义务。公开前提符合冻结验收说明，证明责任未被迁移，未发现语义缺口或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l3-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。候选完整证明了带最终尾部可积公开接口的 Scheffé 引理，并将其用于概率密度的几乎处处收敛，得到一范数、全变差及依分布收敛。正态参数部分正确区分正极限方差与零方差边界，既交付正方差的全变差路线，也交付零方差到点质量的依分布结论且没有作出错误的全变差断言。依赖链公开可追溯，未发现额外前提迁移或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同通过终验。Scheffé 引理满足最终尾部可积的公开验收要求，并在证明中完成负部控制和绝对差积分收敛；一般概率密度结论完整推出全变差及依分布收敛；正态参数部分正确区分正方差的密度与全变差路线和零方差的点质量依分布边界。未发现目标迁移、额外关键前提或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l4-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。离散半和公式与共同支配密度半积分公式均从事件上确界路线证明，正差集合、正负部分、总质量相消、可求和或可积条件及上确界双向不等式均已闭合；伯努利—泊松例题正确落实无穷尾、端点和最终表达式，未发现前提迁移或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了合同要求。离散半和公式和共同密度半积分公式均从事件上确界定义实质证明，正差事件、补集、总质量相消、可求和或可积以及上确界两向界均已闭合。伯努利—泊松例题落实了无穷尾和与两个参数端点，并采用合同澄清后的 1-e^{-λ}-λe^{-λ}，最终得到 λ(1-e^{-λ})。未发现前提迁移、循环预设、证明逃逸或语义降格。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l4-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了定理 8.6 的离散半和公式与共同支配测度密度半积分公式，并从事件上确界定义落实正差事件、正负部分、质量相消、可积或可求和以及两向上确界论证。伯努利—泊松例题采用合同澄清后的正确尾和，得到 λ(1-e^{-λ}) 并覆盖 λ=0、1。未发现额外前提迁移、目标预设、非标准公理、上游篡改或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。候选从事件绝对差上确界定义建立统一解析核心，显式构造正差事件并证明上确界两向不等式，处理正负部分和总质量相消；随后在离散概率质量函数与共同支配密度两种情形中分别消解可求和、可积和事件质量表示义务。伯努利—泊松例题正确使用 1-e^{-λ}-λe^{-λ} 的无穷尾，推出 λ(1-e^{-λ})，并覆盖 λ=0、1。未发现额外前提迁移或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l4-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成合同要求：从事件上确界定义证明共同密度的半积分公式，通过计数测度推导可数离散支撑的半和公式，并正确计算伯努利与泊松分布的全变差距离及参数端点。证明覆盖正差事件的上界达到性、正负部分、总质量相消、可积与可求和处理及上确界两向论证；未发现目标迁移、证明逃逸或语义降格。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。候选从全变差的事件上确界定义证明了一般半积分公式，落实正差事件、正负部分、质量相消、可积性及上确界双向论证；再导出离散半和公式与连续密度公式。伯努利—泊松例正确计算合同澄清后的尾和，得到 λ(1-e^{-λ}) 并覆盖 λ=0、1。未发现公开前提迁移、循环预设或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l5-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "候选完整实现了最大耦合：公共部分与剩余部分均有正确质量和正规化处理，构造测度是概率测度，两个边缘正确，不等概率恰为全变差距离，并合法覆盖 mass=0 与 mass=1 两个端点。公开前提未迁入待证结论，依赖路线公开且闭合，未发现证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "整束数学任务共同确认完成。公开定理忠实表达连续密度的最大耦合，构造合法覆盖退化端点，概率性、两个边缘和不相等概率等于全变差距离均在证明中闭合；未发现前提迁移或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l5-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。候选构造了等价于教材伯努利混合的最大耦合测度，证明其为概率测度、边缘正确、相等概率为公共质量、不等概率恰等于全变差距离，并证明所有其他耦合的不等概率不小于该值。公共质量为零和一的端点均通过无零除分支合法处理；通用共同支配测度版本与实数教材版本均已闭合，未发现额外目标前提或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同闭合了任务：既实现教材的最大耦合构造，又提供任意共同支配测度下的通用定理；概率性、两个边缘、匹配与不匹配概率、全变差等号、对所有耦合的最优性以及公共质量为零或一的端点均被证明。未发现额外前提迁移或证明逃逸，故判定通过。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l5-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "候选完整构造了端点安全的最大耦合测度，证明其为概率测度、两个边缘正确、不相等概率等于密度全变差公式中的 p，并证明任意同边缘耦合的不相等概率不小于 p。没有额外前提迁移、证明逃逸、非标准公理或上游篡改，整束数学任务共同确认完成。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "候选完整实现了最大耦合：公共最小密度沿对角线耦合，剩余密度经安全正规化后取乘积；概率性、两个边缘、不相等概率等式及对任意同边缘耦合的最优下界均已证明。p=0 被显式分支处理，p=1 也在无除零的分支中合法覆盖。公开前提未承载目标结论，未发现证明逃逸或支持文件违规，整束任务共同确认完成。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l6-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "候选完整实现并证明了一传感器和双传感器线性均方误差的真实积分二次型、正确最优系数、最小误差及对全部系数的全局最优性；交叉项由独立性和矩条件在正文中推出，正分母与全部退化边界均已闭合，一般矩路线也已从原高斯源模型实例化。未发现额外关键前提或证明逃逸，整束任务共同确认完成。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了任务合同中的一传感器和双传感器线性均方误差形式化。公开陈述保真，所有教材义务在证明中闭合，高斯与相互独立源条件得到实际实例化，正分母及退化边界均明确且正确，未发现额外前提迁移或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l6-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "fail"
+    ],
+    "adjudication": true,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "整束任务共同确认完成。候选从原高斯分布与三源独立条件推导所需矩和交叉项，建立两个真实均方误差二次型，给出正确最优系数并证明全局最优，同时覆盖正分母与退化方差边界；未发现前提迁移或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "fail",
+        "summary": "候选正确完成了高斯矩实例化、独立性交叉项消去、两个均方误差二次型以及所有正分母情形的全局最优证明，也正确处理了单传感器退化边界。由于双传感器零分母边界仅证明存在零误差系数，未正式陈述并证明该系数的全局最优性或完整最优解，整束任务未共同确认完成。"
+      },
+      {
+        "role": "adjudicator",
+        "verdict": "pass",
+        "summary": "整束数学任务共同确认完成。分歧项中的双传感器退化结论给出可达到零均方误差的系数，而均方误差对任意系数必定非负，因此该结论已经以数学等价且更强的方式保证全局最优；不应仅因未重复封装为显式全称不等式而判定失败。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l6-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成一传感器与二传感器线性最小均方误差任务，包括真实仿射误差、交叉项消除、显式最优系数、全局最优性和全部退化边界。未发现公开前提迁移、语义削弱或证明逃逸，结论维持 pass。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同关闭任务书的全部数学义务：真实仿射均方误差被正确中心化并展开；高斯矩和独立性实际用于消除交叉项；一、双传感器显式系数均被证明对所有系数全局最优；正分母及退化边界均已覆盖；一般矩接口也由原高斯源条件实例化。未发现公开前提迁移或证明逃逸，因此整束任务通过。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l7-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。10.10 完整证明两种随机向量收敛与逐坐标收敛的双向等价，并落实欧氏范数双向控制、有限满测集交与有限并集界。10.11 在公开且合理的可测性修正下，实际推出全部复合输出可测性，并在连续性仅限于 S、极限落入 S 几乎处处的条件下证明几乎处处及依概率连续映射结论。未发现目标迁移、关键义务遗漏或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同完成两项任务。定理10.10证明两种向量收敛与逐坐标收敛的双向等价；定理10.11在明确、合理的可测性条件加强下证明复合输出可测，并证明连续映射保持几乎处处收敛和依概率收敛。未发现证明逃逸、隐藏前提、目标迁移或未闭合义务。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l7-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "两份目标文件共同完成整束任务。定理 10.10 完整证明有限维向量的几乎处处及依概率收敛与逐坐标收敛等价，并落实双向范数控制、有限满测交汇和有限并集界。定理 10.11 在公开增加 f 全局可测与 S 可测的合理题设修正后，证明全部复合输出可测性以及两种收敛保持；局部连续性仅在满概率集合 S 上使用，依概率部分采用与事件论证等价的子列路线。未发现目标迁移、循环依赖、非标准公理或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。第 10.10 条忠实证明有限维随机向量的几乎处处与依概率收敛分别等价于逐坐标收敛，并落实双向范数控制、有限满测汇合和有限并集界。第 10.11 条在公开增加 f 与 S 的可测性这一合理充分修正后，证明全部复合输出可测，并证明几乎处处及依概率收敛均由连续映射保持。没有目标迁移或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-l7-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了两项定理任务。定理 10.10 的两种逐坐标等价包含欧氏范数双向控制、有限满测集汇合和概率有限并集界；定理 10.11 明确采用允许的充分题设修正，并在正文中推出复合可测性及两种收敛保持。未发现目标迁移、关键义务缺失或证明逃逸，因此 verdict 为 pass。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "整束任务共同确认完成。定理 10.10 完整证明有限维随机向量的逐坐标几乎处处及依概率收敛等价，并落实双向范数控制、有限满测交与概率并集界。定理 10.11 在明确披露的充分修正下证明复合输出可测性，以及连续映射对两种收敛的保持；新增前提合理且未承载目标结论。未发现证明逃逸或未闭合的教材义务。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-m1-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。两份目标文件在同一源码状态下覆盖定理 13.17 和定理 13.18 的全部公开结论；可积性、适应性、条件期望、停止值一致性、几乎处处收敛、望远镜控制、支配函数可积性及积分极限均已闭合。未发现前提迁移、证明逃逸、非标准公理或上游篡改。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "两项目标在同一候选状态下共同完成。13.17 完整证明停止过程的可积性、适应性、一步条件期望及全时刻期望恒定；13.18 构造正确的实值停止值代表，并在三组原强度条件下分别闭合有限时刻一致性、几乎处处收敛、望远镜支配、支配函数可积性和积分极限。未发现额外前提迁移、语义弱化或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-m1-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了定理13.17和13.18。公开接口忠实保留原条件与结论，停止过程鞅的全部字段、三种停止定理条件下的有限性或一致性、支配、几乎处处收敛、积分极限及期望等式均在证明内部闭合，未发现额外前提迁移或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同完成定理 13.17 与 13.18。停止过程的可积性、适应性和一步条件期望均被证明；三个可选停止分支分别闭合了有限停止一致性、几乎处处收敛、支配收敛、望远镜控制和支配函数可积性，并全部接回定理 13.17 的期望恒定结论。未发现额外前提迁移或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-m1-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "fail",
+    "reviewer_verdicts": [
+      "fail",
+      "fail"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "fail",
+        "summary": "定理 13.17 完整且语义忠实；定理 13.18 的三条数学证明路线及支配、收敛、望远镜和可积性义务均实质完成，也另行证明了有限停时下停止值代表存在。但最终公开定理及其三个分支仍要求调用者提供停止值一致性证书 hZ，没有从教材条件内部构造并封装该证书。该项正属合同明令不得迁移的目标义务，因此整束任务判定为 fail。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "fail",
+        "summary": "定理 13.17 完整闭合，定理 13.18 的三条数学证明路线也基本正确且落实了教材要求。然而最终公开定理把停止值一致性 hZ 作为额外前提交给调用者，且没有将已证明的停止值存在性与三个期望结论组装成从题设条件直接得到的构造性端点。这违反任务合同的明确前提限制，因此整束判定为 fail。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-m2-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。主声明忠实于教材及任务合同，从原始四阶矩条件实际推出中心矩控制，证明中心化独立与零均值，完成有限和四阶展开及混合项处理，获得 O(n²) 四阶矩界和可求和的完整序列尾界，再应用第一 Borel–Cantelli 与几乎处处收敛判据，最终平移回共同均值。未发现目标迁移、同分布强化、非法额外前提或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同确认完成。主定理保持教材原意与强度，从原始四阶矩界实际推出中心矩控制，完成中心化独立性、有限和矩展开、交叉项处理、四阶部分和界、可求和偏差概率、第一 Borel–Cantelli、完整序列几乎处处收敛及去中心化；未增加同分布假设，未把目标责任迁为额外前提，也未发现证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-m2-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "候选完整证明了一致原始四阶矩界下、无需同分布的强大数定律。中心矩界由原始条件内部推出，有限和展开、独立性消项、四阶矩控制、可求和尾界、第一 Borel–Cantelli 及最终去中心化均在正文中闭合；未发现前提迁移、证明逃逸或语义弱化。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "候选完整证明了非同分布、相互独立且具有共同有限均值的实随机变量序列在原四阶矩一致有界时的强大数定律。中心四阶矩界由原始矩条件实际推出；有限部分和的四次递推展开、独立性因子分解、零均值消项、O(n^2) 四阶矩界、可求和尾概率、第一 Borel–Cantelli 及几乎处处收敛链条均落入证明正文。没有目标迁移、额外关键前提或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-m2-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "fail",
+    "reviewer_verdicts": [
+      "inconclusive",
+      "fail"
+    ],
+    "adjudication": true,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "inconclusive",
+        "summary": "未获得有效、输入不变的结构化原审核意见；原始输出已保存。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "fail",
+        "summary": "主定理陈述忠实，中心矩界、四阶展开、混合项消去、部分和矩界、可求和尾界及第一 Borel–Cantelli 路线均有实质证明，也未迁移目标为额外前提或强化为同分布。然而任务书强制要求的子列到完整序列扩展仅在已经取得完整收敛后循环重述，未形成独立证明。因此整束任务未共同确认完成。"
+      },
+      {
+        "role": "adjudicator",
+        "verdict": "fail",
+        "summary": "候选可构建，主定理陈述忠实，且中心化、四阶矩展开、部分和四阶矩界、可求和偏差概率及第一 Borel–Cantelli 路线均有实质证明。但冻结任务书明确要求从适当子列扩展到完整序列；候选先借全部整数上的偏差可求和与定理 10.1 得到完整收敛 hBC，再从该完整收敛导出平方子列收敛 hsub 和余项收敛 hrem，最后调用扩展引理。这是依赖既有完整收敛的循环性包装，未实际闭合指定的子列扩展义务。第一份评价没有有效审核证据，不能抵消源码和合同支持的这一重大缺陷。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-m3-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选通过共同终验。公开定理忠实实现教材的实随机变量 Skorokhod 表示，所有指定数学义务均在证明中闭合，未增加承载目标的公开前提，也未发现证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "候选完整实现了实随机变量的 Skorokhod 分位数耦合：公共概率空间、端点处理、广义逆比较、可测性、推前分布、可数坏集合及几乎处处收敛均在证明中闭合；公开定理忠实于教材且未引入额外实质前提或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-m3-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "候选完整实现了实随机变量的分位数耦合版 Skorokhod 表示定理。公开结论与教材原意及强度一致；共同概率空间、可测分位数代表、各边缘分布、逆像比较、坏水平可数性、端点零测处理和几乎处处收敛均有实际证明。未发现额外公开前提迁移、非法依赖或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "候选完整闭合了教材与任务合同要求：在合法单位区间概率空间上构造可测分位数耦合，证明精确边缘分布、逆像比较、相关坏集可数、端点零测及几乎处处收敛，并从随机变量的依分布收敛推出完整 Skorokhod 表示。未发现前提迁移、强度损失或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-m3-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "候选在合法的共同勒贝格概率空间上完整建立广义逆分位数耦合，证明可测性、精确边缘分布、端点处理、坏水平集合可数及几乎处处收敛，并提供与教材随机变量陈述等强的公开定理。全部教材义务均在证明中闭合，未增加实质前提，也未发现证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "整束数学任务共同完成。候选在开单位区间的勒贝格概率空间上自行建立下广义逆耦合，证明可测性、精确推前分布、连续水平处的分位数收敛及可数零测异常集，最终得到保持各原分布的几乎处处收敛表示；公开前提与教材分布收敛条件一致，未发现前提迁移或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-h1-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成五个公开目标以及反演、唯一性所要求的全部分析与测度论责任。公开陈述忠实，必要前提未被强化为目标替代物，新增支持路线自洽，两个末端应用均闭合，未发现证明逃逸或尚未解决的语义缺口。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了五个目标。反演公式的有限积分交换、核化简、Dirichlet 定值、全部分段极限、统一支配和端点半质量均有实质证明；唯一性落实了共同非原子端点的稠密选择及测度确定；两个末端应用分别完成标准柯西平均稳定性和整数值判别。未发现目标迁移、非法新增前提或证明逃逸。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-h1-c",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了五个目标以及反演和唯一性的全部教材义务。公开声明忠实，关键支持路线闭合，应用分支完整，未增加不当公开前提，也未发现证明逃逸；整束任务判定通过。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了五个目标及反演、唯一性的全部专有分析责任。公开陈述忠实，证明链闭合，新增前提均为题设数据或在正文中推出，两个末端应用均成立，未发现证明逃逸或语义缺口。"
+      }
+    ]
+  },
+  {
+    "slot": "r2-h1-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了五个公开目标以及反演和唯一性的全部专有分析责任。公开陈述忠实，证明义务闭合，前提自然且未迁移目标，支持路线合法，未发现证明逃逸；结合独立语义审阅与限定范围的中性技术事实，整束任务判定通过。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "候选在同一源码状态中完成五个公开目标，并完整落实反演公式的有限截断交换、核化简、Dirichlet 极限、分类点态极限、统一支配和端点半质量；唯一性证明包含稠密连续端点选择与测度确定；两个应用均具有所需语义连接。未发现额外前提迁移或证明逃逸，因此整束任务共同确认通过。"
+      }
+    ]
+  },
+  {
+    "slot": "l3-repair-a",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "完整候选共同完成了 Scheffé 引理、概率密度的 L¹ 与全变差收敛、由全变差到依分布收敛，以及正态参数在正方差和零方差边界下的全部明确义务。公开前提符合合同，没有目标迁移或证明逃逸，判定通过。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。Scheffé 引理公开支持最终尾部可积并恢复原序列结论，负部控制与支配收敛义务实际落入证明；概率密度的 L1、全变差和依分布结论均闭合；正态参数在正极限方差下获得全变差收敛，在包括零方差的全部边界下获得依分布收敛，并将零方差极限正确识别为点质量。未发现目标迁移、额外关键前提、证明逃逸或语义缺口。"
+      }
+    ]
+  },
+  {
+    "slot": "l3-repair-b",
+    "terminal": "complete",
+    "technical": true,
+    "verdict": "pass",
+    "reviewer_verdicts": [
+      "pass",
+      "pass"
+    ],
+    "adjudication": false,
+    "reasons": [
+      {
+        "role": "reviewer-1",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。候选忠实形式化 Scheffé 引理并满足最终尾部可积的冻结验收要求；随后完整证明概率密度收敛导致 L¹、全变差和依分布收敛。正态参数情形准确区分正极限方差与零极限方差，并对后者证明到点质量的分布收敛而不作错误的全变差断言。未发现前提迁移、语义削弱或证明逃逸。"
+      },
+      {
+        "role": "reviewer-2",
+        "verdict": "pass",
+        "summary": "整束任务共同完成。Scheffé 引理包含合同要求的最终尾部可积公开形式，并实际证明负部支配、负部积分趋零和一范数收敛；密度收敛进一步得到全变差、弱收敛及依分布收敛；正态参数情形完整区分正极限方差与零极限方差，并正确给出点质量极限及非退化近似不具全变差收敛的边界。"
+      }
+    ]
+  }
+]

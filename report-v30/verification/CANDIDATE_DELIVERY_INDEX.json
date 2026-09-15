@@ -1,0 +1,1073 @@
+[
+  {
+    "group": "L2",
+    "arm": "A",
+    "version": "A_original_development_r1",
+    "root_id": "root-9b18654b-e41d-4ebb-b0cb-54e39bfcff94",
+    "run_id": "coverage-L2_thm_11_4_to_11_5-A-r1",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-0913571e7de737e96d31",
+      "input_binding_sha256": "0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15",
+      "verdict": "pass",
+      "input_binding_file_sha256": "0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15",
+      "input_binding_path": "ROOT/ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v1",
+        "candidate_package_status": "complete",
+        "evaluation_scope": "complete_candidate",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7",
+    "package_directory": "verification/supporting_records/candidates/L2-A",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L2-A/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "verification/supporting_records/candidates/L2-A/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+      "verification/supporting_records/candidates/L2-A/subject/reevaluation/INPUT_BINDING.json",
+      "verification/supporting_records/candidates/L2-A/subject/reevaluation/RULES.json",
+      "verification/supporting_records/candidates/L2-A/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L2-A/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L2-A/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L2-A/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_05/def_5_1.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_05/def_5_2.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_05/thm_5_2.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_06/def_6_3.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_07/def_7_3.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_07/thm_7_13.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_09/def_9_1.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_10/thm_10_3.lean",
+      "verification/supporting_records/candidates/L2-A/subject/upstream/ProbabilityTheory/chapter_11/thm_11_2.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "original_expected_sha256": "6c82a244a84771f610a4fa80103e8c21734c44f841c4da8437af3b04a4bf0ae2",
+        "package_file": "verification/supporting_records/candidates/L2-A/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "original_expected_sha256": "73d72c2ba1ce8841605d8c4208fd932f0d4afe8bb917d565dcd0b9e52cca8db0",
+        "package_file": "verification/supporting_records/candidates/L2-A/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "41418a41fe5bc1b65a9a626bdb1acba4bb10ed4aeaaf59b460c20e2fa7a960a1",
+        "package_file": "verification/supporting_records/candidates/L2-A/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L2-A/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "42de9c21cb60362d7b94b91f6140f4ca131d7c3fe5e6ed3f552fa2d823b4e2a5",
+        "package_file": "verification/supporting_records/candidates/L2-A/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789070711.3651283,
+    "recorded_last_role_return_epoch": 1789071566.3251579,
+    "current_record": {
+      "root_id": "root-9b18654b-e41d-4ebb-b0cb-54e39bfcff94",
+      "group": "L2",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-L2_thm_11_4_to_11_5-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-67c83c8b4bf7-1.json"
+      ]
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L2-A/current_evidence/L2-candidate-67c83c8b4bf7-1.json"
+    ]
+  },
+  {
+    "group": "L3",
+    "arm": "A",
+    "version": "A_original_development_r1",
+    "root_id": "root-4169a07f-6749-48c1-b087-fbabfa223640",
+    "run_id": "coverage-L3_prob_7_6_to_ex_10_3_2-A-r1",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-da84ef9a9f0ba214ab52",
+      "input_binding_sha256": "da84ef9a9f0ba214ab52b794960ac6abcbfd3cdefa45ae811e1d70dd9f8edf47",
+      "verdict": "pass",
+      "input_binding_file_sha256": "da84ef9a9f0ba214ab52b794960ac6abcbfd3cdefa45ae811e1d70dd9f8edf47",
+      "input_binding_path": "ROOT/ep-a-stage-l3\\development-ac-r1\\cases\\da84ef9a9f0ba214ab52b794960ac6abcbfd3cdefa45ae811e1d70dd9f8edf47\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v1",
+        "candidate_package_status": "complete",
+        "evaluation_scope": "complete_candidate",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l3\\development-ac-r1\\cases\\da84ef9a9f0ba214ab52b794960ac6abcbfd3cdefa45ae811e1d70dd9f8edf47",
+    "package_directory": "verification/supporting_records/candidates/L3-A",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L3-A/subject/candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "verification/supporting_records/candidates/L3-A/subject/candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "verification/supporting_records/candidates/L3-A/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L3-A/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L3-A/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L3-A/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_07/thm_7_11.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_08/def_8_5.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_08/prob_8_7.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_10/def_10_4.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_10/def_10_5.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_10/ex_10_3_1.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_10/thm_10_6.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_13/thm_13_5.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_14/def_14_1.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_14/thm_14_4.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_14/thm_14_4_density_support.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean",
+      "verification/supporting_records/candidates/L3-A/subject/upstream/ProbabilityTheory/common_support/tv_distance_core.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_07/prob_7_6.lean",
+        "original_expected_sha256": "56c208c148b8528350fadd192743712b22a696d606b3febb8eefce3e140866b2",
+        "package_file": "verification/supporting_records/candidates/L3-A/subject/candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+        "original_expected_sha256": "9c7a123c815c1d5a91f92de77239e205e502849c24feff7a57e25000fc57aedb",
+        "package_file": "verification/supporting_records/candidates/L3-A/subject/candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614",
+        "package_file": "verification/supporting_records/candidates/L3-A/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L3-A/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16",
+        "package_file": "verification/supporting_records/candidates/L3-A/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789072533.8577754,
+    "recorded_last_role_return_epoch": 1789076720.8707154,
+    "current_record": {
+      "root_id": "root-4169a07f-6749-48c1-b087-fbabfa223640",
+      "group": "L3",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-L3_prob_7_6_to_ex_10_3_2-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "incomplete",
+      "mathematics": "pass",
+      "reason": "证明在已声明前提下正确，但Scheffé入口仍要求所有项可积，未交付原任务允许的最终尾部包装。",
+      "remaining_work": "补交仅要求最终尾部可积的Scheffé公开定理，或将现有逐项可积定理包装为尾部版本并恢复原序列极限。",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-ca86a7f5709c-1.json"
+      ]
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L3-A/current_evidence/L3-candidate-ca86a7f5709c-1.json"
+    ]
+  },
+  {
+    "group": "L7",
+    "arm": "A",
+    "version": "A_original_development_r1",
+    "root_id": "root-8b1680db-a629-4fa3-9f68-941ccba4c8d1",
+    "run_id": "coverage-L7_thm_10_10_to_10_11-A-r1",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-a5ef5c2f70ca8ec650cd",
+      "input_binding_sha256": "a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669",
+      "verdict": "fail",
+      "input_binding_file_sha256": "a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669",
+      "input_binding_path": "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v1",
+        "candidate_package_status": "partial",
+        "evaluation_scope": "partial_material",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669",
+    "package_directory": "verification/supporting_records/candidates/L7-A",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L7-A/subject/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "verification/supporting_records/candidates/L7-A/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L7-A/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L7-A/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L7-A/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+      "verification/supporting_records/candidates/L7-A/subject/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/thm_10_10.lean",
+        "original_expected_sha256": "18689594581a8194a99ce4d82c4db9933dcf23e2752da5734cdba808b3f7d840",
+        "package_file": "verification/supporting_records/candidates/L7-A/subject/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "0f54fe8e24f7b3119ed37efab39907fbea5a4b41c5de8c1f20de3b1777520c91",
+        "package_file": "verification/supporting_records/candidates/L7-A/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L7-A/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "6d89cf3fb8332d11bbd7a3908277a7d5fb13da91e5413a039335fc032bface24",
+        "package_file": "verification/supporting_records/candidates/L7-A/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789082232.6132648,
+    "recorded_last_role_return_epoch": 1789085764.4555557,
+    "current_record": {
+      "root_id": "root-8b1680db-a629-4fa3-9f68-941ccba4c8d1",
+      "group": "L7",
+      "arm": "A",
+      "version": "A_original_development_r1",
+      "run_id": "coverage-L7_thm_10_10_to_10_11-A-r1",
+      "same_root_continuation": false,
+      "original_verdict": "fail",
+      "current_verdict": "incomplete",
+      "mathematics": "partial_not_all_targets",
+      "reason": "原部分候选缺整个thm_10_11分支；条件修正不能代替缺失的交付。",
+      "remaining_work": "完成连续映射定理整个第二分支，包含复合可测性与两种收敛保持。",
+      "scope": "原部分候选，仅第一题完成。",
+      "evidence": [
+        "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\adjudicator.json",
+        "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\reviewer-1.json",
+        "ROOT/ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\reviewer-2.json"
+      ]
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L7-A/current_evidence/adjudicator.json",
+      "verification/supporting_records/candidates/L7-A/current_evidence/reviewer-1.json",
+      "verification/supporting_records/candidates/L7-A/current_evidence/reviewer-2.json"
+    ]
+  },
+  {
+    "group": "L2",
+    "arm": "B",
+    "version": "B_transport_r4",
+    "root_id": "root-7960f8a1-b0a1-4006-8e36-00122a42c118",
+    "run_id": "coverage-L2-B-r4-001",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-adc7fe225489e5c63df0",
+      "input_binding_sha256": "adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760",
+      "verdict": "pass",
+      "input_binding_file_sha256": "adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760",
+      "input_binding_path": "ROOT/ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v1",
+        "candidate_package_status": "complete",
+        "evaluation_scope": "complete_candidate",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333",
+    "package_directory": "verification/supporting_records/candidates/L2-B",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+      "verification/supporting_records/candidates/L2-B/subject/reevaluation/INPUT_BINDING.json",
+      "verification/supporting_records/candidates/L2-B/subject/reevaluation/RULES.json",
+      "verification/supporting_records/candidates/L2-B/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L2-B/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L2-B/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L2-B/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_05/def_5_1.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_05/def_5_2.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_05/thm_5_2.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_06/def_6_3.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_07/def_7_3.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_07/thm_7_13.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_09/def_9_1.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_10/thm_10_3.lean",
+      "verification/supporting_records/candidates/L2-B/subject/upstream/ProbabilityTheory/chapter_11/thm_11_2.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "original_expected_sha256": "0a0a2fb7a8016025bef9f3c4d948d61fd0704a1958de195fd0379953cd4dd2a3",
+        "package_file": "verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "original_expected_sha256": "19d0d4224cfd2eb9e8658d88c126bcb1b2fad1fd3f3826221542d9e1339d9bbb",
+        "package_file": "verification/supporting_records/candidates/L2-B/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "41418a41fe5bc1b65a9a626bdb1acba4bb10ed4aeaaf59b460c20e2fa7a960a1",
+        "package_file": "verification/supporting_records/candidates/L2-B/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L2-B/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "42de9c21cb60362d7b94b91f6140f4ca131d7c3fe5e6ed3f552fa2d823b4e2a5",
+        "package_file": "verification/supporting_records/candidates/L2-B/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789112001.468458,
+    "recorded_last_role_return_epoch": 1789113806.6945179,
+    "current_record": {
+      "root_id": "root-7960f8a1-b0a1-4006-8e36-00122a42c118",
+      "group": "L2",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-L2-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-92da00620333-1.json",
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-92da00620333-2.json"
+      ]
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L2-B/current_evidence/L2-candidate-92da00620333-1.json",
+      "verification/supporting_records/candidates/L2-B/current_evidence/L2-candidate-92da00620333-2.json"
+    ]
+  },
+  {
+    "group": "L3",
+    "arm": "B",
+    "version": "B_transport_r4",
+    "root_id": "root-38384577-742c-4f28-814a-95d1a272bff5",
+    "run_id": "coverage-L3-B-r4-001",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-447c36e582349b851e22",
+      "input_binding_sha256": "447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b",
+      "verdict": "fail",
+      "input_binding_file_sha256": "447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b",
+      "input_binding_path": "ROOT/ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v2-scope",
+        "candidate_package_status": "complete",
+        "evaluation_scope": "complete_candidate",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-b\\development-b-r4\\cases\\447c36e582349b851e226f61f1ffe27bf131228f880a4e333ed0870f57bf457b",
+    "package_directory": "verification/supporting_records/candidates/L3-B",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L3-B/subject/candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "verification/supporting_records/candidates/L3-B/subject/candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "verification/supporting_records/candidates/L3-B/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L3-B/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L3-B/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L3-B/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_07/thm_7_11.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_08/def_8_5.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_08/prob_8_7.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_08/thm_8_6.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_10/def_10_4.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_10/def_10_5.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_10/ex_10_3_1.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_10/thm_10_6.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_13/thm_13_5.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_14/def_14_1.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_14/thm_14_4.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_14/thm_14_4_density_support.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean",
+      "verification/supporting_records/candidates/L3-B/subject/upstream/ProbabilityTheory/common_support/tv_distance_core.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_07/prob_7_6.lean",
+        "original_expected_sha256": "d2c237c168b2346e235ded87654798c76b356de65387ffe86dab48666cb53d13",
+        "package_file": "verification/supporting_records/candidates/L3-B/subject/candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+        "original_expected_sha256": "4a67292b0fe682cc35702861bc241286ba642fc1dc6a5423f7d838f6ec3ef08e",
+        "package_file": "verification/supporting_records/candidates/L3-B/subject/candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614",
+        "package_file": "verification/supporting_records/candidates/L3-B/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L3-B/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16",
+        "package_file": "verification/supporting_records/candidates/L3-B/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789119413.619378,
+    "recorded_last_role_return_epoch": 1789121402.6789374,
+    "current_record": {
+      "root_id": "root-38384577-742c-4f28-814a-95d1a272bff5",
+      "group": "L3",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-L3-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "fail",
+      "current_verdict": "incomplete",
+      "mathematics": "pass",
+      "reason": "证明在已声明前提下正确，但Scheffé入口仍要求所有项可积，未交付原任务允许的最终尾部包装。",
+      "remaining_work": "补交仅要求最终尾部可积的Scheffé公开定理，或将现有逐项可积定理包装为尾部版本并恢复原序列极限。",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-b299284a15fd-1.json"
+      ]
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L3-B/current_evidence/L3-candidate-b299284a15fd-1.json"
+    ]
+  },
+  {
+    "group": "L7",
+    "arm": "B",
+    "version": "B_transport_r4",
+    "root_id": "root-7df97779-0b9e-4401-acb6-2887a3798f62",
+    "run_id": "coverage-L7-B-r4-001",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-101c389bf124f99e0871",
+      "input_binding_sha256": "101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154",
+      "verdict": "fail",
+      "input_binding_file_sha256": "101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154",
+      "input_binding_path": "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v2-scope",
+        "candidate_package_status": "complete",
+        "evaluation_scope": "complete_candidate",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154",
+    "package_directory": "verification/supporting_records/candidates/L7-B",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L7-B/subject/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "verification/supporting_records/candidates/L7-B/subject/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+      "verification/supporting_records/candidates/L7-B/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L7-B/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L7-B/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L7-B/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+      "verification/supporting_records/candidates/L7-B/subject/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/thm_10_10.lean",
+        "original_expected_sha256": "e76b788d9cfeed39c17a4786e19ea23268d000b25ed2ced9e2b872feb6890db6",
+        "package_file": "verification/supporting_records/candidates/L7-B/subject/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/thm_10_11.lean",
+        "original_expected_sha256": "99d36c455383f146dfaa8fe7c244f3a7cf407cd468f0c4ef7512708c96a385d2",
+        "package_file": "verification/supporting_records/candidates/L7-B/subject/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "0f54fe8e24f7b3119ed37efab39907fbea5a4b41c5de8c1f20de3b1777520c91",
+        "package_file": "verification/supporting_records/candidates/L7-B/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L7-B/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "6d89cf3fb8332d11bbd7a3908277a7d5fb13da91e5413a039335fc032bface24",
+        "package_file": "verification/supporting_records/candidates/L7-B/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789150433.3800418,
+    "recorded_last_role_return_epoch": 1789152173.0742133,
+    "current_record": {
+      "root_id": "root-7df97779-0b9e-4401-acb6-2887a3798f62",
+      "group": "L7",
+      "arm": "B",
+      "version": "B_transport_r4",
+      "run_id": "coverage-L7-B-r4-001",
+      "same_root_continuation": false,
+      "original_verdict": "fail",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "原双评及裁决均认可显式前提下的证明；两个公开支持定理实际交付复合可测性。当前标准接纳已说明的合理修正版，不再以原缺陷合同阻断。",
+      "remaining_work": "无",
+      "scope": "Borel函数、环境空间逐点连续；另要求S本身可测，是较强充分修正，按当前修正版标准接纳但不抹平范围差别。",
+      "evidence": [
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\adjudicator.json",
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\reviewer-1.json",
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\reviewer-2.json",
+        "ROOT/ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_11.lean"
+      ]
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L7-B/current_evidence/adjudicator.json",
+      "verification/supporting_records/candidates/L7-B/current_evidence/reviewer-1.json",
+      "verification/supporting_records/candidates/L7-B/current_evidence/reviewer-2.json",
+      "verification/supporting_records/candidates/L7-B/current_evidence/thm_10_11.lean"
+    ]
+  },
+  {
+    "group": "L2",
+    "arm": "C",
+    "version": "C_runtime_r3",
+    "root_id": "root-018a1503-17bf-4957-b80f-94af1c1b696c",
+    "run_id": "c-r3-l2-001",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-eba5ab477a49ec5b5cfb",
+      "input_binding_sha256": "eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577",
+      "verdict": "fail",
+      "input_binding_file_sha256": "eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577",
+      "input_binding_path": "ROOT/ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v1",
+        "candidate_package_status": "complete",
+        "evaluation_scope": "complete_candidate",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36",
+    "package_directory": "verification/supporting_records/candidates/L2-C",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L2-C/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+      "verification/supporting_records/candidates/L2-C/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+      "verification/supporting_records/candidates/L2-C/subject/reevaluation/INPUT_BINDING.json",
+      "verification/supporting_records/candidates/L2-C/subject/reevaluation/RULES.json",
+      "verification/supporting_records/candidates/L2-C/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L2-C/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L2-C/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L2-C/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_05/def_5_1.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_05/def_5_2.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_05/thm_5_2.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_06/def_6_3.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_07/def_7_3.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_07/thm_7_13.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_09/def_9_1.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_10/thm_10_3.lean",
+      "verification/supporting_records/candidates/L2-C/subject/upstream/ProbabilityTheory/chapter_11/thm_11_2.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "original_expected_sha256": "1056eebd64efb1db3b098fc08309c1a5e550f6c57c6c9919ac0a1ffbedcd80db",
+        "package_file": "verification/supporting_records/candidates/L2-C/subject/candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "original_expected_sha256": "4a6d999400bf7fe8e812d7ecd1eb271a7271e8e24ca56ae5c933f6834c54dbf5",
+        "package_file": "verification/supporting_records/candidates/L2-C/subject/candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "41418a41fe5bc1b65a9a626bdb1acba4bb10ed4aeaaf59b460c20e2fa7a960a1",
+        "package_file": "verification/supporting_records/candidates/L2-C/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L2-C/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "42de9c21cb60362d7b94b91f6140f4ca131d7c3fe5e6ed3f552fa2d823b4e2a5",
+        "package_file": "verification/supporting_records/candidates/L2-C/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789111990.3457227,
+    "recorded_last_role_return_epoch": 1789113070.291782,
+    "current_record": {
+      "root_id": "root-018a1503-17bf-4957-b80f-94af1c1b696c",
+      "group": "L2",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l2-001",
+      "same_root_continuation": false,
+      "original_verdict": "fail",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "按当前G标准，一般协方差展开合法；候选自行消交叉项并完成弱大数定律。",
+      "remaining_work": "无",
+      "scope": "一般协方差展开；自行平方展开仅附加分析",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L2-candidate-dddb2b2aae36-1.json"
+      ]
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L2-C/current_evidence/L2-candidate-dddb2b2aae36-1.json"
+    ]
+  },
+  {
+    "group": "L3",
+    "arm": "C",
+    "version": "C_runtime_r3",
+    "root_id": "root-ba17577d-9363-4b5d-bd31-de00307fd0dd",
+    "run_id": "c-r3-l3-001",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-5b273faa031edeeab742",
+      "input_binding_sha256": "5b273faa031edeeab7424ef676fb0bcb9d7040aad2c4887125328b2d5c495b2b",
+      "verdict": "pass",
+      "input_binding_file_sha256": "5b273faa031edeeab7424ef676fb0bcb9d7040aad2c4887125328b2d5c495b2b",
+      "input_binding_path": "ROOT/ep-bc-l3-c\\development-ac-r1\\cases\\5b273faa031edeeab7424ef676fb0bcb9d7040aad2c4887125328b2d5c495b2b\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v2-scope",
+        "candidate_package_status": "complete",
+        "evaluation_scope": "complete_candidate",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l3-c\\development-ac-r1\\cases\\5b273faa031edeeab7424ef676fb0bcb9d7040aad2c4887125328b2d5c495b2b",
+    "package_directory": "verification/supporting_records/candidates/L3-C",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L3-C/subject/candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+      "verification/supporting_records/candidates/L3-C/subject/candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+      "verification/supporting_records/candidates/L3-C/subject/candidate/ProbabilityTheory/common_support/scheffe.lean",
+      "verification/supporting_records/candidates/L3-C/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L3-C/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L3-C/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L3-C/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_07/thm_7_11.lean",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_08/def_8_5.lean",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_10/def_10_4.lean",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_10/def_10_5.lean",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_10/ex_10_3_1.lean",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_13/thm_13_5.lean",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_14/def_14_1.lean",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_14/thm_14_4.lean",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_14/thm_14_4_density_support.lean",
+      "verification/supporting_records/candidates/L3-C/subject/upstream/ProbabilityTheory/chapter_14/thm_14_4_dominating_measure.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_07/prob_7_6.lean",
+        "original_expected_sha256": "25ac85093f03845e5588731b8e2135d9493d543280d662e22cf05549ec53c3ef",
+        "package_file": "verification/supporting_records/candidates/L3-C/subject/candidate/ProbabilityTheory/chapter_07/prob_7_6.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+        "original_expected_sha256": "701d35d4461cefa4835b99ec60d60d9ece41411deae08bd78d5e918964eefbc3",
+        "package_file": "verification/supporting_records/candidates/L3-C/subject/candidate/ProbabilityTheory/chapter_10/ex_10_3_2.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/common_support/scheffe.lean",
+        "original_expected_sha256": "e503cd27d3d2c89826bdd06415deb9c6772d9cbad91e1815b5d9d55350046bac",
+        "package_file": "verification/supporting_records/candidates/L3-C/subject/candidate/ProbabilityTheory/common_support/scheffe.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "db9b1054cdd6029537037157fb0a187503d2ab35f9021ea9f6a61d57152cc614",
+        "package_file": "verification/supporting_records/candidates/L3-C/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L3-C/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16",
+        "package_file": "verification/supporting_records/candidates/L3-C/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789119401.2157226,
+    "recorded_last_role_return_epoch": 1789121795.3342266,
+    "current_record": {
+      "root_id": "root-ba17577d-9363-4b5d-bd31-de00307fd0dd",
+      "group": "L3",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l3-001",
+      "same_root_continuation": false,
+      "original_verdict": "pass",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "真实最终尾部可积接口及负部、一范数、密度和正态边界证明均完成。",
+      "remaining_work": "无",
+      "scope": "原任务最终尾部T；不要求额外E包装",
+      "evidence": [
+        "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_repair_r3_20260912\\normalized\\L3-candidate-6d87e44415de-1.json"
+      ]
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L3-C/current_evidence/L3-candidate-6d87e44415de-1.json"
+    ]
+  },
+  {
+    "group": "L7",
+    "arm": "C",
+    "version": "C_runtime_r3",
+    "root_id": "root-0d242f5b-bee0-4c49-8a38-3a608b699779",
+    "run_id": "c-r3-l7-001",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-c2fb5f540fc9fa12c894",
+      "input_binding_sha256": "c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d",
+      "verdict": "unresolved",
+      "input_binding_file_sha256": "c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d",
+      "input_binding_path": "ROOT/ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v2-scope",
+        "candidate_package_status": "complete",
+        "evaluation_scope": "complete_candidate",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d",
+    "package_directory": "verification/supporting_records/candidates/L7-C",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L7-C/subject/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "verification/supporting_records/candidates/L7-C/subject/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+      "verification/supporting_records/candidates/L7-C/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L7-C/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L7-C/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L7-C/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+      "verification/supporting_records/candidates/L7-C/subject/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/thm_10_10.lean",
+        "original_expected_sha256": "d12af203caf856906c015e843b85e70f366ad2da77ff23d1d02c065652a1ad5d",
+        "package_file": "verification/supporting_records/candidates/L7-C/subject/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/thm_10_11.lean",
+        "original_expected_sha256": "f1a601112d2998aaf91738bedf21f53c1e180d74448a4d9d89a93a52eb6ca95b",
+        "package_file": "verification/supporting_records/candidates/L7-C/subject/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "0f54fe8e24f7b3119ed37efab39907fbea5a4b41c5de8c1f20de3b1777520c91",
+        "package_file": "verification/supporting_records/candidates/L7-C/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L7-C/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "6d89cf3fb8332d11bbd7a3908277a7d5fb13da91e5413a039335fc032bface24",
+        "package_file": "verification/supporting_records/candidates/L7-C/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789150420.6830218,
+    "recorded_last_role_return_epoch": 1789152357.0465262,
+    "current_record": {
+      "root_id": "root-0d242f5b-bee0-4c49-8a38-3a608b699779",
+      "group": "L7",
+      "arm": "C",
+      "version": "C_runtime_r3",
+      "run_id": "c-r3-l7-001",
+      "same_root_continuation": false,
+      "original_verdict": "unresolved",
+      "current_verdict": "pass",
+      "mathematics": "pass",
+      "reason": "两份有效独立评价确认两题数学、修正和披露；当前标准接纳该完整合理修正版。",
+      "remaining_work": "无",
+      "scope": "Borel函数、环境空间逐点连续；预像事件可测或几乎处处成员。另保留无函数可测性的数值核心。",
+      "evidence": [
+        "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+        "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json"
+      ]
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L7-C/current_evidence/REVIEW_RESULT.json",
+      "verification/supporting_records/candidates/L7-C/current_evidence/REVIEW_RESULT.json"
+    ]
+  },
+  {
+    "group": "L7",
+    "arm": "A",
+    "version": "A_l7_repair_r1",
+    "root_id": "root-ee619db0-d101-434f-b0cd-54c850862b1c",
+    "run_id": "coverage-L7-A-repair-r1-20260911",
+    "selected_candidate": {
+      "anonymous_candidate_id": "cand-1726295c45eec3a9196c",
+      "input_binding_sha256": "1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f",
+      "verdict": "fail",
+      "input_binding_file_sha256": "1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f",
+      "input_binding_path": "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\input-binding.json",
+      "protocol": {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": "development-common-endpoint-v1",
+        "prompt_template_version": "formal-common-endpoint-dual-blind.v2-scope",
+        "candidate_package_status": "complete",
+        "evaluation_scope": "complete_candidate",
+        "formal_comparison_eligible": false
+      }
+    },
+    "original_case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f",
+    "package_directory": "verification/supporting_records/candidates/L7-A-repair",
+    "complete_candidate_source_files": [
+      "verification/supporting_records/candidates/L7-A-repair/subject/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/source/SOURCE.tex",
+      "verification/supporting_records/candidates/L7-A-repair/subject/task_contract/COMMON_RULES.zh-CN.md",
+      "verification/supporting_records/candidates/L7-A-repair/subject/task_contract/TASK.zh-CN.md",
+      "verification/supporting_records/candidates/L7-A-repair/subject/tool_fact/technical-validation.json",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+      "verification/supporting_records/candidates/L7-A-repair/subject/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean"
+    ],
+    "mechanical_binding_checks": [
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/thm_10_10.lean",
+        "original_expected_sha256": "7fbc8449f9268fcb9bc386a58917e3bc7dff0e923d53c5c4afcc1f6a21c5f03c",
+        "package_file": "verification/supporting_records/candidates/L7-A-repair/subject/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "candidate",
+        "logical_path": "ProbabilityTheory/chapter_10/thm_10_11.lean",
+        "original_expected_sha256": "83c2ab9c4bb754bc1786e82195ff1659719c047e08be53f08392ad3bfbfcad03",
+        "package_file": "verification/supporting_records/candidates/L7-A-repair/subject/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+        "same_bytes": true
+      },
+      {
+        "category": "source",
+        "logical_path": "SOURCE.tex",
+        "original_expected_sha256": "0f54fe8e24f7b3119ed37efab39907fbea5a4b41c5de8c1f20de3b1777520c91",
+        "package_file": "verification/supporting_records/candidates/L7-A-repair/subject/source/SOURCE.tex",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "COMMON_RULES.zh-CN.md",
+        "original_expected_sha256": "640e3fe538afea156b97e1766290be0b662486e5ff247af69c9f587f0a2a7949",
+        "package_file": "verification/supporting_records/candidates/L7-A-repair/subject/task_contract/COMMON_RULES.zh-CN.md",
+        "same_bytes": true
+      },
+      {
+        "category": "task_contract",
+        "logical_path": "TASK.zh-CN.md",
+        "original_expected_sha256": "6d89cf3fb8332d11bbd7a3908277a7d5fb13da91e5413a039335fc032bface24",
+        "package_file": "verification/supporting_records/candidates/L7-A-repair/subject/task_contract/TASK.zh-CN.md",
+        "same_bytes": true
+      }
+    ],
+    "recorded_first_dispatch_epoch": 1789113827.660203,
+    "recorded_last_role_return_epoch": 1789117304.655673,
+    "current_record": {
+      "group": "L7",
+      "arm": "A",
+      "version": "A_l7_repair_r1",
+      "candidate_id": "1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f",
+      "original_verdict": "fail",
+      "current_verdict": "incomplete",
+      "mathematics": "pass",
+      "facts_for_current_rule": {
+        "both_targets_present": true,
+        "mathematics": "pass",
+        "composition_measurability_delivered": false,
+        "repair_reasonable": "not_applicable",
+        "disclosure": "not_applicable"
+      },
+      "reason": "原两评认可数值收敛证明，但原公开结论未交付复合输出可测性；修正任务允许加入函数可测性，并不自动生成候选缺少的证明。",
+      "remaining_work": "补交在修正前提下证明全部复合输出可测的公开定理/支持，以及与两种收敛结论的完整接口。",
+      "scope": "原显式接口中的数值收敛已证明；完整随机向量资格尚未交付。",
+      "original_decision": {
+        "path": "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\final\\decision.json"
+      },
+      "evidence": [
+        "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\results\\reviewer-1.json",
+        "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\results\\reviewer-2.json",
+        "ROOT/ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_11.lean"
+      ],
+      "decision_method": "Current corrected-task acceptance using existing proof reviews, direct public-interface checks and r2 C reviews; no new model call.",
+      "model_followup_needed": false
+    },
+    "current_evidence": [
+      "verification/supporting_records/candidates/L7-A-repair/current_evidence/reviewer-1.json",
+      "verification/supporting_records/candidates/L7-A-repair/current_evidence/reviewer-2.json",
+      "verification/supporting_records/candidates/L7-A-repair/current_evidence/thm_10_11.lean"
+    ]
+  }
+]

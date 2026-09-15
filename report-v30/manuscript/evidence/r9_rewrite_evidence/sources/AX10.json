@@ -1,0 +1,456 @@
+{
+  "epoch": 1789150172.5516217,
+  "candidate_id": "candidate-ad3cbe004a3a",
+  "slot": "adjudicator",
+  "assessment": {
+    "schema": "consistency.h1.review.v1",
+    "request_id": "h1-r1-candidate-ad3cbe004a3a-adjudicator",
+    "candidate_id": "candidate-ad3cbe004a3a",
+    "role": "adjudicator",
+    "confidence": 0.98,
+    "source_reading": {
+      "Cauchy_quantification": "ambiguous",
+      "reason": "冻结教材与任务均只称 Cauchy，未限定标准分布，也未量化位置和尺度；因此独立读法不能唯一确定 Std 或 Family，须按重评规则分别裁决。",
+      "evidence": [
+        {
+          "path": "source/SOURCE.tex",
+          "line_start": 132,
+          "line_end": 132,
+          "quote": "\\\\textbf{Problem 9.6} Let $X_1,\\\\ldots,X_n$ be i.i.d. Cauchy random variables."
+        },
+        {
+          "path": "task_contract/TASK.zh-CN.md",
+          "line_start": 8,
+          "line_end": 8,
+          "quote": "对独立同分布 Cauchy 变量证明样本平均仍具有与单项相同的 Cauchy 分布"
+        }
+      ]
+    },
+    "dimensions": {
+      "mathematics": {
+        "status": "pass",
+        "reason": "六个候选源码文件中的定理在各自显式前提下数学闭合；反演链、唯一性、中心柯西应用及整数值等价均通过构建和公理审计。",
+        "evidence": [
+          {
+            "path": "tool_fact/technical-validation.json",
+            "line_start": 1,
+            "line_end": 1,
+            "quote": "\"technical_status\":\"pass\""
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 522,
+            "line_end": 522,
+            "quote": "  have hdc := inversion_dominated_convergence μ a b 16"
+          }
+        ]
+      },
+      "public_premises": {
+        "status": "pass",
+        "reason": "有限测度、端点次序、概率测度、独立同分布、正尺度和可测性等前提均公开且合法；位置固定为零是 Family 覆盖不足，而不是隐藏前提或证明逃逸。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 515,
+            "line_end": 515,
+            "quote": "    (a b : ℝ) (hab : a < b) :"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+            "line_start": 223,
+            "line_end": 223,
+            "quote": "    (hLaw : P.map (X 0) = cauchyMeasure 0 γ)"
+          }
+        ]
+      },
+      "route_Std": {
+        "status": "pass",
+        "reason": "候选实际证明任意正尺度的中心柯西情形，标准柯西 cauchyMeasure 0 1 是其直接实例；其余四目标路线完整。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+            "line_start": 222,
+            "line_end": 222,
+            "quote": "    {γ : ℝ≥0} (hγ : γ ≠ 0)"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+            "line_start": 225,
+            "line_end": 225,
+            "quote": "    P.map (fun ω => (n : ℝ)⁻¹ * ∑ k ∈ Finset.range n, X k ω) ="
+          }
+        ]
+      },
+      "route_Family": {
+        "status": "fail",
+        "reason": "Family 要求任意共同位置及正尺度，但公开柯西定理和特征函数桥均固定位置为零；源码没有位置参数、平移特征因子或非零位置归约。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+            "line_start": 165,
+            "line_end": 165,
+            "quote": "theorem characteristicFunction_cauchyMeasure_zero {γ : ℝ≥0} (hγ : γ ≠ 0)"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+            "line_start": 223,
+            "line_end": 223,
+            "quote": "    (hLaw : P.map (X 0) = cauchyMeasure 0 γ)"
+          }
+        ]
+      },
+      "interface": {
+        "status": "pass",
+        "reason": "五个目标均有公开声明；反演和唯一性提供测度层接口，唯一性及整数应用另有随机变量接口。Family 的范围缺口已归入相应路线。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_6.lean",
+            "line_start": 117,
+            "line_end": 117,
+            "quote": "theorem thm_9_6_randomVariable {Ω Ω' : Type*}"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_8.lean",
+            "line_start": 84,
+            "line_end": 84,
+            "quote": "theorem prob_9_8_randomVariable"
+          }
+        ]
+      },
+      "delivery": {
+        "status": "pass",
+        "reason": "源码及专用支持完整交付；原交付的中性清单实际列出目标文件、公开声明、依赖、各目标前提和任务义务绑定。先前因匿名视图遗漏说明资料而判定文档缺失的意见不成立。",
+        "evidence": [
+          {
+            "path": "original_delivery/FINAL_MESSAGE.txt",
+            "line_start": 3,
+            "line_end": 3,
+            "quote": "- 五项任务 `thm_9_4`、`thm_9_5`、`thm_9_6`、`prob_9_6`、`prob_9_8` 均已实现。"
+          },
+          {
+            "path": "original_delivery/NEUTRAL_SUBMISSION.json",
+            "line_start": 118,
+            "line_end": 118,
+            "quote": "      \"premises\": \"probability measure P; iid X; nonzero scale γ; law of X₀ equals density-defined cauchyMeasure 0 γ; n ≠ 0\","
+          },
+          {
+            "path": "original_delivery/NEUTRAL_SUBMISSION.json",
+            "line_start": 119,
+            "line_end": 119,
+            "quote": "      \"obligations\": \"derives the Cauchy characteristic function from its Mathlib density via Fourier inversion, then applies iid product and uniqueness\""
+          }
+        ]
+      }
+    },
+    "contract_responsibility": {
+      "status": "ambiguous",
+      "reason": "原始无参数 Cauchy 表述没有冻结位置与尺度量词，故责任范围本身有歧义；重评规则通过分别审查 Std 与 Family 提供了明确裁决程序，但没有把原文追溯性改成唯一释义。"
+    },
+    "obligations": [
+      {
+        "id": "E1",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "general_foundation",
+        "reason": "公开定理对任意实数直接调用允许的单位圆弦长通用结果，统一覆盖正、负及零值。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_4.lean",
+            "line_start": 8,
+            "line_end": 8,
+            "quote": "  simpa [Real.norm_eq_abs, mul_comm] using (Real.norm_exp_I_mul_ofReal_sub_one_le (x := x))"
+          }
+        ]
+      },
+      {
+        "id": "I1",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "candidate_proof",
+        "reason": "反演定理适用于任意有限实测度及 a<b，无密度或无原子限制，结论包含开区间质量和两个端点半质量。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 520,
+            "line_end": 520,
+            "quote": "      (𝓝 (((μ.real (Ioo a b) + μ.real {a} / 2 +"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 521,
+            "line_end": 521,
+            "quote": "        μ.real {b} / 2 : ℝ) : ℂ))) := by"
+          }
+        ]
+      },
+      {
+        "id": "I2",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "candidate_proof",
+        "reason": "候选先以强可测性和常数界证明有限截断乘积空间上的可积性，再调用积分交换，未把交换结论作为假设。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 65,
+            "line_end": 65,
+            "quote": "  have h_int : Integrable (Function.uncurry (inversionKernel a b))"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 86,
+            "line_end": 86,
+            "quote": "          exact intervalIntegral_integral_swap h_int"
+          }
+        ]
+      },
+      {
+        "id": "I3",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "candidate_proof",
+        "reason": "主文件将振荡核化为两个 Dirichlet 部分积分之差；专用支持文件以尾部估计、指数阻尼、Fubini 和极限唯一性新证 π/2 极限。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 260,
+            "line_end": 260,
+            "quote": "      2 * (dirichletPartial (T * (x - a)) -"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5_dirichlet.lean",
+            "line_start": 466,
+            "line_end": 466,
+            "quote": "theorem tendsto_dirichletPartial_pi_div_two :"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5_dirichlet.lean",
+            "line_start": 467,
+            "line_end": 467,
+            "quote": "    Tendsto dirichletPartial atTop (𝓝 (Real.pi / 2)) := by"
+          }
+        ]
+      },
+      {
+        "id": "I4",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "candidate_proof",
+        "reason": "逐点极限证明分别处理两端点、内部及两侧外部；另证统一常数 16 的支配并实际用于支配收敛。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 313,
+            "line_end": 313,
+            "quote": "lemma tendsto_inversionInner (a b x : ℝ) (hab : a < b) :"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 435,
+            "line_end": 435,
+            "quote": "    ‖inversionInner a b T x‖ ≤ 16 := by"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 522,
+            "line_end": 522,
+            "quote": "  have hdc := inversion_dominated_convergence μ a b 16"
+          }
+        ]
+      },
+      {
+        "id": "U1",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "candidate_proof",
+        "reason": "证明先用反演公式取得共同无原子端点间的区间质量相等，再避开两测度原子的可数有理平移并以有理开区间确定测度；反演、稠密连续点和测度确定路线均实际闭合。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_6.lean",
+            "line_start": 46,
+            "line_end": 46,
+            "quote": "  have hμ := thm_9_5 μ a b hab"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_6.lean",
+            "line_start": 65,
+            "line_end": 65,
+            "quote": "  let B : Set ℝ := ⋃ q : ℚ, (fun x : ℝ => x - (q : ℝ)) '' A"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_6.lean",
+            "line_start": 113,
+            "line_end": 113,
+            "quote": "    Real.measure_ext_Ioo_rat hmapIntervals"
+          }
+        ]
+      },
+      {
+        "id": "C1",
+        "status_Std": "pass",
+        "status_Family": "fail",
+        "derivation_class": "standard_only",
+        "reason": "独立同分布平均的特征函数乘积、中心柯西稳定性及唯一性应用均已证明，故覆盖 Std；Family 失败，因为共同分布只允许 cauchyMeasure 0 γ，未覆盖任意位置。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+            "line_start": 223,
+            "line_end": 223,
+            "quote": "    (hLaw : P.map (X 0) = cauchyMeasure 0 γ)"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+            "line_start": 232,
+            "line_end": 232,
+            "quote": "  apply thm_9_6"
+          }
+        ]
+      },
+      {
+        "id": "C2",
+        "status_Std": "pass",
+        "status_Family": "fail",
+        "derivation_class": "standard_only",
+        "reason": "候选从 Mathlib 的柯西密度等式经本组新证的傅里叶变换及反演推出中心柯西特征函数，因而 Std 的密度语义连接完整；桥接固定位置零，不能满足 Family。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+            "line_start": 170,
+            "line_end": 170,
+            "quote": "    (cauchyMeasure 0 γ) (cauchyPDFReal 0 γ)"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_6.lean",
+            "line_start": 173,
+            "line_end": 173,
+            "quote": "  rw [← fourierInv_cauchyPDF_eq_exp hγ t, Real.fourierInv_eq']"
+          }
+        ]
+      },
+      {
+        "id": "Z1",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "candidate_proof",
+        "reason": "从特征函数值一取实部，用 cos≤1 的积分等号推出 cos(2πx)=1 几乎处处，再由周期刻画得到整数值；这是单位模等号路线的合法实部替代。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_8.lean",
+            "line_start": 63,
+            "line_end": 63,
+            "quote": "    have hae : (fun x : ℝ => Real.cos (2 * Real.pi * x)) =ᵐ[μ] fun _ => 1 :="
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_8.lean",
+            "line_start": 68,
+            "line_end": 68,
+            "quote": "      exact (cos_two_pi_eq_one_iff_integer x).mp hx"
+          }
+        ]
+      },
+      {
+        "id": "Z2",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "candidate_proof",
+        "reason": "整数点集已证可测；满质量被转换成几乎处处成员关系，复指数随后几乎处处化为一，随机变量版本又通过 map 接口回到原空间。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_8.lean",
+            "line_start": 73,
+            "line_end": 73,
+            "quote": "      apply (ae_mem_iff_measure_eq measurableSet_integerPoints.nullMeasurableSet).2"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_8.lean",
+            "line_start": 80,
+            "line_end": 80,
+            "quote": "              simpa [mul_assoc] using (exp_two_pi_I_eq_one_iff_integer x).2 hx"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_8.lean",
+            "line_start": 92,
+            "line_end": 92,
+            "quote": "  rw [Measure.map_apply_of_aemeasurable hX measurableSet_integerPoints]"
+          }
+        ]
+      },
+      {
+        "id": "P1",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "other",
+        "reason": "除已独立分流的柯西范围歧义外，实数域、端点条件、测度类别、独立同分布、非零尺度和可测性等公开边界均正确且获任务许可。",
+        "evidence": [
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/thm_9_5.lean",
+            "line_start": 514,
+            "line_end": 514,
+            "quote": "theorem thm_9_5 (μ : Measure ℝ) [IsFiniteMeasure μ]"
+          },
+          {
+            "path": "candidate/ProbabilityTheory/chapter_09/prob_9_8.lean",
+            "line_start": 38,
+            "line_end": 38,
+            "quote": "theorem prob_9_8 (μ : Measure ℝ) [IsProbabilityMeasure μ] :"
+          }
+        ]
+      },
+      {
+        "id": "D1",
+        "status_Std": "pass",
+        "status_Family": "pass",
+        "derivation_class": "other",
+        "reason": "五个目标源码、专用 Dirichlet 支持及说明清单均已交付，依赖闭合且无未解决项。依分离规则，Family 的数学范围缺口应记入 C1、C2 和 route_Family，不能重复扩散为 D1 失败；这解决了先前 D1 Family 意见差异。",
+        "evidence": [
+          {
+            "path": "original_delivery/NEUTRAL_SUBMISSION.json",
+            "line_start": 119,
+            "line_end": 119,
+            "quote": "      \"obligations\": \"derives the Cauchy characteristic function from its Mathlib density via Fourier inversion, then applies iid product and uniqueness\""
+          },
+          {
+            "path": "original_delivery/NEUTRAL_SUBMISSION.json",
+            "line_start": 140,
+            "line_end": 140,
+            "quote": "  \"unresolved\": [],"
+          },
+          {
+            "path": "reevaluation/RULES.json",
+            "line_start": 29,
+            "line_end": 29,
+            "quote": "  \"separation\": \"Mathematical validity under stated premises is separate from missing source domain, required proof route, interface and delivery. Cauchy range affects C1/C2 and corresponding route, not automatically all other obligations.\","
+          }
+        ]
+      }
+    ],
+    "overall_Std": "pass",
+    "overall_Family": "fail",
+    "summary": "完整源码和原交付资料表明：候选在 Std 下满足全部十二项义务、接口和说明交付，故总体通过。此前两个初审因匿名视图遗漏原说明而将 delivery 判为失败；原始中性清单实际满足文件、声明、前提和义务绑定要求，故该意见被纠正。Family 下仅柯西分支不足：候选证明中心为零的任意正尺度族，没有任意共同位置，因此 C1、C2 与 route_Family 失败；按组合规则 Family 总体失败。D1 不因该范围缺口重复失败。",
+    "limitations": [
+      "未重新运行构建；构建、公理审计和源码哈希采用 tool_fact/technical-validation.json 的只读记录。",
+      "Std 与 Family 是依重评规则并列审查的范围，不能据此追溯性消除冻结原文的量词歧义。"
+    ]
+  },
+  "assessment_accepted": false,
+  "issues": [
+    {
+      "kind": "evidence_quote_or_location",
+      "context": "source",
+      "evidence": {
+        "path": "source/SOURCE.tex",
+        "line_start": 132,
+        "line_end": 132,
+        "quote": "\\\\textbf{Problem 9.6} Let $X_1,\\\\ldots,X_n$ be i.i.d. Cauchy random variables."
+      }
+    }
+  ],
+  "actor_receipt": "ROOT/rr-h1-v1\\candidate-ad3cbe004a3a-adjud\\executions\\adjudicator\\attempt-01\\actor\\actor-receipt.json",
+  "actor_receipt_sha256": "28fac67cb232c61820e02b18d13dfecf07f6d1c6950b3d837add7ba0d4f4d561",
+  "raw_events_sha256": "e34ac624631f851d155fef57525ee0b2f70f385cb37bd69be755af0a726e8463",
+  "subject_manifest_unchanged": true,
+  "source_exposure_verified": true,
+  "host_elapsed_seconds": 218.79732370376587,
+  "no_model_retry": true,
+  "original_results_unchanged": true
+}

@@ -1,0 +1,82 @@
+{
+  "A-condition_original.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_frozen\\A\\condition_original.txt",
+    "sha256": "1bba6d8418a54ad879b78315a4a59b30d2ad5c68e67cf5b16229bcf679e40bfd"
+  },
+  "A-condition_scope.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_frozen\\A\\condition_scope.txt",
+    "sha256": "629f574c26af9510972675acfa4b768090115b99f22655620d981df10a00c418"
+  },
+  "A-INPUT_MANIFEST.json": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_frozen\\A\\INPUT_MANIFEST.json",
+    "sha256": "0431204f71ea68858fcdfa9d5bb47f5e5794d9e4db67bba047b834f53ff646b9"
+  },
+  "A-TASK.zh-CN.md": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_frozen\\A\\work\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+    "sha256": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16"
+  },
+  "A-original-1-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-a-original-1\\actor\\prompt.txt",
+    "sha256": "4d96d9f00edb0fbc00d9fccf1a8cb963687211600098b01d6d226a4cb4434e67"
+  },
+  "A-original-2-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-a-original-2\\actor\\prompt.txt",
+    "sha256": "4d96d9f00edb0fbc00d9fccf1a8cb963687211600098b01d6d226a4cb4434e67"
+  },
+  "A-original-3-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-a-original-3\\actor\\prompt.txt",
+    "sha256": "4d96d9f00edb0fbc00d9fccf1a8cb963687211600098b01d6d226a4cb4434e67"
+  },
+  "A-scope-1-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-a-scope-1\\actor\\prompt.txt",
+    "sha256": "6ca593d046b1741508bab320746e62e8510ece7f4b8b3924b05f3980f89dd89c"
+  },
+  "A-scope-2-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-a-scope-2\\actor\\prompt.txt",
+    "sha256": "6ca593d046b1741508bab320746e62e8510ece7f4b8b3924b05f3980f89dd89c"
+  },
+  "A-scope-3-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-a-scope-3\\actor\\prompt.txt",
+    "sha256": "6ca593d046b1741508bab320746e62e8510ece7f4b8b3924b05f3980f89dd89c"
+  },
+  "B-condition_original.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_frozen\\B\\condition_original.txt",
+    "sha256": "27ca9756c997710b2ffcd398c1b8935d2948e8f07bade11fb918c9b1ec552d67"
+  },
+  "B-condition_scope.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_frozen\\B\\condition_scope.txt",
+    "sha256": "5ce6cdaa5ebc29675671781bb6516dcb8e8254e1540e65511a8052404910869b"
+  },
+  "B-INPUT_MANIFEST.json": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_frozen\\B\\INPUT_MANIFEST.json",
+    "sha256": "a7ee9c6475337de275da01eafd2057b92a925bedfb0830683f90e29135ae2fd3"
+  },
+  "B-TASK.zh-CN.md": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_frozen\\B\\work\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+    "sha256": "b0c4dd2ccfb79f00537b98c83af82810a1fb78cac3bbaa09b37f719081acfb16"
+  },
+  "B-original-1-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-b-original-1\\actor\\prompt.txt",
+    "sha256": "761434e6b883308d1da90bea31b5d326d24e86d5540cce5d2a6702e6a9290cfe"
+  },
+  "B-original-2-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-b-original-2\\actor\\prompt.txt",
+    "sha256": "761434e6b883308d1da90bea31b5d326d24e86d5540cce5d2a6702e6a9290cfe"
+  },
+  "B-original-3-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-b-original-3\\actor\\prompt.txt",
+    "sha256": "761434e6b883308d1da90bea31b5d326d24e86d5540cce5d2a6702e6a9290cfe"
+  },
+  "B-scope-1-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-b-scope-1\\actor\\prompt.txt",
+    "sha256": "d37207f9400ddacff4c79d84365fb1fb424e15d5044aaa8acca913f4652a7db4"
+  },
+  "B-scope-2-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-b-scope-2\\actor\\prompt.txt",
+    "sha256": "d37207f9400ddacff4c79d84365fb1fb424e15d5044aaa8acca913f4652a7db4"
+  },
+  "B-scope-3-actual-prompt.txt": {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\l3_reviews\\l3-review-b-scope-3\\actor\\prompt.txt",
+    "sha256": "d37207f9400ddacff4c79d84365fb1fb424e15d5044aaa8acca913f4652a7db4"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "coverage-L2_thm_11_4_to_11_5-A-r1",
+  "arm": "A",
+  "role": "general_reviewer",
+  "dispatch_id": "bb680eb5-cdc6-431c-9f0e-43cad6af06aa",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": "57e11c0e-2cc0-4f72-ab7e-d294c9972d40",
+  "help_config_sha256": "905a4d21df681b6452d66a041ffca6f858b8ccbebe12d74967cfef4332399ddf",
+  "effective_help_config_sha256": "f3e98fce85d72182c04186ddec6f00a520afb1f0989f9556b8f05e03c2f54d9e",
+  "session_ids": [
+    "01a08cf7-338b-7413-b1a9-cf9cc7e4b6ca"
+  ],
+  "usage": [
+    {
+      "input_tokens": 196467,
+      "cached_input_tokens": 137344,
+      "output_tokens": 6115
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 134.43799999999464,
+    "deadline_epoch": 1789077911.3651283,
+    "remaining_at_launch_seconds": 6505.638472080231,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\help\\964597f2-a1a3-45ad-a80d-4ca8a8335358\\actor\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\A\\help\\964597f2-a1a3-45ad-a80d-4ca8a8335358\\actor\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 7200.0,
+    "started_epoch": 1789070711.3651283,
+    "deadline_epoch": 1789077911.3651283,
+    "remaining_seconds": 6371.183019161224
+  },
+  "public_events_sha256": "d3aed33f4ff8943584509f7b5f37a07d9f734183bba34bf780f1cf4bf9f7bba6",
+  "raw_public_events_sha256": "d3aed33f4ff8943584509f7b5f37a07d9f734183bba34bf780f1cf4bf9f7bba6",
+  "usd": null
+}

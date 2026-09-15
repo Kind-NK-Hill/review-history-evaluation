@@ -1,0 +1,6 @@
+容器资料定位：公开候选目录为 /work/ProbabilityTheoryFormalization；若原提示使用审核包相对名称，其目录为 /work/artifacts/phase2_prompt_packs/prob_7_6。只读实际存在的本次输入，不请求额外角色。
+
+这是本次诊断实验的全新独立只读会话，不是旧会话的续接。以下原审核提示中的会话ID、此前fail和历史调用身份仅为材料来源；你没有旧会话记忆。仅使用当前完整输入目录实际提供的材料，不得声称亲历历史审核。原模板若含同一会话复审证明性措辞，必须如实填写新独立会话身份。原提示要求的最终回复直接返回当前对话，不在旧结果位置写文件。当前被重放审核自身的最终回复没有提供。
+
+历史审核要求如下：
+继续同一独立只读一般审核会话 01a08d0e-efec-7d01-9a48-f1646ddffa69，复审 prob_7_6 的修订候选。完整读取 semantic_review_request_v2.json 绑定的 input/prompt/context/template/candidate_v10.lean，以及原始教材、你此前 fail、唯一诊断、source decision 与三轮 MathGate。candidate SHA256 56c208c148b8528350fadd192743712b22a696d606b3febb8eefce3e140866b2，review_input_hash 7325049b5d54b28aa3150ba43666685e2c7b125408b57573c587f744ddec92dd，review_basis_hash f0e3a221ce3c631e1cd6903b1096011104cf31af72a83b155a05ddddefcfb7ca。重点检查 hg_nonneg/hg_meas 已从公开接口删除且 AE 推导真实落地。只返回模板要求的完整原始 JSON，所有绑定路径和哈希必须逐字从模板/请求复制。

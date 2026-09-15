@@ -1,0 +1,48 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "ac-endpoint-c2fb5f540fc9fa12c894-reviewer-1",
+  "arm": "C",
+  "role": "reviewer",
+  "dispatch_id": "dbdcff90-dd7a-4fd5-92db-be52f4bd6970",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": null,
+  "help_config_sha256": null,
+  "effective_help_config_sha256": "e4fc2d2855a359a8b9ee66467045f9d53532cc4b291cd595b3e82fad413e803f",
+  "session_ids": [
+    "01a091cb-1ea7-7fd2-91b4-277a0de0b77a"
+  ],
+  "usage": [
+    {
+      "input_tokens": 157995,
+      "cached_input_tokens": 120320,
+      "output_tokens": 6771
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 170.375,
+    "deadline_epoch": 1789154202.3793037,
+    "remaining_at_launch_seconds": 1799.9785010814667,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\executions\\reviewer-1\\attempt-01\\actor\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\executions\\reviewer-1\\attempt-01\\actor\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 1800.0,
+    "started_epoch": 1789152402.3793037,
+    "deadline_epoch": 1789154202.3793037,
+    "remaining_seconds": 1629.528473854065
+  },
+  "public_events_sha256": "4a7d79ab0789c1fc5c3638438ffcf00fde330050e2998ef04abaeef70c126e7d",
+  "raw_public_events_sha256": "4a7d79ab0789c1fc5c3638438ffcf00fde330050e2998ef04abaeef70c126e7d",
+  "usd": null
+}

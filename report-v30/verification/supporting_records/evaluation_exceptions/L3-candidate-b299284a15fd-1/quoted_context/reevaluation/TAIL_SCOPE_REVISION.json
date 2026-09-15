@@ -1,0 +1,13 @@
+{
+  "version": "L3-task-tail-sensitivity-r1",
+  "not_original_preregistration": true,
+  "trigger": "Initial F/E reviews exposed that E demands an extended-integral-to-eventual-integrability wrapper even when a candidate uses the eventual-integrability formulation expressly permitted by TASK. Preserve E as strict source-scope sensitivity; do not silently impose it as the only original TASK acceptance rule.",
+  "quoted_original_task": "合同允许采用最终尾部可积表述",
+  "interpretations": {
+    "F": "Existing finite-integral-sequence convention; conditional retrospective sensitivity unless frozen source supports it.",
+    "E": "Existing exact nonnegative extended-integral source scope including derivation of eventual integrability; preserve all initial results.",
+    "T_task_permitted_eventual_tail": "Read the delivered TASK permission literally: explicit eventual integrability of the sequence and integrability of its limit may be used as the tail formulation of finite integral convergence, with the real integral convergence condition still required. Candidate must actually prove the negative-part/minimum control and L1 limit for that eventual-tail domain. Requiring every initial term integrable without a real eventual-tail wrapper does not cover this T domain. Never assume L1 convergence itself."
+  },
+  "other_scope_obligations": "Source-vs-TASK limit measurability and nonnegativity, public wrappers, general densities and Gaussian positive/zero cases remain independently assessed. Equal P2 behavior does not force equal overall labels.",
+  "final_reporting": "Original verdict, independent F/E results, adjudicated F/E/T results and timing of this scope revision remain separate. Comparison is criterion_dispute when acceptance depends on interpretation. No highest-pass-rate interpretation selection."
+}

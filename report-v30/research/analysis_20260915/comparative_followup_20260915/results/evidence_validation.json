@@ -1,0 +1,7 @@
+{
+  "curated_raw_request_return_locations_checked": 2748,
+  "raw_files_read": 88,
+  "local_links_checked": 3072,
+  "failures": [],
+  "scope": "Identity and link checks only; does not validate semantic interpretations or statistical representativeness."
+}

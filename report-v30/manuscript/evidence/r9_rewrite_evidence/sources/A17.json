@@ -1,0 +1,91 @@
+{
+  "epoch": 1789130297.9921262,
+  "status": "contract_defect_verified_on_paper; revised solver contract proposed_not_applied",
+  "original_task": {
+    "path": "ROOT/c-r3-inputs\\L7_thm_10_10_to_10_11\\ProbabilityTheoryFormalization\\TASK.zh-CN.md",
+    "sha256": "6d89cf3fb8332d11bbd7a3908277a7d5fb13da91e5413a039335fc032bface24"
+  },
+  "original_source": {
+    "path": "ROOT/c-r3-inputs\\L7_thm_10_10_to_10_11\\ProbabilityTheoryFormalization\\SOURCE.tex",
+    "sha256": "0f54fe8e24f7b3119ed37efab39907fbea5a4b41c5de8c1f20de3b1777520c91"
+  },
+  "independent_method_delivery": {
+    "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\diagnostics\\method_consistency_review_20260911\\DELIVERY.json",
+    "sha256": "c1a18b60da9f286f52d37abb340c7bc7727edeefeefce7a24f4d4ae12265bd66",
+    "all_six_files_verified": true
+  },
+  "separate_obligations": {
+    "ambient_continuity": "ContinuousAt at each point of S, involving approaches from the full ambient space",
+    "relative_continuity": "ContinuousOn restricted to S; insufficient for approaches Vn outside S",
+    "input_measurability": "V and each Vn are measurable random vectors",
+    "output_measurability": "Original task explicitly asks for f(V) and every f(Vn) measurable, but lacks a sufficient global f assumption",
+    "convergence": "Numerical or filter convergence must be assessed separately from whether outputs are random vectors",
+    "event_measurability": "Almost-everywhere membership and in-probability event/control measurability require explicit justified use, not silent identification"
+  },
+  "counterexample_measurability": {
+    "sample_space": "[1,2] with completed Lebesgue probability measure",
+    "E": "A non-Lebesgue-measurable subset of [1,2]",
+    "f": "Real-domain indicator of E, zero outside E",
+    "S": "{0}",
+    "V": "Constant zero",
+    "Vn": "V1 is identity on [1,2]; Vn=0 for n>=2",
+    "verified_steps": [
+      "All input random variables are measurable.",
+      "Vn converges pointwise and hence almost surely to V.",
+      "V lies in S everywhere.",
+      "f is identically zero on a neighborhood of 0, so ContinuousAt f 0 holds in the ambient topology.",
+      "The inverse image of {1} under f(V1) is E, so f(V1) is not measurable.",
+      "Finite exceptional initial indices do not prevent numerical convergence but violate an every-output measurability obligation."
+    ],
+    "conclusion": "Original explicit conditions cannot guarantee every composite output measurable, even under ambient continuity at S.",
+    "not_claimed": [
+      "No new Lean counterexample was built.",
+      "This example does not make f(V) nonmeasurable: f(V)=0.",
+      "This does not by itself refute a correctly formulated numerical convergence theorem."
+    ]
+  },
+  "counterexample_relative_continuity": {
+    "f": "f(0)=0 and f(x)=1 for x!=0, a Borel measurable function",
+    "S": "{0}",
+    "Vn": "Constant 1/n for positive n",
+    "V": "Constant zero",
+    "conclusion": "Relative ContinuousOn f S holds, but f(Vn)=1 does not converge to f(V)=0. Adding Borel measurability alone does not fix an interpretation using only relative continuity."
+  },
+  "source_convention_search": {
+    "frozen_target_SOURCE": "No explicit global measurability assumption for f.",
+    "bounded_catalog_context": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\diagnostics\\method_consistency_review_20260911\\FROZEN_CATALOG_CONTEXT.json",
+    "scope": "Independent audit searched 78 fixed plans / 655 entries and read relevant chapter 4 and 10 context; no explicit all-deterministic-functions-are-Borel-measurable convention found.",
+    "limit": "Not an exhaustive search of the published book; extra context is not retroactively treated as delivered solver input."
+  },
+  "scoring_responsibility": {
+    "original_written_delivery": "Record whether the candidate actually delivered the written output-measurability obligation; retain original fail when present.",
+    "contract_realizability": "Record that the universal output guarantee is unsupported by the explicit original assumptions.",
+    "mathematics": "Assess proved convergence claims under their stated conditions separately.",
+    "comparison": "Original L7 is diagnostic and ineligible for configuration ranking pending a valid common contract; do not convert original fail to pass automatically."
+  },
+  "revision": {
+    "path": "ROOT/review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L7_CONTRACT_REVISION_DRAFT.zh-CN.md",
+    "sha256": "e218547d06615db7d799a73f9d641978a988d15c6f62cae7c871d71099ba6688",
+    "changes": [
+      {
+        "old": "No global f measurability assumption",
+        "new": "Explicit Borel Measurable f",
+        "kind": "new_hypothesis"
+      },
+      {
+        "old": "Continuous on S ambiguous between relative and ambient readings",
+        "new": "ContinuousAt f x for every x in S in ambient topology",
+        "kind": "explicit_interpretation_and_condition"
+      },
+      {
+        "old": "Probability V belongs to S equals one, with event measurability implicit",
+        "new": "Almost-everywhere membership in S",
+        "kind": "explicit_probability_semantics"
+      }
+    ],
+    "applied_to_inflight_or_queued_original_inputs": false,
+    "new_condition_solver_calls": 0,
+    "new_trials_need_separate_equal-condition_plan": true
+  },
+  "old_candidate_policy": "Keep original A partial, A repair, and original-condition B/C trials distinct; no diagnosis or other-arm answers are sent to any solver."
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "ac-endpoint-03ca44ff6112c2a452d8-reviewer-2",
+  "arm": "A",
+  "role": "reviewer",
+  "dispatch_id": "a5d45f5e-d3ca-4070-8eab-35128338173c",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": null,
+  "help_config_sha256": null,
+  "effective_help_config_sha256": "eaadef4f0cf9d2db921dc352dc7629d6c912690c91d220be080c2844bbc5ea66",
+  "session_ids": [
+    "01a08eaf-cbce-7993-9caf-783a3a695d60"
+  ],
+  "usage": [
+    {
+      "input_tokens": 47890,
+      "cached_input_tokens": 30720,
+      "output_tokens": 3993
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 94.2039999999979,
+    "deadline_epoch": 1789102080.5695624,
+    "remaining_at_launch_seconds": 1799.9833543300629,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-m3\\development-ac-r1\\cases\\03ca44ff6112c2a452d83b998985c2aa22bdeb3d40524939c786d403cce8dc1e\\executions\\reviewer-2\\attempt-01\\actor\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-m3\\development-ac-r1\\cases\\03ca44ff6112c2a452d83b998985c2aa22bdeb3d40524939c786d403cce8dc1e\\executions\\reviewer-2\\attempt-01\\actor\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 1800.0,
+    "started_epoch": 1789100280.5695624,
+    "deadline_epoch": 1789102080.5695624,
+    "remaining_seconds": 1705.7490420341492
+  },
+  "public_events_sha256": "bba0472126abb742dcebda4746f8d20c577a4515e3314bbec390ff49642bf12c",
+  "raw_public_events_sha256": "bba0472126abb742dcebda4746f8d20c577a4515e3314bbec390ff49642bf12c",
+  "usd": null
+}

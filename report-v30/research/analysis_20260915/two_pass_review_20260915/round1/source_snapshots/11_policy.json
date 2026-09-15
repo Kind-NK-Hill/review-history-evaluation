@@ -1,0 +1,24 @@
+{
+  "version": "common-mathematical-outcome-20260914",
+  "status": "retrospective; adopted after observing the original results",
+  "criterion": "Complete the required mathematical work and provide usable conclusions. Accept equivalent proof routes and modular interfaces. Caller validation may discharge redundant premises on the same task inputs using the delivered proof or permitted general library facts. It may not add an omitted task-specific argument, construct replacement inputs to extend a missing scope, or supply the assigned theorem from an outside solution.",
+  "route_reporting": "Explicit route requirements remain recorded separately; they do not negate a valid completed mathematical conclusion in the common outcome measure.",
+  "groups": {
+    "L1": {"inherited_basis": "Innovation and partial sums, integrability, adaptation, zero conditional innovation mean and martingale from the original observations."},
+    "L2": {"inherited_basis": "Uncorrelated variance sum and weak law; generic variance expansion is allowed, cross terms and probability limit must be proved."},
+    "L3": {"inherited_basis": "Scheffe for eventual integrability of the original sequence, density total variation and distribution limits, including the specified normal boundaries."},
+    "L4": {"inherited_basis": "Both discrete and density total-variation formulas from the event supremum; Bernoulli and Poisson applications with endpoints."},
+    "L5": {"inherited_basis": "Maximal coupling, probability and marginal laws, attainment, with common mass zero and one."},
+    "L6": {"inherited_basis": "One- and two-sensor quadratic mean-square error, global optimality and valid boundary cases from source assumptions."},
+    "L7": {"inherited_basis": "Coordinate equivalences and continuous mapping, including output measurability; disclosed mathematically sufficient premise correction is accepted."},
+    "M1": {"inherited_basis": "Stopped martingale and constant expectations, stopped-value existence and all three optional-stopping cases with required domination and convergence."},
+    "M2": {"inherited_basis": "Full-sequence strong law from source raw fourth moments and independence; centering, moment expansion, summable tails and Borel-Cantelli. Equivalent direct full-sequence route is accepted."},
+    "M3": {"inherited_basis": "Constructed common probability space and quantiles, measurable marginals, inverse comparisons and almost-sure convergence, with endpoints and countable exceptional levels."},
+    "H1": {"inherited_basis": "All five goals, including inversion and uniqueness with task-specific analysis, standard Cauchy core and integer-support criterion; extra parameters optional."}
+  },
+  "corrections": {
+    "r2-m1-a": "The supplied existence and expectation theorems compose on the original inputs. All three cases pass the caller check; finite expected time implies almost-sure finiteness by the same general argument already present inside the delivered increment proof. No optional-stopping argument is added.",
+    "r2-l3-c": "The limit's nonnegativity follows on the same functions from the given convergence and nonnegative terms by the general order-limit theorem; measurability follows from supplied integrability. The checked caller invokes the already delivered eventual-integrability Scheffe theorem without adding its proof or a tail extension.",
+    "r2-m2-b": "The delivered proof already obtains the full-sequence strong law by fourth moments and Borel-Cantelli. The subsequence route constraint is reported as instruction noncompliance rather than mathematical noncompletion; the same route policy applies to both batches."
+  }
+}

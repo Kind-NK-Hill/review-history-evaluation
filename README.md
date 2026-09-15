@@ -1,5 +1,16 @@
 # How probability proofs are completed
 
+**Current publication: 0.7.0 / report revision 30.** [English report](report-v30/en.pdf) · [中文正文](report-v30/zh.pdf) · [English appendix](report-v30/en-appendix.pdf) · [中文附录](report-v30/zh-appendix.pdf).
+
+The report now connects matched-task comparisons with historical proof composition and evidence of delivery. [What changed and how to reproduce it](report-v30/README.md) · [Release and complete reading bundle](https://github.com/Kind-NK-Hill/review-history-evaluation/releases/tag/v0.7.0).
+
+**Interpretation of saved 11/11 results:** L6's task sheet is internally ambiguous: its second paragraph admits broader second noise while its final sentence requires Gaussian-source instantiation. Historical common judgments below are retained; they do not recertify every delivery under the broader reading. The report explains the differing A/B/C public interfaces and the H1/L6 caller evidence.
+
+## Preserved 0.6.0 companion and core reproduction
+
+The following material describes the earlier public companion to revision 28, whose files remain unchanged. Its raw inputs and reproduction commands still support the new report. Start with the current links above for the final interpretation.
+
+
 **Agent evaluation through mathematical outcomes, tool trajectories, and review evidence.**
 
 An agent can finish a local proof without delivering it to the author who needs it. A program can compile while its public theorem omits part of the assigned mathematical problem. This study follows these gaps in a probability-textbook formalization project, connecting tool feedback and code changes to the proofs that were actually delivered and used.

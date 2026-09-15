@@ -1,0 +1,176 @@
+[original lines 1-36]
+"""Rebuild v0.7.1 decisions from frozen v0.7.0 and explicit reading records.
+
+This script verifies and projects authored decisions. It does not independently
+decide mathematical equivalence. All writes are restricted to the new revision.
+"""
+from __future__ import annotations
+
+import argparse
+from collections import Counter
+from copy import deepcopy
+import hashlib
+import json
+from pathlib import Path
+
+I = Path(__file__).resolve().parent
+V = I.parent
+F = V.parents[2]
+REVISION = I / "revisions/v0.7.1"
+BASE = V / "report_source/analysis/qualified_20260907/source_decisions"
+BASELINE = V / "report_source/analysis/revisions/v0.7.1/REVISION_BASELINE.json"
+OUTPUT = REVISION / "source_decisions"
+CORRECTION_ID = "v0.7.1:thm95-support-extraction"
+CORRECTED_RELATION = "adjacent_transition_v3_f6df6087647b51fea01daedfee89c9ef4827e31d8ed21dc4c75b486d928f31ea"
+EXPLICIT_POSITIVE = {
+    "same_source_mathematical_objective_confirmed", "same_riesz_fischer_target_confirmed",
+    "source_target_restoration", "canonical_alias_and_proof_elaboration_maintenance",
+    "partial_source_contract_restoration", "closed_interval_derivative_restoration",
+    "source_model_construction_repair", "same_public_target_partial_helper_progress",
+    "source_model_assembly_repair", "moment_interface_repair_with_remaining_route_debt",
+    "equivalent_hypothesis_repackaging", "whitespace_and_import_maintenance",
+}
+
+
+def read(path: Path):
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+[original lines 126-175]
+def validate_decision_bundle(root: Path | str, verify_sources: bool = True) -> dict:
+    """Check explicit decision provenance, source bytes, mappings, and corrections.
+
+    Mechanical validation cannot certify the semantic judgment made by a reader.
+    """
+    root = Path(root)
+    targets = jl(root / "target_change_adjudications.jsonl")
+    cases = jl(root / "case_assessments.jsonl")
+    main = jl(root / "main_relation_qualification_map.jsonl")
+    issues = jl(root / "new_issue_assessments.jsonl")
+    exclusions = read(root / "endpoint_eligibility_exclusions.json")
+    index = {x["relation_id"]: x for x in targets}
+    if len(index) != len(targets) or len(main) != 462 or len(cases) != 1018:
+        raise ValueError("Decision identity/coverage mismatch")
+    verified_paths = set()
+    for target in targets:
+        value = target["fixed_source_target_comparable"]
+        if value is not None and type(value) is not bool:
+            raise ValueError("Target eligibility must be true, false, or null")
+        if value is True and target["disposition"] not in EXPLICIT_POSITIVE:
+            raise ValueError("A screening status cannot establish positive eligibility")
+        for field in ("decision_id", "source_kind", "reader", "scope", "evidence_references"):
+            if not target.get(field):
+                raise ValueError(f"Missing explicit target provenance: {field}")
+        if target["source_kind"] == "v071_substantive_ai_reading":
+            if not target.get("target_before") or not target.get("target_after") or not target.get("reason"):
+                raise ValueError("A new reading requires its actual target comparison")
+            if not target.get("reading_record_reference"):
+                raise ValueError("A new reading must bind its saved decision")
+            authored = read(Path(target["reading_record_reference"]["path"]))
+            authored_rows = authored if isinstance(authored, list) else authored["decisions"]
+            matching = [x for x in authored_rows if x["relation_id"] == target["relation_id"]]
+            if len(matching) != 1 or any(matching[0].get(k) != target.get(k) for k in
+                                        ("fixed_source_target_comparable", "target_before", "target_after", "reason")):
+                raise ValueError("Projected target differs from its explicit authored decision")
+        elif target["source_kind"] == "frozen_explicit_ai_adjudication":
+            frozen_ref = next((r for r in target["evidence_references"] if r["role"] in
+                               {"frozen_explicit_target_decision", "frozen_explicit_target_boundary"}), None)
+            if frozen_ref is None:
+                raise ValueError("Inherited target has no frozen decision reference")
+            inherited = next(x for x in jl(Path(frozen_ref["path"])) if x["relation_id"] == target["relation_id"])
+            if any(inherited[k] != target[k] for k in ("a", "b", "disposition", "fixed_source_target_comparable")):
+                raise ValueError("Inherited target differs from frozen explicit adjudication")
+        else:
+            raise ValueError("Unrecognized target decision source")
+        refs = target["evidence_references"] + ([target["reading_record_reference"]] if target.get("reading_record_reference") else [])
+        roles = {r["role"] for r in refs}
+        if not {"a_input", "a_result", "b_input", "b_result"} <= roles:
+            raise ValueError("Both endpoint inputs and results must be bound")
+        if verify_sources:
+
+[original lines 240-285]
+        raise ValueError("Decision outputs must stay inside the new revision directory")
+    original_hashes = {p.name: sha(p) for p in BASE.iterdir() if p.is_file()}
+    old_targets = jl(BASE / "target_change_adjudications.jsonl")
+    cases = jl(BASE / "case_assessments.jsonl")
+    issues = jl(BASE / "new_issue_assessments.jsonl")
+    main = jl(BASE / "main_relation_qualification_map.jsonl")
+    screen = read(I / "target_change_screen.json")
+    readings, reading_files = load_readings()
+    weak = {x["relation_id"] for x in old_targets if x["disposition"] == "no_material_target_change_found"}
+    if set(readings) != weak or len(weak) != 12:
+        raise ValueError(f"All 12 weak decisions must be substantively reviewed; missing={sorted(weak - set(readings))}")
+    targets = []
+    for old in old_targets:
+        target = deepcopy(old)
+        target.update({"decision_id": f"v0.7.1:{old['relation_id']}", "reader": "AI archival reader; unblinded; not independent expert ground truth",
+                       "scope": "Whether the accepted source mathematical objective is preserved; not code correctness, fixed review policy, or current project completion."})
+        if old["relation_id"] in readings:
+            reading = readings[old["relation_id"]]
+            value = reading["fixed_source_target_comparable"]
+            if (reading.get("a", old["a"]), reading.get("b", old["b"])) != (old["a"], old["b"]):
+                raise ValueError("Reading endpoints do not match the frozen relation")
+            target.update(reading)
+            target.update({"source_kind": "v071_substantive_ai_reading", "supersedes": {"revision": "v0.7.0", "relation_id": old["relation_id"], "disposition": old["disposition"]},
+                           "disposition": ("same_source_mathematical_objective_confirmed" if value is True else "confirmed_target_change" if value is False else "target_question_not_substantively_adjudicated"),
+                           "note": reading["reason"], "review_scope": "source_task_full_candidates_and_review_results_substantively_read",
+                           "reading_basis": reading["reading_scope"]})
+            target["evidence_references"] = frozen_endpoint_refs(old, screen) + reading.get("evidence_references", [])
+        else:
+            target["source_kind"] = "frozen_explicit_ai_adjudication"
+            target["evidence_references"] = frozen_endpoint_refs(old, screen)
+            if old["fixed_source_target_comparable"] is True:
+                target["evidence_references"] += explicit_original_source(old, cases)
+            else:
+                target["evidence_references"].append(reference(BASE / "target_change_adjudications.jsonl", "frozen_explicit_target_boundary", relation_id=old["relation_id"]))
+        value = target["fixed_source_target_comparable"]
+        target["statistical_action"] = ("retain_subject_to_other_eligibility_gates" if value is True else "exclude_as_target_boundary_and_rebuild" if value is False else "stop_before_target_unknown_relation")
+        targets.append(target)
+    target_by_pair = {(x["a"], x["b"]): x for x in targets}
+    for case in cases:
+        pair = (case["sources"]["a"]["review_id"], case["sources"]["b"]["review_id"])
+        target = target_by_pair.get(pair)
+        if target and target["relation_id"] in weak:
+            case["target_qualification"] = {"status": target["disposition"], "fixed_source_target_comparable": target["fixed_source_target_comparable"],
+                                             "note": target["reason"], "decision_id": target["decision_id"], "review_scope": target["review_scope"]}
+    correction = read(REVISION / "readings/thm95_correction.json")
+    binding = read(REVISION / "readings/registered_subject_binding_decision.json")
+
+[original lines 310-346]
+                      "progress_kind": "support_extraction_and_dct_interface_maintenance", "relation_class": "support_extraction_and_official_reassessment",
+                      "new_mathematical_proof_at_this_relation": False, "structural_engineering_contribution": True,
+                      "correction_evidence": correction["evidence_references"], "historical_note": correction["scope"],
+                      "correction_record_reference": reference(REVISION / "readings/thm95_correction.json", "authored_relation_correction")})
+    corrected["statistical_handoff"].update({"count_as_author_code_change": True, "count_as_new_mathematical_proof": False,
+                                            "action": "retain structural support extraction and DCT-interface maintenance; do not describe this edge as adding a mathematical proof"})
+    issue = next(x for x in issues if x["id"] == "thm95_late_procedural_and_support_migration_sequence")
+    issue.update({"correction_id": CORRECTION_ID, "supersedes": {"path": str(BASE / "new_issue_assessments.jsonl"), "id": issue["id"]},
+                  "coordinated_relation_decision": CORRECTED_RELATION, "relation_correction": correction["corrected_conclusion"], "correction_evidence": correction["evidence_references"]})
+    issues.append({"id": "thm97_registered_subject_v3_reviewed_override_v4", "decision_id": binding["decision_id"],
+                   "task_id": "thm_9_7", "issue_class": "registered_subject_binding_conflict", "finding": binding["reason"],
+                   "historical_label_override": None, "mathematical_review_retained": True,
+                   "registered_object_comparison_eligible": False, "evidence_references": binding["evidence_references"]})
+    by_id = {x["relation_id"]: x for x in targets}
+    for row in main:
+        target = by_id.get(row["relation_id"])
+        value = target["fixed_source_target_comparable"] if target else None
+        row.update({"target_status": target["disposition"] if target else "not_substantively_adjudicated",
+                    "target_note": target["note"] if target else row["target_note"],
+                    "target_decision_id": target["decision_id"] if target else None,
+                    "fixed_target_process_action": "retain_relation_subject_to_other_gates" if value is True else "stop_before_relation" if value is False else "target_question_not_substantively_adjudicated"})
+        if row["relation_id"] in binding["affected_main_relation_ids"]:
+            row.update({"registered_object_comparison_eligible": False,
+                        "registered_subject_binding_decision_id": binding["decision_id"],
+                        "registered_subject_binding_reason": binding["reason"],
+                        "directed_lineage_action": "stop_before_registered_subject_binding_conflict"})
+    completion = read(BASE / "evidence_qualification_completion.json")
+    completion.update({"revision": "v0.7.1", "revision_source_hashes": original_hashes,
+                       "target_revision_readings": len(readings), "new_readings_are_independent_expert_ground_truth": False,
+                       "registered_subject_binding_conflicts": 1,
+                       "relation_class_counts": dict(Counter(x["relation_class"] for x in cases)),
+                       "confirmed_target_boundaries": [x["relation_id"] for x in targets if x["fixed_source_target_comparable"] is False]})
+    for action in ("stop_before_relation", "retain_relation_subject_to_other_gates", "target_question_not_substantively_adjudicated"):
+        completion["main_relation_machine_map"][action] = sum(x["fixed_target_process_action"] == action for x in main)
+    completion["files"] = {"relation_ledger": str(output / "case_assessments.jsonl"), "target_adjudications": str(output / "target_change_adjudications.jsonl"),
+                           "main_relation_map": str(output / "main_relation_qualification_map.jsonl"), "new_issues": str(output / "new_issue_assessments.jsonl"), "endpoint_eligibility": str(output / "endpoint_eligibility_exclusions.json")}
+    save(output / "case_assessments.jsonl", cases, jsonl=True)

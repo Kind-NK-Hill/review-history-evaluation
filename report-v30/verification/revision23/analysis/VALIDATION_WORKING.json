@@ -1,0 +1,1369 @@
+{
+  "schema": "replication.delivery-validation.v1",
+  "validated_utc": "2026-09-14T07:08:19.703883+00:00",
+  "final": false,
+  "status": "passed",
+  "completed_acceptances_checked": 35,
+  "original_frozen_bindings_checked": 4922,
+  "parallel6_and_recovery_bindings_checked": true,
+  "source_selection_and_result_hashes_checked": true,
+  "technical_serial_intervals_checked": 28,
+  "review_deadlines_sessions_and_continuation_limits_checked": true,
+  "index_phase_counts": {
+    "main_original": 33,
+    "l3_review": 12,
+    "l3_repair": 2,
+    "al3_engineering_recovery": 1,
+    "common_acceptance": 35
+  },
+  "table_reconciliation": {
+    "indexed_records": 83,
+    "phase_counts": {
+      "main_original": 33,
+      "l3_review": 12,
+      "l3_repair": 2,
+      "al3_engineering_recovery": 1,
+      "common_acceptance": 35
+    },
+    "actor_counts_reconcile": true,
+    "token_totals_reconcile": true
+  },
+  "acceptance": [
+    {
+      "slot_id": "r2-l1-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\ea5ef53f\\development\\cases\\03f72c1f3758e317c20db80275e5dd60ce1e41109c6e8e422c0e32c09cd891c3\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 1
+    },
+    {
+      "slot_id": "r2-l1-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\c4b5ab78\\development\\cases\\9e6b0b58bef61486271f559378ec0ffb85a744887153a3ca6490aeb022e7067f\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 1
+    },
+    {
+      "slot_id": "r2-l1-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\192e8e57\\development\\cases\\139cf655a2f9895e05ba5729a86c525758765db8f84f0bf22042b7e3aa2a8e4d\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 1
+    },
+    {
+      "slot_id": "r2-l2-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\79a4021b\\development\\cases\\2b8c5dd79d291eede2e70de3f5f467378baf5f72b13437fea8e1b26e67afb943\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": true,
+      "dispatch_concurrency": 1
+    },
+    {
+      "slot_id": "r2-l2-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\50b5f762\\development\\cases\\759dc71346a89d7ee2244d39d1f8e7b96765e992da592fddaf23a4a045a146e8\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 1
+    },
+    {
+      "slot_id": "r2-l2-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\09dbca5d\\development\\cases\\926ac766edc923b09ec07f6aa8ae947cd10b89ca9d9c26773a375cdbb26b7832\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": true,
+      "dispatch_concurrency": 1
+    },
+    {
+      "slot_id": "r2-l3-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "fail",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\f605d20b\\development\\cases\\3d8d6810e00177a61561a5bcabfc9d47a31ab7198ddb57dab5d941779801872e\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": true,
+      "dispatch_concurrency": 1
+    },
+    {
+      "slot_id": "r2-l3-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\d58978be\\development\\cases\\ce6dff6dfdd2e5b5697126664d36ffb25e52e0cadba304d3bb00c3b451bcdf1c\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l3-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\4d38ea3a\\development\\cases\\db4e84955517b17ea131eb8d790d1c722793b14c7174563183c3c40f837a591f\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l4-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\47f74f94\\development\\cases\\94b696fa1026cf2b1ba04cdb419496203652a91167f15303b43884a102b9459f\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l4-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\950a2a53\\development\\cases\\d7d5b78093f4f9dd71ad6b9c9ad78619b02f15dac4ced3a10181e0026ad246b2\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l4-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\606959bf\\development\\cases\\a5cf706bf9bd94db13942f6c6245a000be0d000968b5afd1193102ca2bcdcd45\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l5-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\142dbd52\\development\\cases\\c5492cdc603704c71f4ffcdc4eecd61eef583a563cabec51e2d7d75c5de9d954\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l5-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\7e2ed26e\\development\\cases\\5df8b92a8e61ccfe886a726989dddb9b654236c97253227ae0e805ea12d01f6b\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l5-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\f75b6355\\development\\cases\\b41d89416af18d5c77651de1d2c3ffcefa0fccc492e0f1bf8cd934ae9d63343e\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l6-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\26f32124\\development\\cases\\e6f50b5522708e0bfc0c7336051879d9b67dfe1cafd1ccec7559f792eae9fd87\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l6-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\f35b4e43\\development\\cases\\abf03b355baf409a9507166a5c3806f5cecf7d9453bd9b3d65f112af951dacc8\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": true,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l6-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\029a1247\\development\\cases\\97b2b3f858c1ff6eab91f8e912794d1da4b887a9cbc59d573a885421d9121301\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l7-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\11d57ca4\\development\\cases\\9cf80d019ca79dfa34efa1bfc069927ca65ffe2ab0001108e3f179f8170fc031\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l7-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\faa9435a\\development\\cases\\71f3bb054d8365e643d84c52c53d94f495ec4d5a3cef7b32cbe2460427d11cb1\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-l7-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\27592b46\\development\\cases\\90b8cb6656b9a2d14360818f40df7134c6fd133ccea4b33e6e15653d6f172562\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-m1-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\875355df\\development\\cases\\21a011409649acf24f43ba8c355d02becca6c6a1780398ce355b85f74594e54e\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-m1-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\ecebc593\\development\\cases\\baf20b60e0fbc5ae28e0c5ffce4d10bfa80bb670c045f99af8240605b6f2c949\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-m1-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "fail",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\f4a87583\\development\\cases\\3d54f4e8b15b29ba63715084790dcc2d8c62a3941a284c47d0272d0fa7104dae\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-m2-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\d9733498\\development\\cases\\10a76aaa3c3ab2a3259b6b744d557f481506b34767bfa092962df29f9190689c\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-m2-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\e8902326\\development\\cases\\773b160e8eb45e8954184aed895c9789725d9372447bab7554bc11a56161bbca\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-m2-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "fail",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\1c6b9e08\\development\\cases\\aee5107693cb8ee7e72e711e07165ff22b67ed687402a29c47bca11eff3bf005\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": true,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-m3-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\0668e27e\\development\\cases\\a9f985962f6c63d243c1d182da54e166670dbb33ac19062126e638e68c436eb2\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-m3-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\f700f403\\development\\cases\\5967ac376194ab7e4c15c18f24f9a4991cdf127cabda86110c78bb42c478f3b7\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-m3-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\8edfdf42\\development\\cases\\a02e4725bb5c40e2cfecc367c6d6a4fb4aa6b92debd33a7e667022c03748abf4\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-h1-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\ec3f2690\\development\\cases\\bcc9d7a4528b6611eb6d35c7d03e79cd07981423812c25c9c0ca08773cad2c98\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-h1-c",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\120a3de0\\development\\cases\\4cbe808311593dc6611c7ae06ed9c81af3d29d00310b605970ba00a120c6ac65\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "r2-h1-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\318eefb9\\development\\cases\\9b89571f05740c6bf0925fa2e434e4975661056ea3e0fec58cfd39000dfe24c7\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "l3-repair-a",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\2361825f\\development\\cases\\e6f61108230f7567018b093b789ee3ecd70bac170b9d9ec8ddf39241fd958d52\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    },
+    {
+      "slot_id": "l3-repair-b",
+      "decision": {
+        "status": "complete",
+        "verdict": "pass",
+        "decision": "D:\\Grad_Study\\Practimum\\Formalization\\r2-eval-20260913\\698da1a5\\development\\cases\\0786f30f9d7364408c8036bc84c0305ba428fd3c783ec6c666cfe84eaa7e4905\\final\\decision.json"
+      },
+      "technical_pass": true,
+      "independent_sessions_reported": true,
+      "adjudication": false,
+      "dispatch_concurrency": 6
+    }
+  ],
+  "reviews": [
+    {
+      "slot_id": "r2-l1-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e6f-0e61-7aa0-bfb3-1cb32fbe4ebc"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l1-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e70-f29f-7ea1-87c8-c9caae938928"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l1-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e73-ca0d-7a92-94ef-de346c969ddf"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l1-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e76-3b75-7db2-b4a6-08b555f6d8fe"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l1-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e79-f650-7940-aa7b-03ff9a7788cd"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l1-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e7c-3c7d-7a32-a660-233c937a6ff9"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l2-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e7f-bd54-7721-a208-8c9b2b48ec13"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l2-b",
+      "role": "reviewer-2",
+      "dispatches": 2,
+      "session_ids": [
+        "01a09e81-d6d5-7e62-ba55-5918d8ca6e51"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": true,
+      "structure_errors_retained": [
+        "JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+        "JSONDecodeError('Expecting value: line 1 column 1 (char 0)')"
+      ],
+      "verdict": "inconclusive"
+    },
+    {
+      "slot_id": "r2-l2-b",
+      "role": "adjudicator",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e82-ff2e-7223-aac0-09232af5e1ab"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l2-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e85-b4fc-7d11-88cb-44348b25878d"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l2-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e88-11ce-72a2-8c06-02bc654643fb"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l2-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e8b-4168-78f3-a032-c5dc44ae5de7"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l2-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e8c-ba40-7c41-a0ae-d0e74796f4d6"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "fail"
+    },
+    {
+      "slot_id": "r2-l2-a",
+      "role": "adjudicator",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e8e-6fe8-7791-bd0b-ce04ece20d74"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l3-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e91-3e0b-7e03-ac91-840fc7ce16ad"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "fail"
+    },
+    {
+      "slot_id": "r2-l3-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e93-f3f6-7193-bc61-3ab64c9a11d5"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l3-c",
+      "role": "adjudicator",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09e96-5408-7940-8668-5c53982d6d86"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "fail"
+    },
+    {
+      "slot_id": "r2-l3-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea1-552a-7351-97d5-b2a7fe13e5bc"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l3-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea3-ad36-7421-b1ce-eaea84096acc"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l3-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea3-0adc-7ad3-b1b2-01bd9872e8d2"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l3-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea5-6648-7760-8468-cd8f776bed1f"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l4-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea1-b9aa-7201-be49-c601c9b3c000"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l4-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea3-74be-7633-8a1c-1a28d7811fd2"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l4-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea2-a3be-7e62-960a-2089dc70c96f"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l4-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea4-84cf-7740-99cd-7b1030707be6"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l4-c",
+      "role": "reviewer-1",
+      "dispatches": 2,
+      "session_ids": [
+        "01a09ea2-164a-75a1-a46b-1bbe7a73cb31"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": true,
+      "structure_errors_retained": [
+        "AssertionError()"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l4-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea4-0d90-73b1-a7f9-3422b8df9ac3"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l5-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea2-4884-7bb0-9214-c5e8a683c3d1"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l5-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea3-c63f-7a53-a0d3-ce65339002a5"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l5-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea5-818a-7673-ab6d-fefe0308c72e"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l5-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea7-1efa-75c3-9f19-ae76b5e3c1b3"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l5-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea5-d3e5-7dd0-8f47-14aaeeecbae1"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l5-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea7-ad10-7380-a6b2-972c0458807a"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l6-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea6-3163-7be1-99f0-7c51a3ea8a2d"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l6-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea8-7c33-71b0-b892-7a28eb4d0f5c"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l6-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea6-a955-7241-8aee-219af0e52fe9"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l6-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea9-5d4d-7a23-baff-9324e9bd9396"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "fail"
+    },
+    {
+      "slot_id": "r2-l6-a",
+      "role": "adjudicator",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eac-ee76-77c0-8b09-7302cb6b15b6"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l6-b",
+      "role": "reviewer-1",
+      "dispatches": 2,
+      "session_ids": [
+        "01a09ea7-2be7-7112-aaae-577c57ca784c"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": true,
+      "structure_errors_retained": [
+        "AssertionError()"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l6-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ead-6d28-7043-a78b-f7d286f8875d"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l7-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea8-e3ea-7e80-b73a-6c54a033a7e9"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l7-a",
+      "role": "reviewer-2",
+      "dispatches": 2,
+      "session_ids": [
+        "01a09eab-0bcc-7c00-83ec-5c83a9d93320"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": true,
+      "structure_errors_retained": [
+        "AssertionError()"
+      ],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l7-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09ea9-4cec-7002-83cc-59eda93f91fb"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l7-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eab-bd96-7c80-abc3-4f8e2bba8ad7"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l7-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eaa-7bf4-7b10-8430-37a35e959695"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-l7-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eac-94e0-7483-aa01-95f27cb31587"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m1-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eab-829b-79a2-a2f4-ef1c9c690440"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m1-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eae-1ba5-72d3-ae27-0df76a77e76c"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m1-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eae-692e-7d03-9db5-23b140bae257"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m1-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb1-43ac-7101-b9c7-36155db34b49"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m1-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eae-fc2a-72b1-8d78-3b58facb1164"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "fail"
+    },
+    {
+      "slot_id": "r2-m1-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb1-7ab6-79d3-9e33-59412fc50ae4"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "fail"
+    },
+    {
+      "slot_id": "r2-m2-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eaf-6e84-7e30-b500-68f56fa00fa6"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m2-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb1-b7d2-7e81-9376-5016feb3a633"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m2-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb0-018b-7131-9f1d-f40a19fa3566"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m2-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb2-49b0-7600-9c0a-972eb995097d"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m2-b",
+      "role": "reviewer-1",
+      "dispatches": 2,
+      "session_ids": [
+        "01a09eb0-712e-7401-b8bc-ba5a93b24135"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": true,
+      "structure_errors_retained": [
+        "AssertionError()",
+        "AssertionError()"
+      ],
+      "verdict": "inconclusive"
+    },
+    {
+      "slot_id": "r2-m2-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb3-9a66-7fe1-b9f4-73a1244874b9"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "fail"
+    },
+    {
+      "slot_id": "r2-m2-b",
+      "role": "adjudicator",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb5-e0c8-7141-9314-4958b608bb92"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "fail"
+    },
+    {
+      "slot_id": "r2-m3-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb1-ab3d-7f71-b700-45ef6df0abb3"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m3-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb3-4d29-74e0-9686-dc6d62b7d5d4"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m3-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb4-cd63-7800-a73b-fcfcbc8e8cca"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m3-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb6-6b99-7f92-bd01-86bdcee11749"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m3-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb5-182d-7112-af8a-b39d013a3aac"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-m3-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb6-ccff-7062-bdb2-f015b3b6d067"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-h1-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb7-128f-7693-9d63-a1dcfe0b5d4f"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-h1-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb9-6f65-7a40-8ead-27dd559c2b9f"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-h1-c",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb6-8e75-7ae3-9574-fff0f39d851c"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-h1-c",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eba-faf0-7182-b2e1-9aacc6f873b4"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-h1-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb5-c5ab-7d80-a017-3f0046a6d64e"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "r2-h1-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb7-a90b-7401-99e0-dce3ebd4ad85"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "l3-repair-a",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb8-66b3-7202-b477-94b5290a05bc"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "l3-repair-a",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eba-538f-7620-b6e3-412066d99dc3"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "l3-repair-b",
+      "role": "reviewer-1",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eb8-ca6c-7111-aa24-bf5576d1d188"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    },
+    {
+      "slot_id": "l3-repair-b",
+      "role": "reviewer-2",
+      "dispatches": 1,
+      "session_ids": [
+        "01a09eba-f36c-7d40-9e41-f6703d8d962a"
+      ],
+      "model_headers_verified": true,
+      "format_continuation": false,
+      "structure_errors_retained": [],
+      "verdict": "pass"
+    }
+  ],
+  "errors": [],
+  "scope": "Evidence identity, clock/model/dispatch records and arithmetic only; no new mathematical certification."
+}

@@ -1,0 +1,537 @@
+第28版的两组必要修改已经落实，也采纳三项可选建议。请作定向复核，确认两组必要问题是否关闭，新增结尾是否仍准确回答已完成研究。
+
+逐项处理：摘要“保证”改为提供核对依据；5.1相关声明改为待核实适用性的候选资料；6.4资料需核对适用性、在必要时适配。5.5改引S.4的原型与证据范围，B-L6采用段改引S.2及T.3，R.3.2明确多次给出stop的检查仍认可局部成果。另补摘要B可查阅资料并求助，6.2加批次，S.3明确右连续性；6.4收尾恢复三项已完成的评价可靠性发现，未来工作移到前一段。
+
+附录导航另补T，关于第24版的导读改为过去时，避免读成当前正文仍只是问题列表。第1、2、3、7章保持不变。数学、计时、分类与原证据不变；附录R/S仅有上列措辞澄清。请先确认读到 END_REVISION28_CLOSURE，只复核实际粘贴文本；不声称查看本地PDF或重跑实验。
+
+=== zh-CN 摘要与阅读指引 ===
+# 概率证明如何完成
+
+**作者：** Shuo Deng；Kenneth W. Shum（通讯作者）。
+
+*ProbabilityTheoryFormalization 项目评估*
+
+**第 28 版 · 2026 年 9 月 15 日 · 结果更新至：2026 年 9 月 14 日**
+
+<a id="abstract"></a>
+
+## 摘要
+
+人工智能代理怎样完成概率证明，并使结果能够供后续任务使用？本报告评价ProbabilityTheoryFormalization项目，结合以往审核与代码修订，以及十一个任务组三种工作配置的两批运行，考察数学成果、审核与协作的实际作用，以及完成判断的可靠性。[[1,4-12,24,41]](#ref-1)
+
+实验比较规定流程A、可查阅资料并求助的Sol自主作者B，以及由Astra协调Sol作者和检查服务的配置C。按共同数学成果标准，第一批A、B各完成10/11组，C完成11/11组；第二批三者均完成11/11组。第二批原验收拒绝的三个交付，经代码与调用检查确认已完成要求的数学内容。A在两批中的求解用时中位数均高于B、C，未显示相应的任务覆盖优势。两批分别报告，并保留任务说明与运行安排的差异。[[13,14,38,41,42]](#ref-13)
+
+数学案例解释了这些结果怎样形成：审核推动作者由原始矩推出中心矩界；协作者完成的反演证明进入唯一性及后续应用；旧Scheffé交付遗漏的尾部范围，在明确要求后的两次单独修复中得到补齐。历史代码则展示从概率模型推出密度、组合局部极限以及修订调用者的实际工作。历史标签增长与可比数学进展分别检查，保存代码的构建和语义检查提供另一组直接依据。[[4-11,17-20,25,27,43]](#ref-4)
+
+第二批过程分析核对全部33项运行的4,054次实际工具调用，另列179次工具发现，并从每项运行的首次检索和首次诊断形成66条过程记录。分析连接资料、反馈、代码修订与最终使用，展示函数表示和索引的适配、局部试验的不同结局，以及已检查代码未能传回作者的断点。重复工具问题进一步形成启动信息与参数预检原型，并完成各自的功能验证。[[45,46]](#ref-45)
+
+这些发现支持三项改进重点：审核覆盖公开定理承担的数学范围，协作检查成果是否传到使用者并进入证明，评价将等价实现的完成结果与实际投入一起报告。具体执行过程解释了工作怎样推进；同一任务的共同验收与历史对象核查，则为核对进展判断与所评价数学内容的对应关系提供依据。[[21-23,40,42,43]](#ref-21)
+
+**阅读指引。**[第1节](#section-1)介绍项目与问题，[第2节](#section-2)说明评价方法，[第3节](#section-3)报告成果和投入。[第4节](#section-4)解释完整成果需要哪些数学工作，[第5节](#section-5)追踪检索与反馈怎样进入修订和实际使用，[第6节](#section-6)讨论评价依据并给出结论。详细案例与历史分析见[附录R](appendix.zh-CN.md#appendix-r)，统一起点的方法与逐项记录见[附录S](appendix.zh-CN.md#appendix-s)，展开案例的证据位置见[附录T](appendix.zh-CN.md#appendix-t)。
+
+
+
+=== zh-CN 完整第5、6章 ===
+<a id="section-5"></a>
+
+## 5 从检索、修订到实际使用
+
+第二批33项运行全部通过共同数学验收。本章进一步问：**检索与反馈怎样进入证明修订，并形成被实际使用的成果？** 相同的最终完成结果之下，代理经历了不同的资料查找、接口适配、局部试验和协作交付。以下先交代统一观察的范围，再沿同一证明需要连接资料、反馈、调整和结果。
+
+<a id="section-5-1"></a>
+
+### 5.1 沿同一证明需要追踪后续工作
+
+分析从11个任务组三种配置的完整工具记录开始。去重并配对后，共有4,054次实际工具调用，另有179次工具发现。记录保留调用输入和返回。一次调用可能同时搜索、修改和检查，所以还需读取内容，确认这些动作在处理哪一项证明需要。[[45]](#ref-45)
+
+每项运行选择两个起点：首次主动查找数学名称、类型或源码，以及首次读入源文件后的证明或接口诊断。从起点向后，追踪同一需要下的查询、修改、检查结果和最终源码。若助手参与其中，还要核对作者收到的内容和采用位置。
+
+| 观察材料 | 覆盖 | 本章用它回答什么 |
+|---|---:|---|
+| 实际工具调用 | 4,054 | 哪些操作和返回实际发生，工具问题分布在哪里 |
+| 首次数学检索及其后续过程 | 33 | 找到资料后怎样推进证明，与最终源码有何联系 |
+| 首次证明或接口诊断及其后续过程 | 33 | 检查暴露了什么，后续如何处理同一需要 |
+
+两类起点共形成66条记录；25项运行的两个起点涉及同一需要，两类因此分别汇总。首次检索可以是正常准备，首次诊断也可能来自临时查询；本章从这些起点追踪资料怎样变得可用，以及出现的具体问题如何处理。这个规则覆盖每项运行的早期工作，后续新需要的全部过程尚未逐段标注。发现相关声明、局部检查通过和最终采用也分别记录：前者说明找到了待核实适用性的候选资料，后两者还需代码及其检查证据。选择规则与复核分工见[附录S.1–S.3](appendix.zh-CN.md#s1)。本章展开的调用顺序与源码位置另列于[附录T](appendix.zh-CN.md#appendix-t)。
+
+<a id="section-5-2"></a>
+
+### 5.2 找到相关定理以后，还需要哪些工作？
+
+33条检索记录与最终源码的联系如下。统计沿首次检索所处理的需要向后追踪，包括后续查找和修改；它描述这段工作的去向。
+
+| 所跟踪过程与最终源码的联系 | 记录数 |
+|---|---:|
+| 至少一项相关声明被显式使用 | 29 |
+| 相关实现或部分成果保留 | 2 |
+| 首位协作者的成果被后续交付替代 | 1 |
+| 尚未确认联系 | 1 |
+| 合计 | 33 |
+
+**分布函数资料怎样接入分位数证明。**第二批Skorokhod表示任务B-M3需要构造具有指定分布、且满足所需收敛性质的随机变量。支持实现从分布函数的下分位数入手，用分布函数的单调性、两端极限和右连续性建立分位数性质，再支持后续构造。
+
+主作者首先查询分布函数和分位数名称，扩大搜索后委派支持实现。助手读取分布函数及相关表示的源码，找到了所需性质。问题出在两种函数表示：项目使用自己的分布函数表达式，库定理则以库中的分布函数为对象。初次失败的实现中，助手已经写出两者在每个实数处相等的引理。它随后尝试直接用`change`把目标换成库表达式，检查仍报告两者并非定义上相同。
+
+这里需要区分两个具体动作。逐点等式说明两个表达式取值相同；直接更换目标却要求系统把它们认作同一展开形式。助手后来利用已有逐点引理，通过函数外延性得到函数等式，再用该等式改写极限、单调性与右连续性目标。这样，库定理才能作用于原来的项目函数。
+
+| 次序 | 记录中的行动或结果 |
+|---|---|
+| 查找并开始实现 | 主作者检索并委派；助手阅读相关源码，写出分位数基础及逐点相等引理 |
+| 首次检查与直接转换 | 目标中的函数表示不匹配；直接更换表达式仍被拒绝 |
+| 查找和修订 | 助手读取上确界接口、试查候选名称，并修改界的证明；函数表示错误仍在 |
+| 明确改写并复验 | 从逐点相等得到函数等式，改写目标，同时完成其他界的修改；支持文件检查通过 |
+| 核对最终实现 | 最终支持文件保留函数转换及分位数性质，供后续构造使用 |
+
+这个局部过程得到的是通过检查的分位数基础。助手返回时，完整Skorokhod构造仍待继续；整项任务的最终通过属于后续交付结果。初次逐点引理、失败的直接转换和成功的函数改写都保存在调用返回中，因此可以准确指出修订发生在哪里。上确界证明也在期间修改，整个文件通过构建不能全归于一个函数等式。
+
+**审核者给出的路线怎样成为作者的证明。**第二批B-M1需要证明停止后的过程仍为鞅。审核者搜索后返回了停止下鞅的库接口，以及将下鞅与上鞅性质合成为鞅的接口。返回意见给出具体路线：先把原鞅视为下鞅并停止，再对负过程作同样处理，取负后得到所需上鞅性质，最后合并。作者实际收到这份意见，随后复读源码并写入对应实现。
+
+第一次检查仍未通过。库接口允许含无穷值的停止时刻，当前任务使用有限索引；作者还需证明取最小值与转换回有限索引后的表达式一致。后续检索查找去除无穷值包装、强制转换和最小值的接口，试查中也出现不存在的候选名称。补齐显式索引等式后，检查通过。最终文件保留了停止下鞅、负过程和合成为鞅的调用。[附录T.2](appendix.zh-CN.md#t2)列出意见送达、作者修订及最终使用的对应位置。
+
+这两个过程中的资料都确实进入了证明。B-M3补的是函数表示之间的连接，B-M1补的是跨接口的索引关系。它们解释了检索结果何以变得可用；表中的29条显式使用则给出按统一起点规则观察到的覆盖。二者各有作用，当前记录没有据此计算各配置的整体检索效率。
+
+<a id="section-5-3"></a>
+
+### 5.3 诊断之后，原来的问题发生了什么变化？
+
+首次证明或接口诊断中，19项来自实际实现，14项来自临时声明查询或局部试验。临时查询可能同时返回可用声明的类型和其他名称不存在的信息；实现中的错误则可能要求修改待交付的证明。需要继续追踪相同目标，才能知道返回之后改变了什么。
+
+**有限和及可测性问题逐步修复。**第二批A-L1构造新息及其部分和；证明需要让变量相对于观察历史可测，并保证部分和可积。首份实现同时遇到可测性改写、索引无法确定和有限和可积性名称不匹配等问题。作者先读取报错位置，查找有限和的积分与可积性声明，明确有限索引的类型并改用相应接口。随后还需把观察历史的投影表达式与当前函数连接起来，证明函数等式后才能使用已有的可测性结论。过程中出现的编辑错误和零项可积性目标也分别修复。最终同一任务文件通过检查，并保留上述可测性与有限和可积性证明。这里的进展由报错目标、对应修改和同一文件的后续检查共同确认。[附录T.3](appendix.zh-CN.md#t3)
+
+**一项局部试验没有走到相同终点。**第二批线性最小均方误差任务B-L6中，支持作者试图证明三个项的线性组合平方的积分恒等式。初次诊断显示乘积可积性调用未能匹配当前目标，平方展开还留下其他目标。助手尝试更换表达式，期间一次补丁命令不可用，之后错误再次出现。它继续查询常数乘法接口，尝试简化和直接转换，后续版本推进了乘积可积性，但没有出现整条三项平方积分恒等式通过检查的记录。
+
+同一助手返回时，标明已检查的是高斯矩与独立性等部分。最终任务文件确有单传感器的二次表达式证明，整项运行也通过共同验收；这些证据各自对应自己的目标，不能作为那条三项试验已完成的依据。该试验在所跟踪记录中仍归为未见解决证据。
+
+B-L6的首次检索过程则有可确认的采用。作者沿高斯分布及分布相同的表达继续查找，最终源码使用检索所得接口把已知分布的积分性质转移到噪声变量，证明均值为零和平方积分。返回资料中另一条方差接口没有被使用。因此，这项运行同时包含被采用的检索成果和没有确认完成的局部试验。[附录S.2](appendix.zh-CN.md#s2)及[T.3](appendix.zh-CN.md#t3)
+
+A-L1的后续检查和同一文件支持原目标已修复；B-L6的最终任务完成，却没有补上那条局部试验的完成证据。追踪时同时核对目标身份和后续代码，才能保留这种差别。第3.3节的报错分布提供第一批背景，本节则解释第二批具体诊断之后的工作，完整逐项表见[附录S.2](appendix.zh-CN.md#s2)。
+
+<a id="section-5-4"></a>
+
+### 5.4 局部检查通过的代码怎样到达作者？
+
+第二批A-M2和A-M3的首位支持作者都产生了通过局部检查的代码。主作者要继续工作，还需要从返回结果中取得这些代码，并在自己的工作区整合。下面列出这一传递过程的实际状态。
+
+| 检查位置 | A-M2与A-M3中观察到的状态 |
+|---|---|
+| 支持角色的工作区 | 已有通过局部检查的代码 |
+| 首次返回 | 补丁为空 |
+| 作者随后读取的文件 | 仍是任务输入 |
+| 后续工作 | 重新委派后，由后续候选替换首支持候选，并以非空补丁传入作者工作区 |
+
+空补丁与作者文件共同确定了断点：首次局部成果没有通过这次返回进入作者文件。后续非空补丁来自另一候选，所以最终完成不能算成首份支持稿迟到后被采用。现有证据记录了传递结果，没有确定空补丁产生的内部原因。
+
+两题的首支持候选均被后续候选替换。第5.2节检索表却只有一条被替换记录，因为A-M3的首次检索起于主作者更早的构造需要，其后续成果进入最终证明；这里被替换的是首支持候选。追踪的对象不同，数量也就不同。[附录S.3](appendix.zh-CN.md#s3)保留补丁、文件对应关系与源码位置。
+
+这一检查也说明协助成果的采用怎样判定：先核对实际返回，再看作者文件的变化，最后查找后续证明中的使用。第4.3节H1展示成果传入后接通数学依赖，本节则定位成果尚未传入的环节。
+
+<a id="section-5-5"></a>
+
+### 5.5 将工具问题转化为可检验的改进
+
+前几节沿证明需要读取过程。本节回到全部工具调用，检查重复出现的执行问题。共有173次调用出现命令查找失败，其中49次外层退出码仍为0。调用可能包含不止一个内部命令，实际返回因此比单一外层状态提供更多信息。
+
+其中，对`apply_patch`的调用有66次查找失败，分布在全部33项运行和64个会话。新的会话可能再次尝试同一不可用入口；这个分布使启动时提供准确信息成为值得检验的改进。命令查找失败也可能涉及名称或搜索路径，具体类别与来源见[附录S.4](appendix.zh-CN.md#s4)。
+
+据此完成了启动工具信息卡；另针对参数拒绝实现了执行前的参数检查。两个原型各有独立的功能验证。[[46]](#ref-46)
+
+| 原型 | 要解决的问题 | 已完成的验证 |
+|---|---|---|
+| 启动工具信息卡 | 让作者在工作开始时看到实际可用的工具入口 | 在隔离容器中核对默认入口及搜索路径变化，确认信息卡能区分这些状态 |
+| 参数预检 | 在请求执行前识别格式或取值不合规的参数 | 静态回放两个工具的3,896次输入，识别9次原有拒绝，接受3,887次合法参数，与原程序的参数条件一致 |
+
+信息卡验证确认了所提供工具信息的准确性，静态回放确认了参数条件与原程序的一致性。信息卡对代理尝试次数、总投入和数学成果的影响，留待固定条件的实际对照；参数是否合法则是执行前的独立检查。原型实现、功能验证及证据范围见[附录S.4](appendix.zh-CN.md#s4)。
+
+本章沿同一证明需要连接了检索、反馈、修订和使用，也定位了代码传递与工具执行的问题。相关资料能否接入当前目标、局部成果能否到达作者，解释了相同完成结果之下不同的工作过程。
+
+<a id="section-6"></a>
+
+## 6 讨论与结论：怎样组织数学工作
+
+前面的分析把交付结果、数学工作和执行过程连接起来。本章回到第1章的三个问题：怎样评价已经完成的成果，怎样确认审核与协作的作用，以及关于进展的判断是否建立在可比对象上。
+
+<a id="section-6-1"></a>
+
+### 6.1 完成结果与投入需要一起阅读
+
+共同数学标准使不同实现可以按同一任务目标比较。通过之后，证明内容仍有差别：第一批B在方差任务中提供了可选的自行展开路线，C在反演应用中覆盖了更广的Cauchy分布族。它们分别增加了推导和输入范围。检查这些内容，能够解释相同完成标签之下实际交付了什么。[附录R.1.1](appendix.zh-CN.md#r1-1)及[R.1.3](appendix.zh-CN.md#r1-3)；[[21,23]](#ref-21)
+
+A在两批中的求解时间中位数均较高，未显示相应的任务覆盖优势。这支持继续检查规定流程消耗的投入。逐题结果也显示，中位数较低的配置并非每题都快，第二批B、C各有领先任务。这里的用时包含求解期间实际发生的协助、等待和修复；它衡量完成工作的实际投入。
+
+两批的部分提示与运行安排有变化，配置也同时涉及模型和组织差别。对它们应用同一数学标准，使成果判定可比，但不会消除运行条件本身的差异。因此，用时先在每批内按同题比较，跨批观察用于说明结果是否重复出现；某个单独流程组件的提速效果仍需固定其他条件检验。[[41,42]](#ref-41)
+
+<a id="section-6-2"></a>
+
+### 6.2 审核和协作的作用可以落实到具体工作
+
+评价审核时，可以沿“指出什么—要求什么—改了什么”检查。第一批A-M2的意见指出原始矩与中心矩条件的差别，随后出现了对应推导和公开接口修改。旧L3则显示，注意到更广范围后，评审仍可能决定当前无需补齐。明确义务会影响验收决定；只统计意见数量或通过标签，无法区分这些作用。
+
+协作评价可以沿“传回什么—怎样整合—用在哪里”检查。第一批H1的调用关系使支持证明对后续任务的贡献能够定位。第二批B-M1则将意见送达、作者适配和最终库调用连接起来；空补丁案例定位了已检查代码尚未进入作者文件的阶段。这些观察适合改进对应环节，但它们没有独自求解的反事实对照，不能换算为协作节省的分钟数。
+
+任务范围和交付可用性因而是可直接落实的检查重点。补齐缺失工作、使成果到达使用者，都能形成可确认的贡献。审核还可以确认既有成果并支持提交：第一批主比较C-L1收到可读的通过意见后，提交了未修改候选。这是检查进入提交决定的实例。[附录R.2.1](appendix.zh-CN.md#r2-1)
+
+<a id="section-6-3"></a>
+
+### 6.3 历史进展怎样与可比对象对应？
+
+第4.4节展示证明库在多次修订中增加了哪些数学内容。统计这种发展，还要确认前后意见评价的是不是可比目标，以及意见对应哪份代码。已有调查先选择意见直接对应预期候选的广义比较，再以有目的的核查选出数学目标也得到肯定可比判断的部分。同一任务可贡献多个前后比较关系，关系也可以共享端点；因此关系数与任务数分别报告，关系不能当作独立任务样本。[[10,32]](#ref-10)
+
+| 历史材料范围 | 比较关系数 | 涉及任务数 | 前项通过数 | 后项通过数 |
+|---|---:|---:|---:|---:|
+| 广义直接绑定比较 | 461 | 248 | 116 | 324 |
+| 目标肯定可比且对象资格满足的关系 | 128 | 79 | 28 | 45 |
+
+广义集合显示标签有明显增长。在目标也得到肯定可比判断的部分中，增长仍然存在。第二行是有目的核查的合格子集，并非第一行的随机样本；两行的趋势差不能全部解释成错误评价或目标变化。
+
+**详细案例覆盖哪些历史变化？**详细异常调查还形成了另一份有目的选择的队列。它与上述461条关系重叠163条，通过数从32增至33；其余298条则从84增至291。详细案例擅长解释某种问题怎样发生，覆盖的增长却只是广泛记录的一部分。因此，这些案例不足以说明全部历史增长主要来自已发现的异常，也不能用来估计异常在所有任务中的发生率。[附录R.3.5](appendix.zh-CN.md#r3-5)
+
+**后续修订中的任务组成。**对重复修订的统计同样受任务组成影响。追踪先固定失败起点，再逐步核查后续目标和对应代码；“首步”相对于这个起点，一项任务可以贡献多个起点。在严格合格的材料中，首步通过为22/69，后续步骤为3/31。后续31步来自尚未通过且仍有合格证据的路径，涉及15项任务；这些任务对应的19个首步中，本来就只有1个通过。因此，进入后续追踪的任务在所观察首步中的通过比例已经较低。要检验追加修订的收益，需要保持任务与条件可比，不能把两个比例直接当成同一批任务的衰减曲线。[附录R.3.6](appendix.zh-CN.md#r3-6)
+
+**保存代码提供另一种直接检查。**已有研究固定14对文件，包括6对开发样本和另外选取的8对。28个文件中17个可编译，16个产出所需具名声明；这16个目标均通过保存的两条公理规则，另一个可编译文件缺少请求的声明。编译、具名目标存在和命题语义分别回答不同问题。例如，一份早期证明直接把结论当作前提返回；后期源码去掉该捷径，却在保存环境中编译失败。源码层面的改进与保存环境中的构建失败应同时报告。[[11]](#ref-11)
+
+**额外规则比较的信息。**同一研究还比较了两份候选分别在两套规则下的结果。在已测的公理与直接前提属性上，规则相同或具有已知蕴含关系，额外组合没有比已利用这些关系的公平固定标准比较多回答问题。这是已完成的有界负结果。构造场景另用于验证程序，未增加真实任务成功。[附录R.3.7](appendix.zh-CN.md#r3-7)保留抽样、全部状态和比较依据。
+
+这也说明历史调查与第5章各自承担的任务。历史案例追踪较长的证明发展和调用者变化；第二批固定起点记录使每项运行的早期过程都得到覆盖。前者的材料选择与后者的统一起点不同，各自回答对应范围内的问题。报告将它们共同用于解释项目，但保持计数和结论的范围清楚。
+
+<a id="section-6-4"></a>
+
+### 6.4 结论与改进方向
+
+本报告表明，可供后续任务使用的概率证明，需要把任务原有条件、实际推导与调用者连接起来。A-M2将中心矩转换移入证明，H1把反演成果接入唯一性及应用，历史修订继续补齐模型、极限和调用接口。这些变化构成可以检查的数学进展。两批任务的完成结果与投入比较，则说明规定流程需要逐环节检验其收益。
+
+审核与协作的作用落实在具体决定及其后续工作中：指出缺失范围、要求补出推导、确认已有成果、传回代码并完成整合。检索所得资料需核对适用性，并在必要时完成适配，才能成为当前证明的一部分。B-M3和B-M1的过程说明已有定理如何接通不同表示，A-L1记录了诊断后的实际修复，B-L6则保留了没有确认完成的局部试验。由此得到的过程解释，比工具调用次数更具体，也保留了不同尝试的真实结局。
+
+据现有证据，改进可集中在三个环节：审核时逐项核对公开定理的范围；协助返回时检查补丁、接收文件及实际使用；启动会话时提供准确的工具入口信息。前两项对应已有的遗漏和传递断点，信息卡则已通过功能验证。评价这些改动时，继续使用共同数学标准，同时报告数学成果和包含等待、修复与协助的实际投入。信息卡的模型效果对照仍属后续工作。若进一步专门研究卡点后的检索与恢复，还需从已有日志中一致界定起点、失败、调整和终点，纳入成功、替换、放弃及无法确认的过程。
+
+关于评价可信度，数学目标可比且对象资格满足的历史子集中仍有接纳增长；后续修订较低的通过比例伴随任务组成变化，不能直接解释为修订效果递减。保存代码检查进一步显示，构建与公理规则通过仍需配合对命题和推导的检查。这些已完成的分析支持全文的评价方式：同时说明证明了什么、成果怎样进入使用，以及哪些代码和记录支持进展判断。
+
+
+
+=== zh-CN 附录导入 ===
+# 技术附录：概率证明的工作流程与执行轨迹
+
+**作者：** Shuo Deng；Kenneth W. Shum（通讯作者）。
+
+**第 28 版 · 2026 年 9 月 15 日 · 结果更新至：2026 年 9 月 14 日；早期记录保留各自日期**
+
+《概率证明如何完成》的配套附录。
+
+**第23版评价更新。**第23版纳入第二批已完成运行、旧L3诊断与修复，并统一两批数学成果评价。第一批、早期开发与历史分析保留原时点；本版方法、逐项复核、计时和新证据集中见[附录Q](#appendix-q)。本次未增加主求解运行，独立调用检查用于验证已有交付的等价接口。
+
+<a id="abstract"></a>
+
+## 摘要
+
+本附录记录用于评价 ProbabilityTheoryFormalization 数学完成、审核与维护的两类证据。历史审核及对应代码修订支持独立判断重建、数学目标比较资格确认、失败后追踪、保存代码检查，以及证明组合和调用者迁移的详细分析。十一个任务组的配置比较提供实验交付、执行轨迹和资源观察。实验方法明确候选选择、提交后评审者看到的材料、意见分歧与异常格式的处理，以及 9 月 12 日原主表采用的修正标准。9 月 13 日续作与责任审计保留独立身份和投入。
+
+两类材料中的详细分析都区分数学工作、记录意见、可观察回应与获接纳产物。逐次运行测量、任务层面缺失项、历史结果表、数学论证和尚未解决的来源问题均予保留，供核查报告推理。原始档案位置仍然提供，但取得这些稿件不等于取得所有底层记录。[F.2](#f2)说明本轮编辑范围。
+
+**导航。**[来源与历史：A–B](#appendix-a) · [历史方法：C](#appendix-c) · [保存代码检查：D](#appendix-d) · [术语与来源：E](#appendix-e) · [贡献：F](#appendix-f) · [详细轨迹：G](#appendix-g) · [观察时段：H](#appendix-h) · [来源索引：I–K](#appendix-i) · [历史数学：L](#appendix-l) · [测量：M](#appendix-m) · [实验方法：N](#appendix-n) · [9 月 13 日证据：O](#appendix-o) · [计时重建：P](#appendix-p) · [两批共同评价：Q](#appendix-q) · [正文移入的详细案例：R](#appendix-r) · [第二批工具反馈与过程研究：S](#appendix-s) · [展开过程的证据位置：T](#appendix-t) · [正文](report.zh-CN.md)
+
+阅读历史数学工作与维护，可先看 B、L；C、D 给出记录重建、统计和保存代码的方法与结果。阅读原实验，可先看 [N.1](#n1)、[N.6](#n6)，再看 G 的相关案例及 M 的测量。[O](#appendix-o)给出后续续作与审计。[E.2](#e2)区分此前打包的补充证据、后续记录位置与更广历史档案。两条阅读路线均服务于[正文第 1 节](report.zh-CN.md#evaluation-questions)的项目评价问题。
+
+**第24版结构调整。**正文原第4—6章的完整论证移至[附录R](#appendix-r)，当时正文第4章改为问题类型导读，并沿用第23版实验数据与评价结果。
+
+**第25版新增过程研究。**第二批33项运行的全量工具分析、固定起点过程表及功能原型见[附录S](#appendix-s)。第24版移入的详细案例继续保留，共同成果和时间数据未变。
+
+
+
+=== zh-CN r3-2 ===
+<a id="r3-2"></a>
+
+#### R.3.2 局部证明、整体组装与下游迁移是不同工作
+
+矩母函数任务 `prob_14_8` 的路线是把矩母函数延拓至复数带状区域，获得紧性与解析界，提取极限，再识别特征函数极限。整体论证完成前，历史中已有真实局部结果。多次给出`stop`的数学路线检查仍认可这些局部成果，同时指出组装缺口：不同紧致片段上的极限必须来自同一个全局函数的限制。构造该函数并证明限制相容，才补上了单纯列出已完成局部引理无法完成的工作。[[6]](report.zh-CN.md#ref-6)；[附录 L.2.3](appendix.zh-CN.md#l2-3)
+
+完整单文件证明早于后来的支持模块拆分。使用者 `prob_14_10` 此前已完成逼近与误差控制，并构造上游定理输入；最终局部改动只是一次调用，选取完整上游结论。但上游版本从依赖私有公理变为内部证成。因此，小规模局部差异和多个支持文件，会误导对数学工作何时、何处发生的解释。[[6]](report.zh-CN.md#ref-6)；[附录 B.10](appendix.zh-CN.md#b10)
+
+全变差修复暴露了另一种依赖。`def_8_5` 保留公式，却加入原文的概率测度要求；调用者须在形成表达式处提供证据。对 `def_10_5`，若将“测度是概率测度且距离收敛”改为“若测度是概率测度则距离收敛”，会使预期定义域之外出现空泛为真。实际修复通过依赖见证和局部实例传递所需证据。五次实质评审仅涉及两种主文件内容，其余事件来自调用者变化、注册失败和检查扩展。[[7]](report.zh-CN.md#ref-7)；[附录 L.2.4](appendix.zh-CN.md#l2-4)
+
+历史上，一些标为 **OBL** 的证明义务曾变成独立子任务，拥有各自候选、评审和完成状态传播。后续规则把它们吸收进父任务或支持文件，并要求重新评估组装后的父任务。任务分解仍会产出有用数学，但各部分必须接到最终公开定理及其调用者上。第 5、6 节考察这一衔接。[[5]](report.zh-CN.md#ref-5)
+
+这些历史使[第 1.5 节](report.zh-CN.md#section-1-5)的维护职责具体可见：局部证明、可靠上游依据、面向原文的公开定理和迁移后的调用者，可能在不同时点完成。它们也解释了后来为何要求历史 OBL 吸收后重新检查完整父任务。这一规则保留有用分解，同时拒绝用一组旧子任务通过意见替代新的整任务判断。[[5]](report.zh-CN.md#ref-5)
+
+这种职责分工由更早的流水线演化而来；早期流程规定了规划、检索与候选选择阶段，已包含重排序、错误反馈和经验注入。后来的任务包编辑赋予作者更多自主权，同时保留明确验收控制。[附录 L.1](appendix.zh-CN.md#l1)追溯这段发展；它与 A/B/C 比较是两回事。[[3]](report.zh-CN.md#ref-3)
+
+
+
+=== zh-CN s3 ===
+<a id="s3"></a>
+### S.3 审查与可追溯证据
+
+自动程序先提供搜索、修改和检查的粗分类候选。复核读取实际输入与完整必要输出，识别标准输入检查、复合命令中的具体目标、旧警告重放，以及某次构建通过后另一命令失败的情况。同文件检查序列只帮助定位，不能直接计为恢复。针对已发现问题的 13 个真实事件和 5 个合成边界回归全部通过；这是程序回归结果，未测量总体分类准确率。见[回归记录](../research/review/code_audit/regression_results.json)。
+
+A、C两组共44条由其他代理非盲复核；B组22条由主调查者逐条复核并组织补查，之后汇总为66条裁决记录。初标、复核及改动分别保存；参与者均为模型代理，没有真人专家真值或无偏准确率估计。重点核对首次合格事件、同需求连接和最终源码使用，避免由导入或名称出现直接推断采用。
+
+A-M2 与 A-M3 显示局部通过和成果送达是两步。首次支持者已有局部检查通过记录，但返回中补丁为空、未应用且成果列表为空。作者后来读取的草稿分别仍为 200 行和 65 行输入材料。后续重新委派才出现可核对的非空补丁和作者文件复制；A-M2 中间还有一次导出失败。A-M2 的首次候选最终被替换；A-M3 的首次支持候选被替换，但作者较早发起的检索过程仍可追到后来的实际使用。相关调用、文件摘要和原始行号见[A 配置逐条复核](../research/semantic/review_A.json)。
+
+B-M3 则展示了连续处理过程：作者检索分布函数与分位数资料，扩大查询并委派支持实现；支持者因项目函数与库函数表达不同而报错，直接转换仍失败。随后先证明两个函数相等，再重写极限、单调性和右连续性目标，支持文件通过。最终源码保留该桥接和分位数逆像结果。这确认了局部应用及使用，尚不把这一局部终点当整项表示定理完成。事件链与源码位置见[裁决记录中的 B-M3 两项](../research/semantic/adjudicated_annotations.json)；[事件索引](../research/extraction/events.jsonl)保存请求、返回及各自原始文件行号，可与[来源清单](../research/extraction/source_manifest.json)互查。
+
+
+
+=== en 摘要与阅读指引 ===
+# How probability proofs are completed
+
+**Authors:** Shuo Deng; Kenneth W. Shum (corresponding author).
+
+*An evaluation of the ProbabilityTheoryFormalization project*
+
+**Revision 28 · 15 September 2026 · Results updated through 14 September 2026**
+
+<a id="abstract"></a>
+
+## Abstract
+
+How do AI agents complete probability proofs and make their results usable by subsequent tasks? This report evaluates ProbabilityTheoryFormalization through earlier reviews and code revisions, together with two batches of three configurations on eleven task groups. It examines mathematical outcomes, the observed roles of review and collaboration, and the reliability of completion judgments. [[1,4-12,24,41]](#ref-1)
+
+The experiment compares the prescribed workflow A, a Sol author B with access to references and assistance, and Astra coordination of Sol authors and checking services C. Under a common mathematical-outcome criterion, A and B complete 10/11 groups and C completes 11/11 in the first batch; all three complete 11/11 in the second. Code inspection and caller checks establish that the three deliveries originally rejected in the second batch complete the required mathematical content. A has the highest median solving time in both batches without a corresponding coverage advantage. Results are reported separately by batch, retaining differences in task instructions and execution arrangements. [[13,14,38,41,42]](#ref-13)
+
+Mathematical cases explain how these outcomes developed: review prompted a centered-moment bound from raw moments; an assistant's inversion proof entered uniqueness and later applications; and two separate repairs under explicit instructions completed the eventual-integrability scope omitted from old Scheffe deliveries. Historical code traces density derivation from a probability model, assembly of local limits, and caller revision. Historical label growth is examined separately from comparable mathematical progress, while build and semantic checks of saved code supply further direct evidence. [[4-11,17-20,25,27,43]](#ref-4)
+
+Second-batch process analysis checks 4,054 actual tool calls across all 33 runs, separately records 179 tool-discovery calls, and constructs 66 process records from each run's first retrieval and first diagnostic. It connects material, feedback, code revisions, and final use, showing function-representation and index adaptations, different outcomes of local trials, and breaks in returning checked code to authors. Recurring tool problems also led to startup-information and parameter-checking prototypes, each with functional validation. [[45,46]](#ref-45)
+
+The findings support three priorities: review the mathematical scope required of public theorems, check that collaborative work reaches its user and enters the proof, and report completion of equivalent implementations alongside actual effort. Execution processes explain how work advances; common task acceptance and checks of historical objects provide a traceable basis for checking the correspondence between progress judgments and the mathematical content being evaluated. [[21-23,40,42,43]](#ref-21)
+
+**Reading guide.** [Section 1](#section-1) introduces the project and questions, [Section 2](#section-2) explains evaluation, and [Section 3](#section-3) reports outcomes and resources. [Section 4](#section-4) explains the mathematical work required for complete results; [Section 5](#section-5) follows retrieval and feedback into revision and actual use; [Section 6](#section-6) discusses the evaluation evidence and draws conclusions. Detailed cases and historical analyses appear in [Appendix R](appendix.en.md#appendix-r), uniform-start methods and individual records in [Appendix S](appendix.en.md#appendix-s), and evidence locations for the expanded cases in [Appendix T](appendix.en.md#appendix-t).
+
+
+
+=== en 完整第5、6章 ===
+<a id="section-5"></a>
+
+## 5 From retrieval and revision to actual use
+
+All 33 second-batch runs passed common mathematical acceptance. This section asks: **How do retrieval and feedback enter proof revisions and produce results that are actually used?** Beneath the same final completion outcome, agents followed different searches, interface adaptations, local trials, and collaborative deliveries. The analysis first defines its common observation scope, then connects material, feedback, adjustments, and outcomes for the same proof need.
+
+<a id="section-5-1"></a>
+
+### 5.1 Following subsequent work on the same proof need
+
+The analysis starts from complete tool records for three configurations on 11 task groups. Deduplication and pairing yield 4,054 actual tool calls, plus 179 tool-discovery calls. Records retain inputs and returns. A single call can search, modify, and check, so its content must also be read to identify the proof need being addressed. [[45]](#ref-45)
+
+Two starts are selected per run: the first active lookup of mathematical names, types, or source, and the first proof or interface diagnostic after reading a source file. From each start, the analysis follows queries, edits, checks, and final source concerning the same need. When a helper participates, it also checks what the author received and where it was adopted.
+
+| Material examined | Coverage | What this section asks of it |
+|---|---:|---|
+| Actual tool calls | 4,054 | Which actions and returns occurred, and where tool problems appeared |
+| First mathematical retrieval and subsequent work | 33 | How retrieved material advanced the proof and connected to final source |
+| First proof or interface diagnostic and subsequent work | 33 | What checking exposed and how the same need was handled afterward |
+
+The two starts produce 66 records; in 25 runs they concern the same need, so the two groups are summarized separately. A first retrieval can be routine preparation, and a first diagnostic can come from a temporary query. From these starts, the analysis follows how material becomes usable and how specific problems are handled. The rule covers early work in every run; complete processes for all later needs have not been annotated. Finding a relevant declaration, passing a local check, and final adoption are also recorded separately: the first identifies candidate material whose applicability requires checking, while the latter two require code and checking evidence. Selection rules and review assignments appear in [Appendix S.1–S.3](appendix.en.md#s1). [Appendix T](appendix.en.md#appendix-t) indexes the call order and source locations for the expanded cases.
+
+<a id="section-5-2"></a>
+
+### 5.2 What work remains after finding a relevant theorem?
+
+The 33 retrieval records connect to final source as follows. The count follows the need addressed by the first retrieval, including subsequent searches and changes; it describes where that work led.
+
+| Connection between the followed process and final source | Records |
+|---|---:|
+| At least one relevant declaration explicitly used | 29 |
+| Related implementation or partial result retained | 2 |
+| First collaborator's result replaced by a later delivery | 1 |
+| Connection not yet confirmed | 1 |
+| Total | 33 |
+
+**Connecting distribution-function material to a quantile proof.** The second-batch Skorokhod representation task B-M3 needs random variables with specified distributions and the required convergence properties. The support implementation starts from a lower quantile of the distribution function, using monotonicity, endpoint limits, and right continuity to establish quantile properties for the later construction.
+
+The main author first searched for distribution-function and quantile names, broadened the query, and delegated a support implementation. The helper read distribution-function and related representation source and found the needed properties. The obstacle involved two function representations: the project used its own distribution-function expression, while library theorems concerned the library's function. In the first failing implementation, the helper had already written a lemma showing equality at every real argument. It then tried to replace the target expression directly with `change`; checking still reported that the expressions were not definitionally equal.
+
+Two specific operations differ here. Pointwise equality establishes equal values, whereas that direct target replacement requires the system to recognize the same unfolded expression. The helper later applied function extensionality to the existing pointwise lemma, obtained a function equality, and used it to rewrite the limit, monotonicity, and right-continuity targets. The library theorems could then apply to the original project function.
+
+| Order | Recorded action or result |
+|---|---|
+| Search and initial implementation | Main author searches and delegates; helper reads source and writes quantile foundations with a pointwise-equality lemma |
+| First check and direct conversion | Function representations mismatch; direct replacement is still rejected |
+| Search and revision | Helper reads supremum interfaces, probes candidate names, and revises bounds; function-representation errors remain |
+| Explicit rewriting and recheck | Pointwise equality yields a function equality for rewriting; other bound revisions are also completed, and the support file passes |
+| Final-source check | Final support source retains the conversion and quantile properties for the subsequent construction |
+
+This local process produced checked quantile foundations. The full Skorokhod construction still remained when the helper returned; the run's ultimate pass belongs to the later delivery. Returns preserve the initial pointwise lemma, failed direct conversion, and successful function rewrite, locating the revision precisely. Supremum proofs also changed during the process, so the whole file's build success cannot be attributed solely to a function equality.
+
+**Turning a reviewer's route into the author's proof.** Second-batch B-M1 needs to prove that the stopped process remains a martingale. After searching, the reviewer returned a stopped-submartingale interface and an interface combining submartingale and supermartingale properties into a martingale. The return described a concrete route: view the original martingale as a submartingale and stop it, do the same with the negative process, negate to obtain the required supermartingale property, and combine the two. The author actually received this advice, reread the source, and wrote the corresponding implementation.
+
+The first check still failed. The library interface permits stopping times with an infinite value, while the task uses finite indices; the author also needed equality between taking a minimum and the expression obtained after conversion back to a finite index. Subsequent retrieval examined unwrapping, coercion, and minimum interfaces, with some probed candidate names absent. Checking passed after explicit index equalities were supplied. The final file retains calls for stopping a submartingale, handling the negative process, and combining the properties into a martingale. [Appendix T.2](appendix.en.md#t2) locates receipt of the advice, the author's revisions, and final use.
+
+Material entered the proof in both cases. B-M3 connected function representations; B-M1 connected indices across interfaces. The cases explain how retrieval became usable, while the 29 explicit-use records give coverage under the common start rule. Each serves a purpose; these records have not been used to calculate overall retrieval efficiency by configuration.
+
+<a id="section-5-3"></a>
+
+### 5.3 What changed in the original problem after a diagnostic?
+
+Of the first proof or interface diagnostics, 19 concern actual implementations and 14 concern temporary declaration queries or local trials. A temporary query may return both a usable declaration's type and reports that other names do not exist. An implementation error may require changing a proof intended for delivery. Following the same target is necessary to establish what changed afterward.
+
+**Repairing finite-sum and measurability problems.** Second-batch A-L1 constructs innovations and their partial sums. The proof needs measurability relative to observation histories and integrability of the partial sums. Its initial implementation had problems with measurability rewriting, undetermined indices, and a mismatched finite-sum integrability name. The author read the failing locations, searched finite-sum integral and integrability declarations, made the finite-index type explicit, and used the appropriate interface. It also had to connect an observation-history projection expression to the current function, proving a function equality before applying the available measurability result. An incidental editing error and a zero-term integrability goal were repaired as well. The same task file eventually passed checking and retained the measurability and finite-sum integrability proofs. Progress is established by the diagnostic targets, corresponding edits, and later check of that file. [Appendix T.3](appendix.en.md#t3)
+
+**A local trial did not reach the same endpoint.** In the second-batch linear minimum-mean-square-error task B-L6, a support author tried to prove an integral identity for the square of a three-term linear combination. The initial diagnostic showed that a product-integrability call did not match the current target; other square-expansion goals remained as well. The helper tried changing the expression; a patch command was unavailable during the process, and the error reappeared afterward. It continued with constant-multiplication queries, simplification attempts, and direct conversion. A later version advanced product integrability, but the record contains no passing check of the complete three-term square-integral identity.
+
+The helper's return identified checked Gaussian-moment and independence components. The final task file does contain a single-sensor quadratic-expression proof, and the whole run passed common acceptance. Those items concern their own targets and do not establish completion of the three-term trial. The trial remains classified as having no observed resolution in the followed record.
+
+B-L6's first retrieval process, meanwhile, has confirmed adoption. The author continued through Gaussian-distribution and equality-in-distribution representations; final source uses retrieved interfaces to transfer integral properties of the known distribution to the noise variable, proving zero mean and the square integral. Another variance interface returned in the material was not used. Thus the run contains both adopted retrieval results and a local trial whose completion was not confirmed. [Appendix S.2](appendix.en.md#s2) and [T.3](appendix.en.md#t3)
+
+A-L1's later checks and the same file support repair of the original goal. B-L6's final task completion does not supply the missing completion evidence for that local trial. Checking both the goal identity and subsequent code preserves this distinction. Section 3.3 supplies the first-batch diagnostic distribution, while this section explains work after specific second-batch diagnostics; the complete individual table is in [Appendix S.2](appendix.en.md#s2).
+
+<a id="section-5-4"></a>
+
+### 5.4 How does locally checked code reach the author?
+
+The first support authors for second-batch A-M2 and A-M3 both produced code that passed local checking. To continue, the main author also needed to obtain that code from the return and integrate it into its own workspace. The table locates the observed transfer states.
+
+| Location checked | Observed state in A-M2 and A-M3 |
+|---|---|
+| Support workspace | Code passes local checking |
+| First return | Patch is empty |
+| File subsequently read by the author | Still contains the task input |
+| Later work | After redelegation, a later candidate replaces the first support candidate and enters the author's workspace through a nonempty patch |
+
+The empty patch and the author's file locate the break: the first local result did not enter that file through this return. The later nonempty patch came from another candidate, so eventual completion cannot count as delayed adoption of the first support draft. The evidence records the transfer outcome without establishing the internal cause of the empty patch.
+
+Both first support candidates were replaced. The retrieval table in Section 5.2 has only one replaced record because A-M3's first retrieval starts with an earlier construction need of the main author, whose subsequent results entered the final proof; the object replaced here is the first support candidate. Different objects are being followed, producing different counts. [Appendix S.3](appendix.en.md#s3) retains patches, file correspondences, and source locations.
+
+This check also explains how adoption can be assessed: verify the actual return, examine changes in the author's file, and locate use in subsequent proofs. H1 in Section 4.3 shows delivered results connecting mathematical dependencies; this section locates the stage before results have entered the author's workspace.
+
+<a id="section-5-5"></a>
+
+### 5.5 Turning tool problems into testable improvements
+
+The preceding subsections follow proof needs. This subsection returns to all tool calls to examine recurring execution problems. Command lookup fails in 173 calls, including 49 with an outer exit code of 0. A call can contain multiple internal commands, so its actual return provides more information than one outer status.
+
+Calls to `apply_patch` account for 66 lookup failures across all 33 runs and 64 sessions. A new session may attempt the same unavailable entry point again; this distribution makes accurate startup information a useful improvement to test. Lookup failure can also involve names or search paths; categories and sources appear in [Appendix S.4](appendix.en.md#s4).
+
+A startup tool-information card was completed from this finding. Separately, execution-time parameter rejections motivated a pre-execution parameter check. Each prototype has its own functional validation. [[46]](#ref-46)
+
+| Prototype | Problem addressed | Validation completed |
+|---|---|---|
+| Startup tool-information card | Show the author the actual available tool entry points at the beginning of work | Isolated-container checks of default entry points and changed search paths confirm that the card distinguishes these states |
+| Parameter preflight | Identify nonconforming parameter formats or values before execution | Static replay of 3,896 inputs to two tools identifies 9 original rejections and accepts 3,887 valid inputs, matching the original parameter conditions |
+
+Validation of the information card establishes the accuracy of its tool information; static replay establishes agreement with the original parameter conditions. Effects of the card on agent attempts, total effort, and mathematical outcomes await an actual comparison under fixed conditions. Parameter validity is a separate pre-execution check. Prototype implementation, functional validation, and evidence scope appear in [Appendix S.4](appendix.en.md#s4).
+
+Following the same proof need connects retrieval, feedback, revision, and use, while locating problems in code transfer and tool execution. Whether relevant material connects to the current goal and whether local work reaches the author help explain different working processes beneath the same completion outcomes.
+
+<a id="section-6"></a>
+
+## 6 Discussion and conclusions: organizing mathematical work
+
+The preceding analyses connect delivery outcomes, mathematical work, and execution processes. This section returns to the three questions in Section 1: how to assess completed results, how to establish the roles of review and collaboration, and whether judgments of progress rest on comparable objects.
+
+<a id="section-6-1"></a>
+
+### 6.1 Read completion and effort together
+
+A common mathematical criterion allows different implementations to be compared against the same task goal. Proof content still differs after a pass: first-batch B supplied an optional direct-expansion route in the variance task, while C covered a broader Cauchy family in the inversion application. These add derivation and input scope respectively. Examining them explains what was actually delivered beneath identical completion labels. [Appendix R.1.1](appendix.en.md#r1-1) and [R.1.3](appendix.en.md#r1-3); [[21,23]](#ref-21)
+
+A has the higher median solving time in both batches without a corresponding coverage advantage. This supports examining the effort consumed by the prescribed workflow. Task-level results also show that the lower-median configuration is not faster on every task: B and C each lead on some second-batch tasks. The reported time includes assistance, waiting, and repair that actually occurred during solving, measuring the effort of completing the work.
+
+Some prompts and execution arrangements differ between batches, and the configurations combine model and organizational differences. Applying the same mathematical criterion makes outcome judgments comparable but does not remove differences in execution conditions. Timing is therefore compared by task within each batch first; cross-batch observations indicate whether patterns recur. The speed effect of an individual workflow component still requires holding other conditions fixed. [[41,42]](#ref-41)
+
+<a id="section-6-2"></a>
+
+### 6.2 Locate the contributions of review and collaboration in concrete work
+
+Review can be examined through what it identifies, what it requires, and what changes. First-batch A-M2's opinion identified the difference between raw- and central-moment assumptions, followed by the corresponding derivation and public-interface revision. Old L3 shows that a reviewer can notice broader scope and still decide it need not be completed. Explicit obligations affect acceptance decisions; counts of opinions or pass labels cannot distinguish these contributions.
+
+Collaboration can be examined through what returns, how it is integrated, and where it is used. First-batch H1's calls locate the support proof's contribution to later tasks. Second-batch B-M1 connects receipt of advice, the author's adaptation, and final library calls; empty-patch cases locate checked code that has not yet entered the author's file. These observations support improvements at the respective stages, but without a solo-solving counterfactual they cannot be converted into minutes saved by collaboration.
+
+Task scope and delivery usability are therefore concrete checks to implement. Filling missing work and bringing results to their users can each make a verifiable contribution. Review can also confirm existing work and support submission: first-batch main-comparison C-L1 received a readable passing opinion and submitted an unchanged candidate. This is an instance of checking entering a submission decision. [Appendix R.2.1](appendix.en.md#r2-1)
+
+<a id="section-6-3"></a>
+
+### 6.3 How does historical progress correspond to comparable objects?
+
+Section 4.4 shows mathematical content added across revisions. Counting that development also requires checking whether earlier and later opinions concern comparable targets and which code each evaluates. The existing investigation first selects broad comparisons with opinions directly bound to the intended candidates, then purposefully checks a subset for affirmative mathematical-target comparability. A task can contribute multiple earlier/later comparison relations, and relations can share endpoints. Relation and task counts are therefore reported separately; relations are not independent task samples. [[10,32]](#ref-10)
+
+| Historical material | Comparison relations | Tasks | Earlier passes | Later passes |
+|---|---:|---:|---:|---:|
+| Broad directly bound comparisons | 461 | 248 | 116 | 324 |
+| Relations with affirmative target comparability and qualified objects | 128 | 79 | 28 | 45 |
+
+The broad set shows substantial label growth. Growth remains where target comparability is also affirmatively established. The second row is a qualified subset from purposeful checking, not a random sample of the first. Their differing trends cannot all be attributed to erroneous evaluation or target changes.
+
+**Which historical changes do detailed cases cover?** A separate, purposefully selected queue of detailed anomaly investigations overlaps 163 of the 461 relations, with passes increasing from 32 to 33. In the other 298 relations, passes increase from 84 to 291. Detailed cases explain how particular problems arise, but cover only part of the growth in the broad collection. They therefore cannot establish that the discovered anomalies account for most historical growth or estimate their prevalence across all tasks. [Appendix R.3.5](appendix.en.md#r3-5)
+
+**Task composition in later revisions.** Repeated-revision statistics are also affected by task composition. Follow-up fixes failure starting points and checks subsequent targets and corresponding code at each step. A first step is relative to such a start, and a task can contribute multiple starts. In the strictly qualified material, first steps pass in 22/69 cases and later steps in 3/31. The 31 later steps come from paths that have not yet passed and still have qualified evidence, covering 15 tasks. Only 1 of the 19 corresponding first steps for those tasks passed. Thus tasks entering later follow-up already had a lower pass proportion in their observed first steps. Testing the return to further revision requires comparable tasks and conditions; these proportions are not a decay curve for the same task population. [Appendix R.3.6](appendix.en.md#r3-6)
+
+**Saved code supplies another direct check.** Existing research froze 14 file pairs: 6 development pairs and 8 separately selected pairs. Of 28 files, 17 compile and 16 yield the required named declarations. All 16 extracted targets pass the two saved axiom rules; the additional compiling file lacks the requested declaration. Compilation, presence of a named target, and proposition semantics answer different questions. For example, an early proof simply returns its conclusion supplied as a premise. Later source removes that shortcut but fails to compile in the saved environment. Both the source-level improvement and the saved-environment build failure should be reported. [[11]](#ref-11)
+
+**Information from additional rule comparisons.** The same study also evaluated two candidates under two rule sets. For the tested axiom and direct-premise properties, the rules were identical or had known implication relations, and the additional combinations answered no more questions than a fair fixed-standard comparison already using those relations. This is a completed, bounded negative result. Constructed scenarios separately validated the program without adding real-task successes. [Appendix R.3.7](appendix.en.md#r3-7) retains selection, all statuses, and the comparison basis.
+
+This also distinguishes the roles of the historical investigation and Section 5. Historical cases follow longer proof development and caller changes; fixed second-batch starts cover early processes in every run. Purposeful historical selection and uniform starts answer questions within their respective scopes. The report uses both to explain the project while preserving the scope of their counts and conclusions.
+
+<a id="section-6-4"></a>
+
+### 6.4 Conclusions and directions for improvement
+
+The report shows that probability proofs usable by later tasks must connect the original task conditions, actual derivations, and callers. A-M2 moves the centered-moment conversion inside the proof, H1 connects inversion to uniqueness and applications, and historical revisions complete models, limits, and calling interfaces. These changes constitute inspectable mathematical progress. Completion and effort across the two experimental batches also show why the prescribed workflow's benefits need to be examined at individual stages.
+
+The roles of review and collaboration are visible in specific decisions and subsequent work: identifying missing scope, requiring a derivation, confirming existing results, returning code, and integrating it. Retrieved material requires checking applicability and, where needed, adaptation before it becomes part of the current proof. B-M3 and B-M1 show how existing theorems connect different representations, A-L1 records actual repair following diagnostics, and B-L6 retains a local trial whose completion was not confirmed. These process explanations are more specific than tool-call counts and preserve the observed outcomes of different attempts.
+
+The evidence points to three priorities: check public-theorem scope explicitly during review; check patches, receiving files, and actual use when assistance returns; and provide accurate tool-entry information at session startup. The first two address observed omissions and transfer breaks; the information card has passed functional validation. Evaluation should retain the common mathematical criterion and report mathematical outcomes alongside actual effort, including waiting, repair, and assistance. A model-outcome comparison of the card remains future work. A dedicated study of retrieval and recovery after proof difficulties would additionally need consistent starts, failures, adjustments, and endpoints in existing logs, including successful, replaced, abandoned, and unconfirmed processes.
+
+On evaluation reliability, acceptance still increases in the historical subset with comparable mathematical targets and qualified objects. Lower pass proportions in later revisions accompany changes in task composition and cannot directly establish declining returns to revision. Saved-code checks further show why build and axiom-rule passes must be accompanied by examination of statements and derivations. These completed analyses support the report's approach: establish what was proved, how results entered use, and which code and records support judgments of progress.
+
+
+
+=== en 附录导入 ===
+# Technical appendix: probability-proof workflows and trajectories
+
+**Authors:** Shuo Deng; Kenneth W. Shum (corresponding author).
+
+**Revision 28 · 15 September 2026 · Results updated through 14 September 2026; earlier records retain their dates**
+
+Companion to *How probability proofs are completed*.
+
+**Evaluation update in Revision 23.** Revision 23 incorporates the completed second batch, old L3 diagnostics and repairs, and a common mathematical-outcome assessment of both batches. Earlier development and historical analyses retain their dates. [Appendix Q](#appendix-q) gives the new methods, item-level reconciliation, timing and evidence. No main solving run was added in this revision; independent caller checks test equivalent interfaces in existing deliveries.
+
+<a id="abstract"></a>
+
+## Abstract
+
+This appendix documents the two bodies of evidence used to evaluate ProbabilityTheoryFormalization's mathematical completion, review and maintenance. Historical review records and corresponding code revisions support reconstruction of distinct judgments, qualification of mathematical targets, follow-up after failure, saved-code checks and detailed accounts of proof assembly and caller migration. The eleven-group configuration comparison supplies experimental deliveries, execution trajectories and resource observations. Its methods specify candidate selection, the materials shown to post-submission evaluators, the handling of disagreement and malformed results, and the corrected criteria used for the original 12 September panel. The 13 September continuation and responsibility audits retain their separate identities and costs.
+
+Across both bodies, the detailed accounts distinguish mathematical work, recorded opinions, observable responses and accepted artifacts. Per-run measurements, task-level missingness, historical outcome tables, mathematical arguments and unresolved source questions remain available for examining the report's reasoning. The original archive locators are retained, but access to these manuscripts is not access to every underlying record. The scope of this editorial pass is stated in [F.2](#f2).
+
+**Navigation.** [Provenance and histories: A–B](#appendix-a) · [Historical methods: C](#appendix-c) · [Saved-code study: D](#appendix-d) · [Glossary and sources: E](#appendix-e) · [Contributions: F](#appendix-f) · [Detailed trajectories: G](#appendix-g) · [Observation windows: H](#appendix-h) · [Source indexes: I–K](#appendix-i) · [Historical mathematics: L](#appendix-l) · [Measurements: M](#appendix-m) · [Experimental methods: N](#appendix-n) · [13 September evidence: O](#appendix-o) · [Timing reconstruction: P](#appendix-p) · [Common assessment of both batches: Q](#appendix-q) · [Detailed cases moved from the main text: R](#appendix-r) · [Second-batch tool feedback and proof development: S](#appendix-s) · [Evidence locations for expanded processes: T](#appendix-t) · [Main report](report.en.md)
+
+For historical mathematical work and maintenance, start with B and L; C and D contain the reconstruction, statistical and saved-code methods and results. For the original experiment, start with [N.1](#n1) and [N.6](#n6), then read the relevant cases in G and measurements in M. [O](#appendix-o) gives the later continuation and audits. [E.2](#e2) distinguishes the previously packaged supplement and later record locators from the wider historical archive. Both reading routes support the project questions in [main Section 1](report.en.md#evaluation-questions).
+
+**Structural edit in Revision 24.** Full arguments from the former Chapters 4–6 are retained in [Appendix R](#appendix-r). At that revision, main-text Chapter 4 introduced the types of problems agents face, retaining experimental data and verdicts from Revision 23.
+
+**Revision 25 process study.** [Appendix S](#appendix-s) adds full tool-call coverage, fixed-start process records and functional prototypes for the 33 second-batch runs. Detailed cases relocated in Revision 24 remain available; common outcomes and timing data are unchanged.
+
+
+
+=== en r3-2 ===
+<a id="r3-2"></a>
+
+#### R.3.2 Partial proofs, global assembly and downstream migration are separate work
+
+In the moment-generating-function task `prob_14_8`, the route extends moment-generating functions to a complex strip, obtains tightness and analytic bounds, extracts limits and identifies the characteristic-function limit. The history contains genuine local results before the whole argument closes. Math Gate reviews repeatedly issued `stop` while recognizing these local results and identifying an assembly gap: limits on different compact pieces must be restrictions of a single global function. Constructing that function and proving restriction compatibility closes work that the mere list of completed local lemmas does not. [[6]](report.en.md#ref-6); [Appendix L.2.3](appendix.en.md#l2-3)
+
+The complete single-file proof precedes its later split into support modules. The consumer `prob_14_10` had already established approximation and error-control work and built the inputs for its upstream theorem; its eventual local change is only one call selecting the completed upstream conclusion. The upstream versions, however, change from private-axiom-dependent to internally proved. Small local diffs and multiple support files therefore give misleading accounts of where and when the mathematical work occurred. [[6]](report.en.md#ref-6); [Appendix B.10](appendix.en.md#b10)
+
+A total-variation repair exposes a different dependency. `def_8_5` keeps its formula but adds the source's probability-measure requirement. Callers must provide that evidence where the expression is formed. In `def_10_5`, replacing “the measures are probability measures and the distances converge” by “if they are probability measures, the distances converge” would permit vacuous truth outside the intended domain. The repair instead passes the needed evidence through a dependent witness and local instance. Five substantive reviews involve only two main-file contents because caller changes, failed registration and expanded checks account for other events. [[7]](report.en.md#ref-7); [Appendix L.2.4](appendix.en.md#l2-4)
+
+Historically, some proof obligations, labeled **OBL**, became subtasks with their own candidates, reviews and propagation of completion status. Later rules absorbed them into parent or support files and required renewed assessment of the assembled parent. Decomposition still produces useful mathematics, but its pieces must be connected to the final public theorem and its callers. Appendix R.2 and 6 examine that connection. [[5]](report.en.md#ref-5)
+
+These histories make the maintenance responsibilities in [Section 1.5](report.en.md#section-1-5) concrete: a local proof, its sound upstream basis, the source-facing public theorem and migrated callers can reach completion at different times. They also explain the later rule requiring the assembled parent to be checked after historical OBL absorption. That rule preserves useful decomposition while refusing to substitute a collection of old child passes for a fresh whole-task judgment. [[5]](report.en.md#ref-5)
+
+The division of responsibility developed from an earlier pipeline with prescribed planning, retrieval and candidate-selection stages, already including reranking, error feedback and experience injection. Later package-based editing gave the author more discretion while retaining explicit acceptance controls. [Appendix L.1](appendix.en.md#l1) traces that development; it is separate from the A/B/C comparison. [[3]](report.en.md#ref-3)
+
+
+
+=== en s3 ===
+<a id="s3"></a>
+### S.3 Review and evidence
+
+Automatic classification supplies coarse candidates for retrieval, editing, and checking. Review reads actual inputs and necessary output context, accounting for standard-input checks, separate targets within compound commands, replayed warnings, and a successful build followed by an unrelated command failure. Same-file check sequences aid navigation; they are not recovery labels. All 13 real-event regression cases and 5 synthetic boundary cases passed. These are targeted program checks, not a population accuracy estimate; see the [regression results](../research/review/code_audit/regression_results.json).
+
+The 44 records for A and C received non-blind review by other agents. The principal investigator reviewed all 22 B records and requested supplementary checks; the results were then consolidated into 66 adjudicated records. Initial labels, reviews, and changes are preserved separately. All assessors were model agents; there was no human-expert reference set or unbiased accuracy estimate. Review focused on first eligible events, continuity of need, and final-source evidence, rather than inferring adoption from imports or name occurrences.
+
+A-M2 and A-M3 distinguish local success from delivery. Their first support actors obtained passing local checks, but their returns contained empty patches, no applied patch, and empty artifact lists. When the authors later inspected their drafts, these still contained 200 and 65 lines of input material respectively. Subsequent delegation produced verifiable nonempty patches and copies into author files; A-M2 also had an intervening export failure. Its first candidate was ultimately replaced. In A-M3, the first support candidate was replaced, while the author's earlier retrieval process could still be connected to later use. The [A review records](../research/semantic/review_A.json) supply calls, file digests, and original line references.
+
+B-M3 illustrates a connected process. The author searched for distribution-function and quantile resources, expanded the query, and delegated support implementation. The support actor encountered mismatches between the project's distribution function and the library expression; direct conversion still failed. Establishing equality of the two functions then enabled rewriting the limit, monotonicity, and right-continuity goals, and the support file passed. Final source retained this bridge and the quantile inverse-image result. This establishes local application and use without treating that stage as completion of the entire representation theorem. The two B-M3 [adjudicated records](../research/semantic/adjudicated_annotations.json) identify the chain and final source locations. The [event index](../research/extraction/events.jsonl) contains requests, responses, and their original file and line references, cross-referenced by the [source manifest](../research/extraction/source_manifest.json).
+
+
+
+END_REVISION28_CLOSURE

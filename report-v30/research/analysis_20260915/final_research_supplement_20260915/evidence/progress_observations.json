@@ -1,0 +1,53 @@
+{
+  "states": [
+    {
+      "event": "E053",
+      "kind": "first_helper_checked",
+      "current_full_scope_helper_proof": true,
+      "historical_full_scope_proof_seen": true,
+      "author_received_full_scope_proof": false,
+      "author_checked_full_scope_proof": false,
+      "time_min": 14.515184092521668
+    },
+    {
+      "event": "E056",
+      "kind": "author_reads_blank",
+      "current_full_scope_helper_proof": null,
+      "historical_full_scope_proof_seen": true,
+      "author_received_full_scope_proof": false,
+      "author_checked_full_scope_proof": false,
+      "time_min": 15.441984089215596
+    },
+    {
+      "event": "E082",
+      "kind": "second_helper_checked_IID_candidate",
+      "current_full_scope_helper_proof": false,
+      "historical_full_scope_proof_seen": true,
+      "author_received_full_scope_proof": false,
+      "author_checked_full_scope_proof": false,
+      "time_min": 21.347750759124757
+    },
+    {
+      "event": "E152",
+      "kind": "third_helper_proof_adopted",
+      "current_full_scope_helper_proof": true,
+      "historical_full_scope_proof_seen": true,
+      "author_received_full_scope_proof": true,
+      "author_checked_full_scope_proof": false,
+      "time_min": 43.647150758902235
+    },
+    {
+      "event": "E154",
+      "kind": "author_formal_build_passed",
+      "current_full_scope_helper_proof": true,
+      "historical_full_scope_proof_seen": true,
+      "author_received_full_scope_proof": true,
+      "author_checked_full_scope_proof": true,
+      "time_min": 44.218117423852284
+    }
+  ],
+  "elapsed_first_local_check_to_author_check_min": 29.702933331330616,
+  "is_exclusive_wasted_time": false,
+  "is_new_agentboard_score": false,
+  "semantic_judgments_basis": "complete source, raw events, frozen before/after handoff archives; selected one-run demonstration, not validated automatic metric"
+}

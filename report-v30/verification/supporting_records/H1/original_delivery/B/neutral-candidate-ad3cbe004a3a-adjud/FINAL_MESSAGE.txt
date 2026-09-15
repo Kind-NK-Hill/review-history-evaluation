@@ -1,0 +1,10 @@
+已完成全部数学形式化任务并提交中性清单。
+
+- 五项任务 `thm_9_4`、`thm_9_5`、`thm_9_6`、`prob_9_6`、`prob_9_8` 均已实现。
+- 新增狄利克雷积分证明文件 `thm_9_5_dirichlet.lean`。
+- 完整构建成功，共检查 8569 个任务。
+- 未使用 `sorry`、`admit` 或新增公理。
+- 公理审计仅发现标准依赖：`propext`、`Classical.choice`、`Quot.sound`。
+- 未解决项为空。
+- 提交文件已写入并通过 JSON 格式校验：[submission.json](/work/submission.json)。
+- 用户原有的无关文件均未修改或删除。

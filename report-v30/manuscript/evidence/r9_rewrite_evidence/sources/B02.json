@@ -1,0 +1,139 @@
+{
+  "/schema": "descriptive.current_main_panel.v7",
+  "/rules": [
+    "Join native root identities, retaining selected versions and the H1 same-root continuation.",
+    "Each metric uses only groups complete in all three configurations; missing costs are not replaced with zero.",
+    "Spans run from first dispatch to last role return, excluding common endpoint evaluation.",
+    "Dispatches include unsuccessful dispatches. Tool counts include completed model-visible returns across solver roles.",
+    "Input includes cached input. Tokens are not monetary costs. These are descriptive selected-task summaries."
+  ],
+  "/summaries": {
+    "span_seconds": {
+      "groups": [
+        "H1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "M2",
+        "M3"
+      ],
+      "A": {
+        "n": 9,
+        "median": 3531.842290878296,
+        "min": 854.9600296020508,
+        "max": 10929.619734048843
+      },
+      "B": {
+        "n": 9,
+        "median": 1989.0595593452454,
+        "min": 953.6496787071228,
+        "max": 7570.467349052429
+      },
+      "C": {
+        "n": 9,
+        "median": 1721.7470161914825,
+        "min": 913.9763045310974,
+        "max": 6201.780104637146
+      }
+    },
+    "dispatches": {
+      "groups": [
+        "H1",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "A": {
+        "n": 11,
+        "median": 10,
+        "min": 3,
+        "max": 32
+      },
+      "B": {
+        "n": 11,
+        "median": 3,
+        "min": 2,
+        "max": 7
+      },
+      "C": {
+        "n": 11,
+        "median": 5,
+        "min": 3,
+        "max": 12
+      }
+    },
+    "input_tokens": {
+      "groups": [
+        "H1",
+        "L2",
+        "L3",
+        "L4",
+        "L6",
+        "L7",
+        "M2",
+        "M3"
+      ],
+      "A": {
+        "n": 8,
+        "median": 12940451.0,
+        "min": 4541703,
+        "max": 95568298
+      },
+      "B": {
+        "n": 8,
+        "median": 8532553.5,
+        "min": 5025081,
+        "max": 63346168
+      },
+      "C": {
+        "n": 8,
+        "median": 6750761.5,
+        "min": 2915724,
+        "max": 55201327
+      }
+    },
+    "completed_tool_returns": {
+      "groups": [
+        "H1",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L6",
+        "L7",
+        "M1",
+        "M2",
+        "M3"
+      ],
+      "A": {
+        "n": 11,
+        "median": 137,
+        "min": 49,
+        "max": 484
+      },
+      "B": {
+        "n": 11,
+        "median": 107,
+        "min": 33,
+        "max": 513
+      },
+      "C": {
+        "n": 11,
+        "median": 104,
+        "min": 44,
+        "max": 464
+      }
+    }
+  }
+}

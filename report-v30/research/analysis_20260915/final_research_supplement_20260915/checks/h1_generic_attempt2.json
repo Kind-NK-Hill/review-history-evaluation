@@ -1,0 +1,26 @@
+{
+  "run": "r2-h1-b",
+  "command": [
+    "docker",
+    "run",
+    "--network",
+    "none",
+    "--mount",
+    "type=volume,source=rep26-p6-tech-f848a0fdae9e-e48678-work,target=/work,readonly",
+    "--mount",
+    "type=bind,source=D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\final_research_supplement_20260915,target=/checks,readonly",
+    "--entrypoint",
+    "/bin/bash",
+    "-w",
+    "/work/ProbabilityTheoryFormalization",
+    "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+    "--noprofile",
+    "--norc",
+    "-c",
+    "lake env lean /checks/checks/H1_generic.lean"
+  ],
+  "exit_code": 0,
+  "output": "'dense_interval_measure_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n\n",
+  "volume_read_only": "rep26-p6-tech-f848a0fdae9e-e48678-work",
+  "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c"
+}

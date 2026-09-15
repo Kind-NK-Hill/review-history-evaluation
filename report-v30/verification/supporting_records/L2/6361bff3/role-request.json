@@ -1,0 +1,29 @@
+{
+  "schema": "pilot.role-request.v1",
+  "request_kind": "neutral_help",
+  "request_id": "eb7cde99-6891-47c5-9dcf-df3826693de2",
+  "arm": "B",
+  "task_ids": [
+    "thm_11_4",
+    "thm_11_5"
+  ],
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "role": "support_author",
+  "fresh_session": true,
+  "must_not_resume_session": "01a08f62-a4c6-7680-b9e2-9624be1d7c81",
+  "max_active_model_calls": 1,
+  "question": "请在 /work/ProbabilityTheoryFormalization 中协助完成 TASK.zh-CN.md 的两个 Lean 定理。请读取规定文件和现有定义，直接研究可编译实现；重点是 thm_11_4 的有限和方差可加（从 Uncorrelated 展开交叉项，不能调用现成和方差公式）及 thm_11_5 的弱大数定律。请报告建议的完整代码、可用构建命令及任何接口问题；如有权限可编辑目标文件，但不要读取禁止资料或 git 历史。",
+  "inputs": [],
+  "subject_mount_mode": "writable_isolated_copy",
+  "allowed_write_paths": [
+    "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\eb7cde99-6891-47c5-9dcf-df3826693de2\\role-output"
+  ],
+  "response_path": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\eb7cde99-6891-47c5-9dcf-df3826693de2\\role-output.response.json",
+  "return_to_session": "01a08f62-a4c6-7680-b9e2-9624be1d7c81",
+  "required_outputs": [
+    "patch.diff",
+    "response.md"
+  ],
+  "integration_policy": "caller_reviews_and_applies_patch"
+}

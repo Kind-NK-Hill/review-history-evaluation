@@ -1,0 +1,15 @@
+{
+  "/schema": "pilot.a-controller-result.v1",
+  "/run_id": "pilot-prob_13_9-A-r1",
+  "/status": "completed",
+  "/blocker": "",
+  "/turns": 2,
+  "/author_session": "01a08bcd-d233-7231-9106-2c0066dcfd53",
+  "/deadline": {
+    "allowance_seconds": 5400.0,
+    "started_epoch": 1789051916.5959792,
+    "deadline_epoch": 1789057316.5959792,
+    "remaining_seconds": 248.71977519989014
+  },
+  "/workflow_claim": "complete_A"
+}

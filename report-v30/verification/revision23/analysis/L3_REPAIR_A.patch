@@ -1,0 +1,70 @@
+--- before/ProbabilityTheory/chapter_07/prob_7_6.lean
++++ after/ProbabilityTheory/chapter_07/prob_7_6.lean
+@@ -61,14 +61,16 @@
+           (tendsto_const_nhds : Tendsto (fun _ : ℕ => (0 : ℝ)) atTop (𝓝 0)))
+   simpa [prob_7_6_negPart] using hDCT
+ 
+-/-- Scheffé's lemma. Integrability expresses the source's finite-integral
+-condition; no L1 convergence, nonnegativity of the limit, or measurability of
+-the limit is assumed. The latter two AE facts are derived internally. -/
++/-- Scheffé lemma for an eventually integrable sequence. Finitely many
++initial terms may be nonintegrable; the conclusion is nevertheless stated for
++the original, unshifted sequence. No L1 convergence, nonnegativity of the
++limit, or measurability of the limit is assumed. -/
+ theorem prob_7_6
+     (f : ℕ → α → ℝ) (g : α → ℝ)
+     (hf_meas : ∀ n, Measurable (f n))
+     (hf_nonneg : ∀ n x, 0 ≤ f n x)
+-    (hf_int : ∀ n, Integrable (f n) μ) (hg_int : Integrable g μ)
++    (hf_int : ∃ N, ∀ n, N ≤ n → Integrable (f n) μ)
++    (hg_int : Integrable g μ)
+     (hfg : ∀ᵐ x ∂μ, Tendsto (fun n => f n x) atTop (𝓝 (g x)))
+     (hint : Tendsto (fun n => ∫ x, f n x ∂μ) atTop (𝓝 (∫ x, g x ∂μ))) :
+     Tendsto (fun n => ∫ x, |f n x - g x| ∂μ) atTop (𝓝 0) := by
+@@ -77,10 +79,12 @@
+     exact ge_of_tendsto' hx (fun n => hf_nonneg n x)
+   have hneg := prob_7_6_negPart_integral_tendsto f g hf_meas
+     hf_nonneg hg_int hfg
+-  have heq : (fun n => ∫ x, |f n x - g x| ∂μ) =
+-      fun n => (∫ x, f n x ∂μ) - (∫ x, g x ∂μ) +
+-        2 * ∫ x, prob_7_6_negPart (f n) g x ∂μ := by
+-    funext n
++  rcases hf_int with ⟨N, hf_int⟩
++  have heq : ∀ᶠ n in atTop,
++      (∫ x, |f n x - g x| ∂μ) =
++        (∫ x, f n x ∂μ) - (∫ x, g x ∂μ) +
++          2 * ∫ x, prob_7_6_negPart (f n) g x ∂μ := by
++    filter_upwards [eventually_ge_atTop N] with n hn
+     have hneg_meas :
+         AEStronglyMeasurable (fun x => prob_7_6_negPart (f n) g x) μ := by
+       change AEStronglyMeasurable ((g - f n) ⊔ fun _ => 0) μ
+@@ -108,10 +112,13 @@
+           · exact sub_nonneg.mpr (le_of_not_ge h)
+       _ = (∫ x, f n x - g x ∂μ) +
+           ∫ x, 2 * prob_7_6_negPart (f n) g x ∂μ :=
+-        integral_add ((hf_int n).sub hg_int) (hneg_int.const_mul 2)
++        integral_add ((hf_int n hn).sub hg_int) (hneg_int.const_mul 2)
+       _ = (∫ x, f n x ∂μ) - (∫ x, g x ∂μ) +
+           2 * ∫ x, prob_7_6_negPart (f n) g x ∂μ := by
+-        rw [integral_sub (hf_int n) hg_int, integral_const_mul]
+-  rw [heq]
+-  convert (hint.sub tendsto_const_nhds).add
+-    (tendsto_const_nhds.mul hneg) using 1 <;> ring
++        rw [integral_sub (hf_int n hn) hg_int, integral_const_mul]
++  have hright : Tendsto
++      (fun n => (∫ x, f n x ∂μ) - (∫ x, g x ∂μ) +
++        2 * ∫ x, prob_7_6_negPart (f n) g x ∂μ) atTop (𝓝 0) := by
++    convert (hint.sub tendsto_const_nhds).add
++      (tendsto_const_nhds.mul hneg) using 1 <;> ring
++  exact hright.congr' (heq.mono fun _ hn => hn.symm)
+--- before/ProbabilityTheory/chapter_10/ex_10_3_2.lean
++++ after/ProbabilityTheory/chapter_10/ex_10_3_2.lean
+@@ -27,7 +27,7 @@
+   apply prob_7_6 f g
+   · exact fun n => (hf n).measurable
+   · exact fun n => (hf n).nonneg
+-  · exact fun n => integrable_of_integral_eq_one (hf n).integral_eq_one
++  · exact ⟨0, fun n _ => integrable_of_integral_eq_one (hf n).integral_eq_one⟩
+   · exact integrable_of_integral_eq_one hg.integral_eq_one
+   · exact hfg
+   · simpa only [(hf _).integral_eq_one, hg.integral_eq_one] using

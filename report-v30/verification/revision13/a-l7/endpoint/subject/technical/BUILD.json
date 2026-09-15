@@ -1,0 +1,11 @@
+{
+  "build_exit_code": 0,
+  "command": "lake build ProbabilityTheory.chapter_10.thm_10_10 ProbabilityTheory.chapter_10.thm_10_11",
+  "source_sha256": {
+    "ProbabilityTheory/chapter_10/thm_10_10.lean": "18689594581a8194a99ce4d82c4db9933dcf23e2752da5734cdba808b3f7d840",
+    "ProbabilityTheory/chapter_10/thm_10_11.lean": "edae455156df8e468eaaf2ec07197c1eb8de3d59302f13179aa5008804e9c297"
+  },
+  "fixed_image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+  "build_stdout_sha256": "b6efff66371ca8405e21ebac7488e44e853b5868058840bb73244c2922061e3e",
+  "scope": "Exact final target bundle compiled; mathematical fidelity and premise closure need independent review."
+}

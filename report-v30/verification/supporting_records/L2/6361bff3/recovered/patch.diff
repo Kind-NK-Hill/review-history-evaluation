@@ -1,0 +1,145 @@
+--- a/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_4.lean
++++ b/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_4.lean
+@@ -1 +1,50 @@
+--- Blank experimental target for thm_11_4; implementation belongs in the task pack.
++import Mathlib
++import ProbabilityTheory.chapter_09.def_9_1
++
++open MeasureTheory
++open ProbabilityTheory
++
++/-- Two real random variables are uncorrelated when their centered product has
++zero expectation.  This is intentionally stated by expanding the definition,
++so downstream proofs can use the cross-term directly. -/
++def Uncorrelated {Ω : Type*} [MeasurableSpace Ω] (P : Measure Ω)
++    (X Y : Ω → ℝ) : Prop :=
++  ∫ ω, (X ω - P[X]) * (Y ω - P[Y]) ∂P = 0
++
++/-- The covariance form is exactly the preceding expanded definition. -/
++theorem uncorrelated_iff_covariance_eq_zero
++    {Ω : Type*} [MeasurableSpace Ω] (P : Measure Ω) (X Y : Ω → ℝ) :
++    Uncorrelated P X Y ↔ cov[X, Y; P] = 0 := by
++  rfl
++
++/-- Theorem 11.4: the variance of a finite sum of pairwise uncorrelated
++square-integrable random variables is the sum of their variances.
++
++The proof expands the covariance of the sum into the double sum of centered
++cross-products.  Every off-diagonal term is killed by `Uncorrelated`; no
++finite-sum variance theorem is used. -/
++theorem thm_11_4 {Ω ι : Type*} [MeasurableSpace Ω] (P : Measure Ω)
++    [IsProbabilityMeasure P] (s : Finset ι) (X : ι → Ω → ℝ)
++    (hX : ∀ i ∈ s, MemLp (X i) 2 P)
++    (huncorr : Set.Pairwise (↑s : Set ι) fun i j => Uncorrelated P (X i) (X j)) :
++    Var[fun ω => ∑ i ∈ s, X i ω; P] = ∑ i ∈ s, Var[X i; P] := by
++  classical
++  let T : Ω → ℝ := fun ω => ∑ i ∈ s, X i ω
++  have hT : MemLp T 2 P := by
++    dsimp [T]
++    convert memLp_finsetSum' s hX using 1
++    ext ω
++    simp
++  rw [← covariance_self hT.aemeasurable]
++  have hexpand :
++      cov[T, T; P] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; P] := by
++    simpa [T] using
++      (covariance_fun_sum_fun_sum' (μ := P) (s := s) (X := X)
++        (t := s) (Y := X) hX hX)
++  rw [hexpand]
++  refine Finset.sum_congr rfl fun i hi => ?_
++  rw [← covariance_self (hX i hi).aemeasurable]
++  refine Finset.sum_eq_single_of_mem i hi fun j hj hji => ?_
++  have hij : i ≠ j := Ne.symm hji
++  exact (uncorrelated_iff_covariance_eq_zero P (X i) (X j)).1
++    (huncorr hi hj hij)
+--- a/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_5.lean
++++ b/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_5.lean
+@@ -1 +1,87 @@
+--- Blank experimental target for thm_11_5; implementation belongs in the task pack.
++import Mathlib
++import ProbabilityTheory.chapter_10.def_10_2
++import ProbabilityTheory.chapter_11.thm_11_4
++
++open Filter MeasureTheory ProbabilityTheory
++open scoped ENNReal
++
++/-- The average of the first `n + 1` variables.  The shift avoids a spurious
++zero denominator while representing the textbook averages indexed from one. -/
++noncomputable def sampleAverage {Ω : Type*} (X : ℕ → Ω → ℝ) (n : ℕ) (ω : Ω) : ℝ :=
++  (∑ i ∈ Finset.range (n + 1), X i ω) / (n + 1 : ℝ)
++
++/-- Theorem 11.5, the L² weak law of large numbers for pairwise uncorrelated
++variables with common mean and common finite variance. -/
++theorem thm_11_5 {Ω : Type*} [MeasurableSpace Ω] (P : Measure Ω)
++    [IsProbabilityMeasure P] (X : ℕ → Ω → ℝ) (μ σ2 : ℝ)
++    (hXm : ∀ i, Measurable (X i)) (hX : ∀ i, MemLp (X i) 2 P)
++    (hmean : ∀ i, P[X i] = μ) (hvar : ∀ i, Var[X i; P] = σ2)
++    (huncorr : ∀ ⦃i j : ℕ⦄, i ≠ j → Uncorrelated P (X i) (X j)) :
++    ConvergesInProbability P (sampleAverage X) (fun _ => μ) := by
++  classical
++  refine ⟨?_, measurable_const, ?_⟩
++  · intro n
++    unfold sampleAverage
++    fun_prop
++  · intro ε hε
++    let B : ℕ → ℝ≥0∞ := fun n =>
++      ENNReal.ofReal (σ2 * (1 / ((n : ℝ) + 1)) / ε ^ 2)
++    have hB_real : Tendsto (fun n : ℕ => σ2 * (1 / ((n : ℝ) + 1)) / ε ^ 2)
++        atTop (nhds 0) := by
++      have hrecip : Tendsto (fun n : ℕ => 1 / ((n : ℝ) + 1)) atTop (nhds 0) :=
++        tendsto_one_div_add_atTop_nhds_zero_nat
++      convert (tendsto_const_nhds.mul hrecip).div_const (ε ^ 2) using 1
++      all_goals simp
++    have hB : Tendsto B atTop (nhds 0) := by
++      simpa [B] using ENNReal.tendsto_ofReal hB_real
++    apply tendsto_of_tendsto_of_tendsto_of_le_of_le tendsto_const_nhds hB
++    · exact fun n => bot_le
++    · intro n
++      let s := Finset.range (n + 1)
++      let S : Ω → ℝ := fun ω => ∑ i ∈ s, X i ω
++      have hXs : ∀ i ∈ s, MemLp (X i) 2 P := fun i _ => hX i
++      have hS : MemLp S 2 P := by
++        dsimp [S]
++        convert memLp_finsetSum' s hXs using 1
++        ext ω
++        simp
++      have hs_pair : Set.Pairwise (↑s : Set ℕ)
++          (fun i j => Uncorrelated P (X i) (X j)) := by
++        intro i _ j _ hij
++        exact huncorr hij
++      have hvarS : Var[S; P] = (n + 1 : ℝ) * σ2 := by
++        rw [show Var[S; P] = ∑ i ∈ s, Var[X i; P] by
++          simpa [S] using thm_11_4 P s X hXs hs_pair]
++        simp [s, hvar]
++      have hmeanS : P[S] = (n + 1 : ℝ) * μ := by
++        dsimp [S]
++        rw [integral_finsetSum s (fun i _ => (hX i).integrable (by norm_num))]
++        simp [s, hmean]
++      have hnpos : (0 : ℝ) < n + 1 := by positivity
++      have havgLp : MemLp (sampleAverage X n) 2 P := by
++        unfold sampleAverage
++        change MemLp (fun ω => S ω / (n + 1 : ℝ)) 2 P
++        exact hS.mul_const ((n + 1 : ℝ)⁻¹)
++      have havgmean : P[sampleAverage X n] = μ := by
++        unfold sampleAverage
++        change (∫ ω, S ω / (n + 1 : ℝ) ∂P) = μ
++        rw [integral_div, hmeanS]
++        field_simp
++      have hvaravg : Var[sampleAverage X n; P] =
++          σ2 * (1 / ((n : ℝ) + 1)) := by
++        unfold sampleAverage
++        change Var[fun ω => S ω / (n + 1 : ℝ); P] = _
++        rw [show (fun ω => S ω / (n + 1 : ℝ)) =
++            (fun ω => ((n + 1 : ℝ)⁻¹) * S ω) by funext ω; ring,
++          variance_const_mul, hvarS]
++        field_simp
++      calc
++        P (deviationEvent (sampleAverage X) (fun _ => μ) n ε)
++            ≤ P {ω | ε ≤ |sampleAverage X n ω - P[sampleAverage X n]|} := by
++              apply measure_mono
++              intro ω hω
++              change ε < |sampleAverage X n ω - μ| at hω
++              simpa [havgmean] using le_of_lt hω
++        _ ≤ ENNReal.ofReal (Var[sampleAverage X n; P] / ε ^ 2) :=
++          meas_ge_le_variance_div_sq havgLp hε
++        _ = B n := by rw [hvaravg]

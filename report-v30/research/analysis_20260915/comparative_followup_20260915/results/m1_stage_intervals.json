@@ -1,0 +1,188 @@
+{
+  "scope": "Disjoint observed elapsed intervals; mixed activities, not causal cost estimates. A first candidate and final interface differ.",
+  "rows": [
+    {
+      "run_id": "r2-m1-a",
+      "config": "A",
+      "stage": "准备、桥接与初次停止鞅候选",
+      "start_min": 0,
+      "end_min": 7.782623469829559,
+      "span_min": 7.782623469829559
+    },
+    {
+      "run_id": "r2-m1-a",
+      "config": "A",
+      "stage": "首次审核及改写路线",
+      "start_min": 7.782623469829559,
+      "end_min": 13.061306802431742,
+      "span_min": 5.278683332602183
+    },
+    {
+      "run_id": "r2-m1-a",
+      "config": "A",
+      "stage": "增量路线重写、数学审核和修复",
+      "start_min": 13.061306802431742,
+      "end_min": 18.750206804275514,
+      "span_min": 5.688900001843772
+    },
+    {
+      "run_id": "r2-m1-a",
+      "config": "A",
+      "stage": "第一目标复审、采用",
+      "start_min": 18.750206804275514,
+      "end_min": 23.255873469511666,
+      "span_min": 4.505666665236152
+    },
+    {
+      "run_id": "r2-m1-a",
+      "config": "A",
+      "stage": "第二目标三分支证明",
+      "start_min": 23.255873469511666,
+      "end_min": 31.8422568043073,
+      "span_min": 8.586383334795634
+    },
+    {
+      "run_id": "r2-m1-a",
+      "config": "A",
+      "stage": "三分支审核及接口诊断",
+      "start_min": 31.8422568043073,
+      "end_min": 39.26999013821284,
+      "span_min": 7.42773333390554
+    },
+    {
+      "run_id": "r2-m1-a",
+      "config": "A",
+      "stage": "接口重组及存在性补齐",
+      "start_min": 39.26999013821284,
+      "end_min": 42.050340135892235,
+      "span_min": 2.7803499976793944
+    },
+    {
+      "run_id": "r2-m1-a",
+      "config": "A",
+      "stage": "数学审核、复审与交付",
+      "start_min": 42.050340135892235,
+      "end_min": 51.910352396965024,
+      "span_min": 9.86001226107279
+    },
+    {
+      "run_id": "r2-m1-b",
+      "config": "B",
+      "stage": "准备、只读建议及停止鞅桥接",
+      "start_min": 0,
+      "end_min": 11.540935301780701,
+      "span_min": 11.540935301780701
+    },
+    {
+      "run_id": "r2-m1-b",
+      "config": "B",
+      "stage": "第二目标三分支证明与表示适配",
+      "start_min": 11.540935301780701,
+      "end_min": 19.171335299809773,
+      "span_min": 7.6303999980290715
+    },
+    {
+      "run_id": "r2-m1-b",
+      "config": "B",
+      "stage": "审核准备",
+      "start_min": 19.171335299809773,
+      "end_min": 19.39280196825663,
+      "span_min": 0.22146666844685825
+    },
+    {
+      "run_id": "r2-m1-b",
+      "config": "B",
+      "stage": "独立审核",
+      "start_min": 19.39280196825663,
+      "end_min": 22.355935299396513,
+      "span_min": 2.9631333311398826
+    },
+    {
+      "run_id": "r2-m1-b",
+      "config": "B",
+      "stage": "构建与交付",
+      "start_min": 22.355935299396513,
+      "end_min": 23.69711390733719,
+      "span_min": 1.3411786079406767
+    },
+    {
+      "run_id": "r2-m1-c",
+      "config": "C",
+      "stage": "协调准备",
+      "start_min": 0,
+      "end_min": 0.9146026651064555,
+      "span_min": 0.9146026651064555
+    },
+    {
+      "run_id": "r2-m1-c",
+      "config": "C",
+      "stage": "作者停止鞅桥接",
+      "start_min": 0.9146026651064555,
+      "end_min": 6.951102662086487,
+      "span_min": 6.036499996980031
+    },
+    {
+      "run_id": "r2-m1-c",
+      "config": "C",
+      "stage": "三分支证明与停止值适配",
+      "start_min": 6.951102662086487,
+      "end_min": 14.884819328784943,
+      "span_min": 7.933716666698456
+    },
+    {
+      "run_id": "r2-m1-c",
+      "config": "C",
+      "stage": "补齐三分支统一接口",
+      "start_min": 14.884819328784943,
+      "end_min": 15.912519331773122,
+      "span_min": 1.0277000029881798
+    },
+    {
+      "run_id": "r2-m1-c",
+      "config": "C",
+      "stage": "构建、说明和成果传回",
+      "start_min": 15.912519331773122,
+      "end_min": 17.808102663358053,
+      "span_min": 1.8955833315849304
+    },
+    {
+      "run_id": "r2-m1-c",
+      "config": "C",
+      "stage": "协调者检查与两次审核",
+      "start_min": 17.808102663358053,
+      "end_min": 23.184669331709543,
+      "span_min": 5.37656666835149
+    },
+    {
+      "run_id": "r2-m1-c",
+      "config": "C",
+      "stage": "构建与交付",
+      "start_min": 23.184669331709543,
+      "end_min": 24.188500253359475,
+      "span_min": 1.0038309216499322
+    }
+  ],
+  "summary": [
+    {
+      "config": "A",
+      "total_min": 51.910352396965024,
+      "initial_complete_three_branch_candidate_min": 31.8422568043073,
+      "final_interface_checked_min": 42.050340135892235,
+      "subsequent_min": 9.86001226107279
+    },
+    {
+      "config": "B",
+      "total_min": 23.69711390733719,
+      "initial_complete_three_branch_candidate_min": 19.171335299809773,
+      "final_interface_checked_min": 19.171335299809773,
+      "subsequent_min": 4.525778607527418
+    },
+    {
+      "config": "C",
+      "total_min": 24.188500253359475,
+      "initial_complete_three_branch_candidate_min": 15.912519331773122,
+      "final_interface_checked_min": 15.912519331773122,
+      "subsequent_min": 8.275980921586353
+    }
+  ]
+}

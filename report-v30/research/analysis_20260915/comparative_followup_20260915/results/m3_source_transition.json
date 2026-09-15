@@ -1,0 +1,15 @@
+{
+  "received_sha256": "ee92a1c117e10082a1c0e388cd0c9ffd645c798a892f78ee7f3fd247e7f08560",
+  "before_second_review_sha256": "cfa7fbc36a7f6ae8f94d0564a0eac6eee1fe388feda5de357e6529aa6fc9e884",
+  "final_sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3",
+  "final_source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+  "final_exact_match": true,
+  "later_change": "One explanatory block comment, no proof-body changes",
+  "event_chain": [
+    "r2-m3-a:E140",
+    "r2-m3-a:E141",
+    "r2-m3-a:E143",
+    "r2-m3-a:E158"
+  ],
+  "scope": "Reconstructs recorded text transformations and matches final saved bytes; not a new Lean build."
+}

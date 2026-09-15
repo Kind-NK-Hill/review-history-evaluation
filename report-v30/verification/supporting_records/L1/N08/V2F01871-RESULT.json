@@ -1,0 +1,4640 @@
+{
+  "schema": "coverage.b_run_result.v3",
+  "run_id": "coverage-B-r4-first-authorized-run",
+  "group_id": "L1_prob_13_9",
+  "task_ids": [
+    "prob_13_9"
+  ],
+  "arm": "B",
+  "status": "completed",
+  "driver_started_utc": "2026-09-11T03:19:19.715564+00:00",
+  "driver_ended_utc": "2026-09-11T03:31:44.630234+00:00",
+  "driver_elapsed_seconds": 744.9070000000065,
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "container": "ba9e371c15dd231ab237993a152c73b940e2643f1ead5cd1fda3c0a2cb64ca7e",
+  "work_volume": "coverage-b-r4-first-authorized-run-work",
+  "tmp_volume": "coverage-b-r4-first-authorized-run-tmp",
+  "actor_exit_code": 0,
+  "timed_out": false,
+  "sessions": [
+    "01a08e7a-7d5f-7271-b061-fde159467706"
+  ],
+  "usage": [
+    {
+      "input_tokens": 2136055,
+      "cached_input_tokens": 2037376,
+      "output_tokens": 18075,
+      "reasoning_output_tokens": 3628
+    }
+  ],
+  "exception": null,
+  "submission": {
+    "copy_exit_code": 0,
+    "valid": true,
+    "errors": [],
+    "sha256": "898b9a075a6efefce9739cf03f8b54878344dde7d0a26682b88bcdfca62622e0",
+    "payload": {
+      "schema": "toyapollo.neutral_submission.v1",
+      "task_ids": [
+        "prob_13_9"
+      ],
+      "target_files": [
+        "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13/prob_13_9.lean"
+      ],
+      "public_declarations": [
+        "prob_13_9_filtration",
+        "prob_13_9_innovation",
+        "prob_13_9_partialSum",
+        "prob_13_9_innovation_zero",
+        "prob_13_9_innovation_succ",
+        "prob_13_9_partialSum_zero",
+        "prob_13_9_partialSum_succ",
+        "prob_13_9_observation_adapted",
+        "prob_13_9_innovation_integrable",
+        "prob_13_9_innovation_measurable_le",
+        "prob_13_9_innovation_adapted",
+        "prob_13_9_partialSum_integrable",
+        "prob_13_9_partialSum_adapted",
+        "prob_13_9_innovation_condExp_zero",
+        "prob_13_9"
+      ],
+      "dependencies": [
+        {
+          "module": "ProbabilityTheory.chapter_13.def_13_7",
+          "declarations": [
+            "def_13_7",
+            "Def137GuardedCondExpEq"
+          ]
+        },
+        {
+          "module": "ProbabilityTheory.common_support.chapter13_stopping_support",
+          "declarations": [
+            "chapter13_oneIndexedNaturalFiltration",
+            "chapter13_history_measurable_self",
+            "chapter13_oneIndexedNaturalFiltration_mono",
+            "chapter13_oneIndexedNaturalFiltration_sub_ambient",
+            "chapter13_oneIndexedNaturalFiltration_isFiltration"
+          ]
+        },
+        {
+          "module": "Mathlib",
+          "declarations": [
+            "MeasureTheory.integrable_condExp",
+            "MeasureTheory.stronglyMeasurable_condExp",
+            "MeasureTheory.condExp_sub",
+            "MeasureTheory.condExp_add",
+            "MeasureTheory.condExp_condExp_of_le",
+            "MeasureTheory.condExp_of_stronglyMeasurable"
+          ]
+        }
+      ],
+      "requirement_bindings": {
+        "1_definitions_and_indexing": [
+          "prob_13_9_filtration",
+          "prob_13_9_innovation",
+          "prob_13_9_partialSum",
+          "prob_13_9_innovation_zero",
+          "prob_13_9_innovation_succ",
+          "prob_13_9_partialSum_zero",
+          "prob_13_9_partialSum_succ"
+        ],
+        "2_innovation_integrable_and_adapted": [
+          "prob_13_9_innovation_integrable",
+          "prob_13_9_innovation_measurable_le",
+          "prob_13_9_innovation_adapted"
+        ],
+        "3_partial_sums_integrable_and_adapted": [
+          "prob_13_9_partialSum_integrable",
+          "prob_13_9_partialSum_adapted"
+        ],
+        "4_next_innovation_conditional_mean_zero": [
+          "prob_13_9_innovation_condExp_zero"
+        ],
+        "5_concrete_martingale_from_source_conditions": [
+          "prob_13_9"
+        ]
+      },
+      "unresolved": [],
+      "stop_reason": "completed_all_requirements_and_verified"
+    }
+  },
+  "final_snapshot_manifest": {
+    "work": {
+      "archive_sha256": "4b8fd9dc6e7fa9839f3c48488591e87b54321268d12ec6b083a99de9a964da85",
+      "entries": {
+        ".": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097480,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096781,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097456,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/COMMIT_EDITMSG": {
+          "type": "0",
+          "size": 45,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "1ae6a54809b43832592f5030845dc2b589e025964fdcf8d8c0a787e30a557e14"
+        },
+        "./ProbabilityTheoryFormalization/.git/HEAD": {
+          "type": "0",
+          "size": 23,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "f6f2b945f6c411b02ba3da9c7ace88dcf71b6af65ba2e0d89aa82900042b5a10"
+        },
+        "./ProbabilityTheoryFormalization/.git/config": {
+          "type": "0",
+          "size": 130,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "05becdb83bb897f6103c8d91439e2e9092144edf5b3955a746fce4975c12bfdc"
+        },
+        "./ProbabilityTheoryFormalization/.git/description": {
+          "type": "0",
+          "size": 73,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/applypatch-msg.sample": {
+          "type": "0",
+          "size": 478,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/commit-msg.sample": {
+          "type": "0",
+          "size": 896,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/fsmonitor-watchman.sample": {
+          "type": "0",
+          "size": 4726,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/post-update.sample": {
+          "type": "0",
+          "size": 189,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/pre-applypatch.sample": {
+          "type": "0",
+          "size": 424,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/pre-commit.sample": {
+          "type": "0",
+          "size": 1649,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/pre-merge-commit.sample": {
+          "type": "0",
+          "size": 416,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/pre-push.sample": {
+          "type": "0",
+          "size": 1374,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/pre-rebase.sample": {
+          "type": "0",
+          "size": 4898,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/pre-receive.sample": {
+          "type": "0",
+          "size": 544,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/prepare-commit-msg.sample": {
+          "type": "0",
+          "size": 1492,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/push-to-checkout.sample": {
+          "type": "0",
+          "size": 2783,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/sendemail-validate.sample": {
+          "type": "0",
+          "size": 2308,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+        },
+        "./ProbabilityTheoryFormalization/.git/hooks/update.sample": {
+          "type": "0",
+          "size": 3650,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+        },
+        "./ProbabilityTheoryFormalization/.git/index": {
+          "type": "0",
+          "size": 4390,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097233,
+          "link": "",
+          "sha256": "91eafde00cfbdf3a44fc35463483c5c8b81ac9e6afe063eb88463d70cccb925d"
+        },
+        "./ProbabilityTheoryFormalization/.git/info": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/info/exclude": {
+          "type": "0",
+          "size": 240,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+        },
+        "./ProbabilityTheoryFormalization/.git/logs": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/logs/HEAD": {
+          "type": "0",
+          "size": 393,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "14e0a49d86428fe7cd3a68cb04f9bf6a2a1eaf6776ba29a9fbda7c131a302181"
+        },
+        "./ProbabilityTheoryFormalization/.git/logs/refs": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/logs/refs/heads": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/logs/refs/heads/master": {
+          "type": "0",
+          "size": 393,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "14e0a49d86428fe7cd3a68cb04f9bf6a2a1eaf6776ba29a9fbda7c131a302181"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/06": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/06/1a3c07beef481686e1153938a19ec2985b32c1": {
+          "type": "0",
+          "size": 323,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "b160295850fa3d1eab0dc0e8e516b51ed6d7becbadafe05ef4b06fd0487de6c0"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/0a": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/0a/5c509124e3c2f8bbb539df1175cd21e340bb66": {
+          "type": "0",
+          "size": 1175,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "85e63d43a8c7e3532d65e98c67b2296fec4866e5ffdb5463f4e9994a21e66755"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/0f": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/0f/5c37d6b6ffa6033a7d3751cd63b32266fd9962": {
+          "type": "0",
+          "size": 93,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "3682acaab0bfb2d19567b14027df94a10e8ac31965041e3dc0a5ebe923f41c72"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/13": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/13/c78adffdc569a0848df6bc2a50469eb8b4af11": {
+          "type": "0",
+          "size": 631,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "71a632fb9effaaf10528422947bc76ebb518aa6e980424e8366ce84f1e89da58"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/14": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/14/a185e19d6a3cf0fc2c536b8a545c357235a318": {
+          "type": "0",
+          "size": 1668,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "2992bd5785d20868e3515f2785d1351be2fedbf4bff4b3e19318c2e98d83aec6"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/15": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/15/650b16013a1418f7a9e72a920bdc391d9c9eeb": {
+          "type": "0",
+          "size": 1419,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "f129d4f5af26dd42a7ae1cf5d05ec9d1a1b6dd2d5e8092eea1d75abf0a4947c8"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/18": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/18/bdbac4ff6557076d69026931084ab73e3fb6f6": {
+          "type": "0",
+          "size": 72,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "23e6a18a0ee1c10acd81d4d82367506c75d27f48312ce5a8ad196d690ac68a63"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/2a": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/2a/2af4a884621960583daf76729666128e664522": {
+          "type": "0",
+          "size": 67,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "1404b6329e96ede1db8462e89d7f6df79a666b19fdf8e2d5e80aceab3c547205"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/2b": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/2b/a107430ae1756cb20367773fd7d2bb72852f94": {
+          "type": "0",
+          "size": 87,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "08104ab5590a8bf433e239f7ae8ee9d8b8a801021438ba3a548b98f0003223d1"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/2c": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/2c/acda85a6d97b2671c34002a4ef44d2701f3155": {
+          "type": "0",
+          "size": 54,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "493634ff4e64a9d991af5c4ef0a87768587714b4ed6041cae0c4ede3bdb38696"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/2c/c7308faaa899c9654650c26dd457a56cff94f7": {
+          "type": "0",
+          "size": 2441,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "7f719e76a5746a0dd00be35398b4978622fda7bbf8ae99134b2d5d0d79790a23"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/33": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/33/4f0666445c1fb6365f0e8ee9d71260e1b97237": {
+          "type": "0",
+          "size": 1827,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "2d7996733ba8e64447e634e3b4caa511757a98d80f3c2961f0f0fa61501add45"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/4a": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/4a/14ac1939b44e4279aae8090e48d1d1380b5f35": {
+          "type": "0",
+          "size": 857,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "1de638c3c53cbf178fd8d27bdeb8853c58b835581e02223fb1c8dd50390af1e5"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/4b": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/4b/bd09415bff4a4fcb76996abefe0fc75e2b5746": {
+          "type": "0",
+          "size": 819,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "34a2d809c10a660bae39528cd6d109350ac8300bb20d4a9b802936c03b11e946"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/4c": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/4c/a60ea432b12cdcef941ea7e12681eea2132241": {
+          "type": "0",
+          "size": 114,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "f9fca16075089d30880900114a765ec7f2e47d9e305b8dcb3e9a11d3b9968adf"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/4e": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/4e/14587eef115d6d255e4ade40479675d955c26c": {
+          "type": "0",
+          "size": 2105,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "e0a4a62f445fabeceecd5a028b8386a38837e2956368cc781e1f14fdfe0d8927"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/56": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/56/1ad7126be6c074c10065993897d75d197961b1": {
+          "type": "0",
+          "size": 39,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "49d6c0c54ae9b1c8f9ca6eb35775b75eacb166c472b4abaa60008389a8371f7c"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/57": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/57/47ed1dda29e13407de44110c3842b5c9e563cf": {
+          "type": "0",
+          "size": 188,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "52c6883667935e83f918ff0298a3bbaec19678bab03f425db556c47f4ba50581"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/5c": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/5c/eba578848900327fa0386bf2d7a262019759b4": {
+          "type": "0",
+          "size": 152,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "0a65651d5efdfb1a570570086e047ae83664af0b4605330bad72b17e68308880"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/66": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/66/63f0e9f34ba498519b46d923f5259751c00a9c": {
+          "type": "0",
+          "size": 217,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "9cab9aba8eb9c89131d40337aa20d5532bd5005bcbf0518c1ff9671c2885e1a0"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/72": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/72/02c63d58b4d36062dc8cf1bfbb3be6b827a657": {
+          "type": "0",
+          "size": 42,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "67a7e65572d3d69ef9eb9e6e2583d503627245922aaea2acec064938a20a580d"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/72/fe4d96be87e0c182538272f13672708afe5c7b": {
+          "type": "0",
+          "size": 234,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "8e4de8b1c6278f70cac4b8b8a59392e37235bf56735166533148ef4aa52b0681"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/74": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/74/afbac34ca4ad7bebac0dbb8ffd7a28318d17ec": {
+          "type": "0",
+          "size": 1928,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "c1436232dd892971b88d86d6e361b7bcc9162f6f15e223f4df3fea08d47e61cb"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/76": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/76/1f2d283d4858184ef9f86cbfafc69c4d7225cb": {
+          "type": "0",
+          "size": 402,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "b379deead9638a67efa2e40f8c3a2a48b0efb8dd2779d15487fe393d01e97e8d"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/76/c0fc83bff4b327ff632d3af262032fc72fe9dd": {
+          "type": "0",
+          "size": 4637,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "874bd47ea61eee4bfdc8a650adf56bc036a6ef60610fa28327035ae6be5f2ee6"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/7c": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/7c/20b0d5a44af1bf6dbb0c75b8c97742b5a66825": {
+          "type": "0",
+          "size": 686,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "a6e0610ac20544bc38d98bcde3153c345a7f69bbe41ca64b4e46289b83e13aba"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/7c/971ebeb586540725e9b8c3fda3d489f0dcad66": {
+          "type": "0",
+          "size": 995,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "3b437fdac39239ca080f0ce65814894d27e9fd976885d57b06cfbadf71ff5666"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/7d": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/7d/819e9e5e7d8fe3a5d885e1b260868df6bf6a05": {
+          "type": "0",
+          "size": 1706,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "656c384c976b86b8af105e70ecce625d8917ece3d99909b98d7d8a0724caf02e"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/82": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/82/c464e41a29f03893f7573957f7a85bc46bc136": {
+          "type": "0",
+          "size": 5348,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "cba19cd7da66b25c66a89a08b9a6408b371b1c4719fd1f9a973497c8328288a2"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/87": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/87/5b950d6f7683e1461629ac7ce35e085bab675a": {
+          "type": "0",
+          "size": 466,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "b15cd50e71a657f8c1a91045310fea62182429d4745a96eb7f47ec5cfdfbd3ad"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/8c": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/8c/0de467ca6f83793090baec847cc2fbd5f91b2c": {
+          "type": "0",
+          "size": 837,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "9ef0524957c1568f755a76bd09abc29d7e9056f1374790643b46da9773677a73"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/8e": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/8e/692cfa3d466017256074c90e5c4dd5c87cf56a": {
+          "type": "0",
+          "size": 4619,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "ff2e53b0fa6a93062efd53fd3b91a02afb62ab55538f1dfd7571729a3af92964"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/8f": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/8f/90299822126aad201402ce3c3a68ddaf482bd8": {
+          "type": "0",
+          "size": 488,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "f29ec679bf18ab05422902037f8b43498dc49614742ab49b07e68cb9f803dc78"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/91": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/91/3526702219d3db09f5571593c3f35bb640c980": {
+          "type": "0",
+          "size": 2113,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "3a92b2c56a7273dce6a1aecfd68b4887c2010da1773413b1a773f919f145b48a"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/9b": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/9b/2fd034cce93ca37541879389928d56af07b9c7": {
+          "type": "0",
+          "size": 147,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "0150b67b728bf09742f6afc9f36388d75c024aeb1449d2a414dc262dd49f3740"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/9d": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/9d/a089c876b5d2db67320a8be6d76a713359b119": {
+          "type": "0",
+          "size": 67,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "8ebca3f523e7c06fece02683cc71274d59caad28af99a21b1ba8a3e4a6bb155f"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/9d/f2f5ce7ba5e6b6868ac18aba5d243005e18c8d": {
+          "type": "0",
+          "size": 9338,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "baf612a5b590706b6f332fcdaaf94c14ebf33255b73411b16749391d1d2ecfee"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/a4": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/a4/ac7d7b16b654b1e3b15100e36b10a5e47957ef": {
+          "type": "0",
+          "size": 514,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "7b7c7ca064b816e9be89e61a42abf6f0e5df511d9b18185bdcd631e34c17cceb"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/ae": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/ae/6ad49619c18d85a0835537872a324ebd306d00": {
+          "type": "0",
+          "size": 1200,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "0e234e342366a291460818ae078e91d8a62753074c7237a7a6314a703630465f"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/ba": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/ba/1037a0fc5da014692dd8766c70c0fb2aeabd2c": {
+          "type": "0",
+          "size": 1386,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "54b5cc02428431e979483c474558d236c1cb0f2f563e65bedc8b82150a5c7979"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/bf": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/bf/c5bb8744cd20f5f9e5c4c7009bba197f818ac7": {
+          "type": "0",
+          "size": 1151,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "c2c310d11f97491c64a613862ace8eafcf96cd54f48ca09cb0644e4ff2dde703"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/c1": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/c1/c68b9f32b4be61fa66a20aef40256102ca99b2": {
+          "type": "0",
+          "size": 2919,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "ad804e2e8014000ffb8824aaa3193c255a74a6ec63f6df9cd99140158be05bd1"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/c4": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/c4/99ae967b964335efe80687685650f6696a34ee": {
+          "type": "0",
+          "size": 1746,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "606aa2432277be118fd8dc07e056f031f83e09c83f8471cb4f2d45ee1de98a50"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/c5": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/c5/b57f93d761b3604376ec2ae28594feffeb09b6": {
+          "type": "0",
+          "size": 53,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "ae7ca5a9c733b539a012b7b2556043410aa9ebfd0438457e252889170f1c4baa"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/cf": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/cf/9ec80be049d54283395731ccd9a0eb26cb97dc": {
+          "type": "0",
+          "size": 418,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "a0ddf14864aa27cc4f7da39e19879eb51c65970477753201d0c18b762d0b2ce4"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/d2": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/d2/7ec1511cff0b471a6161108eed708b85a104d0": {
+          "type": "0",
+          "size": 516,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "caaafc7f5dd6fbf771626ba6d6031cfdef107e3e87b13aec85971a32d6c6903d"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/dc": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/dc/292910074303598624c45dc7b05e82168ddd11": {
+          "type": "0",
+          "size": 58,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "2d24587832eb6e143f81c9d14bcb463de72993d1c2dd2b78a076a6db4eca1a34"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/dd": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/dd/77d2ea02b8565dde4e6b8938367524293d89e8": {
+          "type": "0",
+          "size": 631,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "447e69d5222449b46737e9985d32bf25a75b4fdc67977f96bc00982685c3fdc0"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/e1": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/e1/bdc65f5f93d7e8722201c91338b48d231082f6": {
+          "type": "0",
+          "size": 414,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "2db301d20b1411e2f05f952ab6e5c32bf2cbcf36dbfa1ee75b691aed7089cd89"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/eb": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/eb/6d4a1377014cd60e7b5964c9c41d3c226e0e15": {
+          "type": "0",
+          "size": 1677,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "c6196f3c86bf6f5811b95b4a6aa9722d74a68aa7e974c017e1356b7ec8daa07e"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/ef": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/ef/4cdb197cdd77fb2c25805a278f00bbd23a0040": {
+          "type": "0",
+          "size": 396,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "bb161d19ceaba5e9b59bd0e64577c952419cf224124026fee8ea5b67c4b696cd"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/f2": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/f2/7ffe54b7e0c1d623b2066ceab0520ab42c0922": {
+          "type": "0",
+          "size": 117,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "d45c5687d8b541f0edc4521a7a69520c20b080ebcee620c1f1c39c664ef66e28"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/f5": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/f5/e18bc2f042b7d7916836715935857ac18dda2e": {
+          "type": "0",
+          "size": 76,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "c0c3ba7a2421f4f0b9b6ddb4ca2ac810dd1c892ec8391001252ef193b0d68b89"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/f8": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/f8/26326f9162269a74a7b56a4bce0f4348c85af7": {
+          "type": "0",
+          "size": 1508,
+          "mode": 365,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "d2e7923d213833bd2657ac501d83d7c7ea286bf2b2a4cce6512434ad91f52ceb"
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/info": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/objects/pack": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/refs": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/refs/heads": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.git/refs/heads/master": {
+          "type": "0",
+          "size": 41,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "46bb92aa31350c8c78c3ab8e59cfb80989b5828b8d27d55542e4b907a525e2aa"
+        },
+        "./ProbabilityTheoryFormalization/.git/refs/tags": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.gitignore": {
+          "type": "0",
+          "size": 29,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "c5e849a047287b5a1514a350175e5b90c8360133425c8a06b29b69f3f9faf292"
+        },
+        "./ProbabilityTheoryFormalization/.lake": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096993,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051025,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051025,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051067,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_1.c": {
+          "type": "0",
+          "size": 1436,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "437d1c7d23a0db6ebb99e8a5135a4f86c8fa57cc5ef7232932330d4bd2bfd5df"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_1.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "bcbf7438770d736a7e8db29826694ec99c82c6284e9b44d5b9e9f1fdac570919"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_1.setup.json": {
+          "type": "0",
+          "size": 879560,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051025,
+          "link": "",
+          "sha256": "79923880d03fddb790d6cc5e8dbed792e7bfdfa54c585911badd0106cafbaa08"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_2.c": {
+          "type": "0",
+          "size": 1482,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "3d27f277e38a8d21e5399eaf8899db2e4866dabbb016455d45d9a19a7e6d1ea2"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_2.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "37d79f45447c9759f890db3107dc3c9a0127fe94a8f6c64c5276e886b0e2438e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/def_5_2.setup.json": {
+          "type": "0",
+          "size": 879710,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "0708162a3fa5208c0748388c3ddbadd8cf1ecb9f528fb716187a7be15ceaef7e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/thm_5_2.c": {
+          "type": "0",
+          "size": 1691,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": "ebba5ce5e6cfd11fc1f03472e4042a97edcb9fcd78934547307c0032e46fcdea"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/thm_5_2.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": "22cb12ee79f54d8c7ea3db9c6a6dcac9ed2b97aa1b6f8d861a35598316fea0d6"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_05/thm_5_2.setup.json": {
+          "type": "0",
+          "size": 1490412,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "1b21e6763efaa65238cdcb6333a78d2352f4c48e27aec98bd4e4aff5129842cc"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051033,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06/def_6_3.c": {
+          "type": "0",
+          "size": 1747,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051033,
+          "link": "",
+          "sha256": "ee4e123febf66ab89a79a9e4c7b9114c99c12ea59c0238c3444c44e1a2f860e2"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06/def_6_3.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051033,
+          "link": "",
+          "sha256": "30e389f91e6d916f4fceb7e1a161fee8d2b587f3306663a6044f84c545604dfc"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06/def_6_3.setup.json": {
+          "type": "0",
+          "size": 790865,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051025,
+          "link": "",
+          "sha256": "02071cb92968317e8320736fbcea0a980f9a678920190fd0d4c21de43debf0ae"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06/thm_6_4.c": {
+          "type": "0",
+          "size": 1451,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "0b1fa480f647f30950ee23d5a1ffd450457c680d63d10dc3657e8d09d9593cdc"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06/thm_6_4.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "107c1de3ba47dc4b12946c53672ebc30ede414270efdf4deba0083709b57afbf"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_06/thm_6_4.setup.json": {
+          "type": "0",
+          "size": 810918,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051025,
+          "link": "",
+          "sha256": "6791d2713654d7bcce2395fa2fa7b0506814e2405ce84b845dfcde09c3e6270f"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/def_7_3.c": {
+          "type": "0",
+          "size": 1975,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051041,
+          "link": "",
+          "sha256": "a15454b44fa62a697f7ed77877cb27712c0504f7fafef8cd84971b530819f46a"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/def_7_3.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051041,
+          "link": "",
+          "sha256": "210c8a9e85e03f83d1de6c3ebe32312050eed9e695d504f4e570a6f345539cd9"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/def_7_3.setup.json": {
+          "type": "0",
+          "size": 1661838,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051039,
+          "link": "",
+          "sha256": "2cfcd13a1aed8043f6b725bfbf45c2561c259b420179b09d8513b7141410432c"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/prob_7_7.c": {
+          "type": "0",
+          "size": 1345,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "dbb0f41c389e29c3a42e0b00c9f3a0df55f13948b6968ca663958032d3a115aa"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/prob_7_7.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "38a31f910635ce9c3af85f4790ab6a495928c63d2b0d55aedbda757dd327ad2e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/prob_7_7.setup.json": {
+          "type": "0",
+          "size": 4383653,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051029,
+          "link": "",
+          "sha256": "c961fd6a0d417ad4612bf32d104455628fb3c3d28ba1950109184fc243f7fde6"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/thm_7_13.c": {
+          "type": "0",
+          "size": 2618,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051039,
+          "link": "",
+          "sha256": "4809c453c3a5b1bed1d2b4bfd042b003ba972dc5efedd53ea10d8368d738ba8f"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/thm_7_13.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051039,
+          "link": "",
+          "sha256": "43cf22f169b0493985089b9631055e8e2278d4bf967dccc74aae47626ee9d4ca"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/thm_7_13.setup.json": {
+          "type": "0",
+          "size": 1661178,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": "54997b65f1d121b8083d370b0e554d3fd892b4ee58ffecdb5a0c6ad17c844bbb"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/thm_7_3.c": {
+          "type": "0",
+          "size": 1778,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "6fac51f28cf45bd9bd7768735bcc038af62b3d5d8679b06bc33111e360971402"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/thm_7_3.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "556012176ca4c2ddd2ef065193f47a42c1f30359dd01af7b18cfbd85af767205"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_07/thm_7_3.setup.json": {
+          "type": "0",
+          "size": 811068,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "b960fd24ee11413e497b4561e08c9becf3f1c37be4cbd90cd87db082539ebb8e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_1.c": {
+          "type": "0",
+          "size": 1345,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "0e176f08f1ab8e87ef3dd3918a387d54533f6574a074691994a02e99b2a4a041"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_1.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "70d709a273409a254d640581451a7f3bdd480f8cc7760a3a5b7cecff6b16029e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_11/thm_11_1.setup.json": {
+          "type": "0",
+          "size": 4383653,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051029,
+          "link": "",
+          "sha256": "c506e9df128aa4682db83fbcc2120cd6f6c49df7b00871265139eb7e87d46ec8"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_1.c": {
+          "type": "0",
+          "size": 1675,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "4452c5cfd3f978b684e2ef1818997998f8a5e4711ba7efb2a12813d8ca085dad"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_1.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "08c0d0a73cf046265659997ab48d9f2db86136f15ce872d2786f9cc32d4a4506"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_1.setup.json": {
+          "type": "0",
+          "size": 4383805,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051067,
+          "link": "",
+          "sha256": "ff023e13ec1e901c2c54ebd5e00296233e525508054b99d02339ff8b54242f37"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_2.c": {
+          "type": "0",
+          "size": 2002,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051079,
+          "link": "",
+          "sha256": "3e3ce926411e9c0571a2631a9a5db4ded44f8ef6b9ba23e62c074871600eeb6f"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_2.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051080,
+          "link": "",
+          "sha256": "8fa1449192327e1d2949e7b6e3483d3babab293a8bf970931b3c1d808f457591"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_2.setup.json": {
+          "type": "0",
+          "size": 4384859,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "5a8022d672563cceeaf0cf6b7b316b4fb24a57d0b6478a6d8262679cb37162d7"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_3.c": {
+          "type": "0",
+          "size": 1345,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "d7e5c7c758aa1a3d53990e7eeffc4a5358892fd182ca2f5b3da7fcb271cad0a2"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_3.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "3ac11ceef3c066486fa12beee88b13acd5bbf34d5c03c0ac2b025b6f9c073fb1"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_3.setup.json": {
+          "type": "0",
+          "size": 4383653,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051029,
+          "link": "",
+          "sha256": "af428f42839254f2ad90f63bc50057a32ad6e8c58a7b35fdf88a4dd6faf23c47"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_5.c": {
+          "type": "0",
+          "size": 1675,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051106,
+          "link": "",
+          "sha256": "bffac6f473f1093936607d8fc654b023b9166240dcac0b81215109134fc88688"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_5.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051107,
+          "link": "",
+          "sha256": "618817282a5602686b692636f0c62a8d0b626623f5e3c4910a77f4bf83c752e9"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/def_12_5.setup.json": {
+          "type": "0",
+          "size": 4386377,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051103,
+          "link": "",
+          "sha256": "c964d0371aa31e0c80791454603d80341422883e45744fb0f4364bb2ce232571"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/prob_12_1.c": {
+          "type": "0",
+          "size": 2007,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051090,
+          "link": "",
+          "sha256": "b34d9bda8647ffbaba4606e0676b0c6b0973831c83f53ec81aa730aca45ce9a3"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/prob_12_1.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051090,
+          "link": "",
+          "sha256": "9aaaba93c8248666f66636fe0d2578fd1e653a6ef805a5600fc56778a4e3ee1d"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/prob_12_1.setup.json": {
+          "type": "0",
+          "size": 4385164,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051086,
+          "link": "",
+          "sha256": "8583b1582199e7bb75f30f90a7a9c4905fa6a75d968c5e45bc488caf86048d30"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_1.c": {
+          "type": "0",
+          "size": 1675,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051085,
+          "link": "",
+          "sha256": "e11e83b70b28aa7e0873bfe24cbbee7ecf923fa774161e9b89166fd5f4cb483d"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_1.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051085,
+          "link": "",
+          "sha256": "69706ce99db65559f4fdcbebadbe871b58d00917f8a24dcda2da963fa8e6bc39"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_1.setup.json": {
+          "type": "0",
+          "size": 4385011,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051080,
+          "link": "",
+          "sha256": "161a6c74d064e4385470783382d3871d6b70fbc5870c5de375e72532c44608a5"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_2.c": {
+          "type": "0",
+          "size": 2005,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051091,
+          "link": "",
+          "sha256": "fbe0bfce503ab8f37f140ef5ace3cae27bfee63a633bc4e9cc959d58c4e87f82"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_2.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051091,
+          "link": "",
+          "sha256": "71ec7de2efc6a05619e728f9147d120aba3d2552b6ad8dac71c799bf1fa65675"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_2.setup.json": {
+          "type": "0",
+          "size": 4385163,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051086,
+          "link": "",
+          "sha256": "1af248fa59775aea346bfdcaada4898e37eef48bd66ea18e4b632556846f6138"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_3.c": {
+          "type": "0",
+          "size": 5556,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051096,
+          "link": "",
+          "sha256": "b55a36b2235af7c3dd79a657e7c215092b2654e5b50aa9eb287976550505b0e0"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_3.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051096,
+          "link": "",
+          "sha256": "a723a0707d723110dcf232085aadeb8142cab2451bddd5d6876abd424075d83c"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_3.setup.json": {
+          "type": "0",
+          "size": 4385919,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051091,
+          "link": "",
+          "sha256": "b735972f4e234cdf0a2c35a53727477ff284bc31e0593411dd4ecc87d99031ff"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_4.c": {
+          "type": "0",
+          "size": 2008,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051103,
+          "link": "",
+          "sha256": "9dff0f0d0a8e6e922fce30b6a2054d4e2c5f8ca966ba46b32368fe76eb0c385d"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_4.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051103,
+          "link": "",
+          "sha256": "4c1cff6496775ecd6ae94b1a0c60bd0e6a5f11e0c22d0e6dcd439a811151b0ac"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_4.setup.json": {
+          "type": "0",
+          "size": 4386225,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051096,
+          "link": "",
+          "sha256": "5cdcea4efc420e029b0c667f835918cff2d50dc44ab6bb766ff04f12d8f1da31"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_5.c": {
+          "type": "0",
+          "size": 2335,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051110,
+          "link": "",
+          "sha256": "ca0f72459a59e89b42901c80a88ee9c89241ee9f68098c4223cf9ab3ecc4b15a"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_5.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051110,
+          "link": "",
+          "sha256": "ff88d4eb1d0c851f28ee7661e109cfba268b388f82147b9faa1bcef70298c2b5"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_5.setup.json": {
+          "type": "0",
+          "size": 4386529,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051107,
+          "link": "",
+          "sha256": "873c67dded4908bff9d32a4ee8cc1bd3dceb93d4c40af9ecaf1e32ee84abf949"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_6.c": {
+          "type": "0",
+          "size": 2005,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": "a75722af0db17b41c3f07fe88daa044b6642a70f51ba140928f9734c91d9d504"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_6.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": "26069adbcea7cc3eb92a6613b1b69eee6146cc1ac6e60080df482c060313d997"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_12/thm_12_6.setup.json": {
+          "type": "0",
+          "size": 4386681,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051111,
+          "link": "",
+          "sha256": "a1c83d02d35ea2972e1e79e3c33cfe0d112add9eff46e6d30bb873b61e5e947b"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097432,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13/def_13_6.c": {
+          "type": "0",
+          "size": 3402,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "22e219499ae8e3318866dfae820f447e271dae2fc035263b2ca274f7986b7a7d"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13/def_13_6.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "e81798894ed36eed2ece71e8120f4b13b6096b1736d628ee39e51717a8e6845e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13/def_13_6.setup.json": {
+          "type": "0",
+          "size": 4383653,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051029,
+          "link": "",
+          "sha256": "cfb4913b413ae06d555e80f0bfa881e8a222c0867939748180b29ccac9aa3dac"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13/def_13_7.c": {
+          "type": "0",
+          "size": 4310,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051118,
+          "link": "",
+          "sha256": "6e2797b5bc10ad5edfaa63d067ddcb450e8e4a2eafdd705ca0b493589d3c42c9"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13/def_13_7.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051118,
+          "link": "",
+          "sha256": "4306b4352ee4c9ca5428221530cd9766b328d6c1ef432eec3513b72b84d7c298"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13/def_13_7.setup.json": {
+          "type": "0",
+          "size": 4386985,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": "81be0976ffb9f53677059ce0cb3d167ebe602ce6fff26838b66d99440ad60a75"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13/prob_13_9.c": {
+          "type": "0",
+          "size": 3704,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097432,
+          "link": "",
+          "sha256": "9d5144e469e56df83a45de07047aade6fe18df71919074858210710d16b2d448"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13/prob_13_9.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097432,
+          "link": "",
+          "sha256": "f0e3c5c485f259bf7436246b84b663aba3a8e1818deb35dc4da08a96d5050395"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/chapter_13/prob_13_9.setup.json": {
+          "type": "0",
+          "size": 4387334,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097427,
+          "link": "",
+          "sha256": "34294072d85ab4bb3c9b10fa6ebeee2f665453f5e069299b9de88444d655820a"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/common_support": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/common_support/chapter13_stopping_support.c": {
+          "type": "0",
+          "size": 12164,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "c3fdde1a5bcb6839b212f58e0dd9430f2b074886f11e185f4ff3a261928d9731"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/common_support/chapter13_stopping_support.c.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "826f1d622c65e152f3234f7a4683ab6ff9e3b2affb3134a36e19f26e82468726"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/ir/ProbabilityTheory/common_support/chapter13_stopping_support.setup.json": {
+          "type": "0",
+          "size": 4383827,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051067,
+          "link": "",
+          "sha256": "9410832634b5f33f5170e925312dc29f812bf5995560eb6f87e175807d658da0"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051025,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051025,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051067,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.ilean": {
+          "type": "0",
+          "size": 1630,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "d7f06a2a739489bef8be2a5f984831d43ef073ca3dd6ab0bd0518ec77e044541"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "e33dded6b35eebe3c4347bfb5a4dd887c6bcf9b6e5f99b82a2073bfd3ac3b46e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.olean": {
+          "type": "0",
+          "size": 7528,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "517c93f369249564bc5b5624e1c7a991631f5a35794184ed57915db874794df5"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "673a68f28ab99a81a1a47b92db3d1cec9885fb4d749dc4633c41349c613e24fb"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_1.trace": {
+          "type": "0",
+          "size": 3058,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "6c86d184aa3115dbe1253fe6583c02ae23abb52d1563f1eafad54001cd4e65ae"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.ilean": {
+          "type": "0",
+          "size": 802,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "96145b9334804a6b3022151cbdd0755dda47715bd2d977da3bc2209b4bd213c8"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "6297eb321e3d2090e20f4433fc9a6493555431163d704809e4f619f5fd986e11"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.olean": {
+          "type": "0",
+          "size": 7056,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "bb65ce300884345fa150b44d2e34ca55e8308df7ffbcb0c84463513688a43c10"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "f9be8157e773a64d89c198101d1233646beff9ddbce6b2b102d3074fffb6f463"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/def_5_2.trace": {
+          "type": "0",
+          "size": 2816,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "c5983ce909e9cb74855b6f9e1a11ad6852838c75e2ea1e47967bcca150348f6b"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.ilean": {
+          "type": "0",
+          "size": 1536,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": "c4c9a6d2c1b8b08eeca3dc6a648fa68c5ea48e916e0b5c105df0000d3a94c90b"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": "d8d0f54ac92936c6505ffc2559e7a52098e7f4f41754cf5c6098360332c2bcfb"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.olean": {
+          "type": "0",
+          "size": 18576,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": "c4ef2f8569df8b48fcc82bcaa7dac7fb17d9f23aad7506efd94fcb878e41a787"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": "09ff97d2f3a007f0f2757aded760a6e8bb8c6b76df47ab9d3df6196ececc7b38"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_05/thm_5_2.trace": {
+          "type": "0",
+          "size": 3428,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051036,
+          "link": "",
+          "sha256": "29680e2d03741ed4d161264e008fbe270dd9baedde335e45df84b55ead8f11f7"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051033,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.ilean": {
+          "type": "0",
+          "size": 4782,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051033,
+          "link": "",
+          "sha256": "c7c1c17864ad695976746c762470d8138c47b9232480e2f57c8fd1e446b79562"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051033,
+          "link": "",
+          "sha256": "6c8afd91c871a81b47f365bb455144aafc4d9addb8eff5cf25184b7dcc55285e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.olean": {
+          "type": "0",
+          "size": 46864,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051033,
+          "link": "",
+          "sha256": "b493bbfc17fcfb5f0b9ca6683f12549e3aa9294f194d68ae62e9879495225e15"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051033,
+          "link": "",
+          "sha256": "84d47036cc2e7ca9d73a2bf8ca9334ff4f0120291fa8763959b5f7b9efe213b1"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/def_6_3.trace": {
+          "type": "0",
+          "size": 3521,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051033,
+          "link": "",
+          "sha256": "e88071d69fda0b3b636305f0928e5b91e5eafa4913484ef51122af2eeaa6478d"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/thm_6_4.ilean": {
+          "type": "0",
+          "size": 2014,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "eb65958a6b243f6f0d745b2f49cc45ca8e09e9996c4f4a61dad83dda9d8af338"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/thm_6_4.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "bb675fd212b4708ef5dc80761f88d69cf86b37c59cc1ab860294fa6aca844096"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/thm_6_4.olean": {
+          "type": "0",
+          "size": 26488,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "ebd09dd9fa0852a53becf0a099475acb765468e47103fd21c377b2625aea1da7"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/thm_6_4.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "1613f51a3b1b0cd32b13ca601f48cd64478da9b7145cde90b8d2f2b17d7e3955"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_06/thm_6_4.trace": {
+          "type": "0",
+          "size": 4503,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051032,
+          "link": "",
+          "sha256": "829b33f17d23625bd3af87a4a9dcaebebf7eb0a0c2051421b331388ce66c8e63"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.ilean": {
+          "type": "0",
+          "size": 3896,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051041,
+          "link": "",
+          "sha256": "ea9fdd139fcba00bf1bd03f04d14b9d322199942fa4574da535b3f3eb155d0f8"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051041,
+          "link": "",
+          "sha256": "b108cc8747626a126cd2daf4b2ac38503313b87f5385678edcf5002537a430d6"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.olean": {
+          "type": "0",
+          "size": 41552,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051041,
+          "link": "",
+          "sha256": "a28317235e2b150fb5b2eca3ce99202a472a50ff71a58bde15d2c4a146dd5a6a"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051041,
+          "link": "",
+          "sha256": "f0e1b48a9922112a43eb12df3ce476224ba254f2d91d59e015ef85750f02f8d2"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/def_7_3.trace": {
+          "type": "0",
+          "size": 3638,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051041,
+          "link": "",
+          "sha256": "2e37fcbabbc1059bfadb9841d929094d5a2e9140967c3053818b13197fce79b4"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/prob_7_7.ilean": {
+          "type": "0",
+          "size": 4687,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "64a55aa67326df4b1eae06aa5ae6fefeec6ce063b997bac2c5f3281d55234fc6"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/prob_7_7.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "09fbabe84ebe7a0fa07215faa11e3a5dd03a53debe82bc0535007275508aab2c"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/prob_7_7.olean": {
+          "type": "0",
+          "size": 69024,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "d22bd378aafb8b2e94c3bb5e61e2f2a7d645d89f91fcb11c2851517c8ad3b9bc"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/prob_7_7.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "a3ded5eb3380c3cf0a08abe7945c660ba802d69da23636332c6aeb45f18d5bad"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/prob_7_7.trace": {
+          "type": "0",
+          "size": 3228,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "c7c93b9356cfbebdc61f6ad070a67fc38bfcbcabeaba198267ba69d4b5047631"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.ilean": {
+          "type": "0",
+          "size": 1665,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051039,
+          "link": "",
+          "sha256": "71ce686eb1163c4cdbe23fc28b4df53333f9dcd13154123b33c961995f236a61"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051039,
+          "link": "",
+          "sha256": "020c550353a5c70907e0c4e59b20a7f7ecf91ecfce249e88ef389a988b5278c6"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.olean": {
+          "type": "0",
+          "size": 19784,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051039,
+          "link": "",
+          "sha256": "e5dc38505a27dbd2ecd82f778563544506f94c091fa6734026565934ba06c5a3"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051039,
+          "link": "",
+          "sha256": "ff5aa120160b7d98acea95e03c63b3604646e5bef87343947ed0db200ee951f5"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_13.trace": {
+          "type": "0",
+          "size": 4794,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051039,
+          "link": "",
+          "sha256": "3261482717ab157031ffe6d070fd3523629b6f22e78cbfe68e24da3edd733737"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_3.ilean": {
+          "type": "0",
+          "size": 3756,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "31dfdf24316abe80adb3e31a8c3b4d928b7f56ea613a1446e51ccf279e94f48e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_3.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "a80cd58b01fd63796f63bc46635e322fe810fb04d42254f2266ecb38b23154a3"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_3.olean": {
+          "type": "0",
+          "size": 43696,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "daf6c64536944e4dfb76f6109148a3d9a030cede10bae10bda55454d37e3f623"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_3.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "e488005d2a3f0c6db298503e075b97a38a5f76d260c2e3ff68194433e0cdf532"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_07/thm_7_3.trace": {
+          "type": "0",
+          "size": 4225,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051034,
+          "link": "",
+          "sha256": "2d52cc3012ab3d1e663a3eca92566fcbbd1855a92ba53bf2dbad1129deef1836"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.ilean": {
+          "type": "0",
+          "size": 19200,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "750ca924959b3f403ba26b9df5630015634cfc4e536ce7e16c0f6f227f50d2b7"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "d86075e53ec2505cadaf5d0b98828422d891208eba5efdaec77b7463a03fd9e7"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.olean": {
+          "type": "0",
+          "size": 392720,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "0709aea19c640b1dc7f385ffe04a686d202d47a51ba86175df9091d07c18c2a6"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "fb93bee20db8224e0e4d775fb5afd417e9acb6103357c575fea20be9201fcfd5"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_11/thm_11_1.trace": {
+          "type": "0",
+          "size": 2748,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "bea0d6b64f25cc4f9b67b0b8feaff134b0f7320e7214c8ff59383fc7cb2f82be"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_1.ilean": {
+          "type": "0",
+          "size": 10983,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "62944384e2bc475225b8be5a4f80637049b098ed5622d09db52c54ec04a40fac"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_1.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "502a88f45addc10b96949a2a923cab007b2b60cdf4cf5c42676b5048ac3b8fb0"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_1.olean": {
+          "type": "0",
+          "size": 174544,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "a9361364e0efc51e2c4f30d4771c721fa34a02014fe214563498b6d4483bb6bd"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_1.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "d6c529b73de6fe588505f7a2bd010316794ce64a273ded2c7a76b30e42f7364e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_1.trace": {
+          "type": "0",
+          "size": 3254,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "01412fffab3346899f8dec601d0df8a302c4915181856741f59174544dc6d05a"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_2.ilean": {
+          "type": "0",
+          "size": 5735,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051079,
+          "link": "",
+          "sha256": "e735f0eebb5993da002c6c56ae79962ac5028625034446ae4a3324067adfa4b7"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_2.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051080,
+          "link": "",
+          "sha256": "9bc6f598da2446e1278616f02154f72e283f6fcbf95267b0c9c4d9da9900a268"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_2.olean": {
+          "type": "0",
+          "size": 58016,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051079,
+          "link": "",
+          "sha256": "53397ebe8b20d96f65f580564a500b5495dadaa6fe761006f221a5403b39d3e7"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_2.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051080,
+          "link": "",
+          "sha256": "b8705bd5734c9f7b3b562759912c47321533222d2880a97828dbea00de06cb07"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_2.trace": {
+          "type": "0",
+          "size": 3757,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051080,
+          "link": "",
+          "sha256": "51d4aeb7e359a84e790c1bc7e716da6906506bb86480fd8449ab02f0fc5fc222"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_3.ilean": {
+          "type": "0",
+          "size": 8813,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "7890fde723e343954fee0f07d303140dd2a242e9f705926f8a019880e64c287b"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_3.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "ab4437e313384d7155c83acae600840aef2956ec17bb5b03e845836f372ff17c"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_3.olean": {
+          "type": "0",
+          "size": 129360,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "c062299a59f7e4c8342858a6dc113eadd16491d96bea3b1cc1d88eacd39033c9"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_3.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "cedf7cca657cce1f0585de0d76502b525528a8984942a96cad63dc2deda25a5a"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_3.trace": {
+          "type": "0",
+          "size": 2748,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "d9e7e7b377020476678a8638ae9971e7562f40b0eff6d53e42d8fcc4ca26db21"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_5.ilean": {
+          "type": "0",
+          "size": 2876,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051106,
+          "link": "",
+          "sha256": "0c627598b78ce0088544207c4a4e3c6d58f920f44ed2bd19549894f98f02b111"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_5.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051107,
+          "link": "",
+          "sha256": "fb341234113f46d20307ecca9295c2ed7bf4ab14f226dbe5efef8ed3279d2e18"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_5.olean": {
+          "type": "0",
+          "size": 79504,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051106,
+          "link": "",
+          "sha256": "f4c92ec54ff698eb9e7296379eba2086b4765b989c9164aeded81cb5ec635cfd"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_5.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051107,
+          "link": "",
+          "sha256": "cc44ab42c95df7b6a52d72048747a17189dfc6e3496d39ef8b849ded207436ff"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/def_12_5.trace": {
+          "type": "0",
+          "size": 2950,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051107,
+          "link": "",
+          "sha256": "fc2f7daa0014492fe60f7637da975287839f6f7b6cbdeab793900b2a7e6a1f06"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/prob_12_1.ilean": {
+          "type": "0",
+          "size": 1941,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051090,
+          "link": "",
+          "sha256": "5345c4849e4cb3fc626c13006eed8b0a065dbbd652eaf62e1f01924a12c54fb3"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/prob_12_1.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051090,
+          "link": "",
+          "sha256": "707286f2aa9dd79b43f057ca088e1018ad35c97de075c4148246e89c06348fd4"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/prob_12_1.olean": {
+          "type": "0",
+          "size": 80840,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051090,
+          "link": "",
+          "sha256": "e71c550c161a2e2675690c39fde77134fa801ed194422701cf3fd69f635f8be4"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/prob_12_1.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051090,
+          "link": "",
+          "sha256": "12419b5eae9124dcf97702925cb49c92c61056f0b41d65628fb2ed6cdcb6d6e7"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/prob_12_1.trace": {
+          "type": "0",
+          "size": 3160,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051090,
+          "link": "",
+          "sha256": "b5062bbe92d8ed888a5a818be41fe7f76539b1a5652ec99fef85ac54404858eb"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_1.ilean": {
+          "type": "0",
+          "size": 32286,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051085,
+          "link": "",
+          "sha256": "f915a0d211eb94b1e3c70620900714bc22004ffa20537dd062c2316e8647c34b"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_1.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051085,
+          "link": "",
+          "sha256": "512914ebe7c6fd1668507fdac45b928ca2a85b5182eeb2040bf19f54c9138aee"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_1.olean": {
+          "type": "0",
+          "size": 394008,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051085,
+          "link": "",
+          "sha256": "fc7c0544bf6481df549e4cfd2857bcc5dc30dd3dbb1d90680d798ba39ad00957"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_1.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051085,
+          "link": "",
+          "sha256": "519adaac18a4cfefbef472e99feb710d4384cc62c5f673224ff9ca2cd99d530f"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_1.trace": {
+          "type": "0",
+          "size": 2950,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051085,
+          "link": "",
+          "sha256": "225842f5faa40ea166df18b9527cf342fa6a70f25f691c2f784cf67a2674313c"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_2.ilean": {
+          "type": "0",
+          "size": 4455,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051091,
+          "link": "",
+          "sha256": "9e17c68ca1d4bcf9bf6f5b0d2c72cdf904f1068b4c1d4a4b0c32b898eed7d748"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_2.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051091,
+          "link": "",
+          "sha256": "3852dde46ba381a0268f56f827eb905b41e5797e3605ac417106e7d06d5480a4"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_2.olean": {
+          "type": "0",
+          "size": 142744,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051091,
+          "link": "",
+          "sha256": "992c7fe963e275f1988a19b696e27291ec493a42e3e808d0ba1f69d633b5d1aa"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_2.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051091,
+          "link": "",
+          "sha256": "6d50125580db1524195f980669545736c692d77c8ddba3bb8ade9bf528a5ead5"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_2.trace": {
+          "type": "0",
+          "size": 3152,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051091,
+          "link": "",
+          "sha256": "3350067270d4acc4cb276f19edb3a79ffc99bb1304d9ea0406a0d388eb67ae62"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_3.ilean": {
+          "type": "0",
+          "size": 63279,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051096,
+          "link": "",
+          "sha256": "224b81ef476fe68b7b09e2be1b25ba55a9c908c977d5cbec191d8c1cbd1c0eee"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_3.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051096,
+          "link": "",
+          "sha256": "c55873205e73dfbcc50a5483415cde925162ba9bc5f7bef5083f381d28ac8366"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_3.olean": {
+          "type": "0",
+          "size": 533488,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051095,
+          "link": "",
+          "sha256": "ac2da9699d4336b8701076fc2136506c585789c60fa2da3247e37f540c6ae730"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_3.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051096,
+          "link": "",
+          "sha256": "a9792cc937904a7b8cb475b066db78c5dc7affc11342db5c2b37c82375da0d96"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_3.trace": {
+          "type": "0",
+          "size": 4242,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051096,
+          "link": "",
+          "sha256": "e82b6ec5342f14418ff664a5365205bce9c8fa542624193cc8e22735cf63f292"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_4.ilean": {
+          "type": "0",
+          "size": 8924,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051103,
+          "link": "",
+          "sha256": "3c167763ee77afd0656c20e29feca2bd68a9a82f9a3924b9f7737c613d88aee3"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_4.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051103,
+          "link": "",
+          "sha256": "f1de57134094d8e32cf192be3e44257fbc3dd90d1f44516cf81b41be42256645"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_4.olean": {
+          "type": "0",
+          "size": 174496,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051103,
+          "link": "",
+          "sha256": "aa6b7e0f857ba7cede054898e088de209934100ed3a62730bc8974208a1c27ca"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_4.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051103,
+          "link": "",
+          "sha256": "cc91a634fc3e274bbed988e7c49b1504a2a8f23eb8c221d6c125ec1bb0e6f2af"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_4.trace": {
+          "type": "0",
+          "size": 3154,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051103,
+          "link": "",
+          "sha256": "5cc1554bbbdb2d922b902057e181c44416c959a026f708fec79fce4d6ba37e73"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_5.ilean": {
+          "type": "0",
+          "size": 4195,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051110,
+          "link": "",
+          "sha256": "1db0c9484da43736cede7c9f86bee660c6ae557b52d6cf913818e786717ac718"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_5.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051110,
+          "link": "",
+          "sha256": "7bdefbe3b28c2bf19db82da8ada0cceb26026888160462ae344fda55b6919331"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_5.olean": {
+          "type": "0",
+          "size": 66136,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051110,
+          "link": "",
+          "sha256": "dc2ce7563f258ed73d206eff52efa7f0273a98cf9a06ecbe57aed3d13cc3b8d0"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_5.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051110,
+          "link": "",
+          "sha256": "45afba650ca71f11ebb1374e579a02fa3512017cc29dc1dc66e600f30294b657"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_5.trace": {
+          "type": "0",
+          "size": 3354,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051110,
+          "link": "",
+          "sha256": "4a80a30465d3eb0c35e0878612eacafdc5cdc92dda17ace9eae4a18de858e19c"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_6.ilean": {
+          "type": "0",
+          "size": 4980,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": "706efc62fc887fb9935eb212182a8218020afa5df15df3593c2c140772ff7a0b"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_6.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": "58d2e4f7584ad4236e73d543dcee3c0b348af1758421568bc4f00ac804a35511"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_6.olean": {
+          "type": "0",
+          "size": 59144,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": "3b655ba82f63052b4979c5c36d2995a1d9dd2ef5123490741ea9f5657910fbcd"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_6.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": "4171aacbe68e06233ef05492049137e345d8527d2c127113158b581ec8983987"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_12/thm_12_6.trace": {
+          "type": "0",
+          "size": 3632,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051114,
+          "link": "",
+          "sha256": "5574daa0afa90333e77fc2533e0353d9755f46c8a60bb81351b599302abf0a23"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097432,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_6.ilean": {
+          "type": "0",
+          "size": 2880,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "061c68b48b7a5ff4cda5707db05a3dedb3d0b1e15ea6b6394495d983b1ff2143"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_6.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "b96cf7756efa702ae54d27d8d346c43a698985934b3bde4454e0bcc0f60b29ea"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_6.olean": {
+          "type": "0",
+          "size": 27952,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051065,
+          "link": "",
+          "sha256": "2768314b7fdd2774122e2261787c794b6690d332737c5f36d2b9637c7c659189"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_6.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "d3989440222d557f399c8fbad9975993ae5f18583586e175e62606cce6136e0e"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_6.trace": {
+          "type": "0",
+          "size": 3468,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051066,
+          "link": "",
+          "sha256": "87330e2ac77731e77df48a5aa4b6ba920dbfd70625a0e24a589355581d5dc005"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_7.ilean": {
+          "type": "0",
+          "size": 11098,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051118,
+          "link": "",
+          "sha256": "ba21ad6ef66cdb8172b875d361ecc7ff5d7bda6ae926e04b9b9f23e7a49796ad"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_7.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051118,
+          "link": "",
+          "sha256": "56d771e2222d27be98e99bccdc16933fc75b795e2001ec40dc8bb15b0c5a08d3"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_7.olean": {
+          "type": "0",
+          "size": 70480,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051118,
+          "link": "",
+          "sha256": "3557db1ae5cf98cd4e783b681f6cfa0fce65f0f5ce82b852eab8dbc4214b156b"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_7.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051118,
+          "link": "",
+          "sha256": "b9facba252dda6f00ed32bc32873c93fa277f82be9afe9aadc47ab9e640a02e3"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/def_13_7.trace": {
+          "type": "0",
+          "size": 3152,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051118,
+          "link": "",
+          "sha256": "155346320f85114a42e138ef785b247b6b6c2eab1927793c1fcc3738e6d07e8a"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/prob_13_9.ilean": {
+          "type": "0",
+          "size": 19487,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097432,
+          "link": "",
+          "sha256": "330c62fcc8cc55707886bff989e962aa35712d6b41961f2208da4b57df303b27"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/prob_13_9.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097432,
+          "link": "",
+          "sha256": "b701e780ee31bc2139c11db6ee3d0a7b0400758a1a037e44a1ac2c770aba84ab"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/prob_13_9.olean": {
+          "type": "0",
+          "size": 186120,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097432,
+          "link": "",
+          "sha256": "2beced8d9b0ecf6dccdf81bdf353b6a06e841838e9343c13cf1ee384c73d4a70"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/prob_13_9.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097432,
+          "link": "",
+          "sha256": "426c98c23f31863e45f764ba25b63092e582104e0ec2e3cac0c00f78fef9f6da"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/chapter_13/prob_13_9.trace": {
+          "type": "0",
+          "size": 3080,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097432,
+          "link": "",
+          "sha256": "783ba44aff321a752776e78190eab60eb7fba53aab36f034cd447b08c733993b"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/common_support": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/common_support/chapter13_stopping_support.ilean": {
+          "type": "0",
+          "size": 16658,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "e18460052f194bc7f58fa77afde95dd284b287a75572db9747a01b2444228521"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/common_support/chapter13_stopping_support.ilean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "f75a5718ddc996fb798b968166ac02ba2f34c51e252a96ef66b230cf2ab70d50"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/common_support/chapter13_stopping_support.olean": {
+          "type": "0",
+          "size": 127536,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "34421360119636957ba10a6657e8a06b171a2cdcf7306ed8af721857ff4c978f"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/common_support/chapter13_stopping_support.olean.hash": {
+          "type": "0",
+          "size": 16,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "83e4e5e011fedad4284c16ee4553e5ced458befc4eba68d76ebff7ca0e1c29a1"
+        },
+        "./ProbabilityTheoryFormalization/.lake/build/lib/lean/ProbabilityTheory/common_support/chapter13_stopping_support.trace": {
+          "type": "0",
+          "size": 3129,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789051076,
+          "link": "",
+          "sha256": "5fcff5fdbf023ad3bbe141868932577cb8c65678411227d4306d14096e070271"
+        },
+        "./ProbabilityTheoryFormalization/.lake/config": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096999,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/config/2": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096999,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/config/2/lakefile.olean": {
+          "type": "0",
+          "size": 649296,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096999,
+          "link": "",
+          "sha256": "073ffb5a41fd3886b56e255ef28e959617bd5498ff2d208021b5d3db519dfb71"
+        },
+        "./ProbabilityTheoryFormalization/.lake/config/2/lakefile.olean.trace": {
+          "type": "0",
+          "size": 180,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096999,
+          "link": "",
+          "sha256": "a4e58d7e0381be15cace7fecfc39f9062b2a66918b5c631aa8e8e47047c67f10"
+        },
+        "./ProbabilityTheoryFormalization/.lake/config/6": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097000,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/.lake/config/6/lakefile.olean": {
+          "type": "0",
+          "size": 759808,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097000,
+          "link": "",
+          "sha256": "d1b97505c40ac71b4759c0e02710153567100843206ecac75ee2431273cff1a4"
+        },
+        "./ProbabilityTheoryFormalization/.lake/config/6/lakefile.olean.trace": {
+          "type": "0",
+          "size": 297,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097000,
+          "link": "",
+          "sha256": "52916234a6c2c3b116ce39c87ea79d327b0574bbdeefe572375b1eea8535bfc9"
+        },
+        "./ProbabilityTheoryFormalization/.lake/packages": {
+          "type": "2",
+          "size": 0,
+          "mode": 511,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096781,
+          "link": "/opt/cacheproject/.lake/packages",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/AGENTS.md": {
+          "type": "0",
+          "size": 558,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096765,
+          "link": "",
+          "sha256": "9f2057aa4c83735f928ba9d5680106f038bcb89015baf5e2167258d5005fd3b5"
+        },
+        "./ProbabilityTheoryFormalization/COMMON_RULES.zh-CN.md": {
+          "type": "0",
+          "size": 1682,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "ae6acb6257e3d11d4c5196b924a299434b6bd4e5b6a87995a84c2e6a2a1ea37e"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05/def_5_1.lean": {
+          "type": "0",
+          "size": 766,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "e9d27c381e3b4c038a72225173f27ce89f799613548aad33bf7373dcb831e450"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05/def_5_2.lean": {
+          "type": "0",
+          "size": 319,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "b7e61e3e2a311b7fecef435f03852523e768d150939fe799e72740cd04aa4b3f"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_05/thm_5_2.lean": {
+          "type": "0",
+          "size": 765,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "8ee2b123e289e97a64bc89df326cfdc3c1aabdb1941332005ca08402ce439904"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_06": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_06/def_6_3.lean": {
+          "type": "0",
+          "size": 4076,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "9193da4ea7cb79f025467875e33cadba783dfc8be6f1926e145d3311f48bfeeb"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_06/thm_6_4.lean": {
+          "type": "0",
+          "size": 3426,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "48508c927568f713f6bfd74d6ad753edbc8c920a0c6b5e1b9299373cf71decd4"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/def_7_3.lean": {
+          "type": "0",
+          "size": 2259,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "6e7e0c1477c956e5e2980f74cdc70836585c3daf57723021bd857783b8965d77"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/prob_7_7.lean": {
+          "type": "0",
+          "size": 2380,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "5b5da099b1a491d53ccacacce0d3aad759d2ac1a31fdce892920adb9134deaed"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/thm_7_13.lean": {
+          "type": "0",
+          "size": 3096,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "76130297fc94ae8a22629f7ad1c3096dba73b2f53f8816a0d15f356e9db95227"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_07/thm_7_3.lean": {
+          "type": "0",
+          "size": 3987,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "ff82437e607a7c429c0861be3d1d1363f5f890ce28249f01f037b61d01bec0b2"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_11/thm_11_1.lean": {
+          "type": "0",
+          "size": 13556,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "51f52e3a4119579c2dbfe617c432210b2dde5677fd01049e45ae37b71f05d720"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/def_12_1.lean": {
+          "type": "0",
+          "size": 6047,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "9a99bf8b0fa7486ca3a7e45986a7bceb6534a049ffeccac06b23d2728968e218"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/def_12_2.lean": {
+          "type": "0",
+          "size": 3534,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "4f49c706963c3aa99007b4a4bc409e4bb741a3a99f0371ad67f9b8247e9c414a"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/def_12_3.lean": {
+          "type": "0",
+          "size": 5502,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "54285dd2cc6603020d917a68f27b09141e726192ac6d0222abf44ca0f4066dbf"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/def_12_5.lean": {
+          "type": "0",
+          "size": 1910,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "1c974f552284e591a17a3e16f1621290f3e6b098cff4b83c17f858f086ccd15d"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/prob_12_1.lean": {
+          "type": "0",
+          "size": 1120,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "3a22d46a5e6fb37a6b9bb897ed4fe0ec68e84e008b0b21a4269b54cd452b9966"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/thm_12_1.lean": {
+          "type": "0",
+          "size": 18900,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "2d9ac70fd6e8d156cbd92af5bd334fca001dc3307d83ba5a44f9b32029d014d2"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/thm_12_2.lean": {
+          "type": "0",
+          "size": 3924,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "744be78852dfc4d1975e28e647d0fab0e94e7440879982f30c0844e9874ebef0"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/thm_12_3.lean": {
+          "type": "0",
+          "size": 34805,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "47b4eb02b0fade1e2661cdf99a1d84cc22fb0c27d8dce24de2a717c7e998d0b6"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/thm_12_4.lean": {
+          "type": "0",
+          "size": 7715,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "3f944107c22cfeb5abf13fa607ed858fbf8b18045f82d7fd308bcd2ecbfbbc80"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/thm_12_5.lean": {
+          "type": "0",
+          "size": 4450,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "abce9342ad0d560ff2e8e01164952abad5dcb4cb4917d9deae711f3db3a15e98"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/thm_12_6.lean": {
+          "type": "0",
+          "size": 5792,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "d81354b394ea8c1a04ff17d2490331fbfeb00fde7e76e212161903e53d5fd061"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13/def_13_6.lean": {
+          "type": "0",
+          "size": 2810,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "13c023da4791a0613a9573574251bee494b3eb453005407157de65d97524a443"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13/def_13_7.lean": {
+          "type": "0",
+          "size": 6299,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "0c8f41af4c7208cbf62111e5c2af9c7070e77d59788dca22b4d0a7787200f462"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13/prob_13_9.lean": {
+          "type": "0",
+          "size": 9379,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097416,
+          "link": "",
+          "sha256": "249940f071da69c868b86d21cae29fbdad527c3285d91139bfe869cb45017a5b"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/common_support": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory/common_support/chapter13_stopping_support.lean": {
+          "type": "0",
+          "size": 6391,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "a7ac9ca5d7de1c2179c0bc5565c4f0eafd60562ab4394f03e14668a17f207674"
+        },
+        "./ProbabilityTheoryFormalization/ProbabilityTheory.lean": {
+          "type": "0",
+          "size": 37,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "ebbb322c04b9f58bf875cd0229dc62e937834e6585551d12b1ab097f6bb0c88e"
+        },
+        "./ProbabilityTheoryFormalization/README.md": {
+          "type": "0",
+          "size": 237,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096765,
+          "link": "",
+          "sha256": "5ecf65f755b2b68006c36c96ab797b257a86ff8951ac38900586b13ad4d1e485"
+        },
+        "./ProbabilityTheoryFormalization/SEED_MANIFEST.json": {
+          "type": "0",
+          "size": 30978,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "b3522ff950748532b49f0bf7b412d5bbf4b2a6759bfd7c82a2369c7c8df041a6"
+        },
+        "./ProbabilityTheoryFormalization/SOURCE.tex": {
+          "type": "0",
+          "size": 629,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "a560db2dd7a38b9b22e7c4cfdb191d6f98c180e5d6cc8561ff2cd773e2fb9c1b"
+        },
+        "./ProbabilityTheoryFormalization/TASK.zh-CN.md": {
+          "type": "0",
+          "size": 1216,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "b97a02c0e2e6e0604890556993927a0f2f910137e8340791acd1290753ff9f02"
+        },
+        "./ProbabilityTheoryFormalization/data": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/data/task_catalog": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/data/task_catalog/catalog_policy_v2.json": {
+          "type": "0",
+          "size": 1530,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "5b6c1c79198880e51c0c7023bb777501d38a70112b350668c1b39b1420322030"
+        },
+        "./ProbabilityTheoryFormalization/inputs": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/inputs/experiment_targets.tex": {
+          "type": "0",
+          "size": 642,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "86e1035b6166d376e57ac552255f23c15e6e36a6acfc617d234bcbd178b2d484"
+        },
+        "./ProbabilityTheoryFormalization/lake-manifest.json": {
+          "type": "0",
+          "size": 3582,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050543,
+          "link": "",
+          "sha256": "b583e42a8c5434792e7b5e04865a354710a9aa3b8f7c90665cf862d300c33c4d"
+        },
+        "./ProbabilityTheoryFormalization/lakefile.toml": {
+          "type": "0",
+          "size": 855,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050542,
+          "link": "",
+          "sha256": "243c2a96b5d013a9bc72627cb76bd6148c1a734b9eb083fd58614a3c55c094a5"
+        },
+        "./ProbabilityTheoryFormalization/lean-toolchain": {
+          "type": "0",
+          "size": 26,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789050542,
+          "link": "",
+          "sha256": "465c68148dd061230368e3cbe5d1d2973069172b48b684c928ef1a665b627832"
+        },
+        "./ProbabilityTheoryFormalization/manifest_by_chapter.csv": {
+          "type": "0",
+          "size": 4026,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "c2cb0a7e31cab5e4b3c86bb0cf768376ae1fdcc0ace4b74c29ff5c3e52924663"
+        },
+        "./ProbabilityTheoryFormalization/plans": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./ProbabilityTheoryFormalization/plans/experiment_targets_plan.json": {
+          "type": "0",
+          "size": 790,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "7c93c953e4a4008c0a4c2e6de6fa1389c74d1d1a5e55c483a43df8f202e8aff1"
+        },
+        "./SUBMISSION_SPEC.json": {
+          "type": "0",
+          "size": 400,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096765,
+          "link": "",
+          "sha256": "6ab6dc20ef84efb8612d7328583caf269707965e5f22572c6b4c8c6b413f98aa"
+        },
+        "./artifacts": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096782,
+          "link": "",
+          "sha256": null
+        },
+        "./artifacts/plans": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": null
+        },
+        "./artifacts/plans/experiment_targets_plan.json": {
+          "type": "0",
+          "size": 790,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096764,
+          "link": "",
+          "sha256": "7c93c953e4a4008c0a4c2e6de6fa1389c74d1d1a5e55c483a43df8f202e8aff1"
+        },
+        "./artifacts/private_catalog.json": {
+          "type": "0",
+          "size": 9287,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096782,
+          "link": "",
+          "sha256": "3e6602b23778a7183b7fb0c519cb2199d6c8993248556278053b971f5caef6d7"
+        },
+        "./artifacts/state.sqlite3": {
+          "type": "0",
+          "size": 299008,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096782,
+          "link": "",
+          "sha256": "242a89e6f41a9c56779e33463c5d4f181cccc2db68b1e50b47bb043210250c24"
+        },
+        "./artifacts/tmp": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096781,
+          "link": "",
+          "sha256": null
+        },
+        "./artifacts/upstream_authority.json": {
+          "type": "0",
+          "size": 5818,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096782,
+          "link": "",
+          "sha256": "9cb145ac3840f0d192dd5f51dcb677f34141bbad35d84612d884110615537f32"
+        },
+        "./container.env": {
+          "type": "0",
+          "size": 1092,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096765,
+          "link": "",
+          "sha256": "11be9dd61245c8a126fb26284e3b8d1483c3cc0d572f83bfe8c02759e9f63f99"
+        },
+        "./environment.json": {
+          "type": "0",
+          "size": 1136,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096782,
+          "link": "",
+          "sha256": "9a456f9a1c50f4a785ecd801249d2f826360a16932e52be43ba15720d7c3d21a"
+        },
+        "./home": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096781,
+          "link": "",
+          "sha256": null
+        },
+        "./private_seed_record.json": {
+          "type": "0",
+          "size": 6074,
+          "mode": 493,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789096765,
+          "link": "",
+          "sha256": "439b73664f3b5801986a4fc917615bdaad905a281cccdab19ff2068dcbcaf123"
+        },
+        "./submission.json": {
+          "type": "0",
+          "size": 2516,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097480,
+          "link": "",
+          "sha256": "898b9a075a6efefce9739cf03f8b54878344dde7d0a26682b88bcdfca62622e0"
+        }
+      }
+    },
+    "tmp": {
+      "archive_sha256": "6aa3113f09cc0efaf0ac9073b1fbeb586fc21f977a905b71fa5649e69c13e583",
+      "entries": {
+        ".": {
+          "type": "5",
+          "size": 0,
+          "mode": 1023,
+          "uid": 0,
+          "gid": 0,
+          "mtime": 1789097450,
+          "link": "",
+          "sha256": null
+        },
+        "./help-result-1a0c4741-023f-49a1-bf12-e6f448499046": {
+          "type": "5",
+          "size": 0,
+          "mode": 493,
+          "uid": 1000,
+          "gid": 1000,
+          "mtime": 1789097371,
+          "link": "",
+          "sha256": null
+        },
+        "./help-result-1a0c4741-023f-49a1-bf12-e6f448499046/response.md": {
+          "type": "0",
+          "size": 2328,
+          "mode": 493,
+          "uid": 1000,
+          "gid": 1000,
+          "mtime": 1789097371,
+          "link": "",
+          "sha256": "01aa8969cc869722ab527969b10ca5ba8e9569ac223627217a7247a578cfeab8"
+        },
+        "./prob139_check.lean": {
+          "type": "0",
+          "size": 313,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097227,
+          "link": "",
+          "sha256": "019d26cf895d192e54522011e6da3678df64781bb06478abbab3b726a7289435"
+        },
+        "./prob139_final_check.lean": {
+          "type": "0",
+          "size": 200,
+          "mode": 420,
+          "uid": 1001,
+          "gid": 1001,
+          "mtime": 1789097450,
+          "link": "",
+          "sha256": "90240a7adb76e076f54ca463c8b60b7e55b8b42ab5e1b9b8e0887730f3739ed0"
+        }
+      }
+    }
+  },
+  "candidate_package": {
+    "status": "packaged",
+    "actor_declared_target_files": [
+      "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13/prob_13_9.lean"
+    ],
+    "actor_declared_stop_reason": "completed_all_requirements_and_verified",
+    "technical_build_status": "not_run_or_interpreted_by_driver",
+    "trusted_success": false,
+    "trusted_success_reason": "requires independent endpoint package/build/semantic acceptance"
+  },
+  "bindings": {
+    "epoch_path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\coverage_20260910\\formal_freeze_candidate_r4_transport\\RUNNER_EPOCH.development-r4-20260911.json",
+    "epoch_sha256": "832b12b8c1d8ced58d57b0674bbd61f66b3580d07882d669da8e75b29f8813bf",
+    "launch_manifest_sha256": "cf5a9fcb44649ca612940f16aa57d69d653e87de566611ea456800282f79ded5",
+    "projection_manifest_sha256": "45c309560125d54da7757742c76e787382f871f5efe2a47a8f3ad08724e9ea3a",
+    "work_tar_sha256": "4b8fd9dc6e7fa9839f3c48488591e87b54321268d12ec6b083a99de9a964da85",
+    "tmp_tar_sha256": "6aa3113f09cc0efaf0ac9073b1fbeb586fc21f977a905b71fa5649e69c13e583"
+  },
+  "final_snapshot_error": null,
+  "container_cleanup": [
+    {
+      "container_id": "c355cf9e58832e8fbc9ad331d89d50fe0460fe115dd7148915af744e1786ab4c",
+      "inspect_before_exit_code": 0,
+      "running_before": false,
+      "kill_exit_code": null,
+      "inspect_after_exit_code": 0,
+      "running_after": false,
+      "stopped_or_already_stopped": true,
+      "stop_completed_epoch": 1789097501.6782537,
+      "stop_completed_utc": "2026-09-11T03:31:41.678254+00:00"
+    },
+    {
+      "container_id": "adb1083ae3c9230dae3e8cc05bdc24f54a4f6884493c578b871601584b9f27ab",
+      "inspect_before_exit_code": 0,
+      "running_before": false,
+      "kill_exit_code": null,
+      "inspect_after_exit_code": 0,
+      "running_after": false,
+      "stopped_or_already_stopped": true,
+      "stop_completed_epoch": 1789097502.0152826,
+      "stop_completed_utc": "2026-09-11T03:31:42.015283+00:00"
+    },
+    {
+      "container_id": "eadf7946ed19a42e1df0738d6dd7823dd137a47e90443d22327b8f0a7d0f38cb",
+      "inspect_before_exit_code": 0,
+      "running_before": false,
+      "kill_exit_code": null,
+      "inspect_after_exit_code": 0,
+      "running_after": false,
+      "stopped_or_already_stopped": true,
+      "stop_completed_epoch": 1789097502.3565626,
+      "stop_completed_utc": "2026-09-11T03:31:42.356563+00:00"
+    },
+    {
+      "container_id": "ba9e371c15dd231ab237993a152c73b940e2643f1ead5cd1fda3c0a2cb64ca7e",
+      "inspect_before_exit_code": 0,
+      "running_before": false,
+      "kill_exit_code": null,
+      "inspect_after_exit_code": 0,
+      "running_after": false,
+      "stopped_or_already_stopped": true,
+      "stop_completed_epoch": 1789097502.693377,
+      "stop_completed_utc": "2026-09-11T03:31:42.693377+00:00"
+    }
+  ],
+  "deadline_audit": {
+    "allowance_seconds": 5400.0,
+    "started_epoch": 1789096786.8740013,
+    "started_utc": "2026-09-11T03:19:46.874001+00:00",
+    "deadline_epoch": 1789102186.8740013,
+    "deadline_utc": "2026-09-11T04:49:46.874001+00:00",
+    "dispatches": [
+      {
+        "id": "4dc90fd1-556f-4086-8c76-0e2cc1dbe364",
+        "parent_id": null,
+        "role": "author",
+        "session_id": "01a08e7a-7d5f-7271-b061-fde159467706",
+        "opened_epoch": 1789096786.8740013,
+        "closed_epoch": 1789097501.0504637,
+        "status": "completed"
+      },
+      {
+        "id": "35c861b1-8c92-4019-8e3f-50cf4064e343",
+        "parent_id": "4dc90fd1-556f-4086-8c76-0e2cc1dbe364",
+        "role": "general_reviewer",
+        "session_id": "01a08e81-a081-78d0-99c5-885c3a5eea50",
+        "opened_epoch": 1789097254.7833169,
+        "closed_epoch": 1789097368.4639013,
+        "status": "completed"
+      }
+    ],
+    "active_dispatches_reconciled_as_unknown": []
+  },
+  "deadline_audit_error": null,
+  "timing": {
+    "author_call_invoked_utc": "2026-09-11T03:19:46.644615+00:00",
+    "root_first_dispatch_utc": "2026-09-11T03:19:46.874001+00:00",
+    "author_returned_utc": "2026-09-11T03:31:41.340373+00:00",
+    "root_elapsed_at_author_return_seconds": 714.4663712978363,
+    "parent_stop_completed_utc": "2026-09-11T03:31:42.693377+00:00",
+    "root_elapsed_at_parent_stop_seconds": 715.8193757534027,
+    "snapshot_started_utc": "2026-09-11T03:31:42.694986+00:00",
+    "snapshot_completed_utc": "2026-09-11T03:31:44.436319+00:00",
+    "snapshot_elapsed_seconds": 1.741332769393921,
+    "snapshot_time_counted_as_root_solve_time": false
+  },
+  "freeze_semantics": "container stopped and snapshot captured after author session returned",
+  "instrumentation": {
+    "token_usage": "author-call-01/actor-receipt.json and recursive help actor receipts",
+    "agent_sessions": "author-call-01/session-identity.json and help receipts",
+    "tool_and_search_commands": "author-call-01/bridge/bridge-events.jsonl and recursive help bridges",
+    "root_time": "deadline.sqlite3 and timing.root_elapsed_at_author_return_seconds",
+    "driver_time": "driver_elapsed_seconds includes setup, stop, snapshot and submission collection",
+    "container_setup": "bootstrap-evidence/bootstrap.json and actor-container.json",
+    "pre_dispatch_bindings": "LAUNCH_MANIFEST.json"
+  }
+}

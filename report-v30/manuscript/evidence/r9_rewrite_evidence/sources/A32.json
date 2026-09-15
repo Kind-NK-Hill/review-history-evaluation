@@ -1,0 +1,88 @@
+{
+  "epoch": 1789161182.16685,
+  "new_semantic_calls": 2,
+  "new_solver_calls": 0,
+  "L2_new_model_calls": 0,
+  "L7_initial_calls": 2,
+  "L7_adjudication_calls": 0,
+  "max_authorized_calls": 3,
+  "actual_receipts": [
+    {
+      "slot": "reviewer-1",
+      "conceptual_role": "reviewer-1",
+      "receipt_path": "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-1\\attempt-01\\actor\\actor-receipt.json",
+      "receipt_sha256": "3a0d484de0e7778e642783bb2beb95e5a1a709ee7f355f054dbb69134705b406",
+      "dispatch_id": "f54e4fb3-cdc7-4053-9833-b5b339c310ba",
+      "session_ids": [
+        "01a0924c-46c3-74e0-b91c-567e4b0b36a7"
+      ],
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 551752,
+          "cached_input_tokens": 478720,
+          "output_tokens": 8023
+        }
+      ],
+      "process": {
+        "elapsed_seconds": 217.56300000002375,
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null
+      },
+      "deadline": {
+        "allowance_seconds": 1800.0,
+        "started_epoch": 1789160863.9467182,
+        "deadline_epoch": 1789162663.9467182,
+        "remaining_seconds": 1582.3791539669037
+      },
+      "usd": null,
+      "assessment_accepted": true,
+      "format_issues": []
+    },
+    {
+      "slot": "reviewer-2",
+      "conceptual_role": "reviewer-2",
+      "receipt_path": "ROOT/rr-l7-r2\\candidate-3e81b8500999\\executions\\reviewer-2\\attempt-01\\actor\\actor-receipt.json",
+      "receipt_sha256": "dd94b7fb4d03f3b0e3200954b93a64ca0a48ea2a3c91b4bd18ed6b93339e8f80",
+      "dispatch_id": "f0df99e3-60da-42ad-8135-8c54e3aa8a69",
+      "session_ids": [
+        "01a0924c-46c3-7ee0-9fe0-33e83ba3c213"
+      ],
+      "model": "gpt-5.6-sol",
+      "reasoning_effort": "medium",
+      "usage": [
+        {
+          "input_tokens": 874005,
+          "cached_input_tokens": 776192,
+          "output_tokens": 9286
+        }
+      ],
+      "process": {
+        "elapsed_seconds": 263.43800000002375,
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null
+      },
+      "deadline": {
+        "allowance_seconds": 1800.0,
+        "started_epoch": 1789160862.992587,
+        "deadline_epoch": 1789162662.992587,
+        "remaining_seconds": 1536.4662644863129
+      },
+      "usd": null,
+      "assessment_accepted": true,
+      "format_issues": []
+    }
+  ],
+  "usage_totals": {
+    "input_tokens": 1425757,
+    "cached_input_tokens": 1254912,
+    "output_tokens": 17309
+  },
+  "usage_limitations": "Missing USD or reasoning-token counts are unavailable, not zero; cached input is a subset of input. These are actor receipt counters, not price estimates.",
+  "evaluator_elapsed_sum_seconds": 481.0010000000475,
+  "original_build_reused": true,
+  "new_builds": 0
+}

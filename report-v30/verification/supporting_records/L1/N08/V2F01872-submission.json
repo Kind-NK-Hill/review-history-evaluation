@@ -1,0 +1,84 @@
+{
+  "schema": "toyapollo.neutral_submission.v1",
+  "task_ids": [
+    "prob_13_9"
+  ],
+  "target_files": [
+    "/work/ProbabilityTheoryFormalization/ProbabilityTheory/chapter_13/prob_13_9.lean"
+  ],
+  "public_declarations": [
+    "prob_13_9_filtration",
+    "prob_13_9_innovation",
+    "prob_13_9_partialSum",
+    "prob_13_9_innovation_zero",
+    "prob_13_9_innovation_succ",
+    "prob_13_9_partialSum_zero",
+    "prob_13_9_partialSum_succ",
+    "prob_13_9_observation_adapted",
+    "prob_13_9_innovation_integrable",
+    "prob_13_9_innovation_measurable_le",
+    "prob_13_9_innovation_adapted",
+    "prob_13_9_partialSum_integrable",
+    "prob_13_9_partialSum_adapted",
+    "prob_13_9_innovation_condExp_zero",
+    "prob_13_9"
+  ],
+  "dependencies": [
+    {
+      "module": "ProbabilityTheory.chapter_13.def_13_7",
+      "declarations": [
+        "def_13_7",
+        "Def137GuardedCondExpEq"
+      ]
+    },
+    {
+      "module": "ProbabilityTheory.common_support.chapter13_stopping_support",
+      "declarations": [
+        "chapter13_oneIndexedNaturalFiltration",
+        "chapter13_history_measurable_self",
+        "chapter13_oneIndexedNaturalFiltration_mono",
+        "chapter13_oneIndexedNaturalFiltration_sub_ambient",
+        "chapter13_oneIndexedNaturalFiltration_isFiltration"
+      ]
+    },
+    {
+      "module": "Mathlib",
+      "declarations": [
+        "MeasureTheory.integrable_condExp",
+        "MeasureTheory.stronglyMeasurable_condExp",
+        "MeasureTheory.condExp_sub",
+        "MeasureTheory.condExp_add",
+        "MeasureTheory.condExp_condExp_of_le",
+        "MeasureTheory.condExp_of_stronglyMeasurable"
+      ]
+    }
+  ],
+  "requirement_bindings": {
+    "1_definitions_and_indexing": [
+      "prob_13_9_filtration",
+      "prob_13_9_innovation",
+      "prob_13_9_partialSum",
+      "prob_13_9_innovation_zero",
+      "prob_13_9_innovation_succ",
+      "prob_13_9_partialSum_zero",
+      "prob_13_9_partialSum_succ"
+    ],
+    "2_innovation_integrable_and_adapted": [
+      "prob_13_9_innovation_integrable",
+      "prob_13_9_innovation_measurable_le",
+      "prob_13_9_innovation_adapted"
+    ],
+    "3_partial_sums_integrable_and_adapted": [
+      "prob_13_9_partialSum_integrable",
+      "prob_13_9_partialSum_adapted"
+    ],
+    "4_next_innovation_conditional_mean_zero": [
+      "prob_13_9_innovation_condExp_zero"
+    ],
+    "5_concrete_martingale_from_source_conditions": [
+      "prob_13_9"
+    ]
+  },
+  "unresolved": [],
+  "stop_reason": "completed_all_requirements_and_verified"
+}

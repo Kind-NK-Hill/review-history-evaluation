@@ -1,0 +1,52 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "c-r3-l2-001",
+  "arm": "C",
+  "role": "reviewer",
+  "dispatch_id": "8ce74337-4095-46e8-a9e2-cb03190c78c4",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": "018a1503-17bf-4957-b80f-94af1c1b696c",
+  "help_config_sha256": null,
+  "effective_help_config_sha256": "43de7ddb431462c6faa0baeaf970be0819d230ff7f0047f4678738fd5bfa7b9c",
+  "session_ids": [
+    "01a08f6e-a522-7803-9da8-0112ce871627"
+  ],
+  "usage": [
+    {
+      "input_tokens": 129332,
+      "cached_input_tokens": 73600,
+      "output_tokens": 4616,
+      "reasoning_output_tokens": 1852
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 124.0,
+    "deadline_epoch": 1789119190.3457227,
+    "remaining_at_launch_seconds": 6402.312573432922,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\actors\\reviewer-002\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\c-r3-runs\\c-r3-l2-001\\run\\actors\\reviewer-002\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 7200.0,
+    "started_epoch": 1789111990.3457227,
+    "deadline_epoch": 1789119190.3457227,
+    "remaining_seconds": 6278.298560619354
+  },
+  "public_events_sha256": "c7900d883eabe49307b389f49cb2fcfc63931f78a1c3f551670447e0fbc9a74f",
+  "raw_public_events_sha256": "c7900d883eabe49307b389f49cb2fcfc63931f78a1c3f551670447e0fbc9a74f",
+  "public_recording_policy": "public-cli-v2-summary-auto-no-raw-agent-reasoning",
+  "event_ledger_sha256": "af505fc26510fc7ff219264247287fe059d93b0c67c3ee9b0321b409ead168c9",
+  "event_recording_summary_sha256": "96ef5db37864cacc2b29ad3686864b850bfa9b9daf945363595e54d26b8e0163",
+  "usd": null
+}

@@ -1,0 +1,26 @@
+{
+  "run": "r2-l6-b",
+  "command": [
+    "docker",
+    "run",
+    "--network",
+    "none",
+    "--mount",
+    "type=volume,source=rep26-p6-tech-6ef9f0c88239-b1693e-work,target=/work,readonly",
+    "--mount",
+    "type=bind,source=D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\final_research_supplement_20260915,target=/checks,readonly",
+    "--entrypoint",
+    "/bin/bash",
+    "-w",
+    "/work/ProbabilityTheoryFormalization",
+    "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c",
+    "--noprofile",
+    "--norc",
+    "-c",
+    "lake env bash /checks/checks/rebuild_L6.sh"
+  ],
+  "exit_code": 1,
+  "output": "\ninput file '/checks/checks/L6_historical/ProbabilityTheory/chapter_12/prob_12_5.lean' must be contained in root directory (/work/ProbabilityTheoryFormalization/)\n",
+  "volume_read_only": "rep26-p6-tech-6ef9f0c88239-b1693e-work",
+  "image": "sha256:bf8ecae88af17ff13c736eb7b1f374170f608895a8eea0058be0183bf00e088c"
+}

@@ -1,0 +1,206 @@
+请对第27版五组必要修改作关闭核查。以下均已写入双语正文，未改第1、2、3、7章和附录A—S，也未改分类、计时及原实验结果。
+1. 4.4补半数集券、独立几何等待和、N=2唯一阶段总方差为零与尺度条件的矛盾；标准化限定正方差规模；说明后续已经完成的界、极限与收敛转移。
+2. 6.3恢复广义直接绑定、有目的目标核查、关系可共享端点；首步相对固定失败起点，同任务可以有多个起点；后续来自尚未通过且证据合格路径；只描述观测首步通过比例较低。
+3. 4.1补几乎处处收敛、可积极限及有限积分和绝对差积分趋零；B-M3明确右连续性；B-L6只陈述乘积可积性调用未匹配，不以近义词作成因解释。
+4. 6.2去掉排他条件，恢复C-L1确认既有成果并支持未修改提交的贡献。
+5. 6.3恢复14对文件、28/17/16、公理检查与源码语义区别，以及额外规则组合的有界负结果。
+另采纳两项可选解释：定义反演与停时式中的对象，明确全变差问题位于下游收敛谓词，并将A-L1错误序列接到可测性及部分和可积性目标。
+
+请先确认读到 END_REVISION27_CLOSURE。按实际粘贴段落检查五组问题是否关闭，以及修改有无新数学/语义/双语错误。4.1的几乎处处收敛依据原附录Q.4保存的任务书；历史数值与R.3.5—R.3.7逐项核对。这是定向文本复核，不是新增模型实验或原日志/PDF核验。
+
+
+=== zh-CN ===
+
+
+<a id="section-4-1"></a>
+
+### 4.1 范围遗漏怎样在审核中被接受，又怎样被补齐？
+
+第一批Scheffé引理任务（L3）用于后续概率密度问题。对非负函数序列，在给定的几乎处处收敛条件下，极限函数$f$可积，且函数积分趋于$f$的有限积分；目标是推出$\int|f_n-f|\to0$。争议发生在引理接收哪些序列：A、B原交付要求每一项都可积，共同数学成果标准则要求覆盖从某一项开始可积的序列。原任务说明使用“允许”尾部表述，后来共同评价明确采用这一范围；这一区别影响对当时作者和审核者决定的解释。[[23,39]](#ref-23)
+
+### 4.3 协作者完成的证明怎样进入后续任务？
+
+因此，数学结果产生和作者能够使用它，发生在不同环节。取得的反演论证处理有限积分交换、振荡核的逐点极限、控制收敛以及端点的一半质量。设$\mu$为概率分布，$\phi_\mu$为其特征函数。对区间端点$a<b$，它得到
+
+大范围协助同样有完成并被采用的实例。第一批B-M1将停止过程和停时期望整组交给支持作者，主作者取得补丁、整合、构建并请求数学评审。支持实现除了有限停止结果，还处理极限过渡。例如，对鞅$X$及可积停时$T$，若增量由常数$c$控制，
+
+<a id="section-4-4"></a>
+
+### 4.4 历史修订怎样增加能够使用的数学内容？
+
+以往代码修订补充了单次运行之外的观察。它们涉及不同版本的证明库和调用者，下面按实际增加的数学工作说明变化；这些历史记录单独分析，不增加第3章实验分母。
+
+**从概率模型推出密度。**归一化Gamma变量到Dirichlet分布的早期实现使用公理桥接。后来公理被移除，却把归一化变量的密度直接定义成目标公式，原本应由模型推出公式的工作仍然缺失。后续修订建立乘积分布、归一化映射、单纯形上的支撑、投影密度和变量替换，才接通模型与密度公式。这个变化解释了为何单查公理名称不能衡量全部数学进展。[[4]](#ref-4)
+
+所得结果又被两个后续任务使用，但这些任务仍各有坐标图或Beta分支等义务。再后来，已证密度结论被加入公开父定理，改变的是对外承诺的位置。模型到公式的推导、共享结果的提取和公开接口的补全，分别发生在历史中的不同时点。[附录R.3.1](appendix.zh-CN.md#r3-1)
+
+**把局部结果组成同一个全局对象。**矩母函数任务的路线需要复数带状区域上的解析控制、极限提取和特征函数识别。历史代码已有真实的局部结果，但不同紧致片段上的极限必须来自同一个全局函数，并且在交叠处相容。后续构造及相容性证明补上了整体组装；列出已有局部引理还不足以完成这一步。完整证明早于支持模块拆分，下游调用者后来虽只改动一个调用，上游依据已从私有公理变成内部证明。[[6]](#ref-6)；[附录R.3.2](appendix.zh-CN.md#r3-2)
+
+**使条件定理能够用于具体模型。**保存的集券例题研究从$N$种等概率券中收集$m_N=\lfloor(N+1)/2\rfloor$种，以独立几何阶段等待时间之和$T_N$表示所需时间。六月的条件性证明允许$N=2$，此时只收集一种券，唯一等待阶段的成功概率为1，整行总方差为零。该配置又通过方差恒等式要求归一化尺度的平方等于总方差，同时要求尺度严格为正。形式检查由此推出矛盾，说明该配置没有可行实例。八月另一份上游中心极限定理候选虽曾被拒绝，已经包含实质的Lindeberg与Lyapunov分支；剩余工作是将具体独立行连接到所用概率模型。完成这个连接后，集券应用仍须把实际均值、方差换成教材采用的渐近归一化。[[8]](#ref-8)
+
+对方差为正的规模，令$Z_N$为使用真实均值和方差的标准化变量，教材表达与它的关系为
+
+$$
+Z_N=\frac{T_N-\mathbb E T_N}{\sqrt{\operatorname{Var}(T_N)}},\qquad
+\frac{T_N-N\log2}{\sqrt{N(1-\log2)}}=a_NZ_N+b_N.
+$$
+
+后续工作已经证明均值误差有界、方差具有所需极限，由此建立$a_N\to1$、$b_N\to0$，并在变化的仿射映射下转移分布收敛。它们与上游极限定理、具体分布连接各是不同成果。这里分析的是保存的独立阶段等待模型，材料没有另行交付它与原始逐次抽券停止时间的等价证明。[附录R.3.3](appendix.zh-CN.md#r3-3)
+
+任务前提改变还会传到定义和调用者。全变差修订加入原文的概率测度要求后，使用该表达式的位置必须提供相应证据。下游收敛谓词需要同时表达概率测度条件与距离收敛；若改写为条件成立时才要求收敛，就会在条件不满足时自动为真。实际修订传递所需证据，使调用者仍表达预期对象。[[7]](#ref-7)
+
+这些历史解释了报告所说的可用成果：证明要来自所声明的模型，局部结果要组成目标结论，调用者也要接得上。第6.3节进一步说明，跨历史记录统计进展时怎样保持这些对象可比。
+
+
+
+### 5.2 找到相关定理以后，还需要哪些工作？
+
+**分布函数资料怎样接入分位数证明。**第二批Skorokhod表示任务B-M3需要构造具有指定分布、且满足所需收敛性质的随机变量。支持实现从分布函数的下分位数入手，用分布函数的单调性、两端极限和右连续性建立分位数性质，再支持后续构造。
+
+这里需要区分两个具体动作。逐点等式说明两个表达式取值相同；直接更换目标却要求系统把它们认作同一展开形式。助手后来利用已有逐点引理，通过函数外延性得到函数等式，再用该等式改写极限、单调性与右连续性目标。这样，库定理才能作用于原来的项目函数。
+
+<a id="section-5-3"></a>
+
+### 5.3 诊断之后，原来的问题发生了什么变化？
+
+首次证明或接口诊断中，19项来自实际实现，14项来自临时声明查询或局部试验。临时查询可能同时返回可用声明的类型和其他名称不存在的信息；实现中的错误则可能要求修改待交付的证明。需要继续追踪相同目标，才能知道返回之后改变了什么。
+
+**有限和及可测性问题逐步修复。**第二批A-L1构造新息及其部分和；证明需要让变量相对于观察历史可测，并保证部分和可积。首份实现同时遇到可测性改写、索引无法确定和有限和可积性名称不匹配等问题。作者先读取报错位置，查找有限和的积分与可积性声明，明确有限索引的类型并改用相应接口。随后还需把观察历史的投影表达式与当前函数连接起来，证明函数等式后才能使用已有的可测性结论。过程中出现的编辑错误和零项可积性目标也分别修复。最终同一任务文件通过检查，并保留上述可测性与有限和可积性证明。这里的进展由报错目标、对应修改和同一文件的后续检查共同确认。[附录T.3](appendix.zh-CN.md#t3)
+
+**一项局部试验没有走到相同终点。**第二批线性最小均方误差任务B-L6中，支持作者试图证明三个项的线性组合平方的积分恒等式。初次诊断显示乘积可积性调用未能匹配当前目标，平方展开还留下其他目标。助手尝试更换表达式，期间一次补丁命令不可用，之后错误再次出现。它继续查询常数乘法接口，尝试简化和直接转换，后续版本推进了乘积可积性，但没有出现整条三项平方积分恒等式通过检查的记录。
+
+同一助手返回时，标明已检查的是高斯矩与独立性等部分。最终任务文件确有单传感器的二次表达式证明，整项运行也通过共同验收；这些证据各自对应自己的目标，不能作为那条三项试验已完成的依据。该试验在所跟踪记录中仍归为未见解决证据。
+
+B-L6的首次检索过程则有可确认的采用。作者沿高斯分布及分布相同的表达继续查找，最终源码使用检索所得接口把已知分布的积分性质转移到噪声变量，证明均值为零和平方积分。返回资料中另一条方差接口没有被使用。因此，这项运行同时包含被采用的检索成果和没有确认完成的局部试验。[附录S.3](appendix.zh-CN.md#s3)及[T.3](appendix.zh-CN.md#t3)
+
+从两例可以看到应记录的变化：目标是否仍是原目标，错误是否消失，留下的是可用声明、局部证明还是最终成果。第3.3节统计第一批的报错分布；本节追踪第二批选定过程中的这些变化。完整逐项表保留于[附录S.2](appendix.zh-CN.md#s2)。
+
+
+
+### 6.2 审核和协作的作用可以落实到具体工作
+
+任务范围和交付可用性因而是可直接落实的检查重点。补齐缺失工作、使成果到达使用者，都能形成可确认的贡献。审核还可以确认既有成果并支持提交：第一批主比较C-L1收到可读的通过意见后，提交了未修改候选。这是检查进入提交决定的实例。[附录R.2.1](appendix.zh-CN.md#r2-1)
+
+<a id="section-6-3"></a>
+
+### 6.3 历史进展怎样与可比对象对应？
+
+第4.4节展示证明库在多次修订中增加了哪些数学内容。统计这种发展，还要确认前后意见评价的是不是可比目标，以及意见对应哪份代码。已有调查先选择意见直接对应预期候选的广义比较，再以有目的的核查选出数学目标也得到肯定可比判断的部分。同一任务可贡献多个前后比较关系，关系也可以共享端点；因此关系数与任务数分别报告，关系不能当作独立任务样本。[[10,32]](#ref-10)
+
+| 历史材料范围 | 比较关系数 | 涉及任务数 | 前项通过数 | 后项通过数 |
+|---|---:|---:|---:|---:|
+| 广义直接绑定比较 | 461 | 248 | 116 | 324 |
+| 目标肯定可比且对象资格满足的关系 | 128 | 79 | 28 | 45 |
+
+广义集合显示标签有明显增长。在目标也得到肯定可比判断的部分中，增长仍然存在。第二行是有目的核查的合格子集，并非第一行的随机样本；两行的趋势差不能全部解释成错误评价或目标变化。
+
+详细异常调查还形成了另一份有目的选择的队列。它与上述461条关系重叠163条，通过数从32增至33；其余298条则从84增至291。详细案例擅长解释某种问题怎样发生，覆盖的增长却只是广泛记录的一部分。因此，这些案例不足以说明全部历史增长主要来自已发现的异常，也不能用来估计异常在所有任务中的发生率。[附录R.3.5](appendix.zh-CN.md#r3-5)
+
+对重复修订的统计同样受任务组成影响。追踪先固定失败起点，再逐步核查后续目标和对应代码；“首步”相对于这个起点，一项任务可以贡献多个起点。在严格合格的材料中，首步通过为22/69，后续步骤为3/31。后续31步来自尚未通过且仍有合格证据的路径，涉及15项任务；这些任务对应的19个首步中，本来就只有1个通过。因此，进入后续追踪的任务在所观察首步中的通过比例已经较低。要检验追加修订的收益，需要保持任务与条件可比，不能把两个比例直接当成同一批任务的衰减曲线。[附录R.3.6](appendix.zh-CN.md#r3-6)
+
+**保存代码提供另一种直接检查。**已有研究固定14对文件，包括6对开发样本和另外选取的8对。28个文件中17个可编译，16个产出所需具名声明；这16个目标均通过保存的两条公理规则，另一个可编译文件缺少请求的声明。编译、具名目标存在和命题语义分别回答不同问题。例如，一份早期证明直接把结论当作前提返回；后期源码去掉该捷径，却在保存环境中编译失败。代码改进与完整实现的检查结果需要同时报告。[[11]](#ref-11)
+
+同一研究还比较了两份候选分别在两套规则下的结果。在已测的公理与直接前提属性上，规则相同或具有已知蕴含关系，额外组合没有比已利用这些关系的公平固定标准比较多回答问题。这是已完成的有界负结果。构造场景另用于验证程序，未增加真实任务成功。[附录R.3.7](appendix.zh-CN.md#r3-7)保留抽样、全部状态和比较依据。
+
+这也说明历史调查与第5章各自承担的任务。历史案例追踪较长的证明发展和调用者变化；第二批固定起点记录使每项运行的早期过程都得到覆盖。前者的材料选择与后者的统一起点不同，各自回答对应范围内的问题。报告将它们共同用于解释项目，但保持计数和结论的范围清楚。
+
+
+
+=== en ===
+
+
+<a id="section-4-1"></a>
+
+### 4.1 How was a scope omission accepted and subsequently repaired?
+
+The first-batch Scheffé lemma task (L3) supports subsequent density problems. For a nonnegative function sequence with the given almost-everywhere convergence, the limit $f$ is integrable and the function integrals converge to its finite integral; the target is $\int|f_n-f|\to0$. The disputed scope concerns the sequences accepted by the lemma: the original A and B deliveries require integrability at every index, whereas the common mathematical-outcome criterion requires coverage of eventually integrable sequences. The original instructions permitted a tail formulation; the later common evaluation explicitly adopted that scope. This distinction matters when interpreting the decisions made by authors and reviewers at the time. [[23,39]](#ref-23)
+
+### 4.3 How did a collaborator's proof enter subsequent tasks?
+
+Producing the mathematical result and making it available to the author therefore occurred at different stages. The inversion argument handles exchange of finite integrals, the pointwise limit of an oscillatory kernel, dominated convergence, and half the mass at each endpoint. Let $\mu$ be a probability distribution and $\phi_\mu$ its characteristic function. For $a<b$, it obtains
+
+Broad assistance also has examples of completed and adopted work. First-batch B-M1 delegated the stopped-process and stopped-expectation group to a support author; the main author obtained the patch, integrated and built it, and requested mathematical review. Beyond finite stopping, the support implementation handled the limit passage. For a martingale $X$ and an integrable stopping time $T$, with increments bounded by a constant $c$,
+
+<a id="section-4-4"></a>
+
+### 4.4 How did historical revisions add usable mathematical content?
+
+Earlier code revisions supplement the observations from individual runs. They span versions of the proof library and its callers. The following accounts identify the mathematical work actually added; these historical records do not enlarge the experimental denominator in Section 3.
+
+**Deriving a density from a probability model.** An early implementation from normalized Gamma variables to a Dirichlet distribution used an axiomatic bridge. A later revision removed the axiom but directly defined the normalized-variable density as the target formula, leaving the model-to-formula derivation unproved. Subsequent revisions established the product distribution, normalization map, simplex support, projected density, and change of variables, connecting the model to the density formula. This explains why checking axiom names alone does not measure all mathematical progress. [[4]](#ref-4)
+
+Two downstream tasks used the result while retaining their own coordinate-chart or Beta-branch obligations. Later, the proved density conclusion was added to the public parent theorem, changing where the commitment was exposed. The derivation, extraction of a shared result, and completion of the public interface occurred at different historical points. [Appendix R.3.1](appendix.en.md#r3-1)
+
+**Assembling local results into one global object.** The moment-generating-function route requires analytic control on a complex strip, extraction of limits, and identification by characteristic functions. Historical code contained substantive local results, but limits on different compact pieces had to arise from one global function and agree on overlaps. Later construction and compatibility proofs completed this assembly; listing existing local lemmas did not do so. The complete proof preceded the split into support modules. Although a downstream caller later changed only one call, its upstream basis had changed from a private axiom to an internal proof. [[6]](#ref-6); [Appendix R.3.2](appendix.en.md#r3-2)
+
+**Making a conditional theorem apply to a concrete model.** The saved coupon example studies collecting $m_N=\lfloor(N+1)/2\rfloor$ types from $N$ equally likely types, representing the required time by a sum $T_N$ of independent geometric stage waiting times. The June conditional proof permits $N=2$, when only one type is collected: the sole waiting stage has success probability 1, so the entire row has zero total variance. The configuration also equates the squared normalization scale to that variance while requiring a strictly positive scale. Formal checking derived a contradiction, showing that this configuration had no instance. A separate rejected upstream central-limit candidate from August nevertheless contained substantive Lindeberg and Lyapunov branches; the remaining work connected its concrete independent rows to the probability model used. After that connection, the coupon application still had to replace its actual mean and variance by the textbook's asymptotic normalization. [[8]](#ref-8)
+
+For sizes with positive variance, let $Z_N$ use the actual mean and variance. Its relation to the textbook expression is
+
+$$
+Z_N=\frac{T_N-\mathbb E T_N}{\sqrt{\operatorname{Var}(T_N)}},\qquad
+\frac{T_N-N\log2}{\sqrt{N(1-\log2)}}=a_NZ_N+b_N.
+$$
+
+Later work established a bounded mean error and the required variance limit, yielding $a_N\to1$ and $b_N\to0$, and transferred convergence in distribution under the changing affine maps. These are distinct contributions alongside the upstream limit theorem and the concrete distribution connection. The analyzed artifact is the saved independent-stage waiting model; the materials do not separately deliver equivalence to the stopping time of the original sequential coupon draws. [Appendix R.3.3](appendix.en.md#r3-3)
+
+Changed assumptions also propagate to definitions and callers. After a total-variation revision restored the source's probability-measure requirement, uses of the expression had to provide the corresponding evidence. A downstream convergence predicate needs both the probability-measure condition and distance convergence. Replacing their conjunction with an implication would make it automatically true when the condition fails. The actual revision passed the needed evidence so that callers continued to express the intended object. [[7]](#ref-7)
+
+These histories explain what a usable result entails: the proof comes from the stated model, local results assemble into the target, and callers can connect to it. Section 6.3 examines how to keep the objects comparable when counting progress across historical records.
+
+
+
+### 5.2 What work remains after finding a relevant theorem?
+
+**Connecting distribution-function material to a quantile proof.** The second-batch Skorokhod representation task B-M3 needs random variables with specified distributions and the required convergence properties. The support implementation starts from a lower quantile of the distribution function, using monotonicity, endpoint limits, and right continuity to establish quantile properties for the later construction.
+
+Two specific operations differ here. Pointwise equality establishes equal values, whereas that direct target replacement requires the system to recognize the same unfolded expression. The helper later applied function extensionality to the existing pointwise lemma, obtained a function equality, and used it to rewrite the limit, monotonicity, and right-continuity targets. The library theorems could then apply to the original project function.
+
+<a id="section-5-3"></a>
+
+### 5.3 What changed in the original problem after a diagnostic?
+
+Of the first proof or interface diagnostics, 19 concern actual implementations and 14 concern temporary declaration queries or local trials. A temporary query may return both a usable declaration's type and reports that other names do not exist. An implementation error may require changing a proof intended for delivery. Following the same target is necessary to establish what changed afterward.
+
+**Repairing finite-sum and measurability problems.** Second-batch A-L1 constructs innovations and their partial sums. The proof needs measurability relative to observation histories and integrability of the partial sums. Its initial implementation had problems with measurability rewriting, undetermined indices, and a mismatched finite-sum integrability name. The author read the failing locations, searched finite-sum integral and integrability declarations, made the finite-index type explicit, and used the appropriate interface. It also had to connect an observation-history projection expression to the current function, proving a function equality before applying the available measurability result. An incidental editing error and a zero-term integrability goal were repaired as well. The same task file eventually passed checking and retained the measurability and finite-sum integrability proofs. Progress is established by the diagnostic targets, corresponding edits, and later check of that file. [Appendix T.3](appendix.en.md#t3)
+
+**A local trial did not reach the same endpoint.** In the second-batch linear minimum-mean-square-error task B-L6, a support author tried to prove an integral identity for the square of a three-term linear combination. The initial diagnostic showed that a product-integrability call did not match the current target; other square-expansion goals remained as well. The helper tried changing the expression; a patch command was unavailable during the process, and the error reappeared afterward. It continued with constant-multiplication queries, simplification attempts, and direct conversion. A later version advanced product integrability, but the record contains no passing check of the complete three-term square-integral identity.
+
+The helper's return identified checked Gaussian-moment and independence components. The final task file does contain a single-sensor quadratic-expression proof, and the whole run passed common acceptance. Those items concern their own targets and do not establish completion of the three-term trial. The trial remains classified as having no observed resolution in the followed record.
+
+B-L6's first retrieval process, meanwhile, has confirmed adoption. The author continued through Gaussian-distribution and equality-in-distribution representations; final source uses retrieved interfaces to transfer integral properties of the known distribution to the noise variable, proving zero mean and the square integral. Another variance interface returned in the material was not used. Thus the run contains both adopted retrieval results and a local trial whose completion was not confirmed. [Appendix S.3](appendix.en.md#s3) and [T.3](appendix.en.md#t3)
+
+The cases show which changes should be recorded: whether the target is still the original one, whether its errors disappear, and whether the remaining result is an available declaration, a local proof, or a final delivery. Section 3.3 counts first-batch diagnostic occurrences; this section follows these changes in selected second-batch processes. The complete itemized table remains in [Appendix S.2](appendix.en.md#s2).
+
+
+
+### 6.2 Locate the contributions of review and collaboration in concrete work
+
+Task scope and delivery usability are therefore concrete checks to implement. Filling missing work and bringing results to their users can each make a verifiable contribution. Review can also confirm existing work and support submission: first-batch main-comparison C-L1 received a readable passing opinion and submitted an unchanged candidate. This is an instance of checking entering a submission decision. [Appendix R.2.1](appendix.en.md#r2-1)
+
+<a id="section-6-3"></a>
+
+### 6.3 How does historical progress correspond to comparable objects?
+
+Section 4.4 shows mathematical content added across revisions. Counting that development also requires checking whether earlier and later opinions concern comparable targets and which code each evaluates. The existing investigation first selects broad comparisons with opinions directly bound to the intended candidates, then purposefully checks a subset for affirmative mathematical-target comparability. A task can contribute multiple earlier/later comparison relations, and relations can share endpoints. Relation and task counts are therefore reported separately; relations are not independent task samples. [[10,32]](#ref-10)
+
+| Historical material | Comparison relations | Tasks | Earlier passes | Later passes |
+|---|---:|---:|---:|---:|
+| Broad directly bound comparisons | 461 | 248 | 116 | 324 |
+| Relations with affirmative target comparability and qualified objects | 128 | 79 | 28 | 45 |
+
+The broad set shows substantial label growth. Growth remains where target comparability is also affirmatively established. The second row is a qualified subset from purposeful checking, not a random sample of the first. Their differing trends cannot all be attributed to erroneous evaluation or target changes.
+
+A separate, purposefully selected queue of detailed anomaly investigations overlaps 163 of the 461 relations, with passes increasing from 32 to 33. In the other 298 relations, passes increase from 84 to 291. Detailed cases explain how particular problems arise, but cover only part of the growth in the broad collection. They therefore cannot establish that the discovered anomalies account for most historical growth or estimate their prevalence across all tasks. [Appendix R.3.5](appendix.en.md#r3-5)
+
+Repeated-revision statistics are also affected by task composition. Follow-up fixes failure starting points and checks subsequent targets and corresponding code at each step. A first step is relative to such a start, and a task can contribute multiple starts. In the strictly qualified material, first steps pass in 22/69 cases and later steps in 3/31. The 31 later steps come from paths that have not yet passed and still have qualified evidence, covering 15 tasks. Only 1 of the 19 corresponding first steps for those tasks passed. Thus tasks entering later follow-up already had a lower pass proportion in their observed first steps. Testing the return to further revision requires comparable tasks and conditions; these proportions are not a decay curve for the same task population. [Appendix R.3.6](appendix.en.md#r3-6)
+
+**Saved code supplies another direct check.** Existing research froze 14 file pairs: 6 development pairs and 8 separately selected pairs. Of 28 files, 17 compile and 16 yield the required named declarations. All 16 extracted targets pass the two saved axiom rules; the additional compiling file lacks the requested declaration. Compilation, presence of a named target, and proposition semantics answer different questions. For example, an early proof simply returns its conclusion supplied as a premise. Later source removes that shortcut but fails to compile in the saved environment. Both the code improvement and the complete implementation's checking outcome need to be reported. [[11]](#ref-11)
+
+The same study also evaluated two candidates under two rule sets. For the tested axiom and direct-premise properties, the rules were identical or had known implication relations, and the additional combinations answered no more questions than a fair fixed-standard comparison already using those relations. This is a completed, bounded negative result. Constructed scenarios separately validated the program without adding real-task successes. [Appendix R.3.7](appendix.en.md#r3-7) retains selection, all statuses, and the comparison basis.
+
+This also distinguishes the roles of the historical investigation and Section 5. Historical cases follow longer proof development and caller changes; fixed second-batch starts cover early processes in every run. Purposeful historical selection and uniform starts answer questions within their respective scopes. The report uses both to explain the project while preserving the scope of their counts and conclusions.
+
+
+
+END_REVISION27_CLOSURE

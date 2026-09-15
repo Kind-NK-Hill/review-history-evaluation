@@ -1,0 +1,147 @@
+{
+  "before_count": 18,
+  "after_count": 20,
+  "inventory": [
+    {
+      "path": "ProbabilityTheory.lean",
+      "before_sha": "218e8d1074575a0854f1f1b72f5ca089a4a64a778c0a7e955ee7b57dfdcb0308",
+      "after_sha": "218e8d1074575a0854f1f1b72f5ca089a4a64a778c0a7e955ee7b57dfdcb0308",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/def_2_5.lean",
+      "before_sha": "098bee697027cdd46a3866f60808987197d4d2c2ec6f426c8340eca4c9e114c3",
+      "after_sha": "098bee697027cdd46a3866f60808987197d4d2c2ec6f426c8340eca4c9e114c3",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/def_2_6.lean",
+      "before_sha": "44fe956df0295a6ad3f6a82e2cf1a9447b610f25bc1ada11dfd943a32cc502d3",
+      "after_sha": "44fe956df0295a6ad3f6a82e2cf1a9447b610f25bc1ada11dfd943a32cc502d3",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/def_2_7.lean",
+      "before_sha": "6ec3dfeba779dbb8742c673633b59633c04e923cdaca9e73f436450aaabe1d9d",
+      "after_sha": "6ec3dfeba779dbb8742c673633b59633c04e923cdaca9e73f436450aaabe1d9d",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/def_2_8.lean",
+      "before_sha": "72f0b2a477d52384d99482e1a0daae7bd8afb97b4dcd4d45cde403a8bf56f2c4",
+      "after_sha": "72f0b2a477d52384d99482e1a0daae7bd8afb97b4dcd4d45cde403a8bf56f2c4",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/prob_2_4.lean",
+      "before_sha": "276f944550e2fbaa7f13eaa836d3f2ba4cd9c642c0d2593b2097d952246db3b8",
+      "after_sha": "276f944550e2fbaa7f13eaa836d3f2ba4cd9c642c0d2593b2097d952246db3b8",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/thm_2_2.lean",
+      "before_sha": "ce33404b81ab6acde28712963a8dfa72176b5e00d0448a89bae982192cc77307",
+      "after_sha": "ce33404b81ab6acde28712963a8dfa72176b5e00d0448a89bae982192cc77307",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/thm_2_3.lean",
+      "before_sha": "49b97f4091018729c7de13728e904a69b382f77146b742db2046fb25256b0613",
+      "after_sha": "49b97f4091018729c7de13728e904a69b382f77146b742db2046fb25256b0613",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/thm_2_4.lean",
+      "before_sha": "72ae2d49de9e5c530dc13a8f9ed706be991ebfd1bc81839c9125b56ab4a5b289",
+      "after_sha": "72ae2d49de9e5c530dc13a8f9ed706be991ebfd1bc81839c9125b56ab4a5b289",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/thm_2_6.lean",
+      "before_sha": "41c3065e4c5a95591caf967c1e05ebd5a6c5add40d5ceaba0851a4c2bdcc18d8",
+      "after_sha": "41c3065e4c5a95591caf967c1e05ebd5a6c5add40d5ceaba0851a4c2bdcc18d8",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_02/thm_2_8.lean",
+      "before_sha": "1ceddff10a2445e12ab43da89c901dc4fc729524f9db4c2915ac6185926b3c0a",
+      "after_sha": "1ceddff10a2445e12ab43da89c901dc4fc729524f9db4c2915ac6185926b3c0a",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_10/continuous_mapping_support.lean",
+      "before_sha": null,
+      "after_sha": "746e3ddc200d6cf972c7ea14ca7e916ddb7a57573c42b53d1d38ba4330974ae5",
+      "same_bytes": false
+    },
+    {
+      "path": "ProbabilityTheory/chapter_10/convergence_support.lean",
+      "before_sha": "4418b61fd9e092f45a18e1fc77540062852683425348580b58695d4fe1433847",
+      "after_sha": "212bc06c07333c99bc46986bc2f4c8434e85ca405738dfc2ef439144c2413ccb",
+      "same_bytes": false
+    },
+    {
+      "path": "ProbabilityTheory/chapter_10/coordinate_convergence_support.lean",
+      "before_sha": null,
+      "after_sha": "565a692411387f290c3b074296724c55aa499e650283eaacd3f8f60be296f900",
+      "same_bytes": false
+    },
+    {
+      "path": "ProbabilityTheory/chapter_10/def_10_1.lean",
+      "before_sha": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+      "after_sha": "d98553649be1dce5c33243f71fc0fc6eff72405c82c005e6e9c1ccc59fe53067",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_10/def_10_2.lean",
+      "before_sha": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+      "after_sha": "3191defd2b13ff5b993237e45d5eef262509703cf4f621bcded794824f1f6914",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_10/def_10_6.lean",
+      "before_sha": "c408214fca92bd3531134688545a17d2b3c7f4a8a50d514e088a43ff38debc1b",
+      "after_sha": "c408214fca92bd3531134688545a17d2b3c7f4a8a50d514e088a43ff38debc1b",
+      "same_bytes": true
+    },
+    {
+      "path": "ProbabilityTheory/chapter_10/thm_10_10.lean",
+      "before_sha": "565a692411387f290c3b074296724c55aa499e650283eaacd3f8f60be296f900",
+      "after_sha": "0afde962c4759d6cb6601bb0cef177dc1fe9ec7712567990bbfe11aac834c8f2",
+      "same_bytes": false
+    },
+    {
+      "path": "ProbabilityTheory/chapter_10/thm_10_11.lean",
+      "before_sha": "746e3ddc200d6cf972c7ea14ca7e916ddb7a57573c42b53d1d38ba4330974ae5",
+      "after_sha": "fbb69237b93595c7188343cc59abe7ab8658fcd3f60460f5ebbc1003eaaae5f4",
+      "same_bytes": false
+    },
+    {
+      "path": "ProbabilityTheory/chapter_10/thm_10_9.lean",
+      "before_sha": "4c458f7dd1ed801b4e18af2818f5024743bab71b507c388c0650ac4e0d50f239",
+      "after_sha": "4c458f7dd1ed801b4e18af2818f5024743bab71b507c388c0650ac4e0d50f239",
+      "same_bytes": true
+    }
+  ],
+  "body_mapping": [
+    {
+      "before": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\candidates\\c1\\visible-files\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+      "after": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\candidates\\c3\\visible-files\\ProbabilityTheory\\chapter_10\\coordinate_convergence_support.lean",
+      "same_excluding_imports_and_outer_space": true
+    },
+    {
+      "before": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\candidates\\c1\\visible-files\\ProbabilityTheory\\chapter_10\\thm_10_11.lean",
+      "after": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\candidates\\c3\\visible-files\\ProbabilityTheory\\chapter_10\\continuous_mapping_support.lean",
+      "same_excluding_imports_and_outer_space": true
+    },
+    {
+      "before": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\candidates\\c1\\visible-files\\ProbabilityTheory\\chapter_10\\convergence_support.lean",
+      "after": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-c\\candidates\\c3\\visible-files\\ProbabilityTheory\\chapter_10\\convergence_support.lean",
+      "same_excluding_imports_and_outer_space": true
+    }
+  ],
+  "new_entries": {
+    "thm_10_10.lean": "import ProbabilityTheory.chapter_10.continuous_mapping_support\n\n/-\n# thm_10_10 entry point\n\nThis target imports the complete, acyclic support chain for Theorems 10.10 and\n10.11. Both public main declarations are visible from this entry point.\n-/\n",
+    "thm_10_11.lean": "import ProbabilityTheory.chapter_10.continuous_mapping_support\n\n/-\n# thm_10_11 entry point\n\nThis target imports the complete, acyclic support chain for Theorems 10.10 and\n10.11. Both public main declarations are visible from this entry point.\n-/\n"
+  }
+}

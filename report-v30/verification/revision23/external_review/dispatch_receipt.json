@@ -1,0 +1,15 @@
+{
+  "via": "Codex app send_message_to_thread",
+  "threadId": "6aa6afbe-3a60-83ec-8a73-b10183ac7172",
+  "title": "中文评审要求",
+  "model": "preserved existing settings; live model not exposed by app API",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"threadId\":\"6aa6afbe-3a60-83ec-8a73-b10183ac7172\"}"
+      }
+    ],
+    "isError": false
+  }
+}

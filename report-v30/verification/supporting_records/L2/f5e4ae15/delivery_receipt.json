@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "epoch": 1789113729.0262482,
+  "stderr": "",
+  "files": {
+    "root": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\help\\2b4b2961-5e81-4333-b8f8-dd3aa3dd11b7\\help-result-2b4b2961-5e81-4333-b8f8-dd3aa3dd11b7",
+    "files": {
+      "response.md": {
+        "bytes": 1992,
+        "sha256": "9d3b98dded353c13a8b398197a5b23fc665d205d8cfa927c9fcc9fc1fd106c1f"
+      }
+    }
+  }
+}

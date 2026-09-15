@@ -1,0 +1,1255 @@
+How probability proofs are completed
+Workflow history and three organizational trajectories
+Revision 11
+12 September 2026
+Acceptance cutoff: 09:22 Beijing
+An evaluation of the ProbabilityTheoryFormalization project
+English revision 11 ꞏ Experimental acceptance: 12 September 2026, 09:22 Beijing time (UTC+8)
+Abstract
+ProbabilityTheoryFormalization uses AI agents and Lean to turn probability-textbook statements and ar-
+guments into a maintained collection of formal proofs. Its workflow connects source preparation and
+dependency planning with proof implementation, library search, assistance, independent review, repair
+and controlled acceptance. This report evaluates what those activities deliver and where their connections
+fail, using eleven task groups, detailed execution histories, a reconstruction of historical review records
+and checks of saved code.
+The three tested organizations are A, an author working through the project’s existing control and review
+procedures; B, a lead author choosing how to implement, delegate, check and submit; and C, a separate
+coordinator assigning proof work and checks. Under the corrected acceptance criteria, A completes 9/11
+groups, B 10/11 and C 11/11. A/B omit the task-permitted eventual-integrability formulation of Scheffé’s
+lemma; original A omits the continuous-mapping branch of the vector-convergence group. B/C deliver
+complete, disclosed repairs to insufficient continuous-mapping assumptions. Across nine groups with
+complete comparable time records, median solver spans are 58.9, 33.2 and 28.7 minutes. These are results
+of the executed configurations, including their different models, development versions and host interven-
+tions. [12-14,22,23]
+The cases explain more than the ordering. In the innovation-to-martingale task, A produces a buildable
+proof and several passing opinions, but cannot use those opinions until host recovery; an early C run
+submits while disclosing that its requested checks have not arrived. The fourth-moment strong-law proof
+improves by deriving a required bound internally. The inversion group connects helper-produced analysis
+to later theorem calls, whereas maximal-coupling assistance produces code without an established adoption
+chain. Reassessment also corrects the evaluator: it both reverses mistaken rejections and withdraws an
+overly broad acceptance. [17-19,22,23,25,27]
+Historical analysis retains positive recorded-label change in 128 comparisons with identified candidates
+and affirmative same-target decisions, while showing why lower acceptance on later revisions does not es-
+tablish diminishing returns. Saved-code checks distinguish compilation, removal of a direct proof shortcut
+and agreement with a stated definition. Together, the findings establish substantial mathematical delivery
+and specific repair mechanisms. The maintenance priorities are completing the public task interface, get-
+1
+ting produced work to the next decision maker, and applying the intended mathematical criterion consis-
+tently. [8-11]
+Reading guide. Section 1 introduces the project and all three configurations; Section 2 explains the tasks
+and evaluation. Section 3 gives the results, Sections 4–6 examine their mathematical and operational
+meaning, and Section 7 states the assessment and maintenance priorities. The technical appendix supplies
+detailed methods and cases.
+System ꞏ Study design ꞏ Results ꞏ Evaluation corrections ꞏ Trajectories ꞏ Historical analysis ꞏ Assessment
+ꞏ Technical appendix
+1 How the project organizes and maintains proofs
+1.1 From textbook material to a usable proof library
+ProbabilityTheoryFormalization, formerly ToyApollo, develops AI-assisted formalization of a probability
+textbook. Its practical goal is to turn the textbook’s definitions and arguments into formal results that
+express the intended mathematics and can be used by later chapters. Lean checks the formal declarations
+and proofs; Mathlib is the general mathematics library available to those proofs. [26,34]
+The workflow begins before an author receives a proof task. The operator supplies the source material,
+which is organized into source units such as a numbered subsection or a Problems section. A task plan
+identifies the work and its declared dependencies, including explicit references to earlier textbook results.
+Additional support for a problem can be selected during implementation. The task package brings together
+the source, plan, permitted dependencies, their selection reasons and the working draft. Thus an earlier
+theorem is not just a file the author might find: the plan records when the task is intended to rely on it.
+[34,35]
+The software separates orchestration, proof checking and persistent state. Python coordinates task prepara-
+tion, checks and the next eligible actions. AI roles choose and carry out mathematical work. Lean checks
+the resulting code. SQLite indexes tasks and retained build, review and application evidence so that work
+can be resumed and maintained. Drafts and temporary artifacts are staged separately from the canonical
+corpus, the project’s official Lean task files. Acceptance is the step that moves reviewed work into that
+corpus. [34]
+In the task groups studied here, an agent receives the textbook claim and argument, a task sheet, the permit-
+ted library and designated upstream material—existing results the task may use. It must deliver public
+declarations, their proof bodies, necessary support—auxiliary mathematical code—and an explanation of
+how the task is met. A source obligation is work required by the task; a public premise is an assumption a
+caller must supply to use an exported theorem. Making a required intermediate conclusion a public premise
+leaves that work to the caller. A candidate is a code version, and its delivery includes the accompanying
+submission material. Section 1.4 illustrates these distinctions. [12]
+In the execution accounts, author, helper and reviewer denote AI roles, not the human authors of this
+report. An author searches and implements; a helper supplies code or analysis; a reviewer inspects the
+requested mathematics. A coordinator assigns work and decides what to do with returned results. The
+host is the surrounding runtime or operator that dispatches roles, transfers artifacts and can intervene.
+The project documentation supplies the operating design described here; the frozen configurations and
+execution histories below establish the behavior of the studied runs.
+2
+1.2 Three configurations: existing control, lead author and coordinator
+A, B and C are three executed configurations for working on the same task groups. A uses the project’s
+existing workflow. B and C are experimental alternatives for organizing the work, not successive
+phases of the production system.
+Configuration Who organizes the work and
+decides the next action?
+Recorded execution models
+A — existing controlled
+workflow
+The author selects searches and edits.
+Deployed programs organize review
+and constrain continuation and
+acceptance; the host can also
+intervene or stop a run.
+Sol medium
+B — lead-author
+organization
+The lead author chooses search,
+implementation, delegation,
+checking and submission through
+the available tools.
+Sol medium author and services
+C — separate
+coordinator
+The coordinator assigns writers and
+checking services, reads their results
+and decides whether to revise or
+submit. Writers choose local proof
+implementations.
+Astra medium coordinator; Sol medium
+writers and checks
+Here Sol and Astra denote the recorded gpt‐5.6‐sol and gpt‐6‐astra configurations; medium is their
+reasoning-effort setting. C therefore changes the model used for organizational decisions as well as the
+role structure. B can delegate an entire implementation and request review afterward; it is not necessarily a
+single unaided author. A retains substantial local author discretion within its control procedures.[12,18,31]
+The tool implementations developed during the study. The main comparison uses the later working B and
+C versions, while earlier versions remain in the case histories to explain capability and return-delivery
+faults. A includes earlier development runs, later runtime runs, host recovery and a continuation of the
+inversion group. Section 2.1 explains how these attempts enter the comparison, and Appendix N.1 gives
+the operational differences and time allowances.
+1.3 From a working draft to an accepted task
+The documented project loop prepares a task package, lets the author search and edit, checks the candidate
+with Lean, requests independent semantic review, and then repairs or applies the result. Semantic review
+checks how source claims and essential proof steps appear in the declarations, assumptions and proof
+bodies; it also examines listed downstream callers—the code that uses the result. Its purpose is to assess
+the mathematical delivery rather than repeat the compiler’s judgment. [34,35]
+Stage Who decides or executes Direct result and next action
+Prepare the task package Program assembles source, task
+plan, dependencies and permissions
+A working draft with its mathematical duties
+and allowed context
+Search, edit and probe Author chooses library searches,
+interface tests and proof changes
+Candidate code and auxiliary results
+Build Author requests a tool check in the
+specified environment
+A build-ready candidate, or diagnostics for
+the next edit
+Continued on next page
+3
+Stage Who decides or executes Direct result and next action
+Independent semantic
+review
+Outer agent or operator invokes a
+read-only reviewer
+Findings about source correspondence, proof
+responsibility and downstream use
+Repair or diagnose Author repairs an accepted route; a
+read-only diagnoser examines
+source or route problems
+Changed proof work, or a clarified statement
+and route before further authoring
+Apply the reviewed
+result
+Program checks the review and its
+current basis
+Reviewed code becomes canonical; the
+application is recorded
+A failed review does not always call for another local edit. A missing lemma within an accepted route stays
+in ordinary repair. A source mismatch, a missing core argument hidden in a premise, or an unclear proof
+route instead pauses ordinary repair for read-only diagnosis. The diagnoser identifies the route or statement
+problem; it does not write the proof or replace the semantic reviewer. The repair loop also refuses to send
+an unchanged candidate back after a semantic failure. The risk-triggered pre-authoring route check, the
+Math Gate, is explained in Section 1.5. [34]
+Preparing a service and executing it remain different operations. review‐now prepares the request and
+exposes the next action; an outer agent or operator still invokes the reviewer. Similarly, a helper may
+produce code in an isolated workspace before the result is exported, read by the lead role, applied and
+checked. These handoffs explain why the cases follow what the decision maker actually received, rather
+than equating a completed invocation with a usable result. [19,34]
+Before applying a passing review, the program checks that it still concerns the candidate, support, source
+and review requirements being used. This is the review binding. Only an eligible result can update the
+canonical task file; a failed application restores its prior contents. A failed review of an existing official
+result normally preserves the code and records the need for repair. This separates exploring a replacement
+from accepting it, while retaining the evidence that explains the decision. [34]
+1.4 What it means to complete a proof
+The historical inversion task thm_9_5, which connects interval probabilities to integrals of a characteristic
+function, shows why a valid conditional proof can still leave work unfinished. Its early candidate already
+contained substitution, pointwise cases, dominated convergence and rescaling. An assumption called h_
+spine supplied three analytical ingredients: integrability, justification for exchanging integrals and the
+Dirichlet-integral limit. Successive candidates moved those duties into the proof. [1]
+Revision stage Mathematical work already
+present or added
+Work still supplied by the caller
+Initial conditional proof Main argument conditional on its
+analytical ingredients
+Integrability, integral interchange and the key
+limit
+Next candidate Product integrability from bounds
+and finite measure
+Interchange and the limit
+Following candidate Interchange for nonnegative
+truncation parameters
+The Dirichlet-integral limit
+Completed assembly Limit from error bounds; previously
+proved ingredients assembled
+h_spine removed
+The restriction to nonnegative truncation parameters matters. The final proof sends the parameter to posi-
+tive infinity, so it does not need the stronger all-parameter auxiliary statement initially planned. Narrowing
+4
+that internal lemma avoids unnecessary work without weakening the textbook target. Retaining a required
+ingredient in the public h_spine premise, by contrast, leaves real work outside the delivered theorem. Ear-
+lier reviews recognized intermediate progress that a sequence of non-pass labels alone would hide. [1]
+This report distinguishes four kinds of completion evidence:
+Evidence Question it answers
+Build Does the written code check in the recorded environment?
+Semantic review Does the reviewer judge the statement and proof to meet the source
+obligations?
+Binding and production
+acceptance
+Has the project applied an eligible review to the required code and current
+review basis?
+Post-submission common
+evaluation
+Does the experimental delivery meet the criteria adopted for this study?
+The main results use the last of these. Historical acceptance records retain their contemporary meaning;
+current comparison passes use the corrected criteria in Sections 2 and 4. Experimental outcomes do not
+by themselves record formal acceptance into the production project. Appendix N.2 explains that boundary.
+[13,26]
+1.5 Route checks, task scheduling and whole-proof responsibility
+A parent task owns the original textbook claim. The Math Gate is a risk-triggered check of a natural-
+language proof route and proposed Lean statement. It is used for source mismatch, shifting core proof
+work into public assumptions or repeated failures without a clear route; most small tasks do not use it. A
+go permits ordinary parent-task writing. A stop blocks that activity under the current plan. Historical stops
+could still permit designated support work: useful lemmas accumulated during the moment-generating-
+function case. A later vector-convergence run received a broader host instruction prohibiting all editing,
+assistance and new review. Those were different restrictions imposed by different actors. [6,22,26,34]
+Historically, some proof obligations, labeled OBL, became subtasks with their own candidates, reviews
+and propagation of completion status. Later rules absorbed them into parent or support files and required
+renewed assessment of the assembled parent. Decomposition still produces useful mathematics, but its
+pieces must be connected to the final public theorem and its callers. Sections 5 and 6 examine that connec-
+tion. [5]
+For multiple tasks, batch planning reads the recorded state and dependencies to distinguish work ready for
+authoring, work needing review or route checking, and work blocked by an upstream task. It can organize
+a worker queue around downstream dependencies and potential work conflicts. The plan identifies the next
+actions; the outer agent dispatches the corresponding roles, and each task still follows its own acceptance
+path. An empty ordinary-author queue can therefore mean that a reviewer or diagnoser must act next,
+rather than that all work is finished or the user must intervene. [34]
+The division of responsibility developed from an earlier pipeline with prescribed planning, retrieval and
+candidate-selection stages, already including reranking, error feedback and experience injection. Later
+package-based editing gave the author more discretion while retaining explicit acceptance controls. Ap-
+pendix L.1 traces that development; it is separate from the A/B/C comparison. [3]
+5
+1.6 Library interfaces and maintenance after acceptance
+The same textbook concept can have different Lean representations in the project and in Mathlib. Importing
+a theorem expressed with the project’s expectation, for example, does not by itself convert it into a theorem
+about a Mathlib integral. For important shared concepts, the documented policy is to introduce the textbook
+definition and basic properties, prove a translation theorem connecting that interface to Mathlib, and then
+usually use the Mathlib form in later work. This is a policy for recurring mathematical interfaces, not a
+required cycle for every local lemma. Existing runnable files are kept unless a concrete reuse problem
+calls for an interface repair. [35]
+Dependency selection follows actual use. Mentioning expectation in a source passage supplies mathemat-
+ical context; it does not automatically require importing the project’s expectation definition. An import is
+justified by the declaration, earlier theorem or translation the proof needs, and the dependency trail records
+that reason. General library infrastructure is legitimate support. If an auxiliary theorem carries the assigned
+task’s mathematical content, however, review must inspect it as part of that task’s proof, not exempt it be-
+cause it is named a bridge. The variance-expansion comparison in Section 4.1 and the Gamma/Dirichlet
+history in Section 6.1 examine this distinction in concrete proofs. [35]
+Acceptance does not end maintenance. A changed definition or theorem signature can require callers to
+provide different arguments or assumptions. The task and dependency records identify affected work;
+builds and review check the revised interfaces and their use. SQLite keeps a rebuildable index of the
+underlying evidence, separating an earlier passing review, coverage of the current code and support, and
+a working candidate that still needs attention. A change requires the relevant coverage to be checked
+again, not merely retention of a pass label. The total-variation repair in Section 6.2 shows this obligation
+concretely: the source’s probability-measure condition had to reach both the definition and its callers.
+[7,34]
+2 Tasks, evidence and evaluation scope
+2.1 Tasks, retained attempts and evidence units
+The study uses eleven groups chosen for their mathematical work and organizational questions. Several
+groups require connected results rather than one isolated theorem. The identifiers below are labels for
+locating cases; L, M and H retain the planned workload tiers, not a measured ranking of mathematical
+difficulty. [12,31]
+Group Mathematical task
+L1 Construct innovations and prove their partial sums form a martingale
+L2 Prove variance additivity and the associated weak law
+L3 Scheffé’s lemma, density convergence and associated distributional
+conclusions
+L4 Total-variation formulas and distribution calculations
+L5 Construct a maximal coupling
+L6 One- and two-sensor linear minimum mean-square error
+L7 Coordinatewise vector convergence and continuous mapping
+M1 Stopped processes and stopped expectations
+M2 Strong law under fourth-moment conditions
+M3 Skorokhod representation on a common probability space
+Continued on next page
+6
+Group Mathematical task
+H1 Characteristic-function inversion, uniqueness and two applications
+A solver root is one top-level attempt together with its author turns, services and any continuation on
+the same clock. The main panel retains one delivery per configuration and group: eleven groups times
+three configurations give 33 entries. Across all development versions there are 41 roots. A contributes
+nine earlier-development runs and two later-runtime runs, for H1 and M3. B and C each contribute eleven
+runs from their later working implementations. Earlier B/C versions and the separate A-L7 repair remain
+supplementary rather than alternate main-panel entries. [12,13,31]
+The saved aggregation first selects the first complete candidate with a common decision in each root’s
+bound list; if none exists, it selects the first delivery with a common decision in that list. It then applies the
+configuration-version selection just described, without selecting on verdict. This retains A-H1’s complete
+same-root continuation rather than counting its earlier partial snapshot as another success. It leaves the
+separately restarted A-L7 repair outside the original entry. The selection is documented in the retrospective
+aggregation; no pre-solve freeze of that rule was recovered. Appendix N.1 gives the operational version
+differences. [31]
+Source and task sheets match across A/B/C in all eleven selected common-evaluation bundles. The up-
+stream manifests also match except for an empty continuous-mapping target listed in A-L7; it contains no
+implementation. These checks establish the supplied evaluation basis. The executions still differ in role
+models, tool versions and host interventions, and later source clarifications are reported at the stage when
+they were introduced. [31]
+The historical studies provide complementary evidence: reconstruction asks which saved records are dis-
+tinct judgments and comparable transitions; saved-code checks examine frozen declarations; detailed cases
+explain mathematical and operational changes. These records are not additional entries in the configuration
+panel. [8-11]
+Evidence unit Role in the analysis
+Main-panel delivery Completion of the adopted obligations for one selected
+configuration–task entry
+Solver root One top-level attempt, including services, recovery and same-root
+continuation
+Role dispatch One attempted role invocation, including unsuccessful attempts
+Tool return Completed output visible to a model, including deliberate probes and
+repeated diagnostics
+Service and finding An assistance or checking episode, and the potentially multiple findings it
+contains
+Historical comparison An earlier/later relationship between judgments or candidates, with
+shared endpoints possible
+Saved-code pair Two frozen files selected for specific compilation, axiom and premise
+checks
+The unit determines the claim. Five passing reviews of existing code are not five proof improvements, and
+a local mathematical repair can occur inside a task whose final delivery remains incomplete. The analysis
+therefore follows the changed obligation and artifact as well as the final label.
+7
+2.2 How post-submission evaluation produced the current decisions
+Common evaluation is the study’s assessment after submission, separate from help and internal review
+during solving and from production acceptance. The original endpoint procedure requested two fresh, read-
+only semantic opinions on the source, task, candidate, permitted upstream material and recorded technical
+checks. Configuration metadata was withheld from the evaluator-facing request. Matching pass or fail
+votes completed the decision; two inconclusive votes left it unresolved. Different votes triggered at most
+one fresh adjudicator, who read the same materials and the two opinions and resolved their substantive
+disagreement rather than choosing by confidence. All original, consistency and targeted endpoint calls use
+the recorded Sol medium configuration. 30; [Appendix N.6]
+A group decision concerns the required complete delivery. Passing the coordinate-convergence theorem
+alone does not complete the two-target vector-convergence group, and a verdict on explicitly partial ma-
+terial describes that material rather than the missing task. Invalid result formatting is also separated from
+mathematics. In the representation-theorem case, a reviewer wrote a pass but used an object where confi-
+dence had to be a number; the host recorded an inconclusive execution result and the procedure proceeded
+to adjudication. [22,28,30]
+Reassessment then examined inconsistent interpretations in variance expansion, Scheffé’s lemma and
+Cauchy scope. Each candidate received separate initial opinions under the stated readings. A necessary ad-
+judication could be triggered by disagreement on an obligation, an invalid result, or inconsistent treatment
+of corresponding behavior across candidates. These adjudicators could see the new initial opinions and a
+cross-candidate consistency summary; they were not blind to that later evidence. For the inversion group,
+the original submission explanations were supplied symmetrically after the six initial reviews, when the
+anonymous code-only view proved insufficient for a documentation judgment. [23,30]
+The final acceptance adopted four explicit readings: permitted general expansion for variance additiv-
+ity, the task’s eventual-tail formulation for Scheffé, the textbook’s standard-Cauchy core, and reasonable
+disclosed repairs of the deficient continuous-mapping assumptions. At 09:22 on 12 September, existing
+opinions were reused, determinable format mismatches were repaired and outcomes were recomposed
+under those criteria. The two additional continuous-mapping opinions had already been obtained in the
+05:17 supplement. This was a retrospective criterion correction, not new solver work. Section 4 gives its
+mathematical basis and retains the original outcomes. [13,15,22,30]
+Appendix N.6 states the stage-specific rules, evaluation inputs and masking limits. Here independent
+means the documented separation of reviewer sessions and roles; adjudicators deliberately receive earlier
+evidence, and using separate sessions of the same model does not establish independent model errors.
+2.3 What was examined deeply, and what was only indexed or counted
+All 244 role logs across the 41 solver roots were read in the existing process analysis. The current panel
+selects 33 of those roots for the tool counts. That mechanical coverage differs from interpreting whether
+feedback is correct and whether a later edit repairs the cited obligation. 24; [Appendix M.2]
+Across the full 41-root inventory, the index contains 127 internal services and 121 finding subrecords.
+Tool evidence establishes exposure to complete feedback text for 67 services. An additional, uniform-
+depth semantic and adoption assessment covers six L2 services, giving 6/127 = 4.7%. It checks finding
+validity, adoption and obligation repair. This percentage is not an adoption rate, not the fraction of raw logs
+read and not the proportion of this report’s analysis that is deep. Separately investigated L1, M1, M2, M3
+and H1 cases retain their own evidence; they are not automatically counted among those six assessments.
+[16]
+8
+The remaining 121 services and the 121 finding subrecords happen to share a number but have different
+units. Missing exposure evidence remains unverified rather than being coded as non-reading. Overall valid-
+feedback adoption, mathematical-repair rates and a uniform semantic-coverage rate for just the 33 selected
+entries have not been established. Specific positive and negative chains can nevertheless be established
+from the code, findings and actions available for each case. Appendix N.4 retains the scope; Section 5
+shows what the completed case analysis actually finds.
+3 Current delivery and observed effort
+3.1 Thirty of 33 entries pass; the remaining omissions have identifiable scope
+The main panel contains 30 accepted deliveries and three incomplete deliveries. Its candidates are the
+selections in Section 2.1 and its labels use the criteria in Section 2.2. For continuous mapping (L7), pass
+means a reasonable, disclosed and fully proved repaired statement. [13]
+Task group and mathematical content A B C
+L1 Innovation construction and martingale Pass Pass Pass
+L2 V ariance additivity and weak law Pass Pass Pass
+L3 Scheffé lemma and density convergence Incomplete Incomplete Pass
+L4 Total-variation formulas and distribution
+calculations
+Pass Pass Pass
+L5 Maximal-coupling construction Pass Pass Pass
+L6 One/two-sensor linear minimum mean-square
+error
+Pass Pass Pass
+L7 Coordinatewise vector convergence and
+continuous mapping
+Incomplete Pass Pass
+M1 Stopped processes and stopped expectations Pass Pass Pass
+M2 Strong law under fourth-moment conditions Pass Pass Pass
+M3 Skorokhod representation theorem Pass Pass Pass
+H1 Inversion, uniqueness and two applications Pass Pass Pass
+Total 9/11 10/11 11/11
+The L3 omissions concern the admissible input sequence, not a cosmetic wrapper. A/B provide results
+requiring every sequence term to be integrable. The accepted task also permits eventual integrability: an
+integrable tail after finitely many initial terms. Their delivered interfaces do not perform the tail reduction
+and restore the convergence conclusion for the original sequence. C delivers the permitted tail interface.
+Section 4.2 explains both why the distinction matters and why requiring an additional, stronger wrapper
+from C would itself be an evaluation error. [23]
+Original A-L7 omits the continuous-mapping branch altogether. Its separate later repair proves numerical
+convergence but does not supply measurability of each composite output. It remains incomplete in the
+supplementary record. B/C both supply complete repaired statements; B additionally requires the set of
+continuity points under discussion to be measurable, whereas C uses measurable preimage events or almost-
+everywhere membership and also retains a numerical core under weaker assumptions. [22]
+Common passes also conceal useful H1 differences: A proves the standard-Cauchy application, B covers
+zero location and arbitrary positive scale, and C covers arbitrary location and positive scale. Those exten-
+sions remain visible without turning an unstated extension into a core obligation. Counts here weight task
+groups, not individual lemmas, proof length or mathematical difficulty. C completes all accepted groups;
+9
+that is not a claim that C supplies every strongest auxiliary property, as the stricter L2 route comparison in
+Section 4.1 makes clear. [21,23]
+3.2 Time, roles and tools measure different effort
+Solver span runs from first role dispatch to last role return. It includes assistance waiting and same-root
+recovery, and excludes post-submission common evaluation. Parentheses give observed minima and max-
+ima around the median. [14]
+Metric: median (range) A B C
+Solver span (minutes) 58.9 (14.2-182.2) 33.2 (15.9-126.2) 28.7 (15.2-103.4)
+Role dispatches 10 (3-32) 3 (2-7) 5 (3-12)
+Model-visible tool returns 137 (49-484) 107 (33-513) 104 (44-464)
+Time uses nine groups with complete records for all three configurations: H1, L2-L7, M2 and M3. Dis-
+patches and tool returns use all eleven groups. Dispatches include unsuccessful attempts; tool counts
+include completed returns only. Missing A-L1 and A-M1 unified spans are not replaced with older mea-
+surements using different stopping events. Appendix M.1 retains all rows. [14,24]
+A ’s higher median span and dispatch count accompany fewer completed groups. More observed work
+did not guarantee that the last obligation was delivered. The organizational contrast is larger in relative
+role counts than in relative tool-return counts: the A/B median ratios are approximately 3.3 for dispatches
+and 1.3 for tool returns, calculated from the table. Dividing work among more roles therefore does not
+multiply tool activity by the same factor. These are ratios of descriptive medians, not estimates of overhead
+attributable to the role structure.
+The overall ordering is not a per-task speed ordering. A is fastest on L2 in the recorded comparable spans
+and faster than B on M3. C takes longer than B on M1, despite C’s lower overall time median. The
+following selected rows keep outcome and effort together rather than treating a shorter incomplete run as
+an equal delivery. [14]
+Comparison Recorded solver span, minutes Completion or interpretation
+L2 A 14.25; B 30.09; C 18.00 All pass the common general-expansion
+standard
+L3 A 69.78; B 33.15; C 39.90 A/B omit the tail scope; C delivers it
+L7 A 58.86; B 28.99; C 32.27 Original A lacks a branch; B/C deliver
+repaired tasks
+M1, B/C only B 17.64; C 26.79 Both pass; A lacks a complete comparable
+span
+H1 A 182.16; B 126.17; C 103.36 All complete the core, with different Cauchy
+extensions
+The comparison supports differences in observed effort, not a universal recommendation to shorten or
+lengthen a trajectory. A-L3 and B-L3 have twelve and three dispatches respectively and both omit the
+tail interface; C-L3 has seven and completes it. The missing obligation is identified by the mathematical
+interface, not by a threshold on the number of actions. The earlier L1 ratio near 7.2 mixed controller-end
+and submission times; Appendix H keeps its original boundaries instead of using it as the overall efficiency
+result.
+10
+3.3 Broad tool friction and consequential failures are different measurements
+The process classification uses actual tool returns for the 33 selected runs, not an agent’s use of the word
+failure in its summary. [24]
+Observed tool-return
+signals (counts)
+A B C Total
+Compilation or API-probe
+returns containing Lean
+errors
+180 291 322 793
+Of those, name/type
+interface diagnostics
+103 171 171 445
+Executable command
+unavailable
+76 58 22 156
+File-access or permission
+errors
+27 21 30 78
+Explicit tool timeouts 2 1 0 3
+Nonzero help-request
+returns
+10 0 0 10
+Of those, workspace
+copy/export failures
+6 0 0 6
+Explicit binding rejection
+during review application
+1 0 0 1
+Unavailable commands occur in all 33 runs and file-access problems in 27. Environmental friction is
+therefore not confined to an unusually troubled L1 example. However, the 793 Lean diagnostics include
+deliberate interface probes and repeated attempts. C records more such diagnostics than A while com-
+pleting more groups; counting diagnostic returns as independent mathematical failures would misread the
+activity being measured. Categories overlap, and the name/type row is a subset of the Lean-diagnostic row.
+[24]
+The table also has a specific observation boundary. B-L2’s export failure is established by host records
+even though B has zero directly matched copy/export tool signals. A zero here means that the specified
+detector found no return of that kind in its scope, not that no corresponding operational problem occurred.
+The case evidence and the detector counts complement one another. Appendix M.2 gives the matching
+rules and M.3 the run-level co-occurrence table. [19,24]
+The current endpoint classification contains three incomplete deliveries and no endpoint classified as a
+mathematical reasoning error. This does not imply error-free drafts or correct reviewer advice: Section
+4.4 gives a counterexample to an actual continuity recommendation. Terminal omission, wrong advice, an
+unsuccessful API probe and a failed file transfer are different events. Their consequences are examined in
+the trajectories rather than summed into one failure rate.
+3.4 What the resource accounting covers
+Appendix N.5 separates authors/coordinators, internal services, original common evaluation, consistency
+reassessment and engineering model probes. It retains unsuccessful and development work as incurred
+activity. Input includes cached input and output includes reasoning output; neither subset is added again.
+These are recorded resource quantities, not monetary costs. [14,16]
+11
+The missing usage is now located rather than left as an undifferentiated total. Ten calls without usage
+belong to main-panel A runs: two in innovations (L1), six in stopped processes (M1), and two in maximal
+coupling (L5). One further missing call belongs to A ’s supplementary vector-convergence repair. Missing
+closure receipts prevent complete comparable spans for L1 and M1. L5 instead has a complete span but
+incomplete token usage. The common time comparison therefore uses nine groups, while a complete
+three-configuration token comparison uses eight. Full-version totals remain observed lower bounds. 31;
+[Appendix N.5]
+Time and cumulative input can move in different directions. In the fourth-moment strong-law task, B takes
+36.38 minutes to A ’s 59.54, but records 15.237 million input tokens to A ’s 13.880 million; both pass. Cache-
+inclusive input measures repeated processing of context, not distinct mathematical content. Likewise,
+helper waiting is already inside the root span, and maximal-coupling assistance still incurs resources when
+adoption is unestablished. [14,19]
+The recorded cases explain particular costs, including transfer waiting, recovery and work that never en-
+ters the final candidate. The archive does not allocate every minute to these causes or record complete
+engineering labor, so it supports observed effort comparisons rather than an end-to-end monetary cost
+estimate.
+4 How evaluation correction changes the result, and why
+4.1 Variance additivity (L2): general infrastructure versus assuming the answer
+The variance-additivity task requires candidates to use uncorrelatedness to eliminate cross terms and to
+complete the associated weak-law steps. A calls variance_sum'; C calls variance_fun_sum', which is
+obtained from the former by a library conversion. Both interfaces give a general variance-covariance
+expansion, valid before uncorrelatedness is imposed:
+Var
+(∑
+i
+Xi
+)
+=
+∑
+i
+∑
+j
+Cov(Xi, Xj).
+The candidate must still prove that off-diagonal terms vanish under the task’s assumptions and carry
+through the mean, variance, Chebyshev and limit arguments. Using that general expansion is different
+from assuming the desired variance-additivity theorem as a public premise. Original evaluation allowed
+A ’s corresponding call but rejected C’s. Checking the relationship between the actual library interfaces
+exposed an inconsistency that matching source-file and contract identifiers alone had not prevented. 21;
+[Appendix G.15]
+The adopted general-expansion standard, called G in the records, permits this infrastructure and requires
+the remaining task-specific work. A, B and C pass it. The supplementary self-expansion standard , S,
+additionally asks the candidate or permitted support to expand the centered square and use expectation lin-
+earity itself. B r4 performs that extra work. A and C do not cover it completely, although C independently
+proves that a single centered-product integral vanishes. Consistent primary acceptance therefore does not
+imply identical proof-route coverage. Details of the additional expansion duties are in Appendix G.15 .
+[21]
+This case changes how feedback is interpreted. An old rejection cannot be counted as correct feedback
+merely because it triggered work or sounded mathematically specific. The applicable rule must first be
+made consistent. Otherwise an adoption analysis can reward a solver for responding to an erroneous
+demand and classify a legitimate route as incomplete.
+12
+4.2 Scheffé’s lemma (L3): a local repair with a remaining scope gap
+Scheffé’s task distinguishes integrability of every sequence term from integrability only eventually. The
+latter allows a finite initial segment outside the integrable tail. On (0, 1], take f1(x) = 1/ x and every
+subsequent term and the limit to be zero. The nonnegative extended integrals converge to the finite limit
+zero even though the first term is not integrable. A proof that requires all terms to be integrable does
+not directly cover this permitted input. The delivered theorem needs the tail reduction and the argument
+returning the convergence conclusion to the original sequence. 23; [Appendix G.17]
+The records use three scope labels. F requires termwise finite integrals; T is the eventual-tail interface
+expressly permitted by the task; E additionally derives the tail-integrability reduction from the extended-
+integral source-domain assumptions. Current acceptance uses T. A/B omit that wrapper, whereas C sup-
+plies it. A changes from pass to incomplete. A reassessment that demanded E from C would impose a
+further obligation beyond the permitted T formulation, so C’s pass is retained without that additional wrap-
+per. This is not simply making all judgments stricter or all judgments more permissive: the required scope
+is applied consistently. [13,23]
+A ’s intermediate code nonetheless contains a real repair. V ersion six publicly requested nonnegativity and
+measurability of the limit; version ten derived the needed almost-everywhere properties internally. Spe-
+cific feedback, reading commands, changed declarations and proof bodies, and version-bound re-review
+support that local progress. It does not supply the later missing tail interface. A task can therefore have an
+evidenced mathematical-repair chain and still be correctly classified incomplete at its final endpoint. 29;
+Appendices [G.14.2 and G.17]
+4.3 Cauchy averages (H1): an unstated extension is not a core failure
+H1 contains five connected duties, including an application to Cauchy averages. The supplied textbook
+supports a standard-Cauchy core; an arbitrary location parameter was not explicitly quantified in the cited
+exercise. A delivers the standard distribution, B a centered family with arbitrary positive scale, and C the
+location-scale family. Current acceptance requires the core and records extensions separately. It no longer
+rejects B solely for omitting the arbitrary-location extension. [23]
+Two evaluation-processing issues compounded the scope dispute. B’s adjudication already accepted the
+standard core mathematically, but quotation escaping caused a peripheral check to reject the result. Else-
+where, an anonymous-code-only input omitted original submission notes that were relevant to a docu-
+mentation judgment. The later correction restored those actual notes and resolved determinable quotation
+correspondence; it did not add a proof or write a missing explanation on the author’s behalf. These are
+defects in evaluation input and processing, not solver-side mathematical repairs. 15,23; [Appendix G.13.1]
+4.4 Continuous mapping (L7): wrong advice and insufficient assumptions
+The continuous-mapping dispute contains two different mathematical problems. First, a reviewer recom-
+mended replacing ambient continuity at points of a set with continuity relative to that set. Take a one-point
+probability space and
+S = {0}, V = 0, V n = 1
+n + 1 , f (x) =
+{
+0, x = 0,
+1, x ̸= 0.
+13
+The restriction of f to S is continuous, but f (Vn) = 1 does not converge to f (V ) = 0 . The approxi-
+mating variables approach the set from outside it. This counterexample refutes that particular interface
+recommendation; it does not settle all obligations of the original candidate. 22; [Appendix G.16]
+Second, even retaining ambient continuity at every point of S does not guarantee measurability of every
+composite output. On the Lebesgue probability space [1, 2], take a non-Lebesgue-measurable subset E,
+set f = 1E on the real line and S = {0}, and let V1(ω) = ω while Vn = V = 0 for n ≥ 2. The function is
+zero near 0 and continuous there; all input variables are measurable and converge pointwise. Y et f (V1) is
+not measurable. A single initial term is enough to violate the demanded output property without changing
+convergence. These are preserved written counterexamples, not newly executed Lean checks. [22]
+Current acceptance therefore permits reasonable, disclosed and fully proved repairs, with Borel measurabil-
+ity of the mapping and appropriate continuity at the limit. B/C complete such repairs. B’s additional mea-
+surability condition on S is stronger than C’s event-based formulation, but the criterion does not demand
+a unique weakest repair. C additionally preserves a numerical convergence core without the mapping-
+measurability premise. An external evaluator of A ’s repair also identified insufficient conditions; the
+evidence does not support exclusive discovery by C. [22]
+Permission to repair the statement does not complete a missing proof. Original A-L7 lacks the entire
+continuous-mapping branch, and its separate repaired candidate still omits composite measurability. Both
+remain incomplete in their respective records. The useful mathematical work, the incorrect recommenda-
+tion, the deficient literal task and the delivered repairs all remain distinct.
+4.5 The corrected ordering reflects different judgments of existing artifacts
+Affected entry Original main-panel
+label
+Current outcome Basis of change
+C-L2 Fail Pass General expansion treated
+consistently
+A-L3 Pass Incomplete Actual missing tail scope
+retained
+B-H1 Fail Pass Textbook core separated
+from extension; valid
+judgment recovered
+B-L7 Fail Pass on repaired task Reasonable complete
+statement repair accepted
+C-L7 Unresolved Pass on repaired task V alid dimensional opinions
+and corrected acceptance
+applied
+Originally A had ten recorded passes, B eight and C nine with one unresolved entry. The current totals are
+nine, ten and eleven. Thus even the apparent aggregate ordering changes when the same selected deliveries
+are assessed under the corrected interpretation. The change is not new proof work by the solvers. Appendix
+K.8 retains both the original table and the scope-sensitive intermediate tables, while K.9 identifies the
+current synthesis. [13,15]
+This correction improves the interpretability of the existing outcomes, but it remains retrospective. In
+particular, accepting an explicitly repaired L7 task is a change in the accepted problem, not merely fixing
+JSON. The report shows the mathematical reason for that change and keeps the original condition and
+original judgments available. The processing regressions cannot turn a post hoc criterion into a rule that
+all solvers originally received.
+14
+5 What the trajectories explain about organization, repair and delivery
+5.1 Innovations and martingales (L1): similar proofs, different information
+L1 asks the agent to build innovations from an observed process and prove that their partial sums form a
+martingale. With X0 = 0 and Fn representing information through time n, the construction uses
+Yn+1 = Xn+1 − E[Xn+1 | F n], S n =
+n∑
+k=1
+Yk.
+The required proof establishes integrability and adaptedness, derives zero conditional innovation mean,
+and then obtains E[Sn+1 | F n] = Sn almost everywhere. A uses Mathlib’s natural filtration and a general
+zero-conditional-increment martingale criterion. B/C use the supplied one-indexed observation-history
+filtration and construct the local martingale definition’s fields. These routes perform corresponding math-
+ematical work; use of the general criterion does not by itself omit the task. 27; [Appendix G.5-G.10]
+A’s difficulty after mathematical implementation is delivery of the review, not absence of passing
+opinions. Its initial prompt contains unrelated task identifiers, causing a detour. The author then reads
+the relevant library sources, works around missing file-writing tools and repairs concrete Lean interface
+errors. After candidate four builds, the review sequence becomes the major observed blockage. Seven
+general-review requests include one rejected at entry, five sessions with completion receipts and passing
+opinions, and a final started session without a completion receipt. The passing opinions do not reach a
+readable author-side result file through the normal path. The author searches, waits and retries, although
+the analyst can later read those opinions elsewhere. [27]
+The host records recovery of an existing review JSON into the required result location, and the controller
+subsequently observes a pass. The retained JSON matches the referenced reviewer’s output, although the
+recovery receipt names a different session. That attribution conflict remains unresolved; the observed
+progress is restoration of the acceptance path, not five successive improvements to the proof. 27,33; [Ap-
+pendix G.6]
+Initial C encounters a related delivery fault but reaches a different submission state. The coordinator
+reads the writer’s candidate, builds it, and requests general and mathematical checks. Both checking mod-
+els run and produce opinions, but readonly-filesystem export failures return errors rather than the opinions.
+The coordinator submits while explicitly disclosing that independent checking has not been obtained. Its
+15
+later common dual evaluation passes the same candidate. That later evidence strengthens assessment of
+the artifact, not the coordinator’s information at its earlier decision. 27; [Appendix G.9.2]
+L1 observation Mathematics at the
+selected point
+Feedback actually
+available
+Consequence
+Initial A Natural-filtration proof
+and successful candidate
+build
+Several passing opinions
+exist but normal
+author-side delivery fails
+Waiting and retries; host
+recovery before recorded
+acceptance
+B r3 One-indexed filtration
+and local martingale
+proof
+Helper fails;
+mathematical-review
+encoding fails; later
+general opinion is
+readable
+Author continues and
+submits after readable
+checking
+Initial C Writer completes and
+coordinator builds the
+candidate
+Two checking opinions
+exist but only export
+errors return
+Coordinator submits with
+the checking gap disclosed
+B r4 Completed proof with an
+unnecessarily broad
+time-index interface
+Readable nonblocking
+advice identifies
+derivable time-zero
+assumptions
+Author revises the public
+interface and checks the
+new code
+C r3 Candidate already
+complete before review
+Complete passing
+opinion is returned and
+acknowledged
+Same candidate submitted
+without a mathematical edit
+The later B r4 interface change is concrete. The earlier declaration requests measurability and integrability
+at every natural-number time, whereas the source only requires positive-time premises and gives X0 = 0.
+B derives the time-zero properties internally and changes the final interface, while keeping helper lemmas
+with all-time premises. A changed public theorem and corresponding proof show adoption of a specific
+piece of advice. C r3 instead uses a readable passing opinion to authorize submission of unchanged code.
+One is interface repair; the other is a checking result entering a decision. [20,27]
+These versions do not form a controlled estimate of the benefit of a gate or coordinator. They do establish a
+narrower interaction: in A ’s observed process, the need to apply a readable review makes a return-delivery
+failure block acceptance of existing mathematics; initial C’s submission discretion permits delivery with an
+explicitly unresolved checking state. Neither more opinions in inaccessible locations nor eventual endpoint
+agreement removes this operational difference. The later B/C versions show readable feedback supporting
+different useful actions, not a single universal “feedback repaired the proof” event.
+5.2 Fourth-moment strong law (M2): move the missing bound into the proof
+M2 asks for the strong law for independent variables with common mean m and a uniform raw fourth-
+moment bound. The preparation summary refers to centered moments, while the supplied textbook gives
+raw moments. The public theorem must meet the source assumption and derive the centered bound inter-
+nally. This difference is small to state but changes who is responsible for a necessary step. [25]
+The author searches strong-law, independence and integral-product interfaces, reads implementations, and
+tests exact types in small files. It develops a finite-sum fourth-moment expansion, cancels terms using
+independence, derives a tail-probability bound and applies Borel-Cantelli. The first seven of eight initial
+build checks fail; the eighth passes. The version-eight candidate nevertheless asks the caller to supply a
+centered fourth-moment bound for Xi − m. 25; [Appendix G.14.1]
+A general reviewer identifies the raw-versus-centered gap. Subsequent code proves
+16
+(x − m)4 ≤ 8(x4 + m4), E(Xi − m)4 ≤ 8(c + m4) when EX 4
+i ≤ c.
+V ersion eleven moves that conversion inside the proof, accepts the raw-moment premise in its public dec-
+laration, and invokes the already proved centered-moment result as a helper. V ersion-bound re-review
+passes, the final source matches that version, and subsequent common evaluation passes. The chain in-
+cludes an identifiable criticism, a change to the calling contract, a new derivation and verification of the
+changed candidate. It is stronger evidence of mathematical repair than merely observing review before
+acceptance. [25]
+The build trajectory and semantic trajectory have different meanings. Some build failures concern types,
+function representations and integrability interfaces; their outer shell statuses are zero even though the
+output reports failure. The later semantic gap survives a successful build because Lean is checking the
+weaker statement actually written. A source comparison reveals the extra premise, and a code comparison
+reveals that it was genuinely removed rather than renamed. [25]
+The first-turn prompt also prohibits assistance and requires a return after review preparation. The absence
+of help or that return cannot be interpreted as a voluntary decision that no further work was needed. Text-
+book guidance, author implementation, tool diagnostics, source clarification and review all participate in
+the recorded chain. The evidence establishes the repair without assigning its entire contribution to one
+reviewer or one autonomous decision.
+5.3 Inversion and uniqueness (H1): prove support, deliver it and use it
+H1 combines the bound |eix − 1| ≤ | x|, characteristic-function inversion, uniqueness via inversion, a
+Cauchy-average application and an integer-valued criterion. This permits inspection of whether an inter-
+mediate result actually enters later proofs. The detailed adoption sequence below concerns A ’s same-root
+completion; the endpoint panel also records B/C’s complete deliveries. [17,23]
+The author first requests the whole inversion proof but restricts that support request to read-only work. The
+response locates a Dirichlet-integral gap without a usable patch. The author then asks for the integral’s
+limit and uniform bound, receives built support and incorporates it into the draft. A later helper completes
+the remaining inversion proof, but export fails. Host recovery of the original product allows the author
+to read it, apply it, build and request independent internal review. A productive mathematical call and a
+failed delivery stage occur in the same sequence. [17]
+The delivered inversion argument contains finite integral interchange, different pointwise limits of an os-
+cillatory kernel, dominated convergence and endpoint half-masses:
+lim
+T →∞
+1
+2π
+∫ T
+−T
+e−iat − e−ibt
+it ϕµ(t) dt = µ((a, b)) + 1
+2 µ({a}) + 1
+2 µ({b}), a < b.
+Uniqueness then calls this theorem to compare interval probabilities at suitable endpoints and uses a
+measure-determination argument. The standard-Cauchy application derives the characteristic function,
+17
+applies the independent-sum product and scaling formulas, and invokes the newly completed uniqueness
+theorem. Those uses connect actual conclusions, not just files. 17; [Appendix G.13]
+Result or dependency What the later proof does Meaning for reuse
+Inversion theorem Uniqueness derives equal interval
+probabilities and equality in
+distribution
+The earlier theorem is used in the
+mathematical argument
+Uniqueness theorem Cauchy-average application passes
+from equal characteristic functions
+to equal distributions
+A second actual theorem use
+Uniqueness file imported
+by the integer-valued
+criterion
+Proof instead uses the real part of a
+unit-modulus exponential attaining
+its upper bound almost everywhere
+An import is present, but this theorem is not
+invoked
+The integer-valued result proves that ϕX (2π) = 1 exactly when X is integer-valued almost surely. Its
+distinct proof route is useful negative evidence against counting every import as theorem reuse. Likewise,
+a uniqueness review initially passes but is rejected at application for an input-hash mismatch. The reviewer
+corrects the binding and explanation and the opinion is applied without a code change. That event repairs
+the evidence connection, not the inversion or uniqueness proof. [17]
+The case does not show that smaller helper assignments are always superior. Request scope and permission
+changed together, and the broader remaining proof was also completed by a helper. B-M1 and A-M3 pro-
+vide additional successful broad delegations. What H1 establishes is successful composition of analytical
+support, artifact delivery and downstream use under the recorded organization, including host recovery.
+5.4 Stopping and representation (M1/M3): what broad delegation contributes
+B-M1 delegates both stopped-process and stopped-expectation tasks to a support author. The work is
+substantial: it must prove the stopped process is a martingale and cover the specified stopping-time cases.
+Under integrable stopping time and bounded increments, a bound such as
+|XT ∧n| ≤ | X0| + cT
+provides the integrable control needed to pass from finite stopping results to the limit. The implementation
+also handles measurability, integrability and a valid representative for potentially infinite stopping times.
+18; [Appendix G.11]
+The helper produces a patch in an isolated workspace. The lead author reads it, applies the target changes,
+builds and requests mathematical review. The reconstructed target files match the final evaluated code.
+This is an established adoption chain for a whole-group implementation, not evidence that B is a single
+unaided author. The lead role contributes integration, tool recovery and checking even when the mathemat-
+ical implementation is delegated. Its initial composite build command returns exit code zero while stderr
+says the command is missing; it locates the absolute executable and performs a genuine build. Counting
+only the first outer exit code would invent a successful validation. [18]
+C-M1 also delegates the two targets and obtains a passing delivery, but the subsequent candidate change
+affects documentation rather than mathematics. The coordinator adds missing public-declaration and
+premise descriptions; visible mathematical files remain unchanged and the internal reviews identify no
+corresponding proof defect. Two internal target checks reuse one session, so they are two calls, not two
+independent reviewers. The later common evaluation is separate. B/C have equal final pass labels and
+different contributions after the initial implementation. [18]
+18
+A-M3 supplies another broad-adoption case. The Skorokhod representation task constructs new variables
+on a common space using generalized inverse distribution functions and the same uniform input. It pre-
+serves marginal laws and proves almost-sure convergence, handling measurability, endpoints and excep-
+tional levels. The helper’s full-task implementation is actually adopted. A malformed confidence field later
+creates an inconclusive common-evaluation result and adjudication, without a new mathematical repair to
+the candidate. 28; [Appendix G.12]
+Together these cases oppose two simplistic explanations: successful help need not be a narrowly scoped
+lemma, and a new candidate version need not be a new proof. The correspondence between the delegated
+work, the returned artifact and the final code determines what was contributed.
+5.5 Coupling and variance (L5/L2): produced code without established adoption
+In L5, the parent delegates the common minimum density, residual densities, joint measure, marginals
+and mismatch probability for maximal coupling. The helper produces a 534-line candidate and a passing
+build receipt. The parent receives paths and hashes on the host, cannot access the text or patch in its
+own container, and continues local implementation. Helper and final parent code differ in naming and
+organization. Similar proof routes could arise from the same textbook and original request; they do not
+identify code adoption. 19; [Appendix G.1]
+This investigation changed the earlier handoff classification and the analysis framework’s adoption cri-
+terion. It also distinguished an outer transfer diff from the inner patch that actually changes target files.
+An existing package, a checked patch and modified target code are separate observations. The helper’s
+554.094 seconds of process time remains part of incurred work even though adoption is not established.
+The evidence neither erases that cost nor proves the absence of every possible indirect influence. [19]
+B-L2 stops at a different evidential point. Its support product is blocked by export permissions, then
+delivered through engineering recovery without another model call or container. The recovered artifact’s
+existence does not establish that the author adopted it. A later read-only opinion concerns a byte-identical
+final candidate, and the author acknowledges receipt: this is evidence of checking an existing result before
+submission, not evidence that the recovered patch repaired the theorem. 19; [Appendix G.18]
+The difference matters for analysis as well as engineering. L5 establishes a concrete inaccessible-delivery
+problem. B-L2 establishes recovery but leaves adoption unconfirmed. The latter is not automatically a
+verified failure to adopt. A useful trajectory account identifies where observation stops instead of turning
+every missing link into either success or failure.
+5.6 Vector convergence (A-L7): a host-imposed stop with budget remaining
+After the L7 Math Gate identifies interface and unresolved-obligation issues, the outer host prohibits all
+editing, assistance and new review and seals the run. Approximately 3,668 seconds remain from its 7,200-
+second root allowance. The remaining time does not make the missing continuous-mapping branch com-
+plete, but it rules out budget exhaustion as the recorded explanation for the stop. The explicit instruction
+also prevents describing it as an autonomous author decision to abandon the problem. [22]
+This episode differs from a Math Gate stop that still permits named support work, and from initial C-L1’s
+chosen submission with unavailable checking opinions. H1’s later completion cannot establish that A-
+L7 would necessarily have succeeded if allowed to continue. The supported finding is the actual action
+restriction and the actual missing target, not an estimate of unrealized solver capability.
+19
+5.7 Cross-case synthesis: the same symptom can require a different explanation
+The cases support comparisons of mechanisms, not just a taxonomy of failures. Three comparisons are
+particularly informative.
+First, review content and the ability to act on it are separate system properties. A-L1 has several
+positive opinions but cannot apply them until recovery. B r4-L1 receives actionable interface advice and
+changes the declaration. C r3-L1 receives a passing opinion and submits unchanged code. Review count
+cannot substitute for delivery, and code-change count cannot substitute for useful checking. The observed
+role of feedback depends on its content, availability and the decision it enables. [20,27]
+Second, proof decomposition helps only when the corresponding task is reassembled. H1’s analyt-
+ical support enters inversion and later theorem calls; B-M1 integrates a complete implementation. M2
+demonstrates closure of a source-facing premise gap, while A-L3 demonstrates a local repair followed by
+an unresolved broader interface. The existence of useful subproofs and the completeness of the final task
+are both substantive observations, not competing interpretations from which only one should be reported.
+[17,18,23,25]
+Third, control and evidence-validation rules can protect correctness while also creating delivery
+dependencies. The H1 binding gate rejects an opinion attached to the wrong input, which is distinct
+from rejecting the proof. A-L1’s inability to obtain readable review results blocks progress through its
+acceptance path. A-L7’s broader host stop removes otherwise possible next actions. These observations
+argue for distinguishing the purpose of a control from faults in executing it; they do not show that removing
+all gates would preserve the same evidence or improve outcomes. [17,22,27]
+For maintainers, the resulting diagnosis is more specific than “the model made mistakes.” The terminal
+omissions in this panel lie in source-obligation coverage. Tool records show pervasive environment fric-
+tion. Particular trajectories establish that transport, review-basis handling and host decisions can interrupt
+delivery of mathematics already produced. The material does not provide a population-wide ranking of
+independent root causes or time lost, but it does identify concrete failure locations and prevents attributing
+every long or unsuccessful run to mathematical inability.
+6 What the historical proof and review studies establish
+6.1 Removing an axiom is not the same as completing the missing derivation
+The normalized-Gamma-to-Dirichlet history contains two different shortcuts. An early proof uses public
+axioms in gamma_beta_bridge. A later version removes that bridge but directly defines the normalized
+Gamma density as the desired Dirichlet formula, making an equality available by simplification. The
+required derivation from the probability model is still missing. Subsequent work supplies the product
+distribution, normalization map, simplex support, projected density and change of variables. The improve-
+ment is the new mathematics connecting the model to the formula, not merely the absence of an axiom
+declaration. 4; [Appendix L.2.1]
+This case makes the interface distinction in Section 1.6 concrete. A proved conversion between two def-
+initions can be legitimate support. A name standing for unproved mathematics, or a definition chosen to
+make the target tautological, does not serve the same purpose. Axiom checks and source correspondence
+address different failure modes.
+The support later has two actual consumers, prob_1_4 and ex_1_2_2. Shared density identification does
+not eliminate each task’s own statement, coordinate-chart work or Beta branch. A later change adding an
+already proved density conclusion as a fourth conjunct of the named parent theorem changes the public
+20
+promise’s location. That is another kind of progress, different from initially establishing the density and
+from extracting it into shared files. 4; [Appendix B.4]
+6.2 Partial proofs, global assembly and downstream migration are separate work
+In the moment-generating-function task prob_14_8, the route extends moment-generating functions to
+a complex strip, obtains tightness and analytic bounds, extracts limits and identifies the characteristic-
+function limit. The history contains genuine local results before the whole argument closes. Repeated
+Math Gate stops recognize those results but identify an assembly gap: limits on different compact pieces
+must be restrictions of a single global function. Constructing that function and proving restriction compat-
+ibility closes work that the mere list of completed local lemmas does not. 6; [Appendix L.2.3]
+The complete single-file proof precedes its later split into support modules. The consumer prob_14_10 had
+already established approximation and error-control work and built the inputs for its upstream theorem;
+its eventual local change is only one call selecting the completed upstream conclusion. The upstream ver-
+sions, however, change from private-axiom-dependent to internally proved. Small local diffs and multiple
+support files therefore give misleading accounts of where and when the mathematical work occurred. 6;
+[Appendix B.10]
+A total-variation repair exposes a different dependency. def_8_5 keeps its formula but adds the source’s
+probability-measure requirement. Callers must provide that evidence where the expression is formed. In
+def_10_5, replacing “the measures are probability measures and the distances converge” by “if they are
+probability measures, the distances converge” would permit vacuous truth outside the intended domain.
+The repair instead passes the needed evidence through a dependent witness and local instance. Five substan-
+tive reviews involve only two main-file contents because caller changes, failed registration and expanded
+checks account for other events. 7; [Appendix L.2.4]
+These histories make the maintenance responsibilities in Section 1.6 concrete: a local proof, its sound
+upstream basis, the source-facing public theorem and migrated callers can reach completion at different
+times. They also explain the later rule requiring the assembled parent to be checked after historical OBL
+absorption. That rule preserves useful decomposition while refusing to substitute a collection of old child
+passes for a fresh whole-task judgment. [5]
+6.3 A passing conditional theorem can still have no admissible instance
+The saved coupon example models waiting for new coupon types by independent positive-integer geo-
+metric variables. For N equally likely types and i already collected, the success probability is pN,i =
+(N − i)/N . The analyzed example collects mN = ⌊(N + 1)/2⌋ types. Its model sums the stage waiting
+times, with mean ∑
+i<mN 1/pN,i and variance ∑
+i<mN (1 − pN,i)/p2
+N,i. [8]
+Four accepted June snapshots expose a contradiction before any limit theorem is applied. They use N =
+n + 2. The first row—the finite collection of waiting stages for one value of N —has N = 2 , needs only
+one new type and contains a geometric stage of success probability one, hence zero variance. The same
+configuration requires a strictly positive normalization scale. A saved Lean probe derives a contradiction
+from the zero-variance identity and scale positivity using only the permitted foundational axioms. The
+external upstream central limit theorem premise is not needed for that contradiction. 8; [Appendix L.3]
+An August failed candidate nevertheless contains more core mathematics: it proves the Lindeberg and Lya-
+punov branches internally in a canonical product model, a product probability space whose coordinates
+have the prescribed distributions and independence. The remaining demand is to connect concrete inde-
+21
+pendent rows to that model. Once that connection is provided, the parent passes while the coupon example
+still needs the textbook normalization. With
+ZN = TN − ETN√
+Var(TN )
+, TN − N log 2√
+N (1 − log 2)
+= aN ZN + bN ,
+the final step requires aN → 1, bN → 0 and distributional transfer under the changing affine map. Later
+work establishes bounded mean error and the variance limit and supplies that transfer. The core theorem,
+distributional connection and asymptotic normalization are distinct achievements. [8]
+This is a concrete reason not to rank mathematical content by historical pass/fail. It is also a bounded
+result: the saved independent-stage model is analyzed; equivalence to the original sequential coupon-
+drawing stopping time was not separately delivered. That unproved connection is not silently supplied
+by the familiar interpretation of geometric waiting times.
+Target revision must be distinguished from ordinary proof repair elsewhere too. In prob_14_7, independent
+approximating pairs and marginal convergence do not specify the displayed limits’ coupling: standard-
+normal independent pairs have sum variance two, but choosing the marginal limits as X = Y = Z gives
+variance four. Adding limit independence changes the accepted target. In prob_14_11, m/N → 1/2 does
+not control centering error at the required square-root scale: N = k4 and m = N /2 + k3 preserve the
+proportion limit while the standardized mean error diverges. The accepted exactly centered result answers
+a revised question. Appendix L.4 retains both arguments and the corresponding source decisions. [9]
+6.4 Recover distinct judgments before measuring change
+The historical September 1 snapshot contains 3,820 database rows about 453 task objects. Those rows
+are not 3,820 independent model judgments. Reconstruction separates direct-evidence signatures, dupli-
+cate and object-binding references, collector claims and application pointers. A signature uses the result-
+evidence digest and review-input digest; task, candidate, label and context fields are checked for consis-
+tency. Similar wording alone does not establish that two records represent the same judgment. Program-
+generated records and representation copies are then treated separately. 10; [Appendix C.1]
+The distinction has operational consequences. Thirty exclusions concern runs without a configured re-
+viewer, application or normalization failures, and a test. Among 251 representation merges, 223 pair raw
+and normalized outputs. Text-identical copies without a production pointer are not automatically merged.
+This prevents software failure from becoming a mathematical rejection and prevents one opinion saved
+twice from becoming two independent opinions. The resulting branches retain their own units rather than
+being presented as one successively shrinking funnel. [10]
+Checking only the main file still misses meaningful differences. Among the original 2,645 directed rela-
+tions, 98 keep that file unchanged while commonly bound non-main objects differ; thirteen of those rela-
+tions change from fail to pass. These are observed changes in the review basis, not hypothetical caveats
+about hashes. For thm_11_8, the later upstream source is recovered but the earlier one is not, so the report
+establishes changed evidence without inventing the mathematical difference. For thm_9_7, the registered
+early candidate differs from the candidate actually judged; the corresponding relation is excluded rather
+than silently repaired into a different pair. [9,10]
+The reconstructed archive is consequently useful for investigating changes, but a main-file match is not
+enough to estimate reviewer inconsistency on fixed evidence. Identity of a record, identity of a whole
+review input and semantic comparability of the mathematical target require different checks.
+22
+6.5 Label growth remains observable after qualification, but its scope changes
+The broad comparison selects 461 directly bound relationships across 248 tasks. Earlier endpoints contain
+116 pass labels and later endpoints 324, a net increase of 208. Giving every relationship equal weight
+yields a 45.12-percentage-point increase; first averaging within a task and then weighting tasks equally
+yields 57.42 points. Neither is the fraction of textbook tasks eventually completed. A task with more
+comparisons contributes more to the first quantity, and shared endpoints prevent treating every relationship
+as independent. 10; [Appendix C.3]
+The analysis also asks what remains after affirmative target comparability and valid object binding are both
+required. Within the 462 managed relations, source-aware, unblinded AI archival readings supply 129
+affirmative target decisions and two confirmed target boundaries. The other 331 relations lack a target-
+specific substantive decision; a screen that finds no change is insufficient for affirmative qualification.
+Programmatic binding checks are applied separately. Appendix C.4 explains the decision requirements
+and gives examples of all three dispositions. The resulting qualified subset contains 128 comparisons
+across 79 tasks, with 28 earlier and 45 later passes, a net increase of seventeen. Its relationship-weighted
+increase is 13.28 points and task-weighted increase 20.46 points. This is a positive descriptive result within
+an explicitly qualified subset, not merely a statement that the broad data is unusable. [10]
+Historical selection Comparisons / tasks Earlier → later pass
+labels
+Interpretation
+Broad directly bound
+comparison
+461 / 248 116 → 324 Growth in recorded
+acceptance within the
+selected archive
+Affirmative target and object
+qualification
+128 / 79 28 → 45 Growth in the purposefully
+examined,
+comparability-qualified
+subset
+Broad set intersecting the
+detailed anomaly queue
+163 comparisons 32 → 33 Only one net additional
+acceptance lies in this
+overlap
+Broad set outside that queue 298 comparisons 84 → 291 The other 207 net
+additional acceptances lie
+here
+The qualified subset is not a random restriction of the broad set. The difference between its change and the
+broad change cannot be assigned solely to target drift. Likewise, the detailed-queue coverage shows that
+close cases do not explain almost all of the broad growth, not that the unexamined growth is wrong. The
+useful result is the separation of an observed label trend, the subset meeting stricter comparability condi-
+tions and the material actually given detailed semantic explanation. Appendix C preserves the selection
+rules, transitions, weights and reference intervals needed to inspect each result.
+6.6 A diminishing-returns interpretation fails a selection check
+The follow-up study first fixes 230 failing origins across 182 tasks. These are the first failing endpoints
+of saved connected segments, not every subsequent failure reopened as a new trial. Only afterward does
+the analysis require target comparability and valid object binding for each follow-up step. Origins with no
+qualifying first step remain in the denominator. 10; [Appendix C.5]
+Strict follow-up observes 25 first acceptances before exit. Of 205 exits, 186 lack an affirmative target-
+comparability decision, two have a confirmed target or source-convention change, one has an object con-
+23
+flict and sixteen reach a saved-fragment end. Most exits therefore indicate unestablished comparability,
+not demonstrated drift or final mathematical failure.
+A tempting pattern appears in the observed steps: 22/69 qualified first steps reach acceptance, versus 3/31
+later steps. But later steps are contributed by paths that have not already passed and remain observable.
+The saved analysis checks the tasks producing those later steps: only fifteen tasks do so, and their nineteen
+first steps contain just one pass. The lower later-step proportion is therefore entangled with which tasks
+enter later follow-up. The comparison does not isolate the effect of making another revision. [10]
+This selection check is a substantive analytical result. It identifies an appealing but unsupported expla-
+nation and demonstrates the changing composition behind it. Broader follow-up reaches more recorded
+acceptances from the same origins, but that answers record reachability under looser requirements rather
+than restoring missing fixed-target evidence. Appendix C.5 -C.9 gives the origin construction, risk sets,
+broader paths and exact denominators.
+6.7 Saved-code checks distinguish compilation, proof shortcuts and definition behavior
+Fourteen frozen pairs were selected for code checks: six development pairs and eight further pairs chosen
+by a seeded, stratified rule after excluding previously exposed tasks. Pair identities were fixed before later
+eligibility and execution outcomes. This is not a representative benchmark, but it preserves failed and
+unavailable measurements instead of replacing inconvenient pairs. 11; [Appendix D.1]
+Of the 28 files, seventeen compile and sixteen yield the required named declaration. All sixteen extracted
+targets pass both saved axiom policies; the extra compiling file lacks the requested declaration. Across the
+eight further pairs, each side has six compiling files, but def_13_2 changes from failure to success while
+prob_10_1 changes the other way. An unchanged aggregate count therefore hides different artifact-level
+transitions. The historical runner has no cross-endpoint type-equality gate, so successful extraction on both
+sides still does not establish a common mathematical target. [11]
+prob_10_1 gives a concrete semantic finding: an early theorem takes precisely its desired conclusion as a
+premise and returns it. The later source removes that defect, but the file fails in the saved build environment.
+The evidence supports removal of a direct shortcut, not certification of a complete repaired implementation.
+These are separate outcomes worth reporting together.
+For def_2_1, the source convention calls a set countable when it is in bijection with all natural numbers. The
+earlier library predicate also accepts finite sets. The empty set satisfies the latter but cannot have a bijection
+with the naturals, since zero would have no preimage. Saved Lean witnesses check the early predicate, the
+later predicate and the written reference, including agreement of the later predicate with the reference for
+all sets. This makes a disputed interpretation testable as a formal proposition. The interpretation linking
+source text to the reference remains an AI-assisted judgment, not independent expert certification; the
+witnesses nevertheless establish precise behavior of the formal predicates. 11; [Appendix D.5]
+The same study asks whether evaluating both candidates under both rules adds information beyond a fair
+fixed-rule comparison. For the inspected axiom and direct-premise attributes, effective rules coincide or
+have known implications, and the additional cells provide no extra answers. Seven constructed proof
+scenarios show that extra cells can add answers under deliberately arranged conditions; they validate the
+comparison program, not additional real-task success. The distinction between those scenarios and the
+historical negative result is retained in Appendix D, together with all pair states and question counts. A
+more elaborate evaluation table is useful only when its added measurements resolve a question the simpler,
+logically informed comparison cannot already answer. [11]
+24
+7 Overall assessment
+7.1 What the system has demonstrated
+The selected configurations complete substantial mathematical work: a fourth-moment strong law, stopped-
+expectation arguments, Skorokhod representation and an inversion-to-uniqueness application chain. The
+cases locate constructed objects, local derivations, changes to public assumptions and adopted support.
+Under current acceptance, C completes all eleven groups, B ten and A nine; A has the highest recorded
+median span and role count. These are the study’s comparative results for the executed configurations.
+[13,14,17,18,25,28]
+The remaining gaps are equally concrete. A/B’s Scheffé results do not expose the permitted eventual-
+tail interface. Original A omits continuous mapping, and its supplementary repair still omits composite
+measurability. B/C complete disclosed repairs to the insufficient continuous-mapping conditions. Beyond
+the common core, B supplies the stricter optional variance self-expansion, while C supplies the wider
+Cauchy parameter family and a separately exposed numerical continuous-mapping core. Completion and
+additional scope should both remain visible. [21-23]
+7.2 What explains the successes and failures
+Required mathematics has to reach the public theorem. The fourth-moment case closes a genuine
+premise gap by proving the missing bound internally. The Gamma history shows that removing an axiom
+can still leave the intended derivation absent. The moment-generating-function and coupon histories locate
+further work in global assembly, distributional connection and normalization. These distinctions explain
+why substantial progress can precede whole-task acceptance, and why an earlier pass need not contain
+more mathematics than a later fail. [4,6,8,25]
+Produced work has to reach the actor who can use it. The innovation cases show different submission
+behavior when review opinions are unavailable. Stopped-process and inversion runs establish successful
+adoption and subsequent use; maximal coupling supplies a counterexample to inferring adoption from a
+completed helper. The relevant sequence is production, return, reading, application and validation. Which
+link succeeds determines what the feedback or delegation contributes. [17-20,27]
+The evaluation must apply the intended obligation consistently. Correcting covariance-expansion treat-
+ment, eventual-tail scope, Cauchy extensions and continuous-mapping assumptions changes the original
+aggregate ordering without new solver proofs. The correction preserves real omissions as well as recov-
+ering valid results. Evaluator inputs and processing are consequently part of the system diagnosis, not
+clerical details separate from the reported performance. [13,15,21-23,30]
+7.3 What the historical audit adds
+The historical analysis converts repeated representations into identifiable judgments, checks whether com-
+pared objects and targets correspond, and retains positive recorded-label change in the qualified subset. It
+then tests an explanation of later-revision outcomes against the tasks that actually reach those later steps.
+The selection check rejects a simple diminishing-returns interpretation without discarding the observed
+acceptances. Saved-code checks add precise statements about declaration existence, axiom dependencies,
+direct proof shortcuts and definition behavior. [10,11,32]
+These studies support local mechanisms and explicitly selected descriptive results. They do not yet supply
+an overall valid-feedback adoption rate: the uniform-depth audit covers six of 127 services, while the sep-
+arately investigated cases have their own coverage. Shared models, changing implementations, purposive
+25
+historical qualification and incomplete cost records also prevent treating the results as an isolated coordi-
+nation effect or a complete allocation of project effort. The relevant limits are attached to the method and
+metric they affect. [16,30-32]
+7.4 Maintenance priorities supported by the evidence
+The first priority is whole-task interface closure : finish the actual public scope still missing in Scheffé
+and continuous mapping, and check that already proved support is connected to the final declarations and
+affected callers. The histories show why neither a successful build nor a list of passed auxiliary tasks settles
+that question. [5,7,22,23]
+The second is reliable delivery through the existing controls . An author needs access to the review or
+helper artifact before it can act on it; the repaired result must still be bound to the code being accepted.
+The innovation and inversion cases identify failures in this path even when mathematical work has already
+succeeded. They support repairing the return and recovery path while retaining the distinction between
+proof review and evidence validation. [17,19,27,33]
+The third is evaluation input and criterion maintenance . Documentation judgments need the original
+delivery explanation, equivalent library behavior needs the same rule, and recoverable formatting errors
+need to remain separate from proof defects. The completed reassessment demonstrates both the cost of
+getting these distinctions wrong and how existing evidence can correct the account. [15,21-23,30]
+The resulting assessment is that this project can organize and complete serious textbook formalization, with
+demonstrated local repair and reuse. Its most informative failures occur where a local proof must become
+a complete task, where an artifact must become usable by another role, or where a mathematical delivery
+must be judged against the intended criterion. Those are concrete maintenance problems identified by the
+combined experiment, trajectories and historical analysis—not conclusions obtainable from compilation
+or pass counts alone.
+8 References and public project materials
+The public repository provides the workflow implementation, Lean corpus, build instructions and se-
+lected historical cases. It also includes an isolated workflow demonstration that uses the production task-
+preparation, build, review-validation and application functions. Its small definition-and-caller example
+exercises an interface repair, a caller build failure and rejection of an outdated review. Lean compilation
+is real; default semantic opinions are recorded teaching reviews, with an option to configure an external
+reviewer. This is a software inspection entry point, separate from the probability-task evaluation. [36]
+Numerical references below lead to the relevant technical-appendix sections. Appendices C and D con-
+tain historical methods and results; G and L contain detailed trajectories and mathematical arguments; M
+and N contain measurements and evaluation methods. Appendix E.2 identifies the source groups and the
+accompanying evidence supplement.
+Ref. Material Technical appendix
+[1] Successive mathematical progress in inversion L.5; A.2
+[2] Editing, semantic review and registration A, B
+[3] Early orchestration and code editing A, L.1
+[4] Gamma-to-Dirichlet proof responsibilities B.4, L.2.1
+Continued on next page
+26
+Ref. Material Technical appendix
+[5] Proof obligations and parent reassessment B.1-B.3, L.2.2
+[6] Mathematical gates and MGF proof assembly B.10, L.2.3
+[7] Total variation and its consumers L.2.4
+[8] CLT and coupon-collection chain L.3
+[9] Target changes and review objects B, L.4
+[10] Historical comparisons, failing origins and selection C
+[11] Saved-code checks, definition witnesses and rule comparison D
+[12] Configurations and common task instructions K, N.1
+[13] Corrected acceptance and current panel K.8-K.9, M
+[14] Per-run durations, dispatches and tokens H, M, N.5
+[15] Evaluator repair and regression checks K.9, N.6
+[16] Feedback semantic coverage and evidence index G.18, N.4
+[17] H1 actual reuse, support and recovery G.13
+[18] B/C-M1 adoption, checking and documentation G.11
+[19] Assistance production, delivery, recovery and adoption
+boundaries
+G.1-G.4, G.18
+[20] C-L1 readable review and submission G.8
+[21] Corresponding L2 calls and consistent interpretation G.15
+[22] L7 control, condition repair, proof and disclosure G.16
+[23] L3 tail and H1 textbook scope G.13.1, G.17, K.8
+[24] Raw tool returns, process classification and co-occurrence M.2-M.3
+[25] M2 raw-to-centered-moment proof repair G.14.1; R02, R03, R14, R18
+[26] Previously captured local architecture, workflow and
+production contracts
+A.5, K, N; V01-V06, P01-P02
+[27] L1 same-task mathematical routes, control, information and
+later revisions
+G.5-G.10; N01-N13, R06-R08
+[28] M3 full-task adoption and confidence-format adjudication G.12; U05-U06
+[29] Intermediate L3 premise removal and version-bound repair G.14.2; R02, R03, T02
+[30] Common-evaluation rules, visible inputs and actual session
+settings
+N.6; E.2; supplied evaluation
+evidence
+[31] Run selection, shared inputs, actual allowances and missing
+usage
+N.1, N.5; E.2; supplied run evidence
+[32] Historical target decisions and saved-code sampling rule C.4, D.1; E.2; supplied
+historical-method evidence
+[33] Innovation review-recovery records and unresolved
+attribution
+G.6; E.2; supplied recovery evidence
+[34] Documented task lifecycle, repair, scheduling and
+canonical-state maintenance
+A.5, E.3; public architecture,
+workflow, workspace-state and
+dependency documentation
+[35] Textbook–Mathlib interfaces, dependency selection and proof
+responsibility
+E.3; interface policy, dependency
+trail and semantic-review criteria
+[36] Public implementation and isolated workflow demonstration E.3; architecture and
+workflow-demo documentation
+27

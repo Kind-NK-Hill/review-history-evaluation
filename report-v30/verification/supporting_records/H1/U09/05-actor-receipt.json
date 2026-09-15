@@ -1,0 +1,52 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "coverage-H1_inversion_chain-A-r2-continuation-r4",
+  "arm": "A",
+  "role": "general_reviewer_resume",
+  "dispatch_id": "7c1eba0a-472a-43e5-8c9b-269a79e5b6bb",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": "01a08f37-f53f-7473-95f5-ea5fdfa76e92",
+  "parent_dispatch_id": "62122aa7-c01d-447d-a576-d70a135269d2",
+  "help_config_sha256": "fccffa17697641c4df18413b6747e074405923d05abb80801e0ddc52f27b5a12",
+  "effective_help_config_sha256": "ee324f941a1ea4c61112064cfc76a2887c06a9aae4daa12907517d503734e838",
+  "session_ids": [
+    "01a08f37-f53f-7473-95f5-ea5fdfa76e92"
+  ],
+  "usage": [
+    {
+      "input_tokens": 207869,
+      "cached_input_tokens": 191360,
+      "output_tokens": 6357,
+      "reasoning_output_tokens": 638
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 139.4220000000205,
+    "deadline_epoch": 1789137004.9486196,
+    "remaining_at_launch_seconds": 27336.93842482567,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\thm96-same-reviewer-binding-r1\\actor\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\a-h1-cont-r4\\thm96-same-reviewer-binding-r1\\actor\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 36000.0,
+    "started_epoch": 1789101004.9486196,
+    "deadline_epoch": 1789137004.9486196,
+    "remaining_seconds": 27197.487415075302
+  },
+  "public_events_sha256": "7895ba6c15e9f423974e33c692ea9d7225dfb51fdd7ba8315d3fc9b167cc8e0e",
+  "raw_public_events_sha256": "7895ba6c15e9f423974e33c692ea9d7225dfb51fdd7ba8315d3fc9b167cc8e0e",
+  "public_recording_policy": "public-cli-v2-summary-auto-no-raw-agent-reasoning",
+  "event_ledger_sha256": "a0a97cd41eeda4c9f25c54fdfc36c13fa8fba3bcf0e5877f017a210d7ab1ca61",
+  "event_recording_summary_sha256": "63e6de0cc6861bc294c5a7c8e92c64d037f92edc0bf6af1b35e545469378f17e",
+  "usd": null
+}

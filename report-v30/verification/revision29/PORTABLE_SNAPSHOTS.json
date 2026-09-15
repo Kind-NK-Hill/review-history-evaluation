@@ -1,0 +1,398 @@
+[
+  {
+    "run": "r2-m2-a",
+    "event": "E057",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/task.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/7199ffd4-6d75-4104-9445-b99ab512731c/before/.__artifacts__phase2_prompt_packs__thm_11_7__task.json",
+    "sha256": "a7f6418560bb62fd5dbcf87b56aebb17e31cc171c1e51e5df4e96b73fa7862dd",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E057",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/draft.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/7199ffd4-6d75-4104-9445-b99ab512731c/before/.__artifacts__phase2_prompt_packs__thm_11_7__draft.lean",
+    "sha256": "ee4cc387ed8c948476f4e32b570077ecfefc074ac86748de6477e8aa8ab2ba21",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E057",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/intent_contract.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/7199ffd4-6d75-4104-9445-b99ab512731c/before/.__artifacts__phase2_prompt_packs__thm_11_7__intent_contract.json",
+    "sha256": "f47374757d6c5cf9e8ad9fa041e20f2e3bb6d27b55303040a8128bd5a6d0eaa9",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E057",
+    "phase": "before",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/7199ffd4-6d75-4104-9445-b99ab512731c/before/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "59a77a4005809ac7fa5474611dc078e01efdbef67b6ded3f884f6744c170a507",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E057",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/task.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/7199ffd4-6d75-4104-9445-b99ab512731c/after/.__artifacts__phase2_prompt_packs__thm_11_7__task.json",
+    "sha256": "a7f6418560bb62fd5dbcf87b56aebb17e31cc171c1e51e5df4e96b73fa7862dd",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E057",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/draft.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/7199ffd4-6d75-4104-9445-b99ab512731c/after/.__artifacts__phase2_prompt_packs__thm_11_7__draft.lean",
+    "sha256": "fd6eded644f84fcca7fe447e45ab3ec3029a4255718b2147dc8cd0b1f13b6eef",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E057",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/intent_contract.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/7199ffd4-6d75-4104-9445-b99ab512731c/after/.__artifacts__phase2_prompt_packs__thm_11_7__intent_contract.json",
+    "sha256": "f47374757d6c5cf9e8ad9fa041e20f2e3bb6d27b55303040a8128bd5a6d0eaa9",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E057",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/AuthorSupport/thm_11_7_candidate.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/7199ffd4-6d75-4104-9445-b99ab512731c/after/.__ProbabilityTheoryFormalization__AuthorSupport__thm_11_7_candidate.lean",
+    "sha256": "fd6eded644f84fcca7fe447e45ab3ec3029a4255718b2147dc8cd0b1f13b6eef",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E057",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/7199ffd4-6d75-4104-9445-b99ab512731c/after/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "59a77a4005809ac7fa5474611dc078e01efdbef67b6ded3f884f6744c170a507",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E085",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/task.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/9a2df7de-9c00-4dbc-b085-da4465c50c99/before/.__artifacts__phase2_prompt_packs__thm_11_7__task.json",
+    "sha256": "a7f6418560bb62fd5dbcf87b56aebb17e31cc171c1e51e5df4e96b73fa7862dd",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E085",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/draft.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/9a2df7de-9c00-4dbc-b085-da4465c50c99/before/.__artifacts__phase2_prompt_packs__thm_11_7__draft.lean",
+    "sha256": "ee4cc387ed8c948476f4e32b570077ecfefc074ac86748de6477e8aa8ab2ba21",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E085",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/intent_contract.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/9a2df7de-9c00-4dbc-b085-da4465c50c99/before/.__artifacts__phase2_prompt_packs__thm_11_7__intent_contract.json",
+    "sha256": "f47374757d6c5cf9e8ad9fa041e20f2e3bb6d27b55303040a8128bd5a6d0eaa9",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E085",
+    "phase": "before",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/9a2df7de-9c00-4dbc-b085-da4465c50c99/before/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "59a77a4005809ac7fa5474611dc078e01efdbef67b6ded3f884f6744c170a507",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E085",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/task.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/9a2df7de-9c00-4dbc-b085-da4465c50c99/after/.__artifacts__phase2_prompt_packs__thm_11_7__task.json",
+    "sha256": "a7f6418560bb62fd5dbcf87b56aebb17e31cc171c1e51e5df4e96b73fa7862dd",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E085",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/draft.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/9a2df7de-9c00-4dbc-b085-da4465c50c99/after/.__artifacts__phase2_prompt_packs__thm_11_7__draft.lean",
+    "sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E085",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/intent_contract.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/9a2df7de-9c00-4dbc-b085-da4465c50c99/after/.__artifacts__phase2_prompt_packs__thm_11_7__intent_contract.json",
+    "sha256": "f47374757d6c5cf9e8ad9fa041e20f2e3bb6d27b55303040a8128bd5a6d0eaa9",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E085",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/AuthorSupport/thm_11_7_candidate.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/9a2df7de-9c00-4dbc-b085-da4465c50c99/after/.__ProbabilityTheoryFormalization__AuthorSupport__thm_11_7_candidate.lean",
+    "sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E085",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/9a2df7de-9c00-4dbc-b085-da4465c50c99/after/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "59a77a4005809ac7fa5474611dc078e01efdbef67b6ded3f884f6744c170a507",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E011",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/task.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/b40beabf-f563-4df9-808e-266bf47c283c/before/.__artifacts__phase2_prompt_packs__thm_11_7__task.json",
+    "sha256": "a7f6418560bb62fd5dbcf87b56aebb17e31cc171c1e51e5df4e96b73fa7862dd",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E011",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/draft.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/b40beabf-f563-4df9-808e-266bf47c283c/before/.__artifacts__phase2_prompt_packs__thm_11_7__draft.lean",
+    "sha256": "ee4cc387ed8c948476f4e32b570077ecfefc074ac86748de6477e8aa8ab2ba21",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E011",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/intent_contract.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/b40beabf-f563-4df9-808e-266bf47c283c/before/.__artifacts__phase2_prompt_packs__thm_11_7__intent_contract.json",
+    "sha256": "f47374757d6c5cf9e8ad9fa041e20f2e3bb6d27b55303040a8128bd5a6d0eaa9",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E011",
+    "phase": "before",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/b40beabf-f563-4df9-808e-266bf47c283c/before/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "59a77a4005809ac7fa5474611dc078e01efdbef67b6ded3f884f6744c170a507",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E011",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/task.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/b40beabf-f563-4df9-808e-266bf47c283c/after/.__artifacts__phase2_prompt_packs__thm_11_7__task.json",
+    "sha256": "a7f6418560bb62fd5dbcf87b56aebb17e31cc171c1e51e5df4e96b73fa7862dd",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E011",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/draft.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/b40beabf-f563-4df9-808e-266bf47c283c/after/.__artifacts__phase2_prompt_packs__thm_11_7__draft.lean",
+    "sha256": "4d7174c04d1ed4ab47b8cfb2886ce7865ba16093ea6c875ed295b862124516f1",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E011",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/intent_contract.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/b40beabf-f563-4df9-808e-266bf47c283c/after/.__artifacts__phase2_prompt_packs__thm_11_7__intent_contract.json",
+    "sha256": "f47374757d6c5cf9e8ad9fa041e20f2e3bb6d27b55303040a8128bd5a6d0eaa9",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E011",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/b40beabf-f563-4df9-808e-266bf47c283c/after/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "59a77a4005809ac7fa5474611dc078e01efdbef67b6ded3f884f6744c170a507",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/task.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/before/.__artifacts__phase2_prompt_packs__thm_11_7__task.json",
+    "sha256": "a7f6418560bb62fd5dbcf87b56aebb17e31cc171c1e51e5df4e96b73fa7862dd",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/draft.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/before/.__artifacts__phase2_prompt_packs__thm_11_7__draft.lean",
+    "sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "before",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/intent_contract.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/before/.__artifacts__phase2_prompt_packs__thm_11_7__intent_contract.json",
+    "sha256": "f47374757d6c5cf9e8ad9fa041e20f2e3bb6d27b55303040a8128bd5a6d0eaa9",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "before",
+    "archive_member": "./ProbabilityTheoryFormalization/AuthorSupport/thm_11_7_candidate.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/before/.__ProbabilityTheoryFormalization__AuthorSupport__thm_11_7_candidate.lean",
+    "sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "before",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/before/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "59a77a4005809ac7fa5474611dc078e01efdbef67b6ded3f884f6744c170a507",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/task.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/after/.__artifacts__phase2_prompt_packs__thm_11_7__task.json",
+    "sha256": "a7f6418560bb62fd5dbcf87b56aebb17e31cc171c1e51e5df4e96b73fa7862dd",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/draft.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/after/.__artifacts__phase2_prompt_packs__thm_11_7__draft.lean",
+    "sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "after",
+    "archive_member": "./artifacts/phase2_prompt_packs/thm_11_7/intent_contract.json",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/after/.__artifacts__phase2_prompt_packs__thm_11_7__intent_contract.json",
+    "sha256": "f47374757d6c5cf9e8ad9fa041e20f2e3bb6d27b55303040a8128bd5a6d0eaa9",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/AuthorSupport/thm_11_7_candidate.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/after/.__ProbabilityTheoryFormalization__AuthorSupport__thm_11_7_candidate.lean",
+    "sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f",
+    "verified": true
+  },
+  {
+    "run": "r2-m2-a",
+    "event": "E157",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-m2-a/c0786595-edb0-465c-95fe-71b68679cc22/after/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "59a77a4005809ac7fa5474611dc078e01efdbef67b6ded3f884f6744c170a507",
+    "verified": true
+  },
+  {
+    "run": "r2-l6-b",
+    "event": "E099",
+    "phase": "before",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-l6-b/2bd44263-a376-421c-9847-dcead9cc9cb8/before/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "c04f1eead9f0fd5910940cf2c5570892f66e630520925d7ac639a7cd75f19479",
+    "verified": true
+  },
+  {
+    "run": "r2-l6-b",
+    "event": "E099",
+    "phase": "before",
+    "archive_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/prob_12_5_affine.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-l6-b/2bd44263-a376-421c-9847-dcead9cc9cb8/before/.__ProbabilityTheoryFormalization__ProbabilityTheory__chapter_12__prob_12_5_affine.lean",
+    "sha256": "9b5fa12071b7cf1bde2c873baae03d466a28e4c98ae54c575d1da2ca2c773434",
+    "verified": true
+  },
+  {
+    "run": "r2-l6-b",
+    "event": "E099",
+    "phase": "before",
+    "archive_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/prob_12_5_complete.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-l6-b/2bd44263-a376-421c-9847-dcead9cc9cb8/before/.__ProbabilityTheoryFormalization__ProbabilityTheory__chapter_12__prob_12_5_complete.lean",
+    "sha256": "c7fe73607fcd5135815b5c4cd24b0901dba2c9d05d77590b22d18fe7f6b3bc2b",
+    "verified": true
+  },
+  {
+    "run": "r2-l6-b",
+    "event": "E099",
+    "phase": "before",
+    "archive_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/prob_12_5.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-l6-b/2bd44263-a376-421c-9847-dcead9cc9cb8/before/.__ProbabilityTheoryFormalization__ProbabilityTheory__chapter_12__prob_12_5.lean",
+    "sha256": "3814cb3c45720606e0ba90e6467e66cd9196a67693965caef2f5007ef0ceff9a",
+    "verified": true
+  },
+  {
+    "run": "r2-l6-b",
+    "event": "E099",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/TASK.zh-CN.md",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-l6-b/2bd44263-a376-421c-9847-dcead9cc9cb8/after/.__ProbabilityTheoryFormalization__TASK.zh-CN.md",
+    "sha256": "c04f1eead9f0fd5910940cf2c5570892f66e630520925d7ac639a7cd75f19479",
+    "verified": true
+  },
+  {
+    "run": "r2-l6-b",
+    "event": "E099",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/prob_12_5_affine.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-l6-b/2bd44263-a376-421c-9847-dcead9cc9cb8/after/.__ProbabilityTheoryFormalization__ProbabilityTheory__chapter_12__prob_12_5_affine.lean",
+    "sha256": "9b5fa12071b7cf1bde2c873baae03d466a28e4c98ae54c575d1da2ca2c773434",
+    "verified": true
+  },
+  {
+    "run": "r2-l6-b",
+    "event": "E099",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/prob_12_5_complete.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-l6-b/2bd44263-a376-421c-9847-dcead9cc9cb8/after/.__ProbabilityTheoryFormalization__ProbabilityTheory__chapter_12__prob_12_5_complete.lean",
+    "sha256": "c7fe73607fcd5135815b5c4cd24b0901dba2c9d05d77590b22d18fe7f6b3bc2b",
+    "verified": true
+  },
+  {
+    "run": "r2-l6-b",
+    "event": "E099",
+    "phase": "after",
+    "archive_member": "./ProbabilityTheoryFormalization/ProbabilityTheory/chapter_12/prob_12_5.lean",
+    "package_file": "research/analysis_20260915/final_research_supplement_20260915/evidence/r2-l6-b/2bd44263-a376-421c-9847-dcead9cc9cb8/after/.__ProbabilityTheoryFormalization__ProbabilityTheory__chapter_12__prob_12_5.lean",
+    "sha256": "3814cb3c45720606e0ba90e6467e66cd9196a67693965caef2f5007ef0ceff9a",
+    "verified": true
+  }
+]

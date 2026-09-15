@@ -1,0 +1,18 @@
+{
+  "source_sha256": "f8ce63ca090dec579d1337b0bd87a76c26f1f72e4f1fa6267c6abdfacbacfb93",
+  "export_error_sha256": "48dc5dcf17c791404bbddc357b9c3daee7181b49a09c8d9735f1b7e914008a16",
+  "excerpts": [
+    {
+      "file": "helper_dispatcher.py",
+      "start": 101,
+      "end": 108,
+      "text": "    docker = Path(config[\"docker_path\"]).resolve()\n    before_archive = output / \"before-workspace.tar\"\n    _export_workspace_tar(\n        docker, request[\"parent_container_id\"], before_archive,\n        output / \"snapshot-export.stderr.bin\", min(300, remaining),\n    )\n    before_manifest = _tar_manifest(before_archive)\n    write_json_new(output / \"before-manifest.json\", before_manifest)"
+    },
+    {
+      "file": "helper_dispatcher.py",
+      "start": 378,
+      "end": 391,
+      "text": "def _workspace_patch(before: Path, after: Path) -> str:\n    excluded_parts = {\".git\", \".lake\", \"__pycache__\", \"artifacts\", \"home\"}\n    paths = sorted(\n        {p.relative_to(before) for p in before.rglob(\"*\") if p.is_file()}\n        | {p.relative_to(after) for p in after.rglob(\"*\") if p.is_file()}\n    )\n    chunks: list[str] = []\n    for relative in paths:\n        if any(part in excluded_parts for part in relative.parts):\n            continue\n        old = before / relative\n        new = after / relative\n        old_bytes = old.read_bytes() if old.exists() else b\"\"\n        new_bytes = new.read_bytes() if new.exists() else b\"\""
+    }
+  ]
+}

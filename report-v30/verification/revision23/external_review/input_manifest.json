@@ -1,0 +1,18 @@
+{
+  "report.en.md": {
+    "characters": 119079,
+    "sha256": "c44e9a0c25a22476e1e818a0756d045f2bd805fb231d1d732c13384ee5568046"
+  },
+  "appendix.en.md": {
+    "characters": 249534,
+    "sha256": "8cb120cd5edd01c9820296db8bb06eddc56c2ce16269d586a28c58ac78f69162"
+  },
+  "report.zh-CN.md": {
+    "characters": 44095,
+    "sha256": "534be018311fd80fe4637a11fd4be008227edd76664518d0098c549eb7edfeaa"
+  },
+  "appendix.zh-CN.md": {
+    "characters": 90126,
+    "sha256": "2944e6fb3e3a51ad89becb69b168be4fbc1ef1df4bc8b9a88e74ad2c8b74f701"
+  }
+}

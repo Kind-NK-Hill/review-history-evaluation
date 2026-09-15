@@ -1,7 +1,8 @@
 """Verify public file bytes; no builds, model calls or external filesystem reads."""
 from pathlib import Path
-import hashlib,json
+import hashlib,json,os
 ROOT=Path(__file__).resolve().parent
+if os.name=='nt':ROOT=Path('\\\\?\\'+str(ROOT))
 manifest=json.loads((ROOT/'PUBLIC_RELEASE.json').read_text(encoding='utf-8'))
 errors=[]
 for item in manifest['files']:

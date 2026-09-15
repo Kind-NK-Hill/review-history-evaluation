@@ -1,0 +1,29 @@
+--- sealed-original/candidate_v1.lean
++++ resumed-final/thm_10_11.lean
+@@ -148,11 +148,21 @@
+     exact h
+   exact (hc.tendsto.comp hraw).apply_nhds k
+ 
+-/-- Textbook Theorem 10.11 (continuous mapping theorem).  Here continuity on
+-`S` means ambient continuity at every point of `S`, exactly as used by the
+-textbook's comparison with arbitrary nearby vectors.  Global measurability of
+-`f` supplies the implicit random-vector contract for the composite outputs;
+-no measurability of either composite is assumed. -/
++/-- The mathematically corrected form of textbook Theorem 10.11 (the
++continuous mapping theorem).  The source phrase “continuous on `S`” must mean
++ambient continuity at every point of `S`, as its proof applies `f` to sequences
++that may approach `S` from outside.  It cannot mean Mathlib's relative
++`ContinuousOn f S`; that reading is false already for `S = {0}` and a function
++discontinuous when approaching zero from outside `S`.
++
++The interface therefore states the intended condition explicitly as
++`∀ x ∈ S, ContinuousAt f x`.  It also makes the random-vector contract
++explicit: `f`, `Vn n`, and `V` are Borel measurable, while `V` belongs to `S`
++almost everywhere via the measurable full-probability event.  Measurability of
++the composites is proved below from these data and is not assumed.  The
++probability part uses the equivalent subsequence characterization of
++convergence in measure, avoiding any extra measurability assumption for the
++textbook's projected bad-center sets. -/
+ theorem thm_10_11 {Ω : Type*} [MeasurableSpace Ω] {d m : ℕ} (μ : Measure Ω)
+     [IsProbabilityMeasure μ]
+     (Vn : ℕ → Ω → Fin d → ℝ) (V : Ω → Fin d → ℝ)

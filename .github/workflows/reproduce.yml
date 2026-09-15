@@ -16,3 +16,7 @@ jobs:
         run: python report-v28/test_reproduce.py
       - name: Recompute from bundled inputs
         run: python report-v28/reproduce.py --output "${{ runner.temp }}/study-recomputed"
+      - name: Recompute revision-30 follow-up
+        run: python report-v30/recompute_followup.py
+      - name: Restore offline reading bundle
+        run: python report-v30/prepare_evidence.py --output "${{ runner.temp }}/reading-bundle"

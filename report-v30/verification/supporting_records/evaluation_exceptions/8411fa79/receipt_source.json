@@ -1,0 +1,48 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "ac-endpoint-c2fb5f540fc9fa12c894-reviewer-2",
+  "arm": "C",
+  "role": "reviewer",
+  "dispatch_id": "8411fa79-74b9-46f9-833a-5b3eb92778ff",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": null,
+  "help_config_sha256": null,
+  "effective_help_config_sha256": "faf1a8248623e649d1c25ead91f24199d6ab104333f101cb300a428a6ad5f8d0",
+  "session_ids": [
+    "01a091d3-13ae-74a2-a4c1-eb39bcf13461"
+  ],
+  "usage": [
+    {
+      "input_tokens": 274726,
+      "cached_input_tokens": 210304,
+      "output_tokens": 7627
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 186.31299999999464,
+    "deadline_epoch": 1789154724.2475657,
+    "remaining_at_launch_seconds": 1799.9819831848145,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\executions\\reviewer-2\\attempt-01\\actor\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\executions\\reviewer-2\\attempt-01\\actor\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 1800.0,
+    "started_epoch": 1789152924.2475657,
+    "deadline_epoch": 1789154724.2475657,
+    "remaining_seconds": 1613.638273715973
+  },
+  "public_events_sha256": "d553b884c7824f1e108b3610c8d9fb42036fd6919f84ee9cc07f8fe259c90335",
+  "raw_public_events_sha256": "d553b884c7824f1e108b3610c8d9fb42036fd6919f84ee9cc07f8fe259c90335",
+  "usd": null
+}

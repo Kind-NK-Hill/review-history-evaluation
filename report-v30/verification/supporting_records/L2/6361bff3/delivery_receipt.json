@@ -1,0 +1,26 @@
+{
+  "exit_code": 0,
+  "epoch": 1789112970.7253337,
+  "stderr": "",
+  "files": {
+    "root": "D:\\Grad_Study\\Practimum\\Formalization\\bcap-r4-runs\\coverage-L2-B-r4-001\\support-export-recovery-r1\\help-result-eb7cde99-6891-47c5-9dcf-df3826693de2",
+    "files": {
+      "patch.diff": {
+        "bytes": 6655,
+        "sha256": "c0fd3bf5c9945524429a1b8c9f4bd2bd45fce004e70e9ced7fc23248a5774d8b"
+      },
+      "response.md": {
+        "bytes": 776,
+        "sha256": "eb8314f02aa16cb3a7e1d08ed321668f40c5b382f8859a73a73544a40a21738c"
+      },
+      "role-artifact-1-patch.diff": {
+        "bytes": 6531,
+        "sha256": "5218705a15ae74f948d4c06efbab124d52d6f5441fd7b4cb3fd8bd52ffe8ed62"
+      },
+      "role-artifact-2-response.md": {
+        "bytes": 2089,
+        "sha256": "f349163851d4b2d7e1765908e84a98a9680e3532cf11e8fbf2fb94fb43f6b227"
+      }
+    }
+  }
+}

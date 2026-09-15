@@ -1,0 +1,106 @@
+{
+  "schema": "c.internal_review.v1",
+  "task_id": "thm_11_5",
+  "candidate_id": "c1",
+  "verdict": "pass",
+  "source_claims": [
+    "对具有共同均值 μ、共同有限方差 σ²的两两不相关实随机变量序列，前 n 项平均值依概率收敛到 μ。",
+    "不得把两两不相关加强为独立或同分布。",
+    "应由方差可加性实际推出有限和或样本均值的方差界。",
+    "应应用切比雪夫不等式得到具体尾概率界，不能要求调用者提供该界。",
+    "应证明尾概率上界随 n 趋于无穷而趋于零。"
+  ],
+  "claim_mapping": [
+    {
+      "claim": "序列、共同均值、共同有限方差及两两不相关的前提",
+      "declaration": "thm_11_5",
+      "assumptions": [
+        "P 是概率测度",
+        "每个 X i 可测且属于 L²(P)",
+        "任意 i≠j 时 Uncorrelated P (X i) (X j)",
+        "每个 X i 的期望等于 μ",
+        "每个 X i 的教材方差等于 σ²"
+      ],
+      "status": "satisfied",
+      "evidence": "ProbabilityTheory/chapter_11/thm_11_5.lean:111-119 给出了上述全部前提；没有独立性或同分布前提。L² 条件保证二阶矩有限。"
+    },
+    {
+      "claim": "Sₙ/n 的正确形式化及索引对应",
+      "declaration": "sampleAverage",
+      "assumptions": [
+        "X 以自然数索引",
+        "n 为自然数"
+      ],
+      "status": "satisfied",
+      "evidence": "目标文件第8-11行定义 sampleAverage X n=(∑i∈range n X i)/n。range n 对应零基的前 n 项，是教材指标 1,…,n 的等价重编号；收敛证明只在最终 n≥1 时使用除法公式。"
+    },
+    {
+      "claim": "样本均值的期望为 μ",
+      "declaration": "integral_sampleAverage",
+      "assumptions": [
+        "n>0",
+        "每项属于 L²(P)",
+        "每项期望为 μ"
+      ],
+      "status": "satisfied",
+      "evidence": "目标文件第15-27行由积分对有限和及常数除法的线性性证明 E[sampleAverage X n]=μ，没有把该等式作为 thm_11_5 的额外前提。"
+    },
+    {
+      "claim": "由两两不相关和共同方差得到样本均值方差 σ²/n",
+      "declaration": "variance_sampleAverage",
+      "assumptions": [
+        "n>0",
+        "每项属于 L²(P)",
+        "每项方差为 σ²",
+        "各不同项两两不相关"
+      ],
+      "status": "satisfied",
+      "evidence": "目标文件第31-49行先使用方差的常数倍公式，再调用 thm_11_4 对 range n 中各项求和，随后用共同方差化简为 σ²/n。thm_11_4 的实际声明和正文已检查：其第39-52行从 Uncorrelated 推出非对角协方差为零并消去交叉项，而不是把方差可加结论设为调用前提。"
+    },
+    {
+      "claim": "应用切比雪夫得到具体尾概率界",
+      "declaration": "sampleAverage_tail_bound",
+      "assumptions": [
+        "ε>0",
+        "n>0",
+        "thm_11_5 的序列前提"
+      ],
+      "status": "satisfied",
+      "evidence": "目标文件第77-84行先将样本均值的实际期望改写为 μ；第85-95行调用 thm_11_2，将严格偏差事件包含于切比雪夫使用的非严格事件；第96-106行结合样本均值方差等式，实际证明 P(|sampleAverage−μ|>ε)≤ENNReal.ofReal(σ²/(nε²))。该尾界不是公开调用前提。"
+    },
+    {
+      "claim": "尾概率趋于零，从而依概率收敛",
+      "declaration": "thm_11_5",
+      "assumptions": [
+        "ε>0",
+        "上述尾概率界"
+      ],
+      "status": "satisfied",
+      "evidence": "目标文件第120-135行展开 ConvergesInProbability 的义务，证明 ENNReal.ofReal((σ²/ε²)(1/n)) 趋于零，并在最终 n≥1 上用 sampleAverage_tail_bound 夹逼尾概率。ProbabilityTheory/chapter_10/def_10_2.lean:31-36 确认结论正是对每个 ε>0，偏差事件概率趋于零。"
+    },
+    {
+      "claim": "教材方差与证明中使用的 Mathlib 方差一致",
+      "declaration": "textbookVariance_eq_variance",
+      "assumptions": [
+        "变量可测且属于 L²(P)"
+      ],
+      "status": "satisfied",
+      "evidence": "ProbabilityTheory/chapter_11/thm_11_4.lean:9-15 证明教材二阶中心矩方差等于 ProbabilityTheory.variance；目标文件第63-66及103-104行实际使用该桥接，没有替换方差对象。"
+    }
+  ],
+  "findings": [],
+  "support_files_checked": [
+    "COMMON_RULES.zh-CN.md",
+    "TASK.zh-CN.md",
+    "SOURCE.tex",
+    "ProbabilityTheory/chapter_11/thm_11_5.lean",
+    "ProbabilityTheory/chapter_11/thm_11_4.lean",
+    "ProbabilityTheory/chapter_11/thm_11_2.lean",
+    "ProbabilityTheory/chapter_10/def_10_2.lean",
+    "ProbabilityTheory/chapter_07/def_7_3.lean",
+    "ProbabilityTheory/chapter_09/def_9_1.lean"
+  ],
+  "technical_evidence_scope": "在本次提供容器的当前只读源码状态下，lake env lean ProbabilityTheory/chapter_11/thm_11_5.lean 成功。#print axioms 显示 thm_11_5、sampleAverage_tail_bound 和 variance_sampleAverage 仅依赖 propext、Classical.choice、Quot.sound。检查未发现 sorry、admit、新增 axiom、opaque 或 unsafe。该事实只证明当前文件及导入闭包在当前工具链中可核验，语义判定另由上述声明和证明映射给出。",
+  "unresolved": [],
+  "summary": "候选从题设的 L²、共同均值、共同方差和两两不相关条件出发，证明样本均值方差恰为 σ²/n，实际应用切比雪夫得到 σ²/(nε²) 尾界，并证明该界趋零，完整闭合了弱大数定律的依概率收敛结论。"
+}

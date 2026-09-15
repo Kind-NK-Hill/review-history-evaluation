@@ -1,0 +1,13 @@
+{
+  "reviewer": "executing assistant; not independent",
+  "page_count": 219,
+  "pages": {
+    "zh": 24,
+    "en": 32,
+    "zh-appendix": 71,
+    "en-appendix": 92
+  },
+  "all_pages_contact_sheet_reviewed": true,
+  "selected_full_pages": "English title and references, Chinese references, main L6 and M2, Appendix U in both languages",
+  "findings": "No clipping or overlap found; English guide remains on title page; references use deliberate pagination."
+}

@@ -1,0 +1,1692 @@
+{
+  "epoch": 1789153298.5381012,
+  "schema": "L7.candidate_contract_responsibility.r1",
+  "rows": [
+    {
+      "arm": "A",
+      "version": "A_original_partial",
+      "case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669",
+      "original_final_verdict": "fail",
+      "original_decision": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\final\\decision.json",
+        "sha256": "3a03f032e3c625aa7464c14fb99c6c3903cef8240b6fe74a6fb4e733b89cc72a"
+      },
+      "original_opinions": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\adjudicator.json",
+            "sha256": "7d83d5abf128631ef0028ee6f84c062ab435978bfaabee649d6d9231d0089828"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-a5ef5c2f70ca8ec650cd",
+            "assessment_origin": "model_output",
+            "confidence": 0.99,
+            "execution_receipt": {
+              "actor_receipt_sha256": "d9dd55b17b6fcd142495257a70ed30dfd3300d8f99a7a736a39ae98f8227940f",
+              "completed_at_utc": "2026-09-11T04:57:55.453717+00:00",
+              "container_inspect_sha256": "1835181995fd6f2ed6a2bb39b03ab822f83e542a9a879a8012078a458747e7a7",
+              "dispatch_id": "8bb7d24b-bea9-4369-96c1-7eed17f8dee0",
+              "elapsed_seconds": 128.75,
+              "fresh_session": true,
+              "input_binding_sha256": "a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "30dba3a5765b44eaf4b188455a5fbb3aa2caa9d39f86141148f9d412dd07097d",
+              "raw_events_sha256": "ca8476c5cfafe265018f5e594e58cef03f060a5ba15ba374ee89991e524890c7",
+              "reasoning_effort": "medium",
+              "session_id": "01a08ed2-6100-7281-8c3b-667a52abdd01",
+              "started_at_utc": "2026-09-11T04:55:46.697415+00:00",
+              "subject_manifest_after_sha256": "9915c4fda06982524a012daa62f9a7fa21521a7b835f1efd261354340daa53c9",
+              "subject_manifest_before_sha256": "9915c4fda06982524a012daa62f9a7fa21521a7b835f1efd261354340daa53c9",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 401664,
+                  "input_tokens": 483975,
+                  "output_tokens": 5004
+                }
+              ]
+            },
+            "findings": [
+              {
+                "category": "missing_obligation",
+                "description": "共同任务合同第五行要求证明连续映射保持几乎处处收敛和依概率收敛。候选目录只有 thm_10_10.lean；上游 thm_10_11.lean 仅写明其为空白实验目标、实现属于任务包，没有提供可复用证明。因此定理 10.11 的两项合同义务完全未实现。",
+                "evidence": [
+                  "/endpoint/input/task_contract/TASK.zh-CN.md",
+                  "/endpoint/input/source/SOURCE.tex",
+                  "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+                  "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_11.lean"
+                ],
+                "severity": "error"
+              },
+              {
+                "category": "semantic_quality",
+                "description": "候选对定理 10.10 的公开陈述保持了教材原意与双向强度；欧氏范数控制、有限坐标满测性质汇集、概率并集控制及零维情形均有实质证明。",
+                "evidence": [
+                  "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+                  "/endpoint/input/source/SOURCE.tex"
+                ],
+                "severity": "info"
+              },
+              {
+                "category": "proof_integrity",
+                "description": "候选新增辅助结果均在正文中透明证明；中性工具事实也显示构建、公理审计和逃逸扫描通过。未发现 sorry、admit、新增公理、循环调用或把关键结论迁入额外前提。",
+                "evidence": [
+                  "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+                  "/endpoint/input/tool_fact/technical-validation.json"
+                ],
+                "severity": "info"
+              }
+            ],
+            "obligation_closure": {
+              "assessment": "定理 10.10 的义务已经闭合：坐标绝对值受欧氏范数控制；全部坐标受控时欧氏范数受 sqrt(d) 倍坐标界控制；有限坐标的几乎处处性质通过 ae_all_iff 汇集；逐坐标依概率收敛通过向量偏差事件包含于坐标偏差事件并集、一般测度并集界和有限和极限落实；反向方向通过坐标偏差事件包含于向量偏差事件落实；d=0 亦单独处理。定理 10.11 则没有声明或证明，满测收敛事件与 V⁻¹(S) 的相交、仅在 S 上连续、复合输出可测性及依概率事件控制均未闭合。",
+              "items": [
+                {
+                  "evidence": "thm_10_10、vectorConvergesAlmostSurely_of_coordinatewise 及坐标求值的连续性完成双向证明。",
+                  "obligation": "向量几乎处处收敛与逐坐标几乎处处收敛等价",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "双向范数界、两个偏差事件包含引理、有限指标并集测度界与有限和趋零完成双向证明。",
+                  "obligation": "向量依概率收敛与逐坐标依概率收敛等价",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "候选中不存在相应公开声明或证明。",
+                  "obligation": "连续映射保持几乎处处收敛",
+                  "status": "open"
+                },
+                {
+                  "evidence": "候选中不存在相应公开声明或证明。",
+                  "obligation": "连续映射保持依概率收敛",
+                  "status": "open"
+                }
+              ],
+              "status": "fail"
+            },
+            "proof_route_assessment": {
+              "assessment": "已实现的 thm_10_10 采用与教材等价的合法路线。几乎处处方向用 ae_all_iff 汇集有限坐标性质，并从零测坏集构造可测满测事件；依概率方向使用欧氏范数双向控制、事件包含、measure_iUnion_le、有限求和极限和夹逼。虽然导入 prob_2_4 后未直接调用，但一般测度并集界足以承担同一数学责任。连续映射部分没有任何证明路线，因此全组证明路线不完整。",
+              "dependencies": [
+                "Mathlib",
+                "ProbabilityTheory.chapter_10.def_10_6",
+                "ProbabilityTheory.chapter_10.def_10_1",
+                "ProbabilityTheory.chapter_10.def_10_2",
+                "ProbabilityTheory.chapter_02.prob_2_4"
+              ],
+              "new_support_route": [
+                "coordinate_abs_le_vectorEuclideanNorm",
+                "vectorEuclideanNorm_le_sqrt_card_mul_of_coordinate_le",
+                "vectorDeviationEvent_subset_iUnion_coordinateDeviationEvent",
+                "coordinateDeviationEvent_subset_vectorDeviationEvent",
+                "vectorConvergesAlmostSurely_of_coordinatewise",
+                "vectorConvergesInProbability_of_coordinatewise"
+              ],
+              "proof_escape_detected": false,
+              "status": "fail"
+            },
+            "public_premise_check": {
+              "assessment": "IsProbabilityMeasure μ 以及 Vn、V 的可测性对应教材中的概率空间和随机向量条件，不是迁入的目标结论。候选没有把逐坐标结论、复合收敛、事件包含或范数界作为未经证明的公开前提。连续映射部分因根本没有公开声明而不能获得正面认证；该问题计为目标缺失，而非现有声明的前提迁移。",
+              "scope": "候选实际公开的定理 10.10 声明",
+              "status": "pass"
+            },
+            "request_id": "adj-a5ef5c2f70ca8ec650cd55ef-1",
+            "role": "adjudicator",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": {
+              "assessment": "thm_10_10 准确表达有限维实随机向量几乎处处收敛及依概率收敛分别等价于逐坐标收敛，使用 Fin d → ℝ 和显式欧氏范数符合教材语境。可是合同还明确包括 thm_10_11，而候选没有对应公开声明，故整体陈述覆盖不完整。",
+              "covered_statements": [
+                "向量几乎处处收敛当且仅当每个坐标几乎处处收敛",
+                "向量依概率收敛当且仅当每个坐标依概率收敛"
+              ],
+              "missing_statements": [
+                "当极限向量几乎必然落入连续集 S 时，f 保持几乎处处收敛",
+                "当极限向量几乎必然落入连续集 S 时，f 保持依概率收敛"
+              ],
+              "status": "fail"
+            },
+            "summary": "候选对定理 10.10 的两个等价命题给出了语义忠实、证明闭合且通过技术验证的形式化；但共同任务合同明确要求同一最终源码状态还须完成定理 10.11 的连续映射两项结论。候选仅包含 thm_10_10.lean，而冻结的 thm_10_11.lean 明示为空白实验目标且实现应属于任务包，因此不能把该部分排除在验收范围外。连续映射的公开声明及全部关键证明义务均缺失，整体判定为 fail。",
+            "support_files_checked": [
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+              "/endpoint/input/source/SOURCE.tex",
+              "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+              "/endpoint/input/task_contract/TASK.zh-CN.md",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_11.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean",
+              "/endpoint/input/tool_fact/technical-validation.json"
+            ],
+            "technical_evidence_scope": {
+              "facts": {
+                "axiom_audit_exit_code": 0,
+                "build_exit_code": 0,
+                "candidate_source_sha256": {
+                  "ProbabilityTheory/chapter_10/thm_10_10.lean": "18689594581a8194a99ce4d82c4db9933dcf23e2752da5734cdba808b3f7d840"
+                },
+                "escape_scan_exit_code": 0,
+                "technical_receipt_sha256": "0572b66c03c802a856ccbf2082791931fb65ff1c79d4db73a3daac90824d7d89",
+                "technical_status": "pass"
+              },
+              "limitation": "中性工具事实只证明已保存的 thm_10_10.lean 通过相应构建、审计和扫描，不能证明合同中未保存的 thm_10_11 义务已经完成，也不能缩小共同任务合同的验收范围。",
+              "source": "/endpoint/input/tool_fact/technical-validation.json",
+              "status": "pass"
+            },
+            "unresolved": [],
+            "verdict": "fail"
+          }
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\reviewer-1.json",
+            "sha256": "61c665c166e445c2525fef5ee0431518bcda5074b221a31c0b8e3d8162f8bc45"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-a5ef5c2f70ca8ec650cd",
+            "assessment_origin": "model_output",
+            "confidence": 0.99,
+            "execution_receipt": {
+              "actor_receipt_sha256": "863b718bf6666a0813981ef92200dce900dd5f1b689943aca95d59d59abfc7b0",
+              "completed_at_utc": "2026-09-11T04:53:51.153681+00:00",
+              "container_inspect_sha256": "b56cb3fbe3207e0aa997605cfdcf7acf9c2f2c38f7ac9f97bbbf7d2a2d0be2de",
+              "dispatch_id": "85ab9e04-3f05-436a-826d-f2fabd839b54",
+              "elapsed_seconds": 151.76600000000326,
+              "fresh_session": true,
+              "input_binding_sha256": "a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "8c6ffc1d00d3b434be3358996a772f08352dbd2b292acf4a84f1d723ed0cc341",
+              "raw_events_sha256": "4fd9263cd021249fd422b0678afd449850873c8a4ee4154fea4cff099e04fa45",
+              "reasoning_effort": "medium",
+              "session_id": "01a08ece-4c9f-73a1-b15a-dbe25e7e9082",
+              "started_at_utc": "2026-09-11T04:51:19.389243+00:00",
+              "subject_manifest_after_sha256": "9915c4fda06982524a012daa62f9a7fa21521a7b835f1efd261354340daa53c9",
+              "subject_manifest_before_sha256": "9915c4fda06982524a012daa62f9a7fa21521a7b835f1efd261354340daa53c9",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 193664,
+                  "input_tokens": 247217,
+                  "output_tokens": 6597
+                }
+              ]
+            },
+            "findings": [
+              {
+                "category": "missing_obligation",
+                "description": "任务合同要求的连续映射定理两部分完全缺失。冻结的上游 `thm_10_11.lean` 仅为一行空白实验目标，候选文件也没有补充对应声明或证明。",
+                "evidence": [
+                  "/endpoint/input/task_contract/TASK.zh-CN.md",
+                  "/endpoint/input/source/SOURCE.tex",
+                  "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+                  "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_11.lean"
+                ],
+                "severity": "error"
+              },
+              {
+                "category": "semantic_quality",
+                "description": "候选对定理 10.10 的形式化在原意、双向强度和有限维证明义务方面均无实质缺陷。",
+                "severity": "info"
+              },
+              {
+                "category": "proof_integrity",
+                "description": "源码中未见 `sorry`、`admit`、新增公理、把目标改写为额外前提或通过不透明支持逃逸。",
+                "severity": "info"
+              }
+            ],
+            "obligation_closure": {
+              "assessment": "定理 10.10 部分的教材义务已实质落到证明中：坐标绝对值由欧氏范数控制；所有坐标受控时欧氏范数由 sqrt(d) 倍坐标界控制；逐坐标几乎处处收敛通过有限坐标的几乎处处全称化和可测满测事件落实；逐坐标依概率收敛通过有限坐标偏差事件并集及概率和界落实；反向依概率结论通过坐标偏差事件包含于向量偏差事件落实。零维情形亦被单独处理。连续映射部分则完全缺失，因而满测集与 V⁻¹(S) 的相交、仅在 S 上的连续性、复合输出可测性以及依概率事件控制均未闭合。",
+              "status": "fail"
+            },
+            "proof_route_assessment": {
+              "assessment": "已实现的定理 10.10 采用与教材数学等价的路线。几乎处处方向使用 `ae_all_iff` 汇集有限坐标的满测性质，并构造可测零测坏集的补集；依概率方向使用欧氏范数双向控制、事件包含、有限指标并集的测度上界和有限和极限。该路线无需逐字复现教材的 ε/√d 与显式有限并集定理接口，合同上应作同等判断。候选新增的范数及事件包含引理均透明地在正文中证明，未发现证明逃逸。不过没有为连续映射义务提供任何路线。",
+              "dependencies": [
+                "Mathlib",
+                "ProbabilityTheory.chapter_10.def_10_6",
+                "ProbabilityTheory.chapter_10.def_10_1",
+                "ProbabilityTheory.chapter_10.def_10_2",
+                "ProbabilityTheory.chapter_02.prob_2_4"
+              ],
+              "new_support_route": [
+                "coordinate_abs_le_vectorEuclideanNorm",
+                "vectorEuclideanNorm_le_sqrt_card_mul_of_coordinate_le",
+                "vectorDeviationEvent_subset_iUnion_coordinateDeviationEvent",
+                "coordinateDeviationEvent_subset_vectorDeviationEvent",
+                "vectorConvergesAlmostSurely_of_coordinatewise",
+                "vectorConvergesInProbability_of_coordinatewise"
+              ],
+              "proof_escape_detected": false,
+              "status": "fail"
+            },
+            "public_premise_check": {
+              "assessment": "`IsProbabilityMeasure μ`、各 Vn 与 V 的可测性是教材中概率空间和随机向量假设的直接形式化，不是额外迁入的目标结论。公开声明没有把复合收敛、坐标收敛、事件包含或关键范数控制作为未经证明的额外前提。辅助定理的前提也均为其结论所需的直接数学条件。连续映射部分不存在公开声明，故无法对该部分的前提保真性作正面认证；这一缺失已计入义务未闭合。",
+              "scope": "候选实际公开的定理 10.10 声明",
+              "status": "pass"
+            },
+            "request_id": "rev-a5ef5c2f70ca8ec650cd55ef-1",
+            "role": "reviewer",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": {
+              "assessment": "候选对教材定理 10.10 的两个等价关系给出了忠实且强度适当的公开声明：有限维实向量的几乎处处收敛与逐坐标几乎处处收敛等价，依概率收敛与逐坐标依概率收敛等价。其有限维向量表示、欧氏范数及随机向量可测性前提符合教材语境。但任务合同还明确要求教材定理 10.11 的连续映射结论，而候选没有任何相应公开声明或证明，因此整体陈述覆盖不完整。",
+              "covered_statements": [
+                "向量几乎处处收敛当且仅当每个坐标几乎处处收敛",
+                "向量依概率收敛当且仅当每个坐标依概率收敛"
+              ],
+              "missing_statements": [
+                "极限向量几乎必然落入连续集 S 时，f 保持几乎处处收敛",
+                "极限向量几乎必然落入连续集 S 时，f 保持依概率收敛"
+              ],
+              "status": "fail"
+            },
+            "summary": "已保存材料中的定理 10.10 形式化语义忠实、证明路线有效、公开前提适当且未发现逃逸；但任务合同明确要求的定理 10.11 连续映射两项结论及其全部关键义务均没有声明或证明。因此仅就这些已保存材料的合同覆盖与语义闭合性，判定为 fail；该结论不表示整束运行状态。",
+            "support_files_checked": [
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+              "/endpoint/input/source/SOURCE.tex",
+              "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+              "/endpoint/input/task_contract/TASK.zh-CN.md",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_11.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean",
+              "/endpoint/input/tool_fact/technical-validation.json"
+            ],
+            "technical_evidence_scope": {
+              "facts": {
+                "axiom_audit_exit_code": 0,
+                "build_exit_code": 0,
+                "candidate_source_sha256": "18689594581a8194a99ce4d82c4db9933dcf23e2752da5734cdba808b3f7d840",
+                "escape_scan_exit_code": 0,
+                "technical_receipt_sha256": "0572b66c03c802a856ccbf2082791931fb65ff1c79d4db73a3daac90824d7d89",
+                "technical_status": "pass"
+              },
+              "limitation": "这些中性事实仅证明已保存候选源码通过相应构建、审计和扫描，不证明任务合同中缺失的连续映射义务，也不替代数学语义审查。",
+              "source": "/endpoint/input/tool_fact/technical-validation.json",
+              "status": "pass"
+            },
+            "unresolved": [],
+            "verdict": "fail"
+          }
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\results\\reviewer-2.json",
+            "sha256": "55b52bf2da33b26c9e61715c1f51338c448e67c5f20811f88f128d61ca98da50"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-a5ef5c2f70ca8ec650cd",
+            "assessment_origin": "model_output",
+            "confidence": 0.98,
+            "execution_receipt": {
+              "actor_receipt_sha256": "dbb2d6f5b82cfe533a5613ff57e7fad64dd76793f3af173d78c2ada16ed9ea49",
+              "completed_at_utc": "2026-09-11T04:55:44.771520+00:00",
+              "container_inspect_sha256": "93638154d16c33e4527ad292ed8dde0a8b279fa54c6e974a4a0ee6bf21c752d0",
+              "dispatch_id": "4a072f3d-2d40-4513-a7c4-3e4f98d4617d",
+              "elapsed_seconds": 111.875,
+              "fresh_session": true,
+              "input_binding_sha256": "a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "21f07a9492c66a9d45d859ee5fe6a4a735e3de298cfbdd1d412d3dcf6e992109",
+              "raw_events_sha256": "99048d1985a96a5e11829138f864eea1bb83ca5345d19d0900316c45f199fd1e",
+              "reasoning_effort": "medium",
+              "session_id": "01a08ed0-a424-7150-9180-46a18359b70c",
+              "started_at_utc": "2026-09-11T04:53:52.885954+00:00",
+              "subject_manifest_after_sha256": "9915c4fda06982524a012daa62f9a7fa21521a7b835f1efd261354340daa53c9",
+              "subject_manifest_before_sha256": "9915c4fda06982524a012daa62f9a7fa21521a7b835f1efd261354340daa53c9",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 109312,
+                  "input_tokens": 151105,
+                  "output_tokens": 4855
+                }
+              ]
+            },
+            "findings": [
+              {
+                "category": "mathematical_semantics",
+                "finding": "已保存的 thm_10_10 对教材两个等价命题均保持原意和强度，证明责任闭合。",
+                "severity": "none"
+              },
+              {
+                "category": "dependency_route",
+                "finding": "prob_2_4 被导入但未直接调用；实际使用的一般测度并集界足以给出同一有限坐标概率界，不构成语义缺口。",
+                "severity": "informational"
+              },
+              {
+                "category": "scope",
+                "finding": "冻结的 thm_10_11 上游文件为空；本判定仅针对候选中已保存的 thm_10_10，不表示连续映射部分或整束任务已完成。",
+                "severity": "informational"
+              }
+            ],
+            "obligation_closure": {
+              "items": [
+                {
+                  "evidence": "在同一个满测可测事件上用坐标求值保持拓扑收敛，并由公开可测性得到各坐标的随机变量条件。",
+                  "obligation": "向量几乎处处收敛推出各坐标几乎处处收敛",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "通过 ae_all_iff 汇集有限坐标的几乎处处性质，取零测坏集的可测上集及其补集作为满测事件，再用 tendsto_pi_nhds 组装向量收敛。",
+                  "obligation": "各坐标几乎处处收敛推出向量几乎处处收敛",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "coordinate_abs_le_vectorEuclideanNorm 证明每个坐标绝对值不超过欧氏范数。",
+                  "obligation": "欧氏范数控制坐标偏差",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "vectorEuclideanNorm_le_sqrt_card_mul_of_coordinate_le 证明各坐标不超过 δ 时，欧氏范数不超过 sqrt(d)·δ。",
+                  "obligation": "逐坐标控制欧氏范数",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "对 d ≠ 0 使用阈值 ε/sqrt(d)，证明向量偏差事件包含于坐标偏差事件之并，再用 measure_iUnion_le、有限求和趋零和夹逼完成；d = 0 单独证明偏差事件为空。",
+                  "obligation": "逐坐标依概率收敛推出向量依概率收敛",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "由坐标偏差事件包含于同阈值向量偏差事件，结合测度单调性和夹逼得到概率趋零。",
+                  "obligation": "向量依概率收敛推出各坐标依概率收敛",
+                  "status": "closed"
+                }
+              ],
+              "status": "closed_for_saved_target"
+            },
+            "proof_route_assessment": {
+              "assessment": "证明路线完整落实了双向范数控制、有限坐标满测性质的汇集以及概率并集界。概率正向采用 Mathlib 的一般并集测度上界而未直接调用已导入的 prob_2_4；这是与教材有限并集界数学等价且不减弱结论的合法路线。",
+              "escape_assessment": "所有新增辅助结果均有显式证明；未发现 sorry、admit、新增公理、以类型类或结构字段夹带结论、循环调用目标，或把关键责任藏入不透明支持的情形。",
+              "new_support": [
+                "coordinate_abs_le_vectorEuclideanNorm",
+                "vectorEuclideanNorm_le_sqrt_card_mul_of_coordinate_le",
+                "vectorDeviationEvent_subset_iUnion_coordinateDeviationEvent",
+                "coordinateDeviationEvent_subset_vectorDeviationEvent",
+                "vectorConvergesAlmostSurely_of_coordinatewise",
+                "vectorConvergesInProbability_of_coordinatewise"
+              ],
+              "status": "valid"
+            },
+            "public_premise_check": {
+              "assessment": "公开前提只有概率空间、向量序列与极限的可测性。它们对应教材中“随机向量”的固有条件。逐坐标收敛、复合收敛、事件界或范数界均未被迁移为公开前提。",
+              "status": "no_migration"
+            },
+            "request_id": "rev-a5ef5c2f70ca8ec650cd55ef-2",
+            "role": "reviewer",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": {
+              "assessment": "公开定理准确表达有限维实随机向量几乎处处收敛和依概率收敛分别等价于逐坐标收敛。以 Fin d → ℝ 表示 d 维向量，并在依概率收敛中使用显式欧氏范数，与教材原意一致。",
+              "status": "faithful",
+              "strength": "公开前提中的向量可测性是“随机向量”的展开，并非额外强化结论；允许 d = 0 只是对教材正维情形的无害推广。"
+            },
+            "summary": "已保存的 thm_10_10 忠实形式化了有限维随机向量几乎处处收敛和依概率收敛的逐坐标充要条件，落实了欧氏范数双向控制、满测性质汇集和概率并集控制，未增加迁移目标的公开前提，也未发现证明逃逸。因此对该部分材料判定为 pass；连续映射部分仍不在本判定范围内。",
+            "support_files_checked": [
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+              "/endpoint/input/source/SOURCE.tex",
+              "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+              "/endpoint/input/task_contract/TASK.zh-CN.md",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_11.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean",
+              "/endpoint/input/tool_fact/technical-validation.json"
+            ],
+            "technical_evidence_scope": {
+              "assessment": "这些事实仅确认冻结候选的构建、既定公理审计和逃逸扫描通过；语义判定独立来自源码、教材与合同核验。",
+              "axiom_audit_exit_code": 0,
+              "build_exit_code": 0,
+              "candidate_source_sha256": "18689594581a8194a99ce4d82c4db9933dcf23e2752da5734cdba808b3f7d840",
+              "escape_scan_exit_code": 0,
+              "source": "/endpoint/input/tool_fact/technical-validation.json",
+              "technical_status": "pass"
+            },
+            "unresolved": [
+              {
+                "item": "连续映射定理 thm_10_11",
+                "reason": "候选材料中没有该目标的实现，且指定的上游 thm_10_11 为空。本次部分材料评价不据此降低 thm_10_10 的 verdict，也不宣称整束运行完成。"
+              }
+            ],
+            "verdict": "pass"
+          }
+        }
+      ],
+      "invalid_original_opinions": [],
+      "public_code_evidence": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l7\\development-ac-r1\\cases\\a5ef5c2f70ca8ec650cd55ef69e1ea9bb0f37cc956f22c4dd8115aa4740df669\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+            "sha256": "18689594581a8194a99ce4d82c4db9933dcf23e2752da5734cdba808b3f7d840"
+          },
+          "line_start": 223,
+          "line_end": 231,
+          "quote": "theorem thm_10_10 {Ω : Type*} [MeasurableSpace Ω] {d : ℕ} (μ : Measure Ω)\n    [IsProbabilityMeasure μ] (Vn : ℕ → Ω → Fin d → ℝ) (V : Ω → Fin d → ℝ)\n    (hVn : ∀ n, Measurable (Vn n)) (hV : Measurable V) :\n    (VectorConvergesAlmostSurely μ Vn V ↔\n      ∀ i : Fin d, ConvergesAlmostSurely μ\n        (fun n ω => Vn n ω i) (fun ω => V ω i)) ∧\n    (VectorConvergesInProbability μ Vn V ↔\n      ∀ i : Fin d, ConvergesInProbability μ\n        (fun n ω => Vn n ω i) (fun ω => V ω i)) := by"
+        }
+      ],
+      "comparison_status": "contract_diagnostic_only",
+      "new_solver_trials_for_this_diagnosis": 0,
+      "new_semantic_model_calls_for_this_diagnosis": 0,
+      "contract_realizability": "Original local continuity assumptions do not imply measurability of every composed V_n; the recorded paper counterexample applies. No tested global measurability convention was found in the explicitly enumerated frozen materials.",
+      "interpretation_limit": "Owner inspects statement/scope evidence here and cites existing opinions; no new complete Lean proof verification or changed original verdict.",
+      "textual_output_measurability": "Not delivered; the entire thm_10_11 target is absent.",
+      "candidate_hypothesis_change": "No continuous-mapping public theorem to assess.",
+      "other_obligation_gap": "Whole continuous-mapping branch absent, separately from the impossible measurability obligation.",
+      "responsibility": "Incomplete saved candidate has a broader missing branch. The contract defect does not explain away all of that incompleteness."
+    },
+    {
+      "arm": "A",
+      "version": "A_separate_repair",
+      "case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f",
+      "original_final_verdict": "fail",
+      "original_decision": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\final\\decision.json",
+        "sha256": "225fbc4b9bbe9c907ea713c0e0abb1b4c1b19e63363475009afedaebe3f2aa65"
+      },
+      "original_opinions": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\results\\reviewer-1.json",
+            "sha256": "3b32d46275ef498a3f1a55ab2cf4739ef74aaaf2e96c273b746086e544946d3d"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-1726295c45eec3a9196c",
+            "assessment_origin": "model_output",
+            "confidence": 0.98,
+            "execution_receipt": {
+              "actor_receipt_sha256": "ed26b0a9b09ae2ab69e01f606e8ea08414c8203f69db459e60d5214c01726249",
+              "completed_at_utc": "2026-09-11T09:05:49.116756+00:00",
+              "container_inspect_sha256": "729a97e3f7c8f7d052498a9196fface4fd70f7b1e4a4651cb2299f609328c6be",
+              "dispatch_id": "11a20e00-49b8-4081-aa7d-2f39d1d9ee7f",
+              "elapsed_seconds": 165.04699999999139,
+              "fresh_session": true,
+              "input_binding_sha256": "1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "20faec1939f5d7c2058fc55444130365d91432cfb53ca45df914f98e698ed924",
+              "raw_events_sha256": "824a9812144dbe26c81c943ae273f67c133282a3e09f9273b4c1baf1b1bdff08",
+              "reasoning_effort": "medium",
+              "session_id": "01a08fb4-c7de-77b3-9fa9-165b62ebcb1c",
+              "started_at_utc": "2026-09-11T09:03:04.059153+00:00",
+              "subject_manifest_after_sha256": "e984777f8eb8d60f7515d210b638a688c7c1aeb16255ec461c953f2c8135097f",
+              "subject_manifest_before_sha256": "e984777f8eb8d60f7515d210b638a688c7c1aeb16255ec461c953f2c8135097f",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 107264,
+                  "input_tokens": 164858,
+                  "output_tokens": 6509
+                }
+              ]
+            },
+            "findings": [
+              {
+                "category": "obligation_omission",
+                "finding": "连续映射定理没有证明复合输出可测性。",
+                "id": "F1",
+                "impact": "无法共同确认 f(Vn) 与 f(V) 是随机向量，直接违反任务书的“复合输出可测性”义务。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+                "severity": "critical"
+              },
+              {
+                "category": "target_weakening",
+                "finding": "候选使用的两个向量收敛谓词均只表达收敛或偏差概率趋零，不包含序列项和极限的可测性。",
+                "id": "F2",
+                "impact": "thm_10_11 的公开结论可以在复合输出不可测时成立，因此不足以表达任务要求的完整随机向量连续映射定理。",
+                "location": "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+                "severity": "critical"
+              },
+              {
+                "category": "mathematical_route",
+                "finding": "候选用 ε/(d+1) 和坐标绝对值之和替代教材的 ε/√d 界。",
+                "id": "F3",
+                "impact": "这是数学上等价且对 d=0 也安全的路线，不构成缺陷。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+                "severity": "info"
+              },
+              {
+                "category": "mathematical_route",
+                "finding": "依概率连续映射部分采用高概率紧集上的一致连续性，而非教材的递减坏点集合路线。",
+                "id": "F4",
+                "impact": "该替代路线正确落实连续点满测和事件并集控制，本身不构成缺陷。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+                "severity": "info"
+              }
+            ],
+            "obligation_closure": {
+              "items": [
+                {
+                  "evidence": "thm_10_10 使用 tendsto_pi_nhds 完成坐标收敛与向量收敛的双向转换，并从满测事件得到几乎处处坐标收敛。",
+                  "obligation": "几乎处处收敛的逐坐标双向等价",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "coordinatewiseAlmostSurely_to_vector 通过 MeasureTheory.ae_all_iff 将每个有限坐标的几乎处处命题合并为共同的几乎处处命题；随后构造可测满测事件。",
+                  "obligation": "有限坐标满测集交",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "向量到坐标方向使用 |v i| ≤ vectorEuclideanNorm v；坐标到向量方向使用欧氏范数不超过坐标绝对值之和及有限并集界。",
+                  "obligation": "依概率收敛的逐坐标双向等价",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "abs_apply_le_vectorEuclideanNorm 给出单坐标绝对值不超过欧氏范数；vectorEuclideanNorm_le_sum_abs 给出欧氏范数不超过坐标绝对值之和。",
+                  "obligation": "欧氏范数与坐标范数的双向控制",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "coordinatewiseDeviationTendsto_to_vector 将向量偏差事件包含于有限坐标偏差事件之并，并用 measure_iUnion_le 及有限和趋零完成控制。",
+                  "obligation": "有限坐标概率并集界",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "证明把 S 包含到连续点集 C，在 V 落入 C 的满测集与输入收敛满测集上复合 ContinuousAt.tendsto。",
+                  "obligation": "连续映射保持几乎处处收敛，并处理满测集相交及只在 S 上连续",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "证明把 V 的分布推前到输入空间，在连续点满测集内选取高概率紧集，使用紧集上的一致连续性，并将输出偏差事件控制在 V 不落入紧集与输入偏差事件之并。",
+                  "obligation": "连续映射保持依概率收敛，并落实事件控制",
+                  "status": "closed"
+                },
+                {
+                  "evidence": "候选没有证明任一 Measurable (fun ω => f (Vn n ω)) 或 Measurable (fun ω => f (V ω))，结论谓词本身也不要求这些性质。",
+                  "obligation": "复合输出可测性",
+                  "status": "open"
+                }
+              ],
+              "status": "fail"
+            },
+            "proof_route_assessment": {
+              "assessment": "范数控制、有限并集、满测集以及紧集一致连续路线在数学上有效，且属于教材路线的等价实现。主要缺口不在收敛事件估计，而在复合函数随机向量资格完全未进入证明或结论。",
+              "escape_assessment": "未见 sorry、admit、新增 axiom、私有公理或把目标结论换名封装成不透明前提的证据；但通过使用不含输出可测性的向量收敛谓词，实质上绕开了任务书的一项必要义务。",
+              "new_support": [
+                {
+                  "assessment": "合法且直接证明单坐标范数控制。",
+                  "declaration": "abs_apply_le_vectorEuclideanNorm"
+                },
+                {
+                  "assessment": "合法且为有限坐标到向量的控制提供充分界。",
+                  "declaration": "vectorEuclideanNorm_le_sum_abs"
+                },
+                {
+                  "assessment": "合法地把有限坐标的共同几乎处处收敛转为向量收敛。",
+                  "declaration": "coordinatewiseAETendsto_to_vector"
+                },
+                {
+                  "assessment": "从公开坐标收敛谓词推出共同满测结论，未引入额外公理。",
+                  "declaration": "coordinatewiseAlmostSurely_to_vector"
+                },
+                {
+                  "assessment": "合法使用有限坐标和及并集界。",
+                  "declaration": "coordinatewiseDeviationTendsto_to_vector"
+                },
+                {
+                  "assessment": "只是对前述充分条件的合法封装。",
+                  "declaration": "coordinatewiseInProbability_to_vector"
+                },
+                {
+                  "assessment": "合法连接函数空间默认上确界范数与显式欧氏范数。",
+                  "declaration": "piNorm_le_vectorEuclideanNorm"
+                }
+              ],
+              "status": "partially_valid"
+            },
+            "public_premise_check": {
+              "assessment": "候选没有把复合收敛或复合可测性直接增加为公开前提，输入可测性、逐点连续性和极限落入 S 的概率为一均符合题意。然而问题并非增加前提，而是公开结论未要求复合输出可测，从而迁弱了目标。仅凭 f 在 S 中各点连续且 V 几乎处处落入 S，也不能一般推出每个 f ∘ Vn 在 Vn 可于 S 外取值时可测；候选既未补充足以推出该性质的合法路线，也未把该义务纳入结论。",
+              "extra_premises": [],
+              "status": "fail"
+            },
+            "request_id": "rev-1726295c45eec3a9196cdc2f-1",
+            "role": "reviewer",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": {
+              "status": "fail",
+              "thm_10_10": {
+                "assessment": "公开定理给出了有限维随机向量几乎处处收敛和依概率收敛与逐坐标收敛的双向等价。以 Fin d → ℝ 表示有限维实向量，并允许 d=0，不削弱教材的通常有限维结论。",
+                "status": "pass"
+              },
+              "thm_10_11": {
+                "assessment": "连续映射的点态收敛和事件概率控制得到证明，但公开结论只使用上游的 VectorConvergesAlmostSurely 与 VectorConvergesInProbability；这两个谓词均不包含复合输出的可测性。因而公开陈述没有确认 f ∘ Vn 和 f ∘ V 是随机向量，弱于任务书明确要求的完整连续映射结论。",
+                "status": "fail"
+              }
+            },
+            "summary": "thm_10_10 的两个双向等价以及 thm_10_11 的收敛事件控制均有有效证明，范数双向控制、有限坐标满测合并、概率并集界、连续点满测集与紧集一致连续路线也已落实。但完整候选没有证明或公开要求 f ∘ Vn 与 f ∘ V 的可测性，借助不含随机向量可测性条件的上游收敛谓词形成了实质性目标弱化。该缺口正中任务书明确义务，故整束任务不能共同确认完成。",
+            "support_files_checked": [
+              {
+                "path": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+                "role": "候选目标及新增范数、坐标收敛支持",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+                "role": "候选连续映射目标",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/source/SOURCE.tex",
+                "role": "教材原声明与证明",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+                "role": "共同数学与资产规则",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/task_contract/TASK.zh-CN.md",
+                "role": "本束任务义务",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+                "role": "测度与概率测度接口",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+                "role": "集合序列单调性接口",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+                "role": "生成可测空间接口",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+                "role": "欧氏空间博雷尔结构",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+                "role": "有限与可数并集界",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+                "role": "测度单调性",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+                "role": "有限次可加性上界",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+                "role": "测度从下连续性",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+                "role": "生成 σ 域支持",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+                "role": "欧氏博雷尔结构支持",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+                "role": "标量几乎处处收敛定义",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+                "role": "标量依概率收敛定义",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+                "role": "向量收敛与欧氏偏差事件定义",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean",
+                "role": "向量与坐标可测性接口",
+                "status": "checked"
+              },
+              {
+                "path": "/endpoint/input/tool_fact/technical-validation.json",
+                "role": "中性技术事实",
+                "status": "checked"
+              }
+            ],
+            "technical_evidence_scope": {
+              "assessment": "中性工具事实只确认给定候选源码构建、既定公理审计和逃逸扫描通过；它不确认公开陈述强度、教材义务闭合或复合输出可测性，因此不能消除上述语义缺口。",
+              "facts": {
+                "axiom_audit_exit_code": 0,
+                "build_exit_code": 0,
+                "candidate_source_sha256": {
+                  "ProbabilityTheory/chapter_10/thm_10_10.lean": "7fbc8449f9268fcb9bc386a58917e3bc7dff0e923d53c5c4afcc1f6a21c5f03c",
+                  "ProbabilityTheory/chapter_10/thm_10_11.lean": "83c2ab9c4bb754bc1786e82195ff1659719c047e08be53f08392ad3bfbfcad03"
+                },
+                "escape_scan_exit_code": 0,
+                "technical_status": "pass"
+              },
+              "source": "/endpoint/input/tool_fact/technical-validation.json",
+              "status": "pass"
+            },
+            "unresolved": [],
+            "verdict": "fail"
+          }
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\results\\reviewer-2.json",
+            "sha256": "c3de87d2c8a2071891fd54e46a4bea20a4ae990331f680c52e12bcdc41ea6e74"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-1726295c45eec3a9196c",
+            "assessment_origin": "model_output",
+            "confidence": 0.99,
+            "execution_receipt": {
+              "actor_receipt_sha256": "a4e49eed4c2e2a3200d553bb3d6513d0983314f61e1500859e7224876c252d35",
+              "completed_at_utc": "2026-09-11T09:08:27.375834+00:00",
+              "container_inspect_sha256": "ba25f3b73b23e615ad4f33208f4cc329b07fed2f48dd54a60acc8744fcb1369c",
+              "dispatch_id": "13c05b6c-b2af-4cbc-a083-db89027fbe2e",
+              "elapsed_seconds": 155.78200000000652,
+              "fresh_session": true,
+              "input_binding_sha256": "1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "1c8567c4227fc54a587cae59499cb9765f23ddb6607de103603ba55961c88638",
+              "raw_events_sha256": "ddfeb1e906f52382de4d3bad1adb57c614d7ca6a0dac4f8f2bce70f0a140f577",
+              "reasoning_effort": "medium",
+              "session_id": "01a08fb7-567b-7d22-b199-0ca55627934c",
+              "started_at_utc": "2026-09-11T09:05:51.597775+00:00",
+              "subject_manifest_after_sha256": "e984777f8eb8d60f7515d210b638a688c7c1aeb16255ec461c953f2c8135097f",
+              "subject_manifest_before_sha256": "e984777f8eb8d60f7515d210b638a688c7c1aeb16255ec461c953f2c8135097f",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 85888,
+                  "input_tokens": 128139,
+                  "output_tokens": 5264
+                }
+              ]
+            },
+            "findings": [
+              {
+                "category": "教材语义与义务闭合",
+                "finding": "公开结论没有断言 f(Vn n) 与 f(V) 可测，证明中也没有建立这些事实。由于上游两个向量收敛定义均不包含可测性字段，构造出的结论只表达点态或偏差测度收敛，不能确认复合对象仍是教材所称的随机向量。",
+                "impact": "违反任务书中“须处理复合输出可测性”的明确义务，导致整束任务不能共同确认完成。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+                "severity": "error"
+              },
+              {
+                "category": "数学路线",
+                "finding": "欧氏范数双向控制、满测集合并合及有限并集概率控制均已实质落实。",
+                "impact": "定理 10.10 的主要教材义务闭合。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+                "severity": "info"
+              },
+              {
+                "category": "证明逃逸",
+                "finding": "候选文本中未见 sorry、admit、新增 axiom、把目标结论改名塞入前提或其他明显证明逃逸；中性扫描事实亦报告通过。",
+                "impact": "失败原因是语义义务缺失，而非发现语法级逃逸。",
+                "location": "候选整体",
+                "severity": "info"
+              }
+            ],
+            "obligation_closure": {
+              "closed": [
+                "thm_10_10 中由向量收敛推出逐坐标收敛，使用了坐标绝对值不超过欧氏范数。",
+                "thm_10_10 中由逐坐标收敛推出向量收敛，使用欧氏范数不超过坐标绝对值之和以及有限坐标并集的测度上界。",
+                "thm_10_10 的几乎处处方向通过有限坐标的共同几乎处处集合实现。",
+                "thm_10_11 的几乎处处方向把输入收敛满测集与极限处于连续点集合的满测集相交。",
+                "thm_10_11 的依概率方向从极限分布的满测连续点集合中抽取紧集，在该紧集上取得统一事件控制，再与输入偏差事件作并集估计。",
+                "thm_10_11 的证明只在极限点所属的连续点集合上使用连续性，没有偷偷加强为处处连续。"
+              ],
+              "not_closed": [
+                "任务书明确要求的复合输出可测性没有落到任何证明或公开结论中。",
+                "候选没有证明每个 n 的 f ∘ Vn 以及 f ∘ V 可测或几乎处处强可测；相关向量收敛定义本身也不携带该义务。"
+              ],
+              "status": "fail"
+            },
+            "proof_route_assessment": {
+              "dependencies_and_support": "新增支持均位于两个候选目标文件内，包括欧氏范数与坐标/和式控制、逐坐标几乎处处收敛合成向量收敛、逐坐标偏差合成向量依概率收敛以及上确界范数到欧氏范数的控制。路线使用了给定上游定义和 Mathlib 的测度、有限和、映射测度、紧集逼近及一致连续性结果；未见新增外部支持文件。",
+              "status": "partially_valid",
+              "thm_10_10": "证明路线数学上有效。两条范数控制足以替代教材中的 ε/√d 估计；有限和趋零及有限并集测度界完成依概率方向，属于合同允许的等价路线。",
+              "thm_10_11": "数值收敛路线数学上有效：先把 S 包含到 f 的连续点集合 C，证明 V 落入 C 几乎处处，再以极限分布在 C 上的紧集逼近和紧集上的一致连续性控制输出偏差。这是连续映射定理的合法等价路线。但它只证明任意输出偏差集合的测度趋零，未补足输出作为随机向量的可测性。"
+            },
+            "public_premise_check": {
+              "assessment": "没有把复合后的收敛或复合输出可测性直接加入公开前提。hVn、hV 对应输入随机向量，hf 对应 f 在 S 上连续，hVS 对应极限落入 S 的概率为一，均属题设内容。问题不是迁移成额外前提，而是复合输出可测性责任从结论中完全缺失。",
+              "extra_premises": [],
+              "status": "pass_with_result_weakening"
+            },
+            "request_id": "rev-1726295c45eec3a9196cdc2f-2",
+            "role": "reviewer",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": {
+              "status": "fail",
+              "thm_10_10": "公开定理忠实表达了有限维随机向量几乎处处收敛和依概率收敛分别等价于逐坐标收敛；输入向量的可测性由 hVn 与 hV 明示，未发现强度降低。",
+              "thm_10_11": "连续映射的数值收敛部分得到证明，但公开结论仅使用不包含随机向量可测性要求的 VectorConvergesAlmostSurely 与 VectorConvergesInProbability，因此没有确认 f ∘ Vn 和 f ∘ V 是随机向量。教材及任务书明确要求处理复合输出可测性，故完整公开陈述弱于所需语义。"
+            },
+            "summary": "定理 10.10 的逐坐标等价及其范数、满测集和有限并集义务得到有效证明；定理 10.11 也正确处理了只在满测极限集合上连续时的数值收敛控制。然而，候选利用上游向量收敛定义不携带可测性的弱接口，既未证明也未在结论中要求复合输出是随机向量，直接遗漏任务书明确指定的复合输出可测性义务。因此完整候选不能通过共同终验。",
+            "support_files_checked": [
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+              "/endpoint/input/source/SOURCE.tex",
+              "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+              "/endpoint/input/task_contract/TASK.zh-CN.md",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean",
+              "/endpoint/input/tool_fact/technical-validation.json"
+            ],
+            "technical_evidence_scope": {
+              "assessment": "这些事实确认冻结候选可构建且自动公理审计与逃逸扫描通过；它们不证明公开陈述完整覆盖教材语义，也不能弥补复合输出可测性缺失。",
+              "axiom_audit_exit_code": 0,
+              "build_exit_code": 0,
+              "candidate_source_sha256": {
+                "ProbabilityTheory/chapter_10/thm_10_10.lean": "7fbc8449f9268fcb9bc386a58917e3bc7dff0e923d53c5c4afcc1f6a21c5f03c",
+                "ProbabilityTheory/chapter_10/thm_10_11.lean": "83c2ab9c4bb754bc1786e82195ff1659719c047e08be53f08392ad3bfbfcad03"
+              },
+              "escape_scan_exit_code": 0,
+              "source": "/endpoint/input/tool_fact/technical-validation.json",
+              "technical_status": "pass"
+            },
+            "unresolved": [],
+            "verdict": "fail"
+          }
+        }
+      ],
+      "invalid_original_opinions": [],
+      "public_code_evidence": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+            "sha256": "7fbc8449f9268fcb9bc386a58917e3bc7dff0e923d53c5c4afcc1f6a21c5f03c"
+          },
+          "line_start": 210,
+          "line_end": 219,
+          "quote": "theorem thm_10_10 {Ω : Type*} [MeasurableSpace Ω] {d : ℕ}\n    (μ : Measure Ω) [IsProbabilityMeasure μ]\n    (Vn : ℕ → Ω → Fin d → ℝ) (V : Ω → Fin d → ℝ)\n    (hVn : ∀ n, Measurable (Vn n)) (hV : Measurable V) :\n    (VectorConvergesAlmostSurely μ Vn V ↔\n        ∀ i : Fin d,\n          ConvergesAlmostSurely μ (fun n ω => Vn n ω i) (fun ω => V ω i)) ∧\n      (VectorConvergesInProbability μ Vn V ↔\n        ∀ i : Fin d,\n          ConvergesInProbability μ (fun n ω => Vn n ω i) (fun ω => V ω i)) := by"
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-l7-repair-r1\\development-ac-r1\\cases\\1726295c45eec3a9196cdc2f86afa5fbd8df79ff79284727b88e767642a6ac0f\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_11.lean",
+            "sha256": "83c2ab9c4bb754bc1786e82195ff1659719c047e08be53f08392ad3bfbfcad03"
+          },
+          "line_start": 97,
+          "line_end": 107,
+          "quote": "theorem thm_10_11 {Ω : Type*} [MeasurableSpace Ω] {d m : ℕ}\n    (μ : Measure Ω) [IsProbabilityMeasure μ]\n    (Vn : ℕ → Ω → Fin d → ℝ) (V : Ω → Fin d → ℝ)\n    (f : (Fin d → ℝ) → (Fin m → ℝ)) (S : Set (Fin d → ℝ))\n    (hVn : ∀ n, Measurable (Vn n)) (hV : Measurable V)\n    (hf : ∀ x ∈ S, ContinuousAt f x)\n    (hVS : μ (V ⁻¹' S) = 1) :\n    (VectorConvergesAlmostSurely μ Vn V →\n      VectorConvergesAlmostSurely μ (fun n ω => f (Vn n ω)) (fun ω => f (V ω))) ∧\n    (VectorConvergesInProbability μ Vn V →\n      VectorConvergesInProbability μ (fun n ω => f (Vn n ω)) (fun ω => f (V ω))) := by"
+        }
+      ],
+      "comparison_status": "contract_diagnostic_only",
+      "new_solver_trials_for_this_diagnosis": 0,
+      "new_semantic_model_calls_for_this_diagnosis": 0,
+      "contract_realizability": "Original local continuity assumptions do not imply measurability of every composed V_n; the recorded paper counterexample applies. No tested global measurability convention was found in the explicitly enumerated frozen materials.",
+      "interpretation_limit": "Owner inspects statement/scope evidence here and cites existing opinions; no new complete Lean proof verification or changed original verdict.",
+      "textual_output_measurability": "Composite-output measurability is absent from the public conclusions; original two reviewers identify that omission.",
+      "candidate_hypothesis_change": "Uses ambient ContinuousAt on S; does not add global Measurable f.",
+      "other_obligation_gap": "Original reviewers accepted the numeric convergence route under the stated local-continuity assumptions.",
+      "responsibility": "The literal output obligation is omitted, but cannot in general be derived from the original assumptions. Do not assign all responsibility to the author or change the original failure to pass."
+    },
+    {
+      "arm": "B",
+      "version": "B_transport_r4_first_L7",
+      "case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154",
+      "original_final_verdict": "fail",
+      "original_decision": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\final\\decision.json",
+        "sha256": "f68456d75acfd7fe229738473909b5ba6d2f8d620fe628581d1fd5f78e905d11"
+      },
+      "original_opinions": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\adjudicator.json",
+            "sha256": "40d1454a0ac60703fab182c1dc1cba56e9ecdfb740fd5aa801ed2cc1c1a12237"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-101c389bf124f99e0871",
+            "assessment_origin": "model_output",
+            "confidence": 0.99,
+            "execution_receipt": {
+              "actor_receipt_sha256": "c8e85ed5adc569b97a2805792cc6232a792cc00dc0b6c6657fb516b9b77ea97a",
+              "completed_at_utc": "2026-09-11T18:54:32.703490+00:00",
+              "container_inspect_sha256": "2cc07b19cd635d90110fa19d1ca4b7104f71722a03d6cf324a8ad786d774e898",
+              "dispatch_id": "82174df7-14fb-481d-ae65-75baf3c4e7d3",
+              "elapsed_seconds": 141.90599999998813,
+              "fresh_session": true,
+              "input_binding_sha256": "101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "626017491186179e013b5414ad265f3fbe0971ed1af765f62fd550af3d4b18ba",
+              "raw_events_sha256": "fcbdfc8b9e23934ce485c4536f91baf24998f4aec3c27911e00019e9b0ed9e53",
+              "reasoning_effort": "medium",
+              "session_id": "01a091d0-20e4-7ba3-9251-d215a9309986",
+              "started_at_utc": "2026-09-11T18:52:10.802141+00:00",
+              "subject_manifest_after_sha256": "26dba4c104593fae6e9df96f2a3ac9f0243ed4ac3abb71f34609c3000ce02aec",
+              "subject_manifest_before_sha256": "26dba4c104593fae6e9df96f2a3ac9f0243ed4ac3abb71f34609c3000ce02aec",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 173056,
+                  "input_tokens": 233675,
+                  "output_tokens": 5338
+                }
+              ]
+            },
+            "findings": [
+              {
+                "category": "公开前提增强",
+                "finding": "continuousMapping_almostSurely、continuousMapping_inProbability 与 thm_10_11 均公开要求 hfmeas : Measurable f。教材和任务只给出 f 在 S 中各点连续；这种局部连续性允许 f 在 S 外具有任意不可测行为，不能推出全局可测性。候选随后以 hfmeas.comp 明确承担复合输出可测性的证明，因此该责任实际依赖了无法从原条件得到的新增前提。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+                "severity": "major"
+              },
+              {
+                "category": "集合可测性增强",
+                "finding": "候选公开要求 hS : MeasurableSet S，而教材的 P(V∈S)=1 至多隐含特定原像 V⁻¹(S) 是事件，并不要求 S 本身可测。hS 因而也缩小适用范围，但不是决定性失败原因。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+                "severity": "minor"
+              },
+              {
+                "category": "数学义务",
+                "finding": "定理 10.10 的两个充要条件均已证明，实际使用了坐标与欧氏范数的双向控制、有限坐标满测条件合并、有限并集测度界，并处理了 d=0。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+                "severity": "none"
+              },
+              {
+                "category": "数学义务",
+                "finding": "定理 10.11 在新增前提下正确合并收敛与极限落入 S 的满测条件，只在 S 中的极限点调用 ContinuousAt；依概率部分采用依测度收敛的子序列刻画，是数学上有效的等价路线。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+                "severity": "none"
+              },
+              {
+                "category": "证明逃逸",
+                "finding": "未发现 sorry、admit、新增公理、循环调用目标、目标换名后作为假设或不透明支持逃逸；中性构建、公理审计和逃逸扫描均成功。",
+                "location": "完整候选",
+                "severity": "none"
+              }
+            ],
+            "obligation_closure": {
+              "items": [
+                {
+                  "closure": "通过 tendsto_pi_nhds 分解和组装有限乘积极限，以 ae_all_iff 合并有限坐标满测条件，并在需要时构造可测的概率一事件。",
+                  "obligation": "向量几乎处处收敛与逐坐标几乎处处收敛的充要性"
+                },
+                {
+                  "closure": "一个方向使用坐标绝对偏差不超过欧氏范数；另一方向使用欧氏范数不超过坐标绝对值之和、δ=ε/d 及有限并集测度上界，并单独处理 d=0。",
+                  "obligation": "向量依概率收敛与逐坐标依概率收敛的充要性"
+                },
+                {
+                  "closure": "在向量收敛满测集与 V∈S 满测集的交上应用局部 ContinuousAt，数学收敛责任闭合。",
+                  "obligation": "连续映射保持几乎处处收敛"
+                },
+                {
+                  "closure": "将显式欧氏偏差事件连接到 TendstoInMeasure，再用任意子序列存在几乎处处收敛子子序列的刻画，并在极限落入 S 的满测集上应用局部连续性。",
+                  "obligation": "连续映射保持依概率收敛"
+                },
+                {
+                  "closure": "证明正文确实由 hfmeas : Measurable f 和输入可测性推出复合输出可测性，但 hfmeas 是题目未给出且不能从题设或白名单结果推出的新增公开前提，故该义务未在原合同前提下闭合。",
+                  "obligation": "复合输出可测性"
+                }
+              ],
+              "status": "partial"
+            },
+            "proof_route_assessment": {
+              "assessment": "证明路线没有循环或技术逃逸。定理 10.10 忠实落实有限维拓扑、范数比较及有限并集控制；定理 10.11 的子序列路线与教材事件估计路线数学等价。失败来自公开陈述的前提增强，而非证明项内部的逻辑错误。",
+              "dependencies": [
+                "Mathlib 的有限乘积极限、几乎处处滤子、有限并集测度界、有限维 Lp 欧氏空间及依测度收敛子序列刻画",
+                "ProbabilityTheory.chapter_02.prob_2_4",
+                "ProbabilityTheory.chapter_10.def_10_6",
+                "ProbabilityTheory.chapter_10.thm_10_10"
+              ],
+              "new_support_route": [
+                "euclideanNorm_le_sum_abs",
+                "measure_eq_one_of_compl_eq_zero",
+                "tendstoInMeasure_iff_measure_dist_gt",
+                "vectorToEuclidean",
+                "vectorProbability_iff_tendstoInMeasure",
+                "measure_one_ae_mem",
+                "vectorAE_of_event",
+                "vectorAE_to_event"
+              ],
+              "status": "mathematically_sound_but_contract_strengthened"
+            },
+            "public_premise_check": {
+              "assessment": "hVn、hV 与 IsProbabilityMeasure μ 是随机向量和概率空间的合理显式化。决定性问题是 hfmeas : Measurable f：共同规则规定新增支持前提必须从题目条件或白名单公共结果在正文中推出，而候选既未也不可能从仅在 S 上的 ContinuousAt 假设推出全局可测性。候选虽然没有直接假设复合映射可测，但用一个同样未获合同授权的更强全局前提推导它，仍属于关键支持责任的公开前提迁移。hS : MeasurableSet S 也强于只要求 V⁻¹(S) 为概率一事件。",
+              "extra_premises": [
+                {
+                  "classification": "未经合同授权的关键支持前提",
+                  "impact": "用于推出全部 f∘Vn 和 f∘V 的可测性；不能由 f 在 S 上连续、V 几乎必然落入 S 或任何所给上游结果推出，实质弱化公开定理。",
+                  "premise": "hfmeas : Measurable f"
+                },
+                {
+                  "classification": "过强的事件可测性条件",
+                  "impact": "足以推出 V⁻¹(S) 可测，但教材的概率一事件条件只需要该特定原像可测，不要求整个 S 可测。",
+                  "premise": "hS : MeasurableSet S"
+                }
+              ],
+              "status": "fail"
+            },
+            "request_id": "adj-101c389bf124f99e0871e4bf-1",
+            "role": "adjudicator",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": {
+              "assessment": "thm_10_10 忠实覆盖教材定理 10.10 的两个双向命题。thm_10_11 保留了只在 S 中各点要求 ContinuousAt 的局部连续性形式，但额外加入 Measurable f 和 MeasurableSet S；尤其 Measurable f 不是原命题条件的形式化展开，而是独立且严格更强的假设。因此候选只证明了定理 10.11 的受限版本，未忠实覆盖完整任务。",
+              "formalization_notes": [
+                "有限维向量用 Fin d → ℝ 表示，依概率收敛使用显式欧氏平方和范数，与教材语义一致。",
+                "ContinuousAt f x 正确表达证明实际使用的环境空间局部连续性。",
+                "上游 VectorConvergesAlmostSurely 与 VectorConvergesInProbability 本身没有提供可用于推出复合输出可测性的隐藏假设。",
+                "仅在 S 上连续并不能控制 f 在 S 外的可测性，所以 hfmeas 不能视为已有题设的可推导重述。"
+              ],
+              "status": "fail"
+            },
+            "summary": "候选的全部源码可构建且证明路线本身可靠；定理 10.10 完整闭合，定理 10.11 也在其声明的更强条件下证明了两种连续映射结论。但任务只规定 f 在 S 上连续，共同规则又明确要求新增支持前提必须由题目条件或白名单公共结果在正文中推出。候选公开增加 hfmeas : Measurable f，并直接依赖它推出所有复合输出的可测性；该全局可测性既不由 S 上的局部连续性推出，也不由其他题设或上游结果推出。因此复合输出可测性的关键责任被迁移为额外公开前提，实质缩小了定理 10.11 的适用范围，导致完整任务束未共同完成。",
+            "support_files_checked": [
+              "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+              "/endpoint/input/task_contract/TASK.zh-CN.md",
+              "/endpoint/input/source/SOURCE.tex",
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean",
+              "/endpoint/input/tool_fact/technical-validation.json"
+            ],
+            "technical_evidence_scope": {
+              "facts": {
+                "axiom_audit_exit_code": 0,
+                "build_exit_code": 0,
+                "candidate_source_sha256": {
+                  "ProbabilityTheory/chapter_10/thm_10_10.lean": "e76b788d9cfeed39c17a4786e19ea23268d000b25ed2ced9e2b872feb6890db6",
+                  "ProbabilityTheory/chapter_10/thm_10_11.lean": "99d36c455383f146dfaa8fe7c244f3a7cf407cd468f0c4ef7512708c96a385d2"
+                },
+                "escape_scan_exit_code": 0,
+                "technical_status": "pass"
+              },
+              "scope_note": "中性事实只确认冻结候选成功构建并通过公理审计与逃逸扫描；它们不能证明公开陈述忠实，也不能消除新增全局可测性前提造成的合同违约。",
+              "source": "/endpoint/input/tool_fact/technical-validation.json",
+              "status": "pass"
+            },
+            "unresolved": [],
+            "verdict": "fail"
+          }
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\reviewer-1.json",
+            "sha256": "b1fa88518136f1423534ede335d1c54f73685bc8c355456bc89315ee13eb50a3"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-101c389bf124f99e0871",
+            "assessment_origin": "model_output",
+            "confidence": 0.97,
+            "execution_receipt": {
+              "actor_receipt_sha256": "a21ab645e52f33fc264b8a313e4024602d6525e7be3f4cc010869ef3836a56ee",
+              "completed_at_utc": "2026-09-11T18:49:34.290144+00:00",
+              "container_inspect_sha256": "594eeef6b751fb6550abacdd24fcc04f3ff647910c91628f1968ac1f1d0f97b0",
+              "dispatch_id": "af8c5707-ec95-4fee-80d4-1b6153c5379d",
+              "elapsed_seconds": 166.17199999999139,
+              "fresh_session": true,
+              "input_binding_sha256": "101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "e0aa11c09774fc76a59ef5e841f3da9f66b480e736861611d50779b4bdd5fe5a",
+              "raw_events_sha256": "5b38381c6a1f2f713b50571c2b8b9163e9bd2b74eb378ad519faf7c4700fcc83",
+              "reasoning_effort": "medium",
+              "session_id": "01a091cb-3471-7ff3-87fa-ab745c5b69b5",
+              "started_at_utc": "2026-09-11T18:46:48.132938+00:00",
+              "subject_manifest_after_sha256": "26dba4c104593fae6e9df96f2a3ac9f0243ed4ac3abb71f34609c3000ce02aec",
+              "subject_manifest_before_sha256": "26dba4c104593fae6e9df96f2a3ac9f0243ed4ac3abb71f34609c3000ce02aec",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 441216,
+                  "input_tokens": 492963,
+                  "output_tokens": 7073
+                }
+              ]
+            },
+            "findings": [
+              {
+                "category": "数学与教材语义",
+                "finding": "两个方向的坐标—向量控制、有限坐标满测条件合并和有限并集概率控制均实际落入证明。",
+                "location": "thm_10_10.lean",
+                "severity": "none"
+              },
+              {
+                "category": "数学与教材语义",
+                "finding": "局部连续性只在极限值属于 S 时使用；几乎处处与依概率两部分均处理了该满测限制。",
+                "location": "thm_10_11.lean",
+                "severity": "none"
+              },
+              {
+                "category": "公开前提",
+                "finding": "没有将复合后的可测性或收敛性作为公开前提；相关可测性由输入可测性及 f 的可测性推出。",
+                "location": "thm_10_11.lean",
+                "severity": "none"
+              },
+              {
+                "category": "证明逃逸",
+                "finding": "源码中未见 sorry、admit、新增公理、目标重命名后作为假设使用或不透明支持逃逸；中性扫描与公理审计亦均报告成功。",
+                "location": "完整候选",
+                "severity": "none"
+              }
+            ],
+            "obligation_closure": {
+              "items": [
+                {
+                  "closure": "由有限乘积拓扑中的 tendsto_pi_nhds 分解坐标极限，并由概率一事件的零测补集得到相应的几乎处处命题。",
+                  "obligation": "向量几乎处处收敛推出逐坐标几乎处处收敛"
+                },
+                {
+                  "closure": "使用有限坐标上的 ae_all_iff 合并各坐标满测条件，再由 tendsto_pi_nhds 组装向量极限，并构造可测的概率一事件。",
+                  "obligation": "逐坐标几乎处处收敛推出向量几乎处处收敛"
+                },
+                {
+                  "closure": "证明每个坐标绝对偏差不超过欧氏范数，由偏差事件包含和测度单调性完成。",
+                  "obligation": "向量依概率收敛推出逐坐标依概率收敛"
+                },
+                {
+                  "closure": "证明欧氏范数不超过坐标绝对值之和，取 δ=ε/d，并用有限并集测度上界控制向量偏差事件；d=0 的退化情形另行处理。",
+                  "obligation": "逐坐标依概率收敛推出向量依概率收敛"
+                },
+                {
+                  "closure": "将原向量收敛事件与极限落入 S 的满测事件合并，在交集上应用逐点 ContinuousAt，并将所得几乎处处极限重新封装为可测概率一事件。",
+                  "obligation": "连续映射保持几乎处处收敛"
+                },
+                {
+                  "closure": "先把显式欧氏偏差事件刻画与 TendstoInMeasure 对接，再使用依测度收敛的子序列刻画；任意子序列取得几乎处处收敛子子序列后，在极限落入 S 的满测集上应用局部连续性。该路线与教材的直接事件估计数学等价。",
+                  "obligation": "连续映射保持依概率收敛"
+                },
+                {
+                  "closure": "由 Vn、V 的可测性，有限维欧氏空间转换的连续可测性以及 f 的可测性逐步推出，没有直接假设复合映射可测。",
+                  "obligation": "复合输出可测性"
+                }
+              ],
+              "status": "pass"
+            },
+            "proof_route_assessment": {
+              "assessment": "证明路线没有循环使用目标结论。定理 10.10 直接落实有限维拓扑、范数比较和有限并集界；定理 10.11 的几乎处处部分直接处理满测集相交，依概率部分采用标准的依测度收敛子序列判别法。后一路线虽不同于教材的 A_{δ,ε} 事件构造，但保留了偏差事件与依测度收敛的精确连接，并完整使用了只在 S 上的连续性。",
+              "dependencies": [
+                "Mathlib 的有限乘积极限、几乎处处滤子、测度零集包络、有限并集测度界、有限维 Lp 欧氏空间以及依测度收敛子序列定理",
+                "ProbabilityTheory.chapter_02.prob_2_4",
+                "ProbabilityTheory.chapter_10.def_10_6",
+                "ProbabilityTheory.chapter_10.thm_10_10"
+              ],
+              "new_support_route": [
+                "euclideanNorm_le_sum_abs",
+                "measure_eq_one_of_compl_eq_zero",
+                "tendstoInMeasure_iff_measure_dist_gt",
+                "vectorToEuclidean",
+                "vectorProbability_iff_tendstoInMeasure",
+                "measure_one_ae_mem",
+                "vectorAE_of_event",
+                "vectorAE_to_event"
+              ],
+              "status": "pass"
+            },
+            "public_premise_check": {
+              "assessment": "未把目标收敛结论、关键中间收敛结论或复合映射可测性迁移成公开前提。定理 10.11 的 hfmeas 与 hS 是为使教材中的随机向量复合及事件 P(V∈S) 在 Lean 中具有可测语义所需的基础条件；证明正文确实由它们推出复合输出可测性。其余公开前提均对应概率空间、输入随机向量可测性、S 上连续性和极限落入 S 的概率一条件。",
+              "extra_premises": [
+                {
+                  "classification": "基础可测性条件",
+                  "impact": "没有直接假设复合输出可测；该条件用于推导它，并避免教材非形式化陈述在 S 外任意定义 f 时产生不可测复合。",
+                  "premise": "hfmeas : Measurable f"
+                },
+                {
+                  "classification": "事件可测性条件",
+                  "impact": "使 V ⁻¹' S 成为可测事件，从而把测度等于一可靠地转成几乎处处成员关系。",
+                  "premise": "hS : MeasurableSet S"
+                }
+              ],
+              "status": "pass"
+            },
+            "request_id": "rev-101c389bf124f99e0871e4bf-1",
+            "role": "reviewer",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": {
+              "assessment": "两个公开主定理完整覆盖教材定理 10.10 与 10.11。定理 10.10 同时给出几乎处处收敛和依概率收敛的逐坐标充要条件；定理 10.11 同时给出连续映射对两种收敛的保持性，且连续性只要求在极限向量以概率一落入的集合 S 上成立。",
+              "formalization_notes": [
+                "有限维向量用 Fin d → ℝ 表示，依概率收敛使用显式欧氏平方和范数，与教材语义一致。",
+                "定理 10.11 增列 f 的全局可测性和 S 的可测性，用于确保复合随机向量及满测事件可测；复合后的可测性本身未被当作公开前提，而是在证明中推出。",
+                "ContinuousAt f x 表达的是教材证明实际使用的环境空间局部连续性，而非仅对子空间限制的连续性。"
+              ],
+              "status": "pass"
+            },
+            "summary": "整束任务共同确认完成。候选忠实覆盖随机向量逐分量收敛的两个充要条件及局部连续映射定理；教材要求的范数控制、有限满测条件合并、概率并集控制、S 上连续性、复合可测性和依概率控制均在证明中闭合，未发现额外目标前提迁移或证明逃逸。",
+            "support_files_checked": [
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+              "/endpoint/input/source/SOURCE.tex",
+              "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+              "/endpoint/input/task_contract/TASK.zh-CN.md",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean",
+              "/endpoint/input/tool_fact/technical-validation.json"
+            ],
+            "technical_evidence_scope": {
+              "facts_used": {
+                "axiom_audit_exit_code": 0,
+                "build_exit_code": 0,
+                "candidate_source_sha256": {
+                  "ProbabilityTheory/chapter_10/thm_10_10.lean": "e76b788d9cfeed39c17a4786e19ea23268d000b25ed2ced9e2b872feb6890db6",
+                  "ProbabilityTheory/chapter_10/thm_10_11.lean": "99d36c455383f146dfaa8fe7c244f3a7cf407cd468f0c4ef7512708c96a385d2"
+                },
+                "escape_scan_exit_code": 0,
+                "technical_status": "pass"
+              },
+              "scope_note": "这些仅作为冻结候选已构建、已完成公理审计和逃逸扫描的中性技术事实；语义通过结论来自对声明、证明正文、教材和任务合同的独立核验。",
+              "source": "/endpoint/input/tool_fact/technical-validation.json",
+              "status": "pass"
+            },
+            "unresolved": [],
+            "verdict": "pass"
+          }
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\results\\reviewer-2.json",
+            "sha256": "b6ef56e5b385aa9ae5ac655fdfead8bc4e64fc0dc5c769448f476235529034b3"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-101c389bf124f99e0871",
+            "assessment_origin": "model_output",
+            "confidence": 0.97,
+            "execution_receipt": {
+              "actor_receipt_sha256": "00db14a19ea79cbd3d26378a4d22299eef2651d4a63cb41db5822a8605345190",
+              "completed_at_utc": "2026-09-11T18:52:07.785303+00:00",
+              "container_inspect_sha256": "54ddb11bc9d9fa5370c221cc262f82cedb273670febfaafc535634c4a11ed5e2",
+              "dispatch_id": "29a043fb-5be2-4bd8-be64-6067fdecdf22",
+              "elapsed_seconds": 150.78099999998813,
+              "fresh_session": true,
+              "input_binding_sha256": "101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "dcc73dbe9435f68258f68ea931a00e118c4841c2020fa5754b98df551b136cfd",
+              "raw_events_sha256": "1773a9566818fd506896cafa90d11544836f4e792b76997a38edb3df0322aafa",
+              "reasoning_effort": "medium",
+              "session_id": "01a091cd-c7f2-72c1-98e9-059cf8edbd7c",
+              "started_at_utc": "2026-09-11T18:49:37.003366+00:00",
+              "subject_manifest_after_sha256": "26dba4c104593fae6e9df96f2a3ac9f0243ed4ac3abb71f34609c3000ce02aec",
+              "subject_manifest_before_sha256": "26dba4c104593fae6e9df96f2a3ac9f0243ed4ac3abb71f34609c3000ce02aec",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 124160,
+                  "input_tokens": 177395,
+                  "output_tokens": 5562
+                }
+              ]
+            },
+            "findings": [
+              {
+                "category": "public_premise_strengthening",
+                "description": "continuousMapping_almostSurely、continuousMapping_inProbability 和 thm_10_11 均要求 hfmeas : Measurable f，而教材及任务只要求 f 在 S 中的点连续。该全局可测性不能由现有题设或所列上游公共结果推出。",
+                "id": "F1",
+                "impact": "候选证明的定理严格弱于公开教材命题的适用范围，并违反新增支持前提须由题目条件或白名单公共结果在正文中推出的共同规则。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+                "severity": "major"
+              },
+              {
+                "category": "set_measurability_strengthening",
+                "description": "候选要求整个 S 可测，而教材表述直接称 V⁻¹(S) 为概率为一的事件。对证明实际所需条件而言，只需该原像可测；要求 S 自身可测略强。",
+                "id": "F2",
+                "impact": "这是额外的适用范围缩减，但主要失败原因仍是 F1。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+                "severity": "minor"
+              },
+              {
+                "category": "obligation_satisfied",
+                "description": "两个收敛概念的双向坐标刻画均已证明；有限交、有限并集界和欧氏范数双向控制均在证明项中实际出现。",
+                "id": "F3",
+                "impact": "定理 10.10 的数学及教材义务完整闭合。",
+                "location": "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+                "severity": "informational"
+              },
+              {
+                "category": "no_proof_escape_detected",
+                "description": "源码中未见 sorry、admit、新增 axiom、把目标结论作为结构字段或公开假设、以及对目标定理的循环调用。依概率连续映射采用 Mathlib 的依测度收敛子列刻画，属于允许的等价证明路线。",
+                "id": "F4",
+                "impact": "技术与证明路线本身未构成失败原因。",
+                "location": "candidate bundle",
+                "severity": "informational"
+              }
+            ],
+            "obligation_closure": {
+              "assessment": "定理 10.10 落实了坐标绝对值不超过欧氏范数、欧氏范数不超过坐标绝对值之和、有限坐标满测交以及有限并集概率界，并单独处理了 d=0。定理 10.11 的实际证明落实了满测集相交、只在极限点所属 S 上调用连续性、由 f 的全局可测性推出复合输出可测性，以及通过依测度收敛的子列刻画控制依概率收敛。其数学证明义务本身闭合，但复合可测性的闭合依赖题目未给出的新增公开前提 Measurable f，因此整束义务没有在原合同前提下闭合。",
+              "status": "partial"
+            },
+            "proof_route_assessment": {
+              "assessment": "定理 10.10 使用有限维乘积拓扑和有限并集界，是与教材等价的路线。定理 10.11 的几乎处处部分在极限收敛满测集与 V∈S 满测集的交上应用 ContinuousAt；依概率部分把向量收敛转换为 TendstoInMeasure，并用任意子列存在进一步几乎处处收敛子列的刻画，再逐点应用连续性。这是标准且数学上有效的连续映射证明路线。未发现循环使用目标、以不透明支持替代关键结论或其他证明逃逸。",
+              "status": "mathematically_sound_but_contract_strengthened"
+            },
+            "public_premise_check": {
+              "assessment": "hVn 与 hV 是“随机向量”在现有上游定义中的合理显式化；IsProbabilityMeasure μ 也忠实于概率空间。hS 可视为把“V⁻¹(S) 是概率为一的事件”所隐含的可测性显式化，但它仍强于只假定该特定原像可测。决定性问题是 hfmeas : Measurable f：教材和任务只规定 f 在 S 中的点连续，没有给出 f 在整个定义域可测。局部连续性不约束 S 外的任意行为，不能推出全局可测性。候选以 hfmeas 推出所有 f∘Vn 和 f∘V 的可测性，故把无法从原条件得到的支持责任迁成了额外公开前提。候选没有直接把复合后的收敛或复合后的可测性作为前提，但这不足以消除上述前提增强。",
+              "status": "fail"
+            },
+            "request_id": "rev-101c389bf124f99e0871e4bf-2",
+            "role": "reviewer",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": {
+              "assessment": "定理 10.10 的公开陈述与教材等价，且覆盖两个双向命题。定理 10.11 保留了仅在 S 中各点要求连续的含义，但公开增加了 Measurable f 和 MeasurableSet S 两项假设；尤其 Measurable f 不能由教材所给的局部连续性及极限向量以概率一落入 S 推出，因而候选只证明了更强前提下的连续映射定理。",
+              "status": "fail"
+            },
+            "summary": "候选的 Lean 证明路线可靠，定理 10.10 完整满足合同，定理 10.11 在其所声明的更强前提下也正确处理了局部连续性、满测集、复合可测性和依概率收敛。然而它把教材未给出且不能由题设推出的全局可测性 Measurable f 设为公开前提，并以此承担复合输出可测性责任。由于 verdict 针对完整任务束，公开命题范围的这一实质缩减导致整体判定为 fail。",
+            "support_files_checked": [
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean",
+              "/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean",
+              "/endpoint/input/source/SOURCE.tex",
+              "/endpoint/input/task_contract/COMMON_RULES.zh-CN.md",
+              "/endpoint/input/task_contract/TASK.zh-CN.md",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean",
+              "/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean",
+              "/endpoint/input/tool_fact/technical-validation.json"
+            ],
+            "technical_evidence_scope": {
+              "facts": {
+                "axiom_audit_exit_code": 0,
+                "build_exit_code": 0,
+                "candidate_source_sha256": {
+                  "ProbabilityTheory/chapter_10/thm_10_10.lean": "e76b788d9cfeed39c17a4786e19ea23268d000b25ed2ced9e2b872feb6890db6",
+                  "ProbabilityTheory/chapter_10/thm_10_11.lean": "99d36c455383f146dfaa8fe7c244f3a7cf407cd468f0c4ef7512708c96a385d2"
+                },
+                "escape_scan_exit_code": 0,
+                "technical_status": "pass"
+              },
+              "limitation": "这些事实只确认冻结候选可构建、通过公理审计和逃逸扫描；它们不证明公开陈述忠实于教材，也不能消除新增前提造成的语义弱化。",
+              "source": "/endpoint/input/tool_fact/technical-validation.json",
+              "status": "pass"
+            },
+            "unresolved": [],
+            "verdict": "fail"
+          }
+        }
+      ],
+      "invalid_original_opinions": [],
+      "public_code_evidence": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+            "sha256": "e76b788d9cfeed39c17a4786e19ea23268d000b25ed2ced9e2b872feb6890db6"
+          },
+          "line_start": 124,
+          "line_end": 133,
+          "quote": "theorem thm_10_10\n    {Ω : Type*} [MeasurableSpace Ω] {d : ℕ} (μ : Measure Ω)\n    [IsProbabilityMeasure μ] (Vn : ℕ → Ω → Fin d → ℝ) (V : Ω → Fin d → ℝ)\n    (hVn : ∀ n, Measurable (Vn n)) (hV : Measurable V) :\n    (VectorConvergesAlmostSurely μ Vn V ↔\n      ∀ i : Fin d, ConvergesAlmostSurely μ\n        (fun n ω => Vn n ω i) (fun ω => V ω i)) ∧\n    (VectorConvergesInProbability μ Vn V ↔\n      ∀ i : Fin d, ConvergesInProbability μ\n        (fun n ω => Vn n ω i) (fun ω => V ω i)) := by"
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-b\\development-b-r4\\cases\\101c389bf124f99e0871e4bf3b4e34e2e547b70e38ceee81bce94ee334b27154\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_11.lean",
+            "sha256": "99d36c455383f146dfaa8fe7c244f3a7cf407cd468f0c4ef7512708c96a385d2"
+          },
+          "line_start": 182,
+          "line_end": 199,
+          "quote": "theorem thm_10_11\n    {Ω : Type*} [MeasurableSpace Ω] {d m : ℕ} (μ : Measure Ω)\n    [IsProbabilityMeasure μ]\n    (Vn : ℕ → Ω → Fin d → ℝ) (V : Ω → Fin d → ℝ)\n    (f : WithLp 2 (Fin d → ℝ) → WithLp 2 (Fin m → ℝ))\n    (S : Set (WithLp 2 (Fin d → ℝ)))\n    (hVn : ∀ n, Measurable (Vn n)) (hV : Measurable V)\n    (hfmeas : Measurable f) (hS : MeasurableSet S)\n    (hcont : ∀ x ∈ S, ContinuousAt f x)\n    (hVS : μ ((fun ω => vectorToEuclidean (V ω)) ⁻¹' S) = 1) :\n    (VectorConvergesAlmostSurely μ Vn V →\n      VectorConvergesAlmostSurely μ\n        (fun n ω i => f (vectorToEuclidean (Vn n ω)) i)\n        (fun ω i => f (vectorToEuclidean (V ω)) i)) ∧\n    (VectorConvergesInProbability μ Vn V →\n      VectorConvergesInProbability μ\n        (fun n ω i => f (vectorToEuclidean (Vn n ω)) i)\n        (fun ω i => f (vectorToEuclidean (V ω)) i)) := by"
+        }
+      ],
+      "comparison_status": "contract_diagnostic_only",
+      "new_solver_trials_for_this_diagnosis": 0,
+      "new_semantic_model_calls_for_this_diagnosis": 0,
+      "contract_realizability": "Original local continuity assumptions do not imply measurability of every composed V_n; the recorded paper counterexample applies. No tested global measurability convention was found in the explicitly enumerated frozen materials.",
+      "interpretation_limit": "Owner inspects statement/scope evidence here and cites existing opinions; no new complete Lean proof verification or changed original verdict.",
+      "textual_output_measurability": "Existing reviews describe measurability derivation under the added global Measurable f premise; the main public conclusion itself lists convergence implications.",
+      "candidate_hypothesis_change": "Adds Measurable f and MeasurableSet S. The latter is also stronger than the proposed new contract and is not silently accepted.",
+      "other_obligation_gap": "Existing adjudicator says the proof is correct under the stronger premises and identifies source-domain restriction.",
+      "responsibility": "Candidate repaired an unsatisfiable obligation by changing public hypotheses. Record the departure from original input and the contract defect separately. This is not an authorized new-condition comparison."
+    },
+    {
+      "arm": "C",
+      "version": "C_runtime_r3_first_L7",
+      "case": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d",
+      "original_final_verdict": "unresolved",
+      "original_decision": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\final\\decision.json",
+        "sha256": "33470937198f6a1f825a07a1f93987701b788c462941c1490f731063306ceff1"
+      },
+      "original_opinions": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\results\\reviewer-1.json",
+            "sha256": "21b50a724d35b478f71f7bf1cf4896f2c0dd91d41a2f447767279e26b091b86a"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-c2fb5f540fc9fa12c894",
+            "assessment_origin": "trusted_execution_failure",
+            "confidence": 0.0,
+            "execution_receipt": {
+              "actor_receipt_sha256": "76f6639c60e14fae6782b2590bc4edb05125d2e23d33ae5fc3472d4032700884",
+              "completed_at_utc": "2026-09-11T18:49:32.754304Z",
+              "container_inspect_sha256": "6ae4a12b087d482139d6c2306ab75678d924fd39060da4098807869c39d94d61",
+              "dispatch_id": "dbdcff90-dd7a-4fd5-92db-be52f4bd6970",
+              "elapsed_seconds": 170.375,
+              "fresh_session": true,
+              "input_binding_sha256": "c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "2d7670e0f4e3c3e8f77a4c00384469607db3767139b7c86fbd29c4dafd4489e2",
+              "raw_events_sha256": "4a7d79ab0789c1fc5c3638438ffcf00fde330050e2998ef04abaeef70c126e7d",
+              "reasoning_effort": "medium",
+              "session_id": "01a091cb-1ea7-7fd2-91b4-277a0de0b77a",
+              "started_at_utc": "2026-09-11T18:46:42.379304Z",
+              "subject_manifest_after_sha256": "cc746283777b20e3849b15deb4b1608cffbbb14288fba424877dc207f589c525",
+              "subject_manifest_before_sha256": "cc746283777b20e3849b15deb4b1608cffbbb14288fba424877dc207f589c525",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 120320,
+                  "input_tokens": 157995,
+                  "output_tokens": 6771
+                }
+              ]
+            },
+            "findings": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "obligation_closure": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "proof_route_assessment": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "public_premise_check": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "request_id": "rev-c2fb5f540fc9fa12c894317b-1",
+            "role": "reviewer",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "summary": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "support_files_checked": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "technical_evidence_scope": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "unresolved": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "verdict": "inconclusive"
+          }
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\results\\reviewer-2.json",
+            "sha256": "1f1cd5af4cec60840953831871f19ed740332ff8ff742f72ad55f08aca3219e1"
+          },
+          "opinion": {
+            "anonymous_candidate_id": "cand-c2fb5f540fc9fa12c894",
+            "assessment_origin": "trusted_execution_failure",
+            "confidence": 0.0,
+            "execution_receipt": {
+              "actor_receipt_sha256": "c5aba40d001cd5bf8cb3c95d37de14a2ac64cf52fe10c63db7c094060e9de71b",
+              "completed_at_utc": "2026-09-11T18:58:30.560566Z",
+              "container_inspect_sha256": "194fe124acbfbda828ac124749b05e8eacaf56f9a827b534fb6b2ff1076df879",
+              "dispatch_id": "8411fa79-74b9-46f9-833a-5b3eb92778ff",
+              "elapsed_seconds": 186.31299999999464,
+              "fresh_session": true,
+              "input_binding_sha256": "c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d",
+              "model": "gpt-5.6-sol",
+              "model_config_sha256": "cdcd07d756f30bdfe985282c8d34877886d57db9e570f2631c78a29fecffa61e",
+              "prompt_sha256": "d58e4f6a605e2eba42f8d9e264d3475786e97f09bc8aab3487bdf85cfbc3858c",
+              "raw_events_sha256": "d553b884c7824f1e108b3610c8d9fb42036fd6919f84ee9cc07f8fe259c90335",
+              "reasoning_effort": "medium",
+              "session_id": "01a091d3-13ae-74a2-a4c1-eb39bcf13461",
+              "started_at_utc": "2026-09-11T18:55:24.247566Z",
+              "subject_manifest_after_sha256": "cc746283777b20e3849b15deb4b1608cffbbb14288fba424877dc207f589c525",
+              "subject_manifest_before_sha256": "cc746283777b20e3849b15deb4b1608cffbbb14288fba424877dc207f589c525",
+              "subject_read_only": true,
+              "usage": [
+                {
+                  "cached_input_tokens": 210304,
+                  "input_tokens": 274726,
+                  "output_tokens": 7627
+                }
+              ]
+            },
+            "findings": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "obligation_closure": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "proof_route_assessment": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "public_premise_check": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "request_id": "rev-c2fb5f540fc9fa12c894317b-2",
+            "role": "reviewer",
+            "schema": "formal_endpoint.evaluation.v1",
+            "statement_fidelity": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "summary": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "support_files_checked": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "technical_evidence_scope": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "unresolved": "The response was not accepted because confidence was an object instead of the frozen numeric value in [0,1]. No mathematical failure is inferred. Original response and actual execution costs are retained.",
+            "verdict": "inconclusive"
+          }
+        }
+      ],
+      "invalid_original_opinions": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\executions\\reviewer-1\\attempt-01\\actor\\raw-public-events.bin",
+            "sha256": "4a7d79ab0789c1fc5c3638438ffcf00fde330050e2998ef04abaeef70c126e7d"
+          },
+          "last_model_message": "{\n  \"schema\": \"formal_endpoint.model_assessment.v1\",\n  \"request_id\": \"rev-c2fb5f540fc9fa12c894317b-1\",\n  \"anonymous_candidate_id\": \"cand-c2fb5f540fc9fa12c894\",\n  \"role\": \"reviewer\",\n  \"verdict\": \"fail\",\n  \"confidence\": {\n    \"score\": 0.97,\n    \"level\": \"high\",\n    \"rationale\": \"技术验证通过，且两份候选源码及全部指定上游文件均已完整核验；失败原因是公开定理 thm_10_11 增加了无法由教材条件推出的全局可测性前提 hf，因而没有证明原公开陈述的强度。\"\n  },\n  \"statement_fidelity\": {\n    \"status\": \"partial\",\n    \"thm_10_10\": {\n      \"status\": \"faithful\",\n      \"assessment\": \"公开声明准确表达有限维随机向量几乎处处收敛和依概率收敛分别等价于逐坐标收敛。hVn 与 hV 对应教材中 Vn、V 为随机向量的可测性要求，未改变数学结论。\"\n    },\n    \"thm_10_11\": {\n      \"status\": \"not_faithful\",\n      \"assessment\": \"教材只规定 f 在 S 上连续且极限向量以概率一落入 S；候选公开声明额外要求 hf : Measurable f，即 f 在整个定义域上可测。这排除了教材允许的局部连续但全局不可测函数，严格削弱了定理强度。候选同时显式给出复合输出可测性，属于有价值的加强结论，但该加强依赖新增的 hf，不能替代原强度定理。\"\n    }\n  },\n  \"obligation_closure\": {\n    \"status\": \"incomplete\",\n    \"closed\": [\n      \"thm_10_10 中证明了坐标绝对值不超过欧氏范数。\",\n      \"thm_10_10 中证明了欧氏范数不超过坐标绝对值之和，并用阈值 ε/d 完成反向事件控制。\",\n      \"逐坐标几乎处处收敛到向量几乎处处收敛使用了有限坐标满测集的交。\",\n      \"向量依概率收敛到逐坐标依概率收敛使用了偏差事件包含关系。\",\n      \"逐坐标依概率收敛到向量依概率收敛使用了有限并集界 prob_2_4_finset_union_bound。\",\n      \"零维情形在依概率证明及度量桥接中被单独处理。\",\n      \"thm_10_11 的几乎处处部分正确相交了收敛满测性质与 V 落入 S 的几乎处处性质，并只在 V(ω)∈S 时使用 ContinuousAt。\",\n      \"thm_10_11 的依概率部分通过欧氏范数与上确界范数的双向控制、依测度收敛桥接及子列刻画完成，数学路线与连续映射定理等价。\",\n      \"在假设 hf 后，所有复合输出的可测性均在证明中由复合规则推出，没有直接把复合可测性或复合收敛作为前提。\"\n    ],\n    \"not_closed\": [\n      \"未在教材给定的 f 仅在 S 上连续这一公开前提下完成完整连续映射定理；概率部分和复合可测性均依赖新增的全局可测性前提 hf。\",\n      \"COMMON_RULES 要求新增支持前提必须由题目条件或白名单公共结果在正文中推出；候选没有也不可能从现有 hcontinuous、hVSmeas、hVSone 推出 hf。\"\n    ]\n  },\n  \"proof_route_assessment\": {\n    \"status\": \"mathematically_sound_under_added_premise\",\n    \"thm_10_10_route\": \"证明直接落实欧氏范数与坐标控制、满测集有限交和有限概率并集界，路线完整且无循环依赖。\",\n    \"thm_10_11_almost_sure_route\": \"先将事件式向量几乎处处收敛转换为几乎处处极限，再与 hVS 相交并逐点复合 ContinuousAt，最后重新构造可测满测事件；该核心证明本身不需要 hf。\",\n    \"thm_10_11_probability_route\": \"先用 piNorm_le_vectorEuclideanNorm 将欧氏偏差控制转为 Mathlib 的依测度收敛，再用子列刻画及局部连续性获得复合后的依测度收敛，最后以 vectorEuclideanNorm_le_card_mul_piNorm 返回欧氏概率接口。该替代路线在 hf 和 hVn 下成立，属于合同允许的数学等价路线。\",\n    \"dependency_assessment\": \"候选使用 Mathlib、指定的 prob_2_4、def_10_6、thm_10_9 及候选 thm_10_10，没有发现循环证明、目标重命名为支持定理或不透明支持逃逸。\"\n  },\n  \"public_premise_check\": {\n    \"status\": \"fail\",\n    \"acceptable_premises\": [\n      {\n        \"premise\": \"hVn : ∀ n, Measurable (Vn n)\",\n        \"reason\": \"对应教材中 Vn 为随机向量。\"\n      },\n      {\n        \"premise\": \"hV : Measurable V\",\n        \"reason\": \"对应教材中 V 为随机向量。\"\n      },\n      {\n        \"premise\": \"hVSmeas 与 hVSone\",\n        \"reason\": \"把教材的事件 P(V∈S)=1 明确展开为事件可测且测度为一。\"\n      }\n    ],\n    \"unacceptable_premises\": [\n      {\n        \"premise\": \"hf : Measurable f\",\n        \"location\": \"ProbabilityTheory/chapter_10/thm_10_11.lean 中 vectorContinuousMapping_inProbability、thm_10_11_ae 和 thm_10_11\",\n        \"reason\": \"这是教材和任务书未给出的全局条件，也未从已有条件推出。它是依概率证明及复合输出可测性的关键输入，因此构成实质性的公开前提迁移。\"\n      }\n    ],\n    \"direct_composite_premise_escape\": false\n  },\n  \"support_files_checked\": {\n    \"candidate_files\": [\n      \"/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_10.lean\",\n      \"/endpoint/input/candidate/ProbabilityTheory/chapter_10/thm_10_11.lean\"\n    ],\n    \"source_and_contract\": [\n      \"/endpoint/input/source/SOURCE.tex\",\n      \"/endpoint/input/task_contract/COMMON_RULES.zh-CN.md\",\n      \"/endpoint/input/task_contract/TASK.zh-CN.md\"\n    ],\n    \"upstream_files\": [\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean\",\n      \"/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean\"\n    ],\n    \"tool_fact\": [\n      \"/endpoint/input/tool_fact/technical-validation.json\"\n    ],\n    \"additional_candidate_support_files\": []\n  },\n  \"findings\": [\n    {\n      \"id\": \"F1\",\n      \"severity\": \"blocking\",\n      \"category\": \"public_premise_migration\",\n      \"target\": \"thm_10_11\",\n      \"finding\": \"公开声明增加 hf : Measurable f，并以此证明复合可测性及依概率连续映射结论。该条件既不在 SOURCE.tex 的定理中，也不在 TASK.zh-CN.md 的条件中，且未由局部连续性和满测集条件推出。\",\n      \"impact\": \"候选只证明了一个适用范围更窄的修正版，没有共同确认完整教材定理。\",\n      \"evidence\": \"thm_10_11_ae 与 thm_10_11 的参数列表均含 hf；证明中的 hf.comp 和 vectorContinuousMapping_inProbability 对其有实质依赖。\"\n    },\n    {\n      \"id\": \"F2\",\n      \"severity\": \"info\",\n      \"category\": \"mathematical_correctness\",\n      \"target\": \"thm_10_10\",\n      \"finding\": \"两种收敛的逐坐标等价、双向范数控制、满测集交和有限并集界均得到实际证明。\",\n      \"impact\": \"第一项数学任务完整闭合。\"\n    },\n    {\n      \"id\": \"F3\",\n      \"severity\": \"info\",\n      \"category\": \"proof_integrity\",\n      \"target\": \"candidate_bundle\",\n      \"finding\": \"未发现 sorry、admit、新公理、以复合结论作为前提、私有不透明支持或其他证明逃逸；中性扫描结果亦为通过。\",\n      \"impact\": \"失败仅来自公开陈述强度，而不是候选证明在其自身前提下失效。\"\n    }\n  ],\n  \"technical_evidence_scope\": {\n    \"source\": \"/endpoint/input/tool_fact/technical-validation.json\",\n    \"technical_status\": \"pass\",\n    \"build_exit_code\": 0,\n    \"axiom_audit_exit_code\": 0,\n    \"escape_scan_exit_code\": 0,\n    \"candidate_source_sha256\": {\n      \"ProbabilityTheory/chapter_10/thm_10_10.lean\": \"d12af203caf856906c015e843b85e70f366ad2da77ff23d1d02c065652a1ad5d\",\n      \"ProbabilityTheory/chapter_10/thm_10_11.lean\": \"f1a601112d2998aaf91738bedf21f53c1e180d74448a4d9d89a93a52eb6ca95b\"\n    },\n    \"interpretation\": \"这些事实只确认冻结候选能够构建、未检出新增公理或扫描定义的逃逸模式；它们不证明公开陈述忠实于教材，也不能消除 hf 所造成的前提加强。\"\n  },\n  \"unresolved\": [],\n  \"summary\": \"thm_10_10 完整且忠实，thm_10_11 在额外假设 f 全局可测时给出了严谨的几乎处处和依概率连续映射证明，并实际推出复合可测性。然而 hf : Measurable f 不属于冻结教材与任务书条件，也未在正文中推出，实质缩小了公开定理的适用范围。由于 verdict 针对整束任务，完整候选不能判为共同完成。\"\n}",
+          "accepted": false,
+          "reason": "confidence object; frozen endpoint retains inconclusive and final unresolved"
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\executions\\reviewer-2\\attempt-01\\actor\\raw-public-events.bin",
+            "sha256": "d553b884c7824f1e108b3610c8d9fb42036fd6919f84ee9cc07f8fe259c90335"
+          },
+          "last_model_message": "{\n  \"schema\": \"formal_endpoint.model_assessment.v1\",\n  \"request_id\": \"rev-c2fb5f540fc9fa12c894317b-2\",\n  \"anonymous_candidate_id\": \"cand-c2fb5f540fc9fa12c894\",\n  \"role\": \"reviewer\",\n  \"verdict\": \"pass\",\n  \"confidence\": {\n    \"score\": 0.97,\n    \"level\": \"高\",\n    \"rationale\": \"已完整读取全部指定冻结输入，逐项核对公开声明、定义展开、证明路线和中性技术事实。两项目标均闭合，未发现结论迁移、额外公理、未证关键责任或语义削弱。\"\n  },\n  \"statement_fidelity\": {\n    \"status\": \"符合\",\n    \"thm_10_10\": \"公开定理同时给出有限维实随机向量几乎处处收敛与逐坐标几乎处处收敛的双向等价，以及依概率收敛与逐坐标依概率收敛的双向等价。以 Fin d → ℝ 表示有限维向量，并覆盖 d=0，未削弱教材结论。\",\n    \"thm_10_11\": \"公开定理保持教材的局部连续映射结论：只要求 f 在 S 中各点连续，并以极限向量属于 S 的满概率事件为条件，分别推出几乎处处收敛和依概率收敛。另公开的几乎处处成员版本与事件概率为一版本数学上一致。\",\n    \"formalization_notes\": \"随机向量及变换结果的可测性被显式表达。hVn、hV 对应教材中“随机向量”的可测性；hf : Measurable f 用来在正文中推出所有复合输出可测性，并未加强为 f 全局连续。\"\n  },\n  \"obligation_closure\": {\n    \"status\": \"全部闭合\",\n    \"items\": [\n      {\n        \"obligation\": \"欧氏范数到坐标范数的控制\",\n        \"evidence\": \"abs_coordinate_le_vectorEuclideanNorm 证明 |v i| ≤ vectorEuclideanNorm v，并用于向量依概率收敛推出各坐标依概率收敛。\"\n      },\n      {\n        \"obligation\": \"坐标范数到欧氏范数的控制\",\n        \"evidence\": \"vectorEuclideanNorm_le_sum_abs 证明欧氏范数不超过坐标绝对值之和；坐标到向量方向取 δ=ε/d，经有限求和得到所需事件包含。另在 10.11 中给出与上确界范数的双向比较。\"\n      },\n      {\n        \"obligation\": \"有限坐标满测集相交\",\n        \"evidence\": \"从各坐标满测事件构造 ⋂ i, E i，通过补集并集为零证明交集测度为一，再用 tendsto_pi_nhds 拼合向量收敛。\"\n      },\n      {\n        \"obligation\": \"有限坐标概率并集界\",\n        \"evidence\": \"证明向量偏差事件包含于坐标偏差事件的有限并，并调用 prob_2_4_finset_union_bound；有限和的各项趋于零。\"\n      },\n      {\n        \"obligation\": \"连续性只在 S 上\",\n        \"evidence\": \"两种连续映射证明都只在 hVS 给出的 V ω ∈ S 点调用 hcontinuous (V ω) hωS，没有使用全局连续性。\"\n      },\n      {\n        \"obligation\": \"几乎处处情形的满测集相交\",\n        \"evidence\": \"vectorContinuousMapping_almostSurely_core 同时提升原收敛的几乎处处事实与 V∈S 的几乎处处事实，再逐点复合 ContinuousAt.tendsto。\"\n      },\n      {\n        \"obligation\": \"复合输出可测性\",\n        \"evidence\": \"thm_10_11_ae 与 thm_10_11 在结论中给出 f∘Vn 和 f∘V 的可测性，并由 hf.comp (hVn n) 与 hf.comp hV 在证明正文中推出，没有把复合可测性作为公开前提。\"\n      },\n      {\n        \"obligation\": \"依概率连续映射的事件控制\",\n        \"evidence\": \"先用显式欧氏范数与函数空间上确界范数的事件包含，建立 VectorConvergesInProbability 与 TendstoInMeasure 的双向桥接；随后采用子序列刻画，在 V∈S 的几乎处处集合上使用局部连续性，最后桥接回欧氏范数定义。\"\n      }\n    ]\n  },\n  \"proof_route_assessment\": {\n    \"status\": \"有效且等价\",\n    \"thm_10_10_route\": \"证明直接落实教材所需的有限交、坐标投影、欧氏范数估计与有限并集界。使用 ε/d 和一范数上界替代教材的 ε/√d，属于数学等价且稍弱但充分的估计。\",\n    \"thm_10_11_almost_sure_route\": \"通过事件形式与几乎处处形式之间的双向转换处理满测集，再在极限点应用局部连续性，路线完整。\",\n    \"thm_10_11_probability_route\": \"没有照搬教材的 A_{δ,ε} 递减事件，而采用依测度收敛的子序列刻画。该路线仍实际证明了必要的偏差事件包含、范数拓扑等价以及几乎处处连续复合，合同明确允许数学等价路线。\",\n    \"dependencies\": \"候选直接复用上游的向量收敛定义、坐标可测性定理和有限并集界；其余支持来自允许使用的 Mathlib。未发现新增不透明支持文件或目标专有公理。\"\n  },\n  \"public_premise_check\": {\n    \"status\": \"通过\",\n    \"premises\": [\n      \"IsProbabilityMeasure μ 对应概率空间。\",\n      \"hVn 与 hV 对应 Vn、V 为随机向量。\",\n      \"hcontinuous 只要求 S 上逐点 ContinuousAt。\",\n      \"hVSmeas 与 hVSone 精确表达教材的可测满概率事件 V⁻¹(S)。\",\n      \"hf : Measurable f 是确保变换确为随机向量并在正文中派生复合可测性的函数级条件；它不是复合可测性或目标收敛的改名假设。\"\n    ],\n    \"conclusion\": \"没有把复合后的收敛或复合后的可测性作为公开前提，也没有把范数控制、满测集相交或概率控制迁移为假设。\"\n  },\n  \"support_files_checked\": [\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_5.lean\",\n      \"relevance\": \"测度与概率测度接口\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_6.lean\",\n      \"relevance\": \"单调集合序列\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_7.lean\",\n      \"relevance\": \"生成σ域\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/def_2_8.lean\",\n      \"relevance\": \"欧氏空间博雷尔结构\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/prob_2_4.lean\",\n      \"relevance\": \"有限并集概率上界\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_2.lean\",\n      \"relevance\": \"测度单调性\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_3.lean\",\n      \"relevance\": \"有限次可加上界\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_4.lean\",\n      \"relevance\": \"测度从下连续性及并集界的上游路线\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_6.lean\",\n      \"relevance\": \"生成σ域上游\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_02/thm_2_8.lean\",\n      \"relevance\": \"有限维博雷尔结构与坐标盒\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_1.lean\",\n      \"relevance\": \"实随机变量几乎处处收敛定义\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_2.lean\",\n      \"relevance\": \"实随机变量依概率收敛定义\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_10/def_10_6.lean\",\n      \"relevance\": \"向量几乎处处收敛、欧氏范数及向量依概率收敛定义\"\n    },\n    {\n      \"path\": \"/endpoint/input/upstream/ProbabilityTheory/chapter_10/thm_10_9.lean\",\n      \"relevance\": \"向量可测性与逐坐标可测性的等价\"\n    }\n  ],\n  \"findings\": [\n    {\n      \"severity\": \"info\",\n      \"category\": \"数学语义\",\n      \"location\": \"thm_10_10.lean\",\n      \"finding\": \"两个方向均被实质证明，且空维情形有明确分支；未发现有限维边界遗漏。\"\n    },\n    {\n      \"severity\": \"info\",\n      \"category\": \"教材义务\",\n      \"location\": \"thm_10_11.lean\",\n      \"finding\": \"依概率部分采用子序列刻画而非教材的递减坏点集合，但完整保留局部连续性与满概率落点条件，属于合同允许的等价证明。\"\n    },\n    {\n      \"severity\": \"info\",\n      \"category\": \"公开前提\",\n      \"location\": \"thm_10_11.lean:158\",\n      \"finding\": \"全局可测性 hf 是从输入可测性推出复合输出可测性的自然充分条件；候选未直接假设任何复合输出可测性。\"\n    },\n    {\n      \"severity\": \"info\",\n      \"category\": \"证明逃逸\",\n      \"location\": \"全部候选\",\n      \"finding\": \"从已读源码和中性扫描事实均未发现 sorry、admit、新增公理、结论改名为假设或不透明目标专有支持。\"\n    }\n  ],\n  \"technical_evidence_scope\": {\n    \"status\": \"中性技术验证通过\",\n    \"facts\": {\n      \"build_exit_code\": 0,\n      \"axiom_audit_exit_code\": 0,\n      \"escape_scan_exit_code\": 0,\n      \"technical_status\": \"pass\"\n    },\n    \"hash_binding\": {\n      \"ProbabilityTheory/chapter_10/thm_10_10.lean\": \"d12af203caf856906c015e843b85e70f366ad2da77ff23d1d02c065652a1ad5d\",\n      \"ProbabilityTheory/chapter_10/thm_10_11.lean\": \"f1a601112d2998aaf91738bedf21f53c1e180d74448a4d9d89a93a52eb6ca95b\"\n    },\n    \"scope_limit\": \"这些事实只确认对应哈希源码的构建、既定公理审计和逃逸扫描结果；本评价的教材语义、前提合理性和证明义务闭合结论来自独立源码核验，没有把构建成功本身视为语义通过。\"\n  },\n  \"unresolved\": [],\n  \"summary\": \"完整候选共同完成两项数学任务。10.10 忠实证明有限维随机向量收敛与逐坐标收敛的两个双向等价，并落实双向范数控制、有限满测集交和概率并集界。10.11 在仅于 S 上连续且极限向量几乎必然落入 S 的条件下，通过几乎处处复合及依测度收敛的等价路线证明连续映射结论，同时从函数与输入的可测性推出复合输出可测性。未发现目标迁移、语义削弱或证明逃逸。\"\n}",
+          "accepted": false,
+          "reason": "confidence object; frozen endpoint retains inconclusive and final unresolved"
+        }
+      ],
+      "public_code_evidence": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+            "sha256": "d12af203caf856906c015e843b85e70f366ad2da77ff23d1d02c065652a1ad5d"
+          },
+          "line_start": 154,
+          "line_end": 161,
+          "quote": "theorem thm_10_10\n    {Ω : Type*} [MeasurableSpace Ω] {d : ℕ} (μ : Measure Ω)\n    [IsProbabilityMeasure μ] (Vn : ℕ → Ω → Fin d → ℝ) (V : Ω → Fin d → ℝ)\n    (hVn : ∀ n : ℕ, Measurable (Vn n)) (hV : Measurable V) :\n    (VectorConvergesAlmostSurely μ Vn V ↔\n      ∀ i : Fin d, ConvergesAlmostSurely μ (fun n ω => Vn n ω i) (fun ω => V ω i)) ∧\n    (VectorConvergesInProbability μ Vn V ↔\n      ∀ i : Fin d, ConvergesInProbability μ (fun n ω => Vn n ω i) (fun ω => V ω i)) := by"
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_11.lean",
+            "sha256": "f1a601112d2998aaf91738bedf21f53c1e180d74448a4d9d89a93a52eb6ca95b"
+          },
+          "line_start": 154,
+          "line_end": 166,
+          "quote": "theorem thm_10_11_ae\n    {Ω : Type*} [MeasurableSpace Ω] {d m : ℕ} (μ : Measure Ω)\n    [IsProbabilityMeasure μ] (Vn : ℕ → Ω → Fin d → ℝ) (V : Ω → Fin d → ℝ)\n    (f : (Fin d → ℝ) → (Fin m → ℝ)) (S : Set (Fin d → ℝ))\n    (hVn : ∀ n, Measurable (Vn n)) (hV : Measurable V) (hf : Measurable f)\n    (hcontinuous : ∀ x ∈ S, ContinuousAt f x)\n    (hVS : ∀ᵐ ω ∂μ, V ω ∈ S) :\n    (∀ n, Measurable (fun ω => f (Vn n ω))) ∧\n    Measurable (fun ω => f (V ω)) ∧\n    (VectorConvergesAlmostSurely μ Vn V →\n      VectorConvergesAlmostSurely μ (fun n ω => f (Vn n ω)) (fun ω => f (V ω))) ∧\n    (VectorConvergesInProbability μ Vn V →\n      VectorConvergesInProbability μ (fun n ω => f (Vn n ω)) (fun ω => f (V ω))) := by"
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-bc-l7-c\\development-ac-r1\\cases\\c2fb5f540fc9fa12c894317b9f8877dda7181210d43384d4a81b417eb07ea39d\\subject\\candidate\\ProbabilityTheory\\chapter_10\\thm_10_11.lean",
+            "sha256": "f1a601112d2998aaf91738bedf21f53c1e180d74448a4d9d89a93a52eb6ca95b"
+          },
+          "line_start": 173,
+          "line_end": 185,
+          "quote": "theorem thm_10_11\n    {Ω : Type*} [MeasurableSpace Ω] {d m : ℕ} (μ : Measure Ω)\n    [IsProbabilityMeasure μ] (Vn : ℕ → Ω → Fin d → ℝ) (V : Ω → Fin d → ℝ)\n    (f : (Fin d → ℝ) → (Fin m → ℝ)) (S : Set (Fin d → ℝ))\n    (hVn : ∀ n, Measurable (Vn n)) (hV : Measurable V) (hf : Measurable f)\n    (hcontinuous : ∀ x ∈ S, ContinuousAt f x)\n    (hVSmeas : MeasurableSet {ω | V ω ∈ S}) (hVSone : μ {ω | V ω ∈ S} = 1) :\n    (∀ n, Measurable (fun ω => f (Vn n ω))) ∧\n    Measurable (fun ω => f (V ω)) ∧\n    (VectorConvergesAlmostSurely μ Vn V →\n      VectorConvergesAlmostSurely μ (fun n ω => f (Vn n ω)) (fun ω => f (V ω))) ∧\n    (VectorConvergesInProbability μ Vn V →\n      VectorConvergesInProbability μ (fun n ω => f (Vn n ω)) (fun ω => f (V ω))) := by"
+        }
+      ],
+      "comparison_status": "contract_diagnostic_only",
+      "new_solver_trials_for_this_diagnosis": 0,
+      "new_semantic_model_calls_for_this_diagnosis": 0,
+      "contract_realizability": "Original local continuity assumptions do not imply measurability of every composed V_n; the recorded paper counterexample applies. No tested global measurability convention was found in the explicitly enumerated frozen materials.",
+      "interpretation_limit": "Owner inspects statement/scope evidence here and cites existing opinions; no new complete Lean proof verification or changed original verdict.",
+      "textual_output_measurability": "Public thm_10_11_ae and thm_10_11 explicitly conclude measurability of every composite and of the limit.",
+      "candidate_hypothesis_change": "Adds Measurable f; gives an ae-membership version and an event-measurability/full-measure version. It labels the formulation corrected.",
+      "other_obligation_gap": "Both original semantic opinions were format-invalid; the frozen endpoint correctly finishes unresolved, with no extra adjudication after equal inconclusive results.",
+      "responsibility": "Output measurability is delivered for a changed public hypothesis. Keep this separate from original-contract admissibility, numerical proof validity and evaluator formatting failure. No new accepted mathematical label is created here."
+    }
+  ],
+  "contract_diagnosis": {
+    "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L7_CONTRACT_DIAGNOSIS.json",
+    "sha256": "39322119f4fc1c34e9c6078b173bd94722b4a3d6a14c95228795754040e061e0"
+  },
+  "new_contract_draft": {
+    "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\L7_CONTRACT_REVISION_DRAFT.zh-CN.md",
+    "sha256": "e218547d06615db7d799a73f9d641978a988d15c6f62cae7c871d71099ba6688"
+  },
+  "future_authorization_required": "Any fresh solving under the explicit Borel-measurable-f contract must be a separately registered equal-start A/B/C condition. The current 16-root authorization has been exhausted; no such runs were launched.",
+  "global_convention_search_limit": "Only the frozen plan/entry/chapter material enumerated in L7_CONTRACT_DIAGNOSIS.json was searched; not an exhaustive claim about every possible textbook convention.",
+  "no_original_labels_replaced": true,
+  "paper_counterexample_not_Lean_verified": true
+}

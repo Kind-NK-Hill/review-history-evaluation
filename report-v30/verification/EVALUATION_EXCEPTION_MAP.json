@@ -1,0 +1,56 @@
+{
+  "confidence_object_cases": [
+    {
+      "dispatch_id": "24410308-f939-44ae-9a69-a82392631b5b",
+      "reason": "原 confidence 为对象型；不等于模型数学意见失败",
+      "package_files": [
+        "verification/supporting_records/evaluation_exceptions/24410308/original-public-return.jsonl",
+        "verification/supporting_records/evaluation_exceptions/24410308/result_source.json",
+        "verification/supporting_records/evaluation_exceptions/24410308/receipt_source.json",
+        "verification/supporting_records/evaluation_exceptions/24410308/final_decision_source.json"
+      ]
+    },
+    {
+      "dispatch_id": "d5df372b-9696-4f8b-b7c5-aea4546c3d57",
+      "reason": "原 confidence 为对象型；不等于模型数学意见失败",
+      "package_files": [
+        "verification/supporting_records/evaluation_exceptions/d5df372b/original-public-return.jsonl",
+        "verification/supporting_records/evaluation_exceptions/d5df372b/result_source.json",
+        "verification/supporting_records/evaluation_exceptions/d5df372b/receipt_source.json",
+        "verification/supporting_records/evaluation_exceptions/d5df372b/final_decision_source.json"
+      ]
+    },
+    {
+      "dispatch_id": "dbdcff90-dd7a-4fd5-92db-be52f4bd6970",
+      "reason": "原 confidence 为对象型；不等于模型数学意见失败",
+      "package_files": [
+        "verification/supporting_records/evaluation_exceptions/dbdcff90/original-public-return.jsonl",
+        "verification/supporting_records/evaluation_exceptions/dbdcff90/result_source.json",
+        "verification/supporting_records/evaluation_exceptions/dbdcff90/receipt_source.json",
+        "verification/supporting_records/evaluation_exceptions/dbdcff90/final_decision_source.json"
+      ]
+    },
+    {
+      "dispatch_id": "8411fa79-74b9-46f9-833a-5b3eb92778ff",
+      "reason": "原 confidence 为对象型；不等于模型数学意见失败",
+      "package_files": [
+        "verification/supporting_records/evaluation_exceptions/8411fa79/original-public-return.jsonl",
+        "verification/supporting_records/evaluation_exceptions/8411fa79/result_source.json",
+        "verification/supporting_records/evaluation_exceptions/8411fa79/receipt_source.json",
+        "verification/supporting_records/evaluation_exceptions/8411fa79/final_decision_source.json"
+      ]
+    },
+    {
+      "dispatch_id": "a5d45f5e-d3ca-4070-8eab-35128338173c",
+      "reason": "原 confidence 为对象型；不等于模型数学意见失败",
+      "package_files": [
+        "verification/supporting_records/evaluation_exceptions/a5d45f5e/original-public-return.jsonl",
+        "verification/supporting_records/evaluation_exceptions/a5d45f5e/result_source.json",
+        "verification/supporting_records/evaluation_exceptions/a5d45f5e/receipt_source.json",
+        "verification/supporting_records/evaluation_exceptions/a5d45f5e/final_decision_source.json"
+      ]
+    }
+  ],
+  "quotation_repairs_source": "manuscript/evidence/r9_rewrite_evidence/sources/A03.json",
+  "scope": "只恢复既有异常原返回、宿主结果、输入与修复记录；未重评或改写原意见"
+}

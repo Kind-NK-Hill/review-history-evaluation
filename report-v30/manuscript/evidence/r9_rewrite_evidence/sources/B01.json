@@ -1,0 +1,106 @@
+{
+  "/cutoff_epoch": 1789153657.5229585,
+  "/cutoff_beijing": "2026-09-12T03:07:37+08:00",
+  "/version_denominators": {
+    "A_l7_repair_r1": {
+      "actual_solver_roots": 1,
+      "complete_candidate_packages_observed": 1,
+      "noncomplete_packages_observed": 0,
+      "package_unknown": 0,
+      "common_endpoint_executed_roots": 1,
+      "original_selected_common_verdicts": {
+        "fail": 1
+      },
+      "denominator_rule": "All actual solver roots in this named version, including failures and missing records. Package presence is not a recovered precise submission timestamp. Original verdict counts are historical outcome accounting, not configuration ranking."
+    },
+    "A_original_development_r1": {
+      "actual_solver_roots": 9,
+      "complete_candidate_packages_observed": 8,
+      "noncomplete_packages_observed": 1,
+      "package_unknown": 0,
+      "common_endpoint_executed_roots": 9,
+      "original_selected_common_verdicts": {
+        "pass": 8,
+        "fail": 1
+      },
+      "denominator_rule": "All actual solver roots in this named version, including failures and missing records. Package presence is not a recovered precise submission timestamp. Original verdict counts are historical outcome accounting, not configuration ranking."
+    },
+    "A_runtime_r2_late_development": {
+      "actual_solver_roots": 2,
+      "complete_candidate_packages_observed": 2,
+      "noncomplete_packages_observed": 0,
+      "package_unknown": 0,
+      "common_endpoint_executed_roots": 2,
+      "original_selected_common_verdicts": {
+        "pass": 2
+      },
+      "denominator_rule": "All actual solver roots in this named version, including failures and missing records. Package presence is not a recovered precise submission timestamp. Original verdict counts are historical outcome accounting, not configuration ranking."
+    },
+    "B_capability_r3": {
+      "actual_solver_roots": 1,
+      "complete_candidate_packages_observed": 1,
+      "noncomplete_packages_observed": 0,
+      "package_unknown": 0,
+      "common_endpoint_executed_roots": 1,
+      "original_selected_common_verdicts": {
+        "pass": 1
+      },
+      "denominator_rule": "All actual solver roots in this named version, including failures and missing records. Package presence is not a recovered precise submission timestamp. Original verdict counts are historical outcome accounting, not configuration ranking."
+    },
+    "B_original_development_r1": {
+      "actual_solver_roots": 5,
+      "complete_candidate_packages_observed": 0,
+      "noncomplete_packages_observed": 0,
+      "package_unknown": 5,
+      "common_endpoint_executed_roots": 0,
+      "original_selected_common_verdicts": {
+        "no_common_label": 5
+      },
+      "denominator_rule": "All actual solver roots in this named version, including failures and missing records. Package presence is not a recovered precise submission timestamp. Original verdict counts are historical outcome accounting, not configuration ranking."
+    },
+    "B_transport_r4": {
+      "actual_solver_roots": 11,
+      "complete_candidate_packages_observed": 11,
+      "noncomplete_packages_observed": 0,
+      "package_unknown": 0,
+      "common_endpoint_executed_roots": 11,
+      "original_selected_common_verdicts": {
+        "pass": 8,
+        "fail": 3
+      },
+      "denominator_rule": "All actual solver roots in this named version, including failures and missing records. Package presence is not a recovered precise submission timestamp. Original verdict counts are historical outcome accounting, not configuration ranking."
+    },
+    "C_pilot_r1": {
+      "actual_solver_roots": 1,
+      "complete_candidate_packages_observed": 1,
+      "noncomplete_packages_observed": 0,
+      "package_unknown": 0,
+      "common_endpoint_executed_roots": 1,
+      "original_selected_common_verdicts": {
+        "no_common_label": 1
+      },
+      "denominator_rule": "All actual solver roots in this named version, including failures and missing records. Package presence is not a recovered precise submission timestamp. Original verdict counts are historical outcome accounting, not configuration ranking."
+    },
+    "C_runtime_r3": {
+      "actual_solver_roots": 11,
+      "complete_candidate_packages_observed": 11,
+      "noncomplete_packages_observed": 0,
+      "package_unknown": 0,
+      "common_endpoint_executed_roots": 11,
+      "original_selected_common_verdicts": {
+        "pass": 9,
+        "fail": 1,
+        "unresolved": 1
+      },
+      "denominator_rule": "All actual solver roots in this named version, including failures and missing records. Package presence is not a recovered precise submission timestamp. Original verdict counts are historical outcome accounting, not configuration ranking."
+    }
+  },
+  "/scope": {
+    "new_B_C_solver_roots": 16,
+    "new_solver_roots_under_revised_L7": 0,
+    "registered_consistency_calls": 31,
+    "old_opinions_replaced": 0,
+    "original_partial_A_H1_and_same_root_full_continuation": "Retained under one root with separate candidate scopes.",
+    "A_L7_repair": "Separate root/version, excluded from equal-first-condition interpretation."
+  }
+}

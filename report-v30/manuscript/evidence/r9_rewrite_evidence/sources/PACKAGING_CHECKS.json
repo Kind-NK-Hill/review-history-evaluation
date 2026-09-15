@@ -1,0 +1,41 @@
+{
+  "packaging_utc": "2026-09-12T07:43:56.758565+00:00",
+  "mechanical_checks_only": true,
+  "root_count": 41,
+  "main_count": 33,
+  "main_pass_by_arm": {
+    "A": 9,
+    "B": 10,
+    "C": 11
+  },
+  "call_counts": {
+    "original_common_endpoint": 81,
+    "consistency_reevaluation": 31,
+    "L7_supplement_0517": 2
+  },
+  "missing_root_join_calls": [],
+  "requested_models": {
+    "gpt-5.6-sol / medium": 114
+  },
+  "receipt_models": {
+    "gpt-5.6-sol / medium": 114
+  },
+  "sessions_count": 114,
+  "unique_session_count": 114,
+  "historical_relations": 462,
+  "historical_positive": 129,
+  "historical_boundary": 2,
+  "historical_unknown": 331,
+  "missing_usage_calls": 11,
+  "gaps": [],
+  "completed_packaging_utc": "2026-09-12T07:43:57.033181+00:00",
+  "source_files_rechecked_unchanged": 753,
+  "broken_package_links": [],
+  "mechanical_input_manifest_comparison": "B11-input-comparison.json",
+  "model_calls_added": 0,
+  "solver_calls_added": 0,
+  "builds_or_tests_executed": 0,
+  "raw_result_not_in_standard_result_slot_calls": [
+    "52788b05-04f6-415d-8422-267c4161495c"
+  ]
+}

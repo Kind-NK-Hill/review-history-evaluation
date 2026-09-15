@@ -1,0 +1,4 @@
+/bin/tar: ./submission.json: Cannot open: Permission denied
+/bin/tar: ./role-output/response.md: Cannot open: Permission denied
+/bin/tar: ./role-output.response.json: Cannot open: Permission denied
+/bin/tar: Exiting with failure status due to previous errors

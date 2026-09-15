@@ -1,0 +1,36 @@
+{
+  "checked_new_entry_and_table_references": true,
+  "broken_required_package_references": [],
+  "source_files_rechecked_unchanged": 504,
+  "original_revision_members": 116,
+  "existing_evidence_members": 99,
+  "targeted_maintenance_rows": 13,
+  "L2_unique_services": 6,
+  "new_semantic_audits": 0,
+  "PDF_structure_only_not_cross_reader_click_test": true,
+  "read_only_rendered_pages": {
+    "main": [
+      8,
+      12,
+      26
+    ],
+    "appendix": [
+      19,
+      21,
+      22,
+      26,
+      34,
+      53
+    ]
+  },
+  "high_confidence_secret_pattern_hits": [],
+  "privacy_scan_limit": "机械敏感模式扫描及定向材料范围检查，不是全面法律/保密审计",
+  "gaps": [],
+  "retained_unknowns": [
+    "A-L1会话归属冲突唯一原因和历史容器恢复目标独立再读",
+    "实验候选与当前正式库的可靠绑定",
+    "B-L2帮助补丁实际采用和单独数学有效性",
+    "原审计未重建的父角色全部中间变更",
+    "原Python/Tectonic与字体完整版本；跨阅读器实际点击情况"
+  ]
+}

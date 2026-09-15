@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-09-14T16:24:55.048746+00:00",
+  "thread_id": "6aa6afbe-3a60-83ec-8a73-b10183ac7172",
+  "thread_title": "中文评审要求",
+  "kind": "chatgpt",
+  "model_configuration_verified": false,
+  "scope": "Full bilingual main text; Chinese Appendix R; bilingual Appendices S and T; final framing instructions",
+  "characters": 180735,
+  "sha256": "2843df9712da3c4b0028dcc1569351f06bcf3e36e76039bb76aac47529133980",
+  "sent": true,
+  "delivery_confirmed_by": "Original ChatGPT response acknowledges END_REVISION28_REVIEW",
+  "sent_characters": 180734
+}

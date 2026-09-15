@@ -1,0 +1,319 @@
+{
+  "original_claims_source": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\revision_v3_20260911\\evidence\\latest\\CLAIMS.json",
+  "original_sha256": "3cb07b3fbe95780604efbccc8b843d5cf1924306641a275cbcaf3d574e301a36",
+  "namespace_mapping": {
+    "K02": "U01",
+    "K03": "U02",
+    "K04": "U03",
+    "K05": "U04",
+    "K06": "U05",
+    "K07": "U06",
+    "K08": "U07",
+    "K09": "U08",
+    "K10": "U09",
+    "K12": "U10",
+    "K13": "U11",
+    "N01": "U12",
+    "N02": "U13",
+    "N03": "U14",
+    "N04": "U15",
+    "N05": "U16",
+    "N06": "U17",
+    "N07": "U18",
+    "N08": "U19",
+    "N09": "U20"
+  },
+  "selected_claims": [
+    {
+      "id": "K08",
+      "claim": "H1从完整反演求助无补丁，转到有界Dirichlet积分子任务，取得并实际采用已构建支持。",
+      "interpretation_limit": "支持缺口定位和再分解的过程；不能从一例推出分解必然改善效果。",
+      "capture_window": "此前15:04:16冻结证据；本轮复用其已完成核查",
+      "namespace_id": "U07",
+      "references": [
+        {
+          "id": "P-I00066",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/author-call-01/bridge/bridge-events.jsonl",
+          "snapshot": "b/ea379861349e2cea3cff19c794f5985be9a596a12511e18fa89b1275c0d8e551",
+          "sha256": "ea379861349e2cea3cff19c794f5985be9a596a12511e18fa89b1275c0d8e551",
+          "lines": [
+            16,
+            38
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U07/01-bridge-events.jsonl"
+        },
+        {
+          "id": "P-I00288",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/help/29200df5-c1ff-45f5-b89f-1a2252b6acd8/actor/bridge/bridge-events.jsonl",
+          "snapshot": "b/7c4dea4dfe6e04a3b971b187ef9ffd376ecc6b9486931f61fe2c66e808487ee0",
+          "sha256": "7c4dea4dfe6e04a3b971b187ef9ffd376ecc6b9486931f61fe2c66e808487ee0",
+          "lines": [
+            114,
+            121
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U07/02-bridge-events.jsonl"
+        },
+        {
+          "id": "P-I16430",
+          "source": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/controller_bc_stage_20260911/H1_THIRD_SUPPORT_DELIVERY/draft-before.lean",
+          "snapshot": "b/c519f277a78b6d9501bae4d85ae82842d2f349f9e54083af9e1d16730cc38d5c",
+          "sha256": "c519f277a78b6d9501bae4d85ae82842d2f349f9e54083af9e1d16730cc38d5c",
+          "lines": [
+            259,
+            344
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U07/03-draft-before.lean"
+        }
+      ]
+    },
+    {
+      "id": "K09",
+      "claim": "H1第三支持数学产出已完成却因导出失败未送达，宿主恢复后原作者应用并完成内部审核。",
+      "interpretation_limit": "产出、导出、宿主恢复、作者采用、验证分别记录；不是全程自主成功。",
+      "capture_window": "此前15:04:16冻结证据；本轮复用其已完成核查",
+      "namespace_id": "U08",
+      "references": [
+        {
+          "id": "P-I00677",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/help/a592bc46-fdaa-4507-9594-6e1750eaa0aa/actor/bridge/bridge-events.jsonl",
+          "snapshot": "b/1ee0150af646140bce1350ecea80468330cc3140a7c5038126aeb4ca2e843605",
+          "sha256": "1ee0150af646140bce1350ecea80468330cc3140a7c5038126aeb4ca2e843605",
+          "lines": [
+            258,
+            263
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U08/01-bridge-events.jsonl"
+        },
+        {
+          "id": "P-I00960",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/help/a592bc46-fdaa-4507-9594-6e1750eaa0aa/after-export.stderr.bin",
+          "snapshot": "b/019b99f90096f3913ade6d3229f95580292cdb903f86552cb7fdc407f262109f",
+          "sha256": "019b99f90096f3913ade6d3229f95580292cdb903f86552cb7fdc407f262109f",
+          "lines": [
+            1,
+            2
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U08/02-after-export.stderr.bin"
+        },
+        {
+          "id": "P-I00066",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/author-call-01/bridge/bridge-events.jsonl",
+          "snapshot": "b/ea379861349e2cea3cff19c794f5985be9a596a12511e18fa89b1275c0d8e551",
+          "sha256": "ea379861349e2cea3cff19c794f5985be9a596a12511e18fa89b1275c0d8e551",
+          "lines": [
+            38,
+            39
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U08/03-bridge-events.jsonl"
+        },
+        {
+          "id": "P-I01184",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/support3-export-recovery-r1/help-result-a592bc46-fdaa-4507-9594-6e1750eaa0aa/role-artifact-2-patch.diff",
+          "snapshot": "b/49c2a67e4f2882919a5b6135e42f362eb8d05180f8c2cf48a01ab669b73cf32d",
+          "sha256": "49c2a67e4f2882919a5b6135e42f362eb8d05180f8c2cf48a01ab669b73cf32d",
+          "lines": [
+            1,
+            10
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U08/04-role-artifact-2-patch.diff"
+        },
+        {
+          "id": "P-I00131",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/author-call-02/bridge/bridge-events.jsonl",
+          "snapshot": "b/f3d7684f29497b77cc38cf770f13a8ed074327c084c251222cb971be1ccc345c",
+          "sha256": "f3d7684f29497b77cc38cf770f13a8ed074327c084c251222cb971be1ccc345c",
+          "lines": [
+            2,
+            21
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U08/05-bridge-events.jsonl"
+        },
+        {
+          "id": "P-I16443",
+          "source": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/controller_bc_stage_20260911/H1_THM_9_5_COMPLETION/thm_9_5.lean",
+          "snapshot": "b/70c37e836bd61b1a6bf2bd7af253b232b8328333e83b29beaae394742091f339",
+          "sha256": "70c37e836bd61b1a6bf2bd7af253b232b8328333e83b29beaae394742091f339",
+          "lines": [
+            826,
+            855
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U08/06-thm_9_5.lean"
+        }
+      ]
+    },
+    {
+      "id": "K10",
+      "claim": "H1定理9.6的原通过意见因输入哈希不符被应用门拒绝；同一审核者修正后才实际应用。",
+      "interpretation_limit": "修正涉及review_input_hash和evidence_review；候选字节未变，未换审核身份。",
+      "capture_window": "此前15:04:16冻结证据；本轮复用其已完成核查",
+      "namespace_id": "U09",
+      "references": [
+        {
+          "id": "P-I00131",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/author-call-02/bridge/bridge-events.jsonl",
+          "snapshot": "b/f3d7684f29497b77cc38cf770f13a8ed074327c084c251222cb971be1ccc345c",
+          "sha256": "f3d7684f29497b77cc38cf770f13a8ed074327c084c251222cb971be1ccc345c",
+          "lines": [
+            74,
+            79
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U09/01-bridge-events.jsonl"
+        },
+        {
+          "id": "P-I01194",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/thm96-corrected-review-delivery-r1/rejected-result-before-correction.json",
+          "snapshot": "b/2d6474323702f328b8f2b0c0ad2a61b31ed9c5b47510ebf1f7788a8d23323500",
+          "sha256": "2d6474323702f328b8f2b0c0ad2a61b31ed9c5b47510ebf1f7788a8d23323500",
+          "lines": [
+            1,
+            20
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U09/02-rejected-result-before-correction.json"
+        },
+        {
+          "id": "P-I01196",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/thm96-corrected-review-delivery-r1/thm96-corrected-review-r1/response.json",
+          "snapshot": "b/0743deef21a001bdb57afb740a45b6c9ea60cc3b96ea3ae98fbe478dbe2f8b3c",
+          "sha256": "0743deef21a001bdb57afb740a45b6c9ea60cc3b96ea3ae98fbe478dbe2f8b3c",
+          "lines": [
+            1,
+            20
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U09/03-response.json"
+        },
+        {
+          "id": "P-I00455",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/help/3591c148-3fec-464b-9c27-82952cd4f11e/actor/actor-receipt.json",
+          "snapshot": "b/b5788b2870d132e13272e27c1b4320ff402fcf6fd0df97cc9948b718de234e20",
+          "sha256": "b5788b2870d132e13272e27c1b4320ff402fcf6fd0df97cc9948b718de234e20",
+          "lines": [
+            1,
+            52
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U09/04-actor-receipt.json"
+        },
+        {
+          "id": "P-I01200",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/thm96-same-reviewer-binding-r1/actor/actor-receipt.json",
+          "snapshot": "b/b4b670f583429e96d96cce27ffa07410418cd5353e4312594f52bf111959aae7",
+          "sha256": "b4b670f583429e96d96cce27ffa07410418cd5353e4312594f52bf111959aae7",
+          "lines": [
+            1,
+            52
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U09/05-actor-receipt.json"
+        },
+        {
+          "id": "P-I00232",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/author-call-03/bridge/bridge-events.jsonl",
+          "snapshot": "b/9ceed6b137a2be45ad850a1529da535f6664fac218aa3011b5d238af84a4ed21",
+          "sha256": "9ceed6b137a2be45ad850a1529da535f6664fac218aa3011b5d238af84a4ed21",
+          "lines": [
+            2,
+            7
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U09/06-bridge-events.jsonl"
+        }
+      ]
+    },
+    {
+      "id": "N02",
+      "claim": "H1五题均完成内部审核应用，并在同一最终源码状态联合构建成功。整组共同终验仍待完成。",
+      "interpretation_limit": "旧thm_9_4部分终验不能替代五题新候选的整组共同终验；这是原根时钟的续作。",
+      "capture_window": "2026-09-11T07:49:16.820323+00:00",
+      "derived_artifacts": [
+        "NEW_RELATION_CHECKS.json"
+      ],
+      "namespace_id": "U13",
+      "references": [
+        {
+          "id": "I00236",
+          "source": "D:/Grad_Study/Practimum/Formalization/a-h1-cont-r4/author-call-03/bridge/bridge-events.jsonl",
+          "snapshot": "b/ffcbe71e85ef614c1e7265681c1f01b51b162975311cbf8fcd19dea71742511d",
+          "sha256": "ffcbe71e85ef614c1e7265681c1f01b51b162975311cbf8fcd19dea71742511d",
+          "lines": [
+            54,
+            57
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U13/01-bridge-events.jsonl"
+        },
+        {
+          "id": "I17528",
+          "source": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/controller_bc_stage_20260911/H1_FINAL_INTERNAL_COLLECTION_R1/thm_9_4/pack/review_apply_receipt_v1.json",
+          "snapshot": "b/56dfb5229d2fd3977c3565175e12f5d11aef13c76406bd7944a747846427281e",
+          "sha256": "56dfb5229d2fd3977c3565175e12f5d11aef13c76406bd7944a747846427281e",
+          "lines": [
+            1,
+            7
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U13/02-review_apply_receipt_v1.json"
+        },
+        {
+          "id": "I17566",
+          "source": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/controller_bc_stage_20260911/H1_FINAL_INTERNAL_COLLECTION_R1/thm_9_5/pack/review_apply_receipt_v1.json",
+          "snapshot": "b/96d5c1f8f4e5eb0a3374a1e2e6b9e67b403a0b5854bc9b83e9c700d3ebacbe16",
+          "sha256": "96d5c1f8f4e5eb0a3374a1e2e6b9e67b403a0b5854bc9b83e9c700d3ebacbe16",
+          "lines": [
+            1,
+            7
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U13/03-review_apply_receipt_v1.json"
+        },
+        {
+          "id": "I17606",
+          "source": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/controller_bc_stage_20260911/H1_FINAL_INTERNAL_COLLECTION_R1/thm_9_6/pack/review_apply_receipt_v1.json",
+          "snapshot": "b/3a590a714eab28d53e1109f1671f97d5414dfc40f497d92e724944b6cf2702c3",
+          "sha256": "3a590a714eab28d53e1109f1671f97d5414dfc40f497d92e724944b6cf2702c3",
+          "lines": [
+            1,
+            7
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U13/04-review_apply_receipt_v1.json"
+        },
+        {
+          "id": "I17444",
+          "source": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/controller_bc_stage_20260911/H1_FINAL_INTERNAL_COLLECTION_R1/prob_9_6/pack/review_apply_receipt_v1.json",
+          "snapshot": "b/a6472d8bb1e9bb689f0282084b8afc524c9d5832e043f2cd7884828b12b2dfe0",
+          "sha256": "a6472d8bb1e9bb689f0282084b8afc524c9d5832e043f2cd7884828b12b2dfe0",
+          "lines": [
+            1,
+            7
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U13/05-review_apply_receipt_v1.json"
+        },
+        {
+          "id": "I17482",
+          "source": "D:/Grad_Study/Practimum/Formalization/review_history_retro_20260901/research_framework/full_workflow_eval_codesign_20260910/controller_bc_stage_20260911/H1_FINAL_INTERNAL_COLLECTION_R1/prob_9_8/pack/review_apply_receipt_v1.json",
+          "snapshot": "b/2da5e0a6363a6135b1e1f66873843bc5e05bff6e16ab513986163890fcea7873",
+          "sha256": "2da5e0a6363a6135b1e1f66873843bc5e05bff6e16ab513986163890fcea7873",
+          "lines": [
+            1,
+            7
+          ],
+          "note": "",
+          "package_file": "verification/supporting_records/H1/U13/06-review_apply_receipt_v1.json"
+        }
+      ]
+    }
+  ]
+}

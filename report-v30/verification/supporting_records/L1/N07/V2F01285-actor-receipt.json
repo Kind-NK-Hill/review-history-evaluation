@@ -1,0 +1,48 @@
+{
+  "schema": "pilot.actor-receipt.v1",
+  "run_id": "pilot-prob_13_9-C-r1",
+  "arm": "C",
+  "role": "reviewer",
+  "dispatch_id": "52a6f5bd-5949-4ebd-9412-4eace0205a4b",
+  "model": "gpt-5.6-sol",
+  "reasoning_effort": "medium",
+  "source_model_catalog_sha256": "a34c3ffc9de5ea1a38e2d728ff7ea90592e4e1f9f14feb3edbb03d563cf40169",
+  "container_only_model_catalog_sha256": "c3b3507fdb4513af59f778fa6dc1165f91737b5b15b5e7533a55b27bf673107c",
+  "source_session": null,
+  "parent_dispatch_id": "8124accb-668d-499a-800f-6dcf2d1aad02",
+  "help_config_sha256": null,
+  "effective_help_config_sha256": "58301744ca86ea48bfbf00bfa86516c2bda747949ed9841d189f9ba687ea2f6d",
+  "session_ids": [
+    "01a08dd5-dee9-7d23-b841-0eebf5d87426"
+  ],
+  "usage": [
+    {
+      "input_tokens": 174527,
+      "cached_input_tokens": 142720,
+      "output_tokens": 4437
+    }
+  ],
+  "process": {
+    "elapsed_seconds": 126.23399999999674,
+    "deadline_epoch": 1789090708.9217613,
+    "remaining_at_launch_seconds": 4710.297332286835,
+    "exit_code": 0,
+    "timed_out": false,
+    "error": null,
+    "cleanup_error": null,
+    "command": [
+      "C:\\Users\\kdsde\\anaconda3\\envs\\pt312\\python.exe",
+      "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\c-pilot-r1\\prob_13_9\\actors\\reviewer-002\\implementation\\actor_worker.py",
+      "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\c-pilot-r1\\prob_13_9\\actors\\reviewer-002\\worker-config.json"
+    ]
+  },
+  "deadline": {
+    "allowance_seconds": 5400.0,
+    "started_epoch": 1789085308.9217613,
+    "deadline_epoch": 1789090708.9217613,
+    "remaining_seconds": 4584.03268289566
+  },
+  "public_events_sha256": "0b92444c1a4aad7954a62ed921f9ca85c9852209029374f8c7ac1dc4f7e839e5",
+  "raw_public_events_sha256": "0b92444c1a4aad7954a62ed921f9ca85c9852209029374f8c7ac1dc4f7e839e5",
+  "usd": null
+}

@@ -1,0 +1,91 @@
+{
+  "repository": "Kind-NK-Hill/ProbabilityTheoryFormalization",
+  "ref": "d07f272850899b58612adf1c7dc202538503252f",
+  "ref_resolution": "GitHub branches/main read",
+  "commit_timestamp_utc": "2026-09-06T08:22:20Z",
+  "read_date": "2026-09-12",
+  "source_access": "Successful GitHub connector fetch_file reads at pinned ref.",
+  "retained_form": "Selected verbatim excerpts with editorial headings, not whole original file-byte snapshots.",
+  "purpose": "Revision 11 project overview; does not define or replace frozen experimental inputs.",
+  "files": [
+    {
+      "path": "docs/architecture.md",
+      "url": "https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/architecture.md",
+      "git_blob_sha_reported_by_connector": "0a4607aa9cf266bb5b93af44b7888cf83fbc11b0",
+      "report_references": [
+        34,
+        36
+      ],
+      "retained_excerpt": "architecture.excerpt.md",
+      "excerpt_sha256": "7529f36f16d65740f5f083cd30b3edefb848d88a317b25d0d9da0f11e1853df3",
+      "excerpt_bytes": 1883
+    },
+    {
+      "path": "docs/phase2/workflow.md",
+      "url": "https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/phase2/workflow.md",
+      "git_blob_sha_reported_by_connector": "bb2ded47a75d02de2d50fc6c7874e313f9dcd105",
+      "report_references": [
+        34
+      ],
+      "retained_excerpt": "workflow.excerpt.md",
+      "excerpt_sha256": "aa0dc2c57b10fe3e6dce3341168b32c515f7021754aa069624641f533dc12bcb",
+      "excerpt_bytes": 3312
+    },
+    {
+      "path": "docs/workspace_state.md",
+      "url": "https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/workspace_state.md",
+      "git_blob_sha_reported_by_connector": "76887cfe945e1a855c0c39c0633b45e4aa09c316",
+      "report_references": [
+        34
+      ],
+      "retained_excerpt": "workspace_state.excerpt.md",
+      "excerpt_sha256": "c4354ad64093575fd23fbb54b1266778ca5de1ab5d46b97eb3a782ef6a65d68f",
+      "excerpt_bytes": 2262
+    },
+    {
+      "path": "docs/interface_dependency_policy.md",
+      "url": "https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/interface_dependency_policy.md",
+      "git_blob_sha_reported_by_connector": "c367b66fe557bf7c7257f614bcfecfe994fc070f",
+      "report_references": [
+        35
+      ],
+      "retained_excerpt": "interface_policy.excerpt.md",
+      "excerpt_sha256": "719755c4f67f4daa8e0ef7594dcd5040faf285370755a3dba6432a8435a7ccb9",
+      "excerpt_bytes": 2826
+    },
+    {
+      "path": "docs/dependency_decision_trail.md",
+      "url": "https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/dependency_decision_trail.md",
+      "git_blob_sha_reported_by_connector": "f62e1b5a17c3868cf84b841a083a4f56ff402860",
+      "report_references": [
+        34,
+        35
+      ],
+      "retained_excerpt": "dependency_trail.excerpt.md",
+      "excerpt_sha256": "3e048c1900b1a8bf60a4de4f01cd39d88275c9c1a1c5b34e8a2678e989962fea",
+      "excerpt_bytes": 1500
+    },
+    {
+      "path": "docs/phase2/review_criteria.md",
+      "url": "https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/phase2/review_criteria.md",
+      "git_blob_sha_reported_by_connector": "f99733be85e578470d580c64df004b8b35cef563",
+      "report_references": [
+        35
+      ],
+      "retained_excerpt": "review_criteria.excerpt.md",
+      "excerpt_sha256": "1c7692b804e0608ca3a771de590e9dec706f758132affe56015f1d6a2c738295",
+      "excerpt_bytes": 1964
+    },
+    {
+      "path": "docs/workflow_demo.md",
+      "url": "https://github.com/Kind-NK-Hill/ProbabilityTheoryFormalization/blob/d07f272850899b58612adf1c7dc202538503252f/docs/workflow_demo.md",
+      "git_blob_sha_reported_by_connector": "875ab8b823defe74fa0fa163b8b84b699a6a2bcf",
+      "report_references": [
+        36
+      ],
+      "retained_excerpt": "workflow_demo.excerpt.md",
+      "excerpt_sha256": "f1d3abba84692ad7f6ed9b6972aab35655a43c0b16224c9b9b5dfcf6ee85c335",
+      "excerpt_bytes": 2778
+    }
+  ]
+}

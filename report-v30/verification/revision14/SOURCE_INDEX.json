@@ -1,0 +1,32 @@
+[
+  {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L3_prob_7_6_to_ex_10_3_2\\A\\same-reviewer-resumes\\general-v2\\semantic_review_result_v2.raw.json",
+    "copy": "verification\\revision14\\l3\\general-v2.json",
+    "sha256": "a54b661f74cd0266889d03e5ed99b48b95cecafc2b77accd8032b8e2023fb38a"
+  },
+  {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L3_prob_7_6_to_ex_10_3_2\\A\\author-call-02\\prompt.txt",
+    "copy": "verification\\revision14\\l3\\author-call-02.txt",
+    "sha256": "8bd02789af4c86e5ff69be62843d938aacb2343f53fb1c9295cce76ddaa1f95b"
+  },
+  {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L3_prob_7_6_to_ex_10_3_2\\A\\author-call-05\\prompt.txt",
+    "copy": "verification\\revision14\\l3\\author-call-05.txt",
+    "sha256": "dc3dedb44e957d80a4589954a06387d00abe713c34ae469ed5595b944c998268"
+  },
+  {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L3_prob_7_6_to_ex_10_3_2\\A\\help\\f55bb70e-101b-4bb2-9c24-6493c727b219\\response.md",
+    "copy": "verification\\revision14\\l3\\math-gate-response.md",
+    "sha256": "328af8fe44b5e643656a9459e4ef4620b91d2f1c551d8ec88b4c70b013c4c401"
+  },
+  {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\team_review_v031_trajectory_v3_20260911\\combined_revision_v13_20260913\\manuscript\\evidence\\project_docs\\workspace_state.excerpt.md",
+    "copy": "verification\\revision14\\l3\\workspace_state.excerpt.md",
+    "sha256": "c4354ad64093575fd23fbb54b1266778ca5de1ab5d46b97eb3a782ef6a65d68f"
+  },
+  {
+    "source": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\reading_sessions\\revision12_20260913\\l3_review_gates_016.md",
+    "copy": "verification\\revision14\\l3\\gate-audit.zh-CN.md",
+    "sha256": "13335524dfcc2537ed61b2f56cad8aac471a6bd1d03d4ef6ae618f5b23ab08cd"
+  }
+]

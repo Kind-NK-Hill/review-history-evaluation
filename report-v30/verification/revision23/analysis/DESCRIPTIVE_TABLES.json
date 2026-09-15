@@ -1,0 +1,78 @@
+{
+  "arms": {
+    "A": {
+      "n": 11,
+      "acceptance": {
+        "pass": 10,
+        "fail": 1
+      },
+      "original_elapsed_total_seconds": 27981.881701231003,
+      "original_elapsed_median_seconds": 1963.0257239341736,
+      "actor_dispatch_total": 63,
+      "actor_dispatch_median": 5,
+      "usage": {
+        "input_tokens": 143818952,
+        "cached_input_tokens": 136488448,
+        "output_tokens": 968369,
+        "reasoning_output_tokens": 259453,
+        "usage_complete": true,
+        "missing_usage_dispatches": []
+      },
+      "includes_recovered_endpoint": true
+    },
+    "B": {
+      "n": 11,
+      "acceptance": {
+        "pass": 10,
+        "fail": 1
+      },
+      "original_elapsed_total_seconds": 20984.98389530182,
+      "original_elapsed_median_seconds": 1212.535546541214,
+      "actor_dispatch_total": 48,
+      "actor_dispatch_median": 3,
+      "usage": {
+        "input_tokens": 97604774,
+        "cached_input_tokens": 93368448,
+        "output_tokens": 674847,
+        "reasoning_output_tokens": 183177,
+        "usage_complete": false,
+        "missing_usage_dispatches": [
+          "1ffa1376-87ec-405b-bef3-936b0a45d42e"
+        ]
+      },
+      "includes_recovered_endpoint": false
+    },
+    "C": {
+      "n": 11,
+      "acceptance": {
+        "pass": 10,
+        "fail": 1
+      },
+      "original_elapsed_total_seconds": 17956.07743549347,
+      "original_elapsed_median_seconds": 1312.9042859077454,
+      "actor_dispatch_total": 52,
+      "actor_dispatch_median": 4,
+      "usage": {
+        "input_tokens": 87452495,
+        "cached_input_tokens": 83553536,
+        "output_tokens": 603715,
+        "reasoning_output_tokens": 150635,
+        "usage_complete": true,
+        "missing_usage_dispatches": []
+      },
+      "includes_recovered_endpoint": false
+    }
+  },
+  "checks": {
+    "indexed_records": 83,
+    "phase_counts": {
+      "main_original": 33,
+      "l3_review": 12,
+      "l3_repair": 2,
+      "al3_engineering_recovery": 1,
+      "common_acceptance": 35
+    },
+    "actor_counts_reconcile": true,
+    "token_totals_reconcile": true
+  }
+}

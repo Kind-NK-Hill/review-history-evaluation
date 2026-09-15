@@ -1,0 +1,2937 @@
+{
+  "epoch": 1789133504.0899267,
+  "schema": "L2.four_original_candidate_consistency_result.r1",
+  "status": "executed; interpretation sensitivity retained",
+  "candidates": [
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "original_verdict": "pass",
+      "original_decision_kind": "dual_common_endpoint",
+      "original_decision": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\final\\decision.json",
+        "sha256": "090dea2e9da8c129a17891c49e50c5ad387077054b3a2b54291b9215f322b94d"
+      },
+      "new_G": "pass",
+      "new_S": "fail",
+      "comparison_label": "criterion_dispute",
+      "resolution": "unique_adjudication",
+      "selected_assessment_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ],
+      "initial_results": [
+        {
+          "slot": "reviewer-1",
+          "accepted": true,
+          "issues": [],
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+            "sha256": "ab50d74fa1f44b32adda0379364ab6579e803edfb16043342c9cac7cacd4d549"
+          }
+        },
+        {
+          "slot": "reviewer-2",
+          "accepted": false,
+          "issues": [
+            {
+              "kind": "evidence_quote_or_location",
+              "context": "S1",
+              "evidence": {
+                "path": "tool_fact/technical-validation.json",
+                "line_start": 1,
+                "line_end": 1,
+                "quote": "\"escape_scan_exit_code\":0,\"technical_status\":\"pass\""
+              }
+            }
+          ],
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+            "sha256": "9f7b60349965684698bb0b36f82b38482cd30261024340684777a87b6a79cfa1"
+          }
+        }
+      ],
+      "V3_behavior": "general_covariance",
+      "V3_code_evidence": [
+        {
+          "path": "library/Variance.lean",
+          "line_start": 287,
+          "line_end": 293,
+          "quote": "lemma variance_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :\n    Var[∑ i ∈ s, X i; μ] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; μ] := by\n  rw [← covariance_self, covariance_sum_left' (by simpa)]\n  · refine Finset.sum_congr rfl fun i hi ↦ ?_\n    rw [covariance_sum_right' (by simpa) (hX i hi)]\n  · exact memLp_finsetSum' _ (by simpa)\n  · exact (memLp_finsetSum' _ (by simpa)).aemeasurable"
+        }
+      ],
+      "dimensions": {
+        "mathematics": {
+          "status": "pass",
+          "reason": "两个公开结论均从原题前提得到。第一题使用对任意相关族成立的协方差展开，再由给定不相关定义消去非对角项；第二题实际证明样本均值的均值和方差公式，应用切比雪夫并夹逼尾概率到零。构建及公理审计也均通过。S下的缺口是证明路线责任，不是数学命题错误。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 107,
+              "line_end": 114,
+              "quote": "rw [ProbabilityTheory.variance_sum' hmem]\n  refine Finset.sum_congr rfl fun i hi => ?_\n  rw [Finset.sum_eq_single i]\n  · exact ProbabilityTheory.covariance_self (hmem i hi).aemeasurable\n  · intro j hj hji\n    have hij : i ≠ j := Ne.symm hji\n    exact (covariance_zero_iff_uncorrelated (hmem i hi) (hmem j hj)).2\n      (huncorrelated i hi j hj hij)"
+            },
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 163,
+              "line_end": 171,
+              "quote": "have hreal :\n        Tendsto (fun n => P.real (deviationEvent A (fun _ => μ) n ε))\n          atTop (nhds 0) := by\n      apply squeeze_zero' (Filter.Eventually.of_forall fun _ => measureReal_nonneg)\n        (Filter.Eventually.of_forall ?_)\n        ((tendsto_const_div_atTop_nhds_zero_nat (σ2 / ε ^ 2)).comp\n          (Filter.tendsto_add_atTop_nat 1))\n      intro n\n      have hcheb := thm_11_2 P (A n) (hAmeas n) (hAmem n) hε"
+            }
+          ]
+        },
+        "public_premises": {
+          "status": "pass",
+          "reason": "第一题只公开要求概率测度、有限二阶矩和两两不相关；第二题增加共同均值与共同方差，但未加强为独立或同分布，也未要求调用者提供方差可加性或最终尾概率界。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 98,
+              "line_end": 103,
+              "quote": "theorem thm_11_4 {Ω ι : Type*} [MeasurableSpace Ω] {μ : Measure Ω}\n    [IsProbabilityMeasure μ] (s : Finset ι) (X : ι → Ω → ℝ)\n    (hX : ∀ i ∈ s, FiniteAbsMoment μ (X i) 2)\n    (huncorrelated : ∀ i ∈ s, ∀ j ∈ s, i ≠ j → Uncorrelated μ (X i) (X j)) :\n    ProbabilityTheory.variance (∑ i ∈ s, X i) μ =\n      ∑ i ∈ s, ProbabilityTheory.variance (X i) μ := by"
+            },
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 103,
+              "line_end": 110,
+              "quote": "theorem thm_11_5 {Ω : Type*} [MeasurableSpace Ω] (P : Measure Ω)\n    [IsProbabilityMeasure P] (X : ℕ → Ω → ℝ) (μ σ2 : ℝ)\n    (hX : ∀ i, FiniteAbsMoment P (X i) 2)\n    (hmean : ∀ i, ∫ ω, X i ω ∂P = μ)\n    (hvar : ∀ i, ProbabilityTheory.variance (X i) P = σ2)\n    (huncorrelated : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ConvergesInProbability P\n      (fun n ω => (∑ i ∈ Finset.range (n + 1), X i ω) / (n + 1 : ℝ))"
+            }
+          ]
+        },
+        "route_G": {
+          "status": "pass",
+          "reason": "G允许一般方差—协方差展开。variance_sum' 不假定不相关性，候选仍自行从公开的 Uncorrelated 假设证明每个非对角协方差为零，并完整承担后续弱大数定律证明。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 107,
+              "line_end": 114,
+              "quote": "rw [ProbabilityTheory.variance_sum' hmem]\n  refine Finset.sum_congr rfl fun i hi => ?_\n  rw [Finset.sum_eq_single i]\n  · exact ProbabilityTheory.covariance_self (hmem i hi).aemeasurable\n  · intro j hj hji\n    have hij : i ≠ j := Ne.symm hji\n    exact (covariance_zero_iff_uncorrelated (hmem i hi) (hmem j hj)).2\n      (huncorrelated i hi j hj hij)"
+            }
+          ]
+        },
+        "route_S": {
+          "status": "fail",
+          "reason": "S要求候选或允许支持呈现中心化平方及期望线性的有限和展开。候选直接把该展开委托给一般库定理 variance_sum'，自身仅完成展开后的对角与非对角项处理，因此V2、V3的直接路线责任未闭合。该失败会使整组S合成失败，但不自动把已证明的公开端点、弱大数局部步骤或无逃逸审计判为失败。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 105,
+              "line_end": 110,
+              "quote": "have hmem : ∀ i ∈ s, MemLp (X i) 2 μ := fun i hi =>\n    (hX i hi).memLp (by norm_num)\n  rw [ProbabilityTheory.variance_sum' hmem]\n  refine Finset.sum_congr rfl fun i hi => ?_\n  rw [Finset.sum_eq_single i]\n  · exact ProbabilityTheory.covariance_self (hmem i hi).aemeasurable"
+            }
+          ]
+        },
+        "interface": {
+          "status": "pass",
+          "reason": "thm_11_4公开给出任意有限指标集的方差可加结论，thm_11_5公开返回既有的依概率收敛接口。第二题以range (n+1)实现非空前缀平均，属于从1开始样本的无损重编号并避免零分母。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 108,
+              "line_end": 113,
+              "quote": "(huncorrelated : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ConvergesInProbability P\n      (fun n ω => (∑ i ∈ Finset.range (n + 1), X i ω) / (n + 1 : ℝ))\n      (fun _ => μ) := by\n  let A : ℕ → Ω → ℝ :=\n    fun n ω => (∑ i ∈ Finset.range (n + 1), X i ω) / (n + 1 : ℝ)"
+            }
+          ]
+        },
+        "delivery": {
+          "status": "pass",
+          "reason": "两道任务均有完整候选源码，第二题真实导入并调用第一题；输入绑定确认候选文件未变，技术记录确认构建、逃逸扫描和公理审计全部通过。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 4,
+              "line_end": 6,
+              "quote": "import ProbabilityTheory.chapter_10.def_10_2\nimport ProbabilityTheory.chapter_11.thm_11_2\nimport ProbabilityTheory.chapter_11.thm_11_4"
+            },
+            {
+              "path": "tool_fact/technical-validation.json",
+              "line_start": 1,
+              "line_end": 1,
+              "quote": "\"axiom_audit_exit_code\":0,\"build_exit_code\":0"
+            }
+          ]
+        }
+      },
+      "summary": "候选数学正确、公共前提合规、接口及整组交付完整，也不存在目标循环或证明逃逸。G下，一般协方差双重和公式是合法公共基础，候选随后自行从不相关定义消去交叉项，并完成样本均值方差、切比雪夫界与趋零证明，因此整体通过。S下，有限和的中心化平方及期望线性展开没有在候选或允许支持中重建，而由variance_sum'承担，故V2、V3的直接路线责任失败并导致整体失败。裁决驳回把这一S路线缺口自动传播为V5、W2、W5或S1失败的初评意见：这些义务的公开结论、局部推导和无逃逸责任均已有独立代码证据；传播只体现在overall_S合成。",
+      "old_opinions": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+            "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+          },
+          "verdict": "pass",
+          "proof_route_assessment": {
+            "dependency_use": "候选使用 def_7_3 中的不相关定义及其零协方差等价定理、def_9_1 的有限矩接口、def_10_2 的依概率收敛定义、thm_11_2 的切比雪夫不等式，并在第二题调用同组 thm_11_4。相关支持结果的前提均由当前定理假设推出。",
+            "escape_assessment": "未发现 sorry、admit、新增 axiom、以目标结论换名作前提，或要求调用者提供最终尾概率界等证明逃逸。",
+            "new_support": "候选未新增支持文件、私有公理、结构字段或不透明中间接口。",
+            "route": "第一题走一般协方差展开、由不相关定义消去非对角项的路线；第二题走均值计算、方差缩放与可加、切比雪夫、显式界趋零的教材路线。",
+            "status": "pass"
+          },
+          "public_premise_check": {
+            "assessment": "这些均对应教材的概率空间、有限二阶矩、共同均值、共同方差和两两不相关条件。未要求独立、同分布或现成尾界，也未把中心化和方差界迁移为额外公开前提。",
+            "status": "pass",
+            "thm_11_4": [
+              "IsProbabilityMeasure μ",
+              "有限指标集 s",
+              "各 X i 在 s 上具有有限二阶绝对矩",
+              "各不同 i、j 在 s 上满足 Uncorrelated μ (X i) (X j)"
+            ],
+            "thm_11_5": [
+              "IsProbabilityMeasure P",
+              "每个 X i 具有有限二阶绝对矩",
+              "每个 X i 的期望为共同值 μ",
+              "每个 X i 的方差为共同值 σ2",
+              "不同下标之间两两不相关"
+            ]
+          },
+          "obligation_closure": {
+            "status": "pass",
+            "thm_11_4": {
+              "centering_and_cross_terms": "先用一般的有限和方差—协方差展开 variance_sum'，再逐行处理内层协方差和；对角项由 covariance_self 化为方差，非对角项由公开的不相关定义经 covariance_zero_iff_uncorrelated 化为零。",
+              "finite_second_moments": "由 FiniteAbsMoment 转为二阶 MemLp。",
+              "no_forbidden_sum_variance_premise": "调用的是包含全部对角项和交叉协方差项的一般展开式，而不是待证的“两两不相关时方差可加”结论；消去交叉项的责任确实在证明中完成。"
+            },
+            "thm_11_5": {
+              "chebyshev": "对平均直接应用 thm_11_2，并将严格偏差事件包含于切比雪夫使用的非严格事件。",
+              "convergence_interface": "同时证明平均序列和常值极限的可测性，完整构造 ConvergesInProbability。",
+              "limit": "得到尾概率的显式上界 (σ2/ε^2)/(n+1)，以夹逼和常数除以自然数趋零证明极限。",
+              "mean_of_average": "通过有限和积分线性及共同均值假设证明每个平均的期望等于 μ。",
+              "variance_bound": "调用本组 thm_11_4 得到和的方差之和，再用共同方差推出平均方差精确等于 σ2/(n+1)。"
+            }
+          },
+          "summary": "完整候选共同完成两项任务：第一题从一般协方差展开出发，依据不相关定义消去交叉项并得到有限和方差可加；第二题在不加强为独立或同分布的前提下，计算平均的均值与方差，应用切比雪夫并证明尾概率界趋零。公开前提忠实，教材义务闭合，未见证明逃逸；中性技术事实亦报告全部检查通过。"
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+            "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+          },
+          "verdict": "pass",
+          "proof_route_assessment": {
+            "dependency_assessment": "路线仅使用候选导入的数学库能力、列明的上游定义和定理，以及同组先证的 thm_11_4；未发现依赖未公开新增支持、目标专有不透明封装或循环调用。",
+            "route": [
+              "有限二阶绝对矩转为二次可积性。",
+              "将和的方差展开为协方差双重和。",
+              "使用不相关与零协方差的等价性消去非对角项，并识别对角项。",
+              "对样本平均计算共同均值和精确方差。",
+              "应用切比雪夫不等式控制偏差概率。",
+              "以常数除以 n+1 的极限和夹逼论证得到依概率收敛。"
+            ],
+            "status": "valid",
+            "textbook_equivalence": "协方差双重和路线是教材中心化展开并消去交叉项的数学等价表达，保留了相同证明责任。"
+          },
+          "public_premise_check": {
+            "extra_premises": "未增加独立性、同分布性、正方差、调用者提供的尾概率界或目标结论的改名版本。σ2 的非负性无需额外公开假设，因为它由共同方差等式所蕴含。",
+            "status": "satisfied",
+            "thm_11_4_premises": [
+              "概率空间",
+              "有限指标集",
+              "各项有限二阶绝对矩",
+              "集合内不同指标对应变量两两不相关"
+            ],
+            "thm_11_5_premises": [
+              "概率空间",
+              "实随机变量序列",
+              "逐项有限二阶绝对矩",
+              "共同均值 μ",
+              "共同方差 σ2",
+              "不同指标对应变量两两不相关"
+            ]
+          },
+          "obligation_closure": {
+            "status": "satisfied",
+            "thm_11_4": {
+              "centering_and_cross_terms": "通过通用的有限和方差—协方差展开得到双重协方差和；对角项由 covariance_self 化为各项方差，非对角项通过 covariance_zero_iff_uncorrelated 从公开的不相关定义推出为零。",
+              "finite_second_moments": "由 FiniteAbsMoment 的二阶条件得到各项属于二次可积空间。",
+              "noncircularity": "调用的是包含全部对角项和交叉项的通用协方差展开，而不是两两不相关情形下的目标可加性结论；证明仍实际消去了每个非对角交叉项。",
+              "result": "有限和方差可加义务闭合。"
+            },
+            "thm_11_5": {
+              "chebyshev": "对样本平均实际应用 thm_11_2，并将严格偏差事件包含于切比雪夫使用的非严格事件。",
+              "mean": "利用积分对有限和的线性及共同均值，证明每个样本平均的期望等于 μ。",
+              "result": "中心化二阶矩／方差控制、切比雪夫步骤及界趋零三项教材义务均闭合。",
+              "vanishing_bound": "得到尾概率实值不超过 (σ2/ε²)/(n+1)，再证明该上界趋于零，并转换回扩展非负实数值的概率收敛。",
+              "variance": "调用本组 thm_11_4，并结合共同方差及常数倍方差公式，得到平均的精确方差 σ2/(n+1)。"
+            }
+          },
+          "summary": "整束任务共同完成。方差可加定理保持有限二阶矩与两两不相关的原始强度，通过协方差展开实际处理对角项和交叉项；弱大数定律随后计算平均的共同均值与精确方差，应用切比雪夫并证明尾界趋零。未发现额外前提、循环依赖、结论迁移或证明逃逸。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "original_verdict": "pass",
+      "original_decision_kind": "dual_common_endpoint",
+      "original_decision": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\final\\decision.json",
+        "sha256": "5989594d77e7793ad480a39a970919c6fe9d7b03549d52249754ca40e88aa0ff"
+      },
+      "new_G": "pass",
+      "new_S": "pass",
+      "comparison_label": "pass",
+      "resolution": "independent_pair_agreement",
+      "selected_assessment_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ],
+      "initial_results": [
+        {
+          "slot": "reviewer-1",
+          "accepted": true,
+          "issues": [],
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+            "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+          }
+        },
+        {
+          "slot": "reviewer-2",
+          "accepted": true,
+          "issues": [],
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+            "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+          }
+        }
+      ],
+      "V3_behavior": "candidate_expansion",
+      "V3_code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 75,
+          "line_end": 87,
+          "quote": "have hsum_centered :\n      (fun ω => (∑ i, X i ω) - P[fun ω => ∑ i, X i ω]) =\n        (fun ω => ∑ i, Y i ω) := by\n    funext ω\n    rw [integral_finset_sum Finset.univ (fun i _ => (hX i).integrable (by norm_num))]\n    simp only [Y]\n    rw [← Finset.sum_sub_distrib]\n  have hsquare :\n      (fun ω => (∑ i, Y i ω) ^ 2) =\n        (fun ω => ∑ i, ∑ j, Y i ω * Y j ω) := by\n    funext ω\n    simp only [pow_two, Finset.sum_mul, Finset.mul_sum]\n    rw [Finset.sum_comm]"
+        },
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 112,
+          "line_end": 117,
+          "quote": "_ = ∫ ω, ∑ i, ∑ j, Y i ω * Y j ω ∂P := by rw [hsquare]\n    _ = ∑ i, ∑ j, ∫ ω, Y i ω * Y j ω ∂P := by\n      rw [integral_finset_sum Finset.univ]\n      · simp_rw [integral_finset_sum Finset.univ (fun j _ => hYprod _ j)]\n      · intro i hi\n        exact integrable_finset_sum Finset.univ (fun j _ => hYprod i j)"
+        }
+      ],
+      "dimensions": {
+        "mathematics": {
+          "status": "pass",
+          "reason": "两道结论均由原始前提推出。第一题显式证明中心化、平方双重和展开、积分线性及交叉项消失；第二题得到有限和均值与方差，应用切比雪夫得到 σ2/(n·ε²) 上界，再用夹逼证明偏差概率趋于零。中性技术事实同时记录构建、逃逸扫描和公理审计成功。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 106,
+              "line_end": 123,
+              "quote": "calc\n    (∫ ω, ((∑ i, X i ω) - P[fun ω => ∑ i, X i ω]) ^ 2 ∂P) =\n        ∫ ω, (∑ i, Y i ω) ^ 2 ∂P := by\n          apply integral_congr_ae\n          filter_upwards [] with ω\n          rw [← congrFun hsum_centered ω]\n    _ = ∫ ω, ∑ i, ∑ j, Y i ω * Y j ω ∂P := by rw [hsquare]\n    _ = ∑ i, ∑ j, ∫ ω, Y i ω * Y j ω ∂P := by\n      rw [integral_finset_sum Finset.univ]\n      · simp_rw [integral_finset_sum Finset.univ (fun j _ => hYprod _ j)]\n      · intro i hi\n        exact integrable_finset_sum Finset.univ (fun j _ => hYprod i j)\n    _ = ∑ i, ∫ ω, (Y i ω) ^ 2 ∂P := hdouble"
+            },
+            {
+              "path": "tool_fact/technical-validation.json",
+              "line_start": 1,
+              "line_end": 1,
+              "quote": "\"axiom_audit_exit_code\":0,\"build_exit_code\":0"
+            }
+          ]
+        },
+        "public_premises": {
+          "status": "pass",
+          "reason": "第一题公开前提是可测性、有限二阶矩和两两不相关，没有目标可加性前提。第二题只增加共同均值和共同方差，没有加强为独立或同分布，也没有要求调用者提供尾概率界。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 57,
+              "line_end": 66,
+              "quote": "theorem thm_11_4 {Ω ι : Type*} [MeasurableSpace Ω]\n    (P : Measure Ω) [IsProbabilityMeasure P] [Fintype ι]\n    (X : ι → Ω → ℝ) (hXm : ∀ i, Measurable (X i))\n    (hX : ∀ i, MemLp (X i) 2 P)\n    (huncorr : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :"
+            },
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 31,
+              "line_end": 42,
+              "quote": "theorem thm_11_5 {Ω : Type*} [MeasurableSpace Ω]\n    (P : Measure Ω) [IsProbabilityMeasure P]\n    (X : ℕ → Ω → ℝ) (μ σ2 : ℝ)\n    (hXm : ∀ i, Measurable (X i))\n    (hX : ∀ i, MemLp (X i) 2 P)\n    (hmean : ∀ i, P[X i] = μ)\n    (hvar : ∀ i,\n      _root_.variance P (X i) (FiniteAbsMoment.of_memLp (hXm i) (hX i)) = σ2)\n    (huncorr : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ConvergesInProbability P"
+            }
+          ]
+        },
+        "route_G": {
+          "status": "pass",
+          "reason": "G允许一般协方差基础，但候选采用更强的闭合路线：在候选文件内完成中心化平方展开和积分有限和展开，仅用 covariance_eq_sub 接入不相关定义并证明单个交叉积分为零。所有弱大数定律义务也在候选中闭合。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 75,
+              "line_end": 90,
+              "quote": "have hsum_centered :\n      (fun ω => (∑ i, X i ω) - P[fun ω => ∑ i, X i ω]) =\n        (fun ω => ∑ i, Y i ω) := by\n    funext ω\n    rw [integral_finset_sum Finset.univ (fun i _ => (hX i).integrable (by norm_num))]\n    simp only [Y]\n    rw [← Finset.sum_sub_distrib]\n  have hsquare :\n      (fun ω => (∑ i, Y i ω) ^ 2) =\n        (fun ω => ∑ i, ∑ j, Y i ω * Y j ω) := by\n    funext ω\n    simp only [pow_two, Finset.sum_mul, Finset.mul_sum]\n    rw [Finset.sum_comm]\n  have hcross : ∀ i j, i ≠ j → ∫ ω, Y i ω * Y j ω ∂P = 0 := by"
+            }
+          ]
+        },
+        "route_S": {
+          "status": "pass",
+          "reason": "S要求平方及期望展开位于候选或允许支持中。候选在 thm_11_4.lean 第75–118行亲自完成中心化、平方双重和、积分线性及对角化，没有把这项责任委托给 variance_sum' 或 variance_fun_sum'，故满足更严格解释。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 82,
+              "line_end": 87,
+              "quote": "have hsquare :\n      (fun ω => (∑ i, Y i ω) ^ 2) =\n        (fun ω => ∑ i, ∑ j, Y i ω * Y j ω) := by\n    funext ω\n    simp only [pow_two, Finset.sum_mul, Finset.mul_sum]\n    rw [Finset.sum_comm]"
+            },
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 112,
+              "line_end": 118,
+              "quote": "_ = ∫ ω, ∑ i, ∑ j, Y i ω * Y j ω ∂P := by rw [hsquare]\n    _ = ∑ i, ∑ j, ∫ ω, Y i ω * Y j ω ∂P := by\n      rw [integral_finset_sum Finset.univ]\n      · simp_rw [integral_finset_sum Finset.univ (fun j _ => hYprod _ j)]\n      · intro i hi\n        exact integrable_finset_sum Finset.univ (fun j _ => hYprod i j)\n    _ = ∑ i, ∫ ω, (Y i ω) ^ 2 ∂P := hdouble"
+            }
+          ]
+        },
+        "interface": {
+          "status": "pass",
+          "reason": "两项目标分别提供公开定理 thm_11_4 与 thm_11_5，并在文件末导出。第二题真实导入并调用第一题；定义中的 ConvergesInProbability 与上游公开接口一致。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 125,
+              "line_end": 127,
+              "quote": "end Theorem11_4\n\nexport Theorem11_4 (thm_11_4)"
+            },
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 1,
+              "line_end": 3,
+              "quote": "import ProbabilityTheory.chapter_10.def_10_2\nimport ProbabilityTheory.chapter_11.thm_11_2\nimport ProbabilityTheory.chapter_11.thm_11_4"
+            },
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 130,
+              "line_end": 132,
+              "quote": "end Theorem11_5\n\nexport Theorem11_5 (thm_11_5)"
+            }
+          ]
+        },
+        "delivery": {
+          "status": "pass",
+          "reason": "两个任务文件均存在、相互接入且绑定记录表明原候选文件未改变。中性技术验证记录同一源码状态构建成功、公理审计成功及逃逸扫描成功。",
+          "evidence": [
+            {
+              "path": "reevaluation/INPUT_BINDING.json",
+              "line_start": 10,
+              "line_end": 11,
+              "quote": "\"candidate/ProbabilityTheory/chapter_11/thm_11_4.lean\": \"0a0a2fb7a8016025bef9f3c4d948d61fd0704a1958de195fd0379953cd4dd2a3\",\n    \"candidate/ProbabilityTheory/chapter_11/thm_11_5.lean\": \"19d0d4224cfd2eb9e8658d88c126bcb1b2fad1fd3f3826221542d9e1339d9bbb\""
+            },
+            {
+              "path": "tool_fact/technical-validation.json",
+              "line_start": 1,
+              "line_end": 1,
+              "quote": "\"axiom_audit_exit_code\":0,\"build_exit_code\":0"
+            },
+            {
+              "path": "tool_fact/technical-validation.json",
+              "line_start": 1,
+              "line_end": 1,
+              "quote": "\"escape_scan_exit_code\":0"
+            }
+          ]
+        }
+      },
+      "summary": "完整候选在同一源码束中公开交付有限和方差可加定理与二阶弱大数定律。第一题没有调用已读取的两个一般库方差和公式，而是在候选代码内从中心化定义展开平方与期望，并由给定不相关定义消除交叉项；因此G和更严格的S均通过。第二题不加强为独立或同分布，实际导出和的均值、方差及切比雪夫尾界，处理 n≥1 的最终区间并证明上界趋零，最后闭合依概率收敛接口。两种解释对本候选总体结果没有敏感性：overall_G 与 overall_S 均为 pass。",
+      "old_opinions": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+            "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+          },
+          "verdict": "pass",
+          "proof_route_assessment": {
+            "dependency_assessment": "候选第二题合法依赖同组第一题及上游切比雪夫定理；第一题仅使用公开的矩、方差、协方差和不相关定义及 Mathlib 的有限和与积分结果。",
+            "escape_assessment": "未发现 sorry、admit、新增公理、不透明承载关键结论、循环调用目标结论或将关键中间责任隐藏为额外公共假设。",
+            "route": "第一题走中心化、平方展开及交叉项消失路线；第二题走方差可加、切比雪夫不等式和趋零上界路线，与教材证明等价且覆盖任务书指定责任。",
+            "status": "pass"
+          },
+          "public_premise_check": {
+            "assessment": "所有前提均直接对应教材条件或其标准形式化编码；调用者无需提供目标结论、和方差公式、尾概率界、独立性或同分布性。",
+            "status": "pass",
+            "thm_11_4_premises": [
+              "概率测度",
+              "有限指标类型",
+              "各变量可测",
+              "各变量属于 L²",
+              "不同指标变量两两不相关"
+            ],
+            "thm_11_5_premises": [
+              "概率测度",
+              "各变量可测",
+              "各变量属于 L²",
+              "共同均值 μ",
+              "共同方差 σ²",
+              "不同指标变量两两不相关"
+            ]
+          },
+          "obligation_closure": {
+            "status": "pass",
+            "variance_additivity": [
+              "证明显式定义中心化变量 Yᵢ=Xᵢ-E[Xᵢ]。",
+              "由不相关定义和 covariance_eq_sub 推出不同指标中心化乘积的积分为零。",
+              "显式展开有限和平方为双重和，证明各交叉项消失并仅保留对角项。",
+              "通过方差与中心二阶矩积分的等式，将对角积分还原为各 Xᵢ 的方差；没有调用预先存在的和方差公式。"
+            ],
+            "weak_law": [
+              "构造前 n 项和 Sₙ及平均 Aₙ，并证明其可测性和二阶可积性。",
+              "调用本组已证明的 thm_11_4 得到 Var(Sₙ)=nσ²。",
+              "证明偏差事件包含于以 Sₙ-E[Sₙ] 为中心的切比雪夫尾事件，并应用 thm_11_2。",
+              "实际得到 P(|Sₙ/n-μ|>ε)≤σ²/(nε²)。",
+              "证明右端趋于零，以夹逼得到实值概率趋零，再转换为 ENNReal 概率收敛，从而闭合 ConvergesInProbability 的定义。"
+            ]
+          },
+          "summary": "完整候选共同完成两项数学任务：有限和方差可加定理从不相关定义出发消去中心化交叉项，弱大数定律则导出正确的切比雪夫界并证明其趋零。公开前提忠实、依赖合法，未发现证明逃逸或未闭合义务。"
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+            "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+          },
+          "verdict": "pass",
+          "proof_route_assessment": {
+            "assessment": "路线落实了教材证明的全部关键数学责任；所用 Mathlib 协方差与积分恒等式只是对定义的展开和识别，不构成绕过待证结论。",
+            "route": [
+              "thm_11_4：有限和的可测性及二阶可积性",
+              "逐项中心化并证明和的中心化等于中心化项之和",
+              "展开平方为二重和",
+              "由不相关定义消去非对角交叉项",
+              "将对角二阶中心矩识别为方差",
+              "thm_11_5：对前 n 项建立均值和方差公式",
+              "应用切比雪夫不等式得到尾概率界",
+              "证明该界趋零并完成依概率收敛"
+            ],
+            "status": "pass",
+            "support_lemmas": [
+              "Theorem11_4.memLp_finset_sum",
+              "Theorem11_4.measurable_finset_sum",
+              "Theorem11_4.integral_centered_mul_eq_zero",
+              "Theorem11_4.local_variance_eq_integral",
+              "Theorem11_5.measurable_range_sum",
+              "Theorem11_5.memLp_range_sum"
+            ]
+          },
+          "public_premise_check": {
+            "common_parameters": "共同均值和共同方差分别由逐项等式 hmean 与 hvar 表达；σ² 属于实数且由方差等式隐含其非负性，无需额外假设。",
+            "escape_check": "候选源码未出现 sorry、admit、新增 axiom、私有公理或不透明结构字段承载目标结论。",
+            "extra_premises": "未发现把目标结论、最终尾概率界或关键中间责任迁移为调用者前提。",
+            "regularity": "显式可测性和 MemLp 2 正确表达实随机变量及有限二阶矩，并足以构造本地 FiniteAbsMoment 方差参数。",
+            "status": "pass",
+            "strengthening": "没有要求独立性、同分布或任何比两两不相关更强的概率条件。"
+          },
+          "obligation_closure": {
+            "cross_task_dependency": "第二题实际调用第一题计算有限部分和方差，并调用上游定理 thm_11_2 应用切比雪夫不等式，符合任务书允许的同组成果复用。",
+            "limit_to_zero": "证明上界随 n 趋于无穷而趋于零，再以非负性和夹逼证明偏差事件概率趋零，并转换回 ConvergesInProbability 所需的扩展非负实数值测度极限。",
+            "status": "pass",
+            "uncorrelatedness_use": "integral_centered_mul_eq_zero 通过 covariance_eq_sub 把 Uncorrelated 的期望乘积等式转成协方差为零，没有调用待证的和方差公式。",
+            "variance_additivity": "证明显式中心化每个变量，展开有限和平方，将二重和积分拆开，并由不相关定义推出所有非对角中心化乘积积分为零，最后识别对角项为各变量方差。",
+            "weak_law_bound": "证明得到 E[T]=(n:ℝ)μ 和 Var(T)=(n:ℝ)σ²，将平均值偏差事件包含于中心化和的切比雪夫事件，推出尾概率上界 σ²/(n ε²)。"
+          },
+          "summary": "整束任务共同完成：有限个两两不相关且具有有限二阶矩的实随机变量之和满足方差可加；共同均值、共同有限方差的两两不相关序列通过实际建立方差界、应用切比雪夫不等式并证明界趋零，得到样本平均依概率收敛。未发现结论迁移、条件强化、循环依赖或证明逃逸。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "original_verdict": "fail",
+      "original_decision_kind": "dual_common_endpoint",
+      "original_decision": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\final\\decision.json",
+        "sha256": "912b5ea429852ac6fd59a4f118d7116df959e3cc4c4a29f074f95c122c0ffdb0"
+      },
+      "new_G": "pass",
+      "new_S": "fail",
+      "comparison_label": "criterion_dispute",
+      "resolution": "unique_adjudication",
+      "selected_assessment_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ],
+      "initial_results": [
+        {
+          "slot": "reviewer-1",
+          "accepted": true,
+          "issues": [],
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+            "sha256": "34660f8a86791bab01c3349cc07859857878bcc05bc7c15bd436d4c6ffd7272c"
+          }
+        },
+        {
+          "slot": "reviewer-2",
+          "accepted": false,
+          "issues": [
+            {
+              "kind": "evidence_quote_or_location",
+              "context": "S1",
+              "evidence": {
+                "path": "tool_fact/technical-validation.json",
+                "line_start": 1,
+                "line_end": 1,
+                "quote": "\"escape_scan_exit_code\":0,\"technical_status\":\"pass\""
+              }
+            }
+          ],
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+            "sha256": "a844505ffe2721aa53433fa78ab68077bf7f5c105e3131bfad415c197789046c"
+          }
+        }
+      ],
+      "V3_behavior": "general_covariance",
+      "V3_code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 45,
+          "line_end": 48,
+          "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]\n  apply Finset.sum_congr rfl\n  intro i hi\n  rw [Finset.sum_eq_single i]"
+        },
+        {
+          "path": "library/Variance.lean",
+          "line_start": 287,
+          "line_end": 291,
+          "quote": "lemma variance_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :\n    Var[∑ i ∈ s, X i; μ] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; μ] := by\n  rw [← covariance_self, covariance_sum_left' (by simpa)]\n  · refine Finset.sum_congr rfl fun i hi ↦ ?_\n    rw [covariance_sum_right' (by simpa) (hX i hi)]"
+        }
+      ],
+      "dimensions": {
+        "mathematics": {
+          "status": "pass",
+          "reason": "两个公开结论在Lean中均由原前提正确导出。第一题使用一般协方差双重和、候选证明的非对角项消失和 covariance_self 得到方差可加性；第二题实际得到样本均值方差 σ²/n，应用切比雪夫界并证明上界趋零。构建和公理审计均通过。S下的失败是规定路线未闭合，不是数学命题错误。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 45,
+              "line_end": 52,
+              "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]\n  apply Finset.sum_congr rfl\n  intro i hi\n  rw [Finset.sum_eq_single i]\n  · exact ProbabilityTheory.covariance_self (hX i hi).aemeasurable\n  · intro j hj hji\n    exact hcov_off i hi j hj (Ne.symm hji)\n  · exact fun hnot => (hnot hi).elim"
+            },
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 124,
+              "line_end": 135,
+              "quote": "have hbound : Tendsto\n        (fun n : ℕ => ENNReal.ofReal (σ2 / ε ^ 2 * (1 / (n : ℝ))))\n        atTop (nhds 0) := by\n      simpa using ENNReal.tendsto_ofReal\n        (tendsto_one_div_atTop_nhds_zero_nat.const_mul (σ2 / ε ^ 2))\n    apply tendsto_of_tendsto_of_tendsto_of_le_of_le' tendsto_const_nhds hbound\n    · exact Eventually.of_forall fun n => bot_le\n    · filter_upwards [eventually_ge_atTop (1 : ℕ)] with n hn\n      have hnpos : 0 < n := Nat.zero_lt_of_lt hn\n      refine (sampleAverage_tail_bound P X μ σ2 ε hXm hX hunc hmean hvar hε hnpos).trans_eq ?_\n      congr 1\n      field_simp"
+            }
+          ]
+        },
+        "public_premises": {
+          "status": "pass",
+          "reason": "公开前提保持概率空间、随机变量可测性、有限二阶矩和两两不相关；弱大数定律只增加共同均值和共同有限方差。没有加强为独立或同分布，也没有要求调用者提供目标方差可加性或最终尾概率界。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 113,
+              "line_end": 119,
+              "quote": "(μ σ2 : ℝ) (hXm : ∀ i, Measurable (X i))\n    (hX : ∀ i, MemLp (X i) 2 P)\n    (hunc : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j))\n    (hmean : ∀ i, ∫ ω, X i ω ∂P = μ)\n    (hvar : ∀ i, _root_.variance P (X i)\n      (FiniteAbsMoment.of_memLp (hXm i) (hX i)) = σ2) :\n    ConvergesInProbability P (sampleAverage X) (fun _ => μ) := by"
+            }
+          ]
+        },
+        "route_G": {
+          "status": "pass",
+          "reason": "候选采用登记的第二类路线：调用对相关变量也成立的一般方差—协方差展开，再从给定不相关定义自行证明每个非对角项为零。它没有假定或委托两两不相关时的目标可加性；弱大数定律的方差、切比雪夫和极限步骤也均闭合。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 39,
+              "line_end": 45,
+              "quote": "have hcov_off : ∀ i ∈ s, ∀ j ∈ s, i ≠ j →\n      ProbabilityTheory.covariance (X i) (X j) P = 0 := by\n    intro i hi j hj hij\n    change (∫ ω, (X i ω - P[X i]) * (X j ω - P[X j]) ∂P) = 0\n    exact integral_centered_mul_eq_zero_of_uncorrelated\n      (hX i hi) (hX j hj) (hunc i hi j hj hij)\n  rw [ProbabilityTheory.variance_fun_sum' hX]"
+            }
+          ]
+        },
+        "route_S": {
+          "status": "fail",
+          "reason": "S要求中心化有限和的平方展开及期望线性展开出现在候选或允许支持中。候选第45行直接调用一般库定理 variance_fun_sum'，而该定理又通过 variance_sum' 和协方差有限和定理完成展开；候选只承担展开后的交叉项消去。因此直接失败义务是V3。该路线缺口传播到整体S结论，但不改写为数学错误、接口缺失或证明逃逸。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 45,
+              "line_end": 45,
+              "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]"
+            },
+            {
+              "path": "library/Variance.lean",
+              "line_start": 299,
+              "line_end": 302,
+              "quote": "lemma variance_fun_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :\n    Var[fun ω ↦ ∑ i ∈ s, X i ω; μ] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; μ] := by\n  convert! variance_sum' hX\n  simp"
+            }
+          ]
+        },
+        "interface": {
+          "status": "pass",
+          "reason": "公开端点 thm_11_4 和 thm_11_5 均存在。第一题覆盖任意 Finset，第二题直接返回上游 ConvergesInProbability；本地方差桥接、样本均值方差及尾界均有真实代码绑定。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 31,
+              "line_end": 37,
+              "quote": "theorem thm_11_4 {Ω ι : Type*} [MeasurableSpace Ω]\n    (P : Measure Ω) [IsProbabilityMeasure P] (s : Finset ι)\n    (X : ι → Ω → ℝ) (_hXm : ∀ i ∈ s, Measurable (X i))\n    (hX : ∀ i ∈ s, MemLp (X i) 2 P)\n    (hunc : ∀ i ∈ s, ∀ j ∈ s, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ProbabilityTheory.variance (fun ω => ∑ i ∈ s, X i ω) P =\n      ∑ i ∈ s, ProbabilityTheory.variance (X i) P := by"
+            },
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 111,
+              "line_end": 119,
+              "quote": "theorem thm_11_5 {Ω : Type*} [MeasurableSpace Ω]\n    (P : Measure Ω) [IsProbabilityMeasure P] (X : ℕ → Ω → ℝ)\n    (μ σ2 : ℝ) (hXm : ∀ i, Measurable (X i))\n    (hX : ∀ i, MemLp (X i) 2 P)\n    (hunc : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j))\n    (hmean : ∀ i, ∫ ω, X i ω ∂P = μ)\n    (hvar : ∀ i, _root_.variance P (X i)\n      (FiniteAbsMoment.of_memLp (hXm i) (hX i)) = σ2) :\n    ConvergesInProbability P (sampleAverage X) (fun _ => μ) := by"
+            }
+          ]
+        },
+        "delivery": {
+          "status": "pass",
+          "reason": "两道目标源码均完整交付，第二题实际导入并使用第一题及切比雪夫支持；输入绑定确认候选源码未改变，中立技术事实确认构建、逃逸扫描及公理审计通过。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 1,
+              "line_end": 4,
+              "quote": "import Mathlib\nimport ProbabilityTheory.chapter_10.def_10_2\nimport ProbabilityTheory.chapter_11.thm_11_2\nimport ProbabilityTheory.chapter_11.thm_11_4"
+            },
+            {
+              "path": "tool_fact/technical-validation.json",
+              "line_start": 1,
+              "line_end": 1,
+              "quote": "\"axiom_audit_exit_code\":0,\"build_exit_code\":0"
+            }
+          ]
+        }
+      },
+      "summary": "候选数学正确、公共前提合规、接口完整且两题在同一源码状态交付，无循环目标或证明逃逸。其有限和证明属于一般协方差路线：G允许该公共基础，因此所有合成维度通过；S要求候选或允许支持自行给出中心化平方和期望线性展开，候选第45行委托 variance_fun_sum'，故V3直接失败并使overall_S失败。V2、V4、V5及W2–W5各自的定义接入、交叉项消去、公开结论、方差界、切比雪夫、极限和接口均实际完成；不把V3的路线缺口重复标成数学错误、证明逃逸或这些独立义务的直接失败。",
+      "old_opinions": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+            "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+          },
+          "verdict": "fail",
+          "proof_route_assessment": {
+            "assessment": "分歧应依任务专属合同解决，而不能仅按所调用定理比目标更一般就认定合格。合同不仅要求消去非对角协方差，还明确禁止把和方差公式作为调用前提。variance_fun_sum' 已封装有限和的方差—协方差展开，承担了本题要求正文证明的中心化和平方展开责任，因此该路线不合格。后续弱大数定律路线数学上有效，但依赖这一未按合同建立的结果。",
+            "route": [
+              "integral_centered_mul_eq_zero_of_uncorrelated 借助 covariance_eq_sub，从 Uncorrelated 的乘积期望等式推出单个中心化乘积积分为零。",
+              "thm_11_4 调用 variance_fun_sum' 将有限和方差直接展开为协方差双重和，然后消去非对角项并用 covariance_self 识别对角项。",
+              "thm_11_5 调用 thm_11_4 和 variance_const_mul 计算样本平均方差，调用 thm_11_2 获得切比雪夫界，并证明显式上界趋于零。"
+            ],
+            "status": "fail"
+          },
+          "public_premise_check": {
+            "assessment": "未发现将目标结论、最终概率界或收敛结论改名迁入公开前提。hXm、hX、hunc、hmean 与 hvar 分别对应可测性、有限二阶矩、两两不相关、共同均值和共同方差。σ² 无需另设非负前提，因为共同方差等式已经保证其具有方差的非负性。thm_11_4 中可测性参数虽未被脚本直接使用，但不构成目标迁移或实质加强。",
+            "status": "pass"
+          },
+          "obligation_closure": {
+            "closed_obligations": [
+              "从不相关的乘积期望定义推出单个中心化乘积积分为零。",
+              "在弱大数定律中证明正整数 n 的样本平均期望为 μ。",
+              "在依赖 thm_11_4 的前提下得到样本平均方差 σ²/n。",
+              "实际应用切比雪夫不等式取得 σ²/(nε²) 型尾概率上界。",
+              "证明该上界趋于零并以夹逼完成依概率收敛。",
+              "没有使用独立性、同分布性或由调用者提供的最终尾界。"
+            ],
+            "status": "fail",
+            "unclosed_obligations": [
+              "定理 11.4 没有在候选正文中从方差定义展开有限和的中心化平方、利用积分线性组织对角项与交叉项；这些关键步骤由被合同禁止作为调用前提的 ProbabilityTheory.variance_fun_sum' 完成。"
+            ]
+          },
+          "summary": "候选的公开陈述忠实，技术验证通过，弱大数定律中的均值、方差、切比雪夫界及趋零步骤也实际完成；但定理 11.4 直接调用 ProbabilityTheory.variance_fun_sum'，以现成的有限和方差—协方差展开承担中心化平方展开和交叉项组织。任务合同明确要求不能把和方差公式作为调用前提，因此第一题的关键教材义务未在候选正文中闭合。整束任务必须共同满足合同，故裁决为 fail。"
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+            "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+          },
+          "verdict": "fail",
+          "proof_route_assessment": {
+            "assessment": "后半段弱大数定律路线完整且数学上有效，但第一题采用了任务合同明令排除的现成和方差展开公式。该问题属于证明路线违反，而非数学等价路线之间的偏好差异。由于第二题又依赖第一题成果，整束任务不能共同确认完成。",
+            "route": [
+              "integral_centered_mul_eq_zero_of_uncorrelated 使用 covariance_eq_sub，把不相关定义转化为零协方差。",
+              "thm_11_4 调用 variance_fun_sum' 获得和方差的协方差展开，再令非对角项为零、对角项化为各自方差。",
+              "thm_11_5 调用 thm_11_4 算出样本平均方差，调用 thm_11_2 得到切比雪夫界，并用极限定理完成依概率收敛。"
+            ],
+            "status": "fail"
+          },
+          "public_premise_check": {
+            "assessment": "未发现把目标结论、最终尾概率界或关键中间结论改名塞入公开前提。hXm、hX、hunc、hmean 和 hvar 均对应教材的可测性、有限二阶矩、两两不相关、共同均值及共同方差条件。σ2 无需另设非负前提，因为其等于各变量方差。thm_11_4 中可测性参数虽未直接使用，但不是目标迁移或不当加强。",
+            "status": "pass"
+          },
+          "obligation_closure": {
+            "closed_obligations": [
+              "从 Uncorrelated 的乘积期望定义推出中心化乘积积分为零。",
+              "在弱大数定律中证明样本平均的期望为 μ。",
+              "得到样本平均方差 σ²/n。",
+              "实际调用切比雪夫不等式得到尾概率上界。",
+              "证明相应上界随 n 趢于无穷而趋于零。",
+              "没有使用独立性或同分布假设。"
+            ],
+            "status": "fail",
+            "unclosed_obligations": [
+              "任务明确禁止把和方差公式作为调用前提，但 thm_11_4 的核心步骤直接调用 ProbabilityTheory.variance_fun_sum'，即把有限和的方差展开为协方差双重和。这个库定理承担了中心化平方展开、积分线性及对角/非对角项组织等本题要求落到正文证明中的关键责任。候选随后消去非对角协方差，并不能消除对该被禁止公式的依赖。"
+            ]
+          },
+          "summary": "候选的公开陈述忠实，弱大数定律的切比雪夫界与趋零论证也基本完整，且技术验证通过。然而，方差可加定理直接调用现成的有限和方差—协方差展开公式 ProbabilityTheory.variance_fun_sum'，正面违反任务书禁止把和方差公式作为调用前提的要求。该关键教材义务未闭合，故完整候选判定为 fail。"
+        },
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+            "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+          },
+          "verdict": "pass",
+          "proof_route_assessment": {
+            "assessment": "证明路线与教材义务相符。定理 11.4 使用的是一般协方差展开，而非预先封装的“不相关变量方差可加”结论；关键的中心化交叉项消失由不相关定义在正文中推出。定理 11.5 依次完成均值计算、方差计算、切比雪夫界和界趋零。",
+            "dependencies": [
+              "Mathlib 的 covariance_eq_sub、variance_fun_sum'、covariance_self 与 variance_const_mul 用于通用代数和矩性质。",
+              "指定上游的 Uncorrelated、教材方差、ConvergesInProbability、deviationEvent 与 thm_11_2 接口被一致使用。",
+              "候选新增辅助结果均有透明证明，没有以不透明支持承载关键结论。"
+            ],
+            "escape_assessment": "未发现 sorry、admit、新增公理、循环假设、把目标换名后作为前提、或借助独立性等更强假设的证明逃逸。",
+            "status": "pass"
+          },
+          "public_premise_check": {
+            "assessment": "公开前提未迁入目标结论或关键中间责任。定理 11.4 仅要求概率空间、有限指标集、可测性、二阶可积性和两两不相关；定理 11.5 仅增加共同均值与共同方差。辅助尾界也由这些条件自行推出，未要求调用者提交最终概率估计或收敛结论。",
+            "notes": [
+              "定理 11.4 的可测性参数在最终证明脚本中未直接使用，但它表达随机变量的公开语义，并非额外数学加强或逃逸前提。",
+              "σ² 未另行假设非负；共同方差等式本身保证其具有方差应有的非负性，证明亦不依赖调用者另给非负证明。"
+            ],
+            "status": "pass"
+          },
+          "obligation_closure": {
+            "status": "pass",
+            "theorem_11_4": [
+              "先由不相关定义 E[XY]=E[X]E[Y] 和 covariance_eq_sub 推出中心化乘积积分为零。",
+              "使用有限和方差展开为协方差双重和，并逐项消去所有非对角协方差。",
+              "对角项由 covariance_self 化为各项方差，因此闭合方差可加性。",
+              "未把所求的方差可加公式作为前提。"
+            ],
+            "theorem_11_5": [
+              "由共同均值及积分线性证明正整数 n 的样本均值期望等于 μ。",
+              "调用同组定理 11.4 得到和的方差，并结合常数倍方差公式证明样本均值方差恰为 σ²/n。",
+              "对严格偏差事件建立到切比雪夫非严格尾事件的集合包含关系，实际应用定理 11.2。",
+              "得到显式尾概率界 σ²/(nε²)，调用者无需提供最终尾概率界。",
+              "证明该上界随 n 趋于无穷而趋于零，再以夹逼完成依概率收敛。"
+            ]
+          },
+          "summary": "整束任务共同完成。定理 11.4 在有限二阶矩与两两不相关条件下，从不相关定义消去中心化交叉项并证明有限和方差可加；定理 11.5 在不增加独立或同分布假设的情况下，得到样本均值方差和切比雪夫尾界，证明该界趋零并闭合依概率收敛。未发现前提迁移或证明逃逸。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "original_verdict": "fail",
+      "original_decision_kind": "provisional_single_review",
+      "original_decision": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+        "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+      },
+      "new_G": "pass",
+      "new_S": "fail",
+      "comparison_label": "criterion_dispute",
+      "resolution": "independent_pair_agreement",
+      "selected_assessment_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ],
+      "initial_results": [
+        {
+          "slot": "reviewer-1",
+          "accepted": true,
+          "issues": [],
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+            "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+          }
+        },
+        {
+          "slot": "reviewer-2",
+          "accepted": true,
+          "issues": [],
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+            "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+          }
+        }
+      ],
+      "V3_behavior": "general_covariance",
+      "V3_code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 15,
+          "line_end": 18,
+          "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]\n  apply Finset.sum_congr rfl\n  intro i hi\n  rw [Finset.sum_eq_single i]"
+        },
+        {
+          "path": "library/Variance.lean",
+          "line_start": 299,
+          "line_end": 302,
+          "quote": "lemma variance_fun_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :\n    Var[fun ω ↦ ∑ i ∈ s, X i ω; μ] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; μ] := by\n  convert! variance_sum' hX\n  simp"
+        }
+      ],
+      "dimensions": {
+        "mathematics": {
+          "status": "pass",
+          "reason": "两项公开结论均由原始数学前提推出。有限和证明把一般双重协方差展开化为对角方差和；弱大数定律证明得到样本均值方差 σ2/n，应用切比雪夫并令上界趋零。绑定的技术验证也记录构建、逃逸扫描和公理审计均成功。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 15,
+              "line_end": 22,
+              "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]\n  apply Finset.sum_congr rfl\n  intro i hi\n  rw [Finset.sum_eq_single i]\n  · exact ProbabilityTheory.covariance_self (hX i hi).aemeasurable\n  · intro j hj hji\n    apply (covariance_zero_iff_uncorrelated (hX i hi) (hX j hj)).2\n    exact hunc i hi j hj hji.symm"
+            },
+            {
+              "path": "tool_fact/technical-validation.json",
+              "line_start": 3,
+              "line_end": 6,
+              "quote": "\"build_exit_code\": 0,\n  \"escape_scan_exit_code\": 0,\n  \"axiom_audit_exit_code\": 0,\n  \"technical_status\": \"pass\""
+            }
+          ]
+        },
+        "public_premises": {
+          "status": "pass",
+          "reason": "方差定理只公开要求概率测度、有限二阶矩和两两不相关；弱大数定律只增加随机变量可测、共同均值和共同方差，没有要求独立、同分布或最终尾概率界。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 9,
+              "line_end": 14,
+              "quote": "theorem thm_11_4 {Ω ι : Type*} [MeasurableSpace Ω] (P : Measure Ω)\n    [IsProbabilityMeasure P] (X : ι → Ω → ℝ) (s : Finset ι)\n    (hX : ∀ i ∈ s, MemLp (X i) 2 P)\n    (hunc : ∀ i ∈ s, ∀ j ∈ s, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ProbabilityTheory.variance (fun ω => ∑ i ∈ s, X i ω) P =\n      ∑ i ∈ s, ProbabilityTheory.variance (X i) P := by"
+            },
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 20,
+              "line_end": 28,
+              "quote": "theorem thm_11_5 {Ω : Type*} [MeasurableSpace Ω] (P : Measure Ω)\n    [IsProbabilityMeasure P] (X : ℕ → Ω → ℝ) (μ σ2 : ℝ)\n    (hXm : ∀ i, Measurable (X i)) (hX : ∀ i, MemLp (X i) 2 P)\n    (hmean : ∀ i, ∫ ω, X i ω ∂P = μ)\n    (hvar : ∀ i, ProbabilityTheory.variance (X i) P = σ2)\n    (hunc : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ConvergesInProbability P\n      (fun n ω => (∑ i ∈ Finset.range n, X i ω) / (n : ℝ))\n      (fun _ => μ) := by"
+            }
+          ]
+        },
+        "route_G": {
+          "status": "pass",
+          "reason": "G解释允许先使用对相关变量也成立的一般方差/协方差展开，再由候选从给定不相关定义证明交叉项为零。候选正是这一路线，且没有调用目标方差可加定理作为前提。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 15,
+              "line_end": 22,
+              "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]\n  apply Finset.sum_congr rfl\n  intro i hi\n  rw [Finset.sum_eq_single i]\n  · exact ProbabilityTheory.covariance_self (hX i hi).aemeasurable\n  · intro j hj hji\n    apply (covariance_zero_iff_uncorrelated (hX i hi) (hX j hj)).2\n    exact hunc i hi j hj hji.symm"
+            }
+          ]
+        },
+        "route_S": {
+          "status": "fail",
+          "reason": "S解释要求中心化平方展开和期望线性运算出现在候选或允许支持中。候选第15行直接委托 library/Variance.lean 的 variance_fun_sum'，而该声明又仅转换到 variance_sum'；候选及其本地支持没有重新完成所要求的中心化平方展开。因此V2、V3的S路线不闭合，尽管结论数学正确。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+              "line_start": 15,
+              "line_end": 15,
+              "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]"
+            },
+            {
+              "path": "library/Variance.lean",
+              "line_start": 299,
+              "line_end": 302,
+              "quote": "lemma variance_fun_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :\n    Var[fun ω ↦ ∑ i ∈ s, X i ω; μ] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; μ] := by\n  convert! variance_sum' hX\n  simp"
+            }
+          ]
+        },
+        "interface": {
+          "status": "pass",
+          "reason": "两个要求的公开端点 thm_11_4、thm_11_5 均存在；第二题还提供 textbookVariance_eq_variance，将教材本地方差接口接到 Mathlib 方差。结论直接使用既有 ConvergesInProbability 接口。",
+          "evidence": [
+            {
+              "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+              "line_start": 10,
+              "line_end": 16,
+              "quote": "theorem textbookVariance_eq_variance {Ω : Type*} [MeasurableSpace Ω]\n    (P : Measure Ω) [IsProbabilityMeasure P] (Y : Ω → ℝ)\n    (hYm : Measurable Y) (hY : MemLp Y 2 P) :\n    _root_.variance P Y (FiniteAbsMoment.of_memLp hYm hY) =\n      ProbabilityTheory.variance Y P := by\n  rw [_root_.variance, rthCentralMoment]\n  exact ProbabilityTheory.centralMoment_two_eq_variance hY.aemeasurable"
+            }
+          ]
+        },
+        "delivery": {
+          "status": "pass",
+          "reason": "两道目标均在候选源码中交付并处于同一验证范围；绑定技术事实列出两个目标文件，并记录统一构建成功。",
+          "evidence": [
+            {
+              "path": "tool_fact/technical-validation.json",
+              "line_start": 3,
+              "line_end": 6,
+              "quote": "\"build_exit_code\": 0,\n  \"escape_scan_exit_code\": 0,\n  \"axiom_audit_exit_code\": 0,\n  \"technical_status\": \"pass\""
+            },
+            {
+              "path": "tool_fact/technical-validation.json",
+              "line_start": 13,
+              "line_end": 16,
+              "quote": "\"target_files\": [\n    \"ProbabilityTheory/chapter_11/thm_11_4.lean\",\n    \"ProbabilityTheory/chapter_11/thm_11_5.lean\"\n  ]"
+            }
+          ]
+        }
+      },
+      "summary": "候选的两项数学定理、公开前提、接口和整组交付均完整，弱大数定律实际导出了样本均值方差、应用切比雪夫并证明上界趋零。关键敏感点仅在有限和方差证明路线：它调用Mathlib中适用于一般相关变量的 variance_fun_sum'，再由候选利用不相关定义消去交叉项。G把这一一般协方差基础视为合法，因此整体通过；S要求中心化平方和期望线性展开必须出现在候选或允许支持中，因此V2、V3失败并导致整体失败。这是登记规则明确保留的解释差异，不能用任一解释覆盖另一解释。",
+      "old_opinions": [
+        {
+          "source": {
+            "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+            "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+          },
+          "verdict": "fail",
+          "proof_route_assessment": {
+            "status": "fail",
+            "assessment": "弱大数定律路线符合教材：方差缩放、有限和方差、切比雪夫界及极限均有实际证明。失败点仅在首题直接复用通用有限和方差展开公式，而非在本题正文中从中心化定义展开有限和并处理交叉项；共同规则允许数学等价路线，但任务书对此调用方式有明确禁止。"
+          },
+          "public_premise_check": {
+            "status": "pass",
+            "assessment": "未发现把目标结论、最终尾概率界或关键中间结论迁移为调用者额外前提。thm_11_5没有要求独立性、同分布性或由调用者提供收敛界。MemLp二阶条件和显式可测性符合有限二阶矩随机变量的形式化需要，hvar也保证σ²实际为非负方差。"
+          },
+          "obligation_closure": {
+            "thm_11_4": {
+              "status": "fail",
+              "assessment": "虽然对角协方差被化为方差，非对角项也由不相关性化为零，但证明第一步直接调用Mathlib中的variance_fun_sum'，该引理已经给出有限和方差等于双重协方差和，封装了中心化有限和展开及全部交叉项产生过程。任务书明确要求从不相关定义处理中心化与交叉项，并禁止把和方差公式作为调用前提，因此核心证明义务未在目标证明中闭合。"
+            },
+            "thm_11_5": {
+              "status": "pass_with_failed_dependency",
+              "assessment": "证明实际计算平均值的期望和方差，调用切比雪夫不等式得到尾概率上界σ²/(nε²)，并证明该上界趋于零；n=0情形也被单独处理。该路线本身覆盖弱大数定律的指定义务，但其方差计算依赖未满足路线约束的thm_11_4。"
+            }
+          },
+          "summary": "本次仅为provisional single review。两项目标的公开数学陈述基本忠实，thm_11_5也实际完成方差界、切比雪夫应用和界趋零；但thm_11_4直接调用已经封装有限和方差展开的variance_fun_sum'，违反任务书禁止把和方差公式作为调用前提的明确证明路线要求，因此总体判定为fail。"
+        }
+      ]
+    }
+  ],
+  "obligation_matrix": [
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "V1",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 99,
+          "line_end": 103,
+          "quote": "[IsProbabilityMeasure μ] (s : Finset ι) (X : ι → Ω → ℝ)\n    (hX : ∀ i ∈ s, FiniteAbsMoment μ (X i) 2)\n    (huncorrelated : ∀ i ∈ s, ∀ j ∈ s, i ≠ j → Uncorrelated μ (X i) (X j)) :\n    ProbabilityTheory.variance (∑ i ∈ s, X i) μ =\n      ∑ i ∈ s, ProbabilityTheory.variance (X i) μ := by"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "公开前提保持有限二阶矩和两两不相关，没有把目标方差可加性、零协方差或其他目标专属结论包装成新前提。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "V2",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "upstream/ProbabilityTheory/chapter_07/def_7_3.lean",
+          "line_start": 40,
+          "line_end": 45,
+          "quote": "theorem covariance_zero_iff_uncorrelated {Ω : Type*} [MeasurableSpace Ω] {μ : Measure Ω}\n    [IsProbabilityMeasure μ] {X Y : Ω → ℝ} (hX : MemLp X 2 μ) (hY : MemLp Y 2 μ) :\n    Covariance μ X Y = 0 ↔ Uncorrelated μ X Y := by\n  rw [Covariance, ProbabilityTheory.covariance_eq_sub hX hY, Uncorrelated]\n  rw [sub_eq_zero]\n  simp [Pi.mul_apply]"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "fail",
+      "new_reason": "候选通过variance_sum'和covariance_self接入方差—协方差形式，并由允许上游定理把教材Uncorrelated定义接到零协方差。G允许这种一般定义桥接；S所要求的中心化平方与期望展开没有在候选或允许支持中具体重建，因此直接路线责任失败。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "V3",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "library/Variance.lean",
+          "line_start": 287,
+          "line_end": 293,
+          "quote": "lemma variance_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :\n    Var[∑ i ∈ s, X i; μ] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; μ] := by\n  rw [← covariance_self, covariance_sum_left' (by simpa)]\n  · refine Finset.sum_congr rfl fun i hi ↦ ?_\n    rw [covariance_sum_right' (by simpa) (hX i hi)]\n  · exact memLp_finsetSum' _ (by simpa)\n  · exact (memLp_finsetSum' _ (by simpa)).aemeasurable"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "fail",
+      "new_reason": "有限和展开实际绑定到对相关变量也成立的variance_sum'，不是目标循环。G允许该一般基础；S要求候选内完成中心化平方及期望线性展开，故此直接路线义务失败。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "V4",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 111,
+          "line_end": 114,
+          "quote": "· intro j hj hji\n    have hij : i ≠ j := Ne.symm hji\n    exact (covariance_zero_iff_uncorrelated (hmem i hi) (hmem j hj)).2\n      (huncorrelated i hi j hj hij)"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选没有直接假定交叉项为零，而是对每个非对角指标从公开的两两不相关假设推出协方差为零；该局部责任在两种解释下均完成。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "V5",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 98,
+          "line_end": 103,
+          "quote": "theorem thm_11_4 {Ω ι : Type*} [MeasurableSpace Ω] {μ : Measure Ω}\n    [IsProbabilityMeasure μ] (s : Finset ι) (X : ι → Ω → ℝ)\n    (hX : ∀ i ∈ s, FiniteAbsMoment μ (X i) 2)\n    (huncorrelated : ∀ i ∈ s, ∀ j ∈ s, i ≠ j → Uncorrelated μ (X i) (X j)) :\n    ProbabilityTheory.variance (∑ i ∈ s, X i) μ =\n      ∑ i ∈ s, ProbabilityTheory.variance (X i) μ := by"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "完整公开有限和方差可加端点确实存在并通过构建。S下失败的是V2、V3所登记的展开路线责任；不把该上游路线缺口重复归类为公开结论缺失或数学失败。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "W1",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 104,
+          "line_end": 108,
+          "quote": "[IsProbabilityMeasure P] (X : ℕ → Ω → ℝ) (μ σ2 : ℝ)\n    (hX : ∀ i, FiniteAbsMoment P (X i) 2)\n    (hmean : ∀ i, ∫ ω, X i ω ∂P = μ)\n    (hvar : ∀ i, ProbabilityTheory.variance (X i) P = σ2)\n    (huncorrelated : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "弱大数定律保留有限二阶矩、共同均值、共同方差与两两不相关，没有要求独立、同分布或由调用者提供最终尾界。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "W2",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 135,
+          "line_end": 159,
+          "quote": "have hAvar : ∀ n, ProbabilityTheory.variance (A n) P = σ2 / (n + 1 : ℝ) := by\n    intro n\n    have hsum :=\n      thm_11_4 (μ := P) (Finset.range (n + 1)) X\n        (fun i _ => hX i) (fun i _ j _ hij => huncorrelated i j hij)\n    calc\n      ProbabilityTheory.variance (A n) P =\n          ProbabilityTheory.variance\n            (fun ω => (n + 1 : ℝ)⁻¹ * (∑ i ∈ Finset.range (n + 1), X i) ω) P := by\n              congr 1\n              funext ω\n              simp [A, div_eq_inv_mul]\n      _ = ((n + 1 : ℝ)⁻¹) ^ 2 *\n          ProbabilityTheory.variance (∑ i ∈ Finset.range (n + 1), X i) P := by\n            rw [ProbabilityTheory.variance_const_mul]\n      _ = ((n + 1 : ℝ)⁻¹) ^ 2 *\n          ∑ i ∈ Finset.range (n + 1), ProbabilityTheory.variance (X i) P := by\n            rw [hsum]\n      _ = σ2 / (n + 1 : ℝ) := by\n            simp_rw [hvar]\n            simp only [Finset.sum_const, Finset.card_range, nsmul_eq_mul]\n            have hn : (n + 1 : ℝ) ≠ 0 := by positivity\n            field_simp\n            push_cast\n            ring"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选实际导出样本均值方差σ²/(n+1)，包括常数倍方差、有限和方差和共同方差求和。该局部义务已有真实代码证明；S对thm_11_4内部展开位置的异议登记在V2、V3，并通过总体合成传播，不重复判为W2数学或直接义务失败。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "W3",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 171,
+          "line_end": 184,
+          "quote": "have hcheb := thm_11_2 P (A n) (hAmeas n) (hAmem n) hε\n      have hsubset :\n          deviationEvent A (fun _ => μ) n ε ⊆\n            {ω | ε ≤ |A n ω - P[A n]|} := by\n        intro ω hω\n        simp only [deviationEvent, Set.mem_setOf_eq, Pi.one_apply] at hω ⊢\n        rw [hAmean n]\n        exact hω.le\n      calc\n        P.real (deviationEvent A (fun _ => μ) n ε)\n            ≤ P.real {ω | ε ≤ |A n ω - P[A n]|} :=\n              measureReal_mono hsubset\n        _ ≤ _root_.variance P (A n)\n              (FiniteAbsMoment.of_memLp (hAmeas n) (hAmem n)) / ε ^ 2 := hcheb"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选内部实际调用切比雪夫，并显式证明严格偏差事件包含于以样本均值期望为中心的非严格事件；没有将最终尾概率界转嫁给调用者。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "W4",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 163,
+          "line_end": 170,
+          "quote": "have hreal :\n        Tendsto (fun n => P.real (deviationEvent A (fun _ => μ) n ε))\n          atTop (nhds 0) := by\n      apply squeeze_zero' (Filter.Eventually.of_forall fun _ => measureReal_nonneg)\n        (Filter.Eventually.of_forall ?_)\n        ((tendsto_const_div_atTop_nhds_zero_nat (σ2 / ε ^ 2)).comp\n          (Filter.tendsto_add_atTop_nat 1))\n      intro n"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选使用n+1避免零分母，将常数除以自然数趋零与n↦n+1趋于无穷复合，并由概率非负性及所得上界夹逼；索引和边界已处理。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "W5",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 109,
+          "line_end": 118,
+          "quote": "ConvergesInProbability P\n      (fun n ω => (∑ i ∈ Finset.range (n + 1), X i ω) / (n + 1 : ℝ))\n      (fun _ => μ) := by\n  let A : ℕ → Ω → ℝ :=\n    fun n ω => (∑ i ∈ Finset.range (n + 1), X i ω) / (n + 1 : ℝ)\n  have hmem : ∀ i, MemLp (X i) 2 P := fun i => (hX i).memLp (by norm_num)\n  have hAmeas : ∀ n, Measurable (A n) := by\n    intro n\n    exact (Finset.measurable_sum (Finset.range (n + 1))\n      (fun i _ => (hX i).measurable)).div_const _"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "公开端点直接返回ConvergesInProbability，并提供样本均值可测性、常值极限可测性和全部正ε下的概率极限。S下整组仍因V2、V3失败而合成失败，但该弱大数端点本身完整交付。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-67c83c8b4bf7",
+      "arm": "A",
+      "version_subset": "A_original_development_r1",
+      "obligation_id": "S1",
+      "mathematical_behavior": "not_applicable",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "tool_fact/technical-validation.json",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "\"axiom_audit_exit_code\":0,\"build_exit_code\":0"
+        },
+        {
+          "path": "library/Variance.lean",
+          "line_start": 287,
+          "line_end": 288,
+          "quote": "lemma variance_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :\n    Var[∑ i ∈ s, X i; μ] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; μ] := by"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json",
+          "sha256": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json",
+          "sha256": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选只有两个目标声明，未新增支持文件、公理、sorry、admit或目标专属不透明前提；构建、逃逸扫描和公理审计均通过。variance_sum'是对相关族成立的一般恒等式，不是改名后的目标。S下对展开位置的否定属于路线责任失败，不构成循环目标或证明逃逸，故不传播为S1失败。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "V1",
+      "mathematical_behavior": "candidate_expansion",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 57,
+          "line_end": 66,
+          "quote": "theorem thm_11_4 {Ω ι : Type*} [MeasurableSpace Ω]\n    (P : Measure Ω) [IsProbabilityMeasure P] [Fintype ι]\n    (X : ι → Ω → ℝ) (hXm : ∀ i, Measurable (X i))\n    (hX : ∀ i, MemLp (X i) 2 P)\n    (huncorr : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "公开定理仅要求概率空间、有限索引、各变量可测且属于二阶可积空间，以及给定定义下的两两不相关；没有目标方差可加性或等价换名的附加前提。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "V2",
+      "mathematical_behavior": "candidate_expansion",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 36,
+          "line_end": 53,
+          "quote": "lemma integral_centered_mul_eq_zero {Ω : Type*} [MeasurableSpace Ω]\n    {P : Measure Ω} [IsProbabilityMeasure P] {X Y : Ω → ℝ}\n    (hX : MemLp X 2 P) (hY : MemLp Y 2 P)\n    (hXY : Uncorrelated P X Y) :\n    ∫ ω, (X ω - P[X]) * (Y ω - P[Y]) ∂P = 0 := by\n  have hcov : ProbabilityTheory.covariance X Y P = 0 := by\n    rw [ProbabilityTheory.covariance_eq_sub hX hY]\n    exact sub_eq_zero.mpr hXY\n  exact hcov"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选将本地 variance 展开为中心化平方积分，并用 covariance_eq_sub 把教材不相关等式具体转成零协方差，再得到中心化乘积积分为零。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "V3",
+      "mathematical_behavior": "candidate_expansion",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 75,
+          "line_end": 87,
+          "quote": "have hsum_centered :\n      (fun ω => (∑ i, X i ω) - P[fun ω => ∑ i, X i ω]) =\n        (fun ω => ∑ i, Y i ω) := by\n    funext ω\n    rw [integral_finset_sum Finset.univ (fun i _ => (hX i).integrable (by norm_num))]\n    simp only [Y]\n    rw [← Finset.sum_sub_distrib]\n  have hsquare :\n      (fun ω => (∑ i, Y i ω) ^ 2) =\n        (fun ω => ∑ i, ∑ j, Y i ω * Y j ω) := by\n    funext ω\n    simp only [pow_two, Finset.sum_mul, Finset.mul_sum]\n    rw [Finset.sum_comm]"
+        },
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 112,
+          "line_end": 117,
+          "quote": "_ = ∫ ω, ∑ i, ∑ j, Y i ω * Y j ω ∂P := by rw [hsquare]\n    _ = ∑ i, ∑ j, ∫ ω, Y i ω * Y j ω ∂P := by\n      rw [integral_finset_sum Finset.univ]\n      · simp_rw [integral_finset_sum Finset.univ (fun j _ => hYprod _ j)]\n      · intro i hi\n        exact integrable_finset_sum Finset.univ (fun j _ => hYprod i j)"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "有限和的中心化与平方展开由候选自身证明，随后候选逐层使用有限和积分线性；没有调用库中的 variance_sum' 或 variance_fun_sum'。因此G允许，S也闭合。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "V4",
+      "mathematical_behavior": "candidate_expansion",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 88,
+          "line_end": 102,
+          "quote": "have hcross : ∀ i j, i ≠ j → ∫ ω, Y i ω * Y j ω ∂P = 0 := by\n    intro i j hij\n    exact integral_centered_mul_eq_zero (hX i) (hX j) (huncorr i j hij)\n  have hdouble :\n      (∑ i, ∑ j, ∫ ω, Y i ω * Y j ω ∂P) =\n        ∑ i, ∫ ω, (Y i ω) ^ 2 ∂P := by\n    apply Finset.sum_congr rfl\n    intro i hi\n    rw [Finset.sum_eq_single i]\n    · congr 1\n      funext ω\n      simp [pow_two]\n    · intro j hj hji\n      exact hcross i j hji.symm\n    · simp"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "非对角项不是通过假设零协方差直接获得，而是由 huncorr 的教材定义经 integral_centered_mul_eq_zero 导出；之后 Finset.sum_eq_single 明确保留对角项并消去其余项。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "V5",
+      "mathematical_behavior": "candidate_expansion",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 62,
+          "line_end": 66,
+          "quote": "_root_.variance P (fun ω => ∑ i, X i ω)\n        (FiniteAbsMoment.of_memLp\n          (by classical exact measurable_finset_sum Finset.univ X (by simpa using hXm))\n          (by classical exact memLp_finset_sum Finset.univ X (by simpa using hX))) =\n      ∑ i, _root_.variance P (X i) (FiniteAbsMoment.of_memLp (hXm i) (hX i))"
+        },
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 118,
+          "line_end": 123,
+          "quote": "_ = ∑ i, ∫ ω, (Y i ω) ^ 2 ∂P := hdouble\n    _ = ∑ i, _root_.variance P (X i)\n          (FiniteAbsMoment.of_memLp (hXm i) (hX i)) := by\n      apply Finset.sum_congr rfl\n      intro i hi\n      rw [local_variance_eq_integral P (X i) (hXm i) (hX i)]"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "公开结论覆盖任意有限类型，等式左侧是有限和的本地方差，右侧是各项本地方差之和；证明最终逐项用本地方差与中心化平方积分的等式收束。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "W1",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 33,
+          "line_end": 42,
+          "quote": "(X : ℕ → Ω → ℝ) (μ σ2 : ℝ)\n    (hXm : ∀ i, Measurable (X i))\n    (hX : ∀ i, MemLp (X i) 2 P)\n    (hmean : ∀ i, P[X i] = μ)\n    (hvar : ∀ i,\n      _root_.variance P (X i) (FiniteAbsMoment.of_memLp (hXm i) (hX i)) = σ2)\n    (huncorr : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ConvergesInProbability P"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "弱大数定律保留共同均值、共同有限方差、有限二阶矩及两两不相关前提，没有引入独立性或同分布条件。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "W2",
+      "mathematical_behavior": "candidate_expansion",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 69,
+          "line_end": 83,
+          "quote": "have hET : P[T] = (n : ℝ) * μ := by\n      dsimp [T]\n      rw [integral_finset_sum Finset.univ\n        (fun i _ => (hX i.1).integrable (by norm_num))]\n      simp_rw [hmean]\n      simp [I]\n    have hvT :\n        _root_.variance P T (FiniteAbsMoment.of_memLp hTm hTLp) =\n          (n : ℝ) * σ2 := by\n      have hv := thm_11_4 P (fun i : I => X i.1)\n        (fun i => hXm i.1) (fun i => hX i.1)\n        (fun i j hij => huncorr i.1 j.1 (fun h => hij (Subtype.ext h)))\n      rw [hv]\n      simp_rw [hvar]\n      simp [I]"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选对 range n 的有限和 T 实际推导 E[T]=nμ，并通过已完成的 thm_11_4 推导 Var(T)=nσ2；这是真实代码绑定，不是额外前提。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "W3",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 84,
+          "line_end": 107,
+          "quote": "have hnR : 0 < (n : ℝ) := by exact_mod_cast hn\n    have hnε : 0 < (n : ℝ) * ε := mul_pos hnR hε\n    have hcheb := thm_11_2 P T hTm hTLp hnε\n    have hsub :\n        deviationEvent A (fun _ => μ) n ε ⊆\n          {ω | (n : ℝ) * ε ≤ |T ω - P[T]|} := by\n      intro ω hω\n      change ε < |S n ω / (n : ℝ) - μ| at hω\n      rw [← hTS ω] at hω\n      rw [hET]\n      have hid : T ω / (n : ℝ) - μ =\n          (T ω - (n : ℝ) * μ) / (n : ℝ) := by\n        field_simp\n      rw [hid, abs_div, abs_of_pos hnR] at hω\n      change (n : ℝ) * ε ≤ |T ω - (n : ℝ) * μ|\n      simpa [mul_comm] using le_of_lt ((lt_div_iff₀ hnR).mp hω)\n    calc\n      P.real (deviationEvent A (fun _ => μ) n ε)\n          ≤ P.real {ω | (n : ℝ) * ε ≤ |T ω - P[T]|} :=\n        measureReal_mono hsub\n      _ ≤ _root_.variance P T (FiniteAbsMoment.of_memLp hTm hTLp) /\n              ((n : ℝ) * ε) ^ 2 := hcheb\n      _ = σ2 / ((n : ℝ) * ε ^ 2) := by"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选自行调用切比雪夫定理，证明样本均值的严格偏差事件包含于中心化和的非严格尾事件，再由测度单调性和已得方差等式推出所需上界；调用者无需给出尾界。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "W4",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 109,
+          "line_end": 128,
+          "quote": "have hupper :\n      Tendsto (fun n : ℕ => σ2 / ((n : ℝ) * ε ^ 2)) atTop (nhds 0) := by\n    have hbase : Tendsto (fun n : ℕ => σ2 / (n : ℝ)) atTop (nhds 0) :=\n      tendsto_const_nhds.div_atTop tendsto_natCast_atTop_atTop\n    convert hbase.div_const (ε ^ 2) using 1\n    · funext n\n      ring\n    · simp\n  have hreal :\n      Tendsto (fun n => P.real (deviationEvent A (fun _ => μ) n ε))\n        atTop (nhds 0) := by\n    apply squeeze_zero'\n    · exact Filter.Eventually.of_forall (fun n => measureReal_nonneg)\n    · filter_upwards [eventually_atTop.2 ⟨1, fun n hn => hn⟩] with n hn\n      exact htail n (Nat.zero_lt_of_lt hn)\n    · exact hupper\n  apply (ENNReal.tendsto_toReal_iff\n    (fun n => measure_ne_top P (deviationEvent A (fun _ => μ) n ε))\n    (by simp)).mp\n  simpa [measureReal_def] using hreal"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选证明 σ2/(n·ε²) 趋于零，并只在最终滤子的 n≥1 尾部调用正索引上界，因此 n=0 的除法边界不会进入切比雪夫步骤。随后以概率非负性和最终上界作夹逼，再正确转回 ENNReal 测度收敛。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "W5",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 40,
+          "line_end": 50,
+          "quote": "ConvergesInProbability P\n      (fun n ω => (∑ i ∈ Finset.range n, X i ω) / (n : ℝ))\n      (fun _ => μ) := by\n  let S : ℕ → Ω → ℝ := fun n ω => ∑ i ∈ Finset.range n, X i ω\n  let A : ℕ → Ω → ℝ := fun n ω => S n ω / (n : ℝ)\n  have hSm : ∀ n, Measurable (S n) := fun n => measurable_range_sum X hXm n\n  have hSLp : ∀ n, MemLp (S n) 2 P := fun n => memLp_range_sum X hX n\n  have hAm : ∀ n, Measurable (A n) := fun n => (hSm n).div_const _\n  change ConvergesInProbability P A (fun _ => μ)\n  rw [ConvergesInProbability]\n  refine ⟨hAm, measurable_const, ?_⟩"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "公开目标正是 range n 样本和除以 n 向常量 μ 的依概率收敛。证明展开上游定义，提供序列及极限的可测性，并对任意正 ε 完成偏差测度趋零。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-92da00620333",
+      "arm": "B",
+      "version_subset": "B_transport_r4",
+      "obligation_id": "S1",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 8,
+          "line_end": 11,
+          "quote": "lemma memLp_finset_sum {Ω ι : Type*} [MeasurableSpace Ω]\n    {P : Measure Ω} (s : Finset ι) (X : ι → Ω → ℝ)\n    (hX : ∀ i ∈ s, MemLp (X i) 2 P) :\n    MemLp (fun ω => ∑ i ∈ s, X i ω) 2 P := by"
+        },
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 78,
+          "line_end": 80,
+          "quote": "have hv := thm_11_4 P (fun i : I => X i.1)\n        (fun i => hXm i.1) (fun i => hX i.1)\n        (fun i j hij => huncorr i.1 j.1 (fun h => hij (Subtype.ext h)))"
+        },
+        {
+          "path": "tool_fact/technical-validation.json",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "\"axiom_audit_exit_code\":0,\"build_exit_code\":0"
+        }
+      ],
+      "original_overall_verdict": "pass",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json",
+          "sha256": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json",
+          "sha256": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选支持仅包括同文件中的有限和可测性、二阶可积性、中心化交叉项和方差表示引理；第二题通过实际导入和调用第一题接入。完整候选无 sorry、admit 或新增 axiom 的迹象，中性事实确认公理审计与逃逸扫描均成功。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "V1",
+      "mathematical_behavior": "not_applicable",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 33,
+          "line_end": 37,
+          "quote": "(X : ι → Ω → ℝ) (_hXm : ∀ i ∈ s, Measurable (X i))\n    (hX : ∀ i ∈ s, MemLp (X i) 2 P)\n    (hunc : ∀ i ∈ s, ∀ j ∈ s, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ProbabilityTheory.variance (fun ω => ∑ i ∈ s, X i ω) P =\n      ∑ i ∈ s, ProbabilityTheory.variance (X i) P := by"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "公开前提保持两两不相关和有限二阶矩，并以可测性表达随机变量条件；没有加入目标方差可加性、零协方差族或等价的目标专用前提。此义务不受G/S展开位置之争影响。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "V2",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 20,
+          "line_end": 27,
+          "quote": "theorem integral_centered_mul_eq_zero_of_uncorrelated\n    {Ω : Type*} [MeasurableSpace Ω] {P : Measure Ω} [IsProbabilityMeasure P]\n    {X Y : Ω → ℝ} (hX : MemLp X 2 P) (hY : MemLp Y 2 P)\n    (hXY : Uncorrelated P X Y) :\n    ∫ ω, (X ω - P[X]) * (Y ω - P[Y]) ∂P = 0 := by\n  change ProbabilityTheory.covariance X Y P = 0\n  rw [ProbabilityTheory.covariance_eq_sub hX hY, sub_eq_zero]\n  simpa [Uncorrelated, Pi.mul_apply] using hXY"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选具体接入中心化乘积、Mathlib协方差和教材 Uncorrelated 定义：先把中心化积分改写成 covariance，再用 covariance_eq_sub 化为乘积期望减期望乘积。该定义桥接由候选完成；S所缺的是后续有限和平方展开，不是此义务。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "V3",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 45,
+          "line_end": 48,
+          "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]\n  apply Finset.sum_congr rfl\n  intro i hi\n  rw [Finset.sum_eq_single i]"
+        },
+        {
+          "path": "library/Variance.lean",
+          "line_start": 287,
+          "line_end": 291,
+          "quote": "lemma variance_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :\n    Var[∑ i ∈ s, X i; μ] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; μ] := by\n  rw [← covariance_self, covariance_sum_left' (by simpa)]\n  · refine Finset.sum_congr rfl fun i hi ↦ ?_\n    rw [covariance_sum_right' (by simpa) (hX i hi)]"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "fail",
+      "new_reason": "有限和展开真实绑定到 variance_fun_sum'。该公式不要求不相关，对相关变量同样成立，故不是循环目标，G下合法；但它承担了S要求候选或允许支持自行给出的中心化平方及期望线性展开，故S下直接失败。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "V4",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 39,
+          "line_end": 44,
+          "quote": "have hcov_off : ∀ i ∈ s, ∀ j ∈ s, i ≠ j →\n      ProbabilityTheory.covariance (X i) (X j) P = 0 := by\n    intro i hi j hj hij\n    change (∫ ω, (X i ω - P[X i]) * (X j ω - P[X j]) ∂P) = 0\n    exact integral_centered_mul_eq_zero_of_uncorrelated\n      (hX i hi) (hX j hj) (hunc i hi j hj hij)"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选没有把非对角项为零作为前提，而是逐项从给定 hunc 调用已证明的中心化交叉项引理，得到协方差为零，并在 Finset.sum_eq_single 的非对角分支使用。此直接责任在两种解释下均完成。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "V5",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 45,
+          "line_end": 52,
+          "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]\n  apply Finset.sum_congr rfl\n  intro i hi\n  rw [Finset.sum_eq_single i]\n  · exact ProbabilityTheory.covariance_self (hX i hi).aemeasurable\n  · intro j hj hji\n    exact hcov_off i hi j hj (Ne.symm hji)\n  · exact fun hnot => (hnot hi).elim"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "完整公开有限和方差可加结论及闭合证明均存在。S下V3的路线责任失败并导致整体S失败，但不应把依赖传播重复登记为V5的接口或数学结论缺失。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "W1",
+      "mathematical_behavior": "not_applicable",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 113,
+          "line_end": 119,
+          "quote": "(μ σ2 : ℝ) (hXm : ∀ i, Measurable (X i))\n    (hX : ∀ i, MemLp (X i) 2 P)\n    (hunc : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j))\n    (hmean : ∀ i, ∫ ω, X i ω ∂P = μ)\n    (hvar : ∀ i, _root_.variance P (X i)\n      (FiniteAbsMoment.of_memLp (hXm i) (hX i)) = σ2) :\n    ConvergesInProbability P (sampleAverage X) (fun _ => μ) := by"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "弱大数定律只要求共同均值、共同有限方差、有限二阶矩、可测性和两两不相关，没有独立性、同分布性或调用者提供的尾概率界。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "W2",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 43,
+          "line_end": 49,
+          "quote": "rw [havg, ProbabilityTheory.variance_const_mul]\n  rw [thm_11_4 P (Finset.range n) X\n    (fun i _ => hXm i) (fun i _ => hX i)\n    (fun i _ j _ hij => hunc i j hij)]\n  simp_rw [hvar]\n  simp\n  field_simp"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选实际证明样本均值方差精确等于 σ²/n：使用常数倍方差公式、真实调用同组 thm_11_4，并代入共同方差。该具体界确已导出，故直接义务在两种解释下通过；其所依赖的第一题在S下存在V3路线缺口，这一传播由overall_S体现。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "W3",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 85,
+          "line_end": 95,
+          "quote": "have hreal :\n      P.real (deviationEvent (sampleAverage X) (fun _ => μ) n ε) ≤\n        _root_.variance P (sampleAverage X n)\n          (FiniteAbsMoment.of_memLp havg_meas havg_mem) / ε ^ 2 := by\n    calc\n      P.real (deviationEvent (sampleAverage X) (fun _ => μ) n ε)\n          ≤ P.real {ω | ε ≤ |sampleAverage X n ω - P[sampleAverage X n]|} :=\n        measureReal_mono hsubset\n      _ ≤ _root_.variance P (sampleAverage X n)\n          (FiniteAbsMoment.of_memLp havg_meas havg_mem) / ε ^ 2 :=\n        thm_11_2 P (sampleAverage X n) havg_meas havg_mem hε"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选在内部证明严格偏差事件包含于以样本均值期望为中心的非严格事件，并实际调用 thm_11_2；最终尾界不是调用者前提。此切比雪夫应用本身不受G/S展开位置之争影响。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "W4",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 124,
+          "line_end": 133,
+          "quote": "have hbound : Tendsto\n        (fun n : ℕ => ENNReal.ofReal (σ2 / ε ^ 2 * (1 / (n : ℝ))))\n        atTop (nhds 0) := by\n      simpa using ENNReal.tendsto_ofReal\n        (tendsto_one_div_atTop_nhds_zero_nat.const_mul (σ2 / ε ^ 2))\n    apply tendsto_of_tendsto_of_tendsto_of_le_of_le' tendsto_const_nhds hbound\n    · exact Eventually.of_forall fun n => bot_le\n    · filter_upwards [eventually_ge_atTop (1 : ℕ)] with n hn\n      have hnpos : 0 < n := Nat.zero_lt_of_lt hn\n      refine (sampleAverage_tail_bound P X μ σ2 ε hXm hX hunc hmean hvar hε hnpos).trans_eq ?_"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选证明 ENNReal.ofReal(σ²/ε²·1/n) 趋于零，并在最终滤子中限制 n≥1后调用尾界，正确避开n=0的除法边界。零基 range n 是前n项的无损重编号。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "W5",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 119,
+          "line_end": 123,
+          "quote": "ConvergesInProbability P (sampleAverage X) (fun _ => μ) := by\n  refine ⟨?_, measurable_const, ?_⟩\n  · intro n\n    exact (Finset.measurable_sum (Finset.range n) (fun i _ => hXm i)).div_const n\n  · intro ε hε"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "公开 thm_11_5 返回完整 ConvergesInProbability 命题，并提供每个样本均值的可测性、常值极限可测性以及每个正ε的尾概率极限。S下第一题路线缺口会传播到整体S合成，但本义务的公开接口与收敛证明并未缺失。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-dddb2b2aae36",
+      "arm": "C",
+      "version_subset": "C_runtime_r3",
+      "obligation_id": "S1",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 1,
+          "line_end": 3,
+          "quote": "import Mathlib\nimport ProbabilityTheory.chapter_07.def_7_3\nimport ProbabilityTheory.chapter_09.def_9_1"
+        },
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 1,
+          "line_end": 4,
+          "quote": "import Mathlib\nimport ProbabilityTheory.chapter_10.def_10_2\nimport ProbabilityTheory.chapter_11.thm_11_2\nimport ProbabilityTheory.chapter_11.thm_11_4"
+        },
+        {
+          "path": "tool_fact/technical-validation.json",
+          "line_start": 1,
+          "line_end": 1,
+          "quote": "\"escape_scan_exit_code\":0"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json",
+          "sha256": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json",
+          "sha256": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json",
+          "sha256": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选只导入Mathlib及绑定上游，所有辅助声明均有证明体；中立技术事实确认构建、公理审计和逃逸扫描成功。variance_fun_sum' 是一般相关变量恒等式，不是循环目标或改名答案。S下对它的否定属于V3规定路线责任，而不是 sorry、额外公理、目标专用不透明支持或证明逃逸；因此驳回把S路线缺口重复判作S1失败的初评。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json",
+          "sha256": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "V1",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 9,
+          "line_end": 14,
+          "quote": "theorem thm_11_4 {Ω ι : Type*} [MeasurableSpace Ω] (P : Measure Ω)\n    [IsProbabilityMeasure P] (X : ι → Ω → ℝ) (s : Finset ι)\n    (hX : ∀ i ∈ s, MemLp (X i) 2 P)\n    (hunc : ∀ i ∈ s, ∀ j ∈ s, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ProbabilityTheory.variance (fun ω => ∑ i ∈ s, X i ω) P =\n      ∑ i ∈ s, ProbabilityTheory.variance (X i) P := by"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "公开前提保持有限二阶矩与两两不相关，没有加入方差可加性或等价目标前提；该义务不因G/S的展开位置解释而变化。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "V2",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "upstream/ProbabilityTheory/chapter_07/def_7_3.lean",
+          "line_start": 40,
+          "line_end": 45,
+          "quote": "theorem covariance_zero_iff_uncorrelated {Ω : Type*} [MeasurableSpace Ω] {μ : Measure Ω}\n    [IsProbabilityMeasure μ] {X Y : Ω → ℝ} (hX : MemLp X 2 μ) (hY : MemLp Y 2 μ) :\n    Covariance μ X Y = 0 ↔ Uncorrelated μ X Y := by\n  rw [Covariance, ProbabilityTheory.covariance_eq_sub hX hY, Uncorrelated]\n  rw [sub_eq_zero]\n  simp [Pi.mul_apply]"
+        },
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 15,
+          "line_end": 15,
+          "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "fail",
+      "new_reason": "G下，一般协方差展开以及支持文件中 covariance_eq_sub、Uncorrelated 的显式展开足以接入方差、协方差和不相关定义。S下，支持只证明零协方差等价于不相关，未在候选或允许支持中给出有限和中心化平方与期望线性的具体展开，故路线不闭合。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "V3",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 15,
+          "line_end": 18,
+          "quote": "rw [ProbabilityTheory.variance_fun_sum' hX]\n  apply Finset.sum_congr rfl\n  intro i hi\n  rw [Finset.sum_eq_single i]"
+        },
+        {
+          "path": "library/Variance.lean",
+          "line_start": 299,
+          "line_end": 302,
+          "quote": "lemma variance_fun_sum' [IsFiniteMeasure μ] (hX : ∀ i ∈ s, MemLp (X i) 2 μ) :\n    Var[fun ω ↦ ∑ i ∈ s, X i ω; μ] = ∑ i ∈ s, ∑ j ∈ s, cov[X i, X j; μ] := by\n  convert! variance_sum' hX\n  simp"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "fail",
+      "new_reason": "有限和展开直接取自对相关变量也成立的 variance_fun_sum'。这在G下属于允许的一般基础；在S下，它委托了必须由候选或允许支持完成的中心化平方及期望展开。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "V4",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 20,
+          "line_end": 22,
+          "quote": "· intro j hj hji\n    apply (covariance_zero_iff_uncorrelated (hX i hi) (hX j hj)).2\n    exact hunc i hi j hj hji.symm"
+        },
+        {
+          "path": "upstream/ProbabilityTheory/chapter_07/def_7_3.lean",
+          "line_start": 31,
+          "line_end": 33,
+          "quote": "/-- Textbook notion: `X` and `Y` are uncorrelated when `E[XY] = E[X] E[Y]`. -/\ndef Uncorrelated {Ω : Type*} [MeasurableSpace Ω] (μ : Measure Ω) (X Y : Ω → ℝ) : Prop :=\n  ∫ ω, X ω * Y ω ∂μ = (∫ ω, X ω ∂μ) * ∫ ω, Y ω ∂μ"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选对每个非对角项实际调用由有限二阶矩证明的 covariance_zero_iff_uncorrelated，并把给定 hunc 代入；该桥接支持显式展开了 Uncorrelated 的期望乘积定义，因此不是假定交叉项为零。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "V5",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_4.lean",
+          "line_start": 12,
+          "line_end": 19,
+          "quote": "(hunc : ∀ i ∈ s, ∀ j ∈ s, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ProbabilityTheory.variance (fun ω => ∑ i ∈ s, X i ω) P =\n      ∑ i ∈ s, ProbabilityTheory.variance (X i) P := by\n  rw [ProbabilityTheory.variance_fun_sum' hX]\n  apply Finset.sum_congr rfl\n  intro i hi\n  rw [Finset.sum_eq_single i]\n  · exact ProbabilityTheory.covariance_self (hX i hi).aemeasurable"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "完整公开有限和方差可加等式已经交付并通过构建。S下失败的是规定证明路线，而不是该公开结论或接口是否存在；按义务独立评价，V5本身通过。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "W1",
+      "mathematical_behavior": "not_applicable",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 20,
+          "line_end": 25,
+          "quote": "theorem thm_11_5 {Ω : Type*} [MeasurableSpace Ω] (P : Measure Ω)\n    [IsProbabilityMeasure P] (X : ℕ → Ω → ℝ) (μ σ2 : ℝ)\n    (hXm : ∀ i, Measurable (X i)) (hX : ∀ i, MemLp (X i) 2 P)\n    (hmean : ∀ i, ∫ ω, X i ω ∂P = μ)\n    (hvar : ∀ i, ProbabilityTheory.variance (X i) P = σ2)\n    (hunc : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "弱大数定律使用共同均值、共同方差、有限二阶矩和两两不相关；可测性是随机变量接口条件，没有加强为独立或同分布。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "W2",
+      "mathematical_behavior": "general_covariance",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 74,
+          "line_end": 83,
+          "quote": "have hAvar : ProbabilityTheory.variance (A n) P =\n          σ2 / (n : ℝ) := by\n        rw [show A n = fun ω => (n : ℝ)⁻¹ * (∑ i ∈ Finset.range n, X i ω) by\n          funext ω; simp [A, div_eq_mul_inv, mul_comm]]\n        rw [ProbabilityTheory.variance_const_mul]\n        rw [thm_11_4 P X (Finset.range n) (fun i _ => hX i)\n          (fun i _ j _ hij => hunc i j hij)]\n        simp_rw [hvar]\n        simp [hn]\n        field_simp"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选明确证明样本均值 A n 的方差等于 σ2/n：先用常数倍方差公式，再调用同组 thm_11_4，并用共同方差化简。此义务的数值界确实在代码中导出；S对thm_11_4内部展开路线的否定另记于V2、V3，不抹去W2实际存在的推导。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "W3",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 84,
+          "line_end": 96,
+          "quote": "have hreal : P.real (deviationEvent A (fun _ => μ) n ε) ≤\n          σ2 / ((n : ℝ) * ε ^ 2) := by\n        calc\n          P.real (deviationEvent A (fun _ => μ) n ε)\n              ≤ P.real {ω | ε ≤ |A n ω - P[A n]|} := by\n                apply measureReal_mono (h₂ := by finiteness)\n                intro ω hω\n                simpa [deviationEvent, hAmean] using le_of_lt hω\n          _ ≤ _root_.variance P (A n)\n                (FiniteAbsMoment.of_memLp (hAm n) hA_mem) / ε ^ 2 :=\n              thm_11_2 P (A n) (hAm n) hA_mem hε\n          _ = σ2 / ((n : ℝ) * ε ^ 2) := by\n              rw [textbookVariance_eq_variance P (A n) (hAm n) hA_mem, hAvar]"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "尾概率界不是公开前提，而是在证明内部由偏差事件包含关系和 thm_11_2 切比雪夫不等式导出，并用方差接口桥接及 hAvar 化为要求的上界。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "W4",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 40,
+          "line_end": 53,
+          "quote": "let U : ℕ → ℝ≥0∞ :=\n    fun n => if n = 0 then 1 else ENNReal.ofReal (σ2 / ((n : ℝ) * ε ^ 2))\n  have hU_tendsto : Tendsto U atTop (nhds 0) := by\n    have hr : Tendsto (fun n : ℕ => (σ2 / ε ^ 2) / (n : ℝ)) atTop (nhds 0) :=\n      tendsto_const_div_atTop_nhds_zero_nat (σ2 / ε ^ 2)\n    have hr' : Tendsto (fun n : ℕ => ENNReal.ofReal ((σ2 / ε ^ 2) / (n : ℝ)))\n        atTop (nhds 0) := by\n      simpa using ENNReal.tendsto_ofReal hr\n    apply hr'.congr'\n    filter_upwards [eventually_gt_atTop (0 : ℕ)] with n hn\n    simp only [U, if_neg (Nat.ne_of_gt hn)]\n    congr 1\n    field_simp"
+        },
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 57,
+          "line_end": 63,
+          "quote": "by_cases hn : n = 0\n    · subst n\n      simp only [U, if_pos, deviationEvent]\n      calc\n        P {ω | |A 0 ω - μ| > ε} ≤ P Set.univ := measure_mono (Set.subset_univ _)\n        _ = 1 := measure_univ\n    · simp only [U, if_neg hn]"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选定义ENNReal上界U，对正索引将其化为 ofReal((σ2/ε²)/n)并证明趋零；同时单独处理n=0，用总概率1控制除零定义产生的边界项。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "W5",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 25,
+          "line_end": 36,
+          "quote": "(hunc : ∀ i j, i ≠ j → Uncorrelated P (X i) (X j)) :\n    ConvergesInProbability P\n      (fun n ω => (∑ i ∈ Finset.range n, X i ω) / (n : ℝ))\n      (fun _ => μ) := by\n  let A : ℕ → Ω → ℝ :=\n    fun n ω => (∑ i ∈ Finset.range n, X i ω) / (n : ℝ)\n  have hAm : ∀ n, Measurable (A n) := by\n    intro n\n    dsimp [A]\n    fun_prop\n  refine ⟨hAm, measurable_const, ?_⟩\n  intro ε hε"
+        },
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 98,
+          "line_end": 99,
+          "quote": "rw [← ofReal_measureReal]\n      exact ENNReal.ofReal_le_ofReal hreal"
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "公开结论正是有限和除以n依概率收敛到常数μ，并通过 ConvergesInProbability 的可测性和逐ε趋零接口完整构造。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    },
+    {
+      "candidate_id": "candidate-8df72d8fe638",
+      "arm": "B",
+      "version_subset": "B_original_r1",
+      "obligation_id": "S1",
+      "mathematical_behavior": "other",
+      "uniform_rule": {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json",
+        "sha256": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d"
+      },
+      "code_evidence": [
+        {
+          "path": "candidate/ProbabilityTheory/chapter_11/thm_11_5.lean",
+          "line_start": 1,
+          "line_end": 4,
+          "quote": "import Mathlib\nimport ProbabilityTheory.chapter_10.def_10_2\nimport ProbabilityTheory.chapter_11.thm_11_2\nimport ProbabilityTheory.chapter_11.thm_11_4"
+        },
+        {
+          "path": "tool_fact/technical-validation.json",
+          "line_start": 3,
+          "line_end": 6,
+          "quote": "\"build_exit_code\": 0,\n  \"escape_scan_exit_code\": 0,\n  \"axiom_audit_exit_code\": 0,\n  \"technical_status\": \"pass\""
+        }
+      ],
+      "original_overall_verdict": "fail",
+      "original_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json",
+          "sha256": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+        }
+      ],
+      "new_status_G": "pass",
+      "new_status_S": "pass",
+      "new_reason": "候选只导入Mathlib、列出的上游模块和同组 thm_11_4；一般协方差展开不是目标专属加法结论。完整读取的候选和上游支持未见sorry、admit或新增axiom，绑定的逃逸扫描与公理审计均为成功。S路线失败属于明确的展开位置要求，不构成循环前提或证明逃逸。",
+      "new_opinion_sources": [
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e"
+        },
+        {
+          "path": "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json",
+          "sha256": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054"
+        }
+      ]
+    }
+  ],
+  "cross_candidate_check": {
+    "general_covariance_candidates": 3,
+    "general_covariance_same_V3_rule_application": true,
+    "candidate_expansion_checked_independently": true,
+    "V2_difference": "A and legacy B delegate centering/variance-definition connection more directly; C has its own centered-product proof. V2 need not match solely because V3 behavior matches.",
+    "no_forced_equal_overall_labels": true
+  },
+  "known_actual_model_calls": 10,
+  "pre_dispatch_role_rejections": 2,
+  "new_solver_trials": 0,
+  "main_panel": "criterion_dispute; cannot select G or S from winning configuration. Legacy B is a separate version, not an additional same-condition repetition.",
+  "source_index": {
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json": "ab50d74fa1f44b32adda0379364ab6579e803edfb16043342c9cac7cacd4d549",
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json": "9f7b60349965684698bb0b36f82b38482cd30261024340684777a87b6a79cfa1",
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-67c83c8b4bf7-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json": "a5229c5d957962062e1f23114e2aeea57647bbd87c18670a28da06c57f74074e",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-1.json": "fd411e6fc6497b9e553a3e2a1877a7399e45d591f7f067ba9e0308e823cc5ebc",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\results\\reviewer-2.json": "0fcbf4be63db84591e48f5b6ab43c65760c0e64771bc68ff64de37a153150fc5",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-a-stage-l2\\development-ac-r1\\cases\\0913571e7de737e96d31250811cd1df6644a7756e5a2003e61bac4521e58ca15\\final\\decision.json": "090dea2e9da8c129a17891c49e50c5ad387077054b3a2b54291b9215f322b94d",
+    "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\full_workflow_eval_codesign_20260910\\evaluation_consistency_r1_20260911\\RULE_INTERPRETATION.json": "149c70441ffd374a1b99a0de484f41fb5fb3142ea9be093e1e30b89024811b9d",
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json": "04afcf22043a6e353ddfacb2f731e3289df160e2d49eca865265fb9cbef14784",
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-92da00620333\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json": "bce81e886baa7ba326980d7f15248b38f25550079755964b1192f47768cbc644",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-1.json": "b798d8b547e871c6398a9142b8c391f5a226daa9ab3591d168fec319eb1f56fc",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\results\\reviewer-2.json": "4e8ee0185a11c88392f9130b57c34c4089786b987ab0bd1c634710378eaf1ab6",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-b-r4-l2\\development-b-r4\\cases\\adc7fe225489e5c63df0b09f6bcccc18536273eb3ca3ab5cec9fe26b43a03760\\final\\decision.json": "5989594d77e7793ad480a39a970919c6fe9d7b03549d52249754ca40e88aa0ff",
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json": "34660f8a86791bab01c3349cc07859857878bcc05bc7c15bd436d4c6ffd7272c",
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json": "a844505ffe2721aa53433fa78ab68077bf7f5c105e3131bfad415c197789046c",
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-dddb2b2aae36-adjud\\executions\\adjudicator\\attempt-02\\REVIEW_RESULT.json": "29f0e7bfdb31632fd01b19196ed48f08a391e10cdf5910fa6d64106e1d9a738b",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\adjudicator.json": "6e94b42dc13e6f2c675745d00f7ea09b75ad59ced26b4aca127ad0789f718365",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-1.json": "34809523e45b913e34937ea93678e4721d729291cf2dd11e0852bed673c55878",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\results\\reviewer-2.json": "da61d8fa2ce32ba639676551b7bfab2f5fc8eab6448dbb8148f043920e50582a",
+    "D:\\Grad_Study\\Practimum\\Formalization\\ep-c-stage-l2\\development-ac-r1\\cases\\eba5ab477a49ec5b5cfb78f01be9c7301b1986f9ff2160003b610df43d9bc577\\final\\decision.json": "912b5ea429852ac6fd59a4f118d7116df959e3cc4c4a29f074f95c122c0ffdb0",
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-1\\attempt-01\\REVIEW_RESULT.json": "61c4c6229fbc49105f7e4ccff70114250d803f631bc18e9829ca67964d38856e",
+    "D:\\Grad_Study\\Practimum\\Formalization\\rr-l2-v1\\candidate-8df72d8fe638\\executions\\reviewer-2\\attempt-01\\REVIEW_RESULT.json": "d8250b134fe32e89594053410e8d37c8002791001cacb28af1885bd2a29fe054",
+    "D:\\Grad_Study\\Practimum\\Formalization\\fw_pilot_20260910_staging\\coverage-runs-r1\\L2_thm_11_4_to_11_5\\common-validation\\B\\semantic-single\\semantic-result.json": "72019940258464b3594b280d8baf9ffef22165d0f0b06066dd17f3b9655995dd"
+  },
+  "limits": [
+    "Registered after old results, before this new review batch; not original pre-registration.",
+    "Anonymous arm/old labels hidden, but proof style may reveal clues.",
+    "Reviews are evidence, not majority-vote mathematical truth.",
+    "No global experiment completion or complete feedback semantic audit claimed."
+  ]
+}

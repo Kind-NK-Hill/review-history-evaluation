@@ -1,0 +1,330 @@
+[original lines 245-360]
+            raise EndpointContractError("candidate is not marked formal-comparison eligible")
+        if draft.get("development_evidence") is not False:
+            raise EndpointContractError("development evidence cannot enter the formal endpoint")
+    if schema in {DRAFT_SCHEMA, SEALED_SCHEMA}:
+        if draft.get("candidate_complete") is not True:
+            raise EndpointContractError("candidate is not marked complete")
+        evaluation_scope = "complete_candidate"
+        package_status = "complete"
+    else:
+        package_status = draft.get("candidate_package_status")
+        if package_status not in {"complete", "partial"}:
+            raise EndpointContractError("review material package must be complete or partial")
+        if draft.get("material_evaluable") is not True:
+            raise EndpointContractError("material endpoint only accepts independently evaluable material")
+        evaluation_scope = "partial_material" if package_status == "partial" else "complete_candidate"
+    if draft.get("blind_content_attestation") is not True:
+        raise EndpointContractError("trusted side must attest that staged content contains no condition metadata")
+    files, host_paths = _source_files(draft)
+    public_facts, private_facts = _normalised_tool_facts(draft)
+    prompt_template_sha = _sha_bytes(
+        _prompt_template(
+            "{anonymous_candidate_id}", files, public_facts, evaluation_scope,
+            "development" if is_development else "formal",
+        ).encode("utf-8")
+    )
+    model_sha = _sha_bytes(_canonical_bytes(MODEL_CONFIG))
+    binding = {
+        "schema": "formal_endpoint.input_binding.v1",
+        "protocol_epoch": DEVELOPMENT_EPOCH if is_development else PROTOCOL_EPOCH,
+        "evidence_namespace": "development" if is_development else "formal",
+        "formal_comparison_eligible": not is_development,
+        "evaluation_scope": evaluation_scope,
+        "candidate_package_status": package_status,
+        "files": files,
+        "tool_facts": public_facts,
+        "prompt_template_version": PROMPT_TEMPLATE_VERSION,
+        "prompt_template_sha256": prompt_template_sha,
+        "model_config_sha256": model_sha,
+    }
+    private = {"host_paths": host_paths, "tool_fact_sources": private_facts}
+    return binding, private
+
+
+def _input_key(binding: dict[str, Any]) -> str:
+    return _sha_bytes(_canonical_bytes(binding))
+
+
+def seal_trusted_request(draft_path: Path, destination: Path) -> dict[str, Any]:
+    """Seal current input hashes and assign the content-derived anonymous ID."""
+    draft = _read_object(Path(draft_path))
+    binding, _ = _base_binding(draft)
+    key = _input_key(binding)
+    sealed = dict(draft)
+    if draft.get("schema") == DEVELOPMENT_DRAFT_SCHEMA:
+        sealed["schema"] = DEVELOPMENT_SEALED_SCHEMA
+    elif draft.get("schema") == MATERIAL_DRAFT_SCHEMA:
+        sealed["schema"] = MATERIAL_SEALED_SCHEMA
+    else:
+        sealed["schema"] = SEALED_SCHEMA
+    sealed["anonymous_candidate_id"] = f"cand-{key[:20]}"
+    sealed["input_key"] = key
+    for row in sealed["files"]:
+        row["sha256"] = _sha_file(Path(row["host_path"]).resolve())
+    for row in sealed["tool_facts"]:
+        row["source_receipt_sha256"] = _sha_file(Path(row["source_receipt_path"]).resolve())
+    _write_json_new(Path(destination), sealed)
+    return sealed
+
+
+def _prompt_template(
+    candidate_id: str,
+    files: list[dict[str, Any]],
+    facts: list[dict[str, Any]],
+    evaluation_scope: str,
+    evidence_namespace: str = "formal",
+) -> str:
+    paths = "\n".join(f"- {row['evaluator_path']}" for row in files)
+    fact_paths = "\n".join(
+        f"- /endpoint/input/tool_fact/{row['logical_name']}" for row in facts
+    )
+    scope_instruction = (
+        "本次评价对象是完整候选；verdict 判断整束数学任务是否共同确认完成。"
+        if evaluation_scope == "complete_candidate"
+        else "本次只评价已保存的部分材料；verdict 只描述这些材料自身的语义质量，绝不表示整束运行完成。"
+    )
+    endpoint_label = "开发阶段共同终验" if evidence_namespace == "development" else "冻结正式协议共同终验"
+    return f"""你是{endpoint_label}的全新、独立、只读评价者。匿名候选编号为 {candidate_id}。你不知道也不得推断候选来自哪种实验条件。{scope_instruction}不得编辑文件、调用帮助角色、读取 /endpoint/input 之外的内容，或把作者自述、内部状态、构建成功本身当作语义通过依据。
+
+完整读取下列冻结输入：
+{paths}
+以及中性工具事实：
+{fact_paths}
+
+逐项核验公开陈述的原意与强度、教材义务是否落到证明中、依赖与新增支持路线、是否把目标迁为额外前提，以及是否存在证明逃逸。数学上等价的路线必须用同一合同判断。把数学/教材语义、技术事实和未决事项分开。
+
+只输出一个严格 JSON 对象。schema 固定为 {MODEL_ASSESSMENT_SCHEMA}；request_id 和 anonymous_candidate_id 必须逐字复制请求值；role 固定 reviewer；verdict 只能是 pass、fail 或 inconclusive。还须完整给出 confidence、statement_fidelity、obligation_closure、proof_route_assessment、public_premise_check、support_files_checked、findings、technical_evidence_scope、unresolved 和 summary。不要生成 execution_receipt；可信宿主从实际运行回执补入该字段。"""
+
+
+def _assert_blind_document(value: dict[str, Any]) -> None:
+    text = _canonical_bytes(value).decode("utf-8")
+    if _WINDOWS_PATH.search(text) or _BLIND_PATH_LEAK.search(text):
+        raise EndpointContractError("evaluator-visible request leaks a host path or condition label")
+    forbidden = {"arm", "method", "condition", "host_path", "source_path", "run_id", "group"}
+
+    def visit(item: Any) -> None:
+        if isinstance(item, dict):
+            if set(item) & forbidden:
+                raise EndpointContractError("evaluator-visible request contains a forbidden metadata key")
+            for child in item.values():
+                visit(child)
+        elif isinstance(item, list):
+            for child in item:
+                visit(child)
+    visit(value)
+
+
+
+[original lines 507-575]
+def _validate_evaluation(value: dict[str, Any], request: dict[str, Any], role: Literal["reviewer", "adjudicator"]) -> None:
+    if value.get("schema") != REVIEW_SCHEMA or value.get("request_id") != request["request_id"]:
+        raise EndpointContractError("evaluation schema or request identity mismatch")
+    if value.get("anonymous_candidate_id") != request["anonymous_candidate_id"] or value.get("role") != role:
+        raise EndpointContractError("evaluation candidate identity or role mismatch")
+    if value.get("verdict") not in {"pass", "fail", "inconclusive"}:
+        raise EndpointContractError("evaluation verdict must be pass, fail, or inconclusive")
+    if value.get("assessment_origin") not in {"model_output", "trusted_execution_failure"}:
+        raise EndpointContractError("evaluation assessment_origin is invalid")
+    if value["assessment_origin"] == "trusted_execution_failure" and value["verdict"] != "inconclusive":
+        raise EndpointContractError("execution failure can only yield inconclusive")
+    confidence = value.get("confidence")
+    if not isinstance(confidence, (int, float)) or isinstance(confidence, bool) or not 0 <= confidence <= 1:
+        raise EndpointContractError("evaluation confidence must be in [0,1]")
+    for field in REQUIRED_REVIEW_FIELDS:
+        if field not in value:
+            raise EndpointContractError(f"evaluation missing {field}")
+    _assert_blind_document({field: value[field] for field in REQUIRED_REVIEW_FIELDS})
+    receipt = value.get("execution_receipt")
+    if not isinstance(receipt, dict):
+        raise EndpointContractError("evaluation missing execution_receipt")
+    exact = {
+        "model": MODEL, "reasoning_effort": EFFORT, "fresh_session": True,
+        "subject_read_only": True,
+    }
+    for key, expected in exact.items():
+        if receipt.get(key) != expected:
+            raise EndpointContractError(f"execution_receipt {key} mismatch")
+    for key in ("session_id", "dispatch_id", "started_at_utc", "completed_at_utc"):
+        if not isinstance(receipt.get(key), str) or not receipt[key]:
+            raise EndpointContractError(f"execution_receipt requires {key}")
+    elapsed = receipt.get("elapsed_seconds")
+    if not isinstance(elapsed, (int, float)) or isinstance(elapsed, bool) or elapsed < 0:
+        raise EndpointContractError("execution_receipt elapsed_seconds must be nonnegative")
+    before = receipt.get("subject_manifest_before_sha256")
+    after = receipt.get("subject_manifest_after_sha256")
+    if not isinstance(before, str) or not _SHA256.fullmatch(before) or after != before:
+        raise EndpointContractError("read-only subject before/after manifests must match")
+    for field in ("raw_events_sha256", "actor_receipt_sha256", "container_inspect_sha256"):
+        if not isinstance(receipt.get(field), str) or not _SHA256.fullmatch(receipt[field]):
+            raise EndpointContractError(f"execution_receipt requires valid {field}")
+    for field, expected in {
+        "model_config_sha256": request["model_config_sha256"],
+        "input_binding_sha256": request["input_binding_sha256"],
+        "prompt_sha256": request["prompt_sha256"],
+    }.items():
+        if receipt.get(field) != expected:
+            raise EndpointContractError(f"execution_receipt {field} does not bind the request")
+    _validate_usage(receipt.get("usage"))
+
+
+def _validate_new_identity(case: Path, value: dict[str, Any]) -> None:
+    """Reject session/dispatch reuse before it can enter the accepted result set."""
+    session = value["execution_receipt"]["session_id"]
+    dispatch = value["execution_receipt"]["dispatch_id"]
+    for existing_path in sorted((case / "results").glob("*.json")) if (case / "results").exists() else []:
+        existing = _read_object(existing_path)
+        receipt = existing.get("execution_receipt")
+        if isinstance(receipt, dict) and (
+            receipt.get("session_id") == session or receipt.get("dispatch_id") == dispatch
+        ):
+            raise EndpointContractError("evaluation session and dispatch must be independent")
+
+
+def record_evaluation(case_dir: Path, slot: str, result_path: Path) -> dict[str, Any]:
+    """Validate and immutably record one externally executed evaluator result."""
+    case = Path(case_dir).resolve()
+    request_names = {"reviewer-1", "reviewer-2", "adjudicator"}
+    if slot not in request_names:
+
+[original lines 605-744]
+    return {key: value[key] for key in ("assessment_origin", "verdict", "confidence", *REQUIRED_REVIEW_FIELDS)}
+
+
+def _arbitration_request(case: Path, first: dict[str, Any], second: dict[str, Any]) -> dict[str, Any]:
+    binding = _read_object(case / "input-binding.json")
+    key = case.name
+    candidate_id = first["anonymous_candidate_id"]
+    reports = {"assessment_1": _assessment_projection(first), "assessment_2": _assessment_projection(second)}
+    endpoint_label = "开发共同终验" if binding["evidence_namespace"] == "development" else "冻结正式协议"
+    prompt = f"""你是{endpoint_label}中唯一一次分歧裁决的全新、独立、只读评价者。匿名候选编号为 {candidate_id}。你不知道也不得推断候选来自哪种实验条件。完整读取 /endpoint/input 下的合同、源码、上游、候选及中性工具事实，再核对请求内两份去身份评价。不得按多数投票或置信度机械选择；必须依共同任务合同解决具体分歧。只输出严格 JSON，schema 固定 {MODEL_ASSESSMENT_SCHEMA}，逐字复制 request_id 和 anonymous_candidate_id，role 固定 adjudicator，verdict 为 pass、fail 或 inconclusive，并提供与普通评价相同的全部分析字段。不要生成 execution_receipt；可信宿主从实际运行回执补入该字段。若证据不足，返回 inconclusive。\n\n两份去身份评价：\n{json.dumps(reports, ensure_ascii=False, sort_keys=True)}"""
+    request = {
+        "schema": "formal_endpoint.adjudication_request.v1",
+        "request_id": f"adj-{key[:24]}-1",
+        "anonymous_candidate_id": candidate_id,
+        "input_key": key,
+        "evidence_namespace": binding["evidence_namespace"],
+        "role": "adjudicator",
+        "model_config": MODEL_CONFIG,
+        "model_config_sha256": binding["model_config_sha256"],
+        "input_binding_sha256": _sha_file(case / "input-binding.json"),
+        "review_result_sha256": {
+            "assessment_1": _sha_file(case / "results/reviewer-1.json"),
+            "assessment_2": _sha_file(case / "results/reviewer-2.json"),
+        },
+        "prompt_sha256": _sha_bytes(prompt.encode("utf-8")),
+        "prompt": prompt,
+        "container": {"subject_mount": "/endpoint/input", "subject_read_only": True, "network": "none"},
+        "fresh_session_required": True,
+        "maximum_adjudication_requests": 1,
+    }
+    _assert_blind_document(request)
+    return request
+
+
+def _all_sessions_distinct(results: Iterable[dict[str, Any]]) -> bool:
+    sessions = [row["execution_receipt"]["session_id"] for row in results]
+    dispatches = [row["execution_receipt"]["dispatch_id"] for row in results]
+    return len(sessions) == len(set(sessions)) and len(dispatches) == len(set(dispatches))
+
+
+def _finish(case: Path, verdict: str, reviews: list[dict[str, Any]], adjudicator: dict[str, Any] | None) -> dict[str, Any]:
+    if not _all_sessions_distinct(reviews + ([adjudicator] if adjudicator else [])):
+        raise EndpointContractError("reviewers/adjudicator must have independent sessions and dispatches")
+    binding = _read_object(case / "input-binding.json")
+    candidate_id = reviews[0]["anonymous_candidate_id"]
+    result_hashes = {f"reviewer-{index + 1}": _sha_file(case / f"results/reviewer-{index + 1}.json") for index in range(2)}
+    if adjudicator:
+        result_hashes["adjudicator"] = _sha_file(case / "results/adjudicator.json")
+    decision = {
+        "schema": FINAL_SCHEMA,
+        "protocol_epoch": binding["protocol_epoch"],
+        "evidence_namespace": binding["evidence_namespace"],
+        "formal_comparison_eligible": binding["formal_comparison_eligible"],
+        "anonymous_candidate_id": candidate_id,
+        "input_key": case.name,
+        "evaluation_scope": binding["evaluation_scope"],
+        "verdict": verdict,
+        "reviewer_verdicts": [row["verdict"] for row in reviews],
+        "adjudication_used": adjudicator is not None,
+        "adjudicator_verdict": adjudicator["verdict"] if adjudicator else None,
+        "independent_sessions_verified": True,
+        "input_binding_sha256": _sha_file(case / "input-binding.json"),
+        "category_bindings": {
+            category: _sha_bytes(_canonical_bytes([row for row in binding["files"] if row["category"] == category]))
+            for category in sorted(ALLOWED_FILE_CATEGORIES)
+        } | {"tool_fact": _sha_bytes(_canonical_bytes(binding["tool_facts"]))},
+        "prompt_template_version": binding["prompt_template_version"],
+        "prompt_template_sha256": binding["prompt_template_sha256"],
+        "reviewer_prompt_sha256": _sha_file(case / "prompt.txt"),
+        "adjudication_prompt_sha256": (
+            _read_object(case / "arbitration/request.json")["prompt_sha256"] if adjudicator else None
+        ),
+        "model_config_sha256": binding["model_config_sha256"],
+        "result_sha256": result_hashes,
+        "receipt_summary": [
+            {
+                "role": row["role"],
+                "model": row["execution_receipt"]["model"],
+                "reasoning_effort": row["execution_receipt"]["reasoning_effort"],
+                "session_id": row["execution_receipt"]["session_id"],
+                "dispatch_id": row["execution_receipt"]["dispatch_id"],
+                "elapsed_seconds": row["execution_receipt"]["elapsed_seconds"],
+                "usage": row["execution_receipt"]["usage"],
+                "raw_events_sha256": row["execution_receipt"]["raw_events_sha256"],
+                "actor_receipt_sha256": row["execution_receipt"]["actor_receipt_sha256"],
+                "container_inspect_sha256": row["execution_receipt"]["container_inspect_sha256"],
+                "prompt_sha256": row["execution_receipt"]["prompt_sha256"],
+            }
+            for row in reviews + ([adjudicator] if adjudicator else [])
+        ],
+    }
+    _write_json_new(case / "final" / "decision.json", decision)
+    return {"status": "complete", "verdict": verdict, "decision": str(case / "final/decision.json")}
+
+
+def advance_endpoint(case_dir: Path) -> dict[str, Any]:
+    """Derive the next state; write at most one adjudication request or decision."""
+    case = Path(case_dir).resolve()
+    final = case / "final/decision.json"
+    if final.exists():
+        decision = _read_object(final)
+        return {"status": "complete", "verdict": decision["verdict"], "decision": str(final)}
+    review_paths = [case / "results/reviewer-1.json", case / "results/reviewer-2.json"]
+    if not all(path.exists() for path in review_paths):
+        return {"status": "awaiting_reviewers", "received": sum(path.exists() for path in review_paths), "required": 2}
+    reviews = [_read_object(path) for path in review_paths]
+    requests = [_read_object(case / f"requests/reviewer-{slot}.json") for slot in (1, 2)]
+    for result, request in zip(reviews, requests):
+        _validate_evaluation(result, request, "reviewer")
+    if not _all_sessions_distinct(reviews):
+        raise EndpointContractError("the two endpoint reviewers are not independent")
+    verdicts = [row["verdict"] for row in reviews]
+    if verdicts[0] == verdicts[1]:
+        verdict = verdicts[0] if verdicts[0] in {"pass", "fail"} else "unresolved"
+        return _finish(case, verdict, reviews, None)
+    arbitration = case / "arbitration/request.json"
+    if not arbitration.exists():
+        _write_json_new(arbitration, _arbitration_request(case, reviews[0], reviews[1]))
+        _write_json_new(case / "private/arbitration-execution-job.json", {
+            "schema": "formal_endpoint.offline_execution_job.v1",
+            "evidence_namespace": _read_object(case / "input-binding.json")["evidence_namespace"],
+            "slot": "adjudicator",
+            "subject_host_path": str((case / "subject").resolve()),
+            "subject_container_path": "/endpoint/input",
+            "subject_read_only": True,
+            "request_path": str(arbitration.resolve()),
+            "prompt_field": "prompt",
+            "model": MODEL,
+            "reasoning_effort": EFFORT,
+            "fresh_session": True,
+            "result_record_command": ["record", str(case), "adjudicator", "<result-json>"],
+            "model_calls_started": 0,
+        })
+    adjudication_result = case / "results/adjudicator.json"
+    if not adjudication_result.exists():
+        return {"status": "awaiting_adjudication", "request": str(arbitration), "requests_created": 1}
+    adjudicator = _read_object(adjudication_result)
+    _validate_evaluation(adjudicator, _read_object(arbitration), "adjudicator")
+    verdict = adjudicator["verdict"] if adjudicator["verdict"] in {"pass", "fail"} else "unresolved"
+    return _finish(case, verdict, reviews, adjudicator)

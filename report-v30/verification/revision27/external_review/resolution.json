@@ -1,0 +1,13 @@
+{
+  "necessary_issues_closed": true,
+  "necessary_groups": 5,
+  "thread_id": "6aa6afbe-3a60-83ec-8a73-b10183ac7172",
+  "thread_title": "中文评审要求",
+  "model_configuration_verified": false,
+  "review_scope": "Complete bilingual main text, bilingual Appendix T, and inherited Chinese Appendix R.",
+  "scope": "Five necessary groups closed after targeted bilingual reread; final optional wording follows the reviewer-provided sentence. No external PDF, original-log, or Lean revalidation.",
+  "first_submission_characters": 156273,
+  "closure_submission_characters": 21562,
+  "final_optional_wording_applied": true,
+  "recorded_utc": "2026-09-14T16:11:21.496162+00:00"
+}

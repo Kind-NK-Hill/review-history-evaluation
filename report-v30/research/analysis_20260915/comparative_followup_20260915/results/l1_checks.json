@@ -1,0 +1,50 @@
+{
+  "identical_error_outputs": [
+    {
+      "run": "r2-l1-b",
+      "initial": "E013",
+      "repeat": "E014",
+      "stdout_exactly_identical": true,
+      "patch_error": "error: patch failed: ProbabilityTheory/chapter_13/prob_13_9.lean:38\nerror: ProbabilityTheory/chapter_13/prob_13_9.lean: patch does not apply\n"
+    },
+    {
+      "run": "r2-l1-b",
+      "initial": "E013",
+      "repeat": "E016",
+      "stdout_exactly_identical": true,
+      "patch_error": "error: corrupt patch at line 26\n"
+    },
+    {
+      "run": "r2-l1-b",
+      "initial": "E013",
+      "repeat": "E017",
+      "stdout_exactly_identical": true,
+      "patch_error": "error: patch failed: ProbabilityTheory/chapter_13/prob_13_9.lean:35\nerror: ProbabilityTheory/chapter_13/prob_13_9.lean: patch does not apply\nerror: corrupt patch at line 18\nerror: corrupt patch at line 10\nerror: corrupt patch at line 12\n"
+    },
+    {
+      "run": "r2-l1-c",
+      "initial": "E022",
+      "repeat": "E026",
+      "stdout_exactly_identical": true,
+      "patch_error": "error: corrupt patch at line 20\n"
+    },
+    {
+      "run": "r2-l1-c",
+      "initial": "E022",
+      "repeat": "E027",
+      "stdout_exactly_identical": true,
+      "patch_error": "error: patch failed: ProbabilityTheory/chapter_13/prob_13_9.lean:30\nerror: ProbabilityTheory/chapter_13/prob_13_9.lean: patch does not apply\nerror: corrupt patch at line 17\nerror: corrupt patch at line 22\n"
+    },
+    {
+      "run": "r2-l1-c",
+      "initial": "E022",
+      "repeat": "E028",
+      "stdout_exactly_identical": true,
+      "patch_error": "error: patch failed: ProbabilityTheory/chapter_13/prob_13_9.lean:30\nerror: ProbabilityTheory/chapter_13/prob_13_9.lean: patch does not apply\n"
+    }
+  ],
+  "A_reviewed_candidate_matches_final": true,
+  "A_candidate_hash": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585",
+  "A_final_source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+  "scope": "Text identity checks against archived evidence; no new Lean build or causal intervention."
+}

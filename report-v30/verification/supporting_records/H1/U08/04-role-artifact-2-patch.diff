@@ -1,0 +1,517 @@
+--- a/artifacts/phase2_prompt_packs/thm_9_5/draft.lean
++++ b/artifacts/phase2_prompt_packs/thm_9_5/draft.lean
+@@ -342,3 +342,514 @@
+   · exact hnonneg v hv
+   · have h := hnonneg (-v) (by linarith)
+     simpa [F, integral_sinc_neg v] using h
++
++noncomputable def sincIntervalKernel (a b T x : ℝ) : ℝ :=
++  2 * ((∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u) -
++    ∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u)
++
++lemma tendsto_integral_sinc_atBot :
++    Tendsto (fun T : ℝ => ∫ u in (0 : ℝ)..T, Real.sinc u)
++      atBot (nhds (-(Real.pi / 2))) := by
++  have h := tendsto_integral_sinc.comp tendsto_neg_atBot_atTop
++  simpa [integral_sinc_neg] using h.neg
++
++lemma tendsto_sincIntervalKernel {a b x : ℝ} (hab : a < b) :
++    Tendsto (fun T : ℝ => sincIntervalKernel a b T x) atTop
++      (nhds (if x ∈ Ioo a b then 2 * Real.pi
++        else if x = a ∨ x = b then Real.pi else 0)) := by
++  by_cases hax : a < x
++  · by_cases hxb : x < b
++    · have hb : Tendsto (fun T : ℝ => ∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u)
++          atTop (nhds (Real.pi / 2)) :=
++        tendsto_integral_sinc.comp ((tendsto_const_mul_atTop_of_pos (sub_pos.mpr hxb)).2 tendsto_id)
++      have ha : Tendsto (fun T : ℝ => ∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u)
++          atTop (nhds (-(Real.pi / 2))) :=
++        tendsto_integral_sinc_atBot.comp
++          (tendsto_id.const_mul_atTop_of_neg (sub_neg.mpr hax))
++      simpa [sincIntervalKernel, hax, hxb] using
++        (tendsto_const_nhds.mul (hb.sub ha) :
++          Tendsto (fun T : ℝ => 2 *
++            ((∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u) -
++             ∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u)) atTop
++            (nhds (2 * ((Real.pi / 2 : ℝ) - (-(Real.pi / 2) : ℝ)))))
++    · have hbx : b ≤ x := le_of_not_gt hxb
++      have ha : Tendsto (fun T : ℝ => ∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u)
++          atTop (nhds (-(Real.pi / 2))) :=
++        tendsto_integral_sinc_atBot.comp
++          (tendsto_id.const_mul_atTop_of_neg (sub_neg.mpr hax))
++      by_cases hxeq : x = b
++      · subst x
++        have hlim := (tendsto_const_nhds.mul (tendsto_const_nhds.sub ha) :
++            Tendsto (fun T : ℝ => 2 *
++              ((0 : ℝ) - ∫ u in (0 : ℝ)..((a - b) * T), Real.sinc u)) atTop
++              (nhds (2 * ((0 : ℝ) - (-(Real.pi / 2))))))
++        rw [show 2 * ((0 : ℝ) - (-(Real.pi / 2))) = Real.pi by ring] at hlim
++        simpa [sincIntervalKernel, hab.ne, hab.ne'] using hlim
++      · have hbneg : b - x < 0 := sub_neg.mpr (lt_of_le_of_ne hbx (Ne.symm hxeq))
++        have hb : Tendsto (fun T : ℝ => ∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u)
++            atTop (nhds (-(Real.pi / 2))) :=
++          tendsto_integral_sinc_atBot.comp
++            (tendsto_id.const_mul_atTop_of_neg hbneg)
++        simpa [sincIntervalKernel, hax, hxb, hxeq, ne_of_gt hax] using
++          (tendsto_const_nhds.mul (hb.sub ha) :
++            Tendsto (fun T : ℝ => 2 *
++              ((∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u) -
++               ∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u)) atTop
++              (nhds (2 * ((-(Real.pi / 2) : ℝ) - (-(Real.pi / 2))))))
++  · have hxa : x ≤ a := le_of_not_gt hax
++    by_cases hxeq : x = a
++    · subst x
++      have hb : Tendsto (fun T : ℝ => ∫ u in (0 : ℝ)..((b - a) * T), Real.sinc u)
++          atTop (nhds (Real.pi / 2)) :=
++        tendsto_integral_sinc.comp
++          ((tendsto_const_mul_atTop_of_pos (sub_pos.mpr hab)).2 tendsto_id)
++      have hlim := (tendsto_const_nhds.mul (hb.sub tendsto_const_nhds) :
++          Tendsto (fun T : ℝ => 2 *
++            ((∫ u in (0 : ℝ)..((b - a) * T), Real.sinc u) - (0 : ℝ))) atTop
++            (nhds (2 * ((Real.pi / 2 : ℝ) - 0))))
++      rw [show 2 * ((Real.pi / 2 : ℝ) - 0) = Real.pi by ring] at hlim
++      simpa [sincIntervalKernel, hab.ne, hab.ne'] using hlim
++    · have haxpos : 0 < a - x := sub_pos.mpr (lt_of_le_of_ne hxa (hxeq))
++      have ha : Tendsto (fun T : ℝ => ∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u)
++          atTop (nhds (Real.pi / 2)) :=
++        tendsto_integral_sinc.comp
++          (((tendsto_const_mul_atTop_of_pos haxpos).2 tendsto_id))
++      have hbpos : 0 < b - x := by linarith
++      have hb : Tendsto (fun T : ℝ => ∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u)
++          atTop (nhds (Real.pi / 2)) :=
++        tendsto_integral_sinc.comp
++          (((tendsto_const_mul_atTop_of_pos hbpos).2 tendsto_id))
++      simpa [sincIntervalKernel, hax, hxeq, hab.ne, hab.ne', ne_of_lt (lt_of_le_of_lt hxa hab)] using
++        (tendsto_const_nhds.mul (hb.sub ha) :
++          Tendsto (fun T : ℝ => 2 *
++            ((∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u) -
++             ∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u)) atTop
++            (nhds (2 * ((Real.pi / 2 : ℝ) - (Real.pi / 2)))))
++
++lemma exists_uniform_bound_sincIntervalKernel :
++    ∃ C ≥ 0, ∀ a b T x : ℝ, ‖sincIntervalKernel a b T x‖ ≤ 4 * C := by
++  rcases exists_uniform_bound_integral_sinc with ⟨C, hC, hbound⟩
++  refine ⟨C, hC, fun a b T x => ?_⟩
++  rw [sincIntervalKernel, norm_mul]
++  norm_num
++  calc
++    2 * |(∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u) -
++        ∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u| ≤
++        2 * (‖∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u‖ +
++          ‖∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u‖) := by
++      gcongr
++      simpa [Real.norm_eq_abs] using
++        norm_sub_le (∫ u in (0 : ℝ)..((b - x) * T), Real.sinc u)
++          (∫ u in (0 : ℝ)..((a - x) * T), Real.sinc u)
++    _ ≤ 2 * (C + C) := by gcongr <;> apply hbound
++    _ = 4 * C := by ring
++
++noncomputable def inversionLimitKernel (a b x : ℝ) : ℝ :=
++  if x ∈ Ioo a b then 2 * Real.pi
++  else if x = a ∨ x = b then Real.pi else 0
++
++set_option maxHeartbeats 800000 in
++lemma tendsto_integral_sincIntervalKernel
++    (μ : Measure ℝ) [IsProbabilityMeasure μ] {a b : ℝ} (hab : a < b) :
++    Tendsto (fun T : ℝ => ∫ x, (sincIntervalKernel a b T x : ℂ) ∂μ) atTop
++      (nhds (∫ x, (inversionLimitKernel a b x : ℂ) ∂μ)) := by
++  rcases exists_uniform_bound_sincIntervalKernel with ⟨C, hC, hbound⟩
++  let Y : ℝ → ℝ := fun _ => 4 * C
++  have hY : Integrable Y μ := integrable_const _
++  have hcontF : Continuous (fun v : ℝ => ∫ u in (0 : ℝ)..v, Real.sinc u) :=
++    intervalIntegral.continuous_primitive
++      (fun c d => Real.continuous_sinc.intervalIntegrable c d) 0
++  have hmeas : ∀ᶠ T : ℝ in atTop,
++      AEStronglyMeasurable (fun x => (sincIntervalKernel a b T x : ℂ)) μ := by
++    filter_upwards with T
++    have hc₁ : Continuous (fun x : ℝ => (b - x) * T) :=
++      (continuous_const.sub continuous_id).mul continuous_const
++    have hc₂ : Continuous (fun x : ℝ => (a - x) * T) :=
++      (continuous_const.sub continuous_id).mul continuous_const
++    have hr : Continuous (fun x => sincIntervalKernel a b T x) := by
++      unfold sincIntervalKernel
++      exact continuous_const.mul ((hcontF.comp hc₁).sub (hcontF.comp hc₂))
++    exact (Complex.continuous_ofReal.comp hr).aestronglyMeasurable
++  have hbound' : ∀ᶠ T : ℝ in atTop, ∀ᵐ x ∂μ,
++      ‖(sincIntervalKernel a b T x : ℂ)‖ ≤ Y x := by
++    filter_upwards with T
++    exact ae_of_all μ fun x => by
++      simpa [Y, Complex.norm_real] using hbound a b T x
++  have hlim : ∀ᵐ x ∂μ, Tendsto
++      (fun T : ℝ => (sincIntervalKernel a b T x : ℂ)) atTop
++      (nhds (inversionLimitKernel a b x : ℂ)) := by
++    filter_upwards with x
++    exact Complex.continuous_ofReal.continuousAt.tendsto.comp
++      (by simpa [inversionLimitKernel] using tendsto_sincIntervalKernel (x := x) hab)
++  exact thm_7_DCT_filter μ
++    (fun T x => (sincIntervalKernel a b T x : ℂ))
++    (fun x => (inversionLimitKernel a b x : ℂ)) Y atTop
++    hmeas hY hbound' hlim
++
++lemma integral_sin_mul_div (c T : ℝ) :
++    (∫ t in (0 : ℝ)..T, Real.sin (c * t) / t) =
++      ∫ u in (0 : ℝ)..(c * T), Real.sinc u := by
++  by_cases hc : c = 0
++  · simp [hc]
++  calc
++    (∫ t in (0 : ℝ)..T, Real.sin (c * t) / t) =
++        ∫ t in (0 : ℝ)..T, c * Real.sinc (c * t) := by
++      apply intervalIntegral.integral_congr_ae
++      filter_upwards [show ∀ᵐ t : ℝ ∂volume, t ≠ 0 by exact Measure.ae_ne volume 0] with t ht _
++      rw [Real.sinc_of_ne_zero (mul_ne_zero hc ht)]
++      field_simp
++    _ = c * ∫ t in (0 : ℝ)..T, Real.sinc (c * t) := by
++      rw [intervalIntegral.integral_const_mul]
++    _ = ∫ u in (0 : ℝ)..(c * T), Real.sinc u := by
++      simpa using intervalIntegral.mul_integral_comp_mul_left (f := Real.sinc) c
++
++noncomputable def oscillatoryKernel (a b x t : ℝ) : ℂ :=
++  ((Real.sin (t * (x - a)) - Real.sin (t * (x - b))) / t : ℝ) +
++    Complex.I * ((Real.cos (t * (x - b)) - Real.cos (t * (x - a))) / t : ℝ)
++
++lemma oscillatoryKernel_zero (a b x : ℝ) : oscillatoryKernel a b x 0 = 0 := by
++  simp [oscillatoryKernel]
++
++lemma oscillatoryKernel_add_neg {a b x t : ℝ} (ht : t ≠ 0) :
++    oscillatoryKernel a b x t + oscillatoryKernel a b x (-t) =
++      ((2 * (Real.sin ((b - x) * t) / t -
++        Real.sin ((a - x) * t) / t) : ℝ) : ℂ) := by
++  have hre :
++      (Real.sin (t * (x - a)) - Real.sin (t * (x - b))) / t +
++          (Real.sin ((-t) * (x - a)) - Real.sin ((-t) * (x - b))) / (-t) =
++        2 * (Real.sin ((b - x) * t) / t - Real.sin ((a - x) * t) / t) := by
++    rw [show (-t) * (x - a) = -(t * (x - a)) by ring,
++      show (-t) * (x - b) = -(t * (x - b)) by ring,
++      Real.sin_neg, Real.sin_neg]
++    rw [show (b - x) * t = -(t * (x - b)) by ring,
++      show (a - x) * t = -(t * (x - a)) by ring,
++      Real.sin_neg, Real.sin_neg]
++    field_simp [ht]
++    ring
++  have him :
++      (Real.cos (t * (x - b)) - Real.cos (t * (x - a))) / t +
++          (Real.cos ((-t) * (x - b)) - Real.cos ((-t) * (x - a))) / (-t) = 0 := by
++    rw [show (-t) * (x - a) = -(t * (x - a)) by ring,
++      show (-t) * (x - b) = -(t * (x - b)) by ring,
++      Real.cos_neg, Real.cos_neg]
++    field_simp [ht]
++    ring
++  apply Complex.ext
++  · simpa only [oscillatoryKernel, Complex.add_re, Complex.ofReal_re, Complex.ofReal_im, Complex.mul_re,
++      Complex.I_re, Complex.I_im, zero_mul, one_mul, sub_zero, add_zero] using hre
++  · simp only [oscillatoryKernel, Complex.add_im, Complex.ofReal_im, Complex.mul_im,
++      Complex.I_re, Complex.I_im, zero_mul, one_mul, zero_add, Complex.mul_re,
++      Complex.ofReal_re]
++    rw [him]
++
++lemma intervalIntegrable_oscillatoryKernel (a b x s T : ℝ) :
++    IntervalIntegrable (oscillatoryKernel a b x) volume s T := by
++  rw [intervalIntegrable_iff]
++  let K : ℝ := 2 * (|x - a| + |x - b|)
++  have hmeas : AEStronglyMeasurable (oscillatoryKernel a b x)
++      (volume.restrict (uIoc s T)) := by
++    apply Measurable.aestronglyMeasurable
++    unfold oscillatoryKernel
++    fun_prop
++  letI : IsFiniteMeasure (volume.restrict (uIoc s T)) :=
++    IsFiniteMeasure.mk (by simp)
++  refine MeasureTheory.Integrable.mono (integrable_const K) hmeas ?_
++  filter_upwards with t
++  by_cases ht : t = 0
++  · subst t
++    simp [oscillatoryKernel, K]
++  have ht_abs : 0 < |t| := abs_pos.mpr ht
++  have hr : |(Real.sin (t * (x - a)) - Real.sin (t * (x - b))) / t| ≤
++      |x - a| + |x - b| := by
++    rw [abs_div]
++    apply (div_le_iff₀ ht_abs).2
++    calc
++      |Real.sin (t * (x - a)) - Real.sin (t * (x - b))| ≤
++          |Real.sin (t * (x - a))| + |Real.sin (t * (x - b))| := abs_sub _ _
++      _ ≤ |t * (x - a)| + |t * (x - b)| :=
++        add_le_add Real.abs_sin_le_abs Real.abs_sin_le_abs
++      _ = (|x - a| + |x - b|) * |t| := by
++        rw [abs_mul, abs_mul]
++        ring
++  have hi : |(Real.cos (t * (x - b)) - Real.cos (t * (x - a))) / t| ≤
++      |x - a| + |x - b| := by
++    rw [abs_div]
++    apply (div_le_iff₀ ht_abs).2
++    calc
++      |Real.cos (t * (x - b)) - Real.cos (t * (x - a))| ≤
++          |t * (x - b) - t * (x - a)| := Real.abs_cos_sub_cos_le _ _
++      _ ≤ |t * (x - b)| + |t * (x - a)| := abs_sub _ _
++      _ = (|x - a| + |x - b|) * |t| := by
++        rw [abs_mul, abs_mul]
++        ring
++  calc
++    ‖oscillatoryKernel a b x t‖ ≤
++        ‖(((Real.sin (t * (x - a)) - Real.sin (t * (x - b))) / t : ℝ) : ℂ)‖ +
++        ‖Complex.I * (((Real.cos (t * (x - b)) - Real.cos (t * (x - a))) / t : ℝ) : ℂ)‖ := by
++      rw [oscillatoryKernel]
++      exact norm_add_le _ _
++    _ = |(Real.sin (t * (x - a)) - Real.sin (t * (x - b))) / t| +
++        |(Real.cos (t * (x - b)) - Real.cos (t * (x - a))) / t| := by
++      simp only [Complex.norm_real, norm_mul, Complex.norm_I, one_mul, Real.norm_eq_abs]
++    _ ≤ 2 * (|x - a| + |x - b|) := by linarith
++    _ = ‖K‖ := by
++      change 2 * (|x - a| + |x - b|) = ‖2 * (|x - a| + |x - b|)‖
++      have hk : 0 ≤ 2 * (|x - a| + |x - b|) :=
++        mul_nonneg (by norm_num) (add_nonneg (abs_nonneg _) (abs_nonneg _))
++      rw [Real.norm_eq_abs, abs_of_nonneg hk]
++
++lemma intervalIntegrable_sin_mul_div (c s T : ℝ) :
++    IntervalIntegrable (fun t : ℝ => Real.sin (c * t) / t) volume s T := by
++  by_cases hc : c = 0
++  · simp [hc]
++  have hgood : IntervalIntegrable (fun t : ℝ => c * Real.sinc (c * t))
++      volume s T :=
++    ((Real.continuous_sinc.comp (continuous_const.mul continuous_id)).const_mul c).intervalIntegrable s T
++  apply hgood.congr_ae
++  filter_upwards [Measure.ae_ne (volume.restrict (uIoc s T)) 0] with t ht
++  rw [Real.sinc_of_ne_zero (mul_ne_zero hc ht)]
++  field_simp
++
++lemma integral_oscillatoryKernel_eq_sincIntervalKernel
++    {a b x T : ℝ} (hT : 0 ≤ T) :
++    (∫ t in (-T)..T, oscillatoryKernel a b x t) =
++      (sincIntervalKernel a b T x : ℂ) := by
++  have hleft := intervalIntegrable_oscillatoryKernel a b x (-T) 0
++  have hright := intervalIntegrable_oscillatoryKernel a b x 0 T
++  rw [← intervalIntegral.integral_add_adjacent_intervals
++    (b := 0) hleft hright]
++  have hneg := intervalIntegral.integral_comp_neg (f := oscillatoryKernel a b x)
++    (a := 0) (b := T)
++  simp only [neg_zero] at hneg
++  rw [← hneg]
++  have hrightneg : IntervalIntegrable (fun t => oscillatoryKernel a b x (-t))
++      volume 0 T := by
++    exact (by simpa only [neg_zero, neg_neg] using
++      (IntervalIntegrable.iff_comp_neg).1 hleft.symm)
++  rw [← intervalIntegral.integral_add hrightneg hright]
++  let f : ℝ → ℝ := fun t => Real.sin ((b - x) * t) / t
++  let g : ℝ → ℝ := fun t => Real.sin ((a - x) * t) / t
++  have hf : IntervalIntegrable f volume 0 T :=
++    intervalIntegrable_sin_mul_div (b - x) 0 T
++  have hg : IntervalIntegrable g volume 0 T :=
++    intervalIntegrable_sin_mul_div (a - x) 0 T
++  have hreal : IntervalIntegrable (fun t => 2 * (f t - g t)) volume 0 T :=
++    (hf.sub hg).const_mul 2
++  calc
++    (∫ t in (0 : ℝ)..T,
++        oscillatoryKernel a b x (-t) + oscillatoryKernel a b x t) =
++        ∫ t in (0 : ℝ)..T, ((2 * (f t - g t) : ℝ) : ℂ) := by
++      apply intervalIntegral.integral_congr_ae
++      filter_upwards [Measure.ae_ne volume 0] with t ht _
++      simpa [f, g, add_comm] using oscillatoryKernel_add_neg (a := a) (b := b) (x := x) ht
++    _ = ((∫ t in (0 : ℝ)..T, 2 * (f t - g t) : ℝ) : ℂ) := by
++      simpa using Complex.ofRealCLM.intervalIntegral_comp_comm hreal
++    _ = (sincIntervalKernel a b T x : ℂ) := by
++      congr 1
++      rw [intervalIntegral.integral_const_mul,
++        intervalIntegral.integral_sub hf hg, integral_sin_mul_div,
++        integral_sin_mul_div]
++      simp [f, g, sincIntervalKernel]
++
++lemma oscillatoryKernel_eq_exp {a b x t : ℝ} (ht : t ≠ 0) :
++    oscillatoryKernel a b x t =
++      (Complex.exp (((t * (x - a) : ℝ) : ℂ) * Complex.I) -
++        Complex.exp (((t * (x - b) : ℝ) : ℂ) * Complex.I)) /
++          (Complex.I * (t : ℂ)) := by
++  rw [oscillatoryKernel, Complex.exp_ofReal_mul_I (t * (x - a)),
++    Complex.exp_ofReal_mul_I (t * (x - b))]
++  apply Complex.ext
++  · simp only [Complex.add_re, Complex.sub_re, Complex.mul_re, Complex.div_re,
++      Complex.ofReal_re, Complex.ofReal_im, Complex.I_re, Complex.I_im, Complex.I_mul_re, Complex.I_mul_im, Complex.mul_I_re, Complex.mul_I_im,
++      zero_mul, mul_zero, add_zero, zero_add, one_mul, Complex.normSq_apply]
++    field_simp [ht]
++    simp only [Complex.add_re, Complex.add_im, Complex.sub_re, Complex.sub_im,
++      Complex.mul_re, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im,
++      Complex.I_re, Complex.I_im, zero_mul, mul_zero, add_zero, zero_add, one_mul]
++    ring
++  · simp only [Complex.add_im, Complex.sub_im, Complex.mul_im, Complex.div_im,
++      Complex.ofReal_re, Complex.ofReal_im, Complex.I_re, Complex.I_im, Complex.I_mul_re, Complex.I_mul_im, Complex.mul_I_re, Complex.mul_I_im,
++      zero_mul, mul_zero, add_zero, zero_add, one_mul, Complex.normSq_apply]
++    field_simp [ht]
++    simp only [Complex.add_re, Complex.add_im, Complex.sub_re, Complex.sub_im,
++      Complex.mul_re, Complex.mul_im, Complex.ofReal_re, Complex.ofReal_im,
++      Complex.I_re, Complex.I_im, zero_mul, mul_zero, add_zero, zero_add, one_mul]
++    ring
++
++noncomputable def textbookKernel (a b x t : ℝ) : ℂ :=
++  (Complex.exp (-Complex.I * (t : ℂ) * (a : ℂ)) -
++      Complex.exp (-Complex.I * (t : ℂ) * (b : ℂ))) /
++    (Complex.I * (t : ℂ)) *
++    Complex.exp (Complex.I * (t : ℂ) * (x : ℂ))
++
++lemma textbookKernel_eq_oscillatoryKernel {a b x t : ℝ} (ht : t ≠ 0) :
++    textbookKernel a b x t = oscillatoryKernel a b x t := by
++  rw [oscillatoryKernel_eq_exp ht, textbookKernel]
++  have hden : Complex.I * (t : ℂ) ≠ 0 := mul_ne_zero Complex.I_ne_zero (Complex.ofReal_ne_zero.mpr ht)
++  field_simp [hden]
++  rw [sub_mul, ← Complex.exp_add, ← Complex.exp_add]
++  congr 1 <;> congr 1 <;> push_cast <;> ring
++
++lemma textbookKernel_zero (a b x : ℝ) : textbookKernel a b x 0 = 0 := by
++  simp [textbookKernel]
++
++lemma textbookKernel_norm_le (a b x t : ℝ) :
++    ‖textbookKernel a b x t‖ ≤ |b - a| := by
++  by_cases ht : t = 0
++  · subst t
++    simp [textbookKernel]
++  rw [textbookKernel, norm_mul, norm_div]
++  have hexpnorm : ‖Complex.exp (Complex.I * (t : ℂ) * (x : ℂ))‖ = 1 := by
++    rw [show Complex.I * (t : ℂ) * (x : ℂ) =
++      Complex.I * ((t * x : ℝ) : ℂ) by push_cast; ring]
++    exact Complex.norm_exp_I_mul_ofReal _
++  rw [hexpnorm, mul_one]
++  have hden : ‖Complex.I * (t : ℂ)‖ = |t| := by simp
++  rw [hden]
++  have hnum :
++      ‖Complex.exp (-Complex.I * (t : ℂ) * (a : ℂ)) -
++        Complex.exp (-Complex.I * (t : ℂ) * (b : ℂ))‖ ≤ |t| * |b - a| := by
++    rw [show Complex.exp (-Complex.I * (t : ℂ) * (a : ℂ)) -
++        Complex.exp (-Complex.I * (t : ℂ) * (b : ℂ)) =
++      Complex.exp (-Complex.I * (t : ℂ) * (b : ℂ)) *
++        (Complex.exp (Complex.I * ((t * (b - a) : ℝ) : ℂ)) - 1) by
++          rw [mul_sub, mul_one, ← Complex.exp_add]
++          congr 1
++          push_cast
++          ring]
++    rw [norm_mul, show ‖Complex.exp (-Complex.I * (t : ℂ) * (b : ℂ))‖ = 1 by
++      rw [show -Complex.I * (t : ℂ) * (b : ℂ) =
++        Complex.I * ((-(t * b) : ℝ) : ℂ) by push_cast; ring]
++      exact Complex.norm_exp_I_mul_ofReal _, one_mul]
++    simpa [abs_mul, mul_comm] using thm_9_4 (t * (b - a))
++  exact (div_le_iff₀ (abs_pos.mpr ht)).2 (by
++    simpa [mul_comm] using hnum)
++
++noncomputable def inversionIntegrand (μ : Measure ℝ) (a b t : ℝ) : ℂ :=
++  (Complex.exp (-Complex.I * (t : ℂ) * (a : ℂ)) -
++      Complex.exp (-Complex.I * (t : ℂ) * (b : ℂ))) /
++    (Complex.I * (t : ℂ)) * characteristicFunction μ t
++
++set_option maxHeartbeats 800000 in
++lemma finite_inversion_fubini
++    (μ : Measure ℝ) [IsProbabilityMeasure μ] {a b T : ℝ} (hT : 0 ≤ T) :
++    (∫ t in (-T)..T, inversionIntegrand μ a b t) =
++      ∫ x, (sincIntervalKernel a b T x : ℂ) ∂μ := by
++  let ν := volume.restrict (uIoc (-T) T)
++  letI : IsFiniteMeasure ν := IsFiniteMeasure.mk (by
++    simp [ν])
++  let f : ℝ → ℝ → ℂ := fun t x => textbookKernel a b x t
++  have hfmeas : AEStronglyMeasurable (Function.uncurry f) (ν.prod μ) := by
++    apply Measurable.aestronglyMeasurable
++    dsimp [Function.uncurry, f, textbookKernel]
++    fun_prop
++  have hf : Integrable (Function.uncurry f) (ν.prod μ) := by
++    apply (integrable_const |b - a|).mono hfmeas
++    filter_upwards with p
++    simpa [Function.uncurry, f, Real.norm_eq_abs] using textbookKernel_norm_le a b p.2 p.1
++  calc
++    (∫ t in (-T)..T, inversionIntegrand μ a b t) =
++        ∫ t in (-T)..T, ∫ x, textbookKernel a b x t ∂μ := by
++      apply intervalIntegral.integral_congr
++      intro t _
++      rw [inversionIntegrand, characteristicFunction, charFun_apply_real,
++        ← MeasureTheory.integral_const_mul]
++      apply MeasureTheory.integral_congr_ae
++      filter_upwards with x
++      congr 1
++      congr 1
++      rw [show t * x * Complex.I = Complex.I * (t : ℂ) * (x : ℂ) by
++        push_cast
++        ring]
++    _ = ∫ x, (∫ t in (-T)..T, textbookKernel a b x t) ∂μ := by
++      simpa [f, ν] using (intervalIntegral_integral_swap (μ := μ) hf)
++    _ = ∫ x, (sincIntervalKernel a b T x : ℂ) ∂μ := by
++      apply MeasureTheory.integral_congr_ae
++      filter_upwards with x
++      have heq := intervalIntegral.integral_congr_ae (a := -T) (b := T) <| by
++        filter_upwards [Measure.ae_ne volume 0] with t ht _
++        exact textbookKernel_eq_oscillatoryKernel (a := a) (b := b) (x := x) ht
++      exact heq.trans (integral_oscillatoryKernel_eq_sincIntervalKernel (a := a) (b := b) (x := x) hT)
++
++lemma integral_inversionLimitKernel
++    (μ : Measure ℝ) [IsProbabilityMeasure μ] {a b : ℝ} (hab : a < b) :
++    (∫ x, (inversionLimitKernel a b x : ℂ) ∂μ) =
++      (2 * Real.pi : ℂ) * μ.real (Ioo a b) +
++        (Real.pi : ℂ) * μ.real {a} + (Real.pi : ℂ) * μ.real {b} := by
++  have hfun : (fun x : ℝ => (inversionLimitKernel a b x : ℂ)) =
++      fun x =>
++        (2 * Real.pi : ℂ) * (Ioo a b).indicator (fun _ : ℝ => (1 : ℂ)) x +
++        (Real.pi : ℂ) * ({a} : Set ℝ).indicator (fun _ => (1 : ℂ)) x +
++        (Real.pi : ℂ) * ({b} : Set ℝ).indicator (fun _ => (1 : ℂ)) x := by
++    funext x
++    simp only [inversionLimitKernel]
++    by_cases hx : x ∈ Ioo a b
++    · simp [hx, ne_of_gt hx.1, ne_of_lt hx.2]
++    · by_cases hxa : x = a
++      · subst x
++        simp [hab.ne, hab.ne', Set.mem_Ioo]
++      · by_cases hxb : x = b
++        · subst x
++          simp [hab.ne, hab.ne', Set.mem_Ioo]
++        · simp [hx, hxa, hxb]
++  have hIoo : Integrable
++      ((Ioo a b).indicator (fun _ : ℝ => (1 : ℂ))) μ :=
++    (integrable_const (1 : ℂ)).indicator measurableSet_Ioo
++  have ha : Integrable
++      (({a} : Set ℝ).indicator (fun _ : ℝ => (1 : ℂ))) μ :=
++    (integrable_const (1 : ℂ)).indicator (measurableSet_singleton a)
++  have hb : Integrable
++      (({b} : Set ℝ).indicator (fun _ : ℝ => (1 : ℂ))) μ :=
++    (integrable_const (1 : ℂ)).indicator (measurableSet_singleton b)
++  rw [hfun]
++  change (∫ x, ((fun x : ℝ =>
++      (2 * Real.pi : ℂ) * (Ioo a b).indicator (fun _ : ℝ => (1 : ℂ)) x) +
++      (fun x : ℝ =>
++        (Real.pi : ℂ) * ({a} : Set ℝ).indicator (fun _ => (1 : ℂ)) x) +
++      (fun x : ℝ =>
++        (Real.pi : ℂ) * ({b} : Set ℝ).indicator (fun _ => (1 : ℂ)) x)) x ∂μ) = _
++  rw [MeasureTheory.integral_add'
++      ((hIoo.const_mul (2 * (Real.pi : ℂ))).add
++        (ha.const_mul (Real.pi : ℂ)))
++      (hb.const_mul (Real.pi : ℂ)),
++    MeasureTheory.integral_add'
++      (hIoo.const_mul (2 * (Real.pi : ℂ)))
++      (ha.const_mul (Real.pi : ℂ)),
++    MeasureTheory.integral_const_mul,
++    MeasureTheory.integral_const_mul,
++    MeasureTheory.integral_const_mul,
++    MeasureTheory.integral_indicator_const (1 : ℂ) measurableSet_Ioo,
++    MeasureTheory.integral_indicator_const (1 : ℂ) (measurableSet_singleton a),
++    MeasureTheory.integral_indicator_const (1 : ℂ) (measurableSet_singleton b)]
++  simp [Measure.real]
++
++lemma tendsto_inversionIntegral
++    (μ : Measure ℝ) [IsProbabilityMeasure μ] {a b : ℝ} (hab : a < b) :
++    Tendsto (fun T : ℝ => ∫ t in (-T)..T, inversionIntegrand μ a b t) atTop
++      (nhds ((2 * Real.pi : ℂ) * μ.real (Ioo a b) +
++        (Real.pi : ℂ) * μ.real {a} + (Real.pi : ℂ) * μ.real {b})) := by
++  have hkernel := tendsto_integral_sincIntervalKernel (μ := μ) hab
++  rw [integral_inversionLimitKernel μ hab] at hkernel
++  apply hkernel.congr'
++  filter_upwards [eventually_ge_atTop (0 : ℝ)] with T hT
++  exact (finite_inversion_fubini (a := a) (b := b) μ hT).symm
++
++/-- The inversion formula for a probability measure on the real line. -/
++theorem thm_9_5
++    (μ : Measure ℝ) [IsProbabilityMeasure μ] {a b : ℝ} (hab : a < b) :
++    Tendsto
++      (fun T : ℝ => (1 / (2 * Real.pi) : ℂ) *
++        ∫ t in (-T)..T,
++          (Complex.exp (-Complex.I * (t : ℂ) * (a : ℂ)) -
++              Complex.exp (-Complex.I * (t : ℂ) * (b : ℂ))) /
++            (Complex.I * (t : ℂ)) * characteristicFunction μ t)
++      atTop
++      (nhds (((μ.real (Ioo a b) + μ.real {a} / 2 +
++        μ.real {b} / 2 : ℝ) : ℂ))) := by
++  have hconst : Tendsto (fun _ : ℝ => (1 / (2 * Real.pi) : ℂ)) atTop
++      (nhds (1 / (2 * Real.pi) : ℂ)) := tendsto_const_nhds
++  have h := hconst.mul (tendsto_inversionIntegral μ hab)
++  simp only [inversionIntegrand] at h
++  convert h using 1
++  push_cast
++  field_simp [Real.pi_ne_zero]

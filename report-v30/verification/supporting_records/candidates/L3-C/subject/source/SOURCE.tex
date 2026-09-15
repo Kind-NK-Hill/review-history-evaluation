@@ -1,0 +1,21 @@
+% BEGIN EXACT CATALOG SOURCE: prob_7_6
+\textbf{7.6 (Scheff\'e Lemma).} Suppose $f_n$'s are nonnegative measurable functions that converge to $f$ almost everywhere as $n\to\infty$. Assume that $\int f_n\, d\mu \to \int f\, d\mu < \infty$.
+\begin{enumerate}[label=(\alph*)]
+    \item Show that $(f_k-f)^-$ is bounded by $f$, and hence, by the dominated convergence theorem, $\int (f_n-f)^- \to 0$.
+    \item Show that $\int |f_n-f|\to 0$. (Hint: Write $|f_n-f|$ as $(f_n-f)+2(f_n-f)^-$.)
+\end{enumerate}
+% END EXACT CATALOG SOURCE: prob_7_6
+
+% BEGIN EXACT CATALOG SOURCE: ex_10_3_2
+\textbf{Example 10.3.2 (Convergence of Pdf's Implies Convergence in Total Variation)} \\
+Suppose $(X_n)_{n\geq 1}$ is a sequence of continuous random variables with corresponding probability density functions $f_n(x)$. Suppose the $f_n(x)$'s converge to a probability density function $f(x)$, for almost all $x$ relative to the Lebesgue measure on $\mathbb{R}$. By the Scheffe lemma (Exercise 7.6), we have
+\[
+\int \lvert f_n-f\rvert\to 0
+\]
+as $n\to\infty$, which implies convergence in total variation. Since convergence in total variation implies convergence in distribution in general, we can conclude that the sequence of random variables $X_n$ converges in distribution.
+
+In particular, suppose $\mu_n\to\mu$ and $\sigma_n^2\to\sigma^2$. Then the probability density functions of the Gaussian distribution with mean $\mu_n$ and variance $\sigma_n^2$ converge pointwise to the probability density functions of the Gaussian distribution with mean $\mu$ and variance $\sigma^2$, as $n\to\infty$. By the arguments in the previous paragraph, we conclude that
+\[
+N(\mu_n,\sigma_n^2)\xrightarrow{D}N(\mu,\sigma^2).
+\]
+% END EXACT CATALOG SOURCE: ex_10_3_2

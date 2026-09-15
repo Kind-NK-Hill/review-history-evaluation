@@ -1,0 +1,10 @@
+{
+  "rows": 83,
+  "columns": 34,
+  "all_values_checked": true,
+  "round_trip_via_artifact_tool": true,
+  "format": "UTF-8 BOM; RFC 4180 quoted fields; CRLF",
+  "null_representation": "empty field",
+  "known_tokens": "Known lower bounds; usage_complete and missing_usage_dispatches distinguish unknown totals.",
+  "additional_xlsx_created": false
+}

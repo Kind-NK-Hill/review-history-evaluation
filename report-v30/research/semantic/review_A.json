@@ -1,0 +1,1419 @@
+[
+  {
+    "run_id": "r2-l1-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "首诊断实际来自新写入创新项鞅候选，包含 comap 展开、有限索引、求和接口及可积性目标。最终同一目标构建明确通过；最终源码保留积分求和调用和主鞅定理对辅助结论的应用，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_37kldH7Ah0Muxen2Y7iGXiJ4",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 58,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 59
+      },
+      {
+        "event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_fHa1f9Ue82nEpmSUeacKMaqO",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 71,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 72
+      },
+      {
+        "event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_mUO9PyIg8YitHJ8kz8rWQZLZ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 38,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 39
+      },
+      {
+        "event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_oExQ8kRTRq0WsyT6WDhsgbCE",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 40,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 41
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 49,
+        "detail_zh": "保留观测相对于历史过滤的可测性证明。",
+        "observed_line": "theorem prob139_observation_measurable {Ω : Type*} [m : MeasurableSpace Ω]",
+        "file_sha256": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 121,
+        "detail_zh": "保留改用的integrable_finsetSum。",
+        "observed_line": "  apply integrable_finsetSum",
+        "file_sha256": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 140,
+        "detail_zh": "最终鞅定理使用本地建立的可积性、适应性及条件期望等式。",
+        "observed_line": "  refine martingale_of_condExp_sub_eq_zero_nat",
+        "file_sha256": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585"
+      }
+    ],
+    "original_start_event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_37kldH7Ah0Muxen2Y7iGXiJ4",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l1-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "起点含针对 condExp 与 martingale 的实际源码检索。后续读取明确给出 martingale_of_condExp_sub_eq_zero_nat 的假设；最终第 88、110、140 行分别使用可积性、条件期望减法和该鞅构造，接受具体声明的采用。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_NMV0CRbPMKXN99cWpXi35ANG",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 36,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 37
+      },
+      {
+        "event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_fHa1f9Ue82nEpmSUeacKMaqO",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 71,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 72
+      },
+      {
+        "event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_mUO9PyIg8YitHJ8kz8rWQZLZ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 38,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 39
+      },
+      {
+        "event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_oExQ8kRTRq0WsyT6WDhsgbCE",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 40,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 41
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 88,
+        "detail_zh": "创新项可积性使用integrable_condExp。",
+        "observed_line": "  | succ n => exact (hInt (n + 1)).sub integrable_condExp",
+        "file_sha256": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 110,
+        "detail_zh": "条件均值为零证明使用condExp_sub。",
+        "observed_line": "              (condExp_sub (hInt (n + 1)) integrable_condExp (prob139Filtration X hX n))",
+        "file_sha256": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\prob_13_9.lean",
+        "line": 140,
+        "detail_zh": "最终定理使用martingale_of_condExp_sub_eq_zero_nat。",
+        "observed_line": "  refine martingale_of_condExp_sub_eq_zero_nat",
+        "file_sha256": "9a069b70c9bcca97af031d5f8efef7f49865fea1874f3140668d7f7d8d29f585"
+      }
+    ],
+    "original_start_event_id": "01a09be2-9fe7-7433-b7e3-24ffc4c435d8:call_NMV0CRbPMKXN99cWpXi35ANG",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l2-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "标准输入之外的 /tmp/check.lean 确实返回未知名称，同时给出全局 squeeze_zero。目标实现后续构建通过，最终直接用 integral_finsetSum 和 squeeze_zero。原标注没有宣称原始所有猜测名称都变成正确名称，接受其同需求实施进展。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c00-0ca0-7032-bf63-57dc5a53b1c9:call_8wCNGYlBmBb9GRJ4U2NkHXAi",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 61,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 62
+      },
+      {
+        "event_id": "01a09c00-0ca0-7032-bf63-57dc5a53b1c9:call_DGvFcpKeqejWLRuNon9rXJt0",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 86,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 87
+      },
+      {
+        "event_id": "01a09c00-0ca0-7032-bf63-57dc5a53b1c9:call_6gVhQvmYdb9YVONtrddrngak",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 33
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l2-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_5.lean",
+        "line": 131,
+        "detail_zh": "最终源码实际使用integral_finsetSum。",
+        "observed_line": "    rw [integral_finsetSum Finset.univ (f := fun i : Fin (n + 1) => X i)",
+        "file_sha256": "2a735d9eb050e5dd1ee26affb292ea3c629c1ef5c012183ccf35e799968bf28d"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l2-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_5.lean",
+        "line": 156,
+        "detail_zh": "最终源码使用本次探针已确认的全局squeeze_zero。",
+        "observed_line": "    apply squeeze_zero",
+        "file_sha256": "2a735d9eb050e5dd1ee26affb292ea3c629c1ef5c012183ccf35e799968bf28d"
+      }
+    ],
+    "original_start_event_id": "01a09c00-0ca0-7032-bf63-57dc5a53b1c9:call_8wCNGYlBmBb9GRJ4U2NkHXAi",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l2-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "首检索针对方差有限和，后续 Covariance/Variance 源码实际返回 covariance_eq_sub、variance_fun_sum。对应 thm_11_4 候选构建通过，最终直接使用这两条，接受。与弱大数律接口探针保持不同需求合理。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c00-0ca0-7032-bf63-57dc5a53b1c9:call_VxbV964T0RdzSoiwXq8DmET8",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 30,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 31
+      },
+      {
+        "event_id": "01a09c00-0ca0-7032-bf63-57dc5a53b1c9:call_PeAbnvpoTf8mCwHHZ7s2tusn",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 39,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 40
+      },
+      {
+        "event_id": "01a09c00-0ca0-7032-bf63-57dc5a53b1c9:call_6gVhQvmYdb9YVONtrddrngak",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 33
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l2-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+        "line": 108,
+        "detail_zh": "以covariance_eq_sub和不相关定义消去非对角协方差。",
+        "observed_line": "    rw [covariance_eq_sub (hX i) (hX j), sub_eq_zero]",
+        "file_sha256": "55815cf0347fd5a6a45413d135e78dde801fda29f542997870b5da9374dc2d8c"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l2-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_4.lean",
+        "line": 110,
+        "detail_zh": "主证明调用variance_fun_sum。",
+        "observed_line": "  rw [variance_fun_sum hX]",
+        "file_sha256": "55815cf0347fd5a6a45413d135e78dde801fda29f542997870b5da9374dc2d8c"
+      }
+    ],
+    "original_start_event_id": "01a09c00-0ca0-7032-bf63-57dc5a53b1c9:call_VxbV964T0RdzSoiwXq8DmET8",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l3-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "首候选真实诊断包含默认 MeasureSpace、错误 max 字段和复合极限表达；终点补丁实际把目标写成复合函数 Tendsto，构建明确通过。最终第 52—54 行保留该修正及支配收敛应用，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_1X7G6B3332XokrbgiXDPGdPT",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 58,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 59
+      },
+      {
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_wawb8QZvt6aLB15SPAs85h42",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 84,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 85
+      },
+      {
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_AWzFB11dLsx2tuu67CfUc6yj",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 44,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 45
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+        "line": 22,
+        "detail_zh": "最终负部界引理显式给出测度μ。",
+        "observed_line": "theorem prob_7_6_negPart_le",
+        "file_sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+        "line": 52,
+        "detail_zh": "最终源码显式将目标写成复合函数极限。",
+        "observed_line": "    change Tendsto ((fun y : ℝ => max (f x - y) 0) ∘ fun n => fseq n x) atTop (𝓝 0)",
+        "file_sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+        "line": 54,
+        "detail_zh": "负部积分通过支配收敛获得极限。",
+        "observed_line": "  simpa using tendsto_integral_of_dominated_convergence f hmeas hf_integrable hbound hlim",
+        "file_sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf"
+      }
+    ],
+    "original_start_event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_1X7G6B3332XokrbgiXDPGdPT",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l3-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "首查询未给出现成 Scheffé 证明，后续确实读取支配收敛定理的完整类型，再完成本地负部论证。局部构建与最终直接调用匹配，接受；不把第一次搜索的每个结果都判为采用。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_md7KbcqTtglIMAHV2OiUNWoQ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 40,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 41
+      },
+      {
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_wawb8QZvt6aLB15SPAs85h42",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 84,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 85
+      },
+      {
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_AWzFB11dLsx2tuu67CfUc6yj",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 44,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 45
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+        "line": 54,
+        "detail_zh": "调用tendsto_integral_of_dominated_convergence。",
+        "observed_line": "  simpa using tendsto_integral_of_dominated_convergence f hmeas hf_integrable hbound hlim",
+        "file_sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_07\\prob_7_6.lean",
+        "line": 56,
+        "detail_zh": "本地Scheffé主定理接续负部积分结果。",
+        "observed_line": "theorem prob_7_6",
+        "file_sha256": "86c17e7369d4a8d615ceeb7a8754a1276311b5f2d0567aeab293a43b30a9bcaf"
+      }
+    ],
+    "original_start_event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_md7KbcqTtglIMAHV2OiUNWoQ",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l4-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "原始 /dev/stdin 的未知名称与标注一致；终点仍有其它负诊断，但 Integrable.indicator、Integrable.abs 已实际返回有效类型。usable_declaration_found 的范围成立，最终源码直接使用这些相关接口，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_VtMCV5AK9qiU9Qg17XgmJaN4",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 36,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 37
+      },
+      {
+        "event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_Cx3dcF8V6VE9xCeYcoSXeEcp",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 38,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 39
+      },
+      {
+        "event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_qWasDVVV9ods6T7pHVpPTCWx",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 33
+      },
+      {
+        "event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_kONNfytfqq5bcEarb9XplvKh",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 40,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 41
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l4-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\thm_8_6.lean",
+        "line": 76,
+        "detail_zh": "最终积分界使用hh.indicator及integral_mono。",
+        "observed_line": "      exact integral_mono (hh.indicator hA) (hh.indicator hS) (hindicator A)",
+        "file_sha256": "a43f158f9c4492cec84bc77b569bb369e51e533ac6123e27d7f1eda648ef4958"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l4-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\thm_8_6.lean",
+        "line": 126,
+        "detail_zh": "最终密度集合积分证明使用withDensity_apply。",
+        "observed_line": "  rw [measureReal_def, withDensity_apply _ hA,",
+        "file_sha256": "a43f158f9c4492cec84bc77b569bb369e51e533ac6123e27d7f1eda648ef4958"
+      }
+    ],
+    "original_start_event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_VtMCV5AK9qiU9Qg17XgmJaN4",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l4-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "密度集合质量检索、局部示例的 Measure.withDensity_apply 名称失败、去掉错误 Measure 前缀后同一示例退出 0 的过程可核对。最终第 126 行直接使用 measureReal_def 和 withDensity_apply，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_iq3F6xrq2YnvR5ZYTRMwM7Gj",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 30,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 31
+      },
+      {
+        "event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_kONNfytfqq5bcEarb9XplvKh",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 40,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 41
+      },
+      {
+        "event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_qWasDVVV9ods6T7pHVpPTCWx",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 33
+      },
+      {
+        "event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_Cx3dcF8V6VE9xCeYcoSXeEcp",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 38,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l4-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 39
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l4-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\thm_8_6.lean",
+        "line": 126,
+        "detail_zh": "最终密度集合积分证明使用measureReal_def及withDensity_apply。",
+        "observed_line": "  rw [measureReal_def, withDensity_apply _ hA,",
+        "file_sha256": "a43f158f9c4492cec84bc77b569bb369e51e533ac6123e27d7f1eda648ef4958"
+      }
+    ],
+    "original_start_event_id": "01a09c28-2e77-7241-a96a-b265f03b2022:call_iq3F6xrq2YnvR5ZYTRMwM7Gj",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l5-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "首真实诊断来自数学审核角色，打开命名空间后取得测度映射接口。审核回复与支持角色输入读取都包含具体命名空间建议，作者随后显式应用支持补丁并通过构建。最终边缘证明第 383—384 行直接调用对应接口，跨角色连接有证据，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c64-41ac-7cd1-93df-dab4bc638248:call_H7mHwq7KF0ScRJAHmQAxLqjm",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\ae8f4a81-12ac-4d63-b0a7-4d0ba08cea6c\\actor\\full-public-trace.jsonl",
+        "source_line": 33,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\ae8f4a81-12ac-4d63-b0a7-4d0ba08cea6c\\actor\\full-public-trace.jsonl",
+        "result_source_line": 34
+      },
+      {
+        "event_id": "01a09c64-41ac-7cd1-93df-dab4bc638248:call_lL16xeTb5hYxmnVfGGn7Vjur",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\ae8f4a81-12ac-4d63-b0a7-4d0ba08cea6c\\actor\\full-public-trace.jsonl",
+        "source_line": 39,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\ae8f4a81-12ac-4d63-b0a7-4d0ba08cea6c\\actor\\full-public-trace.jsonl",
+        "result_source_line": 40
+      },
+      {
+        "event_id": "01a09c60-547b-7ff2-8040-061131bd7dc6:call_ShDlVZ3WES3VkTN5yT7iVDnQ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 56,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 57
+      },
+      {
+        "event_id": "01a09c60-547b-7ff2-8040-061131bd7dc6:call_CXLSjz4qR19ZQtApRAPRA45q",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 64,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 65
+      },
+      {
+        "event_id": "01a09c68-35af-7640-beb1-f0f947e0bb79:call_p6pyDkk27ImO4IM7T4BUtE3I",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\4bbdcfe0-a5c2-49a2-9e9b-66300c77ca75\\actor\\full-public-trace.jsonl",
+        "source_line": 13,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\4bbdcfe0-a5c2-49a2-9e9b-66300c77ca75\\actor\\full-public-trace.jsonl",
+        "result_source_line": 14
+      },
+      {
+        "event_id": "01a09c60-547b-7ff2-8040-061131bd7dc6:call_fKhbgiexeRXu5BEdeeY1IlDC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 86,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 87
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l5-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\prob_8_7.lean",
+        "line": 383,
+        "detail_zh": "最终边缘证明调用Measure.map_add及Measure.map_smul。",
+        "observed_line": "        Measure.map_add _ _ measurable_fst, Measure.map_smul,",
+        "file_sha256": "75a68c69686d1c2d01a9c5d7b7b45a63a8a73fc77409cd37b095bdf467d8bd67"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l5-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\prob_8_7.lean",
+        "line": 384,
+        "detail_zh": "最终边缘证明调用Measure.map_map及Measure.map_fst_prod。",
+        "observed_line": "        Measure.map_map measurable_fst (by fun_prop), Measure.map_fst_prod, hRYmass]",
+        "file_sha256": "75a68c69686d1c2d01a9c5d7b7b45a63a8a73fc77409cd37b095bdf467d8bd67"
+      }
+    ],
+    "original_start_event_id": "01a09c64-41ac-7cd1-93df-dab4bc638248:call_H7mHwq7KF0ScRJAHmQAxLqjm",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l5-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "广泛耦合检索后经数学骨架、审核回复和支持实现形成明确的构造稿；作者有真实补丁应用、直接 Lean 检查与目标构建成功。最终声明使用构造的公共对角部分及剩余乘积，接受，不能写成找到现成最大耦合成品定理。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c60-547b-7ff2-8040-061131bd7dc6:call_rXZhJdejoQQcFOZgCw6b6cXl",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 36,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 37
+      },
+      {
+        "event_id": "01a09c60-547b-7ff2-8040-061131bd7dc6:call_fKhbgiexeRXu5BEdeeY1IlDC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 86,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 87
+      },
+      {
+        "event_id": "01a09c60-547b-7ff2-8040-061131bd7dc6:call_ShDlVZ3WES3VkTN5yT7iVDnQ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 56,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 57
+      },
+      {
+        "event_id": "01a09c60-547b-7ff2-8040-061131bd7dc6:call_CXLSjz4qR19ZQtApRAPRA45q",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 64,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 65
+      },
+      {
+        "event_id": "01a09c68-35af-7640-beb1-f0f947e0bb79:call_p6pyDkk27ImO4IM7T4BUtE3I",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\4bbdcfe0-a5c2-49a2-9e9b-66300c77ca75\\actor\\full-public-trace.jsonl",
+        "source_line": 13,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\4bbdcfe0-a5c2-49a2-9e9b-66300c77ca75\\actor\\full-public-trace.jsonl",
+        "result_source_line": 14
+      },
+      {
+        "event_id": "01a09c64-41ac-7cd1-93df-dab4bc638248:call_lL16xeTb5hYxmnVfGGn7Vjur",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\ae8f4a81-12ac-4d63-b0a7-4d0ba08cea6c\\actor\\full-public-trace.jsonl",
+        "source_line": 39,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l5-a\\help\\ae8f4a81-12ac-4d63-b0a7-4d0ba08cea6c\\actor\\full-public-trace.jsonl",
+        "result_source_line": 40
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l5-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\prob_8_7.lean",
+        "line": 255,
+        "detail_zh": "保留exists_maximalCoupling构造定理。",
+        "observed_line": "theorem exists_maximalCoupling",
+        "file_sha256": "75a68c69686d1c2d01a9c5d7b7b45a63a8a73fc77409cd37b095bdf467d8bd67"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l5-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\prob_8_7.lean",
+        "line": 370,
+        "detail_zh": "耦合由公共对角部分与剩余乘积组成。",
+        "observed_line": "    let Γ : Measure (ℝ × ℝ) := Measure.map D C + (ENNReal.ofReal p)⁻¹ • RX.prod RY",
+        "file_sha256": "75a68c69686d1c2d01a9c5d7b7b45a63a8a73fc77409cd37b095bdf467d8bd67"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l5-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_08\\prob_8_7.lean",
+        "line": 426,
+        "detail_zh": "最终prob_8_7调用Prob87.exists_maximalCoupling。",
+        "observed_line": "    Prob87.exists_maximalCoupling hf_meas hg_meas hf_int hg_int",
+        "file_sha256": "75a68c69686d1c2d01a9c5d7b7b45a63a8a73fc77409cd37b095bdf467d8bd67"
+      }
+    ],
+    "original_start_event_id": "01a09c60-547b-7ff2-8040-061131bd7dc6:call_rXZhJdejoQQcFOZgCw6b6cXl",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l6-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "首个实际构建确实报告积分表示、重写和平方上标标识符语法错误。终点是同一均方误差草稿的线性组合符号修正及明确构建通过；最终辅助积分证明与主结论连续，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_B1eHEEaz63TqnmTXr2f11LvS",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 68,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 69
+      },
+      {
+        "event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_qUIZcM2rgyn5dHS7BN7ytX34",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 103,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 104
+      },
+      {
+        "event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_Hu4Vx9tV0SMoWT5yJpdmexmw",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 41,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 42
+      },
+      {
+        "event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_QlRqIenhMaeWlBnWyS6GsONC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 51,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 52
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+        "line": 56,
+        "detail_zh": "最终保留integral_sq_linear_combination辅助证明。",
+        "observed_line": "lemma integral_sq_linear_combination {Ω : Type*} [MeasurableSpace Ω]",
+        "file_sha256": "daaaad2b28db1b8e794960e63139cf3daf6884819fd7b6246cb0faf90d5158af"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+        "line": 84,
+        "detail_zh": "最终主定理接续修复后的均方误差证明。",
+        "observed_line": "theorem prob_12_5 {Ω : Type*} [MeasurableSpace Ω] (P : Measure Ω)",
+        "file_sha256": "daaaad2b28db1b8e794960e63139cf3daf6884819fd7b6246cb0faf90d5158af"
+      }
+    ],
+    "original_start_event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_B1eHEEaz63TqnmTXr2f11LvS",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l6-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "独立积分及高斯分布源码实际返回 integral_fun_mul_eq_mul_integral、variance_id_gaussianReal，且有声明探测；最终第 112、145 行直接使用，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_dOEstrbDwd44PZ4T96KfNRQu",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 39,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 40
+      },
+      {
+        "event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_qUIZcM2rgyn5dHS7BN7ytX34",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 103,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 104
+      },
+      {
+        "event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_Hu4Vx9tV0SMoWT5yJpdmexmw",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 41,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 42
+      },
+      {
+        "event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_QlRqIenhMaeWlBnWyS6GsONC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 51,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l6-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 52
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+        "line": 112,
+        "detail_zh": "高斯噪声方差使用variance_id_gaussianReal。",
+        "observed_line": "  have v1 : Var[N₁; P] = s1 := by rw [hN₁.variance_eq, variance_id_gaussianReal]; rfl",
+        "file_sha256": "daaaad2b28db1b8e794960e63139cf3daf6884819fd7b6246cb0faf90d5158af"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l6-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_12\\prob_12_5.lean",
+        "line": 145,
+        "detail_zh": "独立交叉项使用integral_fun_mul_eq_mul_integral。",
+        "observed_line": "    rw [ai1.integral_fun_mul_eq_mul_integral lA.aestronglyMeasurable l1.aestronglyMeasurable,",
+        "file_sha256": "daaaad2b28db1b8e794960e63139cf3daf6884819fd7b6246cb0faf90d5158af"
+      }
+    ],
+    "original_start_event_id": "01a09c7e-a4e4-75f1-9ccc-629223b29776:call_dOEstrbDwd44PZ4T96KfNRQu",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l7-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "同一检索和 /dev/stdin 探针返回两个未知名称及可用的全局/逐坐标替代接口；最终坐标候选构建通过，源码中的 tendsto_pi_nhds、ae_all_iff 和 tendsto_finset_sum 可直接核对，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c95-64c9-7d80-adb5-34ae3687b5ca:call_dpIuABBfwrTKvKjh4V3onxAv",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 37,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 38
+      },
+      {
+        "event_id": "01a09c95-64c9-7d80-adb5-34ae3687b5ca:call_3Q2SYAZ3P5RnuK99D3ujitvV",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 49,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 50
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+        "line": 136,
+        "detail_zh": "最终证明使用tendsto_pi_nhds。",
+        "observed_line": "      exact tendsto_pi_nhds.1 hω i",
+        "file_sha256": "0d28a5c4704aafd34e8475fdb52ec8376b5144e0477cbcba1c5c5cecb6c7d216"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+        "line": 141,
+        "detail_zh": "最终证明使用MeasureTheory.ae_all_iff。",
+        "observed_line": "        MeasureTheory.ae_all_iff.2 (fun i => (hcoord i).2.2)",
+        "file_sha256": "0d28a5c4704aafd34e8475fdb52ec8376b5144e0477cbcba1c5c5cecb6c7d216"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+        "line": 209,
+        "detail_zh": "最终证明使用tendsto_finset_sum。",
+        "observed_line": "          simpa using tendsto_finset_sum (Finset.univ : Finset (Fin d))",
+        "file_sha256": "0d28a5c4704aafd34e8475fdb52ec8376b5144e0477cbcba1c5c5cecb6c7d216"
+      }
+    ],
+    "original_start_event_id": "01a09c95-64c9-7d80-adb5-34ae3687b5ca:call_dpIuABBfwrTKvKjh4V3onxAv",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-l7-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "与首诊断确为同一个实际工具事件，包含主动关键词和类型查询；最终对应声明调用存在，同需求、同起点的双记录已明示不能相加，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09c95-64c9-7d80-adb5-34ae3687b5ca:call_dpIuABBfwrTKvKjh4V3onxAv",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 37,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 38
+      },
+      {
+        "event_id": "01a09c95-64c9-7d80-adb5-34ae3687b5ca:call_3Q2SYAZ3P5RnuK99D3ujitvV",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 49,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l7-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 50
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+        "line": 136,
+        "detail_zh": "最终证明使用tendsto_pi_nhds。",
+        "observed_line": "      exact tendsto_pi_nhds.1 hω i",
+        "file_sha256": "0d28a5c4704aafd34e8475fdb52ec8376b5144e0477cbcba1c5c5cecb6c7d216"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_10.lean",
+        "line": 209,
+        "detail_zh": "最终证明使用tendsto_finset_sum。",
+        "observed_line": "          simpa using tendsto_finset_sum (Finset.univ : Finset (Fin d))",
+        "file_sha256": "0d28a5c4704aafd34e8475fdb52ec8376b5144e0477cbcba1c5c5cecb6c7d216"
+      }
+    ],
+    "original_start_event_id": "01a09c95-64c9-7d80-adb5-34ae3687b5ca:call_dpIuABBfwrTKvKjh4V3onxAv",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-m1-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "首候选通过 WithTop 与停过程定义转换得到首次构建成功。随后审核实际指出直接套用停止次鞅定理没有落实要求的增量路线；重写命令删除原转换主体并重写 stopped_martingale。最终保留停过程相等引理，第 167 行起采用新的停止增量证明。final_source_present 仅确认保留部分实现，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_e6C7gOXQ9cwk0zlMpBofsdzZ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 59,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 60
+      },
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_q1fCQLKHZCoK6a7bOQVbbPVA",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 93,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 94
+      },
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_T2OQayhG2NGYhCP1zkfwegjo",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 100,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 101
+      },
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_UfyKdwzOhrkMsEO2NR4alIXO",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 109,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 110
+      },
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_Ri6yRwI64Cih4VImq4Wrx6b7",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 134,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 135
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 105,
+        "detail_zh": "最终保留thm_13_17_stoppedProcess_eq接口桥接。",
+        "observed_line": "theorem thm_13_17_stoppedProcess_eq {Ω S : Type*}",
+        "file_sha256": "60ea3415c72aa452f1626e29704245d4b701c356472eb45b2deece01daaa8d97"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 114,
+        "detail_zh": "保留WithTop.untopA_eq_untop与untop_coe改写。",
+        "observed_line": "        WithTop.untopA_eq_untop WithTop.coe_ne_top, WithTop.untop_coe]",
+        "file_sha256": "60ea3415c72aa452f1626e29704245d4b701c356472eb45b2deece01daaa8d97"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 167,
+        "detail_zh": "停止鞅主体最终采用增量分解的新证明。",
+        "observed_line": "    have hstep : MeasureTheory.stoppedProcess X T (n + 1) =",
+        "file_sha256": "60ea3415c72aa452f1626e29704245d4b701c356472eb45b2deece01daaa8d97"
+      }
+    ],
+    "original_start_event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_e6C7gOXQ9cwk0zlMpBofsdzZ",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-m1-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "初始检索、可编译首稿与后续路线更换均有记录。最终不再直接套用首稿的停止次鞅主体，但确实保留 integrable_stoppedProcess、stoppedProcess_of_discrete 及定义桥接。原标注采用较弱的 final_source_present 并说明替换，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_t1gRyCisbyjBGRKCtIy4fMpM",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 42,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 43
+      },
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_q1fCQLKHZCoK6a7bOQVbbPVA",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 93,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 94
+      },
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_T2OQayhG2NGYhCP1zkfwegjo",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 100,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 101
+      },
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_UfyKdwzOhrkMsEO2NR4alIXO",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 109,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 110
+      },
+      {
+        "event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_Ri6yRwI64Cih4VImq4Wrx6b7",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 134,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 135
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 139,
+        "detail_zh": "最终停止过程可积性使用MeasureTheory.integrable_stoppedProcess。",
+        "observed_line": "    fun n => MeasureTheory.integrable_stoppedProcess hτ",
+        "file_sha256": "60ea3415c72aa452f1626e29704245d4b701c356472eb45b2deece01daaa8d97"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 143,
+        "detail_zh": "最终适应性使用stoppedProcess_of_discrete。",
+        "observed_line": "    hXadapt.stoppedProcess_of_discrete hτ",
+        "file_sha256": "60ea3415c72aa452f1626e29704245d4b701c356472eb45b2deece01daaa8d97"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_13\\thm_13_17.lean",
+        "line": 167,
+        "detail_zh": "最终主体为显式停止增量证明，非首稿直接套用停止鞅定理。",
+        "observed_line": "    have hstep : MeasureTheory.stoppedProcess X T (n + 1) =",
+        "file_sha256": "60ea3415c72aa452f1626e29704245d4b701c356472eb45b2deece01daaa8d97"
+      }
+    ],
+    "original_start_event_id": "01a09cd0-854c-7292-977c-7e0a9ff91b2f:call_t1gRyCisbyjBGRKCtIy4fMpM",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-m2-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "首支持角色 Probe 的真实未知名称、TailProbe 对 Real.summable_one_div_nat_pow 的有效类型及后续正式构建通过都可核对。返回补丁的 SHA 为标准空文件值且未应用；作者仍持有 200 行输入。后续不同候选经非空补丁落地，最终采用另一可求和声明。replaced 仅针对首支持候选，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09ceb-182e-74f1-9b50-ea93990e2d1d:call_g6xjRmt61vWxn6fwWusQBkyX",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "source_line": 47,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "result_source_line": 48
+      },
+      {
+        "event_id": "01a09ceb-182e-74f1-9b50-ea93990e2d1d:call_IqYv9OD173MD9VubNIRARjeH",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "source_line": 76,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "result_source_line": 77
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_Y9NGV4bwrCK8or238dK917MC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 33
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_xFBpbkuYlHbWY3CCnwpzS0om",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 34,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 35
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_fEGvyFp0kQRGlh4z11Um4mZ1",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 37,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 38
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_fWzQRLll3NU7SBoGDC1y46l1",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 40,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 41
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_9cSwJeRsJ6ef5qR8zgVzaiMK",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 46,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 47
+      },
+      {
+        "event_id": "01a09ceb-182e-74f1-9b50-ea93990e2d1d:call_s1yviVjSCYkwjptHliw7lJrc",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "source_line": 95,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "result_source_line": 96
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m2-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_7.lean",
+        "line": 342,
+        "detail_zh": "最终使用Real.summable_one_div_nat_add_rpow，和首位支持角色探测及使用的nat_pow声明不同。",
+        "observed_line": "        (Real.summable_one_div_nat_add_rpow 1 2).2 (by norm_num)",
+        "file_sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f"
+      }
+    ],
+    "original_start_event_id": "01a09ceb-182e-74f1-9b50-ea93990e2d1d:call_g6xjRmt61vWxn6fwWusQBkyX",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-m2-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "首支持角色确实查找并实现四阶矩路线，随后自身构建成功；实际返回为空补丁，作者工作区无实现。后续返回不同候选，作者显式应用后两文件哈希一致，支持原稿未直接采用、后来另稿落地的判断。接受；中间还发生一次重新委派时的导出失败，不能简化成只有两次尝试。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09ceb-182e-74f1-9b50-ea93990e2d1d:call_JNPvh62f07fPy7Sj1QYU8Qen",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "source_line": 26,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "result_source_line": 27
+      },
+      {
+        "event_id": "01a09ceb-182e-74f1-9b50-ea93990e2d1d:call_s1yviVjSCYkwjptHliw7lJrc",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "source_line": 95,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "result_source_line": 96
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_Y9NGV4bwrCK8or238dK917MC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 33
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_xFBpbkuYlHbWY3CCnwpzS0om",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 34,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 35
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_fEGvyFp0kQRGlh4z11Um4mZ1",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 37,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 38
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_fWzQRLll3NU7SBoGDC1y46l1",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 40,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 41
+      },
+      {
+        "event_id": "01a09ce9-edcb-7f73-9177-c0b405ee2b8f:call_9cSwJeRsJ6ef5qR8zgVzaiMK",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 46,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 47
+      },
+      {
+        "event_id": "01a09ceb-182e-74f1-9b50-ea93990e2d1d:call_IqYv9OD173MD9VubNIRARjeH",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "source_line": 76,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m2-a\\help\\b40beabf-f563-4df9-808e-266bf47c283c\\actor\\full-public-trace.jsonl",
+        "result_source_line": 77
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m2-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_7.lean",
+        "line": 155,
+        "detail_zh": "最终第四矩界为后续候选的fourth_moment_bound。",
+        "observed_line": "private lemma fourth_moment_bound {Ω : Type*} [MeasurableSpace Ω]",
+        "file_sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m2-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_11\\thm_11_7.lean",
+        "line": 342,
+        "detail_zh": "最终可求和环节调用另一幂级数声明。",
+        "observed_line": "        (Real.summable_one_div_nat_add_rpow 1 2).2 (by norm_num)",
+        "file_sha256": "063c5d94062fb2b0c4724ee88f538e906f0c7e7ad55be0c7e98ba9e534fed76f"
+      }
+    ],
+    "original_start_event_id": "01a09ceb-182e-74f1-9b50-ea93990e2d1d:call_JNPvh62f07fPy7Sj1QYU8Qen",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-m3-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "Probe 的两个不存在名称确实由 CDF 极限与 eventually/序接口替代；终点直接 Lean 退出 0 只对应当时分位数序性质的局部稿。首支持工作最后返回空补丁，作者仍为 65 行输入；后续另稿重新构造，两端见证代码与最终源码对应。replaced 范围准确，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09d20-23a3-74e2-95a7-eba4f7be4e36:call_r20Oz3LdnZsFgty9iD5nPuKI",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\3d2001f3-98db-40b2-8ef6-eebd84a9a70e\\actor\\full-public-trace.jsonl",
+        "source_line": 28,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\3d2001f3-98db-40b2-8ef6-eebd84a9a70e\\actor\\full-public-trace.jsonl",
+        "result_source_line": 29
+      },
+      {
+        "event_id": "01a09d20-23a3-74e2-95a7-eba4f7be4e36:call_HVSpKwr36mTVnUqSfiUvKWlU",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\3d2001f3-98db-40b2-8ef6-eebd84a9a70e\\actor\\full-public-trace.jsonl",
+        "source_line": 50,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\3d2001f3-98db-40b2-8ef6-eebd84a9a70e\\actor\\full-public-trace.jsonl",
+        "result_source_line": 51
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_Ztdb7ql8LwK2ybIEdJTBoNAp",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 14,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 15
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_bWqJwIVdwZVPtS7r0AnVqLzn",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 18,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 19
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_qidXqBXD5hZDA4EagG1M0PsH",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 26,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 27
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_0jGL08mZxmmUfJe6HJxPiJlo",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 28,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 29
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_chjJNwH0dtIXLnUCoL7jRO6f",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 31,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 32
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_pniiC6CvP3sXHQm4eFhQHUja",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 36,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 37
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 31,
+        "detail_zh": "最终另一次支持稿通过hlim.eventually(...).exists构造下界见证。",
+        "observed_line": "  rcases (hlim.eventually (Iio_mem_nhds hu)).exists with ⟨x, hx⟩",
+        "file_sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 38,
+        "detail_zh": "最终另一次支持稿使用邻域中的最终成立性构造上界见证。",
+        "observed_line": "  rcases (hlim.eventually (Ioi_mem_nhds hu)).exists with ⟨b, hb⟩",
+        "file_sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3"
+      }
+    ],
+    "original_start_event_id": "01a09d20-23a3-74e2-95a7-eba4f7be4e36:call_r20Oz3LdnZsFgty9iD5nPuKI",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-m3-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "作者自身的整体分位数构造需要一直延续。首次支持稿未传回后，有明确重新委派、读取 364 行非空补丁、提取成作者文件及哈希一致证据，随后删未声明导入并构建成功。最终主定理第 356 行直接选用该稿的 quantile，接受最终采用，不推断首支持稿采用。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_uPQqRDAjqmLhzd6BFLUkYZbT",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 34,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 35
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_pniiC6CvP3sXHQm4eFhQHUja",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 36,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 37
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_Ztdb7ql8LwK2ybIEdJTBoNAp",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 14,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 15
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_bWqJwIVdwZVPtS7r0AnVqLzn",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 18,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 19
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_qidXqBXD5hZDA4EagG1M0PsH",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 26,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 27
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_0jGL08mZxmmUfJe6HJxPiJlo",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 28,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 29
+      },
+      {
+        "event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_chjJNwH0dtIXLnUCoL7jRO6f",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "source_line": 31,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\author-02\\full-public-trace.jsonl",
+        "result_source_line": 32
+      },
+      {
+        "event_id": "01a09d20-23a3-74e2-95a7-eba4f7be4e36:call_HVSpKwr36mTVnUqSfiUvKWlU",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\3d2001f3-98db-40b2-8ef6-eebd84a9a70e\\actor\\full-public-trace.jsonl",
+        "source_line": 50,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-m3-a\\help\\3d2001f3-98db-40b2-8ef6-eebd84a9a70e\\actor\\full-public-trace.jsonl",
+        "result_source_line": 51
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 18,
+        "detail_zh": "最终定义quantile。",
+        "observed_line": "def quantile (μ : ProbabilityMeasure ℝ) (u : unitIntervalProbabilitySpace) : ℝ :=",
+        "file_sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 154,
+        "detail_zh": "证明quantile_map以匹配目标分布。",
+        "observed_line": "theorem quantile_map (μ : ProbabilityMeasure ℝ) :",
+        "file_sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 277,
+        "detail_zh": "证明分布函数收敛到分位数几乎处处收敛。",
+        "observed_line": "theorem quantile_tendsto_ae_of_cdf",
+        "file_sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-m3-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\thm_10_8.lean",
+        "line": 356,
+        "detail_zh": "最终表示定理选用构造的quantile随机变量。",
+        "observed_line": "  refine ⟨fun n => quantile (νn n), quantile ν,",
+        "file_sha256": "1bc029807f48c724a014937ea4bbfb972e05edf9bac91d01ae73c8c176c502b3"
+      }
+    ],
+    "original_start_event_id": "01a09d19-1dd7-7f32-b6fc-8f4427bc5955:call_uPQqRDAjqmLhzd6BFLUkYZbT",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-h1-a",
+    "sample_kind": "first_lean_feedback",
+    "status": "accepted",
+    "assessment_zh": "真实构建首先报告 Real.abs_sin_le_abs 被当成接受显式位置参数的函数。后续参数/实复类型/代数修正后同一目标明确通过；最终仍使用正弦界路线，接受。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09dd8-ec2a-78f3-a6ca-f55a33d4bd5f:call_LTNLYvlYN0ehka8CVJVoEKzO",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 49,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 50
+      },
+      {
+        "event_id": "01a09dd8-ec2a-78f3-a6ca-f55a33d4bd5f:call_Hwz5GlKhiQL7GapiHy237E2J",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 59,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 60
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-h1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_09\\thm_9_4.lean",
+        "line": 44,
+        "detail_zh": "使用Complex.norm_exp_I_mul_ofReal_sub_one。",
+        "observed_line": "  rw [Complex.norm_exp_I_mul_ofReal_sub_one]",
+        "file_sha256": "8ee5672a96131dc215d51ac52cbbaad181e4620bd8f176f0d51abaaed48dbc24"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-h1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_09\\thm_9_4.lean",
+        "line": 47,
+        "detail_zh": "调用Real.abs_sin_le_abs而不再错误地传显式位置参数。",
+        "observed_line": "    _ ≤ 2 * |x / 2| := mul_le_mul_of_nonneg_left Real.abs_sin_le_abs (by norm_num)",
+        "file_sha256": "8ee5672a96131dc215d51ac52cbbaad181e4620bd8f176f0d51abaaed48dbc24"
+      }
+    ],
+    "original_start_event_id": "01a09dd8-ec2a-78f3-a6ca-f55a33d4bd5f:call_LTNLYvlYN0ehka8CVJVoEKzO",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  },
+  {
+    "run_id": "r2-h1-a",
+    "sample_kind": "first_math_retrieval",
+    "status": "accepted",
+    "assessment_zh": "首次关键词检索实际返回 Complex.norm_exp_I_mul_ofReal_sub_one，后续写入并修正同一不等式。最终第 44 行直接重写该恒等式，接受。该样本只覆盖 H1 的首个简单子任务。",
+    "corrections": {},
+    "checked_events": [
+      {
+        "event_id": "01a09dd8-ec2a-78f3-a6ca-f55a33d4bd5f:call_dBbWvi6EC28dXV7oyEzyxokj",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 39,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 40
+      },
+      {
+        "event_id": "01a09dd8-ec2a-78f3-a6ca-f55a33d4bd5f:call_Hwz5GlKhiQL7GapiHy237E2J",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 59,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-h1-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 60
+      }
+    ],
+    "checked_final_evidence": [
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-h1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_09\\thm_9_4.lean",
+        "line": 44,
+        "detail_zh": "最终调用Complex.norm_exp_I_mul_ofReal_sub_one。",
+        "observed_line": "  rw [Complex.norm_exp_I_mul_ofReal_sub_one]",
+        "file_sha256": "8ee5672a96131dc215d51ac52cbbaad181e4620bd8f176f0d51abaaed48dbc24"
+      },
+      {
+        "path": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-h1-a\\technical\\saved-sources\\ProbabilityTheory\\chapter_09\\thm_9_4.lean",
+        "line": 47,
+        "detail_zh": "最终用Real.abs_sin_le_abs完成估计。",
+        "observed_line": "    _ ≤ 2 * |x / 2| := mul_le_mul_of_nonneg_left Real.abs_sin_le_abs (by norm_num)",
+        "file_sha256": "8ee5672a96131dc215d51ac52cbbaad181e4620bd8f176f0d51abaaed48dbc24"
+      }
+    ],
+    "original_start_event_id": "01a09dd8-ec2a-78f3-a6ca-f55a33d4bd5f:call_dBbWvi6EC28dXV7oyEzyxokj",
+    "annotation_snapshot_sha256": "0ba74563875e9ed0ace5bc896b2e71cd43f0ef25c6a5a5cbea0abdade5b66797",
+    "reviewer": "measurement_review",
+    "review_mode": "agent_review_after_reading_original_annotations_not_blind",
+    "human_gold_standard": false,
+    "limitations_zh": "判断限于公开工具过程、检查反馈与最终源码的对应；不复验数学定理，不证明搜索或修正的因果必要性。"
+  }
+]

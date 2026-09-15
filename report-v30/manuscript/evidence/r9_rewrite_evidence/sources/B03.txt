@@ -1,0 +1,75 @@
+[original lines 1-74]
+"""Self-contained final evidence package; no model execution or replacement of original judgments."""
+import collections,csv,datetime,hashlib,json,subprocess,time
+from pathlib import Path
+R=Path(__file__).resolve().parent;E=R.parent;W=E.parents[2];C=E/'controller_bc_completion_20260911'
+read=lambda p:json.loads(Path(p).read_text('utf-8'));sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def write(p,v):
+    with p.open('x',encoding='utf-8') as f:json.dump(v,f,ensure_ascii=False,indent=2)
+census=read(R/'ATTEMPT_CENSUS_DATA.json');roots=census['solver_roots'];bound=read(R/'ROOT_ENDPOINT_BINDINGS.json');byroot={x['root_id']:x for x in bound['roots']}
+assert len(roots)==41 and not census['undispatched_queue'] and not census['issues'] and not bound['issues']
+reeval=read(R/'REEVALUATION_ACCOUNTING_AND_AUDIT.json');assert len(reeval['calls'])==31 and not reeval['recording_issues'] and not reeval['over_limit_guard_records'] and not reeval['previous_17_bound_files_changed']
+resource=read(C/'RESOURCE_AND_GUARD_AUDIT_CURRENT.json');recording=read(C/'RECORDING_AUDIT_CURRENT.json');assert resource['max_active_observed']==2 and not resource['previous_bound_files_changed'] and resource['previous_manifest_unchanged']
+assert not recording['issues']
+assert not subprocess.check_output([read(C/'L3/C_CONFIG.json')['docker_path'],'ps','-q']).strip()
+csv_checks={}
+for name,expected in [('ATTEMPT_CENSUS',41),('COVERAGE_MATRIX',41),('UNDISPATCHED_QUEUE',0)]:
+    p=R/(name+'.csv')
+    with p.open(encoding='utf-8',newline='') as f:reader=csv.DictReader(f);records=list(reader);headers=reader.fieldnames
+    assert len(records)==expected and headers
+    if expected:assert {x['root_id'] for x in records}=={x['root_id'] for x in roots}
+    if name=='ATTEMPT_CENSUS':
+        expected_by={x['root_id']:x for x in roots}
+        for row in records:
+            x=expected_by[row['root_id']];assert float(row['budget_seconds'])==x['budget_seconds']
+            for k in ['input_tokens','cached_input_tokens','output_tokens','reasoning_output_tokens']:
+                assert row[k]=='' if x['usage'][k] is None else float(row[k])==x['usage'][k]
+    if name=='COVERAGE_MATRIX':
+        assert sum(int(x['native_service_episodes']) for x in records)==127
+        assert sum(int(x['reported_finding_rows']) for x in records)==121
+        assert sum(int(x['targeted_semantic_episodes']) for x in records)==6
+    csv_checks[name]={'rows':len(records),'columns':len(headers),'sha256':sha(p),'independent_csv_readback':True}
+matrices={k:read(R/(k+'_RESULT_MATRIX.json')) for k in ['L2','L3','H1']}
+for m in matrices.values():
+    for p,h in m['source_index'].items():assert sha(p)==h,(p,'changed matrix source')
+index=read(R/'EPISODE_INDEX_STATUS.json')
+for p,h in index['source_bindings'].items():assert sha(p)==h,(p,'changed index source')
+new_by_decision={}
+for label,m in matrices.items():
+    for row in m['candidates']:new_by_decision[row['original_decision']['path']]={'group':label,'candidate_id':row['candidate_id'],'values':{k:row[k] for k in ['new_G','new_S','new_F','new_E','new_T','new_Std','new_Family'] if k in row},'source':str(R/(label+'_RESULT_MATRIX.json'))}
+allrows=[]
+for root in roots:
+    evaluations=byroot[root['root_id']]['original_evaluations'];common=[x for x in evaluations if x.get('original_decision')]
+    full=[x for x in common if x['candidate_package_status']=='complete'];selected=full[0] if full else common[0] if common else None
+    # Selection is complete authorized candidate scope, never its favorable verdict; retain every scope below.
+    decision=selected['final_decision'] if selected else None
+    row={'root_id':root['root_id'],'task_group':root['task_group'],'arm':root['arm'],'version_subset':root['version_subset'],'run_id':root['run_id'],'budget_seconds':root['budget_seconds'],
+      'original_selected_verdict':selected['original_decision']['verdict'] if selected else None,'selected_candidate_scope':selected.get('evaluation_scope') if selected else None,'original_selected_decision':decision,
+      'all_original_evaluation_sources':[x.get('final_decision') or x.get('provisional_opinion') for x in evaluations],
+      'new_consistency':new_by_decision.get(decision['path']) if decision else None,'comparison_status':'contract_diagnostic_only' if root['task_group']=='L7' else 'interpretation_or_evaluation_limit' if root['task_group'] in ['L2','L3','H1'] else 'version_stratified_development_only',
+      'same_root_continuation':root['same_root_continuation'],'repair_trial':root['repair_trial'],'recorded_complete_package':root['complete_candidate_package_observed'],
+      'native_dispatch_record_gaps':root['missing_actor_receipts'],'source':str(R/'ROOT_ENDPOINT_BINDINGS.json')}
+    allrows.append(row)
+main=[x for x in allrows if (x['arm']=='A' and x['version_subset'] in ['A_original_development_r1','A_runtime_r2_late_development']) or x['version_subset'] in ['B_transport_r4','C_runtime_r3']]
+assert len(main)==33 and all(sum(x['arm']==arm for x in main)==11 for arm in ['A','B','C'])
+subsets={}
+for version in sorted({x['version_subset'] for x in roots}):
+    rs=[x for x in roots if x['version_subset']==version];ars=[x for x in allrows if x['version_subset']==version]
+    subsets[version]={'actual_solver_roots':len(rs),'complete_candidate_packages_observed':sum(x['complete_candidate_package_observed'] is True for x in rs),'noncomplete_packages_observed':sum(x['complete_candidate_package_observed'] is False for x in rs),'package_unknown':sum(x['complete_candidate_package_observed'] is None for x in rs),
+      'common_endpoint_executed_roots':sum(x['actual_common_endpoint_executed'] is True for x in rs),'original_selected_common_verdicts':dict(collections.Counter(x['original_selected_verdict'] or 'no_common_label' for x in ars)),
+      'denominator_rule':'All actual solver roots in this named version, including failures and missing records. Package presence is not a recovered precise submission timestamp. Original verdict counts are historical outcome accounting, not configuration ranking.'}
+costs=read(R/'ALL_COSTS_SEPARATED.json');assert not costs['recording_issues'];coverage=read(R/'EPISODE_SEMANTIC_COVERAGE_FINAL.json');assert coverage['native_service_episodes']==127 and coverage['targeted_semantic_episodes']==6
+now=time.time();cutoff=datetime.datetime.fromtimestamp(now,datetime.timezone(datetime.timedelta(hours=8))).isoformat(timespec='seconds')
+newstage=[]
+for label in ['L3','L4','L5','L6','M2','M3','H1','L7']:
+    for arm in ['B','C']:
+        ret=read(C/label/('endpoint-'+arm)/'DRIVER_RETURN.json');assert ret['completed'];newstage.append({'task_group':label,'arm':arm,'original_verdict':ret['state']['verdict'],'source':str(C/label/('endpoint-'+arm)/'DRIVER_RETURN.json')})
+out={'cutoff_epoch':now,'cutoff_beijing':cutoff,'status':'all_authorized_solver_and_evaluation_calls_executed; unresolved evidence and audit gaps explicitly retained','new_stage':newstage,'all_41_root_rows':allrows,'main_33_root_panel':main,'version_denominators':subsets,
+ 'scope':{'new_B_C_solver_roots':16,'new_solver_roots_under_revised_L7':0,'registered_consistency_calls':31,'old_opinions_replaced':0,'original_partial_A_H1_and_same_root_full_continuation':'Retained under one root with separate candidate scopes.','A_L7_repair':'Separate root/version, excluded from equal-first-condition interpretation.'},
+ 'cost_categories':costs['totals_by_category'],'resource_summary':{k:resource[k] for k in ['successful_samples','max_active_observed','max_observation_gap_seconds','previous_manifest_unchanged','previous_bound_files_changed']},
+ 'coverage':{'all_root_identity_and_original_evaluation_bindings':41,'original_common_endpoint_bound_roots':sum(x['common_endpoint_count']>0 for x in roots),'native_service_episodes':127,'reported_finding_rows':121,'full_returned_feedback_exposures_verified':67,'targeted_semantic_episodes':6,'unchecked_service_episodes':121,'full_trajectory_semantic_coverage':False,'all_original_Lean_proofs_independently_rechecked_by_owner':False},
+ 'unresolved':['L2 remains G/S interpretation-sensitive for A, early B and C.','L3 unique adjudications for A and B r4 have invalid quotations; accepted labels unresolved.','H1 B unique adjudication has invalid source quotation; reported Std pass/Family fail is not an accepted label.','H1 A is Std pass/Family fail; original unparameterized scope remains ambiguous.','L7 original measurability obligation is not implied; B/C changed public hypotheses and A repair omitted it. C original endpoint also has two format-invalid reviews and finishes unresolved.','121 internal-service episodes lack the targeted owner semantic/adoption reconstruction. Existing independent endpoint opinions do not replace that analysis.','Historical missing usage and exact submission/end timestamps remain unknown or observed lower bounds.','H1 exposed omission of non-Lean delivery documents in the anonymous endpoint adapter. L2/L3 delivery judgments describe the supplied endpoint scope; no universal original-document completeness audit is claimed.'],
+ 'requires_new_authorization':['Any fresh equal-start A/B/C solving under a revised L7 measurable-f contract.','Any repetition or larger comparative batch with prospectively chosen count, order and budget.'],
+ 'no_further_model_calls_to_remove_failures':True,'verification':csv_checks}
+write(R/'FINAL_UNIFIED_STATUS.json',out)
+write(R/'FINAL_ARTIFACT_CHECKS.json',{'epoch':now,'csv':csv_checks,'matrix_source_hashes_all_match':True,'matrix_obligation_rows':{k:len(v['obligation_matrix']) for k,v in matrices.items()},'indexed_episode_source_hashes_match':True,'old_17_files_unchanged':True,'active_or_paused_running_containers':0,'final_csv_no_render_process_exit_code':0,'prior_csv_render_process_exit_code':read(R/'FINAL_DATA_REFRESH_RETURNED_R1.json')['csv_process_exit_code'],'render_failure_resolution':'Machine-readable CSV export repeated without unnecessary preview rendering; process exited 0 and independent CSV readback verified final data.','episode_count_correction':'Finding subrows retain dispatch_id, so parent_episode_id distinguishes 127 native episodes from 121 finding rows; both counts independently checked.'})

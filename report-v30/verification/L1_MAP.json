@@ -1,0 +1,388 @@
+{
+  "source_index": "D:\\Grad_Study\\Practimum\\Formalization\\reports\\trajectory_analysis\\increment_v2_20260911\\REPORT_EVIDENCE.v2.json",
+  "source_index_sha256": "09fa69bae00e24982c645a41f4d487847654212099ceae1bab5774e088942367",
+  "selected_groups": {
+    "N02": {
+      "title": "A produced review, recovery and final state",
+      "records": [
+        {
+          "file_id": "V2F00160",
+          "stratum": "A_L1_r1",
+          "relative_path": "a-controller/controller-events.jsonl",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/pilot-runs-r1/pilot-prob_13_9-A-r1/a-controller/controller-events.jsonl",
+          "observed_utc": "2026-09-11T03:40:15.195670+00:00",
+          "bytes": 13124,
+          "sha256": "bd53354cceffa623c33ea8e910e10e1bf5df24156b3b23fd40e273379c8a9a31",
+          "snapshot_path": "source_blobs/bd53354cceffa623c33ea8e910e10e1bf5df24156b3b23fd40e273379c8a9a31",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-10T16:17:47.875078+00:00",
+          "ends_in_newline": true,
+          "line_count": 2,
+          "package_file": "verification/supporting_records/L1/N02/V2F00160-controller-events.jsonl"
+        },
+        {
+          "file_id": "V2F00161",
+          "stratum": "A_L1_r1",
+          "relative_path": "a-controller/result.json",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/pilot-runs-r1/pilot-prob_13_9-A-r1/a-controller/result.json",
+          "observed_utc": "2026-09-11T03:40:15.203121+00:00",
+          "bytes": 31880,
+          "sha256": "3fa17ab4c93ba6380405e276e6c8da15421d36a8b04dcc5d94d619a24058c1bb",
+          "snapshot_path": "source_blobs/3fa17ab4c93ba6380405e276e6c8da15421d36a8b04dcc5d94d619a24058c1bb",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-10T16:17:48.389189+00:00",
+          "ends_in_newline": true,
+          "line_count": 666,
+          "package_file": "verification/supporting_records/L1/N02/V2F00161-result.json"
+        },
+        {
+          "file_id": "V2F00523",
+          "stratum": "A_L1_r1",
+          "relative_path": "reviewer-result-recovery.json",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/pilot-runs-r1/pilot-prob_13_9-A-r1/reviewer-result-recovery.json",
+          "observed_utc": "2026-09-11T03:40:16.869466+00:00",
+          "bytes": 1319,
+          "sha256": "2d1b6ff4de8b3a1e52f98436eee6b74f3f4d4fe6aeaccb3a7e7dbce14f80c8d3",
+          "snapshot_path": "source_blobs/2d1b6ff4de8b3a1e52f98436eee6b74f3f4d4fe6aeaccb3a7e7dbce14f80c8d3",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-10T16:08:22.199673+00:00",
+          "ends_in_newline": true,
+          "line_count": 16,
+          "package_file": "verification/supporting_records/L1/N02/V2F00523-reviewer-result-recovery.json"
+        },
+        {
+          "file_id": "V2F00303",
+          "stratum": "A_L1_r1",
+          "relative_path": "help/a8eee636-20ec-4f4a-abd8-21254581e629/recovered-raw-review.json",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/pilot-runs-r1/pilot-prob_13_9-A-r1/help/a8eee636-20ec-4f4a-abd8-21254581e629/recovered-raw-review.json",
+          "observed_utc": "2026-09-11T03:40:15.883992+00:00",
+          "bytes": 18725,
+          "sha256": "2731c4841276dd72e6148bfb65d8cd56c9a6027623e5ae66c3b62bafd48bac8e",
+          "snapshot_path": "source_blobs/2731c4841276dd72e6148bfb65d8cd56c9a6027623e5ae66c3b62bafd48bac8e",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-10T16:05:52.206537+00:00",
+          "ends_in_newline": false,
+          "line_count": 332,
+          "package_file": "verification/supporting_records/L1/N02/V2F00303-recovered-raw-review.json"
+        },
+        {
+          "file_id": "V2F00293",
+          "stratum": "A_L1_r1",
+          "relative_path": "help/a8eee636-20ec-4f4a-abd8-21254581e629/actor/raw-public-events.bin",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/pilot-runs-r1/pilot-prob_13_9-A-r1/help/a8eee636-20ec-4f4a-abd8-21254581e629/actor/raw-public-events.bin",
+          "observed_utc": "2026-09-11T03:40:15.829926+00:00",
+          "bytes": 193033,
+          "sha256": "8defaa13268eac8a88e74597c449f93fdf76ba25041bc5df0c366e1820dd1229",
+          "snapshot_path": "source_blobs/8defaa13268eac8a88e74597c449f93fdf76ba25041bc5df0c366e1820dd1229",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-10T15:59:52.257613+00:00",
+          "ends_in_newline": true,
+          "line_count": 65,
+          "package_file": "verification/supporting_records/L1/N02/V2F00293-raw-public-events.bin"
+        },
+        {
+          "file_id": "V2F00440",
+          "stratum": "A_L1_r1",
+          "relative_path": "help/e303aed1-47d6-49e6-8bca-789b77c3663f/actor/raw-public-events.bin",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/pilot-runs-r1/pilot-prob_13_9-A-r1/help/e303aed1-47d6-49e6-8bca-789b77c3663f/actor/raw-public-events.bin",
+          "observed_utc": "2026-09-11T03:40:16.474020+00:00",
+          "bytes": 19231,
+          "sha256": "62742cd1d8c1fd280ab4093c0411b3362873e41a2f8db2e84a6ce8fb777a2588",
+          "snapshot_path": "source_blobs/62742cd1d8c1fd280ab4093c0411b3362873e41a2f8db2e84a6ce8fb777a2588",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-10T16:14:53.393087+00:00",
+          "ends_in_newline": true,
+          "line_count": 5,
+          "package_file": "verification/supporting_records/L1/N02/V2F00440-raw-public-events.bin"
+        },
+        {
+          "file_id": "V2F00451",
+          "stratum": "A_L1_r1",
+          "relative_path": "help/e303aed1-47d6-49e6-8bca-789b77c3663f/response.md",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/pilot-runs-r1/pilot-prob_13_9-A-r1/help/e303aed1-47d6-49e6-8bca-789b77c3663f/response.md",
+          "observed_utc": "2026-09-11T03:40:16.534696+00:00",
+          "bytes": 17761,
+          "sha256": "5f550504c9c89f7099ca721d6df4defaf5b3b880a10c16f37174678a6f4b2345",
+          "snapshot_path": "source_blobs/5f550504c9c89f7099ca721d6df4defaf5b3b880a10c16f37174678a6f4b2345",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-10T16:15:04.815714+00:00",
+          "ends_in_newline": false,
+          "line_count": 316,
+          "package_file": "verification/supporting_records/L1/N02/V2F00451-response.md"
+        }
+      ]
+    },
+    "N03": {
+      "title": "A actual final proof",
+      "records": [
+        {
+          "file_id": "V2F00582",
+          "stratum": "initial_common_validation",
+          "relative_path": "preinspect/low-A/prob_13_9.lean",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/pilot-runs-r1/common-validation/preinspect/low-A/prob_13_9.lean",
+          "observed_utc": "2026-09-11T03:40:17.135725+00:00",
+          "bytes": 5806,
+          "sha256": "f13136af8fc976af336a5e1622983fbae41f1712f8392fd5dc1a797bccdaf333",
+          "snapshot_path": "source_blobs/f13136af8fc976af336a5e1622983fbae41f1712f8392fd5dc1a797bccdaf333",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-10T16:12:07+00:00",
+          "ends_in_newline": true,
+          "line_count": 142,
+          "package_file": "verification/supporting_records/L1/N03/V2F00582-prob_13_9.lean"
+        }
+      ]
+    },
+    "N06": {
+      "title": "C r1 coordination and writer actions",
+      "records": [
+        {
+          "file_id": "V2F01518",
+          "stratum": "C_L1_r1",
+          "relative_path": "coordinator-tools/tool-events.jsonl",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/c-pilot-r1/prob_13_9/coordinator-tools/tool-events.jsonl",
+          "observed_utc": "2026-09-11T03:40:21.484575+00:00",
+          "bytes": 75174,
+          "sha256": "381ef3f08475518d030d2a53fc3856d84b6b6a4d9d187116fd638ff60933405c",
+          "snapshot_path": "source_blobs/381ef3f08475518d030d2a53fc3856d84b6b6a4d9d187116fd638ff60933405c",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T00:24:10.124229+00:00",
+          "ends_in_newline": true,
+          "line_count": 38,
+          "package_file": "verification/supporting_records/L1/N06/V2F01518-tool-events.jsonl"
+        },
+        {
+          "file_id": "V2F01519",
+          "stratum": "C_L1_r1",
+          "relative_path": "final-run-receipt.json",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/c-pilot-r1/prob_13_9/final-run-receipt.json",
+          "observed_utc": "2026-09-11T03:40:21.493428+00:00",
+          "bytes": 3323,
+          "sha256": "de049b7ebd8dc54e7edc87f0616d0f50b910f6a5ffd2719c254050b37ac6d21c",
+          "snapshot_path": "source_blobs/de049b7ebd8dc54e7edc87f0616d0f50b910f6a5ffd2719c254050b37ac6d21c",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T00:24:24.342695+00:00",
+          "ends_in_newline": true,
+          "line_count": 94,
+          "package_file": "verification/supporting_records/L1/N06/V2F01519-final-run-receipt.json"
+        },
+        {
+          "file_id": "V2F01454",
+          "stratum": "C_L1_r1",
+          "relative_path": "candidates/c1/visible-files/ProbabilityTheory/chapter_13/prob_13_9.lean",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/c-pilot-r1/prob_13_9/candidates/c1/visible-files/ProbabilityTheory/chapter_13/prob_13_9.lean",
+          "observed_utc": "2026-09-11T03:40:21.241451+00:00",
+          "bytes": 6884,
+          "sha256": "7f4bac0ffd9aa5bc0540ada1ad868f11e5eaa717b6e3fe4389666c6c5cb35825",
+          "snapshot_path": "source_blobs/7f4bac0ffd9aa5bc0540ada1ad868f11e5eaa717b6e3fe4389666c6c5cb35825",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T00:19:28.582701+00:00",
+          "ends_in_newline": true,
+          "line_count": 166,
+          "package_file": "verification/supporting_records/L1/N06/V2F01454-prob_13_9.lean"
+        }
+      ]
+    },
+    "N07": {
+      "title": "C r1 reviewers really executed",
+      "records": [
+        {
+          "file_id": "V2F01257",
+          "stratum": "C_L1_r1",
+          "relative_path": "actors/math_checker-002/bridge/bridge-events.jsonl",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/c-pilot-r1/prob_13_9/actors/math_checker-002/bridge/bridge-events.jsonl",
+          "observed_utc": "2026-09-11T03:40:20.504649+00:00",
+          "bytes": 59287,
+          "sha256": "9e7e0a782a275ad28eee9fc3b5842e294402c0f7996f479edac386313c29d2e2",
+          "snapshot_path": "source_blobs/9e7e0a782a275ad28eee9fc3b5842e294402c0f7996f479edac386313c29d2e2",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T00:23:18.167202+00:00",
+          "ends_in_newline": true,
+          "line_count": 11,
+          "package_file": "verification/supporting_records/L1/N07/V2F01257-bridge-events.jsonl"
+        },
+        {
+          "file_id": "V2F01288",
+          "stratum": "C_L1_r1",
+          "relative_path": "actors/reviewer-002/bridge/bridge-events.jsonl",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/c-pilot-r1/prob_13_9/actors/reviewer-002/bridge/bridge-events.jsonl",
+          "observed_utc": "2026-09-11T03:40:20.664067+00:00",
+          "bytes": 56770,
+          "sha256": "9a258d012d6d6c154b6bb9f2b8c038ec83baccb7ec884dcfdf6ae8ff40d5f5ab",
+          "snapshot_path": "source_blobs/9a258d012d6d6c154b6bb9f2b8c038ec83baccb7ec884dcfdf6ae8ff40d5f5ab",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T00:21:18.206599+00:00",
+          "ends_in_newline": true,
+          "line_count": 15,
+          "package_file": "verification/supporting_records/L1/N07/V2F01288-bridge-events.jsonl"
+        },
+        {
+          "file_id": "V2F01254",
+          "stratum": "C_L1_r1",
+          "relative_path": "actors/math_checker-002/actor-receipt.json",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/c-pilot-r1/prob_13_9/actors/math_checker-002/actor-receipt.json",
+          "observed_utc": "2026-09-11T03:40:20.485094+00:00",
+          "bytes": 1878,
+          "sha256": "fe43402d537a3b1faef3ebb8c16fd2b225f6592d419182096d46ecfc0ba0569c",
+          "snapshot_path": "source_blobs/fe43402d537a3b1faef3ebb8c16fd2b225f6592d419182096d46ecfc0ba0569c",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T00:23:48.116582+00:00",
+          "ends_in_newline": true,
+          "line_count": 48,
+          "package_file": "verification/supporting_records/L1/N07/V2F01254-actor-receipt.json"
+        },
+        {
+          "file_id": "V2F01285",
+          "stratum": "C_L1_r1",
+          "relative_path": "actors/reviewer-002/actor-receipt.json",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/fw_pilot_20260910_staging/c-pilot-r1/prob_13_9/actors/reviewer-002/actor-receipt.json",
+          "observed_utc": "2026-09-11T03:40:20.648724+00:00",
+          "bytes": 1868,
+          "sha256": "e02920a851615b3f089f7fdc54308bd91f31f0be6099d75e588a78d96643e85e",
+          "snapshot_path": "source_blobs/e02920a851615b3f089f7fdc54308bd91f31f0be6099d75e588a78d96643e85e",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T00:22:04.896167+00:00",
+          "ends_in_newline": true,
+          "line_count": 48,
+          "package_file": "verification/supporting_records/L1/N07/V2F01285-actor-receipt.json"
+        }
+      ]
+    },
+    "N08": {
+      "title": "B r4 review, revision and final proof",
+      "records": [
+        {
+          "file_id": "V2F01530",
+          "stratum": "B_L1_r4",
+          "relative_path": "author-call-01/bridge/bridge-events.jsonl",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/bcap-r4-runs/coverage-B-r4-first-authorized-run/author-call-01/bridge/bridge-events.jsonl",
+          "observed_utc": "2026-09-11T03:40:21.537254+00:00",
+          "bytes": 264439,
+          "sha256": "9760e97f85e21c5c27fd00f16836a1abf235ef8521c876c10055e2e60fd0236f",
+          "snapshot_path": "source_blobs/9760e97f85e21c5c27fd00f16836a1abf235ef8521c876c10055e2e60fd0236f",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T03:31:25.478896+00:00",
+          "ends_in_newline": true,
+          "line_count": 49,
+          "package_file": "verification/supporting_records/L1/N08/V2F01530-bridge-events.jsonl"
+        },
+        {
+          "file_id": "V2F01624",
+          "stratum": "B_L1_r4",
+          "relative_path": "help/1a0c4741-023f-49a1-bf12-e6f448499046/actor/bridge/bridge-events.jsonl",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/bcap-r4-runs/coverage-B-r4-first-authorized-run/help/1a0c4741-023f-49a1-bf12-e6f448499046/actor/bridge/bridge-events.jsonl",
+          "observed_utc": "2026-09-11T03:40:21.594821+00:00",
+          "bytes": 57419,
+          "sha256": "a70f626619dd39cd558163a98ba22f691ec82afadb3da62fb72c0d0685adb4d6",
+          "snapshot_path": "source_blobs/a70f626619dd39cd558163a98ba22f691ec82afadb3da62fb72c0d0685adb4d6",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T03:28:59.104963+00:00",
+          "ends_in_newline": true,
+          "line_count": 19,
+          "package_file": "verification/supporting_records/L1/N08/V2F01624-bridge-events.jsonl"
+        },
+        {
+          "file_id": "V2F02390",
+          "stratum": "B_r4_endpoint",
+          "relative_path": "cases/38132e5b2ece7758f5c8bd730cc59ecdbe14a7201d237226784e24e3ceea1402/subject/candidate/ProbabilityTheory/chapter_13/prob_13_9.lean",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/ep-b-r4-l1/development-b-r2/cases/38132e5b2ece7758f5c8bd730cc59ecdbe14a7201d237226784e24e3ceea1402/subject/candidate/ProbabilityTheory/chapter_13/prob_13_9.lean",
+          "observed_utc": "2026-09-11T03:40:23.729832+00:00",
+          "bytes": 9379,
+          "sha256": "249940f071da69c868b86d21cae29fbdad527c3285d91139bfe869cb45017a5b",
+          "snapshot_path": "source_blobs/249940f071da69c868b86d21cae29fbdad527c3285d91139bfe869cb45017a5b",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T03:33:25.533214+00:00",
+          "ends_in_newline": true,
+          "line_count": 227,
+          "package_file": "verification/supporting_records/L1/N08/V2F02390-prob_13_9.lean"
+        },
+        {
+          "file_id": "V2F01871",
+          "stratum": "B_L1_r4",
+          "relative_path": "RESULT.json",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/bcap-r4-runs/coverage-B-r4-first-authorized-run/RESULT.json",
+          "observed_utc": "2026-09-11T03:40:21.711420+00:00",
+          "bytes": 164648,
+          "sha256": "1e0805e6eb0076facb7f29bfc0a7cdb8a9c79362916b9f80050ee93aeb0b698b",
+          "snapshot_path": "source_blobs/1e0805e6eb0076facb7f29bfc0a7cdb8a9c79362916b9f80050ee93aeb0b698b",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T03:31:44.634230+00:00",
+          "ends_in_newline": true,
+          "line_count": 4640,
+          "package_file": "verification/supporting_records/L1/N08/V2F01871-RESULT.json"
+        },
+        {
+          "file_id": "V2F01872",
+          "stratum": "B_L1_r4",
+          "relative_path": "submission.json",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/bcap-r4-runs/coverage-B-r4-first-authorized-run/submission.json",
+          "observed_utc": "2026-09-11T03:40:21.711420+00:00",
+          "bytes": 2516,
+          "sha256": "898b9a075a6efefce9739cf03f8b54878344dde7d0a26682b88bcdfca62622e0",
+          "snapshot_path": "source_blobs/898b9a075a6efefce9739cf03f8b54878344dde7d0a26682b88bcdfca62622e0",
+          "stable_during_read": true,
+          "mtime_utc": "2026-09-11T03:31:20+00:00",
+          "ends_in_newline": true,
+          "line_count": 84,
+          "package_file": "verification/supporting_records/L1/N08/V2F01872-submission.json"
+        }
+      ]
+    },
+    "N10": {
+      "title": "C r3 post-window review exposure and submission",
+      "records": [
+        {
+          "file_id": "C3S0241",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/c-r3-runs/c-r3-l1-001/run/coordinator-tools/tool-events.jsonl",
+          "relative_path": "run/coordinator-tools/tool-events.jsonl",
+          "stratum": "C_r3_closeout_supplement",
+          "observed_utc": "2026-09-11T03:50:33.144287+00:00",
+          "bytes": 92041,
+          "sha256": "f1ca4f6819943127850e58ca621e65f6629db34a51382cdb4f4f6d24919c4b1e",
+          "snapshot_path": "source_blobs/f1ca4f6819943127850e58ca621e65f6629db34a51382cdb4f4f6d24919c4b1e",
+          "stable_during_read": true,
+          "line_count": 36,
+          "package_file": "verification/supporting_records/L1/N10/C3S0241-tool-events.jsonl"
+        },
+        {
+          "file_id": "C3S0021",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/c-r3-runs/c-r3-l1-001/run/actors/coordinator-001/raw-public-events.bin",
+          "relative_path": "run/actors/coordinator-001/raw-public-events.bin",
+          "stratum": "C_r3_closeout_supplement",
+          "observed_utc": "2026-09-11T03:50:33.055670+00:00",
+          "bytes": 115708,
+          "sha256": "677333c305fbf24e97440721fdeb7d8301e94357ff1bf393769d3a3b2607dc9f",
+          "snapshot_path": "source_blobs/677333c305fbf24e97440721fdeb7d8301e94357ff1bf393769d3a3b2607dc9f",
+          "stable_during_read": true,
+          "line_count": 66,
+          "package_file": "verification/supporting_records/L1/N10/C3S0021-raw-public-events.bin"
+        },
+        {
+          "file_id": "C3S0243",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/c-r3-runs/c-r3-l1-001/run/final-run-receipt.json",
+          "relative_path": "run/final-run-receipt.json",
+          "stratum": "C_r3_closeout_supplement",
+          "observed_utc": "2026-09-11T03:50:33.151338+00:00",
+          "bytes": 2590,
+          "sha256": "1634415d0896b2ed3b8f7920c2ecbd42067824a90b7cffa60d537bb6321b6c99",
+          "snapshot_path": "source_blobs/1634415d0896b2ed3b8f7920c2ecbd42067824a90b7cffa60d537bb6321b6c99",
+          "stable_during_read": true,
+          "line_count": 80,
+          "package_file": "verification/supporting_records/L1/N10/C3S0243-final-run-receipt.json"
+        },
+        {
+          "file_id": "C3S0181",
+          "source_path": "D:/Grad_Study/Practimum/Formalization/c-r3-runs/c-r3-l1-001/run/candidates/c1/visible-files/ProbabilityTheory/chapter_13/prob_13_9.lean",
+          "relative_path": "run/candidates/c1/visible-files/ProbabilityTheory/chapter_13/prob_13_9.lean",
+          "stratum": "C_r3_closeout_supplement",
+          "observed_utc": "2026-09-11T03:50:33.128917+00:00",
+          "bytes": 8093,
+          "sha256": "55a6fa5b2f45a97c49d455bdf14c7f473d8e0ff5c081dd4e7bffa8d57e7e7adc",
+          "snapshot_path": "source_blobs/55a6fa5b2f45a97c49d455bdf14c7f473d8e0ff5c081dd4e7bffa8d57e7e7adc",
+          "stable_during_read": true,
+          "line_count": 187,
+          "package_file": "verification/supporting_records/L1/N10/C3S0181-prob_13_9.lean"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1608 @@
+[
+  {
+    "id": "l3-scheffe-a",
+    "run_id": "r2-l3-a",
+    "observation_zh": "A从负部受极限函数控制出发，用支配收敛及绝对值分解证明原序列尾部可积版本。编辑路径多次不匹配；实际候选中最大值强可测性、测度参数和复合极限表达需要修正，E036通过。",
+    "interpretation_and_countercheck_zh": "以数学需要观察，与B/C共用负部路线，但工具和表示适配不同。",
+    "evidence": [
+      {
+        "local_id": "E015",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_md7KbcqTtglIMAHV2OiUNWoQ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 40,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 41,
+        "start_min": 1.772467597325643,
+        "end_min": 1.7775509277979533
+      },
+      {
+        "local_id": "E016",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_4IB0zOI2WFbXRvzoKZ61oXIF",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 42,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 43,
+        "start_min": 1.9752842624982199,
+        "end_min": 1.9798509279886882
+      },
+      {
+        "local_id": "E017",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_AWzFB11dLsx2tuu67CfUc6yj",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 44,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 45,
+        "start_min": 2.044650928179423,
+        "end_min": 2.0489842613538105
+      },
+      {
+        "local_id": "E018",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_StLBzTI71dOQ81zfqs02r6ku",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 47,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 48,
+        "start_min": 2.9833675980567933,
+        "end_min": 2.9981842637062073
+      },
+      {
+        "local_id": "E021",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_i3wR2Q207HfFhYMk7eDBVPGt",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 54,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 55,
+        "start_min": 3.983600930372874,
+        "end_min": 3.999634261926015
+      },
+      {
+        "local_id": "E022",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_E6Utl57uQKdrB6BjjeBgDtFf",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 56,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 57,
+        "start_min": 4.699184262752533,
+        "end_min": 4.712700931231181
+      },
+      {
+        "local_id": "E023",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_1X7G6B3332XokrbgiXDPGdPT",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 58,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 59,
+        "start_min": 5.421500929196676,
+        "end_min": 5.613567594687144
+      },
+      {
+        "local_id": "E024",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_giLrJdExbOIg0GLgP33xwVdT",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 60,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 61,
+        "start_min": 5.701767595609029,
+        "end_min": 5.70645093123118
+      },
+      {
+        "local_id": "E025",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_5UYHP50a9iCmgPSnGpU5eLdc",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 62,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 63,
+        "start_min": 5.782334264119466,
+        "end_min": 5.789284261067708
+      },
+      {
+        "local_id": "E026",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_8KO8nVCcHJNkvEV9Rv2grDGr",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 64,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 65,
+        "start_min": 6.123017597198486,
+        "end_min": 6.290750928719839
+      },
+      {
+        "local_id": "E028",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_RmllumTVzm7Vwtk23tZqfyJC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 68,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 69,
+        "start_min": 6.722584263483683,
+        "end_min": 6.890650928020477
+      },
+      {
+        "local_id": "E029",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_oU35dRNd97SXliZk3yUs4vWk",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 70,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 71,
+        "start_min": 7.014650928974151,
+        "end_min": 7.018634263674418
+      },
+      {
+        "local_id": "E030",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_qX6t0Azht4oWDj8Md80IsbLO",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 72,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 73,
+        "start_min": 7.164067594210307,
+        "end_min": 7.167850927511851
+      },
+      {
+        "local_id": "E031",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_Kc6wvArQYm0o5qnbk61UW8Ms",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 74,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 75,
+        "start_min": 7.485150929292043,
+        "end_min": 7.643234260876974
+      },
+      {
+        "local_id": "E033",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_t0MvFdtLhY4dA9MI284waBFi",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 78,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 79,
+        "start_min": 7.819484261671702,
+        "end_min": 7.98318426211675
+      },
+      {
+        "local_id": "E034",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_G3QKTwAUUO8zqJb1F63oAz77",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 80,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 81,
+        "start_min": 8.14416759411494,
+        "end_min": 8.305517597993214
+      },
+      {
+        "local_id": "E035",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_95kBWwzqCgOUyXsXgiPI2OXJ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 82,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 83,
+        "start_min": 8.500300927956898,
+        "end_min": 8.665700928370159
+      },
+      {
+        "local_id": "E036",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_wawb8QZvt6aLB15SPAs85h42",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 84,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 85,
+        "start_min": 8.844267594814301,
+        "end_min": 9.070717597007752
+      },
+      {
+        "local_id": "E038",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_romWW0xoWI68AKwofg4sSKvA",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 90,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 91,
+        "start_min": 9.472950931390127,
+        "end_min": 13.813950928052266
+      }
+    ]
+  },
+  {
+    "id": "l3-full-text-help-a",
+    "run_id": "r2-l3-a",
+    "observation_zh": "A在第一目标采用后请求只读支持，明确要求全套密度与高斯结论。助手在临时文件验证完整候选并给出代码及补丁；作者应用并补组合主定理，E089通过。审核调用E091在导出工作区时失败，审核者尚未创建。",
+    "interpretation_and_countercheck_zh": "只读不编辑项目与通过文本/声明补丁交付完整代码可并存。实际采用已观察；随后服务失败应与证明失败分列。",
+    "evidence": [
+      {
+        "local_id": "E054",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_liMtt4D2tDxA13cNyuderIWr",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 101,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 102,
+        "start_min": 14.616784262657166,
+        "end_min": 14.620900928974152
+      },
+      {
+        "local_id": "E055",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_JxIlFAohXkRJzXJ4K3e9w9Or",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 103,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 104,
+        "start_min": 14.73011759519577,
+        "end_min": 14.73473426103592
+      },
+      {
+        "local_id": "E056",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_s9M1Otzc0dqU42DR0wLH2r14",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 105,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 106,
+        "start_min": 14.864700929323833,
+        "end_min": 14.868750929832458
+      },
+      {
+        "local_id": "E057",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_KypmCeb8YPhoKtnsFqtCH4gh",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 107,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 108,
+        "start_min": 14.939584263165791,
+        "end_min": 14.943684264024098
+      },
+      {
+        "local_id": "E058",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_fCFsTTeIVva52hPMaKtf2saE",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 109,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 110,
+        "start_min": 15.010117594401041,
+        "end_min": 15.013934262593587
+      },
+      {
+        "local_id": "E059",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_Pjjw93GLWTvABAfIbvQVwBy4",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 112,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 113,
+        "start_min": 15.381867595513661,
+        "end_min": 23.479050930341085
+      },
+      {
+        "local_id": "E070",
+        "event_id": "01a09c1e-a4ae-79d2-9d35-e30ef80ec4cc:call_T5EuxLiXT2rn8dGZgezqw4QP",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "source_line": 30,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "result_source_line": 31,
+        "start_min": 19.976617594559986,
+        "end_min": 20.04596759478251
+      },
+      {
+        "local_id": "E071",
+        "event_id": "01a09c1e-a4ae-79d2-9d35-e30ef80ec4cc:call_ajsZFI1orwCTZftLgVeWEB1a",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "result_source_line": 33,
+        "start_min": 20.26558426221212,
+        "end_min": 20.343034263451894
+      },
+      {
+        "local_id": "E073",
+        "event_id": "01a09c1e-a4ae-79d2-9d35-e30ef80ec4cc:call_uMs82juLmWwd2U4oIZZ2BA13",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "source_line": 36,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "result_source_line": 37,
+        "start_min": 20.491834263006847,
+        "end_min": 20.557600931326547
+      },
+      {
+        "local_id": "E075",
+        "event_id": "01a09c1e-a4ae-79d2-9d35-e30ef80ec4cc:call_WtaoCUQ8HSvxvyfVcdoyR6L3",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "source_line": 41,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "result_source_line": 42,
+        "start_min": 21.03363426129023,
+        "end_min": 21.10043426354726
+      },
+      {
+        "local_id": "E076",
+        "event_id": "01a09c1e-a4ae-79d2-9d35-e30ef80ec4cc:call_3VcibVV4SPdwqjRKsrYkiYcV",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "source_line": 43,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "result_source_line": 44,
+        "start_min": 21.603834263483684,
+        "end_min": 21.674400929609934
+      },
+      {
+        "local_id": "E077",
+        "event_id": "01a09c1e-a4ae-79d2-9d35-e30ef80ec4cc:call_xLtCDTt512PEvBzTZJdB0gEM",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "source_line": 45,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "result_source_line": 46,
+        "start_min": 21.806234264373778,
+        "end_min": 21.871384263038635
+      },
+      {
+        "local_id": "E081",
+        "event_id": "01a09c1e-a4ae-79d2-9d35-e30ef80ec4cc:call_KO3pCnci2ZJEoVNn02LByIL9",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "source_line": 54,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "result_source_line": 55,
+        "start_min": 22.387217597166696,
+        "end_min": 22.458634261290232
+      },
+      {
+        "local_id": "E082",
+        "event_id": "01a09c1e-a4ae-79d2-9d35-e30ef80ec4cc:call_lShqQZ4bjitfqgjfnabdKmhz",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "source_line": 56,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "result_source_line": 57,
+        "start_min": 22.957334264119467,
+        "end_min": 22.96148426135381
+      },
+      {
+        "local_id": "E084",
+        "event_id": "01a09c1e-a4ae-79d2-9d35-e30ef80ec4cc:call_xCksLpcoa7YVJi4fMlXnuHT4",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "source_line": 60,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\help\\316d0d5a-379b-48fc-9479-be8cc2f538b1\\actor\\full-public-trace.jsonl",
+        "result_source_line": 61,
+        "start_min": 23.25025092760722,
+        "end_min": 23.254300928115846
+      },
+      {
+        "local_id": "E085",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_nF3UJHin3HsQhILNlH68e6aL",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 114,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 115,
+        "start_min": 23.569334264596304,
+        "end_min": 23.57351759672165
+      },
+      {
+        "local_id": "E086",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_rbW5TBcxANmz0KC7yVelMEVg",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 116,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 117,
+        "start_min": 23.756967596213023,
+        "end_min": 23.763967597484587
+      },
+      {
+        "local_id": "E087",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_irEYNoiTbvDw1OWSRB7WwVsX",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 119,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 120,
+        "start_min": 24.088517594337464,
+        "end_min": 24.1067675948143
+      },
+      {
+        "local_id": "E088",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_jPI3CYUjfiSnx2wPz0hB9KdR",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 121,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 122,
+        "start_min": 24.243450927734376,
+        "end_min": 24.248134263356526
+      },
+      {
+        "local_id": "E089",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_sBOJUlAj2209v7E68X6J9xUO",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 124,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 125,
+        "start_min": 24.550050930182138,
+        "end_min": 24.77981759707133
+      },
+      {
+        "local_id": "E090",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_ge4dvtiCb43iDiEl0oLI3ivE",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 127,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 128,
+        "start_min": 24.863584264119467,
+        "end_min": 24.878767597675324
+      },
+      {
+        "local_id": "E091",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_kvD0GfkNaucqkOMKPzCCUA16",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 130,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 131,
+        "start_min": 25.061717597643533,
+        "end_min": 25.09396759668986
+      },
+      {
+        "local_id": "E092",
+        "event_id": "01a09c10-6e43-7561-9d58-adefb57a8e49:call_NcI9A4FFxQVHXwAKN7QO6lvk",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "source_line": 133,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-a\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 134,
+        "start_min": 25.460150929292045,
+        "end_min": 25.464034263292948
+      }
+    ]
+  },
+  {
+    "id": "l3-recovery-a",
+    "run_id": "r2-l3-a-recovery",
+    "observation_zh": "恢复先交付原未启动审核，采用后上下游审核依据发生变化，依次重新审核问题7.6和例10.3.2；最终构建与交付。复审仍绑定原候选摘要。",
+    "interpretation_and_countercheck_zh": "R编号以恢复总钟计时；此72个调用不混入原33次运行4233调用的分母。总时间沿用原25.6393加恢复18.7150分钟，工程修复的离线间隔不拼进运行钟。",
+    "evidence": [
+      {
+        "local_id": "R021",
+        "event_id": "recovery-3159fa3cc9a5:call_m9uL63UFeOZtAV4fgHS6Nw7a",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 6,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 7,
+        "start_min": 4.432923467954,
+        "end_min": 4.437123465538025
+      },
+      {
+        "local_id": "R022",
+        "event_id": "recovery-3159fa3cc9a5:call_PWoplOBCESiLRpbvOZsh7PAE",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 9,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 10,
+        "start_min": 4.590623466173808,
+        "end_min": 4.74874013264974
+      },
+      {
+        "local_id": "R023",
+        "event_id": "recovery-3159fa3cc9a5:call_2rFyMAD86PcqiGjbH6Og0KDD",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 12,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 13,
+        "start_min": 4.9139734665552774,
+        "end_min": 4.994890133539836
+      },
+      {
+        "local_id": "R024",
+        "event_id": "recovery-3159fa3cc9a5:call_DqrWYEurXelCSDwKfRgSi2F0",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 15,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 16,
+        "start_min": 5.134306800365448,
+        "end_min": 5.148740132649739
+      },
+      {
+        "local_id": "R025",
+        "event_id": "recovery-3159fa3cc9a5:call_GhDAdZc20rQ6WxTt8qSX8bkQ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 18,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 19,
+        "start_min": 5.4492401321729025,
+        "end_min": 5.527306799093882
+      },
+      {
+        "local_id": "R026",
+        "event_id": "recovery-3159fa3cc9a5:call_2CJnhH75hZ1C7zCFftFpoQ28",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 21,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 22,
+        "start_min": 5.707840132713318,
+        "end_min": 9.772906800111135
+      },
+      {
+        "local_id": "R041",
+        "event_id": "recovery-3159fa3cc9a5:call_Ei5khnVhlYWecnOeaJjKvoIx",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 23,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 24,
+        "start_min": 9.922240134080251,
+        "end_min": 10.020973467826844
+      },
+      {
+        "local_id": "R042",
+        "event_id": "recovery-3159fa3cc9a5:call_I0jGozkoUVCIUibHC6VtQwJU",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 26,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 27,
+        "start_min": 10.09895679950714,
+        "end_min": 10.113973466555278
+      },
+      {
+        "local_id": "R043",
+        "event_id": "recovery-3159fa3cc9a5:call_qg23VTJBxdic3KhbkWAmzOk0",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 29,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 30,
+        "start_min": 10.26389013528824,
+        "end_min": 10.35680679877599
+      },
+      {
+        "local_id": "R044",
+        "event_id": "recovery-3159fa3cc9a5:call_PTmtQSwvN5rottqXx4HDtabB",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 33,
+        "start_min": 10.535706798235575,
+        "end_min": 15.591806801160176
+      },
+      {
+        "local_id": "R065",
+        "event_id": "recovery-3159fa3cc9a5:call_4hxW7LkY5kMwUNrWLfT1lA0g",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 34,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 35,
+        "start_min": 15.717156799634298,
+        "end_min": 15.788990132013957
+      },
+      {
+        "local_id": "R066",
+        "event_id": "recovery-3159fa3cc9a5:call_djkf8xbC2wemXnEIPKC2o65p",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 37,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 38,
+        "start_min": 15.934006798267365,
+        "end_min": 15.94742346604665
+      },
+      {
+        "local_id": "R067",
+        "event_id": "recovery-3159fa3cc9a5:call_TG0KYn2BnWJHheoZHPoHgzRj",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 40,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 41,
+        "start_min": 16.104223465919496,
+        "end_min": 16.108740135033926
+      },
+      {
+        "local_id": "R068",
+        "event_id": "recovery-3159fa3cc9a5:call_3PjRR3onTbAhfiji1QUcoH30",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 42,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 43,
+        "start_min": 16.332606800397237,
+        "end_min": 16.33732346693675
+      },
+      {
+        "local_id": "R069",
+        "event_id": "recovery-3159fa3cc9a5:call_WGCLsoO48k3NeJlLpos65rVJ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 45,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 46,
+        "start_min": 16.608840131759642,
+        "end_min": 16.675906801223753
+      },
+      {
+        "local_id": "R071",
+        "event_id": "recovery-3159fa3cc9a5:call_Ujj2s153MXaKQAnsKxP5XeL7",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 51,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 52,
+        "start_min": 17.966373467445372,
+        "end_min": 17.97542346715927
+      },
+      {
+        "local_id": "R072",
+        "event_id": "recovery-3159fa3cc9a5:call_8GCvU6HuZ5q1QD9HXy2oZbXH",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "source_line": 54,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\recovery_al3_20260914\\run\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 55,
+        "start_min": 18.258940132459006,
+        "end_min": 18.263623468081157
+      }
+    ]
+  },
+  {
+    "id": "l3-negativepart-b",
+    "run_id": "r2-l3-b",
+    "observation_zh": "B同样构造负部控制；强可测表达没有max字段，先转几乎处处可测、取最大值后转回强可测。普通函数运算与逐点式的积分分解经明确等式解决，E020通过。",
+    "interpretation_and_countercheck_zh": "C直接找到sup字段，A使用可测性自动化；三者最终事实一致。",
+    "evidence": [
+      {
+        "local_id": "E004",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_jWYQAV4JtnXjzDrotocnntEb",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 15,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 16,
+        "start_min": 0.4750972072283427,
+        "end_min": 0.4798805395762126
+      },
+      {
+        "local_id": "E007",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_ytr4IQaiaKSTtZQw5MNS2VJK",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 21,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 22,
+        "start_min": 1.885397203763326,
+        "end_min": 1.8893138726552328
+      },
+      {
+        "local_id": "E008",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_mJ3NgcyhrrQ3YW9ecGJDw2ZM",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 24,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 25,
+        "start_min": 2.872963873545329,
+        "end_min": 2.8778305371602375
+      },
+      {
+        "local_id": "E009",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_iR4VEO8FfTVj8U6jEls7DqJ7",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 26,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 27,
+        "start_min": 2.9657305399576823,
+        "end_min": 2.9736972053845725
+      },
+      {
+        "local_id": "E010",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_uY0KB387hVvtR4VTRe1Y7MUo",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 28,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 29,
+        "start_min": 3.0142972071965537,
+        "end_min": 3.107047204176585
+      },
+      {
+        "local_id": "E011",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_YyzmqQuicLBgGzjDHGSuzQpC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 30,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 31,
+        "start_min": 3.200897204875946,
+        "end_min": 3.275397205352783
+      },
+      {
+        "local_id": "E012",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_1FqsH0Fz0au78laYgGKrINZv",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 33,
+        "start_min": 3.3775638739267984,
+        "end_min": 3.4491305390993756
+      },
+      {
+        "local_id": "E013",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_dlHSKIUPbX3iDKD1JubtwLHF",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 34,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 35,
+        "start_min": 3.7418305397033693,
+        "end_min": 3.8118805408477785
+      },
+      {
+        "local_id": "E015",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_L7A1NgowqJaHfO7gu9U4noRR",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 38,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 39,
+        "start_min": 4.191780539353688,
+        "end_min": 4.269213871161143
+      },
+      {
+        "local_id": "E017",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_b9OmFcP45w0PQSbf5K0wSPIB",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 42,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 43,
+        "start_min": 4.599747204780579,
+        "end_min": 4.66873053709666
+      },
+      {
+        "local_id": "E018",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_a24HsvERz9UUGQNQ0ojWsOBb",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 44,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 45,
+        "start_min": 4.8881305376688635,
+        "end_min": 4.962763873736064
+      },
+      {
+        "local_id": "E019",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_il59ClUD7spIwe4rq11flWeR",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 46,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 47,
+        "start_min": 5.169680539766947,
+        "end_min": 5.25168053706487
+      },
+      {
+        "local_id": "E020",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_ZQp00Y34Zs4hrUmUxLTveg2d",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 48,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 49,
+        "start_min": 5.306813871860504,
+        "end_min": 5.378680539131165
+      }
+    ]
+  },
+  {
+    "id": "l3-gaussian-b",
+    "run_id": "r2-l3-b",
+    "observation_zh": "B用密度收敛处理正方差极限、特征函数处理退化极限，E031已通过这些目标；另外补了零方差极限不全变差收敛的结论。审核建议把每项正方差放宽为最终正方差，E048实际修改并通过。",
+    "interpretation_and_countercheck_zh": "附加非全变差结论和放宽不应记成补救必需任务缺失。审核者坦言未找到lake而未独立编译，最终编译证据来自作者。",
+    "evidence": [
+      {
+        "local_id": "E005",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_r1oCjIA7bYHou7N80LEeVVFa",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 17,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 18,
+        "start_min": 0.5633305390675862,
+        "end_min": 0.5679972052574158
+      },
+      {
+        "local_id": "E006",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_kPtvenEth7wCGVmdxfcktAbJ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 19,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 20,
+        "start_min": 1.0450472036997478,
+        "end_min": 1.053380537033081
+      },
+      {
+        "local_id": "E021",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_uL9On77sTlJlJQKY1udA55B6",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 51,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 52,
+        "start_min": 5.746147207419077,
+        "end_min": 5.823163870970408
+      },
+      {
+        "local_id": "E022",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_8Q8tK43VBbr4QBRTxskMk0lR",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 53,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 54,
+        "start_min": 6.078197205066681,
+        "end_min": 6.144497203826904
+      },
+      {
+        "local_id": "E023",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_hLlq1xq195WTiYelKl7biuGE",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 55,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 56,
+        "start_min": 6.2438638726870215,
+        "end_min": 6.31074720621109
+      },
+      {
+        "local_id": "E024",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_eAUm9v35D5apOVBgoHzmYHsC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 57,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 58,
+        "start_min": 6.536480538050333,
+        "end_min": 6.609997204939524
+      },
+      {
+        "local_id": "E025",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_cstgFWI4LM20HPwF3CYJNb49",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 59,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 60,
+        "start_min": 6.68281387090683,
+        "end_min": 6.753997206687927
+      },
+      {
+        "local_id": "E026",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_iqYAPzjC2Ghnf9NyhUB95Y19",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 61,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 62,
+        "start_min": 8.096447205543518,
+        "end_min": 8.125630537668863
+      },
+      {
+        "local_id": "E027",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_nwXqxJ33b1PcuSSfDvwB0AIz",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 63,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 64,
+        "start_min": 8.172730537255605,
+        "end_min": 8.362197204430897
+      },
+      {
+        "local_id": "E028",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_o4lrxIRLLz4FwKwAeQvOnnKd",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 65,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 66,
+        "start_min": 8.60923053820928,
+        "end_min": 8.613413870334625
+      },
+      {
+        "local_id": "E029",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_N1n8pojfKqePpm8DWfD0LiYu",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 67,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 68,
+        "start_min": 8.84828053712845,
+        "end_min": 8.919547204176585
+      },
+      {
+        "local_id": "E030",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_2BBPzHL7SY8xoI5YpqNUeVmh",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 69,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 70,
+        "start_min": 9.05289720694224,
+        "end_min": 9.126647206147512
+      },
+      {
+        "local_id": "E031",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_4vh0P7FUX8JCpefRldjQfzbx",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 71,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 72,
+        "start_min": 9.28883053859075,
+        "end_min": 9.354030537605286
+      },
+      {
+        "local_id": "E032",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_tJiZyQbakMXiuvf4BqdnVLZM",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 73,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 74,
+        "start_min": 9.499447206656138,
+        "end_min": 9.504880539576213
+      },
+      {
+        "local_id": "E033",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_5HaJ6JX6DkePnu3FHZtis0rp",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 75,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 76,
+        "start_min": 9.565047204494476,
+        "end_min": 9.570280539989472
+      },
+      {
+        "local_id": "E034",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_uQpRsxVvdFoVHogRUxWd34MJ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 77,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 78,
+        "start_min": 9.714480539162954,
+        "end_min": 9.786213870843252
+      },
+      {
+        "local_id": "E035",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_4pvL6OGGjpwrJpdxjqx0xbgV",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 79,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 80,
+        "start_min": 10.035297207037608,
+        "end_min": 10.11268053849538
+      },
+      {
+        "local_id": "E036",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_Pa2MVNJG7NowJ9VYC4AVh2qJ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 81,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 82,
+        "start_min": 10.21238054037094,
+        "end_min": 10.289363873004913
+      },
+      {
+        "local_id": "E037",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_Gki5DN69wQKp8sSvqStK1Wqr",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 83,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 84,
+        "start_min": 10.367263873418173,
+        "end_min": 10.443113871415456
+      },
+      {
+        "local_id": "E038",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_FSdYGk4OXzxRkyyzWNVrGshL",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 86,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 87,
+        "start_min": 10.595880540211995,
+        "end_min": 12.364147206147512
+      },
+      {
+        "local_id": "E048",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_kriSy2h4z0AAE6tjI1yBj0Kk",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 88,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 89,
+        "start_min": 12.563180538018544,
+        "end_min": 12.75173053741455
+      },
+      {
+        "local_id": "E049",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_GQwg6o6CPFWBvrcSEM3wM6yL",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 90,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 91,
+        "start_min": 12.936730539798736,
+        "end_min": 13.000713872909547
+      },
+      {
+        "local_id": "E050",
+        "event_id": "01a09c25-a900-7a73-b11d-7b5b64e8e4d2:call_JFAmnr1OVr1rT2CcGqtP9Rbn",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "source_line": 93,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-b\\author-01\\full-public-trace.jsonl",
+        "result_source_line": 94,
+        "start_min": 13.496130537986755,
+        "end_min": 13.50119720697403
+      }
+    ]
+  },
+  {
+    "id": "l3-edit-c",
+    "run_id": "r2-l3-c",
+    "observation_zh": "C从2.27分钟开始写稿，多次补丁格式/行数问题，8.64分钟才实际生成首个证明文件。之后明确常数极限类型、以sup证明负部强可测性、展开函数差的逐点表达，10.10分钟通过第一目标。",
+    "interpretation_and_countercheck_zh": "2.27—8.64是观察到的尝试区间，不是工具进程耗时之和。数学错误只在真实写入后判断。",
+    "evidence": [
+      {
+        "local_id": "E007",
+        "event_id": "01a09c0f-c2ab-76c2-b044-cc6bb23ebc02:call_6VG2AFcZ5KIva94D7sRE61yw",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "source_line": 21,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "result_source_line": 22,
+        "start_min": 0.6674346486727397,
+        "end_min": 18.191834648450214
+      },
+      {
+        "local_id": "E012",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_a3ktlD6yIkm0fLWRMV1tUPIO",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 17,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 18,
+        "start_min": 1.227551313241323,
+        "end_min": 1.2328513145446778
+      },
+      {
+        "local_id": "E013",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_VpCtijHzFRi1Pf1Cx9vFcPPI",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 19,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 20,
+        "start_min": 1.3330513159434,
+        "end_min": 1.337334648768107
+      },
+      {
+        "local_id": "E014",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_vM13tTF3mGxDqBtiaClXxiLv",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 21,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 22,
+        "start_min": 1.4171346465746562,
+        "end_min": 1.4214346488316854
+      },
+      {
+        "local_id": "E015",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_F5Jcd0pAcuY8hTAqdM29AHj7",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 24,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 25,
+        "start_min": 2.2686013142267862,
+        "end_min": 2.2989513158798216
+      },
+      {
+        "local_id": "E017",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_jnXHUcRFqbTtJvzH3Rs8y5we",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 29,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 30,
+        "start_min": 3.131267980734507,
+        "end_min": 3.1466179807980854
+      },
+      {
+        "local_id": "E018",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_HHiqY7WBPNgpicTNiCtFHMaF",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 31,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 32,
+        "start_min": 3.8546346465746564,
+        "end_min": 3.8681846459706626
+      },
+      {
+        "local_id": "E019",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_mXHHElfjOuTMQxzalnSVRaM9",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 33,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 34,
+        "start_min": 4.550101315975189,
+        "end_min": 4.562101312478384
+      },
+      {
+        "local_id": "E020",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_9yv562gPQwRTZLLO2KSBy9WU",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 35,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 36,
+        "start_min": 5.203117982546488,
+        "end_min": 5.214051314194998
+      },
+      {
+        "local_id": "E021",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_FQjvSlaoS5IvyKbk9plX2cBY",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 37,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 38,
+        "start_min": 5.941167982419332,
+        "end_min": 5.951967982451121
+      },
+      {
+        "local_id": "E022",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_muzajkKFLnAKuToC6SawSguD",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 39,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 40,
+        "start_min": 6.583751312891642,
+        "end_min": 6.594984646638235
+      },
+      {
+        "local_id": "E023",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_1GQLii6dJ9VoNHH6dWezoYVb",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 41,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 42,
+        "start_min": 7.199401315053304,
+        "end_min": 7.2104013125101725
+      },
+      {
+        "local_id": "E024",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_RUHUdWx8S2V94nudK02RR7Yo",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 43,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 44,
+        "start_min": 7.939951312541962,
+        "end_min": 7.943767980734507
+      },
+      {
+        "local_id": "E025",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_AsVUfMdvDMG7MkfO8z4Qo6di",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 46,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 47,
+        "start_min": 8.636534647146862,
+        "end_min": 8.715001312891642
+      },
+      {
+        "local_id": "E026",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_2zYm8uGPqR7pc5rZbkU19nwg",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 48,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 49,
+        "start_min": 8.863501314322153,
+        "end_min": 8.868201315402985
+      },
+      {
+        "local_id": "E027",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_dW5fTotORceJ1192ERscTSD8",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 50,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 51,
+        "start_min": 8.969001313050589,
+        "end_min": 8.973317980766296
+      },
+      {
+        "local_id": "E028",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_GHRVFGEY4aUDbh51IJm3sxwm",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 52,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 53,
+        "start_min": 9.029417979717255,
+        "end_min": 9.033751312891642
+      },
+      {
+        "local_id": "E029",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_DfpXb0g2jQXpFI4uFFkKbVlc",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 54,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 55,
+        "start_min": 9.230784646670024,
+        "end_min": 9.298701314131419
+      },
+      {
+        "local_id": "E030",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_ONZWWvdpWgZdkgjjsRf6HjQ7",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 56,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 57,
+        "start_min": 9.406084648768108,
+        "end_min": 9.4739679813385
+      },
+      {
+        "local_id": "E031",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_7CvBeBdBqtMfuWKdD03shEsm",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 58,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 59,
+        "start_min": 9.636734648545582,
+        "end_min": 9.640717979272207
+      },
+      {
+        "local_id": "E032",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_d3vOG0pzI69Wc7mAUAnVo3UZ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 60,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 61,
+        "start_min": 9.88613464832306,
+        "end_min": 9.952334646383921
+      },
+      {
+        "local_id": "E033",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_Vjx4JuSsuepdjVFT7h0rh9AO",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 62,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 63,
+        "start_min": 10.031434647242229,
+        "end_min": 10.09720131556193
+      }
+    ]
+  },
+  {
+    "id": "l3-gaussian-c",
+    "run_id": "r2-l3-c",
+    "observation_zh": "C建立密度测度及概率测度包装，处理实数/复数指数、函数除法和概率律相等的方向；另外加入任意原空间随机变量的分布转移。正方差分布结论最终显式接总变差链，E064检查通过。",
+    "interpretation_and_countercheck_zh": "不能把较早只有部分文件的通过当作整组完成。它的额外随机变量接口是新增交付工作，不能把这一阶段全归为报错恢复。",
+    "evidence": [
+      {
+        "local_id": "E034",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_bnrn3qpbrkM0hPkXp9ueArZr",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 65,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 66,
+        "start_min": 10.35660131374995,
+        "end_min": 10.360967981815339
+      },
+      {
+        "local_id": "E035",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_kEKJy0G2C42zFj0y1fH5b0d0",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 67,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 68,
+        "start_min": 10.617151316006979,
+        "end_min": 10.621267982323964
+      },
+      {
+        "local_id": "E036",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_DDxeZTzmVAJ6u5PtyQw3Anvz",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 69,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 70,
+        "start_min": 11.405534648895264,
+        "end_min": 11.409551314512889
+      },
+      {
+        "local_id": "E037",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_0GUWsLGMnXwau8GFzAb7HjOv",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 71,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 72,
+        "start_min": 11.45828464825948,
+        "end_min": 11.462101312478383
+      },
+      {
+        "local_id": "E038",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_vfIqcS7iPpfdvlEfVHLkzSf5",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 73,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 74,
+        "start_min": 11.535801315307618,
+        "end_min": 11.562801313400268
+      },
+      {
+        "local_id": "E039",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_yeWtIa6RklsUCCGQlhHjXJ5u",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 75,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 76,
+        "start_min": 11.615951315561931,
+        "end_min": 11.796534649531047
+      },
+      {
+        "local_id": "E040",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_MSyNzJ4uDuGVg5WWS1iODlkm",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 77,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 78,
+        "start_min": 11.856301315625508,
+        "end_min": 11.860184649626413
+      },
+      {
+        "local_id": "E041",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_XWTbLv5BkLB30GksM2t91RPN",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 79,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 80,
+        "start_min": 12.175534645716349,
+        "end_min": 12.179551315307616
+      },
+      {
+        "local_id": "E042",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_uyJCS9Vn9d2LqZVkOOSdyPND",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 81,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 82,
+        "start_min": 12.250701316197713,
+        "end_min": 12.373134648799896
+      },
+      {
+        "local_id": "E043",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_RLvESvKlihM0gtci2zSP1fl9",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 83,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 84,
+        "start_min": 12.438234647115072,
+        "end_min": 12.441951314608255
+      },
+      {
+        "local_id": "E044",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_den0yOXC245U2ccCKbMvUFii",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 85,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 86,
+        "start_min": 12.51141798098882,
+        "end_min": 12.623501312732696
+      },
+      {
+        "local_id": "E045",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_PaGwvkejSsw5rzkY2rFfjlvu",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 87,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 88,
+        "start_min": 13.39243464867274,
+        "end_min": 13.396601315339407
+      },
+      {
+        "local_id": "E046",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_IOjnbk0M5zx9qmXzXw8xTbUa",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 89,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 90,
+        "start_min": 13.46443464756012,
+        "end_min": 13.587034646670023
+      },
+      {
+        "local_id": "E047",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_3d8NgEGV2ilKKhGltVH3GaFn",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 91,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 92,
+        "start_min": 13.643017979462941,
+        "end_min": 13.721934648354848
+      },
+      {
+        "local_id": "E048",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_81NlIcalf7Oxa9GPEjv7atBu",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 93,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 94,
+        "start_min": 13.765234649181366,
+        "end_min": 13.841551315784454
+      },
+      {
+        "local_id": "E049",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_mMtOMrG7z2SgYTSe8e96PKh8",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 95,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 96,
+        "start_min": 13.953201313813528,
+        "end_min": 13.957551312446594
+      },
+      {
+        "local_id": "E050",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_aS2naXM3k4OQi2M3d41iNBPh",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 97,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 98,
+        "start_min": 14.121834647655486,
+        "end_min": 14.197584648927053
+      },
+      {
+        "local_id": "E051",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_svr9QBhVxbsuslAlgGOqaY5s",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 99,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 100,
+        "start_min": 14.347967982292175,
+        "end_min": 14.353117982546488
+      },
+      {
+        "local_id": "E052",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_HQPSlvmK4NcSGTgGpG5HXEnM",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 101,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 102,
+        "start_min": 14.464451313018799,
+        "end_min": 14.550184647242228
+      },
+      {
+        "local_id": "E053",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_4w3tPauNgPqC1ZNhiiNKklFs",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 103,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 104,
+        "start_min": 14.610351316134135,
+        "end_min": 14.688451313972473
+      },
+      {
+        "local_id": "E054",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_VFp046XuuPuG3YGwIGgTFIDE",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 105,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 106,
+        "start_min": 14.78318464756012,
+        "end_min": 14.78760131597519
+      },
+      {
+        "local_id": "E055",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_WOZiIBud2DaMUprYmuY71tNB",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 108,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 109,
+        "start_min": 14.972017979621887,
+        "end_min": 14.976067980130514
+      },
+      {
+        "local_id": "E056",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_RFBsbWExB5roYDb0KG76tu03",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 110,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 111,
+        "start_min": 15.384201316038768,
+        "end_min": 15.388267982006074
+      },
+      {
+        "local_id": "E057",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_W5uAPfnBth7NJmFh26d311GC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 112,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 113,
+        "start_min": 15.677701314290365,
+        "end_min": 15.68178464571635
+      },
+      {
+        "local_id": "E058",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_K67XWC99RuKHUIYa0l9X98GC",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 114,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 115,
+        "start_min": 15.77078464825948,
+        "end_min": 15.844451316197713
+      },
+      {
+        "local_id": "E059",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_mzwnL0e3iSgBVwJpsNIfEKOj",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 116,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 117,
+        "start_min": 15.9393013159434,
+        "end_min": 15.943467982610066
+      },
+      {
+        "local_id": "E060",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_extNvEgSvlvBPdO5IwHvCkbZ",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 118,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 119,
+        "start_min": 16.034017980098724,
+        "end_min": 16.037934648990632
+      },
+      {
+        "local_id": "E061",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_z7Mo8jW7OCuMI074D85RBK2f",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 120,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 121,
+        "start_min": 16.14095131556193,
+        "end_min": 16.239017979303995
+      },
+      {
+        "local_id": "E062",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_LnxHA0Htw2OFrKdOYDRsWznu",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 122,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 123,
+        "start_min": 16.32750131289164,
+        "end_min": 16.40208464860916
+      },
+      {
+        "local_id": "E063",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_Ku1DfmAhSwrThE8Oo3nWowmc",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 124,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 125,
+        "start_min": 16.7645179828008,
+        "end_min": 16.838267982006073
+      },
+      {
+        "local_id": "E064",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_fB1N9GXWDTBeVOhOmj2JljVk",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 126,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 127,
+        "start_min": 16.944701313972473,
+        "end_min": 17.021351313591005
+      },
+      {
+        "local_id": "E067",
+        "event_id": "01a09c10-667d-7a60-b341-b3e85b43c151:call_hREFLzl2U7OsE7MsxygmglDM",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "source_line": 133,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\writer-001\\full-public-trace.jsonl",
+        "result_source_line": 134,
+        "start_min": 17.620317979653677,
+        "end_min": 17.750834647814433
+      },
+      {
+        "local_id": "E069",
+        "event_id": "01a09c0f-c2ab-76c2-b044-cc6bb23ebc02:call_DdtSlP8RZPNjQauPXMROecx9",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "source_line": 23,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "result_source_line": 24,
+        "start_min": 18.249417980511982,
+        "end_min": 18.2519513130188
+      },
+      {
+        "local_id": "E070",
+        "event_id": "01a09c0f-c2ab-76c2-b044-cc6bb23ebc02:call_MIh4pMybQjSCkSt92MpKcPyp",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "source_line": 25,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "result_source_line": 26,
+        "start_min": 18.31255131562551,
+        "end_min": 18.31606798171997
+      },
+      {
+        "local_id": "E072",
+        "event_id": "01a09c0f-c2ab-76c2-b044-cc6bb23ebc02:call_l1fb2VWf3GgVkPhbeTdTUs2o",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "source_line": 30,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "result_source_line": 31,
+        "start_min": 18.490817979971567,
+        "end_min": 20.04245131413142
+      },
+      {
+        "local_id": "E076",
+        "event_id": "01a09c0f-c2ab-76c2-b044-cc6bb23ebc02:call_PcmRtkXph2f4jZEo5SiyPYRs",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "source_line": 32,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "result_source_line": 33,
+        "start_min": 20.140451316038767,
+        "end_min": 22.771551314989726
+      },
+      {
+        "local_id": "E083",
+        "event_id": "01a09c0f-c2ab-76c2-b044-cc6bb23ebc02:call_eua7BdXOqFg1lYP7TvGeDIVt",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "source_line": 35,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "result_source_line": 36,
+        "start_min": 22.85926798184713,
+        "end_min": 23.050884648164114
+      },
+      {
+        "local_id": "E084",
+        "event_id": "01a09c0f-c2ab-76c2-b044-cc6bb23ebc02:call_QcoHrZu98gzzFNtnChlkb9cB",
+        "source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "source_line": 38,
+        "result_source_file": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\runs\\r2-l3-c\\actors\\coordinator-001\\full-public-trace.jsonl",
+        "result_source_line": 39,
+        "start_min": 23.176334647337594,
+        "end_min": 23.178884649276732
+      }
+    ]
+  }
+]

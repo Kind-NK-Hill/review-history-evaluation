@@ -1,0 +1,23 @@
+[
+  {
+    "c1_event": 32,
+    "final_source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\coordinate_convergence_support.lean",
+    "same_text_excluding_import_lines_and_outer_whitespace": true,
+    "old_sha256": "3d594596bd94ab802b030e7a7cac86630a3949fd1d024ad55876d8b441d5631a",
+    "new_sha256": "3d594596bd94ab802b030e7a7cac86630a3949fd1d024ad55876d8b441d5631a"
+  },
+  {
+    "c1_event": 33,
+    "final_source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\continuous_mapping_support.lean",
+    "same_text_excluding_import_lines_and_outer_whitespace": true,
+    "old_sha256": "2bc3314f0a657a0042056ec85de34aace72bc3187e432a5202e1567ac8a65644",
+    "new_sha256": "2bc3314f0a657a0042056ec85de34aace72bc3187e432a5202e1567ac8a65644"
+  },
+  {
+    "c1_event": 34,
+    "final_source": "D:\\Grad_Study\\Practimum\\Formalization\\review_history_retro_20260901\\research_framework\\replication_20260913\\acceptance\\r2-l7-c\\technical\\saved-sources\\ProbabilityTheory\\chapter_10\\convergence_support.lean",
+    "same_text_excluding_import_lines_and_outer_whitespace": true,
+    "old_sha256": "b326506caab1c1f1caeca765eaa2e7a752fed786c897f56330940c4d87dee070",
+    "new_sha256": "b326506caab1c1f1caeca765eaa2e7a752fed786c897f56330940c4d87dee070"
+  }
+]

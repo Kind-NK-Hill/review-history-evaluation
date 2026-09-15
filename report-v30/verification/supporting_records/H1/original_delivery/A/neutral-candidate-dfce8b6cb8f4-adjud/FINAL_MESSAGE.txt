@@ -1,0 +1,21 @@
+H1 整束已完成，无未决项。
+
+- `thm_9_4`：[内部审核状态隐去]
+- `thm_9_5`：[内部审核状态隐去]
+- `thm_9_6`：[内部审核状态隐去]
+- `prob_9_6`：软依赖选择 `["thm_9_6"]`，[内部审核状态隐去]
+- `prob_9_8`：空软依赖选择，[内部审核状态隐去]
+
+整束真实构建：
+
+```text
+lake build ProbabilityTheory.chapter_09.thm_9_4 \
+  ProbabilityTheory.chapter_09.thm_9_5 \
+  ProbabilityTheory.chapter_09.thm_9_6 \
+  ProbabilityTheory.chapter_09.prob_9_6 \
+  ProbabilityTheory.chapter_09.prob_9_8
+```
+
+结果：`Build completed successfully (8566 jobs)`。只有样式与冗余参数等 linter 警告，无构建错误。
+
+

@@ -1,0 +1,223 @@
+{
+  "schema_version": "phase2.semantic_review.result.v8",
+  "task_id": "thm_11_5",
+  "mode": "review-pack",
+  "attempt": 1,
+  "prompt_version": 11,
+  "rubric_version": 9,
+  "review_input_hash": "bfcb6e37f8233fad0e739878783e099c516b3a8265570ded0bf26a37197c4de1",
+  "review_input_file": "/work/artifacts/phase2_prompt_packs/thm_11_5/semantic_review_input_v1.json",
+  "review_prompt_file": "/work/artifacts/phase2_prompt_packs/thm_11_5/semantic_review_prompt_v1.md",
+  "review_context_file": "/work/artifacts/phase2_prompt_packs/thm_11_5/semantic_review_context_v1.md",
+  "expected_result_file": "/work/artifacts/phase2_prompt_packs/thm_11_5/semantic_review_result_v1.json",
+  "candidate_hash": "73d72c2ba1ce8841605d8c4208fd932f0d4afe8bb917d565dcd0b9e52cca8db0",
+  "verdict": "pass",
+  "confidence": "high",
+  "summary": "候选忠实形式化了两两不相关、具有共同均值和共同有限方差的实值随机变量序列的二阶矩弱大数定律。它以零起始索引表示前 n+1 项平均值，这只是对教材一开始索引的等价重编号。证明直接推导平均值的期望为 μ，调用定理 11.4 计算和的方差，再用方差的缩放性质得到平均值方差 σ2/(n+1)，应用切比雪夫不等式并以夹逼论证偏差概率趋于零。各项均落在教材证明主干上，不是仅调用更强最终结论的捷径。",
+  "proof_class": "source_route_proof_completed",
+  "completion_class": "textbook_source_route_completed",
+  "reviewer_independence": {
+    "role": "independent_read_only_reviewer",
+    "read_only": true,
+    "did_edit_candidate": false,
+    "used_current_review_request": true,
+    "attestation": "本次审核是首次、独立且只读的审核；未参与候选的编写或修改，也未改动任何文件。"
+  },
+  "source_claims": [
+    {
+      "claim_id": "wlln_statement",
+      "claim": "两两不相关且具有共同均值 μ 和共同有限方差 σ²的随机变量序列，其样本平均值依概率收敛到 μ。"
+    },
+    {
+      "claim_id": "average_mean",
+      "claim": "前 n 项平均值的期望等于共同均值 μ。"
+    },
+    {
+      "claim_id": "average_variance",
+      "claim": "由方差可加性和共同方差条件，前 n 项平均值的方差等于 σ²/n。"
+    },
+    {
+      "claim_id": "chebyshev_limit",
+      "claim": "切比雪夫不等式给出偏差概率至多为 σ²/(nε²)，该上界趋于零。"
+    }
+  ],
+  "claim_mapping": [
+    {
+      "claim_id": "wlln_statement",
+      "lean_declaration": "thm_11_5",
+      "assumptions": "概率测度 P；序列 X : ℕ → Ω → ℝ；每个 X i 有有限二阶绝对矩；积分均为 μ；ProbabilityTheory.variance 均为 σ2；不同指标对应的变量满足 Uncorrelated。",
+      "conclusion": "ConvergesInProbability P (fun n ω => (∑ i ∈ Finset.range (n + 1), X i ω) / (n + 1 : ℝ)) (fun _ => μ)",
+      "assessment": "教材前 n 项平均值被等价地重编号为从 X 0 到 X n 的 n+1 项平均值，结论仍是完整的依概率收敛命题。"
+    },
+    {
+      "claim_id": "average_mean",
+      "lean_declaration": "局部结论 hAmean",
+      "assumptions": "hmean 以及由 hX 得到的可积性。",
+      "conclusion": "∀ n, ∫ ω, A n ω ∂P = μ",
+      "assessment": "通过 integral_finsetSum、共同均值和有限和基数直接推导，没有把平均值期望重新设为公共前提。"
+    },
+    {
+      "claim_id": "average_variance",
+      "lean_declaration": "局部结论 hAvar，使用 thm_11_4 与 ProbabilityTheory.variance_const_mul",
+      "assumptions": "hX、huncorrelated 和 hvar。",
+      "conclusion": "∀ n, ProbabilityTheory.variance (A n) P = σ2 / (n + 1 : ℝ)",
+      "assessment": "定理 11.4 落实和的方差等于各方差之和，共同方差条件和缩放公式随后给出教材中的 σ²/n 界。"
+    },
+    {
+      "claim_id": "chebyshev_limit",
+      "lean_declaration": "thm_11_2、hsubset、hreal 及最终 ENNReal.tendsto_toReal_zero_iff 转换",
+      "assumptions": "ε > 0、hAmean、hAvar，以及 A n 的可测性和二阶可积性。",
+      "conclusion": "偏差事件概率趋于零。",
+      "assessment": "严格偏差事件被包含于切比雪夫不等式使用的非严格事件，随后由 σ2/(ε²(n+1)) 趋零和夹逼定理完成依概率收敛。"
+    }
+  ],
+  "route_inspection": {
+    "status": "covered",
+    "source_route": "构造前 n+1 项平均值 A；由积分线性性证明 E[A]=μ；由定理 11.4、方差缩放和共同方差证明 Var(A)=σ2/(n+1)；应用定理 11.2 得到偏差概率上界；证明上界趋零并按依概率收敛定义收尾。",
+    "expected_answer_or_statement": "在有限二阶矩、共同均值、共同方差和两两不相关条件下，前 n 项平均值依概率收敛到共同均值。",
+    "local_mathlib_search": "只读检查了本地搜索清单、def_7_3、def_9_1、def_10_2、thm_11_2 和 thm_11_4。候选使用的 Mathlib 内容限于积分有限和、方差常数缩放、极限及夹逼等通用基础设施；没有调用现成的弱大数定律或任务形状的最终黑箱定理。",
+    "public_interface_check": "公共前提正是概率空间、有限二阶矩、共同均值、共同方差和两两不相关性。有限二阶矩对应教材正文及其后说明的分析条件。候选没有新增平均值期望公式、方差可加公式、切比雪夫界或收敛结论作为定理级前提，因而不存在公共前提迁移。",
+    "support_or_reassembly_decision": "现有教材接口及其已审核桥足以完成证明；无需新增支撑定理或重新组装路线。",
+    "stop_go_verdict": "go",
+    "notes": "以 n+1 项、从零开始的索引避免了零分母，是教材从一开始的 n 项序列的标准等价重编号。"
+  },
+  "spine_alignment": {
+    "status": "covered",
+    "summary": "教材证明中的平均值期望、方差可加、共同方差化简、切比雪夫上界以及上界趋零均有明确且可核验的 Lean 落点。",
+    "source_steps_checked": [
+      {
+        "source_step": "由有限二阶矩保证各随机变量及其有限和、平均值具有所需的可测性和二阶可积性。",
+        "lean_landing": "FiniteAbsMoment.memLp、Finset.measurable_sum、memLp_finsetSum' 和 MemLp.const_mul，形成 hmem、hAmeas 与 hAmem",
+        "landing_kind": "lemma",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "所有分析条件均从源假设 hX 推出，没有另行公开假设平均值的可积性。"
+      },
+      {
+        "source_step": "前 n 项平均值具有共同均值 μ。",
+        "lean_landing": "hAmean 中使用 integral_div、integral_finsetSum、hmean 和 Finset.card_range 的透明推导",
+        "landing_kind": "lemma",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "直接完成教材使用的 E[S_n/n]=μ，而不是重新假设该等式。"
+      },
+      {
+        "source_step": "两两不相关变量之和的方差等于各项方差之和。",
+        "lean_landing": "hAvar 中对 Finset.range (n + 1) 调用 thm_11_4",
+        "landing_kind": "theorem",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "thm_11_4 是源链中的教材定理，且其已审核证明通过协方差展开和不相关交叉项消失得到结论；这里是源指定的直接应用。"
+      },
+      {
+        "source_step": "利用方差缩放和共同方差，得到平均值方差 σ²/n。",
+        "lean_landing": "hAvar 中的 ProbabilityTheory.variance_const_mul、hsum、hvar 以及有限和代数化简",
+        "landing_kind": "lemma",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "候选透明地得到 σ2/(n+1)，与零起始的 n+1 项平均值完全对应。"
+      },
+      {
+        "source_step": "对偏离均值超过 ε 的事件应用切比雪夫不等式。",
+        "lean_landing": "thm_11_2 P (A n)；hsubset 使用 hAmean 将严格偏差事件包含到切比雪夫的非严格事件中",
+        "landing_kind": "theorem",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "事件由 > ε 到 ≥ ε 的包含是正确的；所得上界经方差接口桥化为 σ2/(ε²(n+1))。"
+      },
+      {
+        "source_step": "当 n 趋于无穷时，σ²/(nε²) 趋于零，因此偏差概率趋于零。",
+        "lean_landing": "tendsto_const_div_atTop_nhds_zero_nat、Filter.tendsto_add_atTop_nat、squeeze_zero' 和 ENNReal.tendsto_toReal_zero_iff",
+        "landing_kind": "lemma",
+        "signature_match": "passed",
+        "body_reassumption_check": "passed",
+        "public_premise_check": "passed",
+        "notes": "夹逼步骤把实值概率上界趋零转换回测度值趋零，直接完成 ConvergesInProbability 的定义要求。"
+      }
+    ],
+    "missing_source_steps": [],
+    "shortcut_assessment": "未发现适配器式捷径。通用 Mathlib 引理只承担积分、方差缩放和极限基础步骤；教材指定的定理 11.4 与切比雪夫定理 11.2均被实际用于证明主干。"
+  },
+  "evidence_review": {
+    "status": "covered",
+    "summary": "已直接核对源文本、候选完整签名与证明、依赖源码、构建记录、下游信息、账本状态和哈希。缺失的历史审计、分类及部分依赖账本记录没有被用作完成依据，也不与源码和成功构建证据冲突。",
+    "items": [
+      {
+        "evidence_class": "source_tex",
+        "status": "covered",
+        "evidence": "审核输入绑定 experiment_targets.tex，记录源文件存在、哈希为 a78d086fcfa65cd04f0da22cd6536c28aedcdc4221adc5a3e913df0ca8fa0e8e；已将其中 11.5 的命题和切比雪夫—方差可加—极限证明链与候选逐项比较。"
+      },
+      {
+        "evidence_class": "lean_subject",
+        "status": "covered",
+        "evidence": "已只读检查 candidate_v3.lean 的完整定理签名及第 103 至 195 行证明。build_result_v3.json 记录硬检查、交互检查、临时构建和最终构建均成功，仅有未使用化简参数的非阻断警告。"
+      },
+      {
+        "evidence_class": "audit",
+        "status": "not_applicable",
+        "evidence": "审核输入没有提供最新审计结果。该缺失未被当作通过依据；本审核直接依据源文本、候选、依赖源码和构建证据作出判断。"
+      },
+      {
+        "evidence_class": "classification",
+        "status": "not_applicable",
+        "evidence": "没有历史分类文件或分类条目。依据当前 proof_bearing 角色和实际落地的源证明路线，分类为 source_route_proof_completed 与 textbook_source_route_completed。"
+      },
+      {
+        "evidence_class": "dependency_status",
+        "status": "covered",
+        "evidence": "def_7_3、def_9_1、def_10_2 和 thm_11_2 的账本状态缺失，但正式源码均存在并已只读检查；thm_11_4 状态为 COMPLETED，且其语义审核结果为通过。candidate_v3 的成功最终构建进一步证明所有实际导入和所用声明可用。"
+      },
+      {
+        "evidence_class": "downstream",
+        "status": "covered",
+        "evidence": "当前计划没有 thm_11_5 的直接下游消费者，因此不存在需逐项验证的消费者接口。候选仍导出了完整、通用的弱大数定律定理，而非局部辅助壳。"
+      },
+      {
+        "evidence_class": "ledger_status",
+        "status": "covered",
+        "evidence": "当前任务及输出所有者状态为 PACKED，最新可构建候选哈希指向 candidate_v3。verify_result_v1 的 codex_review_required 只是等待本次语义审核的流程状态，不是否定构建或语义的证据。"
+      },
+      {
+        "evidence_class": "hashes",
+        "status": "covered",
+        "evidence": "只读计算 candidate_v3.lean 的 SHA-256 为 73d72c2ba1ce8841605d8c4208fd932f0d4afe8bb917d565dcd0b9e52cca8db0，与模板、审核输入、账本最新候选和 build_result_v3.json 一致。审核输入还记录了各上游正式输出文件哈希。"
+      }
+    ],
+    "blocking_issues": []
+  },
+  "interface_contract": {
+    "status": "covered",
+    "summary": "thm_11_5 的公共接口完整表达教材对象：实值随机变量序列、概率测度、有限二阶矩、共同均值、共同方差、两两不相关以及依概率收敛。FiniteAbsMoment、Uncorrelated 和 ConvergesInProbability 均来自教材链中的正式接口；ProbabilityTheory.variance 与教材二阶中心矩之间有现有可复用桥。零起始的 n+1 项平均值只是索引重编号，不削弱结论或增加数学假设。",
+    "mismatches": []
+  },
+  "downstream_adequacy": {
+    "status": "covered",
+    "summary": "当前计划未发现直接下游消费者。导出的定理对任意概率空间和满足源条件的自然数索引序列参数化，可供后续模块直接调用，无需新增定理级假设。",
+    "consumers_checked": [],
+    "blocking_issues": []
+  },
+  "forbidden_weakenings": [
+    {
+      "weakening": "禁止把教材中的公共接口偷换成纯存在性壳、占位定义或只记录 witness 的结构。",
+      "status": "not_present",
+      "evidence": "候选导出明确的 ConvergesInProbability 命题及完整证明，不是存在性壳、占位符或 witness 结构。"
+    },
+    {
+      "weakening": "禁止把应当供下游复用的 theorem 改写成只够当前文件自证的 theorem-specific wrapper。",
+      "status": "not_present",
+      "evidence": "thm_11_5 对空间、概率测度、序列、均值和方差完全参数化，结论是正式的依概率收敛接口，具有一般复用性。"
+    },
+    {
+      "weakening": "禁止通过额外 theorem-level 假设来掩盖上游接口缺口，除非任务文本本身明确包含该假设。",
+      "status": "not_present",
+      "evidence": "定理级假设均对应源文本中的概率空间、有限二阶矩、共同均值、共同方差和两两不相关条件；候选没有公开假设平均值方差公式、切比雪夫界或收敛结论。"
+    }
+  ],
+  "findings": [],
+  "recommended_disposition": "accept"
+}

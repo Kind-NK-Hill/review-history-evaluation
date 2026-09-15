@@ -1,0 +1,30 @@
+{
+  "edition": 30,
+  "date": "2026-09-15",
+  "scope": "Feedback corrections and public companion; no new model runs or structural rewrite",
+  "files": {
+    "zh.pdf": {
+      "pages": 24,
+      "sha256": "f66f50ecc0502555dfde6030646cec4b82068f04d2c5bdd09e7737b9d8be5884",
+      "layout_warnings": []
+    },
+    "en.pdf": {
+      "pages": 32,
+      "sha256": "265bee9ebc66c19bb98dc9f270ea29c42192f0abc4e5c87662174d3da897d2ce",
+      "layout_warnings": []
+    },
+    "zh-appendix.pdf": {
+      "pages": 71,
+      "sha256": "8ee64e211a77f3137670475865fd76eb8dee4c3649113af98fa7e7ac87ba16dd",
+      "layout_warnings": []
+    },
+    "en-appendix.pdf": {
+      "pages": 92,
+      "sha256": "43246026ea0119ae9767a196fea67c9948b46cdf4e05a3e852283b3795ba760a",
+      "layout_warnings": []
+    }
+  },
+  "historical_L6_qualification": "Broader reading means the internally ambiguous task sheet second paragraph; saved 11/11 is not recertification.",
+  "checks": "qa/checks_revision30.json",
+  "changes": "CHANGES.zh-CN.md"
+}
