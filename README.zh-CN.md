@@ -48,8 +48,9 @@ python report-v28/reproduce.py --output recomputed
 
 ## 贡献与版本
 
-Shuo Deng 的工作包括提出要求、协调人工智能辅助执行、审阅结果、质疑解释和要求纠正；人工智能工具协助代码、证明生成、分析和写作。Kenneth W. Shum 是教材作者及报告合作者。报告区分实际产物、模型辅助判断与独立人工验证。
+Shuo Deng 发起本项目并开展评测研究，包括工作流方案比较、完成判定、执行轨迹分析和可复算研究材料的开发。Kenneth W. Shum 是教材作者及报告合作者。研究使用人工智能工具辅助编码、证明生成、分析和写作；评测方法与验证范围在报告中说明。
 
 工程系统与评价研究是同一研究背景下的两个部分。研究引用的工程公开版本为 `d07f272850899b58612adf1c7dc202538503252f`，历史实验保留各自版本身份。
 
 第28版的[报告勘误](report-v28/ERRATA.md)和[原始复算](report-v28/REPRODUCIBILITY.md)继续保留，其数据仍供第30版使用。更早的 [v0.5.0研究](releases/v0.5.0/README.md)也完整保留。[发布历史](CHANGELOG.md) · [相关方法](report-v28/RELATED_WORK.md)
+

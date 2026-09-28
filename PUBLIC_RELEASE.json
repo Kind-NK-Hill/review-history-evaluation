@@ -4,7 +4,14 @@
   "prepared_utc": "2026-09-15T07:44:36.693113+00:00",
   "previous_study_commit": "68c541c5cdde48b31590df9804d987fddeb62c2a",
   "scope": "Integrated report, feedback closure and public selected evidence; original outcomes retained with L6 ambiguity qualification.",
-  "navigation_update": {"date": "2026-09-15", "files": ["README.md", "README.zh-CN.md"], "scope": "Current-branch navigation and contribution text only; frozen reports, evidence, tags and release assets unchanged."},
+  "navigation_update": {
+    "date": "2026-09-15",
+    "files": [
+      "README.md",
+      "README.zh-CN.md"
+    ],
+    "scope": "Current-branch navigation and contribution text only; frozen reports, evidence, tags and release assets unchanged."
+  },
   "files": [
     {
       "file": ".gitattributes",
@@ -28,13 +35,13 @@
     },
     {
       "file": "README.md",
-      "sha256": "158e5eab428d6a26bff3c77db346598d425bb2ef374fdf8f3da7bd35e0cc791e",
-      "bytes": 5512
+      "sha256": "5587f6bffa83eb6c968f3caba79bea3fdf62c937f460c00124605da62035efb7",
+      "bytes": 5506
     },
     {
       "file": "README.zh-CN.md",
-      "sha256": "8b53e16690ee6d38faa16bed3a30e1b3300cb3b37d3ce287ce56ee4995505854",
-      "bytes": 4854
+      "sha256": "8c55c0b3f83fe425b56b5c5e962badfcfab4254a04d9d2881fced6606cdfe905",
+      "bytes": 4876
     },
     {
       "file": "releases/v0.5.0/.gitattributes",

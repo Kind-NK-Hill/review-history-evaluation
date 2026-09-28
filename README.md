@@ -76,12 +76,12 @@ The H1/L6 checks are saved receipts from their documented environments. See
 
 ## Contributions and publication history
 
-Shuo Deng's work includes directing requirements, coordinating AI-assisted
-execution, reviewing results, questioning interpretations and requesting
-corrections. AI tools assisted code, proof generation, analysis and drafting.
-Kenneth W. Shum is the source textbook author and report coauthor. The study
-distinguishes observed outputs and model-assisted judgments from independent
-human validation.
+Shuo Deng created the project and developed its evaluation study, including
+workflow comparisons, completion assessment, execution-trace analysis and
+reproducible research materials. Kenneth W. Shum is the source textbook author
+and report coauthor. The work uses AI tools for coding, proof generation,
+analysis and writing. The report documents its assessment methods and
+validation scope.
 
 The engineering system and this evaluation are related parts of one research
 project. The study cites engineering revision
@@ -92,3 +92,4 @@ Revision 28's [report, corrections](report-v28/ERRATA.md) and
 [core reproduction](report-v28/REPRODUCIBILITY.md) remain available and supply
 inputs used by revision 30. The earlier [v0.5.0 study](releases/v0.5.0/README.md)
 is also preserved. [Publication history](CHANGELOG.md) · [Related methods](report-v28/RELATED_WORK.md)
+
